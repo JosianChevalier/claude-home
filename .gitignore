@@ -1,0 +1,27 @@
+# Whitelist strategy: ignore everything, then re-include only what we version.
+# ~/.claude is full of state & secrets (history, sessions, telemetry, auth) —
+# nothing is tracked unless explicitly listed below.
+
+# 1. Ignore everything by default.
+*
+
+# 2. Re-include the files/dirs we version (parents must be un-ignored to reach files).
+!/.gitignore
+!/CLAUDE.md
+!/statusline.py
+
+!/swiftbar/
+!/swiftbar/*.py
+!/swiftbar/*.md
+!/swiftbar/plugin/
+!/swiftbar/plugin/*.py
+
+!/skills/
+!/skills/*/
+!/skills/*/SKILL.md
+!/skills/*/**/*.md
+
+# 3. Belt-and-suspenders: never track caches even if a rule above is loosened.
+__pycache__/
+*.pyc
+.usage-cache.json
