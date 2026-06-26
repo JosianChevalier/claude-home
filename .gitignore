@@ -13,8 +13,14 @@
 !/quota/
 !/quota/*.py
 !/quota/*.md
-!/quota/plugin/
-!/quota/plugin/*.py
+!/quota/macos/
+!/quota/macos/*.py
+!/quota/macos/plugin/
+!/quota/macos/plugin/*.py
+!/quota/windows/
+!/quota/windows/*.py
+!/quota/tests/
+!/quota/tests/*.py
 
 !/skills/
 !/skills/*/

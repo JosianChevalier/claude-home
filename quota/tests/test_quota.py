@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Tests du plugin quota Claude Code. Lancer : python3 test_quota.py
+"""Tests du plugin quota Claude Code. Lancer : python3 tests/test_quota.py
 
-Cœur portable -> quota_core (core). Rendu SwiftBar + intégration mac -> host_macos (mac).
+Cœur portable -> quota_core (core). Rendu SwiftBar + intégration mac -> macos/host (mac).
 """
 import os
 import sys
 import unittest
 from datetime import datetime, timezone
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+_QUOTA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # quota/
+sys.path.insert(0, _QUOTA_DIR)
+sys.path.insert(0, os.path.join(_QUOTA_DIR, "macos"))
 import quota_core as core
-import host_macos as mac
+import host as mac
 
 # Échantillon réel renvoyé par l'endpoint /usage (tronqué).
 SAMPLE = {

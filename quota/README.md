@@ -7,27 +7,31 @@ Affiche dans la barre de menu macOS l'état de la session Claude Code :
 23% · 4h05            ← % utilisé (session 5h) · compte à rebours reset
 ```
 
-## Fichiers (`~/.claude/quota/`)
+## Arborescence (`~/.claude/quota/`)
 
-| Fichier | Rôle |
-|---|---|
-| `quota_core.py` | **cœur PORTABLE** : calculs, réseau (`/usage`), cache, throttle, token-fichier. Zéro appel OS. Importé par tous les hosts. |
-| `host_macos.py` | **host macOS** : Keychain, LaunchAgent (démarrage auto), notif osascript, **rendu SwiftBar** (`|`-syntax). |
-| `host_windows.py` | **host Windows** *(stub)* : même surface, à brancher sur un tray. SwiftBar n'existe pas sur Windows. |
-| `plugin/claude-quota.1m.py` | entrée SwiftBar (coquille fine = core + host_macos). Le `1m` = redessin 60 s, encodé dans le nom. **Seul dans `plugin/`** (voir ci-dessous). |
-| `test_quota.py` | 24 tests stdlib (`unittest`). `python3 test_quota.py`. |
-| `.usage-cache.json` | dernière réponse OK (repli + source du throttle). Auto-généré, jetable. |
+```
+quota_core.py          cœur PORTABLE — calculs, /usage, cache, throttle, token-fichier. Zéro OS.
+macos/
+  host.py              host macOS — Keychain, LaunchAgent, notif osascript + rendu SwiftBar
+  plugin/
+    claude-quota.1m.py entrée SwiftBar (coquille = core + macos/host). 1m = redessin 60 s.
+windows/
+  host.py              host Windows (stub) — même surface, à brancher sur un tray
+tests/test_quota.py    24 tests stdlib. python3 tests/test_quota.py
+README.md
+.usage-cache.json      dernière réponse OK (repli + throttle). Auto-généré, jetable, gitignored.
+```
 
-Séparation voulue, en deux axes : **(1)** le `.py` exécuté par SwiftBar ne fait qu'orchestrer
-(token, fetch, print) ; la logique vit dans les modules pour être testable sans réseau ni
-SwiftBar. **(2)** ce qui est portable (`quota_core`) est isolé de ce qui est lié à l'OS et au
-format d'hôte (`host_*`) — un futur host Windows réutilise le cœur tel quel.
+Séparation en deux axes : **(1)** le `.py` exécuté par SwiftBar ne fait qu'orchestrer
+(token, fetch, print) ; la logique vit dans les modules, testable sans réseau ni SwiftBar.
+**(2)** le portable (`quota_core`) est isolé de l'OS-spécifique (`macos/`, `windows/`) — un
+futur host Windows réutilise le cœur tel quel.
 
-**Pourquoi `plugin/` à part.** SwiftBar fait une icône de **chaque fichier** de son
-dossier de plugins (récursivement). Lib + tests dans le même dossier = icônes
-parasites. Donc `PluginDirectory` pointe sur `plugin/` qui ne contient **que** le
-plugin ; la lib (un cran au-dessus) est hors scan. Le plugin l'importe via le
-dossier parent. Réglé une fois dans les `defaults` SwiftBar (`PluginDirectory`).
+**Pourquoi `plugin/` isolé sous `macos/`.** SwiftBar fait une icône de **chaque fichier** de
+son `PluginDirectory` (récursivement). Mettre `host.py` à côté du plugin = icône parasite
+cassée. Donc `PluginDirectory` pointe sur `macos/plugin/` qui ne contient **que** le plugin ;
+`macos/host.py` (un cran au-dessus) et `quota_core.py` (deux crans) sont hors scan, importés
+via `sys.path`. Réglé une fois dans les `defaults` SwiftBar (`PluginDirectory`).
 
 ## Source de la donnée
 
@@ -59,9 +63,9 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 ## Itérer
 
-1. Logique portable → `quota_core.py` ; rendu/intégration mac → `host_macos.py`.
-2. `python3 test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
-3. `./plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
+1. Logique portable → `quota_core.py` ; rendu/intégration mac → `macos/host.py`.
+2. `python3 tests/test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
+3. `./macos/plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
 4. `open swiftbar://refreshallplugins` pour rafraîchir la puce sans attendre.
 
 Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer la
@@ -71,7 +75,6 @@ Format des lignes SwiftBar : `Titre | color= size= bash= param1= terminal= refre
 ## Portabilité (Windows)
 
 SwiftBar est macOS-only : pas de portage Windows du plugin lui-même. Le cœur
-(`quota_core.py`) est lui 100 % portable. Pour Windows, implémenter `host_windows.py`
+(`quota_core.py`) est lui 100 % portable. Pour Windows, implémenter `windows/host.py`
 (token via Credential Manager, autostart via `shell:startup`, notif toast, rendu pour
-un tray type `pystray`) + une entrée qui combine `quota_core` + `host_windows`.
-```
+un tray type `pystray`) + une entrée qui combine `quota_core` + `windows/host`.

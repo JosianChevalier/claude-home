@@ -22,10 +22,15 @@ import os
 import subprocess
 import sys
 
-# core + host vivent dans le dossier parent (ce fichier est isolé dans plugin/).
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Ce fichier est isolé dans macos/plugin/ (SwiftBar scanne CE dossier).
+# host vit dans macos/ (parent) ; quota_core à la racine quota/ (grand-parent).
+_PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))   # quota/macos/plugin
+_MACOS_DIR = os.path.dirname(_PLUGIN_DIR)                   # quota/macos
+_QUOTA_DIR = os.path.dirname(_MACOS_DIR)                    # quota
+sys.path.insert(0, _QUOTA_DIR)
+sys.path.insert(0, _MACOS_DIR)
 import quota_core as core
-import host_macos as host
+import host
 
 SELF = os.path.abspath(__file__)
 
