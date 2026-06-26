@@ -7,17 +7,21 @@ Affiche dans la barre de menu macOS l'état de la session Claude Code :
 23% · 4h05            ← % utilisé (session 5h) · compte à rebours reset
 ```
 
-## Fichiers (`~/.claude/swiftbar/`)
+## Fichiers (`~/.claude/quota/`)
 
 | Fichier | Rôle |
 |---|---|
-| `plugin/claude-quota.1m.py` | plugin SwiftBar (coquille fine). Le `1m` = redessin 60 s, encodé dans le nom. **Seul dans `plugin/`** (voir ci-dessous). |
-| `claude_quota_lib.py` | **toute la logique** (calculs, rendu, cache, throttle, démarrage auto). Importable, testée. |
-| `test_claude_quota.py` | 23 tests stdlib (`unittest`). `python3 test_claude_quota.py`. |
+| `quota_core.py` | **cœur PORTABLE** : calculs, réseau (`/usage`), cache, throttle, token-fichier. Zéro appel OS. Importé par tous les hosts. |
+| `host_macos.py` | **host macOS** : Keychain, LaunchAgent (démarrage auto), notif osascript, **rendu SwiftBar** (`|`-syntax). |
+| `host_windows.py` | **host Windows** *(stub)* : même surface, à brancher sur un tray. SwiftBar n'existe pas sur Windows. |
+| `plugin/claude-quota.1m.py` | entrée SwiftBar (coquille fine = core + host_macos). Le `1m` = redessin 60 s, encodé dans le nom. **Seul dans `plugin/`** (voir ci-dessous). |
+| `test_quota.py` | 24 tests stdlib (`unittest`). `python3 test_quota.py`. |
 | `.usage-cache.json` | dernière réponse OK (repli + source du throttle). Auto-généré, jetable. |
 
-Séparation voulue : le `.py` exécuté par SwiftBar ne fait qu'I/O (token, fetch, print).
-Tout le reste vit dans `_lib` pour être testable sans réseau ni SwiftBar.
+Séparation voulue, en deux axes : **(1)** le `.py` exécuté par SwiftBar ne fait qu'orchestrer
+(token, fetch, print) ; la logique vit dans les modules pour être testable sans réseau ni
+SwiftBar. **(2)** ce qui est portable (`quota_core`) est isolé de ce qui est lié à l'OS et au
+format d'hôte (`host_*`) — un futur host Windows réutilise le cœur tel quel.
 
 **Pourquoi `plugin/` à part.** SwiftBar fait une icône de **chaque fichier** de son
 dossier de plugins (récursivement). Lib + tests dans le même dossier = icônes
@@ -41,7 +45,7 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 ## Comportement
 
-- Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre prend le pire des deux fenêtres (session/hebdo). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `_lib`.
+- Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre suit la fenêtre affichée (session 5h). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `quota_core`.
 - **Throttle anti-429** : la puce est redessinée toutes les 60 s, mais l'API n'est appelée que si le cache dépasse `MIN_FETCH_INTERVAL` (300 s) — sinon on ré-affiche le cache **sans réseau** (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Évite les rafales sur `/usage` (qui rate-limite, surtout cumulé aux appels de Claude Code lui-même). Le bouton *Rafraîchir* force un vrai appel (`--force`).
 - **Cache** : succès → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche la dernière valeur **grisée + `⋯`** avec son âge (« cache il y a Xm »).
 - **Menu déroulant** : session 5h, hebdo 7j, hebdo Sonnet (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
@@ -55,12 +59,19 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 ## Itérer
 
-1. Modifier `claude_quota_lib.py` (logique) — c'est là que tout se passe.
-2. `python3 test_claude_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
+1. Logique portable → `quota_core.py` ; rendu/intégration mac → `host_macos.py`.
+2. `python3 test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
 3. `./plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
 4. `open swiftbar://refreshallplugins` pour rafraîchir la puce sans attendre.
 
 Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer la
-fréquence des **appels API** = `MIN_FETCH_INTERVAL` dans `_lib` (indépendant du redessin).
+fréquence des **appels API** = `MIN_FETCH_INTERVAL` dans `quota_core` (indépendant du redessin).
 Format des lignes SwiftBar : `Titre | color= size= bash= param1= terminal= refresh=`.
+
+## Portabilité (Windows)
+
+SwiftBar est macOS-only : pas de portage Windows du plugin lui-même. Le cœur
+(`quota_core.py`) est lui 100 % portable. Pour Windows, implémenter `host_windows.py`
+(token via Credential Manager, autostart via `shell:startup`, notif toast, rendu pour
+un tray type `pystray`) + une entrée qui combine `quota_core` + `host_windows`.
 ```

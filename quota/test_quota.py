@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Tests du plugin quota Claude Code. Lancer : python3 test_claude_quota.py"""
+"""Tests du plugin quota Claude Code. Lancer : python3 test_quota.py
+
+Cœur portable -> quota_core (core). Rendu SwiftBar + intégration mac -> host_macos (mac).
+"""
 import os
 import sys
 import unittest
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import claude_quota_lib as q
+import quota_core as core
+import host_macos as mac
 
 # Échantillon réel renvoyé par l'endpoint /usage (tronqué).
 SAMPLE = {
@@ -20,45 +24,45 @@ NOW = datetime(2026, 6, 21, 2, 36, 0, tzinfo=timezone.utc).astimezone()
 
 class TestCalculs(unittest.TestCase):
     def test_used(self):
-        self.assertEqual(q.used({"utilization": 23.0}), 23)
-        self.assertEqual(q.used({"utilization": 0}), 0)
-        self.assertIsNone(q.used(None))
+        self.assertEqual(core.used({"utilization": 23.0}), 23)
+        self.assertEqual(core.used({"utilization": 0}), 0)
+        self.assertIsNone(core.used(None))
 
     def test_color_seuils(self):
-        self.assertIsNone(q.color_for(0))            # < 50 utilisé -> adaptatif
-        self.assertIsNone(q.color_for(49))
-        self.assertEqual(q.color_for(50), "orange")
-        self.assertEqual(q.color_for(79), "orange")
-        self.assertEqual(q.color_for(80), "red")     # >= 80 utilisé -> rouge
-        self.assertIsNone(q.color_for(None))
+        self.assertIsNone(core.color_for(0))            # < 50 utilisé -> adaptatif
+        self.assertIsNone(core.color_for(49))
+        self.assertEqual(core.color_for(50), "orange")
+        self.assertEqual(core.color_for(79), "orange")
+        self.assertEqual(core.color_for(80), "red")     # >= 80 utilisé -> rouge
+        self.assertIsNone(core.color_for(None))
 
 
 class TestReset(unittest.TestCase):
     def test_compte_a_rebours(self):
-        cd, _ = q.fmt_reset("2026-06-21T06:49:59+00:00", NOW)
+        cd, _ = core.fmt_reset("2026-06-21T06:49:59+00:00", NOW)
         self.assertEqual(cd, "4h13")
 
     def test_minutes(self):
-        cd, _ = q.fmt_reset("2026-06-21T03:06:00+00:00", NOW)
+        cd, _ = core.fmt_reset("2026-06-21T03:06:00+00:00", NOW)
         self.assertEqual(cd, "30m")
 
     def test_jours(self):
-        cd, _ = q.fmt_reset("2026-06-26T21:59:59+00:00", NOW)
+        cd, _ = core.fmt_reset("2026-06-26T21:59:59+00:00", NOW)
         self.assertTrue(cd.startswith("5j"))
 
     def test_passe(self):
-        cd, _ = q.fmt_reset("2026-06-20T00:00:00+00:00", NOW)
+        cd, _ = core.fmt_reset("2026-06-20T00:00:00+00:00", NOW)
         self.assertEqual(cd, "maintenant")
 
     def test_absolu_fr(self):
-        _, absolu = q.fmt_reset("2026-06-21T06:49:59+00:00", NOW)
+        _, absolu = core.fmt_reset("2026-06-21T06:49:59+00:00", NOW)
         self.assertIn("juin", absolu)
         self.assertIn("à", absolu)
 
 
 class TestRendu(unittest.TestCase):
     def out(self, **kw):
-        return q.render(SAMPLE, "/x/plugin.py", "/x/python3", now=NOW, **kw)
+        return mac.render(SAMPLE, "/x/plugin.py", "/x/python3", now=NOW, **kw)
 
     def test_barre_couleur_et_pourcent(self):
         first = self.out().splitlines()[0]
@@ -68,7 +72,7 @@ class TestRendu(unittest.TestCase):
     def test_barre_rouge_si_haut(self):
         data = dict(SAMPLE, five_hour={"utilization": 95.0,
                                        "resets_at": "2026-06-21T06:49:59+00:00"})
-        first = q.render(data, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
+        first = mac.render(data, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
         self.assertIn("95% ·", first)
         self.assertIn("color=red", first)
 
@@ -76,7 +80,7 @@ class TestRendu(unittest.TestCase):
         # Session basse + hebdo haute : la puce suit la session affichée, pas l'hebdo.
         data = dict(SAMPLE, seven_day={"utilization": 64.0,
                                        "resets_at": "2026-06-26T21:59:59+00:00"})
-        first = q.render(data, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
+        first = mac.render(data, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
         self.assertIn("23% ·", first)
         self.assertNotIn("color=", first)
 
@@ -98,18 +102,18 @@ class TestRendu(unittest.TestCase):
         self.assertIn("Quitter SwiftBar", self.out())
 
     def test_bloc_manquant_ne_crashe_pas(self):
-        out = q.render({"five_hour": SAMPLE["five_hour"]}, "/x/p.py", "/x/py", now=NOW)
+        out = mac.render({"five_hour": SAMPLE["five_hour"]}, "/x/p.py", "/x/py", now=NOW)
         self.assertIn("23% ·", out.splitlines()[0])
 
 
 class TestStaleEtAge(unittest.TestCase):
     def test_fmt_age(self):
-        self.assertEqual(q.fmt_age(40), "40s")
-        self.assertEqual(q.fmt_age(7 * 60), "7m")
-        self.assertEqual(q.fmt_age(3900), "1h05")
+        self.assertEqual(core.fmt_age(40), "40s")
+        self.assertEqual(core.fmt_age(7 * 60), "7m")
+        self.assertEqual(core.fmt_age(3900), "1h05")
 
     def test_render_stale_grise_et_signale(self):
-        out = q.render(SAMPLE, "/x/p.py", "/x/py", now=NOW, stale_secs=90)
+        out = mac.render(SAMPLE, "/x/p.py", "/x/py", now=NOW, stale_secs=90)
         first = out.splitlines()[0]
         self.assertIn("⋯", first)             # marqueur de péremption
         self.assertIn("color=gray", first)     # barre grisée
@@ -118,47 +122,47 @@ class TestStaleEtAge(unittest.TestCase):
 
 class TestCache(unittest.TestCase):
     def setUp(self):
-        self.tmp = CACHE_BACKUP = q.CACHE_FILE
-        q.CACHE_FILE = os.path.join(os.path.dirname(__file__), ".usage-cache.test.json")
+        self.tmp = core.CACHE_FILE
+        core.CACHE_FILE = os.path.join(os.path.dirname(__file__), ".usage-cache.test.json")
 
     def tearDown(self):
         try:
-            os.remove(q.CACHE_FILE)
+            os.remove(core.CACHE_FILE)
         except FileNotFoundError:
             pass
-        q.CACHE_FILE = self.tmp
+        core.CACHE_FILE = self.tmp
 
     def test_round_trip(self):
-        self.assertIsNone(q.load_cache())          # rien au départ
-        q.save_cache(SAMPLE, fetched_at=q.time.time() - 120)
-        data, age = q.load_cache()
+        self.assertIsNone(core.load_cache())          # rien au départ
+        core.save_cache(SAMPLE, fetched_at=core.time.time() - 120)
+        data, age = core.load_cache()
         self.assertEqual(data["five_hour"]["utilization"], 23.0)
         self.assertGreaterEqual(age, 119)
 
 
 class TestThrottle(unittest.TestCase):
     def test_cache_frais_saute_le_fetch(self):
-        self.assertTrue(q.should_skip_fetch(10))                 # 10 s < 300 -> saute
-        self.assertTrue(q.should_skip_fetch(299))
+        self.assertTrue(core.should_skip_fetch(10))                 # 10 s < 300 -> saute
+        self.assertTrue(core.should_skip_fetch(299))
 
     def test_cache_vieux_force_le_fetch(self):
-        self.assertFalse(q.should_skip_fetch(300))               # >= seuil -> fetch
-        self.assertFalse(q.should_skip_fetch(10_000))
+        self.assertFalse(core.should_skip_fetch(300))               # >= seuil -> fetch
+        self.assertFalse(core.should_skip_fetch(10_000))
 
     def test_force_ignore_le_throttle(self):
-        self.assertFalse(q.should_skip_fetch(10, force=True))    # bouton Rafraîchir
+        self.assertFalse(core.should_skip_fetch(10, force=True))    # bouton Rafraîchir
 
     def test_pas_de_cache_force_le_fetch(self):
-        self.assertFalse(q.should_skip_fetch(None))
+        self.assertFalse(core.should_skip_fetch(None))
 
     def test_rafraichir_force_dans_le_menu(self):
-        out = q.render(SAMPLE, "/x/p.py", "/x/py", now=NOW)
+        out = mac.render(SAMPLE, "/x/p.py", "/x/py", now=NOW)
         self.assertIn("Rafraîchir | bash=/x/py param1=/x/p.py param2=--force", out)
 
 
 class TestErreur(unittest.TestCase):
     def test_render_error(self):
-        out = q.render_error("boom")
+        out = mac.render_error("boom")
         self.assertIn("⚠ Claude | color=red", out)
         self.assertIn("boom", out)
 
