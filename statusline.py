@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 """Minimalist icon-driven statusline for Claude Code.
-Segments, space-separated, no labels:  📁 folder  🤖 model  🧠 NN%  🤪 compactions(>0)
+Segments, separated by " | ", no labels:  📁 folder  🔀 branch  🤖 model  🧠 NN%  🤪 compactions(>0)
 🧠 % is computed against BUDGET, NOT the model context window.
 """
 import sys, json, os, re, subprocess
 
+# Windows' default stdout is cp1252, which can't encode the emoji segments.
+# Force UTF-8 so 📁/🤖/🧠 render instead of crashing.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 BUDGET = 100_000  # <-- single knob: denominator for the 🧠 percentage
+
+# On Windows, suppress the console window that subprocess would otherwise flash.
+_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
 def compaction_count(path):
@@ -82,6 +92,7 @@ def git_branch(cwd):
         b = subprocess.run(
             ["git", "rev-parse", "--abbrev-ref", "HEAD"],
             cwd=cwd, capture_output=True, text=True, timeout=1,
+            creationflags=_NO_WINDOW,
         ).stdout.strip()
     except Exception:
         return ""
@@ -96,9 +107,10 @@ def main():
     except Exception:
         data = {}
 
-    # 📁 folder = last segment of cwd
+    # 📁 folder = last segment of cwd (normpath handles \ and / separators)
     cwd = (data.get("workspace") or {}).get("current_dir") or data.get("cwd") or ""
-    folder = os.path.basename(cwd.rstrip("/")) or "?"
+    folder = os.path.basename(os.path.normpath(cwd)) if cwd else "?"
+    folder = folder or "?"
 
     # 🤖 model version only — strip trailing parenthetical like "(1M context)"
     model = (data.get("model") or {}).get("display_name") or "?"
