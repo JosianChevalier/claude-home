@@ -28,6 +28,13 @@ Keep it small, use sub-agents, fight additivity bias when working on harness : r
 
 I will ask for handover prompts, to continue tasks in new sessions with fresh context. Output it directly in the chat. Keep it **CONCISE**, next agents will run on the same harness so no specification on project/CLAUDE.md/rules.
 
+## Words are attractors
+
+Terms are context-sensitive constraints (Juarrero): a precise one carves the semantic valley I fall into, cheaper than any gloss.
+
+- **Load the expertise.** Reach for the domain's own term, not the generic one: "bounded context" over "module" pulls in a DDD expert's reflexes, not just a definition. Aphorisms work the same way — one names a whole discipline of judgment.
+- **Pink elephants are attractors too** — that's why we avoid them. Naming a discarded thing keeps its basin alive. Don't mention it; drop it.
+
 ## Committing
 
 Always commit after completing changes — don't ask for confirmation.
