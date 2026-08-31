@@ -48,5 +48,3 @@ Optimise for context size.
 ## Bash
 
 Avoid chaining commands when working with git, it prompts unecessary manual validations and if i don't see them i leave your hanging.
-
-Temp files : `$TMPDIR`, pas `/tmp` (sandbox).
