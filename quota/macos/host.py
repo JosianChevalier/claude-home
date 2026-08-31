@@ -55,9 +55,18 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     week = data.get("seven_day") or {}
     son = data.get("seven_day_sonnet") or {}
 
-    s_use, w_use, son_use = core.used(sess), core.used(week), core.used(son)
-    s_cd, s_at = core.fmt_reset(sess["resets_at"], now) if sess.get("resets_at") else ("?", "?")
+    w_use, son_use = core.used(week), core.used(son)
     w_cd, w_at = core.fmt_reset(week["resets_at"], now) if week.get("resets_at") else ("?", "?")
+
+    # Fenêtre 5h fermée : on affiche 0 % (rien ne s'accumule) et l'escargot à la
+    # place du compte à rebours. Le % laissé dans le bloc appartient à une fenêtre
+    # révolue — le montrer laisserait croire à une consommation en cours.
+    en_cours = core.fenetre_ouverte(sess)
+    if en_cours:
+        s_use = core.used(sess)
+        s_cd, s_at = core.fmt_reset(sess["resets_at"], now)
+    else:
+        s_use, s_cd, s_at = 0, core.GLYPHE_REPOS, None
 
     # Barre de menu : couleur calée sur la fenêtre AFFICHÉE (session 5h) — le %
     # montré et la couleur parlent de la même chose. L'hebdo reste haut des jours
@@ -73,8 +82,11 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     L.append("Claude Code — quota | size=11 color=gray")
     if stale_secs is not None:
         L.append(f"⚠ Hors-ligne — cache il y a {core.fmt_age(stale_secs)} | size=11 color=gray")
-    L.append(f"Session (5h) : {s_use}% utilisé |{_col(s_use)}")
-    L.append(f"-- reset dans {s_cd} · {s_at} | size=11 color=gray")
+    if en_cours:
+        L.append(f"Session (5h) : {s_use}% utilisé |{_col(s_use)}")
+        L.append(f"-- reset dans {s_cd} · {s_at} | size=11 color=gray")
+    else:
+        L.append(f"Session (5h) : {core.GLYPHE_REPOS} aucune fenêtre en cours")
     L.append(f"Hebdo (7j) : {w_use}% utilisé |{_col(w_use)}")
     L.append(f"-- reset dans {w_cd} · {w_at} | size=11 color=gray")
     L.append(f"Hebdo Sonnet : {son_use}% utilisé | size=11 color=gray")

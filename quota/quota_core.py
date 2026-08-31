@@ -23,6 +23,11 @@ MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin",
 SEUIL_ORANGE = 50   # >= 50 % utilisé -> orange
 SEUIL_ROUGE = 80    # >= 80 % utilisé -> rouge
 
+# Tient la place du compte à rebours quand aucune fenêtre n'est ouverte : rien ne
+# tourne, donc rien à décompter. Un escargot plutôt qu'une horloge vide — l'absence
+# de fenêtre n'est pas une attente, et la puce ne doit pas pousser à s'y remettre.
+GLYPHE_REPOS = "🐌"
+
 # Throttle anti-429 : on n'appelle l'API que si le cache est plus vieux que ça.
 # L'hôte redessine la puce souvent (60 s pour SwiftBar) sans taper l'endpoint à
 # chaque fois (/usage rate-limite sous rafale). Le compte à rebours reste juste :
@@ -91,6 +96,16 @@ def used(block):
     if not block:
         return None
     return round(block.get("utilization") or 0)
+
+
+def fenetre_ouverte(block):
+    """True si la fenêtre a une échéance — donc quelque chose à décompter.
+
+    L'API renvoie des blocs `{utilization: x, resets_at: null}` : un quota sans
+    échéance. Pas d'échéance = pas de fenêtre en cours ; le % qui traîne dedans
+    appartient à une fenêtre déjà close et ne mesure plus rien.
+    """
+    return bool(block and block.get("resets_at"))
 
 
 def color_for(used_pct):

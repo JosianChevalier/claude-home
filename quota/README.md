@@ -5,6 +5,7 @@ Affiche dans la barre de menu macOS l'état de la session Claude Code :
 
 ```
 23% · 4h05            ← % utilisé (session 5h) · compte à rebours reset
+ 0% · 🐌              ← aucune fenêtre en cours (rien ne tourne, rien à décompter)
 ```
 
 ## Arborescence (`~/.claude/quota/`)
@@ -51,6 +52,7 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 - Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre suit la fenêtre affichée (session 5h). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `quota_core`.
 - **Throttle anti-429** : la puce est redessinée toutes les 60 s, mais l'API n'est appelée que si le cache dépasse `MIN_FETCH_INTERVAL` (300 s) — sinon on ré-affiche le cache **sans réseau** (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Évite les rafales sur `/usage` (qui rate-limite, surtout cumulé aux appels de Claude Code lui-même). Le bouton *Rafraîchir* force un vrai appel (`--force`).
+- **Fenêtre fermée** : l'API peut renvoyer `five_hour` sans `resets_at` (ou `null`). Pas d'échéance = pas de fenêtre en cours ; le % qui traîne dedans appartient à une fenêtre révolue et ne mesure plus rien. La puce affiche alors `0% · 🐌`, sans couleur — l'absence de fenêtre n'est pas une attente, la puce ne doit pas pousser à s'y remettre. Prédicat `fenetre_ouverte()` + `GLYPHE_REPOS` dans `quota_core`.
 - **Cache** : succès → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche la dernière valeur **grisée + `⋯`** avec son âge (« cache il y a Xm »).
 - **Menu déroulant** : session 5h, hebdo 7j, hebdo Sonnet (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
 - **Démarrage auto** : LaunchAgent `~/Library/LaunchAgents/com.josian.claude-swiftbar.plist` (`open -gja SwiftBar`, RunAtLoad). Le toggle le crée/charge ou le retire (`launchctl load/unload -w`) + notif macOS.

@@ -108,6 +108,41 @@ class TestRendu(unittest.TestCase):
         self.assertIn("23% ·", out.splitlines()[0])
 
 
+class TestFenetreFermee(unittest.TestCase):
+    """Pas de resets_at sur la session -> aucune fenêtre en cours."""
+
+    # Le % qui traîne (4) appartient à une fenêtre révolue : il ne doit pas s'afficher.
+    SANS_ECHEANCE = dict(SAMPLE, five_hour={"utilization": 4.0, "resets_at": None})
+    BLOC_NUL = dict(SAMPLE, five_hour=None)
+
+    def test_predicat(self):
+        self.assertTrue(core.fenetre_ouverte(SAMPLE["five_hour"]))
+        self.assertFalse(core.fenetre_ouverte({"utilization": 4.0, "resets_at": None}))
+        self.assertFalse(core.fenetre_ouverte({}))
+        self.assertFalse(core.fenetre_ouverte(None))
+
+    def test_barre_escargot_et_zero(self):
+        first = mac.render(self.SANS_ECHEANCE, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
+        self.assertIn(f"0% · {core.GLYPHE_REPOS}", first)
+        self.assertNotIn("4%", first)       # le % de la fenêtre close reste caché
+        self.assertNotIn("color=", first)   # rien en cours -> jamais alarmant
+
+    def test_bloc_nul_aussi(self):
+        first = mac.render(self.BLOC_NUL, "/x/p.py", "/x/py", now=NOW).splitlines()[0]
+        self.assertIn(f"0% · {core.GLYPHE_REPOS}", first)
+
+    def test_detail_sans_compte_a_rebours(self):
+        out = mac.render(self.SANS_ECHEANCE, "/x/p.py", "/x/py", now=NOW)
+        self.assertIn("aucune fenêtre en cours", out)
+        self.assertNotIn("reset dans ?", out)     # plus de « ? » orphelin
+        self.assertIn("Hebdo (7j) : 18% utilisé", out)   # l'hebdo reste lisible
+
+    def test_hebdo_intacte_quand_session_fermee(self):
+        # La fenêtre hebdo, elle, a une échéance : son compte à rebours doit rester.
+        out = mac.render(self.SANS_ECHEANCE, "/x/p.py", "/x/py", now=NOW)
+        self.assertIn("juin à", out)
+
+
 class TestStaleEtAge(unittest.TestCase):
     def test_fmt_age(self):
         self.assertEqual(core.fmt_age(40), "40s")
