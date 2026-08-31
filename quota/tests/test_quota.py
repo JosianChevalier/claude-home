@@ -107,6 +107,12 @@ class TestRendu(unittest.TestCase):
         out = mac.render({"five_hour": SAMPLE["five_hour"]}, "/x/p.py", "/x/py", now=NOW)
         self.assertIn("23% ·", out.splitlines()[0])
 
+    def test_sonnet_absent_affiche_zero(self):
+        # Certains comptes n'ont pas de bloc seven_day_sonnet : 0 %, pas « None% ».
+        out = mac.render(dict(SAMPLE, seven_day_sonnet=None), "/x/p.py", "/x/py", now=NOW)
+        self.assertIn("Hebdo Sonnet : 0% utilisé", out)
+        self.assertNotIn("None%", out)
+
 
 class TestFenetreFermee(unittest.TestCase):
     """Pas de resets_at sur la session -> aucune fenêtre en cours."""
