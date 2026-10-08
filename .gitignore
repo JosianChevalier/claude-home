@@ -10,6 +10,9 @@
 !/CLAUDE.md
 !/AGENTS.md
 !/sync-repo.md
+
+!/philosophy/
+!/philosophy/*.md
 !/statusline.py
 !/settings.template.json
 
