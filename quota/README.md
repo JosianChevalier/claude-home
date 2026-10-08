@@ -66,7 +66,7 @@ sur `--force`. Tant qu'on travaille dans Claude Code, zéro appel réseau.
 - **Throttle anti-429** = `STALE_AFTER` : la puce est redessinée toutes les 60 s, mais après un appel HTTP OK, pas d'appel avant 10 min (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant ». Le bouton *Rafraîchir* force un vrai appel (`--force`).
 - **Fenêtre fermée** : l'API peut renvoyer `five_hour` sans `resets_at` (ou `null`), ou avec un `resets_at` déjà atteint. Pas d'échéance à venir = pas de fenêtre en cours ; le % qui traîne dedans appartient à une fenêtre révolue et ne mesure plus rien. La puce affiche alors `0% · 🐌`, sans couleur — l'absence de fenêtre n'est pas une attente, la puce ne doit pas pousser à s'y remettre. Prédicat `fenetre_ouverte()` + `GLYPHE_REPOS` dans `quota_core`.
 - **Repli** : succès HTTP → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche l'instantané le plus frais **grisé + `⋯`** avec son âge (« cache il y a Xm »).
-- **Menu déroulant** : session 5h, hebdo 7j, hebdo Sonnet (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
+- **Menu déroulant** : session 5h, hebdo 7j (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
 - **Démarrage auto** : LaunchAgent `~/Library/LaunchAgents/com.josian.claude-swiftbar.plist` (`open -gja SwiftBar`, RunAtLoad). Le toggle le crée/charge ou le retire (`launchctl load/unload -w`) + notif macOS.
 
 ## Gotchas (déjà rencontrés)

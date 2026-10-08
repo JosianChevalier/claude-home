@@ -54,11 +54,7 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     """
     sess = data.get("five_hour") or {}
     week = data.get("seven_day") or {}
-    son = data.get("seven_day_sonnet") or {}
-
-    # `seven_day_sonnet` est absent des réponses de certains comptes : bloc manquant
-    # = rien de consommé sur cette fenêtre, donc 0 % (et pas un « None% » affiché).
-    w_use, son_use = core.used(week), core.used(son) or 0
+    w_use = core.used(week)
     w_cd, w_at = core.fmt_reset(week["resets_at"], now) if week.get("resets_at") else ("?", "?")
 
     # Fenêtre 5h fermée : on affiche 0 % (rien ne s'accumule) et l'escargot à la
@@ -92,7 +88,6 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
         L.append(f"Session (5h) : {core.GLYPHE_REPOS} aucune fenêtre en cours")
     L.append(f"Hebdo (7j) : {w_use}% utilisé |{_col(w_use)}")
     L.append(f"-- reset dans {w_cd} · {w_at} | size=11 color=gray")
-    L.append(f"Hebdo Sonnet : {son_use}% utilisé | size=11 color=gray")
 
     L.append("---")
     act = f"bash={python_exec} param1={plugin_path}"

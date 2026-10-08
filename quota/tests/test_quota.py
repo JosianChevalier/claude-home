@@ -91,7 +91,6 @@ class TestRendu(unittest.TestCase):
     def test_details_hebdo_et_heure(self):
         out = self.out()
         self.assertIn("Hebdo (7j) : 18% utilisé", out)
-        self.assertIn("Hebdo Sonnet : 1% utilisé", out)
         self.assertIn("juin à", out)  # heure de reset absolue présente
 
     def test_action_embarque_interpreteur(self):
@@ -108,12 +107,6 @@ class TestRendu(unittest.TestCase):
     def test_bloc_manquant_ne_crashe_pas(self):
         out = mac.render({"five_hour": SAMPLE["five_hour"]}, "/x/p.py", "/x/py", now=NOW)
         self.assertIn("23% ·", out.splitlines()[0])
-
-    def test_sonnet_absent_affiche_zero(self):
-        # Certains comptes n'ont pas de bloc seven_day_sonnet : 0 %, pas « None% ».
-        out = mac.render(dict(SAMPLE, seven_day_sonnet=None), "/x/p.py", "/x/py", now=NOW)
-        self.assertIn("Hebdo Sonnet : 0% utilisé", out)
-        self.assertNotIn("None%", out)
 
 
 class TestFenetreFermee(unittest.TestCase):
