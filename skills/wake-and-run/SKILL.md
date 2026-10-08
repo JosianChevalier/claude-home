@@ -1,6 +1,6 @@
 ---
 name: wake-and-run
-description: This skill should be used when the user wants to keep the Mac awake and resume work after a delay — phrasings like "wake up in X hours and do <that>", "keep my mac awake for N hours then run …", "caffeinate and resume", "run this overnight unattended". Handles caffeinate (keep-awake) and the resume timer as DECOUPLED objects so neither defeats the other.
+description: Keep the Mac awake and resume work after a delay. Triggers: "wake and run in X", "wake up in X and do …", "caffeinate and resume", "run this overnight".
 version: 1.0.0
 ---
 
