@@ -1,0 +1,27 @@
+{
+  "env": {
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "180000"
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "fable[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "python3 /Users/josian/.claude/statusline.py"
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "autoMemoryEnabled": false,
+  "theme": "auto",
+  "editorMode": "normal",
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": false,
+  "voiceEnabled": true,
+  "syncClaudeAiSkills": false,
+  "syncClaudeAiPlugins": false
+}

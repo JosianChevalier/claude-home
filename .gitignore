@@ -9,6 +9,7 @@
 !/.gitignore
 !/CLAUDE.md
 !/statusline.py
+!/settings.json
 
 !/quota/
 !/quota/*.py
