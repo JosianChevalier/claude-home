@@ -193,11 +193,11 @@ class TestCache(unittest.TestCase):
 
 class TestThrottle(unittest.TestCase):
     def test_cache_frais_saute_le_fetch(self):
-        self.assertTrue(core.should_skip_fetch(10))                 # 10 s < 25 -> saute
-        self.assertTrue(core.should_skip_fetch(24))
+        self.assertTrue(core.should_skip_fetch(10))                 # 10 s < 300 -> saute
+        self.assertTrue(core.should_skip_fetch(299))
 
     def test_cache_vieux_force_le_fetch(self):
-        self.assertFalse(core.should_skip_fetch(25))                # >= seuil -> fetch
+        self.assertFalse(core.should_skip_fetch(300))               # >= seuil -> fetch
         self.assertFalse(core.should_skip_fetch(10_000))
 
     def test_force_ignore_le_throttle(self):

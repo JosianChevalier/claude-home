@@ -2,7 +2,7 @@
 """SwiftBar plugin — état de la session Claude Code (quota restant + reset).
 
 Source : endpoint OAuth non documenté api.anthropic.com/api/oauth/usage (= /usage).
-Refresh affiché : 30 s (encodé dans le nom). Mais l'API n'est interrogée qu'au-delà
+Refresh affiché : 60 s (encodé dans le nom). Mais l'API n'est interrogée qu'au-delà
 de MIN_FETCH_INTERVAL (throttle anti-429) : entre deux, on ré-affiche le cache —
 le compte à rebours, lui, est recalculé à chaque rendu donc reste juste.
 

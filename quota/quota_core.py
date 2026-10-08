@@ -29,10 +29,10 @@ SEUIL_ROUGE = 80    # >= 80 % utilisé -> rouge
 GLYPHE_REPOS = "🐌"
 
 # Throttle anti-429 : on n'appelle l'API que si le cache est plus vieux que ça.
-# L'hôte redessine la puce souvent (30 s pour SwiftBar) sans taper l'endpoint à
+# L'hôte redessine la puce souvent (60 s pour SwiftBar) sans taper l'endpoint à
 # chaque fois (/usage rate-limite sous rafale). Le compte à rebours reste juste :
 # recalculé au rendu.
-MIN_FETCH_INTERVAL = 25  # secondes (< redessin 30 s : chaque redessin refetche)
+MIN_FETCH_INTERVAL = 300  # secondes
 
 
 def should_skip_fetch(cache_age, force=False, min_interval=MIN_FETCH_INTERVAL):
