@@ -8,5 +8,7 @@
   },
   "autoMemoryEnabled": false,
   "syncClaudeAiSkills": false,
-  "syncClaudeAiPlugins": false
+  "syncClaudeAiPlugins": false,
+  "enableArtifact": false,
+  "disableWorkflows": true
 }
