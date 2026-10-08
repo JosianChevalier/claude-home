@@ -8,6 +8,7 @@
 # 2. Re-include the files/dirs we version (parents must be un-ignored to reach files).
 !/.gitignore
 !/CLAUDE.md
+!/AGENTS.md
 !/sync-repo.md
 !/statusline.py
 !/settings.template.json

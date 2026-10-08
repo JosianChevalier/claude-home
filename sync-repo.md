@@ -19,7 +19,7 @@ The same core must serve both Claude Code and OpenCode.
 - **No plugin marketplace.** Others take inspiration; they do not install. A plugin install is also a cached copy, awkward to edit and push back.
 - **No Packmind.** It is one-way (server to repos), covers only standards, commands and skills, and needs a self-hosted server.
 - **Agnostic core, thin per-tool adapters.** No abstraction or generator layer for two consumers.
-- **`CLAUDE.md` contains only `@AGENTS.md`.** `AGENTS.md` is the single rules file.
+- **`CLAUDE.md` is the single rules file; `AGENTS.md` is a symlink to it.** (Reversed on 2026-10-08 from the earlier `@AGENTS.md` import.)
 - **Folder `philosophy/`** replaces `rationale/`. Aligns with agent-tutor; the content is doctrine and framing more than ADR-style argumentation.
 - **Rationale refs are wikilinks.** Form: `Rationale: [[philosophy/context-economics]]`, several comma-separated on one line. No `@` (Claude Code imports `@path` eagerly and recursively, which would pull layer 2 into every session). The `[[` is a collision-proof anchor for a future plugin; `Rationale:` keeps the attractor word and distinguishes these from other wikilinks. No `.md`. Resolution order (repo-local `philosophy/`, then global `~/.claude/philosophy/`) lives in AGENTS.md and the plugin, not in the notation. Regex: `^Rationale: (\[\[philosophy/[\w-]+\]\](, )?)+$`.
 - **Merge direction: everything from this project into `~/.claude`.** The laptop's `~/.claude` is minimal (quota tooling, statusline, two skills) and its `CLAUDE.md` is already fully covered by the prototype's `AGENTS.md` and skills. Nothing to preserve from the laptop side.
@@ -53,7 +53,7 @@ The same core must serve both Claude Code and OpenCode.
 
 **Order:**
 
-1. Replace the content of `CLAUDE.md`.
+1. Replace the content of `CLAUDE.md`. Done 2026-10-08; OpenCode section parked in `old-claude/AGENTS.md`.
 2. Philosophy files.
 3. Rules, one by one. Many are old: some already reimplemented in skills, others to move in a different form. Keep the rationale that explains *how to say* things.
 4. Skills.
