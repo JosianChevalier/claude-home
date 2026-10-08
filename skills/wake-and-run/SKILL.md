@@ -1,6 +1,6 @@
 ---
 name: wake-and-run
-description: Keep the Mac awake and resume work after a delay. Triggers: "wake and run in X", "wake up in X and do …", "caffeinate and resume", "run this overnight".
+description: Trigger: "wake and run in X".
 version: 1.0.0
 ---
 
