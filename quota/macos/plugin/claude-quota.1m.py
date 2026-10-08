@@ -49,7 +49,8 @@ def main():
 
     # Throttle : cache assez frais (et pas de --force) -> on l'affiche sans réseau.
     # stale_secs=None : c'est récent, pas une donnée périmée, donc pas de gris/⋯.
-    if cached and core.should_skip_fetch(cached[1], force):
+    # Reset atteint = fenêtre révolue -> on bypasse le throttle comme un --force.
+    if cached and core.should_skip_fetch(cached[1], force or core.echeance_passee(cached[0])):
         print(host.render(cached[0], SELF, sys.executable, autostart_on=auto))
         return
 

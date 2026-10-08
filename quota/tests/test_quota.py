@@ -198,6 +198,12 @@ class TestThrottle(unittest.TestCase):
     def test_pas_de_cache_force_le_fetch(self):
         self.assertFalse(core.should_skip_fetch(None))
 
+    def test_echeance_passee(self):
+        self.assertFalse(core.echeance_passee(SAMPLE, now=NOW))          # reset à venir
+        apres = datetime(2026, 6, 21, 6, 50, 0, tzinfo=timezone.utc)
+        self.assertTrue(core.echeance_passee(SAMPLE, now=apres))         # reset atteint
+        self.assertFalse(core.echeance_passee({"five_hour": None}, now=apres))
+
     def test_rafraichir_force_dans_le_menu(self):
         out = mac.render(SAMPLE, "/x/p.py", "/x/py", now=NOW)
         self.assertIn("Rafraîchir | bash=/x/py param1=/x/p.py param2=--force", out)

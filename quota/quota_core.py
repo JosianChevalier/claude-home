@@ -108,6 +108,17 @@ def fenetre_ouverte(block):
     return bool(block and block.get("resets_at"))
 
 
+def echeance_passee(data, now=None):
+    """True si la fenêtre 5h du cache a atteint son reset : la donnée est périmée
+    par construction (nouvelle fenêtre côté API), quel que soit l'âge du cache.
+    Sinon le throttle ré-affiche « maintenant » jusqu'à MIN_FETCH_INTERVAL."""
+    iso = ((data or {}).get("five_hour") or {}).get("resets_at")
+    if not iso:
+        return False
+    now = now or datetime.now(timezone.utc)
+    return datetime.fromisoformat(iso) <= now
+
+
 def color_for(used_pct):
     """Couleur SÉMANTIQUE selon le % utilisé. None = adaptatif (l'hôte décide du
     rendu par défaut). 'orange' >= 50 %, 'red' >= 80 %. Chaque host mappe ces noms
