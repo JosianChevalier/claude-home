@@ -60,6 +60,13 @@ The same core must serve both Claude Code and OpenCode.
 5. Agents.
 6. Templates: things to version and share, but never loaded into context.
 
+**Placement decisions (2026-10-08):**
+
+- `composable-rules/` → `templates/rules/`. Opt-in rules a project loads for one bounded context via `@~/.claude/templates/rules/x.md`, never globally. Keep the set together: they cross-reference each other and `always-valid-domain.md`.
+- Templates carry frontmatter (`name`, `description`, `applies-to`) as the source of truth; `templates/README.md` is generated from it by `scripts/index-templates.py`, so the index cannot drift.
+- Scripts: by default packaged with the skill or agent that uses them. Reusable ones go in a shared `tools/` folder.
+- `hooks/` and `settings.json`: case by case.
+
 ## What each tool reads (checked against docs, 2026-10-06)
  
 | Part | Claude Code | OpenCode v1 | OpenCode v2 |
