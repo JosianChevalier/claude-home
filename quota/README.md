@@ -15,7 +15,7 @@ quota_core.py          cœur PORTABLE — calculs, /usage, cache, throttle, toke
 macos/
   host.py              host macOS — Keychain, LaunchAgent, notif osascript + rendu SwiftBar
   plugin/
-    claude-quota.1m.py entrée SwiftBar (coquille = core + macos/host). 1m = redessin 60 s.
+    claude-quota.30s.py entrée SwiftBar (coquille = core + macos/host). 30s = redessin 30 s.
 windows/
   host.py              host Windows (stub) — même surface, à brancher sur un tray
 tests/test_quota.py    32 tests stdlib. python3 tests/test_quota.py
@@ -51,7 +51,7 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 ## Comportement
 
 - Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre suit la fenêtre affichée (session 5h). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `quota_core`.
-- **Throttle anti-429** : la puce est redessinée toutes les 60 s, mais l'API n'est appelée que si le cache dépasse `MIN_FETCH_INTERVAL` (300 s) — sinon on ré-affiche le cache **sans réseau** (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant » jusqu'à la fin du throttle. Évite les rafales sur `/usage` (qui rate-limite, surtout cumulé aux appels de Claude Code lui-même). Le bouton *Rafraîchir* force un vrai appel (`--force`).
+- **Throttle anti-429** : la puce est redessinée toutes les 30 s, et l'API n'est appelée que si le cache dépasse `MIN_FETCH_INTERVAL` (25 s, donc à chaque redessin ; remonter si des 429 apparaissent) — sinon on ré-affiche le cache **sans réseau** (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant » jusqu'à la fin du throttle. Évite les rafales sur `/usage` (qui rate-limite, surtout cumulé aux appels de Claude Code lui-même). Le bouton *Rafraîchir* force un vrai appel (`--force`).
 - **Fenêtre fermée** : l'API peut renvoyer `five_hour` sans `resets_at` (ou `null`), ou avec un `resets_at` déjà atteint. Pas d'échéance à venir = pas de fenêtre en cours ; le % qui traîne dedans appartient à une fenêtre révolue et ne mesure plus rien. La puce affiche alors `0% · 🐌`, sans couleur — l'absence de fenêtre n'est pas une attente, la puce ne doit pas pousser à s'y remettre. Prédicat `fenetre_ouverte()` + `GLYPHE_REPOS` dans `quota_core`.
 - **Cache** : succès → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche la dernière valeur **grisée + `⋯`** avec son âge (« cache il y a Xm »).
 - **Menu déroulant** : session 5h, hebdo 7j, hebdo Sonnet (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
@@ -60,14 +60,14 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 ## Gotchas (déjà rencontrés)
 
 - **Actions cliquables** : SwiftBar ne résout PAS le shebang `env python3` au clic quand python vit dans Homebrew. → on **embarque `sys.executable`** dans `bash=…`. Si tu changes d'interpréteur, rien à faire (calculé au runtime).
-- **`429`** : à force d'appels rapprochés l'endpoint rate-limite. 60 s en régime normal suffit ; chaque *Rafraîchir* = 1 appel de plus.
+- **`429`** : à force d'appels rapprochés l'endpoint rate-limite. 30 s en régime normal semble tenir ; chaque *Rafraîchir* = 1 appel de plus.
 - **Couleur en mode clair** : on évite `white` fixe (invisible). État sain = pas de `color=` → SwiftBar adapte (noir/blanc selon thème).
 
 ## Itérer
 
 1. Logique portable → `quota_core.py` ; rendu/intégration mac → `macos/host.py`.
 2. `python3 tests/test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
-3. `./macos/plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
+3. `./macos/plugin/claude-quota.30s.py` pour voir le rendu SwiftBar brut.
 4. `open swiftbar://refreshallplugins` pour rafraîchir la puce sans attendre.
 
 Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer la
