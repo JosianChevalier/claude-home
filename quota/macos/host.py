@@ -63,7 +63,7 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     # Fenêtre 5h fermée : on affiche 0 % (rien ne s'accumule) et l'escargot à la
     # place du compte à rebours. Le % laissé dans le bloc appartient à une fenêtre
     # révolue — le montrer laisserait croire à une consommation en cours.
-    en_cours = core.fenetre_ouverte(sess)
+    en_cours = core.fenetre_ouverte(sess, now)
     if en_cours:
         s_use = core.used(sess)
         s_cd, s_at = core.fmt_reset(sess["resets_at"], now)

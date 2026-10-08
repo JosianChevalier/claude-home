@@ -98,25 +98,26 @@ def used(block):
     return round(block.get("utilization") or 0)
 
 
-def fenetre_ouverte(block):
-    """True si la fenêtre a une échéance — donc quelque chose à décompter.
+def fenetre_ouverte(block, now=None):
+    """True si la fenêtre a une échéance À VENIR — donc quelque chose à décompter.
 
     L'API renvoie des blocs `{utilization: x, resets_at: null}` : un quota sans
-    échéance. Pas d'échéance = pas de fenêtre en cours ; le % qui traîne dedans
-    appartient à une fenêtre déjà close et ne mesure plus rien.
+    échéance. Pas d'échéance, ou échéance atteinte = pas de fenêtre en cours ; le %
+    qui traîne dedans appartient à une fenêtre déjà close et ne mesure plus rien.
     """
-    return bool(block and block.get("resets_at"))
+    iso = (block or {}).get("resets_at")
+    if not iso:
+        return False
+    now = now or datetime.now(timezone.utc)
+    return datetime.fromisoformat(iso) > now
 
 
 def echeance_passee(data, now=None):
     """True si la fenêtre 5h du cache a atteint son reset : la donnée est périmée
     par construction (nouvelle fenêtre côté API), quel que soit l'âge du cache.
-    Sinon le throttle ré-affiche « maintenant » jusqu'à MIN_FETCH_INTERVAL."""
-    iso = ((data or {}).get("five_hour") or {}).get("resets_at")
-    if not iso:
-        return False
-    now = now or datetime.now(timezone.utc)
-    return datetime.fromisoformat(iso) <= now
+    Sinon le throttle ré-affiche une fenêtre close jusqu'à MIN_FETCH_INTERVAL."""
+    block = (data or {}).get("five_hour") or {}
+    return bool(block.get("resets_at")) and not fenetre_ouverte(block, now)
 
 
 def color_for(used_pct):

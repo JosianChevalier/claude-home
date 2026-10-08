@@ -122,7 +122,9 @@ class TestFenetreFermee(unittest.TestCase):
     BLOC_NUL = dict(SAMPLE, five_hour=None)
 
     def test_predicat(self):
-        self.assertTrue(core.fenetre_ouverte(SAMPLE["five_hour"]))
+        self.assertTrue(core.fenetre_ouverte(SAMPLE["five_hour"], now=NOW))
+        apres = datetime(2026, 6, 21, 6, 50, 0, tzinfo=timezone.utc)
+        self.assertFalse(core.fenetre_ouverte(SAMPLE["five_hour"], now=apres))  # reset atteint
         self.assertFalse(core.fenetre_ouverte({"utilization": 4.0, "resets_at": None}))
         self.assertFalse(core.fenetre_ouverte({}))
         self.assertFalse(core.fenetre_ouverte(None))
@@ -142,6 +144,12 @@ class TestFenetreFermee(unittest.TestCase):
         self.assertIn("aucune fenêtre en cours", out)
         self.assertNotIn("reset dans ?", out)     # plus de « ? » orphelin
         self.assertIn("Hebdo (7j) : 18% utilisé", out)   # l'hebdo reste lisible
+
+    def test_reset_atteint_affiche_escargot(self):
+        apres = datetime(2026, 6, 21, 6, 50, 0, tzinfo=timezone.utc).astimezone()
+        out = mac.render(SAMPLE, "/x/p.py", "/x/py", now=apres)
+        self.assertTrue(out.startswith(f"0% · {core.GLYPHE_REPOS} |"))
+        self.assertNotIn("maintenant", out)
 
     def test_hebdo_intacte_quand_session_fermee(self):
         # La fenêtre hebdo, elle, a une échéance : son compte à rebours doit rester.
