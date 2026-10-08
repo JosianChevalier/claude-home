@@ -9,6 +9,7 @@ Adaptateurs :
   Http        endpoint OAuth non documenté (= /usage) + cache disque. Coûteux, rate-limité.
   Fallback    la source la plus fraîche gagne ; on ne tape le réseau que si tout est
               périmé (STALE_AFTER), si le reset de session est atteint, ou sur --force.
+              Un échec HTTP n'est pas rejoué avant STALE_AFTER (sauf --force).
 """
 import json
 import os
@@ -96,7 +97,9 @@ def token_from_file():
 
 
 class Http:
-    """get() = cache disque, sans réseau. refresh() = appel API + mise en cache."""
+    """get() = cache disque, sans réseau. refresh() = appel API + mise en cache.
+    Un seul fichier : data/fetched_at (dernier succès) + attempted_at/error (dernier
+    essai). Un échec est mémorisé : la chaîne ne retente pas avant STALE_AFTER."""
 
     def __init__(self, get_token=token_from_file, path=CACHE_FILE, fetch=None):
         self.get_token = get_token
@@ -105,19 +108,31 @@ class Http:
 
     def get(self):
         c = _read_json(self.path)
-        return Snapshot(c["data"], c["fetched_at"]) if c else None
+        return Snapshot(c["data"], c["fetched_at"]) if c and "data" in c else None
+
+    def last_attempt(self):
+        """(attempted_at, error) du dernier essai, (0, None) si aucun."""
+        c = _read_json(self.path) or {}
+        return c.get("attempted_at", 0), c.get("error")
 
     def refresh(self):
-        token = self.get_token()
-        if not token:
-            raise RuntimeError("Token introuvable (fichier credentials ou Keychain)")
-        data = self._fetch(token)
-        snap = Snapshot(data, time.time())
+        now = time.time()
         try:
-            _write_json(self.path, snap._asdict())
+            token = self.get_token()
+            if not token:
+                raise RuntimeError("Token introuvable (fichier credentials ou Keychain)")
+            data = self._fetch(token)
+        except Exception as e:
+            self._remember(attempted_at=now, error=str(e))
+            raise
+        self._remember(data=data, fetched_at=now, attempted_at=now, error=None)
+        return Snapshot(data, now)
+
+    def _remember(self, **fields):
+        try:
+            _write_json(self.path, {**(_read_json(self.path) or {}), **fields})
         except Exception:
             pass
-        return snap
 
     @staticmethod
     def _fetch_http(token):
@@ -143,6 +158,11 @@ class Fallback:
         best = freshest(*(s.get() for s in self.sources), self.http.get())
         if best and not force and not self.is_stale(best, now):
             return best, None
+        # Échec récent mémorisé : on ressert le repli sans retaper l'API. Sinon un
+        # redessin rapproché (10 s) rejouerait l'appel en boucle pendant la panne.
+        attempted_at, error = self.http.last_attempt()
+        if not force and error and (now or time.time()) - attempted_at < self.stale_after:
+            return best, f"Erreur API : {error}"
         try:
             return self.http.refresh(), None
         except Exception as e:

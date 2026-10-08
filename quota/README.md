@@ -16,7 +16,7 @@ providers.py           sources PORTABLES (SPI) — port Snapshot, StatusLine, Ht
 macos/
   host.py              host macOS — Keychain, LaunchAgent, notif osascript + rendu SwiftBar
   plugin/
-    claude-quota.1m.py entrée SwiftBar (coquille = core + macos/host). 1m = redessin 60 s.
+    claude-quota.10s.py entrée SwiftBar (coquille = core + macos/host). 10s = redessin 10 s.
 windows/
   host.py              host Windows (stub) — même surface, à brancher sur un tray
 tests/test_quota.py    39 tests stdlib. python3 tests/test_quota.py
@@ -63,7 +63,7 @@ sur `--force`. Tant qu'on travaille dans Claude Code, zéro appel réseau.
 ## Comportement
 
 - Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre suit la fenêtre affichée (session 5h). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `quota_core`.
-- **Throttle anti-429** = `STALE_AFTER` : la puce est redessinée toutes les 60 s, mais après un appel HTTP OK, pas d'appel avant 10 min (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant ». Le bouton *Rafraîchir* force un vrai appel (`--force`).
+- **Throttle anti-429** = `STALE_AFTER` : la puce est redessinée toutes les 10 s (lecture fichier, zéro réseau), mais après un appel HTTP, OK **ou échoué**, pas d'appel avant 10 min (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant ». Le bouton *Rafraîchir* force un vrai appel (`--force`).
 - **Fenêtre fermée** : l'API peut renvoyer `five_hour` sans `resets_at` (ou `null`), ou avec un `resets_at` déjà atteint. Pas d'échéance à venir = pas de fenêtre en cours ; le % qui traîne dedans appartient à une fenêtre révolue et ne mesure plus rien. La puce affiche alors `0% · 🐌`, sans couleur — l'absence de fenêtre n'est pas une attente, la puce ne doit pas pousser à s'y remettre. Prédicat `fenetre_ouverte()` + `GLYPHE_REPOS` dans `quota_core`.
 - **Repli** : succès HTTP → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche l'instantané le plus frais **grisé + `⋯`** avec son âge (« cache il y a Xm »).
 - **Menu déroulant** : session 5h, hebdo 7j (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
@@ -72,17 +72,17 @@ sur `--force`. Tant qu'on travaille dans Claude Code, zéro appel réseau.
 ## Gotchas (déjà rencontrés)
 
 - **Actions cliquables** : SwiftBar ne résout PAS le shebang `env python3` au clic quand python vit dans Homebrew. → on **embarque `sys.executable`** dans `bash=…`. Si tu changes d'interpréteur, rien à faire (calculé au runtime).
-- **`429`** : à force d'appels rapprochés l'endpoint rate-limite. 60 s en régime normal suffit ; chaque *Rafraîchir* = 1 appel de plus.
+- **`429`** : à force d'appels rapprochés l'endpoint rate-limite. En régime normal la status line nourrit la puce et l'API n'est jamais appelée ; chaque *Rafraîchir* = 1 appel.
 - **Couleur en mode clair** : on évite `white` fixe (invisible). État sain = pas de `color=` → SwiftBar adapte (noir/blanc selon thème).
 
 ## Itérer
 
 1. Calculs → `quota_core.py` ; sources → `providers.py` ; rendu/intégration mac → `macos/host.py`.
 2. `python3 tests/test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
-3. `./macos/plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
+3. `./macos/plugin/claude-quota.10s.py` pour voir le rendu SwiftBar brut.
 4. `open swiftbar://refreshallplugins` pour rafraîchir la puce sans attendre.
 
-Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer le seuil de
+Changer le **redessin** = renommer le fichier (`.10s.` / `.30s.` / `.1m.`). Changer le seuil de
 **péremption / appels API** = `STALE_AFTER` dans `providers` (indépendant du redessin).
 Format des lignes SwiftBar : `Titre | color= size= bash= param1= terminal= refresh=`.
 

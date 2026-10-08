@@ -3,8 +3,8 @@
 
 Sources (providers.py) : l'instantané déposé par la status line à chaque requête
 Claude Code, sinon l'endpoint /usage quand tout est périmé (STALE_AFTER).
-Refresh affiché : 60 s (encodé dans le nom) — le compte à rebours est recalculé à
-chaque rendu, la donnée elle-même ne bouge que quand une source bouge.
+Redessin : 10 s (encodé dans le nom). Pull sans réseau : on relit l'instantané et on
+recalcule le compte à rebours ; la donnée ne bouge que quand la status line la dépose.
 
 Coquille fine : la logique portable vit dans quota_core + providers, l'intégration
 mac + le rendu SwiftBar dans macos/host (tous testés).

@@ -256,6 +256,20 @@ class TestProviders(unittest.TestCase):
         self.assertEqual(snap.data["five_hour"]["utilization"], 13)
         self.assertGreaterEqual(providers.age(snap), 700)
 
+    def test_echec_recent_non_rejoue(self):
+        # Redessin toutes les 10 s : un échec ne doit pas relancer l'API à chaque rendu.
+        providers.publish_rate_limits(self.RL, self.sl_path, now=providers.time.time() - 700)
+        self.token = "KO"
+        self.chain.get()
+        self.token = "OK"
+        snap, err = self.chain.get()
+        self.assertEqual(self.calls, ["KO"])                # pas de 2e appel
+        self.assertIn("boom", err)                          # erreur mémorisée ressortie
+        self.assertEqual(snap.data["five_hour"]["utilization"], 13)
+        self.chain.get(force=True)                          # Rafraîchir passe outre
+        self.assertEqual(self.calls, ["KO", "OK"])
+        self.assertIsNone(self.chain.get()[1])              # succès = échec oublié
+
     def test_echec_reseau_sans_repli(self):
         self.token = "KO"
         snap, err = self.chain.get()
