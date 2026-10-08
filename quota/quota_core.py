@@ -1,19 +1,10 @@
-"""Cœur PORTABLE du plugin quota Claude Code — calculs, réseau, cache, token-fichier.
+"""Cœur PORTABLE du plugin quota Claude Code — calculs et formatage, rien d'autre.
 
-ZÉRO appel spécifique à un OS : tout ce qui touche le système (Keychain, LaunchAgent,
-osascript) ou un format d'hôte (syntaxe SwiftBar) vit dans un host_*.py à côté.
-N'importe quel host (SwiftBar macOS, tray Windows) importe ce module pour la logique.
-Couvert par test_quota.py.
+ZÉRO I/O, zéro OS : d'où vient la donnée (status line, HTTP, cache) est l'affaire de
+providers.py ; comment elle s'affiche (SwiftBar, tray) celle d'un host. N'importe quel
+host importe ce module pour la logique. Couvert par test_quota.py.
 """
-import json
-import os
-import time
-import urllib.request
 from datetime import datetime, timezone
-
-USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
-CRED_FILE = os.path.expanduser("~/.claude/.credentials.json")
-CACHE_FILE = os.path.expanduser("~/.claude/quota/.usage-cache.json")
 
 JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin",
@@ -27,68 +18,6 @@ SEUIL_ROUGE = 80    # >= 80 % utilisé -> rouge
 # tourne, donc rien à décompter. Un escargot plutôt qu'une horloge vide — l'absence
 # de fenêtre n'est pas une attente, et la puce ne doit pas pousser à s'y remettre.
 GLYPHE_REPOS = "🐌"
-
-# Throttle anti-429 : on n'appelle l'API que si le cache est plus vieux que ça.
-# L'hôte redessine la puce souvent (60 s pour SwiftBar) sans taper l'endpoint à
-# chaque fois (/usage rate-limite sous rafale). Le compte à rebours reste juste :
-# recalculé au rendu.
-MIN_FETCH_INTERVAL = 300  # secondes
-
-
-def should_skip_fetch(cache_age, force=False, min_interval=MIN_FETCH_INTERVAL):
-    """True = servir le cache sans réseau (cache assez frais et pas de --force)."""
-    if force or cache_age is None:
-        return False
-    return cache_age < min_interval
-
-
-# --------------------------------------------------------------------------- token
-def get_token_from_file():
-    """Token OAuth depuis le fichier credentials (portable). None si absent.
-
-    Le repli spécifique à l'OS (Keychain macOS, Credential Manager Windows) est du
-    ressort du host : il appelle ceci d'abord, puis son propre fallback.
-    """
-    try:
-        with open(CRED_FILE) as f:
-            return json.load(f)["claudeAiOauth"]["accessToken"]
-    except Exception:
-        return None
-
-
-# ----------------------------------------------------------------------------- API
-def fetch(token):
-    """Appelle l'endpoint /usage (non documenté). Renvoie le dict JSON."""
-    req = urllib.request.Request(
-        USAGE_URL,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "anthropic-beta": "oauth-2025-04-20",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=10) as r:
-        return json.load(r)
-
-
-# ------------------------------------------------------------------------- cache
-def save_cache(data, fetched_at=None):
-    """Mémorise la dernière réponse OK pour servir de repli en cas d'erreur."""
-    try:
-        with open(CACHE_FILE, "w") as f:
-            json.dump({"fetched_at": fetched_at or time.time(), "data": data}, f)
-    except Exception:
-        pass
-
-
-def load_cache():
-    """(data, âge_en_secondes) du dernier succès, ou None si pas de cache."""
-    try:
-        with open(CACHE_FILE) as f:
-            c = json.load(f)
-        return c["data"], max(0, int(time.time() - c["fetched_at"]))
-    except Exception:
-        return None
-
 
 # ----------------------------------------------------------------------- calculs
 def used(block):
@@ -113,9 +42,8 @@ def fenetre_ouverte(block, now=None):
 
 
 def echeance_passee(data, now=None):
-    """True si la fenêtre 5h du cache a atteint son reset : la donnée est périmée
-    par construction (nouvelle fenêtre côté API), quel que soit l'âge du cache.
-    Sinon le throttle ré-affiche une fenêtre close jusqu'à MIN_FETCH_INTERVAL."""
+    """True si la fenêtre 5h de l'instantané a atteint son reset : la donnée est
+    périmée par construction (nouvelle fenêtre côté API), quel que soit son âge."""
     block = (data or {}).get("five_hour") or {}
     return bool(block.get("resets_at")) and not fenetre_ouverte(block, now)
 

@@ -1,21 +1,22 @@
 """Host Windows — STUB. Même surface que host_macos, à brancher sur un hôte tray.
 
 SwiftBar n'existe pas sur Windows : l'hôte ici n'est pas une « puce SwiftBar » mais
-un tray (p.ex. pystray) ou une tâche planifiée. Tout le portable vient de quota_core ;
+un tray (p.ex. pystray) ou une tâche planifiée. Tout le portable vient de quota_core
+et providers ;
 ce fichier ne porte QUE l'intégration Windows + un rendu adapté à son hôte.
 
 À implémenter (chaque fonction lève NotImplementedError pour l'instant) :
-  - get_token        : core.get_token_from_file() puis fallback Credential Manager / DPAPI
+  - get_token        : providers.token_from_file() puis fallback Credential Manager / DPAPI
   - render           : sortie pour l'hôte tray (titre + tooltip + menu), PAS la syntaxe SwiftBar
   - autostart        : raccourci dans shell:startup, ou clé de registre Run
   - notify           : toast Windows (win10toast / winrt)
 """
-import quota_core as core
+import providers
 
 
 def get_token():
     """Fichier credentials d'abord (portable), sinon fallback Windows à écrire."""
-    token = core.get_token_from_file()
+    token = providers.token_from_file()
     if token:
         return token
     raise NotImplementedError("Fallback token Windows (Credential Manager / DPAPI) à écrire")

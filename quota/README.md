@@ -11,22 +11,26 @@ Affiche dans la barre de menu macOS l'état de la session Claude Code :
 ## Arborescence (`~/.claude/quota/`)
 
 ```
-quota_core.py          cœur PORTABLE — calculs, /usage, cache, throttle, token-fichier. Zéro OS.
+quota_core.py          cœur PORTABLE — calculs et formatage. Zéro I/O, zéro OS.
+providers.py           sources PORTABLES (SPI) — port Snapshot, StatusLine, Http, Fallback.
 macos/
   host.py              host macOS — Keychain, LaunchAgent, notif osascript + rendu SwiftBar
   plugin/
     claude-quota.1m.py entrée SwiftBar (coquille = core + macos/host). 1m = redessin 60 s.
 windows/
   host.py              host Windows (stub) — même surface, à brancher sur un tray
-tests/test_quota.py    32 tests stdlib. python3 tests/test_quota.py
+tests/test_quota.py    39 tests stdlib. python3 tests/test_quota.py
 README.md
-.usage-cache.json      dernière réponse OK (repli + throttle). Auto-généré, jetable, gitignored.
+.statusline-snapshot.json  rate_limits déposé par ~/.claude/statusline.py. Jetable, gitignored.
+.usage-cache.json          dernière réponse HTTP OK. Jetable, gitignored.
 ```
 
-Séparation en deux axes : **(1)** le `.py` exécuté par SwiftBar ne fait qu'orchestrer
-(token, fetch, print) ; la logique vit dans les modules, testable sans réseau ni SwiftBar.
-**(2)** le portable (`quota_core`) est isolé de l'OS-spécifique (`macos/`, `windows/`) — un
-futur host Windows réutilise le cœur tel quel.
+Hexagonal : **(1)** le `.py` exécuté par SwiftBar ne fait que composer (sources → rendu) ;
+la logique vit dans les modules, testable sans réseau ni SwiftBar. **(2)** le portable
+(`quota_core`, `providers`) est isolé de l'OS-spécifique (`macos/`, `windows/`) — un futur
+host Windows réutilise le cœur tel quel. **(3)** la donnée arrive par un port
+(`get() -> Snapshot(data, fetched_at)`) : le rendu ignore si elle vient de la status line
+ou de l'API.
 
 **Pourquoi `plugin/` isolé sous `macos/`.** SwiftBar fait une icône de **chaque fichier** de
 son `PluginDirectory` (récursivement). Mettre `host.py` à côté du plugin = icône parasite
@@ -34,9 +38,13 @@ cassée. Donc `PluginDirectory` pointe sur `macos/plugin/` qui ne contient **que
 `macos/host.py` (un cran au-dessus) et `quota_core.py` (deux crans) sont hors scan, importés
 via `sys.path`. Réglé une fois dans les `defaults` SwiftBar (`PluginDirectory`).
 
-## Source de la donnée
+## Sources de la donnée (`providers.py`)
 
-Endpoint OAuth **non documenté** (= ce que fait `/usage`) :
+1. **Status line** (gratuit, primaire). Claude Code passe `rate_limits` (`five_hour` /
+   `seven_day` : `used_percentage`, `resets_at` epoch) à `~/.claude/statusline.py` à chaque
+   requête ; celle-ci le dépose brut dans `.statusline-snapshot.json`. L'adaptateur
+   `StatusLine` le normalise au format `/usage`. Claude Code retire une fenêtre dès son reset.
+2. **HTTP** (repli). Endpoint OAuth **non documenté** (= ce que fait `/usage`) :
 
 ```bash
 curl -s https://api.anthropic.com/api/oauth/usage \
@@ -46,14 +54,18 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 - **Token** : `~/.claude/.credentials.json` sinon Keychain (`security find-generic-password -s "Claude Code-credentials" -w`). Sur ce Mac → Keychain.
 - **Réponse** : `five_hour` / `seven_day` / `seven_day_sonnet`, chacun `{utilization (%), resets_at (ISO)}`. `*_dollars` = `null` (abonnement au quota, pas au crédit $).
-- ⚠️ Non documenté = **peut casser sans préavis**. La puce dégrade proprement (cache, puis `⚠ Claude` rouge).
+- ⚠️ Non documenté = **peut casser sans préavis**. La puce dégrade proprement (repli, puis `⚠ Claude` rouge).
+
+**`Fallback`** : l'instantané le plus frais gagne (status line ou cache HTTP). L'API n'est
+appelée que s'il a **`STALE_AFTER` (10 min)** ou plus, si le reset de session est atteint, ou
+sur `--force`. Tant qu'on travaille dans Claude Code, zéro appel réseau.
 
 ## Comportement
 
 - Couleur du **texte** (pas de pastille) : adaptatif < 50 % utilisé, **orange ≥ 50 %**, **rouge ≥ 80 %**. La barre suit la fenêtre affichée (session 5h). Seuils = `SEUIL_ORANGE` / `SEUIL_ROUGE` dans `quota_core`.
-- **Throttle anti-429** : la puce est redessinée toutes les 60 s, mais l'API n'est appelée que si le cache dépasse `MIN_FETCH_INTERVAL` (300 s) — sinon on ré-affiche le cache **sans réseau** (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant » jusqu'à la fin du throttle. Évite les rafales sur `/usage` (qui rate-limite, surtout cumulé aux appels de Claude Code lui-même). Le bouton *Rafraîchir* force un vrai appel (`--force`).
+- **Throttle anti-429** = `STALE_AFTER` : la puce est redessinée toutes les 60 s, mais après un appel HTTP OK, pas d'appel avant 10 min (le compte à rebours, lui, est recalculé à chaque rendu, donc juste). Exception : reset de la session atteint → appel immédiat, sinon la puce resterait sur « maintenant ». Le bouton *Rafraîchir* force un vrai appel (`--force`).
 - **Fenêtre fermée** : l'API peut renvoyer `five_hour` sans `resets_at` (ou `null`), ou avec un `resets_at` déjà atteint. Pas d'échéance à venir = pas de fenêtre en cours ; le % qui traîne dedans appartient à une fenêtre révolue et ne mesure plus rien. La puce affiche alors `0% · 🐌`, sans couleur — l'absence de fenêtre n'est pas une attente, la puce ne doit pas pousser à s'y remettre. Prédicat `fenetre_ouverte()` + `GLYPHE_REPOS` dans `quota_core`.
-- **Cache** : succès → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche la dernière valeur **grisée + `⋯`** avec son âge (« cache il y a Xm »).
+- **Repli** : succès HTTP → écrit `.usage-cache.json`. Erreur/429/token absent → réaffiche l'instantané le plus frais **grisé + `⋯`** avec son âge (« cache il y a Xm »).
 - **Menu déroulant** : session 5h, hebdo 7j, hebdo Sonnet (% utilisé + reset compte à rebours ET heure absolue FR) ; toggle *Lancer au démarrage* ; *Quitter* ; *Rafraîchir*.
 - **Démarrage auto** : LaunchAgent `~/Library/LaunchAgents/com.josian.claude-swiftbar.plist` (`open -gja SwiftBar`, RunAtLoad). Le toggle le crée/charge ou le retire (`launchctl load/unload -w`) + notif macOS.
 
@@ -65,18 +77,18 @@ curl -s https://api.anthropic.com/api/oauth/usage \
 
 ## Itérer
 
-1. Logique portable → `quota_core.py` ; rendu/intégration mac → `macos/host.py`.
+1. Calculs → `quota_core.py` ; sources → `providers.py` ; rendu/intégration mac → `macos/host.py`.
 2. `python3 tests/test_quota.py` (rapide, hors-ligne via fixture `SAMPLE`).
 3. `./macos/plugin/claude-quota.1m.py` pour voir le rendu SwiftBar brut.
 4. `open swiftbar://refreshallplugins` pour rafraîchir la puce sans attendre.
 
-Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer la
-fréquence des **appels API** = `MIN_FETCH_INTERVAL` dans `quota_core` (indépendant du redessin).
+Changer le **redessin** = renommer le fichier (`.30s.` / `.1m.` / `.5m.`). Changer le seuil de
+**péremption / appels API** = `STALE_AFTER` dans `providers` (indépendant du redessin).
 Format des lignes SwiftBar : `Titre | color= size= bash= param1= terminal= refresh=`.
 
 ## Portabilité (Windows)
 
 SwiftBar est macOS-only : pas de portage Windows du plugin lui-même. Le cœur
-(`quota_core.py`) est lui 100 % portable. Pour Windows, implémenter `windows/host.py`
+(`quota_core.py`, `providers.py`) est lui 100 % portable. Pour Windows, implémenter `windows/host.py`
 (token via Credential Manager, autostart via `shell:startup`, notif toast, rendu pour
 un tray type `pystray`) + une entrée qui combine `quota_core` + `windows/host`.

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """SwiftBar plugin — état de la session Claude Code (quota restant + reset).
 
-Source : endpoint OAuth non documenté api.anthropic.com/api/oauth/usage (= /usage).
-Refresh affiché : 60 s (encodé dans le nom). Mais l'API n'est interrogée qu'au-delà
-de MIN_FETCH_INTERVAL (throttle anti-429) : entre deux, on ré-affiche le cache —
-le compte à rebours, lui, est recalculé à chaque rendu donc reste juste.
+Sources (providers.py) : l'instantané déposé par la status line à chaque requête
+Claude Code, sinon l'endpoint /usage quand tout est périmé (STALE_AFTER).
+Refresh affiché : 60 s (encodé dans le nom) — le compte à rebours est recalculé à
+chaque rendu, la donnée elle-même ne bouge que quand une source bouge.
 
-Coquille fine : la logique portable vit dans quota_core, l'intégration mac + le
-rendu SwiftBar dans host_macos (tous deux dans le dossier parent, testés).
+Coquille fine : la logique portable vit dans quota_core + providers, l'intégration
+mac + le rendu SwiftBar dans macos/host (tous testés).
 
 Ce fichier est SEUL dans son dossier : SwiftBar scanne le dossier de plugins
 (récursivement) et fait une icône de chaque fichier. La lib et les tests vivent
@@ -16,7 +16,7 @@ donc un cran au-dessus, hors du dossier scanné.
 Actions cliquables (passées par SwiftBar en argv) :
   --toggle-autostart  active/désactive le lancement de SwiftBar au démarrage
   --quit              quitte SwiftBar (ferme la puce)
-  --force             force un appel API (bypass throttle) — bouton Rafraîchir
+  --force             force un appel API (bypass fraîcheur) — bouton Rafraîchir
 """
 import os
 import subprocess
@@ -29,8 +29,8 @@ _MACOS_DIR = os.path.dirname(_PLUGIN_DIR)                   # quota/macos
 _QUOTA_DIR = os.path.dirname(_MACOS_DIR)                    # quota
 sys.path.insert(0, _QUOTA_DIR)
 sys.path.insert(0, _MACOS_DIR)
-import quota_core as core
 import host
+import providers
 
 SELF = os.path.abspath(__file__)
 
@@ -45,33 +45,14 @@ def main():
 
     force = "--force" in sys.argv
     auto = host.autostart_enabled()
-    cached = core.load_cache()
+    source = providers.Fallback(providers.StatusLine(), http=providers.Http(host.get_token))
 
-    # Throttle : cache assez frais (et pas de --force) -> on l'affiche sans réseau.
-    # stale_secs=None : c'est récent, pas une donnée périmée, donc pas de gris/⋯.
-    # Reset atteint = fenêtre révolue -> on bypasse le throttle comme un --force.
-    if cached and core.should_skip_fetch(cached[1], force or core.echeance_passee(cached[0])):
-        print(host.render(cached[0], SELF, sys.executable, autostart_on=auto))
-        return
-
-    def stale_or_error(msg):
-        if cached:
-            data, age = cached
-            print(host.render(data, SELF, sys.executable, autostart_on=auto, stale_secs=age))
-        else:
-            print(host.render_error(msg))
-
-    token = host.get_token()
-    if not token:
-        stale_or_error("Token introuvable (fichier credentials ou Keychain)")
-        return
-    try:
-        data = core.fetch(token)
-    except Exception as e:
-        stale_or_error(f"Erreur API : {e}")
-        return
-    core.save_cache(data)
-    print(host.render(data, SELF, sys.executable, autostart_on=auto))
+    snap, err = source.get(force)
+    if snap is None:
+        print(host.render_error(err))
+    else:
+        stale = providers.age(snap) if err else None   # repli après échec -> gris + âge
+        print(host.render(snap.data, SELF, sys.executable, autostart_on=auto, stale_secs=stale))
 
 
 if __name__ == "__main__":

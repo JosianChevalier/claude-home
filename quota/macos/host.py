@@ -1,14 +1,16 @@
 """Host macOS — intégration OS (Keychain, LaunchAgent, notifications) + rendu SwiftBar.
 
 Mac-only : appelle `security`, `launchctl`, `osascript`, et produit la syntaxe de
-menu SwiftBar (lignes `texte | clé=valeur`). Toute la logique portable (calculs,
-réseau, cache) vit dans quota_core. L'entrée SwiftBar plugin/claude-quota.1m.py
-n'est qu'une coquille qui combine ce host + le cœur.
+menu SwiftBar (lignes `texte | clé=valeur`). Toute la logique portable (calculs dans
+quota_core, sources de données dans providers). L'entrée SwiftBar
+plugin/claude-quota.1m.py n'est qu'une coquille qui compose host + providers.
 """
+import json
 import os
 import subprocess
 from datetime import datetime
 
+import providers
 import quota_core as core
 
 KEYCHAIN_SERVICE = "Claude Code-credentials"
@@ -21,7 +23,7 @@ PLIST_LABEL = "com.josian.claude-swiftbar"
 # --------------------------------------------------------------------------- token
 def get_token():
     """Token OAuth : fichier credentials (cœur) d'abord, sinon Keychain macOS."""
-    token = core.get_token_from_file()
+    token = providers.token_from_file()
     if token:
         return token
     try:
@@ -29,7 +31,6 @@ def get_token():
             ["security", "find-generic-password", "-s", KEYCHAIN_SERVICE, "-w"],
             capture_output=True, text=True, timeout=5,
         ).stdout.strip()
-        import json
         return json.loads(raw)["claudeAiOauth"]["accessToken"]
     except Exception:
         return None
@@ -48,8 +49,8 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     python_exec = chemin exact de l'interpréteur (sys.executable), embarqué dans
     les actions cliquables : SwiftBar ne résout pas le shebang `env python3` au clic
     quand python vit dans Homebrew.
-    stale_secs != None = données servies depuis le cache (API injoignable) : la
-    barre passe en gris et une ligne signale l'âge.
+    stale_secs != None = instantané servi en repli (API injoignable) : la barre
+    passe en gris et une ligne signale l'âge.
     """
     sess = data.get("five_hour") or {}
     week = data.get("seven_day") or {}

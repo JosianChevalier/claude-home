@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Tests du plugin quota Claude Code. Lancer : python3 tests/test_quota.py
 
-Cœur portable -> quota_core (core). Rendu SwiftBar + intégration mac -> macos/host (mac).
+Cœur portable -> quota_core (core). Sources -> providers. Rendu SwiftBar + mac -> macos/host (mac).
 """
 import os
 import sys
+import tempfile
 import unittest
 from datetime import datetime, timezone
 
 _QUOTA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # quota/
 sys.path.insert(0, _QUOTA_DIR)
 sys.path.insert(0, os.path.join(_QUOTA_DIR, "macos"))
+import providers
 import quota_core as core
 import host as mac
 
@@ -171,40 +173,112 @@ class TestStaleEtAge(unittest.TestCase):
         self.assertIn("Hors-ligne — cache il y a 1m", out)
 
 
-class TestCache(unittest.TestCase):
+class TestProviders(unittest.TestCase):
+    """Port get() -> Snapshot, adaptateurs StatusLine/Http, chaîne Fallback."""
+
+    # Échéances en 2030 : les tests Fallback tournent sur l'horloge réelle.
+    RL = {"five_hour": {"used_percentage": 13, "resets_at": 1893456000},
+          "seven_day": {"used_percentage": 31, "resets_at": 1893888000}}
+    RL_PASSE = {"five_hour": {"used_percentage": 13, "resets_at": 1766296199}}
+    FUTUR = dict(SAMPLE, five_hour={"utilization": 23.0, "resets_at": "2030-01-01T05:00:00+00:00"})
+
     def setUp(self):
-        self.tmp = core.CACHE_FILE
-        core.CACHE_FILE = os.path.join(os.path.dirname(__file__), ".usage-cache.test.json")
+        self.dir = tempfile.TemporaryDirectory()
+        self.sl_path = os.path.join(self.dir.name, "sl.json")
+        self.http_path = os.path.join(self.dir.name, "http.json")
+        self.calls = []
+
+        def fake_fetch(token):
+            self.calls.append(token)
+            if token == "KO":
+                raise OSError("boom")
+            return self.FUTUR
+        self.token = "OK"
+        self.http = providers.Http(lambda: self.token, path=self.http_path, fetch=fake_fetch)
+        self.sl = providers.StatusLine(self.sl_path)
+        self.chain = providers.Fallback(self.sl, http=self.http)
 
     def tearDown(self):
-        try:
-            os.remove(core.CACHE_FILE)
-        except FileNotFoundError:
-            pass
-        core.CACHE_FILE = self.tmp
+        self.dir.cleanup()
 
-    def test_round_trip(self):
-        self.assertIsNone(core.load_cache())          # rien au départ
-        core.save_cache(SAMPLE, fetched_at=core.time.time() - 120)
-        data, age = core.load_cache()
-        self.assertEqual(data["five_hour"]["utilization"], 23.0)
-        self.assertGreaterEqual(age, 119)
+    # --- adaptateurs
+    def test_normalize_rate_limits(self):
+        d = providers.normalize_rate_limits(self.RL)
+        self.assertEqual(d["five_hour"]["utilization"], 13)
+        self.assertEqual(d["five_hour"]["resets_at"], "2030-01-01T00:00:00+00:00")
+        self.assertNotIn("seven_day_sonnet", d)                 # absent, pas inventé
+        self.assertEqual(providers.normalize_rate_limits({}), {})  # fenêtres retirées au reset
 
+    def test_statusline_round_trip(self):
+        self.assertIsNone(self.sl.get())
+        providers.publish_rate_limits(self.RL, self.sl_path, now=1000)
+        snap = self.sl.get()
+        self.assertEqual(snap.fetched_at, 1000)
+        self.assertEqual(snap.data["seven_day"]["utilization"], 31)
 
-class TestThrottle(unittest.TestCase):
-    def test_cache_frais_saute_le_fetch(self):
-        self.assertTrue(core.should_skip_fetch(10))                 # 10 s < 300 -> saute
-        self.assertTrue(core.should_skip_fetch(299))
+    def test_http_refresh_met_en_cache(self):
+        self.assertIsNone(self.http.get())
+        snap = self.http.refresh()
+        self.assertEqual(snap.data, self.FUTUR)
+        self.assertEqual(self.http.get().data, self.FUTUR)
+        self.assertEqual(self.calls, ["OK"])
 
-    def test_cache_vieux_force_le_fetch(self):
-        self.assertFalse(core.should_skip_fetch(300))               # >= seuil -> fetch
-        self.assertFalse(core.should_skip_fetch(10_000))
+    def test_http_sans_token(self):
+        self.token = None
+        with self.assertRaises(RuntimeError):
+            self.http.refresh()
 
-    def test_force_ignore_le_throttle(self):
-        self.assertFalse(core.should_skip_fetch(10, force=True))    # bouton Rafraîchir
+    # --- fallback
+    def test_statusline_fraiche_evite_le_reseau(self):
+        providers.publish_rate_limits(self.RL, self.sl_path, now=providers.time.time() - 120)
+        snap, err = self.chain.get()
+        self.assertIsNone(err)
+        self.assertEqual(snap.data["five_hour"]["utilization"], 13)
+        self.assertEqual(self.calls, [])
 
-    def test_pas_de_cache_force_le_fetch(self):
-        self.assertFalse(core.should_skip_fetch(None))
+    def test_statusline_perimee_tombe_sur_http(self):
+        providers.publish_rate_limits(self.RL, self.sl_path, now=providers.time.time() - 700)
+        snap, err = self.chain.get()
+        self.assertIsNone(err)
+        self.assertEqual(snap.data, self.FUTUR)
+        self.assertEqual(self.calls, ["OK"])
+
+    def test_force_ignore_la_fraicheur(self):
+        providers.publish_rate_limits(self.RL, self.sl_path)
+        self.chain.get(force=True)
+        self.assertEqual(self.calls, ["OK"])
+
+    def test_cache_http_frais_suffit(self):
+        self.http.refresh()
+        self.calls.clear()
+        snap, err = self.chain.get()
+        self.assertIsNone(err)
+        self.assertEqual(self.calls, [])               # throttle = STALE_AFTER
+
+    def test_echec_reseau_sert_le_repli_grise(self):
+        providers.publish_rate_limits(self.RL, self.sl_path, now=providers.time.time() - 700)
+        self.token = "KO"
+        snap, err = self.chain.get()
+        self.assertIn("boom", err)
+        self.assertEqual(snap.data["five_hour"]["utilization"], 13)
+        self.assertGreaterEqual(providers.age(snap), 700)
+
+    def test_echec_reseau_sans_repli(self):
+        self.token = "KO"
+        snap, err = self.chain.get()
+        self.assertIsNone(snap)
+        self.assertIn("boom", err)
+
+    def test_la_plus_fraiche_gagne(self):
+        self.http.refresh()                                 # http = maintenant, 23 %
+        providers.publish_rate_limits(self.RL, self.sl_path, now=providers.time.time() - 60)
+        snap, _ = self.chain.get()
+        self.assertEqual(snap.data["five_hour"]["utilization"], 23.0)
+
+    def test_reset_atteint_rappelle_l_api(self):
+        providers.publish_rate_limits(self.RL_PASSE, self.sl_path)   # frais, mais reset passé
+        self.chain.get()
+        self.assertEqual(self.calls, ["OK"])
 
     def test_echeance_passee(self):
         self.assertFalse(core.echeance_passee(SAMPLE, now=NOW))          # reset à venir

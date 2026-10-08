@@ -3,7 +3,12 @@
 Segments, separated by " | ", no labels:  📁 folder  🔀 branch  🤖 model  🧠 NN%  🤪 compactions(>0)
 🧠 % is computed against BUDGET, NOT the model context window.
 """
-import sys, json, os, re, subprocess
+import sys, json, os, re, subprocess, time
+
+# Instantané des quotas (rate_limits) déposé pour la puce SwiftBar (quota/providers.py)
+# à chaque requête : elle lit ça au lieu de taper l'API. Format brut, zéro couplage.
+QUOTA_SNAPSHOT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "quota", ".statusline-snapshot.json")
 
 # Windows' default stdout is cp1252, which can't encode the emoji segments.
 # Force UTF-8 so 📁/🤖/🧠 render instead of crashing.
@@ -106,6 +111,15 @@ def main():
         data = json.load(sys.stdin)
     except Exception:
         data = {}
+
+    if data.get("rate_limits"):
+        try:  # écriture atomique : la puce peut lire en même temps
+            tmp = QUOTA_SNAPSHOT + ".tmp"
+            with open(tmp, "w") as f:
+                json.dump({"at": time.time(), "rate_limits": data["rate_limits"]}, f)
+            os.replace(tmp, QUOTA_SNAPSHOT)
+        except Exception:
+            pass
 
     # 📁 folder = last segment of cwd (normpath handles \ and / separators)
     cwd = (data.get("workspace") or {}).get("current_dir") or data.get("cwd") or ""
