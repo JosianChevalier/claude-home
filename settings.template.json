@@ -10,5 +10,6 @@
   "syncClaudeAiSkills": false,
   "syncClaudeAiPlugins": false,
   "enableArtifact": false,
-  "disableWorkflows": true
+  "disableWorkflows": true,
+  "disableClaudeAiConnectors": true
 }
