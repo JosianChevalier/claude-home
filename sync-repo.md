@@ -116,3 +116,30 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 
 - Find a home for the session-anchoring prescription (anchor the session in a working document; ask when it drifts). Philosophy is in `philosophy/session-design.md`; the know-how has no file yet. Candidates: Context section of `CLAUDE.md`, or a rule.
 - `skills/wake-and-run` still has a `## Procedure` header and no Doctrine: rewrite to the current shape.
+
+## Tracking (step 2, philosophy)
+
+**Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
+
+- `harness-target`: boundary already rewritten to Doctrine / Know-how (see mapping). Still open: question 2 (does `Postures` in CLAUDE.md take the Doctrine header); whether the Lakatos line and the kaizen triage survive the new boundary; whether session design (`session-design.md`) changes anything in it.
+- `harness-elements`: `@rationale/...` refs at lines 17, 20, 31 to the wikilink form; sessions, sub-agents and workflows are not elements of the harness (`session-design.md`), check the table does not imply they are.
+- `two-layer-harness`: overlaps `harness-target` on layers; distinct content is the contract (drift guard) and "why kaizen is user-invoked". Undecided: keep and correct, merge into `harness-target`, or rename. Line 16 still describes `Rationale: @rationale/<concept>.md`. `old-claude/skills/harness-improvement/SKILL.md` reads both (lines 14-15, 80).
+- `context-economics` (landed): still carries the OpenCode-specific "Rule → context (AOP)" section and `globs:`/opencode-rules in loading policy. Cut now or at the rules step.
+- Dangling wikilinks until their files land: `session-state-in-documents`, `attractors`, `compounding-decisions`, `planning-is-everything`.
+
+**Mapping old → new, changed content.** Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`.
+
+| Old | New | Change |
+|---|---|---|
+| `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | refs normalized to wikilinks |
+| `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | refs normalized |
+| `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | refs normalized |
+| `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | refs normalized |
+| `rationale/context-economics.md` | `philosophy/context-economics.md` | refs normalized; OpenCode section kept, pending |
+| `rationale/harness-target.md` | `philosophy/harness-target.md` | Procedure → Know-how boundary; doctrine = what must always be true, every file carries the header; stale "not yet" framing and Open 1 removed; template trailer to wikilink; `sync-design` → `sync-repo.md` |
+| `rationale/harness-elements.md` | `philosophy/harness-elements.md` | unchanged, imported for review |
+| `rationale/two-layer-harness.md` | `philosophy/two-layer-harness.md` | unchanged, imported for review |
+| `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten: Doctrine (4 lines) + know-how sections (successor, cases, contains, does not contain, form); blockquote output; no self-label; failure case; Rationale trailer |
+| — | `philosophy/conversation-continuity.md` | new |
+| — | `philosophy/session-design.md` | new |
+
