@@ -121,9 +121,9 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 
 **Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
 
-- `harness-target`: boundary already rewritten to Doctrine / Know-how (see mapping). Still open: question 2 (does `Postures` in CLAUDE.md take the Doctrine header); whether the Lakatos line and the kaizen triage survive the new boundary; whether session design (`session-design.md`) changes anything in it.
-- `harness-elements`: `@rationale/...` refs at lines 17, 20, 31 to the wikilink form; sessions, sub-agents and workflows are not elements of the harness (`session-design.md`), check the table does not imply they are.
-- `two-layer-harness`: overlaps `harness-target` on layers; distinct content is the contract (drift guard) and "why kaizen is user-invoked". Undecided: keep and correct, merge into `harness-target`, or rename. Line 16 still describes `Rationale: @rationale/<concept>.md`. `old-claude/skills/harness-improvement/SKILL.md` reads both (lines 14-15, 80).
+- Cut decided 2026-10-09: `two-layer-harness` and `harness-target` became three files, one idea each. `three-layer-harness` (layers numbered 1 know-how, 2 doctrine, 3 philosophy; Lakatos; inertia as the reason for layering). `harness-shape` (doctrine, know-how, 80/20, rewriting a file). `kaizen` (doctrine: layers 1 and 2 tied to layer 3, drift guard; triage; user-invoked). Contract clauses on the ref form and "load the rationale before diagnosing" dropped from philosophy; they re-enter in the harness-improvement skill at the skills step, which still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
+- `harness-shape`: decided 2026-10-09: `Postures` stays, layer 2 in an agent and CLAUDE.md is posture and objective under their own names; the temporal-context saying is "Two hats (Beck), one at a time", placed in `context-economics` at the temporal cut; Open section emptied. `session-design` does not touch it. The Lakatos line now sits in `three-layer-harness`, to confirm.
+- `harness-elements`: `@rationale/...` refs at lines 17, 20, 31 to the wikilink form. Clarified 2026-10-09: workflow, sub-agent, session in `session-design` are process units (temporal cuts) of the sociotechnical system; agents, sub-agents, orchestrators are the harness elements that materialize them. The Sub-agent row is legitimate.
 - `context-economics` (landed): still carries the OpenCode-specific "Rule → context (AOP)" section and `globs:`/opencode-rules in loading policy. Cut now or at the rules step.
 - Dangling wikilinks until their files land: `session-state-in-documents`, `attractors`, `compounding-decisions`, `planning-is-everything`.
 
@@ -136,9 +136,10 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | refs normalized |
 | `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | refs normalized |
 | `rationale/context-economics.md` | `philosophy/context-economics.md` | refs normalized; OpenCode section kept, pending |
-| `rationale/harness-target.md` | `philosophy/harness-target.md` | Procedure → Know-how boundary; doctrine = what must always be true, every file carries the header; stale "not yet" framing and Open 1 removed; template trailer to wikilink; `sync-design` → `sync-repo.md` |
+| `rationale/harness-target.md` | `philosophy/harness-shape.md` | Procedure → Know-how boundary; doctrine = what must always be true, every file carries the header; stale "not yet" framing removed; layer table moved to `three-layer-harness`, kaizen triage to `kaizen`; refs to wikilinks |
 | `rationale/harness-elements.md` | `philosophy/harness-elements.md` | unchanged, imported for review |
-| `rationale/two-layer-harness.md` | `philosophy/two-layer-harness.md` | unchanged, imported for review |
+| `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | layer list replaced by the numbered three-layer table (from harness-target); IBIS paragraph expanded into "Why the layers: inertia"; contract and kaizen sections moved to `kaizen` or dropped |
+| — | `philosophy/kaizen.md` | new: drift guard and tie-to-philosophy as doctrine, triage table, why user-invoked |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten: Doctrine (4 lines) + know-how sections (successor, cases, contains, does not contain, form); blockquote output; no self-label; failure case; Rationale trailer |
 | — | `philosophy/conversation-continuity.md` | new |
 | — | `philosophy/session-design.md` | new |

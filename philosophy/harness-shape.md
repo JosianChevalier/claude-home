@@ -2,19 +2,9 @@
 tags: [harness-design, kaizen]
 ---
 
-# Harness Target: Philosophy, Doctrine, Know-how
+# Rationale: Harness Shape
 
-The shape every rule and skill is written toward. `two-layer-harness.md` describes the harness as it stood; where the two differ, this file is the target.
-
-## Three layers
-
-| Layer | Answers | Lives in | Loaded | Questioned |
-|---|---|---|---|---|
-| **Philosophy** | why: the philosophy of software development and of working with agents | `philosophy/` | harness improvement | at kaizen, by reasons and falsification |
-| **Doctrine** | what must always be true: the intent | `## Doctrine` in rules and skills; `CLAUDE.md` | execution | at kaizen only |
-| **Know-how** | what works in the usual case | the body of rules and skills, after the doctrine | execution | during execution |
-
-Doctrine is fixed during execution, and it is the test for leaving the know-how: the agent departs from a step because the doctrine still holds. Lakatos's research programmes have the same structure: a hard core never targeted from inside, and a protective belt that absorbs the anomalies.
+The shape every rule and skill is written toward: a doctrine, then know-how. The layers themselves: [[philosophy/three-layer-harness]].
 
 ## Doctrine
 
@@ -28,7 +18,8 @@ How it is written:
 
 - **Quoted or coined.** Both are doctrine.
 - **One header.** Today's labels in rules and skills (`Core principle`, `Iron Law`, `Prime Directive`, `Principles`, `Standing rule`, `Rule of thumb`) all become `Doctrine`.
-- **Every file carries it.** The `Doctrine` header is the one fixed element of the shape.
+- **Every rule and skill carries it.** The `Doctrine` header is the one fixed element of the shape.
+- **Agents differ.** In an agent, and in `CLAUDE.md`, layer 2 is the posture and the objective, under their own names (`Postures`). A skill or rule is know-how with a little doctrine; an agent is doctrine with little know-how, the steps living in the skills it composes.
 - **Reasons stay in philosophy.** The file points to them.
 - **Doctrine inside a philosophy file** is fine when its reason and what would falsify it sit next to it.
 
@@ -48,17 +39,6 @@ Two consequences for how know-how is written:
 - **The limit of applicability must be felt.** What the steps assume shows somewhere: in the wording of the steps, or in the doctrine. No dedicated section is required. Its absence everywhere is a defect: an agent that cannot tell where the steps stop applying applies them everywhere.
 
 The split is also a proportion rule. A short file is a `Doctrine` header and a few lines of know-how; sections are added when the body has grown enough to need them.
-
-## Kaizen triage
-
-The first question after a failed run:
-
-| Finding | Meaning | Fix |
-|---|---|---|
-| Doctrine violated | compliance | the saying's pull or its placement; its content and its philosophy stay |
-| Doctrine obeyed, outcome bad | know-how wrong | the know-how; failing that, the doctrine goes on trial in its philosophy file |
-
-Most failures are the first kind.
 
 ## Rewriting a file
 
@@ -83,11 +63,7 @@ Rationale: [[philosophy/workflow-rhythm]]
 
 ## Related
 
-- What each harness element is for: `harness-elements.md`.
-
-## Open
-
-1. The saying for the temporal-context doctrine: "Two hats" (Beck) or "One hat at a time".
-2. Does `Postures` in `CLAUDE.md` take the `Doctrine` header?
+- What each harness element is for: [[philosophy/harness-elements]].
+- What happens after a failed run: [[philosophy/kaizen]].
 
 Where the rewritten harness lives: `sync-repo.md`.

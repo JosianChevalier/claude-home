@@ -41,7 +41,7 @@ The two multiply. A large input read by a context that then plans and acts on it
 
 **Spatial cut.** Modularise, and think map-reduce (Dean & Ghemawat): an orchestrator hands each slice to a sub-agent, each returns only its conclusion, the orchestrator reduces. The slices' tokens die with the sub-agents.
 
-**Temporal cut.** One hat per context: each step runs in its own sub-agent, loaded with that step's harness only, and hands over through a file ([[philosophy/session-state-in-documents]]).
+**Temporal cut.** Two hats (Beck), one at a time. One hat per context: each step runs in its own sub-agent, loaded with that step's harness only, and hands over through a file ([[philosophy/session-state-in-documents]]).
 
 The two are not alternatives tried in sequence. A cut on one axis can open the way for a cut on the other. It is like the puzzle games where you have to turn the puzzle around to find the next piece to move, or a meshwork where you have to undo along one dimension before you can attack the other.
 
