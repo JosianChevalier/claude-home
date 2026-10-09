@@ -51,7 +51,8 @@ def main():
     if snap is None:
         print(host.render_error(err))
     else:
-        stale = providers.age(snap) if err else None   # repli après échec -> gris + âge
+        age = providers.age(snap)
+        stale = age if age >= providers.STALE_AFTER else None   # donnée > 10 min -> gris + âge
         print(host.render(snap.data, SELF, sys.executable, autostart_on=auto, stale_secs=stale))
 
 

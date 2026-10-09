@@ -75,12 +75,12 @@ def render(data, plugin_path, python_exec, now=None, autostart_on=False, stale_s
     if stale_secs is None:
         L = [f"{s_use}% · {s_cd} | size=13{_col(s_use)}"]
     else:
-        L = [f"{s_use}% · {s_cd} ⋯ | size=13 color=gray"]
+        L = [f"{s_use}% · {s_cd} | size=13 color=gray"]
 
     L.append("---")
     L.append("Claude Code — quota | size=11 color=gray")
     if stale_secs is not None:
-        L.append(f"⚠ Hors-ligne — cache il y a {core.fmt_age(stale_secs)} | size=11 color=gray")
+        L.append(f"⚠ Donnée d'il y a {core.fmt_age(stale_secs)} | size=11 color=gray")
     if en_cours:
         L.append(f"Session (5h) : {s_use}% utilisé |{_col(s_use)}")
         L.append(f"-- reset dans {s_cd} · {s_at} | size=11 color=gray")

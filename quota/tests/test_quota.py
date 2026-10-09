@@ -161,9 +161,9 @@ class TestStaleEtAge(unittest.TestCase):
     def test_render_stale_grise_et_signale(self):
         out = mac.render(SAMPLE, "/x/p.py", "/x/py", now=NOW, stale_secs=90)
         first = out.splitlines()[0]
-        self.assertIn("⋯", first)             # marqueur de péremption
+        self.assertNotIn("⋯", first)          # couleur seule, pas de glyphe
         self.assertIn("color=gray", first)     # barre grisée
-        self.assertIn("Hors-ligne — cache il y a 1m", out)
+        self.assertIn("Donnée d'il y a 1m", out)
 
 
 class TestProviders(unittest.TestCase):
