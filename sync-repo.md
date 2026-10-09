@@ -39,6 +39,8 @@ The same core must serve both Claude Code and OpenCode.
 5. Switch this project to sync from the repo only; delete the uploaded docs.
 ## MO for step 3 (2026-10-08)
 
+**Inspection is a review in conversation.** Findings per file go on the table; the file is written after the decision.
+
 **Backlog is the folder.** `old-claude/` is the backlog; a file leaves it when it enters the repo. Nothing enters the repo uncleaned. All ~100 files get inspected, none is skipped.
 
 **Per file:** inspect against the harness-design rationales, then normalize: `rationale/` → `philosophy/`, `@rationale/...` refs → `Rationale: [[philosophy/...]]`, content restructured to the three-layer target. `.gitignore` is extended as each new folder lands (`AGENTS.md`, `agents/`, `rules/`, `philosophy/`, `templates/`).
@@ -48,8 +50,8 @@ The same core must serve both Claude Code and OpenCode.
 - `philosophy/` — the substrate: why we do things the way we do.
 - `agents/`, `skills/`, `rules/`, etc. — the general-case design. Each file has two sections:
   - `## Doctrine` — the main attractors: heuristics, maxims, the idea we follow.
-  - `## Procedure` — not fixed. Only when the thing relies on a procedure. Instructions here stay mechanical. Some skills bring knowledge (domain or other) instead.
-- Doctrine is the idea; procedure is what works in 80% of cases. The limit of applicability must be understandable from the file. Doctrine is the fallback that guides the agent when the mechanical approach does not fit. This principle must be written down somewhere in the repo (philosophy).
+  - Know-how — the rest of the file, after the doctrine, sectioned when useful. Procedures, heuristics, checklists, knowledge: no fixed header, not always a procedure.
+- Doctrine is what must always be true, the intent; know-how is what works in 80% of cases. The limit of applicability must be understandable from the file. Doctrine is the fallback that guides the agent when the mechanical approach does not fit. This principle must be written down somewhere in the repo (philosophy).
 
 **Order:**
 
@@ -110,3 +112,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 4. Repo — `claude-home`, to be renamed; see Decided.
 5. Scope — `.claude/` only; see Decided.
 
+## Pending before the migration ends
+
+- Find a home for the session-anchoring prescription (anchor the session in a working document; ask when it drifts). Philosophy is in `philosophy/session-design.md`; the know-how has no file yet. Candidates: Context section of `CLAUDE.md`, or a rule.
+- `skills/wake-and-run` still has a `## Procedure` header and no Doctrine: rewrite to the current shape.
