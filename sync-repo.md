@@ -119,12 +119,15 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 
 ## Tracking (step 2, philosophy)
 
+**Next (2026-10-10):** `harness-elements` (three refs to wikilinks; Agent row gains "an intention on its way to a goal"; read the table against the process tree in `session-design`). Then `context-economics` OpenCode cut. Then the backlog, `session-state-in-documents` first. Candidate philosophy for a next session: the meta pattern that keeps appearing across `three-layer-harness`, `session-design`, `harness-direction`, `kaizen`, and the session-anchored-in-a-document rule: a stack ordered by inertia, variation absorbed at the lowest level that can take it, only what survives escalates, change trickles down; the same shape at every zoom level. Name and content: the user's.
+
 **Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
 
 - Cut decided 2026-10-09: `two-layer-harness` and `harness-target` became three files, one idea each. `three-layer-harness` (layers numbered 1 know-how, 2 doctrine, 3 philosophy; Lakatos; inertia as the reason for layering). `harness-shape` (doctrine, know-how, 80/20, rewriting a file). `kaizen` (doctrine: layers 1 and 2 tied to layer 3, drift guard; triage; user-invoked). Contract clauses on the ref form and "load the rationale before diagnosing" dropped from philosophy; they re-enter in the harness-improvement skill at the skills step, which still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
 - `harness-shape`: decided 2026-10-09: `Postures` stays, layer 2 in an agent and CLAUDE.md is posture and objective under their own names; the temporal-context saying is "Two hats (Beck), one at a time", placed in `context-economics` at the temporal cut; Open section emptied. `session-design` does not touch it. The Lakatos line now sits in `three-layer-harness`, to confirm.
 - `harness-elements`: `@rationale/...` refs at lines 17, 20, 31 to the wikilink form. Clarified 2026-10-09: workflow, sub-agent, session in `session-design` are process units (temporal cuts) of the sociotechnical system; agents, sub-agents, orchestrators are the harness elements that materialize them. The Sub-agent row is legitimate.
 - `context-economics` (landed): still carries the OpenCode-specific "Rule → context (AOP)" section and `globs:`/opencode-rules in loading policy. Cut now or at the rules step.
+- `harness-elements`, consequence of `harness-direction`: the Agent row gains "an intention on its way to a goal".
 - Dangling wikilinks until their files land: `session-state-in-documents`, `attractors`, `compounding-decisions`, `planning-is-everything`.
 
 **Mapping old → new, changed content.** Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`.
@@ -142,5 +145,6 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | — | `philosophy/kaizen.md` | new: drift guard and tie-to-philosophy as doctrine, triage table, why user-invoked |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten: Doctrine (4 lines) + know-how sections (successor, cases, contains, does not contain, form); blockquote output; no self-label; failure case; Rationale trailer |
 | — | `philosophy/conversation-continuity.md` | new |
-| — | `philosophy/session-design.md` | new |
+| — | `philosophy/session-design.md` | new; opening rewritten 2026-10-10: containment tree (session, dispatch, workflow, leaf), who decides at the node, absorption rule, dispatch as probe |
+| — | `philosophy/harness-direction.md` | new 2026-10-10: complex to complicated by design, bricks move up one unit via kaizen, agents drift to headless |
 
