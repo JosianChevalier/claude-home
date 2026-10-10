@@ -14,6 +14,8 @@ description: Tracking ongoing work, anchoring conversation work in a file, looki
 
 ## Keys
 
+A work file is named `<topic>.work.md`, next to the work it concerns. The suffix is for git, which cannot read frontmatter: one whitelist pattern covers them all. The key is for the sweep.
+
 Frontmatter only, read only inside the opening `---` block. Never write them at line start outside one.
 
     ongoing_work_file: "<what must empty, and when it counts as empty>"
@@ -24,7 +26,7 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 ## Scripts
 
 - `scripts/list-work.sh [root]` — the sweep, sorted. Two lines per item: rank and path, then the sentence.
-- `scripts/new-work.sh <path.md> "<what must empty>" [rank]` — creates the work file with the keys and a title. Rank defaults to last.
+- `scripts/new-work.sh <topic.work.md> "<what must empty>" [rank]` — creates the work file with the keys and a title. Rank defaults to last.
 
 ## Asks
 

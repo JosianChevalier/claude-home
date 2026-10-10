@@ -1,3 +1,8 @@
+---
+ongoing_work_file: "Hand review of the philosophy files. Empty when every file is reviewed and nothing is left to check."
+rank: 2
+---
+
 # Review
 
 Hand review of the philosophy files. Remove a file once reviewed. Remove a task once done.

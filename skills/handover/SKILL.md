@@ -42,7 +42,7 @@ In the chat, no file, shaped like this:
 ```
 Handover: the review
 
-> Guide the hand review of the philosophy files, in the order of review.md. Next: model-tiers.
+> Guide the hand review of the philosophy files, in the order of review.work.md. Next: model-tiers.
 > Verdict first, three lines, then wait.
 > ------ end of agent generated instruction
 ```

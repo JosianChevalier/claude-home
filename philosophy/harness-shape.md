@@ -66,4 +66,4 @@ Rationale: [[philosophy/workflow-rhythm]]
 - What each harness element is for: [[philosophy/harness-elements]].
 - What happens after a failed run: [[philosophy/kaizen]].
 
-Where the rewritten harness lives: `sync-repo.md`.
+Where the rewritten harness lives: `sync-repo.work.md`.

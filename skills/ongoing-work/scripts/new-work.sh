@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Create a work file.
-# Usage: new-work.sh <path.md> "<what must empty, and when it counts as empty>" [rank]
+# Usage: new-work.sh <topic.work.md> "<what must empty, and when it counts as empty>" [rank]
 # Rank defaults to last (max + 1).
 set -euo pipefail
 path="$1"; what="$2"; rank="${3:-}"
 here="$(cd "$(dirname "$0")" && pwd)"
 root="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 
+case "$path" in *.work.md) ;; *) echo "work files end in .work.md: $path" >&2; exit 1 ;; esac
 [ -e "$path" ] && { echo "exists: $path" >&2; exit 1; }
 
 if [ -z "$rank" ]; then
@@ -15,5 +16,5 @@ if [ -z "$rank" ]; then
 fi
 
 mkdir -p "$(dirname "$path")"
-printf -- '---\nongoing_work_file: "%s"\nrank: %s\n---\n\n# %s\n\n- [ ] \n' "${what//\"/\\\"}" "$rank" "$(basename "$path" .md)" > "$path"
+printf -- '---\nongoing_work_file: "%s"\nrank: %s\n---\n\n# %s\n\n- [ ] \n' "${what//\"/\\\"}" "$rank" "$(basename "$path" .work.md)" > "$path"
 echo "$rank  $path"

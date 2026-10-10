@@ -9,8 +9,7 @@
 !/.gitignore
 !/CLAUDE.md
 !/AGENTS.md
-!/sync-repo.md
-!/review.md
+!/*.work.md
 
 !/philosophy/
 !/philosophy/*.md
