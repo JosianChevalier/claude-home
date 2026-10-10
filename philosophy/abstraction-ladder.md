@@ -7,7 +7,7 @@ tags: [harness-design, session-design, requisite-variety]
 An approach: ways of working compliant with [[philosophy/metis-kairos]] take the shape of a ladder. Levels ordered by abstraction, each rung delegating cognitive load and context to the rung below, and taking back only what that rung could not absorb. Down is closer to where variation arrives first.
 
 - **Absorb down.** Variation is absorbed at the lowest rung that can take it as business as usual.
-- **Escalate up, one rung.** What breaks a rung's expectation goes to the rung above, which has the orientation to decide on it. In a harness ladder the engineer sits on the top rung, and the arrival there is the kairos.
+- **Escalate up, one rung.** What breaks a rung's expectation goes to the rung above, which has the orientation to decide on it. The rung catches what it declared business as usual; the rest it wraps and passes on, its context added, the cause preserved, as an exception does. Swallowing is the failure, not passing. In a harness ladder the engineer sits on the top rung, and an uncaught arrival there is the kairos.
 - **Trickle down.** A change made on a rung is a consequence for every rung below.
 - **Reliable bricks move down.** Once a rung absorbs a variation as business as usual, that absorption can be codified into the rung below ([[philosophy/harness-direction]]).
 

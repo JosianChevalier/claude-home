@@ -69,6 +69,6 @@ Scoped loading inverted from context-pulls-rules (per-subdomain AGENTS.md with r
 
 ## Sub-agents
 
-Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions.
+Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions. This is near-decomposability (Simon): each node absorbs its own variety, and the orchestrator faces only what leaks out ([[philosophy/metis-kairos]]).
 
 They are the unit of both cuts. On the spatial axis, one sub-agent per slice of the input. On the temporal axis, one sub-agent per workflow step, composed with only that step's skills and context (TDD → test-writer, green implementor, refactorer). Skills are composable because this composition is deterministic — the agent definition declares what loads.
