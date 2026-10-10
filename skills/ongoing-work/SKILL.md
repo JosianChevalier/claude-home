@@ -1,0 +1,36 @@
+---
+name: ongoing-work
+description: Tracking ongoing work, anchoring conversation work in a file, looking for next tasks.
+---
+
+# ongoing-work
+
+## Doctrine
+
+- The conversation is for thinking; the file is for remembering. What exists only in the conversation is state already decided to be lost, so a piece of work that outlives its turn is anchored in a work file: what must empty, the current step. Cloud-native with a chaos monkey: any instance can be killed at any moment, so no instance holds irreplaceable state. `/clear` is the monkey you run yourself; if it costs something, the state was not in the file.
+- Saved at hand-back, distilled not appended. Every return of control to the user is a potential session boundary. The write keeps decisions, open threads, the real next step, and replaces stale detail.
+- The sweep is the truth. One key marks a work file and nothing else ever matches, so "what's next" is one script, not a search.
+- A finished work file is a pink elephant. A fresh context takes whatever it reads as a premise; stale work pollutes it. The file is deleted when the work ends. History is git's job.
+
+## Keys
+
+Frontmatter only, read only inside the opening `---` block. Never write them at line start outside one.
+
+    ongoing_work_file: "<what must empty, and when it counts as empty>"
+    rank: 3
+
+Lowest rank first. Gaps are fine; renumber only when reordering.
+
+## Scripts
+
+- `scripts/list-work.sh [root]` — the sweep, sorted. Two lines per item: rank and path, then the sentence.
+- `scripts/new-work.sh <path.md> "<what must empty>" [rank]` — creates the work file with the keys and a title. Rank defaults to last.
+
+## Asks
+
+- **What's next:** run the sweep, quote rank one's sentence verbatim with its path. Nothing else.
+- **Anchor this / new work file:** `new-work.sh`, next to the work it concerns; rank last unless told. Steps as checkboxes, a current-step marker, so a zero-context session resumes without the conversation.
+- **Done:** delete the work file. No renumbering.
+- **Reorder:** renumber, then show the sweep.
+
+Rationale: [[philosophy/session-design]], [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/context-economics]]

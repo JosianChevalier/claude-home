@@ -32,6 +32,8 @@
 !/skills/*/
 !/skills/*/SKILL.md
 !/skills/*/**/*.md
+!/skills/*/scripts/
+!/skills/*/scripts/*.sh
 
 # 3. Belt-and-suspenders: never track caches even if a rule above is loosened.
 __pycache__/
