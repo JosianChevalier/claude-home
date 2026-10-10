@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, session-design, cynefin]
+tags: [harness-design, session-design, requisite-variety]
 ---
 
 # Rationale: The Abstraction Ladder

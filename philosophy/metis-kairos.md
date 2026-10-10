@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, collaboration, cynefin, kaizen]
+tags: [harness-design, collaboration, requisite-variety, kaizen]
 ---
 
 # Rationale: Metis and Kairos

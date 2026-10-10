@@ -1,5 +1,5 @@
 ---
-tags: [session-design, workflow, sub-agents, context-economics, cynefin]
+tags: [session-design, workflow, sub-agents, context-economics, cynefin, requisite-variety]
 ---
 
 # Rationale: Session Design
