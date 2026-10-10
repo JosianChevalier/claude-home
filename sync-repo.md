@@ -1,7 +1,35 @@
-# Harness repo and multi-machine sync — design state
- 
-Status on 2026-10-08: prototype `.claude/` landed in `~/.claude/old-claude/` (step 2 done). Resume from "Migration process", step 3, following the MO below. OpenCode is out of scope for now: Claude Code only.
- 
+---
+ongoing_work_file: "Migrate the prototype .claude/ into this repo. Empty when old-claude/ is empty, the repo is scanned, renamed and public, and the project syncs from it."
+rank: 1
+---
+
+# Harness repo and multi-machine sync
+
+Work file of the migration. OpenCode is out of scope for now: Claude Code only. Current step is marked in Steps.
+
+## Steps
+
+- [x] Migration 1: decisions, in conversation.
+- [x] Migration 2: prototype `.claude/` zipped onto the laptop, in `old-claude/`.
+- [ ] Migration 3: integrate bit by bit, MO below. **← current**
+  - [x] 3.1 `CLAUDE.md` replaced; OpenCode section parked in `old-claude/AGENTS.md`.
+  - [ ] 3.2 Philosophy. **← current**
+    - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
+    - [x] `session-state-in-documents` landed 2026-10-10, to review.
+    - [ ] Backlog `old-claude/rationale/`. Dangling wikilinks waiting for a file: `attractors`, `compounding-decisions`, `model-expressions`, `shape-and-substance`, `type-and-concept`, `workflow-rhythm`.
+    - [ ] To confirm: the Lakatos line in `three-layer-harness`.
+    - [ ] Reading session: Ashby, Introduction to Cybernetics ch. 11; Beer's VSM recursion (Brain of the Firm, Heart of Enterprise). Is "lowest level that can hold it" Beer's wording or the recursion restated? Is Snowden's "distributed rather than delegated decision making" the same idea?
+    - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
+  - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
+    - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
+  - [ ] 3.4 Skills.
+    - [ ] `harness-improvement`: re-enter the ref-form contract and "load the rationale before diagnosing"; it still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
+    - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
+  - [ ] 3.5 Agents.
+  - [ ] 3.6 Templates.
+- [ ] Migration 4: scan for client specifics, rename, make public.
+- [ ] Migration 5: the project syncs from the repo only; delete the uploaded docs. Then delete this file.
+
 ## Goal
  
 Move the canonical harness core (this project's rationales, rules, skills, agents) into one git repository that Josian can read and edit from three places:
@@ -30,13 +58,6 @@ The same core must serve both Claude Code and OpenCode.
 - **Agents as thin wrappers.** Agent substance lives in a skill (shared by both tools). Each tool gets its own small agent file holding only frontmatter plus "load skill X": `~/.claude/agents/x.md` and `~/.claude/opencode/agents/x.md`.
 - **Session-start pull hook** in each laptop's Claude Code `settings.json`: `git -C ~/.claude pull --rebase --autostash --quiet || true`.
 - **After the move**, this project syncs from the new repo and the uploaded docs are deleted, so there is one canonical copy. `claude-home` is already attached as a second sync source.
-## Migration process
- 
-1. Take the decisions here, in conversation. Done.
-2. Zip the project's `.claude/` onto the personal laptop. The project is the canonical copy (docs were edited here only). No bulk export: one `project_read` per doc, ~100 docs; done by several sub-agents writing verbatim to disk, then zipped.
-3. Integrate bit by bit into `~/.claude` following the MO below.
-4. Scan for client specifics, then rename and make public.
-5. Switch this project to sync from the repo only; delete the uploaded docs.
 ## MO for step 3 (2026-10-08)
 
 **Inspection is a review in conversation.** Findings per file go on the table; the file is written after the decision.
@@ -104,38 +125,13 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 - Whether `OPENCODE_CONFIG_DIR` still works in v2.
 - Whether one agent file with only `name` and `description` can serve both tools.
 - Whether a web session working on another project can load the harness (a cloud session sees only its own repo, not `~/.claude`). Editing the harness from the web works by opening a session on the harness repo itself.
-## Settled questions (2026-10-08)
- 
-1. OpenCode version — v2, retrocompatible with v1; see Decided.
-2. Merge vs replace — merge everything from the project into `~/.claude`; see Decided.
-3. `philosophy/` — yes; see Decided.
-4. Repo — `claude-home`, to be renamed; see Decided.
-5. Scope — `.claude/` only; see Decided.
+## Mapping old → new, changed content
 
-## Pending before the migration ends
-
-- Find a home for the session-anchoring prescription (anchor the session in a working document; ask when it drifts). Philosophy is in `philosophy/session-design.md`; the know-how has no file yet. Candidates: Context section of `CLAUDE.md`, or a rule.
-- `skills/wake-and-run` still has a `## Procedure` header and no Doctrine: rewrite to the current shape.
-
-## Tracking (step 2, philosophy)
-
-**Next (2026-10-10):** `context-economics` OpenCode cut. Landed 2026-10-10: `harness-elements` reviewed (Agent row split into session agent, headless agent, sub-agent; intersection and in/on the loop explicit; materialization paragraph; refs to wikilinks; OpenCode bullet trimmed; Related). Then the backlog, `session-state-in-documents` first. Landed 2026-10-10: the meta pattern became two files. `metis-kairos` (philosophy: the human OODA the harness enables at every level, absorb business-as-usual, escalate what breaks expectation, the arrival at the engineer is the kairos, the gradient and its two failure directions) and `abstraction-ladder` (approach: rungs ordered by abstraction, delegation down, escalation one rung up, trickle down, bricks move down; six sightings). `change-inertia` (philosophy: effort to put movement in a system, the cutting heuristic, five seams, conceptual integrity dissipating, tiny bounded contexts; hexagonal left the ladder for it). `kairos-gates` keeps only the gates as steps on top of the core loop. `harness-direction` now says the brick moves down the tree, toward the leaf. Landed 2026-10-10, fcee0ba: Cynefin claims checked against Snowden. The absorption rule is Beer after Ashby (only variety absorbs variety, at the lowest level that can hold it), not Cynefin; the dispatch row is the complex–complicated liminal zone, escalation as the escape hatch; leaf and workflow rows say ordered; `harness-direction`: complex to complicated by constraints proven by iteration, metis into techne (Scott). Edge of chaos dropped from layer 1 of `three-layer-harness`; to return elsewhere, differently, later. Tag `requisite-variety` where Beer is cited. To confirm, in a reading session: Ashby, Introduction to Cybernetics ch. 11, and Beer's VSM recursion (Brain of the Firm, Heart of Enterprise), whether "lowest level that can hold it" is Beer's wording or the recursion restated; whether Snowden's "distributed rather than delegated decision making" is the same idea.
-
-**Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
-
-- Cut decided 2026-10-09: `two-layer-harness` and `harness-target` became three files, one idea each. `three-layer-harness` (layers numbered 1 know-how, 2 doctrine, 3 philosophy; Lakatos; inertia as the reason for layering). `harness-shape` (doctrine, know-how, 80/20, rewriting a file). `kaizen` (doctrine: layers 1 and 2 tied to layer 3, drift guard; triage; user-invoked). Contract clauses on the ref form and "load the rationale before diagnosing" dropped from philosophy; they re-enter in the harness-improvement skill at the skills step, which still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
-- `harness-shape`: decided 2026-10-09: `Postures` stays, layer 2 in an agent and CLAUDE.md is posture and objective under their own names; the temporal-context saying is "Two hats (Beck), one at a time", placed in `context-economics` at the temporal cut; Open section emptied. `session-design` does not touch it. The Lakatos line now sits in `three-layer-harness`, to confirm.
-- `harness-elements`: done 2026-10-10. Clarified 2026-10-09: workflow, sub-agent, session in `session-design` are process units (temporal cuts) of the sociotechnical system; agents, sub-agents, orchestrators are the harness elements that materialize them. The Sub-agent row is legitimate.
-- `context-economics` (landed): still carries the OpenCode-specific "Rule → context (AOP)" section and `globs:`/opencode-rules in loading policy. Cut now or at the rules step.
-- `harness-elements`, consequence of `harness-direction`: done 2026-10-10, see the mapping row.
-- Dangling wikilinks until their files land (checked 2026-10-10): `session-state-in-documents`, `attractors`, `compounding-decisions`, `model-expressions`, `shape-and-substance`, `type-and-concept`, `workflow-rhythm`. `planning-is-everything` no longer referenced.
-
-**Mapping old → new, changed content.** Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`.
+Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`.
 
 | Old | New | Change |
 |---|---|---|
 | `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | refs normalized to wikilinks |
-
 | `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | refs normalized |
 | `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | refs normalized |
 | `rationale/context-economics.md` | `philosophy/context-economics.md` | refs normalized; OpenCode section kept, pending |
@@ -150,5 +146,6 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | — | `philosophy/metis-kairos.md` | new 2026-10-10: the human OODA, absorb/escalate, kairos at the engineer, the gradient; absorption attributed to Beer |
 | — | `philosophy/abstraction-ladder.md` | new 2026-10-10: the approach, rungs and flows, six sightings; Cynefin wording checked |
 | — | `philosophy/change-inertia.md` | new 2026-10-10: the cutting heuristic, seams table, conceptual integrity, tiny bounded contexts |
+| `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | 2026-10-10: refs to wikilinks; `planning-is-everything` ref replaced by the inline list of what the state contains; "plan file" → "work file"; chaos monkey paragraph; pink elephant paragraph on the finished file; Related |
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | 2026-10-10: gates only, as steps on top of the core loop; belt kairos and strain signal moved to `metis-kairos` |
 
