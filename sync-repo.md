@@ -119,7 +119,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 
 ## Tracking (step 2, philosophy)
 
-**Next (2026-10-10):** `harness-elements` (three refs to wikilinks; Agent row gains "an intention on its way to a goal"; read the table against the process tree in `session-design`). Then `context-economics` OpenCode cut. Then the backlog, `session-state-in-documents` first. Candidate philosophy for a next session: the meta pattern that keeps appearing across `three-layer-harness`, `session-design`, `harness-direction`, `kaizen`, and the session-anchored-in-a-document rule: a stack ordered by inertia, variation absorbed at the lowest level that can take it, only what survives escalates, change trickles down; the same shape at every zoom level. Name and content: the user's.
+**Next (2026-10-10):** `harness-elements` (three refs to wikilinks; Agent row gains "an intention on its way to a goal"; read the table against the process tree in `session-design`). Then `context-economics` OpenCode cut. Then the backlog, `session-state-in-documents` first. Landed 2026-10-10: the meta pattern became two files. `metis-kairos` (philosophy: the human OODA the harness enables at every level, absorb business-as-usual, escalate what breaks expectation, the arrival at the engineer is the kairos, the gradient and its two failure directions) and `abstraction-ladder` (approach: rungs ordered by abstraction, delegation down, escalation one rung up, trickle down, bricks move down; seven sightings, hexagonal as the non-harness case, which demotes inertia from ordering axis to a harness-ladder property). `kairos-gates` keeps only the gates as steps on top of the core loop. `harness-direction` now says the brick moves down the tree, toward the leaf. To confirm: the inertia-versus-abstraction call in `abstraction-ladder`.
 
 **Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
 
@@ -135,7 +135,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | Old | New | Change |
 |---|---|---|
 | `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | refs normalized to wikilinks |
-| `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | refs normalized |
+
 | `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | refs normalized |
 | `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | refs normalized |
 | `rationale/context-economics.md` | `philosophy/context-economics.md` | refs normalized; OpenCode section kept, pending |
@@ -146,5 +146,8 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten: Doctrine (4 lines) + know-how sections (successor, cases, contains, does not contain, form); blockquote output; no self-label; failure case; Rationale trailer |
 | — | `philosophy/conversation-continuity.md` | new |
 | — | `philosophy/session-design.md` | new; opening rewritten 2026-10-10: containment tree (session, dispatch, workflow, leaf), who decides at the node, absorption rule, dispatch as probe |
-| — | `philosophy/harness-direction.md` | new 2026-10-10: complex to complicated by design, bricks move up one unit via kaizen, agents drift to headless |
+| — | `philosophy/harness-direction.md` | new 2026-10-10: complex to complicated by design, bricks move down one rung via kaizen, agents drift to headless |
+| — | `philosophy/metis-kairos.md` | new 2026-10-10: the human OODA, absorb/escalate, kairos at the engineer, the gradient |
+| — | `philosophy/abstraction-ladder.md` | new 2026-10-10: the approach, rungs and flows, seven sightings |
+| `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | 2026-10-10: gates only, as steps on top of the core loop; belt kairos and strain signal moved to `metis-kairos` |
 
