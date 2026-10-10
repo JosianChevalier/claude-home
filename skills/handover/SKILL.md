@@ -9,7 +9,7 @@ description: Use when the user asks to create/write/generate a handover prompt f
 
 - By default, conversations are trashable.
 - Allow resuming the current activity in a fresh context without rewriting instructions or intent.
-- State of work lives in the filesystem, to make `/clear` free.
+- State of work lives in the work file, to make `/clear` free. The handover carries what is not state: pointers, the next action, the posture.
 - Keep the semantic landscape of the next agent simple and bias-free.
 
 ## The successor
@@ -18,31 +18,37 @@ Runs on the same harness and the same repo. CLAUDE.md, rules, skills and source 
 
 ## The cases
 
-- **Continuity**: the next part runs in another session. The successor takes over: intent, next step, decisions not in files, open questions, the anchor.
+- **Continuity**: the next part runs in another session. The successor takes over the activity.
 - **Branching**: one direction out of several; this conversation continues. Scope the direction, its boundary, and where the result is expected. Leave out your own leaning on it.
 - **Async**: this session waits for the other's input. Write a request: what is needed back, in which form, where. The successor does not take over the work.
 
-## What a handover contains
+## Building it
 
-Only what carries information for the successor: a line goes in if it changes the next action or prevents a likely mistake, not because it happened.
+Start from nothing; each line has to earn its place.
 
-- Intent: the goal and what it serves.
-- The next step.
-- Large decisions not carried in files, with the rationale when it is not obvious.
-- After a failure: what was tried and what was observed. If the user has not said what went wrong, say the cause is not established.
-- Open questions.
-- Pointers to the artifacts that hold the state: the session's working document first, then plans, studies, specs, commits, key file paths.
+1. Orient: point to the resources that carry the state of this activity, the work file tracked by ongoing-work first, one line each on what the successor finds there.
+2. Next step: state it only if the resources do not already show it.
+3. Survival: what the successor needs and nothing anchors. Where it goes is a matter of nature.
+   - A file: impactful, not consumed by the immediate next action, and sensitive to a restart. Invoking this skill is the request to write it.
+   - A line: consumed by the immediate next action, or the posture of the next agent, which lives in session. After a failure, no story: name the dial and set it the other way. Too long becomes "verdict first, three lines"; too deep becomes "map, no detail"; the wrong idea in focus becomes "the question is X, not Y". A posture instruction, not a diagnosis.
+   - Not a word: what was considered and not done, what is done and over, an approach among several still being tried, an unvalidated conclusion, above all a diagnosis of your own failure. Named, it becomes a pink elephant.
 
-## What it does not contain
-
-- Biases, conclusions that have not been validated and supported. An invented diagnosis of your own failure is the worst of these.
-- Elements that live in the filesystem: the pointer, never the content.
-- The project, the harness, the rules: the successor already has them.
-- A log of the session: what was done is in the commits and files, and a decision that does not change the next action is not information.
-- The word handover, or any label calling itself one: the successor would load this skill and write one instead of acting. Word it so the next agent knows what to do.
+Then check: can the successor act, from the pointers and the lines? What this serves, what to do next, what was decided, what is open. A gap is a line.
 
 ## Form
 
-Output directly in the chat, no file, as one blockquote: every line prefixed with `>`. The user does not read it; the bar on the left shows where it starts and ends, and what they write below the bar is theirs and overrides what is above. Every token the successor reads is budget spent.
+In the chat, no file, shaped like this:
+
+```
+Handover: the review
+
+> Guide the hand review of the philosophy files, in the order of review.md. Next: model-tiers.
+> Verdict first, three lines, then wait.
+> ------ end of agent generated instruction
+```
+
+The label names the topic when there are several. The quote is a direct prompt to the successor, second person. The last line closes it: the user pastes the quote and writes below that line, and what is below overrides what is above. Every token the successor reads is budget spent.
+
+Never the word handover inside the quote, nor any label calling itself one: the successor would load this skill and write one instead of acting.
 
 Rationale: [[philosophy/conversation-continuity]], [[philosophy/session-state-in-documents]], [[philosophy/context-economics]]
