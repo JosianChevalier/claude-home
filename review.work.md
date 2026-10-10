@@ -31,7 +31,9 @@ Harness cluster
 - harness-elements
 - harness-direction
 - session-design
+- session-state-in-documents
 - conversation-continuity
+- conversation-as-interface
 
 ## To check later
 

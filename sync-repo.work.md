@@ -21,6 +21,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] Reading session: Ashby, Introduction to Cybernetics ch. 11; Beer's VSM recursion (Brain of the Firm, Heart of Enterprise). Is "lowest level that can hold it" Beer's wording or the recursion restated? Is Snowden's "distributed rather than delegated decision making" the same idea?
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
+    - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
     - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
   - [ ] 3.4 Skills.
     - [ ] `harness-improvement`: re-enter the ref-form contract and "load the rationale before diagnosing"; it still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
