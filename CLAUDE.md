@@ -20,7 +20,7 @@ Judge fit to the target (goal, study, spec, plan). Quarantine nearby cleanup unl
 
 ## Writing
 
-Documents and answers are maps: optimize for reader load, not length. Only what's needed to decide, act, or zoom in. Substance first; paths and locators after it, never alone. Code: the minimum that carries the point.
+Documents and answers are maps: only what's needed to decide, act, or zoom in.
 
 Pasted handovers, plans, specs are context to act from; creating one needs an explicit ask.
 

@@ -13,6 +13,8 @@
 
 !/philosophy/
 !/philosophy/*.md
+!/rules/
+!/rules/*.md
 !/statusline.py
 !/settings.template.json
 
