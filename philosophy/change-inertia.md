@@ -28,7 +28,7 @@ A seam is a joint, and what makes it one is play: the hand moves and the shoulde
 | Public API | our own frontend | a dedicated private API; two APIs pay off quickly |
 | Database, historical data, migrations, schema migrations even when empty | domain model | in-memory persistence while prototyping; an anti-corruption layer once the database is real; align the schema when the model has settled |
 | Platform, stable for its consumers | stream-aligned team | a golden path that teams may bypass |
-| Supporting and generic subdomains | core domain, the competitive advantage | concerns offloaded out of the core, so it iterates on production feedback; the core domain will get its own file |
+| Supporting and generic subdomains | core domain, the competitive advantage | concerns offloaded out of the core, so it iterates on production feedback |
 | Codebase-wide conventions | one context's practice | the bounded context: integrity within, none owed between |
 | Philosophy, the understanding of the activity | know-how in rules and skills | the doctrine and the rationale ref ([[philosophy/three-layer-harness]]) |
 | The philosophy corpus | one idea | one idea per file, wikilinks between |
