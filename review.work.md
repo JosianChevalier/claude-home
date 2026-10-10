@@ -13,7 +13,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Posture cluster
 
-- model-tiers
 - zoom-levels
 - context-economics
 - kairos-gates
@@ -37,4 +36,4 @@ Harness cluster
 
 ## To check later
 
-(none)
+- conversation-continuity still carries the gathering list the handover skill dropped (intent, next step, decisions not in files, open questions, pointer). Reconcile when reviewing it.
