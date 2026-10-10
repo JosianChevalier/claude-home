@@ -25,4 +25,4 @@ In the harness ladders the top rung is also the slowest, and pace layering (Bran
 | The belt, two rungs | the engineer's type | the code's concept | [[philosophy/transmission-belt]] |
 | Architecture | domain logic | adapters, meeting databases and tools | hexagonal |
 
-The Cynefin labels in the process table (session complex, leaf clear) name the domain the orchestrator works in, not where variation arrives: complexity arrives at the leaf and is decided on at the session.
+The Cynefin labels in the process table (session complex, leaf ordered) name the domain the orchestrator works in, not where variation arrives: complexity arrives at the leaf and is decided on at the session.

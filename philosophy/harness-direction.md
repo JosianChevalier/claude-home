@@ -4,7 +4,7 @@ tags: [harness-design, kaizen, cynefin]
 
 # Rationale: Harness Direction
 
-The harness evolves from complex toward complicated, by design. In Cynefin a domain drifts from complex to complicated when structures are built that counteract the complexity. Two engines move the boundary: better models, which are given to us, and the harness's own systematic exploration, which is ours. The second distills phronesis, the practical wisdom of sessions, into episteme, codified knowledge, and episteme into workflows.
+The harness evolves from complex toward complicated, by design. In Cynefin a situation moves from complex to complicated when constraints make its patterns repeatable. The move is proven by iteration in the liminal zone between the two, and it is rechecked, because it can slip back. Two engines move the boundary: better models, which are given to us, and the harness's own systematic exploration, which is ours. The second encodes metis, the practical sense of sessions, into techne: constraints the harness can run. Between people that encoding fails (Scott); here it holds because the one encoding sees the encoding fail, in the next session, and what resists encoding escalates.
 
 ## The process
 

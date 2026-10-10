@@ -8,7 +8,7 @@ The loop is human. Observe, orient, decide, act (Boyd): improving needs a decisi
 
 ## What comes up
 
-Observation comes back up the transmission belt ([[philosophy/transmission-belt]]). Not all of it should. Complexity is absorbed near where it arises (Cynefin): the variation a level can take as business as usual stays there. What escalates is the variation that breaks expectation, so that feedback shows up in the layer that can act on it. Errors no level absorbs are signals about the process, not the task, and they must reach the engineer.
+Observation comes back up the transmission belt ([[philosophy/transmission-belt]]). Not all of it should. Variety is absorbed at the lowest level that can hold it (Beer, after Ashby): the variation a level can take as business as usual stays there. What escalates is the variation that breaks expectation, so that feedback shows up in the layer that can act on it. Errors no level absorbs are signals about the process, not the task, and they must reach the engineer.
 
 That arrival is the *kairos*: the opportune moment, as against *chronos*, mere duration. *Metis* seizes it: the engineer's situated, practical sense reads the error as the opportunity to destroy their own world and make the improvement. The belt feeling its own strain belongs here too: "I am doing many things at once" is a signal to send up, so the engineer can decide whether the strain is the task's or the model's.
 
