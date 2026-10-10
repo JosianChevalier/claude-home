@@ -14,7 +14,7 @@ Doctrine is fixed during execution, and it is the test for leaving the know-how:
 
 ## Why the layers: inertia
 
-The layers have different lifecycles, and that is why they stay apart: design rationale in the Rittel/Kunz (IBIS) lineage, the insight behind ADRs, a decision and its argumentation have different readers and different lifecycles. The lifecycle difference is inertia.
+The layers have different lifecycles, and that is why they stay apart: design rationale in the Rittel/Kunz (IBIS) lineage, the insight behind ADRs, a decision and its argumentation have different readers and different lifecycles. The lifecycle difference is inertia ([[philosophy/change-inertia]]).
 
 - **Layer 1, know-how: low inertia.** It moves fast. Each session that goes wrong feeds it; each model change reshapes it. This is the Cynefin complex domain: probe, sense, respond; act, watch the agent, adjust, again. It is the least portable layer, coupled to the project and the team. Its role is to absorb variation where it happens: only variety absorbs variety (Beer, after Ashby), at the lowest level that can hold it.
 - **Layer 2, doctrine: coupled to layer 1.** The two have similar inertia. The doctrine is updated when a failure goes beyond what the know-how could absorb, and that happens: a bump taken in layer 1 can reorient the steering quite easily. It covers all cases where the know-how covers the usual four in five, so it changes less often, and a change to it is a behavior adjustment, not a fine-tune.

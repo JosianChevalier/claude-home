@@ -119,7 +119,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 
 ## Tracking (step 2, philosophy)
 
-**Next (2026-10-10):** `harness-elements` (three refs to wikilinks; Agent row gains "an intention on its way to a goal"; read the table against the process tree in `session-design`). Then `context-economics` OpenCode cut. Then the backlog, `session-state-in-documents` first. Landed 2026-10-10: the meta pattern became two files. `metis-kairos` (philosophy: the human OODA the harness enables at every level, absorb business-as-usual, escalate what breaks expectation, the arrival at the engineer is the kairos, the gradient and its two failure directions) and `abstraction-ladder` (approach: rungs ordered by abstraction, delegation down, escalation one rung up, trickle down, bricks move down; seven sightings, hexagonal as the non-harness case, which demotes inertia from ordering axis to a harness-ladder property). `kairos-gates` keeps only the gates as steps on top of the core loop. `harness-direction` now says the brick moves down the tree, toward the leaf. To confirm: the inertia-versus-abstraction call in `abstraction-ladder`.
+**Next (2026-10-10):** `harness-elements` (three refs to wikilinks; Agent row gains "an intention on its way to a goal"; read the table against the process tree in `session-design`). Then `context-economics` OpenCode cut. Then the backlog, `session-state-in-documents` first. Landed 2026-10-10: the meta pattern became two files. `metis-kairos` (philosophy: the human OODA the harness enables at every level, absorb business-as-usual, escalate what breaks expectation, the arrival at the engineer is the kairos, the gradient and its two failure directions) and `abstraction-ladder` (approach: rungs ordered by abstraction, delegation down, escalation one rung up, trickle down, bricks move down; six sightings). `change-inertia` (philosophy: effort to put movement in a system, the cutting heuristic, five seams, conceptual integrity dissipating, tiny bounded contexts; hexagonal left the ladder for it). `kairos-gates` keeps only the gates as steps on top of the core loop. `harness-direction` now says the brick moves down the tree, toward the leaf.
 
 **Imported before review, 2026-10-09.** `harness-target`, `harness-elements`, `two-layer-harness` entered `philosophy/` as-is so a session can work on them in place. The MO says nothing enters uncleaned; this is the deliberate exception. To check:
 
@@ -148,6 +148,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 | — | `philosophy/session-design.md` | new; opening rewritten 2026-10-10: containment tree (session, dispatch, workflow, leaf), who decides at the node, absorption rule, dispatch as probe |
 | — | `philosophy/harness-direction.md` | new 2026-10-10: complex to complicated by design, bricks move down one rung via kaizen, agents drift to headless |
 | — | `philosophy/metis-kairos.md` | new 2026-10-10: the human OODA, absorb/escalate, kairos at the engineer, the gradient |
-| — | `philosophy/abstraction-ladder.md` | new 2026-10-10: the approach, rungs and flows, seven sightings |
+| — | `philosophy/abstraction-ladder.md` | new 2026-10-10: the approach, rungs and flows, six sightings |
+| — | `philosophy/change-inertia.md` | new 2026-10-10: the cutting heuristic, seams table, conceptual integrity, tiny bounded contexts |
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | 2026-10-10: gates only, as steps on top of the core loop; belt kairos and strain signal moved to `metis-kairos` |
 
