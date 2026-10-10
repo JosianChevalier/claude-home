@@ -8,7 +8,7 @@ Inertia is the effort it takes to put movement into a system. A system that stop
 
 ## Inertia compounds
 
-Coupled to a heavy part, the light part drags it into every experiment: instead of moving a 5 kg object, one hauls the 50 kg ball chained to it. And coupling adds inertia non-linearly: moving one 40 kg bag takes more energy than moving two of 20. Two consequences: cut between what has high inertia and what has little, so the light part moves at its own speed; and cut small, down to the smallest models a business problem allows.
+Two bags of 20 kg go up the stairs one at a time. The 40 kg bag stays on the floor. Effort does not grow with size, it saturates: past a weight one cannot lift, the move is not slower, it does not happen. And a limb in a cast moves as one mass: coupled to a heavy part, the light part drags it into every experiment. Two consequences: cut between what has high inertia and what has little, so the light part moves at its own speed; and cut small, down to the smallest models a business problem allows, each light enough to lift.
 
 The same mechanism acts on practices. A team that wants to change a convention, the naming, the approach to mocks, its model, everywhere at once, faces the whole codebase's weight. So it experiments less, queues the change as cleanup tickets for when there is time to breathe, and the inertia of its practices and its model grows. Continuous improvement is the first casualty; continuous is not once in a while.
 
@@ -20,15 +20,15 @@ Two reasons not to demand it between contexts, nor even within one while experim
 
 ## Seams
 
-Each row keeps a heavy side and a light side on their own sides of a seam.
+A seam is a joint, and what makes it one is play: the hand moves and the shoulder stays put, so one part can move, and be experimented on, without the rest following. A frozen shoulder has the joint on the diagram and no play in it: lift the arm and the whole torso comes. That is the seam that keeps the conceptual coupling, a platform wrapping its systems rigidly and turning into a bottleneck under its teams' feature pressure, an API that mirrors the domain. Inertia is decoupled only where the concept is.
 
 | Heavy | Light | Seam |
 |---|---|---|
 | Public API, backward compatibility, versions | domain model | the API is a separate model, behind an anti-corruption layer |
 | Public API | our own frontend | a dedicated private API; two APIs pay off quickly |
-| Database, historical data, migrations | domain model | in-memory persistence while prototyping; an anti-corruption layer once the database is real; align the schema when the model has settled |
+| Database, historical data, migrations, schema migrations even when empty | domain model | in-memory persistence while prototyping; an anti-corruption layer once the database is real; align the schema when the model has settled |
 | Platform, stable for its consumers | stream-aligned team | a golden path that teams may bypass |
-| Supporting and generic subdomains | core domain | concerns offloaded out of the core, so it iterates on production feedback |
+| Supporting and generic subdomains | core domain, the competitive advantage | concerns offloaded out of the core, so it iterates on production feedback; the core domain will get its own file |
 | Codebase-wide conventions | one context's practice | the bounded context: integrity within, none owed between |
 | Philosophy, the understanding of the activity | know-how in rules and skills | the doctrine and the rationale ref ([[philosophy/three-layer-harness]]) |
 | The philosophy corpus | one idea | one idea per file, wikilinks between |
