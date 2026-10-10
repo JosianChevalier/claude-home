@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, kaizen, requisite-variety]
+tags: [harness-design, kaizen, variety-absorption]
 ---
 
 # Rationale: The Three-Layer Harness

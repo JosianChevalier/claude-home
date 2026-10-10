@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, session-design, requisite-variety]
+tags: [harness-design, session-design, variety-absorption]
 ---
 
 # Rationale: The Abstraction Ladder

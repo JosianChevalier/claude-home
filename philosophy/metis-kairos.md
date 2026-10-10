@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, collaboration, requisite-variety, kaizen]
+tags: [harness-design, collaboration, variety-absorption, kaizen]
 ---
 
 # Rationale: Metis and Kairos
