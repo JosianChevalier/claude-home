@@ -18,7 +18,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`. Dangling wikilinks waiting for a file: `attractors`, `compounding-decisions`, `model-expressions`, `shape-and-substance`, `type-and-concept`, `workflow-rhythm`.
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
-    - [ ] Reading session: Ashby, Introduction to Cybernetics ch. 11; Beer's VSM recursion (Brain of the Firm, Heart of Enterprise). Is "lowest level that can hold it" Beer's wording or the recursion restated? Is Snowden's "distributed rather than delegated decision making" the same idea?
+    - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
@@ -126,27 +126,20 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 - Whether `OPENCODE_CONFIG_DIR` still works in v2.
 - Whether one agent file with only `name` and `description` can serve both tools.
 - Whether a web session working on another project can load the harness (a cloud session sees only its own repo, not `~/.claude`). Editing the harness from the web works by opening a session on the harness repo itself.
-## Mapping old → new, changed content
+## Mapping old → new
 
-Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`.
+Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-claude-reference/<old> <new>`. Refs normalized to wikilinks everywhere (MO); only moves, drops and pendings are noted.
 
-| Old | New | Change |
+| Old | New | Moved, dropped, pending |
 |---|---|---|
-| `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | refs normalized to wikilinks |
-| `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | refs normalized |
-| `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | refs normalized |
-| `rationale/context-economics.md` | `philosophy/context-economics.md` | refs normalized; OpenCode section kept, pending |
-| `rationale/harness-target.md` | `philosophy/harness-shape.md` | Procedure → Know-how boundary; doctrine = what must always be true, every file carries the header; stale "not yet" framing removed; layer table moved to `three-layer-harness`, kaizen triage to `kaizen`; refs to wikilinks |
-| `rationale/harness-elements.md` | `philosophy/harness-elements.md` | 2026-10-10: Agent row split in three (session agent: posture, human in the loop; headless agent: intention toward a goal, process first, human on the loop at most; sub-agent: same, called live, the probe); intersection headless/sub-agent explicit; paragraph on what materializes which process unit, orchestrator as a role; refs to wikilinks; OpenCode preload mention trimmed; Related section |
-| `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | layer list replaced by the numbered three-layer table (from harness-target); IBIS paragraph expanded into "Why the layers: inertia"; contract and kaizen sections moved to `kaizen` or dropped; Cynefin wording checked |
-| — | `philosophy/kaizen.md` | new: drift guard and tie-to-philosophy as doctrine, triage table, why user-invoked |
-| `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten: Doctrine (4 lines) + know-how sections (successor, cases, contains, does not contain, form); blockquote output; no self-label; failure case; Rationale trailer |
-| — | `philosophy/conversation-continuity.md` | new |
-| — | `philosophy/session-design.md` | new; opening rewritten 2026-10-10: containment tree (session, dispatch, workflow, leaf), who decides at the node, absorption rule, dispatch as probe; Cynefin wording checked |
-| — | `philosophy/harness-direction.md` | new 2026-10-10: complex to complicated by design, bricks move down one rung via kaizen, agents drift to headless; Cynefin wording checked |
-| — | `philosophy/metis-kairos.md` | new 2026-10-10: the human OODA, absorb/escalate, kairos at the engineer, the gradient; absorption attributed to Beer |
-| — | `philosophy/abstraction-ladder.md` | new 2026-10-10: the approach, rungs and flows, six sightings; Cynefin wording checked |
-| — | `philosophy/change-inertia.md` | new 2026-10-10: the cutting heuristic, seams table, conceptual integrity, tiny bounded contexts |
-| `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | 2026-10-10: refs to wikilinks; `planning-is-everything` ref replaced by the inline list of what the state contains; "plan file" → "work file"; chaos monkey paragraph; pink elephant paragraph on the finished file; Related |
-| `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | 2026-10-10: gates only, as steps on top of the core loop; belt kairos and strain signal moved to `metis-kairos` |
-
+| `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | |
+| `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | |
+| `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | |
+| `rationale/context-economics.md` | `philosophy/context-economics.md` | OpenCode section still in, pending (3.2) |
+| `rationale/harness-target.md` | `philosophy/harness-shape.md` | layer table → `three-layer-harness`; kaizen triage → `kaizen` |
+| `rationale/harness-elements.md` | `philosophy/harness-elements.md` | OpenCode preload mention dropped |
+| `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | contract and kaizen sections → `kaizen` or dropped; edge of chaos dropped, returns elsewhere (3.2) |
+| `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
+| `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
+| `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
+| — | `philosophy/kaizen.md`, `conversation-continuity.md`, `session-design.md`, `harness-direction.md`, `metis-kairos.md`, `abstraction-ladder.md`, `change-inertia.md` | new, no old counterpart |
