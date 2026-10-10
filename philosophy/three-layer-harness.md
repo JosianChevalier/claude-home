@@ -22,10 +22,11 @@ The layers have different lifecycles, and that is why they stay apart: design ra
 
 Change runs in two directions. Upward, as feedback: the know-how absorbs the variation; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it.
 
-The foundation is pace layering (Brand): fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive; change shears between layers. Our own metaphor for the three: the know-how is the shock absorber, the doctrine the steering, the philosophy the navigation. A bump never changes the destination; a new destination changes the steering and what the suspension meets.
+The layers are one rung-set of the abstraction ladder ([[philosophy/abstraction-ladder]]), with pace layering (Brand) as the foundation: fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive; change shears between layers. Our own metaphor for the three: the know-how is the shock absorber, the doctrine the steering, the philosophy the navigation. A bump never changes the destination; a new destination changes the steering and what the suspension meets.
 
 ## Related
 
 - How a rule or skill is shaped from layers 1 and 2: [[philosophy/harness-shape]].
 - How feedback moves between the layers: [[philosophy/kaizen]].
+- The shape the layers share with the process tree and the belt: [[philosophy/abstraction-ladder]].
 - What each harness element is for: [[philosophy/harness-elements]].

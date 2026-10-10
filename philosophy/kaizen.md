@@ -9,11 +9,11 @@ Kaizen is the session where feedback from runs becomes changes to the harness: t
 ## Doctrine
 
 - **Layers 1 and 2 are tied to layer 3.** Every rule and skill points to the philosophy it came from. The reasons are context economics and auditability: changing a rule means understanding precisely what it was trying to accomplish, so everything that went into it must be easy to reach. How the pointer is written is the kaizen skill's business, not this file's.
-- **Drift guard.** If a proposed fix contradicts the philosophy behind the rule, either the fix is wrong or the philosophy is outdated. One of the two changes, explicitly. This is the only mechanism keeping layer 3 honest; never bypass it.
+- **Drift guard.** If a proposed fix contradicts the philosophy behind the rule, either the fix is wrong or the philosophy is outdated. One of the two changes, explicitly. This is the only mechanism keeping layer 3 honest; never bypass it. It is the guard against the harness absorbing what should have reached the engineer ([[philosophy/metis-kairos]]).
 
 ## Triage
 
-The first question after a failed run:
+Triage climbs the ladder ([[philosophy/abstraction-ladder]]): the lowest layer that can absorb the failure takes it. The first question after a failed run:
 
 | Finding | Meaning | Fix |
 |---|---|---|

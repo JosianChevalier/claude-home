@@ -8,9 +8,9 @@ The harness evolves from complex toward complicated, by design. In Cynefin a dom
 
 ## The process
 
-Start with tiny bricks: the agent micromanaged in session, one small thing at a time. Kaizen ([[philosophy/kaizen]]) makes a brick reliable. A reliable brick is composable, and a composable brick moves up one unit of process ([[philosophy/session-design]]): what was steered by the human in session becomes a dispatch; a dispatch that recurs becomes a workflow; a workflow that no longer needs judgment becomes a leaf. Mechanization is the end of the path: scripts and headless agents.
+Start with tiny bricks: the agent micromanaged in session, one small thing at a time. Kaizen ([[philosophy/kaizen]]) makes a brick reliable. A reliable brick is composable, and a composable brick moves down one rung of the process tree ([[philosophy/session-design]], [[philosophy/abstraction-ladder]]), toward the leaf: what was steered by the human in session becomes a dispatch; a dispatch that recurs becomes a workflow; a workflow that no longer needs judgment becomes a leaf. Mechanization is the end of the path: scripts and headless agents.
 
-Each step up is a change of absorber, not of domain. The work is as variable as before; the node now absorbs the variation that used to escalate to the human.
+Each step down is a change of absorber, not of domain. The work is as variable as before; the node now absorbs the variation that used to escalate to the human.
 
 ## Agents on this path
 
@@ -32,4 +32,5 @@ before: skill, run by the session agent       after: script, run by nobody
 
 - The layers and their inertia: [[philosophy/three-layer-harness]].
 - The units of process: [[philosophy/session-design]].
+- The ladder the brick descends: [[philosophy/abstraction-ladder]].
 - What each harness element is for: [[philosophy/harness-elements]].

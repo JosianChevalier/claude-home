@@ -8,7 +8,7 @@ The agent is a transmission between the engineer's type and the code's concept (
 
 ## Belt, not gear
 
-A belt differs from a gear in one property: **compliance**. It transmits torque but can slip, and the slip is a design property — it is what saves the engine when the load spikes, where a gear would pass the shock straight through. Read as a design principle, the belt already contains "make the friction felt": the belt is the part of the mesh where load becomes *perceptible to the engineer* instead of shearing something silently.
+A belt differs from a gear in one property: **compliance**. It transmits torque but can slip, and the slip is a design property — it is what saves the engine when the load spikes, where a gear would pass the shock straight through. Read as a design principle, the belt already contains "make the friction felt": the belt is the part of the mesh where load becomes *perceptible to the engineer* instead of shearing something silently. What slips through and reaches the engineer is the kairos ([[philosophy/metis-kairos]]).
 
 Two failure directions:
 
@@ -29,7 +29,7 @@ Disappointment is not enough on its own. Boyd's *Destruction and Creation* suppl
 
 The full dynamic: tension (felt loss of Prägnanz) → destruction (Boyd, or voluntary disappointment) → **Stiftung** (the founding act after which the new figure is seen and the old one becomes hard to imagine). The moment someone says "this is a *Transfer*", six scattered fields snap into an object. Model Mitosis is a Stiftung event.
 
-The return path exists to keep this dynamic on the engineer's side. What comes back up the belt is what the engineer destroys and refounds with. An agent that absorbs the disappointment removes the material of the engineer's Orient step.
+The return path exists to keep this dynamic on the engineer's side. What comes back up the belt is what the engineer destroys and refounds with. An agent that absorbs the disappointment removes the material of the engineer's Orient step ([[philosophy/metis-kairos]]).
 
 ## The harness, not the agent
 
