@@ -19,6 +19,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
       - Next: `model-expressions`, then the rest.
+    - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
@@ -83,7 +84,7 @@ The same core must serve both Claude Code and OpenCode.
 - Before any artifact: read the harness-improvement rationales, in full: `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`. The inspection is against them.
 - Walk at the conceptual level, no text. Open: what the old file is about, what the backlinks promise of it, the issues where the layer drifted since. Then one issue per turn, decided in conversation.
 - Mechanical changes silent: folder, frontmatter, link form, backlog removal, mapping row.
-- Two commits per file. First substance: mechanical plus the decisions. Second shape: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). The diffs separate substance from shape.
+- Two commits per file. First substance: mechanical plus the decisions. Second shape: title without "Rationale:", Thesis line, Related, paragraphs that breathe, a figure only where something benefits from being illustrated (rules/writing.md). The diffs separate substance from shape.
 - The file holds what its backlinks promise.
 - Another session may hold uncommitted edits; stage only the files you changed.
 - Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
