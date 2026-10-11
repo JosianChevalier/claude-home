@@ -25,7 +25,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- session-design (claimed)
+- session-design (claimed; its mapping sentence stays as is: the full element→unit mapping lives in harness-elements)
 - session-state-in-documents
 - conversation-continuity
 - conversation-as-interface
