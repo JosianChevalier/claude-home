@@ -33,7 +33,7 @@ Two seams. Between the philosophy and the two below, inertia: the lifecycles dif
 
 **Layer 1, know-how: low inertia.** It moves fast: each session that goes wrong feeds it, each model change reshapes it. Tuning it is Cynefin's complex domain: probe, sense, respond; act, watch the agent, adjust, again.
 
-It is the least portable layer, coupled to the project and the team. Its role is the bottom rung's: absorb variety where it arrives.
+It is the least portable layer, coupled to the project and the team. Its role is the abstraction ladder's bottom rung: absorb variety where it arrives.
 
 **Layer 2, doctrine: the know-how's lifecycle, a wider coverage.** The know-how is the head of the distribution, commodified into steps; the doctrine is the blanket rule that holds in the fat tail, where the steps stop applying. It is updated when a failure goes beyond what the know-how could absorb, and that happens.
 
@@ -45,7 +45,7 @@ It also has uses beyond the harness: a reflection base, notes, material to produ
 
 ## Two directions
 
-Upward, as feedback: the know-how absorbs the variety; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it. Pace layering (Brand) holds here as on every rung of the ladder.
+Upward, as feedback: the know-how absorbs the variety; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it. Pace layering (Brand) holds here as on every rung of the abstraction ladder.
 
 Our own metaphor for the three: the know-how is the shock absorber, the doctrine the steering, the philosophy the navigation. A bump never changes the destination; a new destination changes the steering and what the suspension meets.
 

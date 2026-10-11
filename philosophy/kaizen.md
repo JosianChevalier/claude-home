@@ -15,7 +15,7 @@ Most changes land in the know-how; some in the doctrine, when a failure goes bey
 
 ## Triage
 
-Triage climbs the ladder ([[philosophy/abstraction-ladder]]): the lowest layer that can absorb the failure takes it.
+Triage climbs the abstraction ladder ([[philosophy/abstraction-ladder]]): the lowest layer that can absorb the failure takes it.
 
 ```
  failed run
@@ -46,7 +46,7 @@ One way to install the reflex: a gate that puts kaizen as a step at the end of a
 ## Related
 
 - The three layers and why they stay apart: [[philosophy/three-layer-harness]].
-- Where a failure lands on the ladder: [[philosophy/abstraction-ladder]].
+- Where a failure lands on the abstraction ladder: [[philosophy/abstraction-ladder]].
 - The drift guard as the last guard against too loose: [[philosophy/metis-kairos]].
 - Kaizen as a gate, for whoever lacks the reflex: [[philosophy/kairos-gates]].
 - Kaizen as the step that makes a brick composable: [[philosophy/harness-direction]].

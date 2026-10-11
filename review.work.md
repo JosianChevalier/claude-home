@@ -22,7 +22,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - A named reference (Lakatos, Boyd, Brand) stays one line: it is in the weights.
 - abstraction-ladder is the one inheritance case: a sighting says "read it first" and keeps its specific application. Anywhere else a pointer never replaces an attractor: the name stays where its pattern appears.
 - What arrives at the engineer is the Observe; the kairos is the moment it opens; metis seizes it. Never "what reaches the human is the kairos".
-- Abstraction layering is the pattern; a sighting is a ladder, an instance of it. Never "rung-set", never "the same ladder".
+- Abstraction layering is the pattern; a sighting is a ladder, an instance of it. Outside its own file it is named in full, the abstraction ladder, and "rung" follows that name within the paragraph. Other orderings, inertia or lifecycle, are ladders in their own words.
 - Skills and layers 1-2 are self-sufficient projections of philosophy for one case; the executing agent never reads philosophy. They duplicate whatever is relevant: never a hazard.
 - Philosophy carries the concept and the essence of a rule; mechanics, forms and exhaustive lists of what not to do are the skill's.
 - A file that looks inflated for its topic: list every idea one line each, group by the claim each serves, rewrite from the groups. Deliver the tight text, never a wall with an offer to tighten.

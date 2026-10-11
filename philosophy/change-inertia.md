@@ -58,5 +58,5 @@ A frozen shoulder has the joint on the diagram and no play in it: lift the arm a
 ## Related
 
 - The layers stay apart because their lifecycles differ: [[philosophy/three-layer-harness]].
-- How variety flows across the rungs, where this file says where to cut them: [[philosophy/abstraction-ladder]].
+- How variety flows across the abstraction ladder's rungs, where this file says where to cut them: [[philosophy/abstraction-ladder]].
 - Foundation: pace layering (Brand), change shears between layers.

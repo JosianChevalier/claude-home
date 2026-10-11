@@ -40,6 +40,6 @@ before: loop run by the session agent         after: script, run by nobody
 
 - The layers and their inertia: [[philosophy/three-layer-harness]].
 - The units of process: [[philosophy/process-units]].
-- The ladder the brick descends: [[philosophy/abstraction-ladder]].
+- The abstraction ladder the brick descends: [[philosophy/abstraction-ladder]].
 - What each harness element is for: [[philosophy/harness-elements]].
 - What a brick lower on the path can be run by: [[philosophy/model-tiers]].

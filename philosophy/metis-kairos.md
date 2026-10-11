@@ -20,7 +20,7 @@ leaf       variety arrives here first
 
 ## What comes up
 
-Read the ladder first ([[philosophy/abstraction-ladder]]): variety absorbed at the lowest rung that can hold it, the rest escalated one rung with the semantics of an exception. This file is the top rung.
+Read the abstraction ladder first ([[philosophy/abstraction-ladder]]): variety absorbed at the lowest rung that can hold it, the rest escalated one rung with the semantics of an exception. This file is the top rung.
 
 Observation comes back up the belt. Not all of it should: what escalates is the variety that breaks expectation, so that feedback shows up in the level that can act on it. A fault no level catches reaches the engineer uncaught, with the chain of levels it crossed.
 
@@ -44,4 +44,4 @@ The abstraction ladder ([[philosophy/abstraction-ladder]]) is the discrete form 
 - Steps added on top of the loop to make the moment systematic: [[philosophy/kairos-gates]].
 - The discrete form of the gradient: [[philosophy/abstraction-ladder]].
 - The last guard against too loose: [[philosophy/kaizen]].
-- The rungs below, where decomposability rules: [[philosophy/context-economics]].
+- The abstraction ladder's lower rungs, where decomposability rules: [[philosophy/context-economics]].
