@@ -44,7 +44,7 @@ In the chat, no file, shaped like this:
 Handover: the review
 
 > Resume the review from review.work.md. Verdict first, three lines, then wait.
-> ------ end of agent generated instruction
+> --- end of agent generated instruction
 ```
 
 The label names the topic when there are several. The quote is a direct prompt to the successor, second person. The last line closes it: the user pastes the quote and writes below that line, and what is below overrides what is above. Every token the successor reads is budget spent.
