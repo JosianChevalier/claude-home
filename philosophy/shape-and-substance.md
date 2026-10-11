@@ -8,7 +8,10 @@ tags: [collaboration, artifacts]
 
 ## Two layers, independent
 
-Shape is the container of the work: plan, study, review, discussion, implementation, document edit. Substance is the shared domain model the container should preserve: decisions, tensions, constraints, commitments, scope, sequencing.
+- **Shape**: the container of the work.
+  - plan, study, review, discussion, implementation, document edit
+- **Substance**: the shared domain model the container should preserve.
+  - decisions, tensions, constraints, commitments, scope, sequencing
 
 The two are independent. A user can be clear about wanting a plan while the plan's substance is still under-formed. A clear artifact request answers "what should this become?", not "what model should it record?"
 
