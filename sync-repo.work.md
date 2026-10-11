@@ -88,15 +88,29 @@ The same core must serve both Claude Code and OpenCode.
   - Know-how — the rest of the file, after the doctrine, sectioned when useful. Procedures, heuristics, checklists, knowledge: no fixed header, not always a procedure.
 - Doctrine is what must always be true, the intent; know-how is what works in 80% of cases. The limit of applicability must be understandable from the file. Doctrine is the fallback that guides the agent when the mechanical approach does not fit. This principle must be written down somewhere in the repo (philosophy).
 
-**Philosophy file, migration flow (2026-10-11):**
+**Philosophy file, migration flow (2026-10-12):**
 
-- Before any artifact: read the harness-improvement rationales, in full: `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`. The inspection is against them.
-- Walk at the conceptual level, no text. Open on the issues where the layer drifted since; the backlinks are checked silently, a broken promise is one of the issues. Then one issue per turn, decided in conversation, as a short list.
-- Mechanical changes silent: folder, frontmatter, link form, backlog removal, mapping row.
-- Two commits per file. First substance: mechanical plus the decisions. Second shape, chosen for the least extraneous load on the reader (rules/writing.md); usually title without "Rationale:", Thesis line, Related, paragraphs that breathe. The diffs separate substance from shape.
-- The file holds what its backlinks promise.
-- Another session may hold uncommitted edits; stage only the files you changed.
-- Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
+The reader came from `/clear` and has opened nothing. A message is written from what they hold: this conversation, and nothing read through a tool. A word met in a file this session does not go into a message unless the message quotes it or gives its meaning in the same sentence. Fifteen sessions failed on this point alone; the rest of the flow below exists to make it hold.
+
+Before the first message, silent: read in full `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`; then the old file and every file pointing at it. The file must hold what the files pointing at it say it holds; a gap there is an issue like any other.
+
+The opening turn, in this order and nothing else:
+
+1. The file, in one line of ordinary words: what question it answers, which skills or rules lean on it.
+2. How many issues, each named in plain words on one line.
+3. The first issue: the old sentence quoted whole, the sentence it now contradicts quoted whole with its file named, the proposed change in edit marks.
+
+Before the opening goes out, a cold read: a sub-agent, no tools, the message verbatim, asked what it understood and which terms it has no referent for. Each such term is rewritten or given its meaning. The opening goes out only once the cold reader can say what the file is and what is being decided.
+
+Each following turn is one issue, in the shape of point 3. The decision just taken is restated in one line first. A rival reading goes on the table as a second reading, never written in.
+
+Silent in the conversation, recorded in the commit message: folder, frontmatter, link form, backlog removal, mapping row.
+
+Two commits per file. First substance: the mechanical moves and the decisions. Second shape, for the least load on the reader (rules/writing.md): title without "Rationale:", Thesis line, Related, paragraphs that breathe. The diffs separate substance from shape.
+
+Another session may hold uncommitted edits; stage only the files you changed.
+
+Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
 
 **Vocabulary, migration and review alike:**
 
