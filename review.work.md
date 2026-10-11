@@ -36,6 +36,10 @@ Harness cluster
 
 ## To check later
 
+- The How's remaining "never" lines keep the wrong strings in front of every session: each becomes its positive form, the rule stating what is said, not what is avoided.
+
+- Figures in the already reviewed files: each stays for what it saves the reader (rules/writing.md), or goes.
+
 - attractors Related, "Pointer over copy in a handover", points to conversation-continuity, which no longer says it; the skill does. Re-point or drop.
 
 - `skills/ongoing-work` points to process-units for anchoring, which now lives in session-state-in-documents; `sync-repo.work.md` line 26 says the same stale thing (and still says session-design).
