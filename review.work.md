@@ -22,7 +22,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- kaizen
 - three-layer-harness
 - abstraction-ladder
 - harness-shape
