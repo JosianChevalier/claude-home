@@ -35,6 +35,6 @@ Explicit, versioned, controlled: no memory files.
 Skill descriptions: front-load the literal trigger; workflow and guardrails live in the body.
 
 Precision decays with context; past 100k tokens output is untrustworthy. Protect both contexts: yours and the user's. Explore in the smallest useful circle, widen only when the current circle cannot answer the next decision, and use sub-agents as scouts for wider checks; they report only what is worth reading directly.
-Rationale: [[philosophy/context-economics]]
+Rationale: [[philosophy/context-economics]], [[philosophy/context-splitting]]
 
 `philosophy/` files and `Rationale: [[philosophy/...]]` refs serve harness improvement only.
