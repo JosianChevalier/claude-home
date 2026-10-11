@@ -20,11 +20,17 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
       - [ ] `model-expressions` moved 2026-10-11, iterating. Done: the appendix cut to the spork, tension pointed at `model-phenomenology` (first use, in the caveat). The example kept whole (the loss per medium needs showing). The caveat says compensation locally, a trade-off; the general line is in the root-cause item below. The spork (from the session "philosophy files in context" of 2026-10-10) moved out 2026-10-11 to `model-phenomenology`, section "Rivalry and the spork": rivalry named there (the type projects more than one fitting concept; goes up to the holder of the horizon), silent choice and the spork as the two ways of settling below; the misfit sentence and the detector dropped, both expressions' vocabulary. Shape pass done 2026-10-11.
       - DDD cluster, `ddd` tag on each: `model-phenomenology` (what a model is), `model-expressions` (where it exists), `aggregates` (its consistency boundary); `rules/design-first` hangs off them in 3.3. A later file on what a model is, if any, points at `model-phenomenology`.
-      - Next: `aggregates`, then the rest.
+      - [ ] `aggregates`: `old-claude/rationale/aggregates.md` → `philosophy/aggregates.md`, `ddd` tag, the model's consistency boundary; one backlink, from `model-expressions`. **← next**
+        - Issues opened 2026-10-11, none decided yet, walked one per turn as a short list in plain words:
+          1. The three ways of making a business rule hold (types make the bad state unwritable; writes ordered so no half-done state is readable; one transaction) are a numbered list in both the old rationale and the old skill `invariant-enforcement`, and neither says why that order. On the table: the rationale keeps the three with the reason for the order (held by construction, then by write discipline, then by the database hiding the gap); the steps stay in the skill only.
+          2. "Compensation" there means a descent down the three ways without naming the grammar that forces it. The root-cause item below says the opposite: compensation named as such is the legitimate case. Align: the unnamed descent is the fault, by another name.
+          3. Vocabulary: a rule is named from the file (`always-valid-domain`); no tie to `model-phenomenology` though the invariants are stated by the holder of the horizon; the section heading coined by the old file says what the section holds instead.
+      - Then the rest of the backlog, fewest outgoing links first.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
+    - [ ] `attractors`, definition: an attractor is a term in the weights, shared knowledge, pulling the same for every reader. What is written in a file or said earlier in a session is not one: it pulls the agent that read it and nobody else, and the file names that as the hazard. One paragraph, under Load the expertise; decided 2026-10-11, text not yet agreed.
     - [ ] Root cause versus compensation needs a philosophy file: CLAUDE.md asks "root cause, or compensation?" and `attractors` (Reorient before compensating) states it, neither has a home to point at. Compensation is legitimate when the root cause is out of reach, no ownership (a grammar, a neighbouring system) or not yet treated: local, a trade-off said as such, never spreading; medication for the symptom. First said locally in `model-expressions`' caveat.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
@@ -85,7 +91,7 @@ The same core must serve both Claude Code and OpenCode.
 **Philosophy file, migration flow (2026-10-11):**
 
 - Before any artifact: read the harness-improvement rationales, in full: `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`. The inspection is against them.
-- Walk at the conceptual level, no text. Open: what the old file is about, what the backlinks promise of it, the issues where the layer drifted since. Then one issue per turn, decided in conversation.
+- Walk at the conceptual level, no text. Open on the issues where the layer drifted since; the backlinks are checked silently, a broken promise is one of the issues. Then one issue per turn, decided in conversation, as a short list.
 - Mechanical changes silent: folder, frontmatter, link form, backlog removal, mapping row.
 - Two commits per file. First substance: mechanical plus the decisions. Second shape, chosen for the least extraneous load on the reader (rules/writing.md); usually title without "Rationale:", Thesis line, Related, paragraphs that breathe. The diffs separate substance from shape.
 - The file holds what its backlinks promise.
@@ -102,6 +108,8 @@ The same core must serve both Claude Code and OpenCode.
 - A file born here has no old counterpart: say where in old-claude its material came from.
 - Em-dashes stay: the old punctuation is kept. The no-em-dash rule is for artifacts sent outside (posts, PDFs), not harness files.
 - A wikilink to a file still in the backlog is not a hazard.
+- A section heading says what the section holds, in plain words; a label coined by the old file goes.
+- In conversation, plain words: a thing is said, a term beside it at most, never instead of it.
 - The well (local reading, shallow basin for the veteran) is Juarrero's landscape seen from the engineer's side; defined in model-phenomenology.
 
 **Order:**

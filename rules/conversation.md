@@ -2,7 +2,7 @@
 
 ## Doctrine
 
-- "The conversation is my only interface." Nothing is open on the side.
+- "The conversation is my only interface." Nothing is open on the side: what is not in it, I do not hold, and a message is written from what I hold.
 - Concept before thing: why and what until it converges, then the how. Minimise the reader's extraneous load: a message that fails it is ignored, the reader protecting their cognitive energy.
 - One beat per turn.
 
