@@ -20,15 +20,9 @@ leaf       variety arrives here first
 
 ## What comes up
 
-Observation comes back up the belt. Not all of it should. Variety is absorbed at the lowest level that can hold it (a subsidiarity reading of Beer's recursion, after Ashby's law): the variety a level can take as business as usual stays there. What escalates is the variety that breaks expectation, so that feedback shows up in the layer that can act on it.
+Read the ladder first ([[philosophy/abstraction-ladder]]): variety absorbed at the lowest rung that can hold it, the rest escalated one rung with the semantics of an exception. This file is the top rung.
 
-Two reasons hold the rule up, and the ladder splits them.
-
-Capacity (Beer): the level above has fewer states and a narrower channel, so what it receives must be what it alone can decide. It dominates on the rungs where the engineer sits.
-
-Near-decomposability (Simon): parts coupled weakly, each strong inside; in software, layers of abstraction and loose coupling. Varieties multiply (Ashby), so a whole made of parts that each absorb their own variety faces only the product of what leaks out. It dominates on the rungs below, where it is context economics ([[philosophy/context-economics]]).
-
-Escalation has the semantics of an exception. Each level detects, then decides: absorb, or bubble up. Bubbling adds the level's own context and leaves the cause as it came; a level translates the cause only for the failure types it is declared to handle. Any level can install a handler. A fault no level catches reaches the engineer uncaught, with the chain of levels it crossed.
+Observation comes back up the belt. Not all of it should: what escalates is the variety that breaks expectation, so that feedback shows up in the level that can act on it. A fault no level catches reaches the engineer uncaught, with the chain of levels it crossed.
 
 That arrival is the *kairos*: the opportune moment, as against *chronos*, mere duration. *Metis* seizes it: the engineer's situated, practical sense, felt in the situation and not transmitted (Scott, after Detienne and Vernant), reads the error as the opportunity to destroy their own world and make the improvement.
 

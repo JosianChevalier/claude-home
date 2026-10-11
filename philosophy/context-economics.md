@@ -36,7 +36,7 @@ Each one exists to keep something *out* of some window. Three attack the size of
 
 ### What loads is divided across contexts
 
-**Sub-agents.** Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions. This is near-decomposability (Simon): each node absorbs its own variety, and the orchestrator faces only what leaks out ([[philosophy/metis-kairos]]).
+**Sub-agents.** Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions. This is near-decomposability (Simon): each node absorbs its own variety, and the orchestrator faces only what leaks out ([[philosophy/abstraction-ladder]]).
 
 **Context splitting.** When one context is too much, it is cut along two axes, space and time, and a cut on one axis opens the way on the other: [[philosophy/context-splitting]].
 

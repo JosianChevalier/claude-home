@@ -40,7 +40,7 @@ Two limits, of different kinds.
 - *Indivisibility.* A limit of the material: no seam left. If you cannot split, change axis and state what you see on that one. If you still cannot, you have probably reached the bottom. Nothing moves this limit.
 - *Cost.* A limit of the economics: a seam exists but cutting it does not pay. Each cut costs a handover and a coordination step; stop where the gain no longer justifies the overhead. Everything moves this limit: reuse, a cheaper handover, a deterministic net in place of a review step, a larger window.
 
-The gap between the two is Wardley's evolution axis. A workflow starts at genesis, one context, the human in the loop; a low-level workflow that runs often is a candidate for commodification, and there the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; a one-off workflow does not earn it.
+The gap between the two is the path down, genesis to commodity ([[philosophy/harness-direction]], read first). The head of the Pareto distribution, the low-level workflow that runs often, is where the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; the fat tail of one-off work does not earn it and stays at genesis, one context, the human in the loop.
 
 | Stage | Cuts | Stops at | Control flow |
 |---|---|---|---|
@@ -48,10 +48,10 @@ The gap between the two is Wardley's evolution axis. A workflow starts at genesi
 | Custom-built | some, where cheap | cost | orchestrating agent |
 | Commodity | all the way down | indivisibility | script |
 
-**Escalation.** The commodity end. When orchestration itself becomes too complex for an agent to hold, the intermediate steps move to code: a script that calls agents headless and owns the control flow. It is deterministic where an orchestrating agent decides ([[philosophy/compounding-decisions]]).
+**Escalation.** The commodity end of the path ([[philosophy/harness-direction]]), seen from the cuts: when orchestration itself becomes too complex for an agent to hold, the intermediate steps move to code, a script that calls agents headless and owns the control flow. It is deterministic where an orchestrating agent decides ([[philosophy/compounding-decisions]]).
 
 ## Related
 
 - Why context is scarce: [[philosophy/context-economics]].
 - The handover file between temporal steps: [[philosophy/session-state-in-documents]].
-- One hat per context, as session design: [[philosophy/session-design]].
+- The process units a cut produces, dispatch and leaf: [[philosophy/session-design]].

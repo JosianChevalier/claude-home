@@ -13,11 +13,13 @@ Process is a containment tree. Each node has an orchestrator, and the kind of un
 | **Workflow** | an orchestrator, human or agent, following a codified plan | ordered | workflows, leaves |
 | **Leaf**: script or sub-agent | nobody: a step with no orchestration of its own | ordered | nothing |
 
+The Cynefin column names the domain the orchestrator works in, not where variety arrives: complexity arrives at the leaf and is decided on at the session.
+
 These are process units of the sociotechnical system, engineer plus harness. They are not harness elements: an agent, a sub-agent, an orchestrator, script or agent, is what materializes one of them ([[philosophy/harness-elements]]). The same materialization serves two units, and the way it is called tells them apart: a sub-agent is a dispatch when a session calls it live, a leaf when a workflow calls it headless.
 
 "Workflow" is used in the sense of Anthropic's split: LLMs and tools orchestrated through predefined code paths, as opposed to agents that direct their own process. The dispatch is that agent side, bounded to one delegated task.
 
-**Variety is absorbed at the lowest node that can take it**, and escalates one level up when it exceeds that node's codification: a leaf to its workflow, a workflow to the dispatch or session that called it, a dispatch to the human. The process tree and the three layers ([[philosophy/three-layer-harness]]) have the same shape, the abstraction ladder ([[philosophy/abstraction-ladder]]): only variety absorbs variety (Beer, after Ashby), applied to time instead of knowledge. What reaches the human is the kairos ([[philosophy/metis-kairos]]). Where the boundary between human and codified sits is not fixed: it sits where the gain stops justifying the overhead, and moving it down, the commodification of the work below it, is the harness's direction ([[philosophy/harness-direction]]).
+**Variety is absorbed at the lowest node that can take it.** The process tree is one sighting of the abstraction ladder; read it first ([[philosophy/abstraction-ladder]]). What is specific here is the chain: a leaf escalates to its workflow, a workflow to the dispatch or session that called it, a dispatch to the human, and what reaches the human is the kairos ([[philosophy/metis-kairos]]). The process tree and the three layers ([[philosophy/three-layer-harness]]) are two rung-sets of the same ladder. Where the boundary between human and codified sits is not fixed: it sits at the cost limit ([[philosophy/context-splitting]], where to stop), and moving it down is the harness's direction ([[philosophy/harness-direction]]).
 
 **The dispatch is the probe.** It fits no reusable workflow, or runs where none exists yet. A dispatch that recurs is a workflow waiting to be codified; the meta-learning it brings back is the signal.
 
@@ -25,6 +27,4 @@ These are process units of the sociotechnical system, engineer plus harness. The
 
 Handovers are the communication layer between sessions ([[philosophy/conversation-continuity]]).
 
-## The session is anchored in a working document
-
-By default a conversation is trashable: what exists only in it is state already decided to be lost ([[philosophy/session-state-in-documents]]). So, unless explicitly not required, a session gets anchored in a working document: an existing study or plan, or something else, committed or not, or in `/tmp`, depending on the nature of the work and above all on its longevity. Some sessions do not need one: a conversation that drifts a bit. When it drifts too much, it is worth asking whether to anchor it. Conversation, working document, repo is the ladder again, ordered by longevity: what survives the conversation reaches the document, what survives the document is committed ([[philosophy/abstraction-ladder]]).
+A session is anchored in a working document, and conversation, document, repo are three stores ordered by inertia ([[philosophy/session-state-in-documents]]).

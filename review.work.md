@@ -25,7 +25,8 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- session-design (claimed; its mapping sentence stays as is: the full element→unit mapping lives in harness-elements)
+- Cluster pass done: the ladder is the single home for absorption, escalation, Simon/Beer, Brand; children read it first and keep their specific application. Path down: harness-direction. Persistence stores: session-state-in-documents, ordered by inertia, not a ladder sighting.
+- session-design (claimed; its mapping sentence stays as is: the full element→unit mapping lives in harness-elements). Its one job is the process-unit vocabulary; the rest is pointers now. Open: whether the name follows the content; title, Thesis line.
 - session-state-in-documents
 - conversation-continuity
 - conversation-as-interface

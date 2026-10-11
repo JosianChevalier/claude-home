@@ -12,6 +12,8 @@ tags: [harness-design, kaizen, variety-absorption]
 | **2. Doctrine** | what must always be true: the intent | `## Doctrine` in rules and skills; `CLAUDE.md` | execution | at kaizen only |
 | **1. Know-how** | what worked: the head of the distribution | the body of rules and skills, after the doctrine | execution | during execution |
 
+The three are one rung-set of the abstraction ladder; read it first ([[philosophy/abstraction-ladder]]). What follows is what is specific to these rungs.
+
 Doctrine is fixed during execution, and it is the test for leaving the know-how: the agent departs from a step because the doctrine still holds. Snowden says the same of rules: they do not create order, they codify what worked, and what worked is Pareto-distributed: a head of usual cases, a fat tail of exceptions where one improvises within principles. Lakatos's research programmes have the same structure: a hard core never targeted from inside, and a protective belt that absorbs the anomalies.
 
 ```
@@ -31,7 +33,7 @@ Two seams. Between the philosophy and the two below, inertia: the lifecycles dif
 
 **Layer 1, know-how: low inertia.** It moves fast: each session that goes wrong feeds it, each model change reshapes it. Tuning it is Cynefin's complex domain: probe, sense, respond; act, watch the agent, adjust, again.
 
-It is the least portable layer, coupled to the project and the team. Its role is to absorb variation where it happens: only variety absorbs variety (Beer, after Ashby), at the lowest level that can hold it.
+It is the least portable layer, coupled to the project and the team. Its role is the bottom rung's: absorb variation where it happens.
 
 **Layer 2, doctrine: the know-how's lifecycle, a wider coverage.** The know-how is the head of the distribution, commodified into steps; the doctrine is the blanket rule that holds in the fat tail, where the steps stop applying. It is updated when a failure goes beyond what the know-how could absorb, and that happens.
 
@@ -43,9 +45,7 @@ It also has uses beyond the harness: a reflection base, notes, material to produ
 
 ## Two directions
 
-Upward, as feedback: the know-how absorbs the variation; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it.
-
-The layers are one rung-set of the abstraction ladder ([[philosophy/abstraction-ladder]]), with pace layering (Brand) as the foundation: fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive; change shears between layers.
+Upward, as feedback: the know-how absorbs the variation; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it. Pace layering (Brand) holds here as on every rung of the ladder.
 
 Our own metaphor for the three: the know-how is the shock absorber, the doctrine the steering, the philosophy the navigation. A bump never changes the destination; a new destination changes the steering and what the suspension meets.
 

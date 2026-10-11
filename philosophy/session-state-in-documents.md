@@ -20,6 +20,12 @@ The quality check: *if this session dies right now, what is lost?* If the answer
 
 Plans and studies are not final or permanent by default. They are working artifacts: temporary state containers that survive the session while the task is alive. They can be skeletal, partial, and still useful; the point is that the next agent can resume from the current shared model instead of reconstructing it from chat.
 
+## The session is anchored in a working document
+
+Unless explicitly not required, a session gets anchored in a working document: an existing study or plan, or something else, committed or not, or in `/tmp`, depending on the nature of the work and above all on its longevity. Some sessions do not need one: a conversation that drifts a bit. When it drifts too much, it is worth asking whether to anchor it.
+
+Conversation, working document, repo: three stores ordered by inertia ([[philosophy/change-inertia]]). What survives the conversation reaches the document; what survives the document is committed.
+
 ## Save at hand-back, not at stage end
 
 Checkboxes don't capture everything. The state must be written explicitly **every time control returns to the user**: each such moment is a potential session boundary. What the state contains: decisions, findings, open threads, the real next step.
@@ -48,6 +54,7 @@ A finished work file left in the repo is a pink elephant. A fresh context takes 
 
 ## Related
 
-- [[philosophy/session-design]]: the session is anchored in a working document; conversation, document, repo as the longevity ladder.
+- [[philosophy/session-design]]: the process units; the session is the one where a human is required.
+- [[philosophy/change-inertia]]: why the three stores are cut where they are.
 - [[philosophy/conversation-continuity]]: what crosses a session boundary and what must not.
 - [[philosophy/context-economics]]: one canonical home per fact.
