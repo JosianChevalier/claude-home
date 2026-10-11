@@ -4,7 +4,10 @@ tags: [collaboration, artifacts]
 
 # Shape and substance
 
-**Thesis.** The belt test, applied to a document. An artifact request settles its shape, the container; its substance, the shared model the container must preserve, is still forming in conversation. Shape is the medium: inferred. Substance is the concept: synchronized before the first write, on the one question that could change scope, sequence, lens, or a commitment.
+**Thesis.** The belt test, applied to a document. An artifact request settles the shape; the substance is still forming in conversation.
+
+- **Shape**, the container: the medium. Inferred.
+- **Substance**, the shared model the container must preserve: the concept. Synchronized before the first write, on the one question that could change scope, sequence, lens, or a commitment.
 
 ## Two layers, independent
 
