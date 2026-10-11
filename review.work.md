@@ -24,6 +24,8 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - What arrives at the engineer is the Observe; the kairos is the moment it opens; metis seizes it. Never "what reaches the human is the kairos".
 - Abstraction layering is the pattern; a sighting is a ladder, an instance of it. Never "rung-set", never "the same ladder".
 - Skills and layers 1-2 are self-sufficient projections of philosophy for one case; the executing agent never reads philosophy. They duplicate whatever is relevant: never a hazard.
+- Philosophy carries the concept and the essence of a rule; mechanics, forms and exhaustive lists of what not to do are the skill's.
+- A file that looks inflated for its topic: list every idea one line each, group by the claim each serves, rewrite from the groups. Deliver the tight text, never a wall with an offer to tighten.
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
@@ -34,6 +36,8 @@ Harness cluster
 - conversation-as-interface: its four-row store table becomes a pointer to session-state-in-documents, the home of the four stores; the notebook paragraph stays.
 
 ## To check later
+
+- attractors Related, "Pointer over copy in a handover", points to conversation-continuity, which no longer says it; the skill does. Re-point or drop.
 
 - `skills/ongoing-work` points to process-units for anchoring, which now lives in session-state-in-documents; `sync-repo.work.md` line 26 says the same stale thing (and still says session-design).
 
