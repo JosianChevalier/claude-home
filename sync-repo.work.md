@@ -16,10 +16,11 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
   - [ ] 3.2 Philosophy. **← current**
     - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
-    - [ ] Backlog `old-claude/rationale/`. Dangling wikilinks waiting for a file: `attractors`, `compounding-decisions`, `model-expressions`, `shape-and-substance`, `type-and-concept`, `workflow-rhythm`.
+    - [ ] Backlog `old-claude/rationale/`. Dangling wikilinks waiting for a file: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `type-and-concept`, `workflow-rhythm`.
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
+    - [ ] Root cause versus compensation needs a philosophy file: CLAUDE.md asks "root cause, or compensation?" and `attractors` (Reorient before compensating) states it, neither has a home to point at.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
     - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
@@ -141,5 +142,6 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | contract and kaizen sections → `kaizen` or dropped; edge of chaos dropped, returns elsewhere (3.2) |
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
 | `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
+| `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
 | — | `philosophy/kaizen.md`, `conversation-continuity.md`, `session-design.md`, `harness-direction.md`, `metis-kairos.md`, `abstraction-ladder.md`, `change-inertia.md` | new, no old counterpart |
