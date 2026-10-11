@@ -45,7 +45,7 @@ It also has uses beyond the harness: a reflection base, notes, material to produ
 
 ## Two directions
 
-Upward, as feedback: the know-how absorbs the variation; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it. Pace layering (Brand) holds here as on every rung of the ladder.
+Upward, as feedback: the know-how absorbs the variety; whatever survives the absorption is what reaches the philosophy. Downward, as consequence: a change in a layer trickles down into every layer below it. Pace layering (Brand) holds here as on every rung of the ladder.
 
 Our own metaphor for the three: the know-how is the shock absorber, the doctrine the steering, the philosophy the navigation. A bump never changes the destination; a new destination changes the steering and what the suspension meets.
 
