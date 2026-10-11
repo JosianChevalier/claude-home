@@ -38,14 +38,4 @@ Harness cluster
 
 - The How's remaining "never" lines keep the wrong strings in front of every session: each becomes its positive form, the rule stating what is said, not what is avoided.
 
-- Figures in the already reviewed files: each stays for what it saves the reader (rules/writing.md), or goes.
-
-- attractors Related, "Pointer over copy in a handover", points to conversation-continuity, which no longer says it; the skill does. Re-point or drop.
-
-- `skills/ongoing-work` points to process-units for anchoring, which now lives in session-state-in-documents; `sync-repo.work.md` line 26 says the same stale thing (and still says session-design).
-
-- kaizen's Doctrine section (rules tied to rationales, drift guard): doctrine does not live in philosophy; needs a layer-2 home, likely the harness-improvement skill.
-
-- Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt): re-point to context-splitting at the end.
-
 - Readability kaizen on the philosophy files, for the least extraneous load on the reader; model-tiers/kairos-gates as examples (Thesis line, bullets, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
