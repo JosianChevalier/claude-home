@@ -43,8 +43,21 @@ The **type-to-concept transition** is therefore the central act of development. 
 
 Two failure modes, mirror images:
 
-- **The veteran**: fluent reader, spork writer. A type emitted through whichever local concept each spot suggests, none chosen ([[philosophy/model-expressions]]). That is a big ball of mud.
+- **The veteran**: fluent reader, spork writer. A type emitted through whichever local concept each spot suggests, none chosen (below). That is a big ball of mud.
 - **The recruit**: a concept with no type to revise it against — stuck at the bottom of one well.
+
+## Rivalry and the spork
+
+A type projects more than one concept that fits. Two predications of "product", both complete, both consistent; the code cannot tell them apart, because telling them apart needs the horizon, and only the type has one. This is **rivalry**, and it is the normal case of the transition, not an accident: a type with a horizon has no favoured concept.
+
+What to do with a rivalry is already said elsewhere: it goes up to the holder of the horizon. A rival reading is offered at a gate ([[philosophy/kairos-gates]]); an unchosen concept returns up the belt ([[philosophy/transmission-belt]]). Model tension is the same arrival felt from the code side, and the gate that catches it after a model change is in the same file.
+
+Two ways of settling it below instead, and both report success:
+
+- **Silent choice** — one reading picked, the engineer discovers late that the direction was decided below ([[philosophy/collaborative-production]]). A concept came out, at least.
+- **The spork** — none picked. Two complete readings of one concept fit, and instead of two contexts with a translation at the seam, one artifact is made to hold both: the union of their state, the intersection of their behaviour, which is nearly empty. What remains is get, set, save. The lens-switching a type does without effort is pushed into the artifact, which cannot do it, so each use site does it instead: the translation inlined everywhere, each use paying the dispatch, never located in one anti-corruption layer.
+
+The spork is not the god object: that one fails on cohesion and splits into differently named things; the spork fails on context and splits into two things with the same name. The veteran writes it fluently: the basins hopped without noticing, emitted as code.
 
 ## What the agent holds: sedimented culture
 
@@ -61,5 +74,5 @@ The agent's own failure mode follows: the veteran's, at scale — it resolves ri
 - What kind of transmission runs across the seam: [[philosophy/transmission-belt]].
 - What the type seizes when the concept resists: [[philosophy/metis-kairos]].
 - Where supply without adjudication is put to work: [[philosophy/kairos-gates]].
-- The tests that come after the feeling, and the spork: [[philosophy/model-expressions]].
+- The tests that come after the feeling: [[philosophy/model-expressions]].
 - The seam seen from the workflow side: [[philosophy/collaborative-production]].

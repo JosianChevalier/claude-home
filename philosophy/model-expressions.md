@@ -38,14 +38,6 @@ Note the fit: the static rules and the dynamic tests check the same thing at dif
 - **Impedance mismatch** — expressions that no longer preserve the homomorphism get patched with heavy translation layers while the business capability itself diverges.
 - **Confusion** — treating one expression as a bounded context (or a context as one expression) generates model tensions that erode conceptual integrity.
 
-## The spork
-
-A model trying to be a type. Two complete readings of one concept fit (a rivalry), and instead of two contexts with a translation at the seam, one artifact is made to hold both: the union of their state, the intersection of their behaviour, which is nearly empty. What remains is get, set, save. The lens-switching a type does without effort is pushed into the artifact, which cannot do it, so each use site does it instead: the translation inlined everywhere, each use paying the dispatch, never located in one anti-corruption layer.
-
-It is the misfit remedy applied to a rivalry. It is not the god object: that one fails on cohesion and splits into differently named things; the spork fails on context and splits into two things with the same name. The detector is the unification criterion turned around: one operation that needs fields from both readings at once, or none.
-
-The veteran writes it fluently, the agent at scale ([[philosophy/model-phenomenology]], [[philosophy/transmission-belt]]).
-
 ## Example: one invariant, five expressions
 
 Invariant: *an order is picked up in store (no address) or delivered (exactly one address); the choice freezes once payment starts.*

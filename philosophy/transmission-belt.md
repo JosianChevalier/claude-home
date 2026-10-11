@@ -70,7 +70,7 @@ The harness is not the agent's intelligence. It is the entire development proces
 None of this is a rule; it is what a rule would be for.
 
 - **The conversation is where the belt runs.** The type is predicated into a concept in the exchange; the artifact records the current state of that predication ([[philosophy/collaborative-production]]). The engineer's intention is carried, not improved: a better idea from the library is a rival reading offered at a gate, never a substitution made in the code.
-- **Translation is located, not diffused.** Diffusion, the spork ([[philosophy/model-expressions]]), is the one failure the belt image predicts most directly: the agent's fluency makes it cheap to produce and invisible to the producer.
+- **Translation is located, not diffused.** Diffusion, the spork ([[philosophy/model-phenomenology]]), is the one failure the belt image predicts most directly: the agent's fluency makes it cheap to produce and invisible to the producer.
 - **When the type is silent, the choice returns up the belt.** If the engineer has not chosen among rival concepts, the choice is not made below.
 - **Scale of change is a load signal.** Compliance is what lets a load spike register instead of transmit: a large, multi-concern change is where slip should show, as visible implication rather than accomplished fact.
 - **Everything shown is shown so that metis can work on it.** Cartography ([[philosophy/zoom-levels]]), attention budget ([[philosophy/context-economics]]) and attractors ([[philosophy/attractors]]) govern how; the belt governs why.

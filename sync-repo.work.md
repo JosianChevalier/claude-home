@@ -18,7 +18,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
-      - [ ] `model-expressions` moved 2026-10-11, iterating. Done: the appendix cut to the spork, tension pointed at `model-phenomenology` (first use, in the caveat). The example kept whole (the loss per medium needs showing). The caveat says compensation locally, a trade-off; the general line is in the root-cause item below. The spork: own section after Pathologies, qualitatively different (a model trying to be a type: union of state, intersection of behaviour; misfit remedy on a rivalry; not the god object; the detector), from the session "philosophy files in context" of 2026-10-10. Substance committed; shape pass pending.
+      - [ ] `model-expressions` moved 2026-10-11, iterating. Done: the appendix cut to the spork, tension pointed at `model-phenomenology` (first use, in the caveat). The example kept whole (the loss per medium needs showing). The caveat says compensation locally, a trade-off; the general line is in the root-cause item below. The spork (from the session "philosophy files in context" of 2026-10-10) moved out 2026-10-11 to `model-phenomenology`, section "Rivalry and the spork": rivalry named there (the type projects more than one fitting concept; goes up to the holder of the horizon), silent choice and the spork as the two ways of settling below; the misfit sentence and the detector dropped, both expressions' vocabulary. Shape pass pending.
       - DDD cluster, `ddd` tag on each: `model-phenomenology` (what a model is), `model-expressions` (where it exists), `aggregates` (its consistency boundary); `rules/design-first` hangs off them in 3.3. A later file on what a model is, if any, points at `model-phenomenology`.
       - Next: `model-expressions` shape pass, then `aggregates`, then the rest.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
@@ -30,6 +30,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
     - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
   - [ ] 3.4 Skills.
+    - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
     - [ ] `harness-improvement`: re-enter the ref-form contract and "load the rationale before diagnosing"; it still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
@@ -170,7 +171,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
 | `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
 | `rationale/type-and-concept.md` | `philosophy/model-phenomenology.md` | renamed 2026-10-11 (the phenomenology of the model, DDD cluster), `ddd` tag; supplies-never-adjudicates paragraph born here (promised by kairos-gates); the well defined (shallow basins, unaware transition); "coding language" → "vocabulary" |
-| `rationale/model-expressions.md` | `philosophy/model-expressions.md` | moved as is 2026-10-11, iterated in conversation |
+| `rationale/model-expressions.md` | `philosophy/model-expressions.md` | moved as is 2026-10-11, iterated in conversation; spork section moved to `model-phenomenology` |
 | `rationale/shape-and-substance.md` | `philosophy/shape-and-substance.md` | lifecycle → pointer to `session-state-in-documents`; shape question put under the belt test; "reviewer of guessed commitments" named silent choice |
 | `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
