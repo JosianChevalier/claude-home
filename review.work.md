@@ -17,8 +17,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Posture cluster
 
-- context-economics
-- metis-kairos
+- context-economics: split into context-economics (why, techniques) + context-splitting (two axes, alternation, examples). Spatial/temporal files only if material appears. AOP/opencode section: cut, not deferred.
 - collaborative-production
 
 Harness cluster
