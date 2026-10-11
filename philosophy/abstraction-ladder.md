@@ -22,7 +22,7 @@ Each rung delegates cognitive load and context to the rung below, and takes back
 - **Trickle down.** A change made on a rung is a consequence for every rung below.
 - **Reliable bricks move down.** Once a rung absorbs variety as business as usual, that absorption can be codified into the rung below: commodification, one rung at a time ([[philosophy/harness-direction]]). Each step down is a change of absorber, not of the variety: the work is as variable as before; the lower rung now absorbs what used to climb.
 
-In a harness ladder the engineer sits on the top rung, and an uncaught arrival there is the kairos: it comes with the chain of rungs it crossed. What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
+In a harness ladder the engineer sits on the top rung, and an uncaught arrival there, with the chain of rungs it crossed, is what the engineer observes and orients on; the moment it opens is the kairos ([[philosophy/metis-kairos]]). What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
 
 ## Why absorb low
 
