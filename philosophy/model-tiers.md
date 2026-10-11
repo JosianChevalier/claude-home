@@ -70,6 +70,8 @@ One loop, four stages. Tier in brackets.
 2→3 removes a node that carried no decision once drift was ruled out.
 3→4 steps the same node down: its failure is now cheap because a Top pass catches it.
 
+The four stages are Wardley's evolution axis seen through tiers: genesis at 1, commodity at 4. A node that reaches commodity also drops a tier; the refined prompt and the net are what make the smaller model enough.
+
 ## Related
 
 - The process that recomposes the work: [[philosophy/harness-direction]].

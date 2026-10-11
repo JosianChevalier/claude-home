@@ -26,7 +26,7 @@ Each choice is first a loading decision ([[philosophy/context-economics]]) and s
 
 ## Deterministic what can and should be
 
-Prose asks; code guarantees. An instruction the agent "must always" follow, on something a script could check or do, is a decision left to a model that will eventually get it wrong. *Can* is not enough: a step that needs judgment stays with the agent. *Should* is the test: is a guarantee needed here.
+Prose asks; code guarantees. An instruction the agent "must always" follow, on something a script could check or do, is a decision left to a model that will eventually get it wrong. *Can* is not enough: a step that needs judgment stays with the agent. *Should* is the test: is a guarantee needed here, and does the step run often enough to pay for one. A guarantee is the commodity end of a step's path ([[philosophy/harness-direction]]).
 
 ## Usual misplacements
 

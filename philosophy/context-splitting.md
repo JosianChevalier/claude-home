@@ -40,7 +40,7 @@ Two limits, of different kinds.
 - *Indivisibility.* A limit of the material: no seam left. If you cannot split, change axis and state what you see on that one. If you still cannot, you have probably reached the bottom. Nothing moves this limit.
 - *Cost.* A limit of the economics: a seam exists but cutting it does not pay. Each cut costs a handover and a coordination step; stop where the gain no longer justifies the overhead. Everything moves this limit: reuse, a cheaper handover, a deterministic net in place of a review step, a larger window.
 
-The gap between the two is the evolution axis (Wardley). A low-level workflow that runs often is a candidate for commoditisation, and there the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; a one-off workflow does not earn it.
+The gap between the two is Wardley's evolution axis. A workflow starts at genesis, one context, the human in the loop; a low-level workflow that runs often is a candidate for commodification, and there the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; a one-off workflow does not earn it.
 
 | Stage | Cuts | Stops at | Control flow |
 |---|---|---|---|
