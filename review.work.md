@@ -12,6 +12,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 ## How
 
 - Per file, one turn: what changed vs old-claude-reference/rationale/<file>.md first (never the rationale→philosophy move nor the link format), verdict, hazards each with its snippet verbatim, the text verbatim, then wait. Next file only when told.
+- A hazard is one line and its snippet verbatim. When one needs a second explanation, the wording is the hazard: say what the words say.
 - No skill named or quoted from a philosophy file; an example stays anonymous (sentinel, not NOTHING_TO_REFACTOR).
 - Wardley terms as attractors where the path down appears: genesis, custom-built, commodity, commodification. Reference: context-splitting, Where to stop.
 - Another session may hold uncommitted edits in philosophy/; stage only the files you changed.
