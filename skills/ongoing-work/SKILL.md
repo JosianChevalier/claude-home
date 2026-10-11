@@ -11,6 +11,8 @@ description: Tracking ongoing work, anchoring conversation work in a file, looki
 - Saved at hand-back, distilled not appended. Every return of control to the user is a potential session boundary. The write keeps decisions, open threads, the real next step, and replaces stale detail.
 - The sweep is the truth. One key marks a work file and nothing else ever matches, so "what's next" is one script, not a search.
 - A finished work file is a pink elephant. A fresh context takes whatever it reads as a premise; stale work pollutes it. The file is deleted when the work ends. History is git's job.
+- A new session, topic or file: the reader holds nothing of the work but what this conversation has said. The first message on it says what we are on, in plain words, before anything else.
+- Only the text after the last tool call reaches the reader. What comes before is a progress note at most. Anything meant for the reader goes in the final message, whole, not as a recap; and the final message assumes nothing before it was read.
 
 ## Keys
 
@@ -38,10 +40,16 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 
 ## Saying the coming item
 
-From the current-step marker in the work file. A breadcrumb, one level per line, from the first level the reader lacks (the project if we are out of context) down to the item. The item is session-sized: a vague or large one is broken down and its first piece is the item. Clear at a glance where we are; never prose.
+From the current-step marker in the work file. A breadcrumb, one level per line, from the first level the reader lacks (the project if we are out of context) down to the item. Each level says what it is in a few plain words, not only its name: the reader has not read the work file. The item is session-sized: a vague or large one is broken down and its first piece is the item. Clear at a glance where we are; never prose.
 
-    Migration of the prototype into this repo
-    └ 3.2 philosophy backlog
-      └ next: `aggregates`, old rationale → philosophy/
+    Migration of the old `.claude/` into this repo, file by file
+    └ 3.2 philosophy backlog: old notes become `philosophy/` files after a review in conversation
+      └ next: `aggregates`, the note on what must be saved together in a model; three issues open
+
+## The test of the first message
+
+- The first message on anything new is read by someone who holds nothing: no file, no previous session, no line of what I read before writing.
+- If the user does not understand it on first reading, they hand it as is to another agent that cannot read any file. That agent must understand it immediately, with nothing but the message.
+- If it does not, the user spends their time fixing the harness instead of doing the actual work, all the agent's work is killed, and the session is trashed. Write every first message so this never has to be run.
 
 Rationale: [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/context-economics]]

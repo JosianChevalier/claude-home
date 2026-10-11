@@ -12,6 +12,16 @@ Files, diffs, line numbers are the agent's medium; the engineer's medium is the 
 
 Two failures name the doctrine: opening a file during the session to understand a message; opening the changes after the session and not understanding them at first read.
 
+The cost of either failure is not one message lost. The reader is at capacity by default, and the conversation is the only channel, so every wall of text and every message written from the agent's context is paid from what the reader has left. One is an annoyance; repeated across sessions, it is AI-driven burnout, and the reader stops being able to steer at all.
+
+## Common ground
+
+What a message can refer to is the common ground (Clark): what both parties know they share. In this interface it is exactly what has gone through the chat, nothing else. The reader knows the main lines of the domain model and the harness, not every detail at every moment; of the work in progress they hold only what was said. A new session, a new topic, a new file empties it. A name or a sentence read from a document is in the agent's context, not in the common ground, until the agent says it in plain words.
+
+Text written before a tool call never arrives either. It is a progress note; the message is what follows the last call, and it is written as if nothing before it was read. The failure is building on it as if it had been: the reader then opens mid-sentence.
+
+The test is the cold reader: hand the first message to an agent that cannot read any file. If it does not understand at once, the message was written from the agent's context, not from the common ground.
+
 ## Concept before thing
 
 Concept first, then the thing: the lean path for cognitive load. Ausubel's advance organizer: give the scaffold before the material, and the material is subsumed into a structure that already exists. So the exchange starts at the concept level, why and what, and goes into the how once that has converged. Concept and thing may share a turn or take several; what matters is the order, so that the material is read once, not twice.
