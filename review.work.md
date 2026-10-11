@@ -19,7 +19,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Posture cluster
 
-- context-economics: split into context-economics (why, techniques) + context-splitting (two axes, alternation, examples). Spatial/temporal files only if material appears. AOP/opencode section: cut, not deferred.
 - collaborative-production
 
 Harness cluster
@@ -37,6 +36,10 @@ Harness cluster
 - conversation-as-interface
 
 ## To check later
+
+- Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt, collaborative-production temporal axis): re-point to context-splitting at the end.
+
+- Wardley reading (genesis / custom / commodity → how far the cuts go, who holds control flow), now in context-splitting Where to stop: apply where it fits, harness-direction first.
 
 - Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Thesis line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
 
