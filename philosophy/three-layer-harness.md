@@ -33,7 +33,7 @@ Two seams. Between the philosophy and the two below, inertia: the lifecycles dif
 
 **Layer 1, know-how: low inertia.** It moves fast: each session that goes wrong feeds it, each model change reshapes it. Tuning it is Cynefin's complex domain: probe, sense, respond; act, watch the agent, adjust, again.
 
-It is the least portable layer, coupled to the project and the team. Its role is the bottom rung's: absorb variation where it happens.
+It is the least portable layer, coupled to the project and the team. Its role is the bottom rung's: absorb variety where it arrives.
 
 **Layer 2, doctrine: the know-how's lifecycle, a wider coverage.** The know-how is the head of the distribution, commodified into steps; the doctrine is the blanket rule that holds in the fat tail, where the steps stop applying. It is updated when a failure goes beyond what the know-how could absorb, and that happens.
 

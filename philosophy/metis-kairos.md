@@ -24,7 +24,7 @@ Read the ladder first ([[philosophy/abstraction-ladder]]): variety absorbed at t
 
 Observation comes back up the belt. Not all of it should: what escalates is the variety that breaks expectation, so that feedback shows up in the level that can act on it. A fault no level catches reaches the engineer uncaught, with the chain of levels it crossed.
 
-That arrival is the engineer's Observe, and what it opens is the *kairos*: the opportune moment, as against *chronos*, mere duration. *Metis* seizes it: the engineer's situated, practical sense, felt in the situation and not transmitted (Scott, after Detienne and Vernant), reads the error as the opportunity to destroy their own world and make the improvement.
+That arrival is the engineer's Observe, and what it opens is the *kairos*: the opportune moment. *Metis* seizes it: the engineer's situated, practical sense, felt in the situation and not transmitted (Scott, after Detienne and Vernant), reads the error as the opportunity to destroy their own world and make the improvement.
 
 The belt feeling its own strain belongs here too: "I am doing many things at once" is a signal to send up, so the engineer can decide whether the strain is the task's or the model's.
 
