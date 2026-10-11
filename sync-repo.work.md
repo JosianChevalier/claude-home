@@ -17,6 +17,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`. Dangling wikilinks waiting for a file: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
+      - Next: `shape-and-substance`, then `model-expressions`, then the rest. Finding on shape-and-substance: collaborative-production's backlink promises shape questions under the intrinsic/extraneous test; the old Consequences asks a shape question unconditionally.
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
@@ -88,6 +89,9 @@ The same core must serve both Claude Code and OpenCode.
 - A file born here has no old counterpart: say where in old-claude its material came from.
 - Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
 - Another session may hold uncommitted edits; stage only the files you changed.
+- Em-dashes stay: the old punctuation is kept. The no-em-dash rule is for artifacts sent outside (posts, PDFs), not harness files.
+- A wikilink to a file still in the backlog is not a hazard.
+- The well (local reading, shallow basin for the veteran) is Juarrero's landscape seen from the engineer's side; defined in type-and-concept.
 
 **Order:**
 
