@@ -18,12 +18,13 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
-      - Next: `model-expressions`, then the rest.
+      - [ ] `model-expressions` moved 2026-10-11, iterating. Done: the appendix cut to the spork, tension pointed at `model-phenomenology` (first use, in the caveat). The example kept whole (the loss per medium needs showing). The caveat says compensation locally, a trade-off; the general line is in the root-cause item below. The spork: own section after Pathologies, qualitatively different (a model trying to be a type: union of state, intersection of behaviour; misfit remedy on a rivalry; not the god object; the detector), from the session "philosophy files in context" of 2026-10-10. Substance committed; shape pass pending.
+      - Next: the rest.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
-    - [ ] Root cause versus compensation needs a philosophy file: CLAUDE.md asks "root cause, or compensation?" and `attractors` (Reorient before compensating) states it, neither has a home to point at.
+    - [ ] Root cause versus compensation needs a philosophy file: CLAUDE.md asks "root cause, or compensation?" and `attractors` (Reorient before compensating) states it, neither has a home to point at. Compensation is legitimate when the root cause is out of reach, no ownership (a grammar, a neighbouring system) or not yet treated: local, a trade-off said as such, never spreading; medication for the symptom. First said locally in `model-expressions`' caveat.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
     - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
@@ -168,6 +169,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
 | `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
 | `rationale/type-and-concept.md` | `philosophy/model-phenomenology.md` | renamed 2026-10-11 (the phenomenology of the model, DDD cluster), `ddd` tag; supplies-never-adjudicates paragraph born here (promised by kairos-gates); the well defined (shallow basins, unaware transition); "coding language" → "vocabulary" |
+| `rationale/model-expressions.md` | `philosophy/model-expressions.md` | moved as is 2026-10-11, iterated in conversation |
 | `rationale/shape-and-substance.md` | `philosophy/shape-and-substance.md` | lifecycle → pointer to `session-state-in-documents`; shape question put under the belt test; "reviewer of guessed commitments" named silent choice |
 | `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
