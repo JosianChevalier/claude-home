@@ -4,10 +4,10 @@ tags: [harness-design, kaizen]
 
 # Harness shape
 
-**Thesis.** A rule or skill is a doctrine, then know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the Pareto distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: [[philosophy/three-layer-harness]].
+**Thesis.** A rule or skill is a doctrine and know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the Pareto distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: [[philosophy/three-layer-harness]].
 
 ```
- ## Doctrine          what must always be true   a few attractors; holds in the fat tail
+ ## Doctrine          what must always be true   a few attractors; holds in the fat tail; at the top, or per section
  ## <know-how>…       what worked                the head, commodified; left on the doctrine's word
  Rationale: [[…]]     why                        lives in the rationale; only the pointer stays
 ```
@@ -23,11 +23,10 @@ Doctrine is what must always be true: the intent, the result wanted, the posture
 How it is written:
 
 - **Quoted or coined.** Both are doctrine.
-- **One header, `Doctrine`.** Whatever a file called it before, it becomes this one.
-- **Every rule and skill carries it.** The `Doctrine` header is the one fixed element of the shape.
+- **One name, `Doctrine`.** Whatever a file called it before, it becomes this one. It heads the file, or a section, when a section has doctrine of its own.
+- **Every rule and skill carries it.** The `Doctrine` header is the one fixed element of the shape; its place is not.
 - **Agents differ.** In an agent, and in `CLAUDE.md`, the doctrine is the posture and the objective, under their own names (`Postures`). A skill or rule is know-how with a little doctrine; an agent is doctrine with little know-how, the steps living in the skills it composes.
 - **Reasons stay in the rationale.** The file points to it.
-- **Doctrine inside a rationale** is fine when its reason and what would falsify it sit next to it.
 
 ## Know-how
 
@@ -48,7 +47,7 @@ The split is also a proportion rule. A short file is a `Doctrine` header and a f
 
 ## Rewriting a file
 
-1. Gather what must always be true under `## Doctrine`.
+1. Gather what must always be true under `Doctrine`, at the top or in the section it governs.
 2. The rest is know-how: keep it after the doctrine, sectioned if useful.
 3. Move reasons to the rationale and leave the pointer.
 4. Keep a list of rationalizations only for temptations the current models produce unprompted. Any other temptation named is a pink elephant ([[philosophy/attractors]]).
