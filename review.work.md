@@ -19,6 +19,8 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - Pointer targets are rationales, usually philosophy files: say rationale, not philosophy, where the pointer is meant.
 - Pareto attractors (head of the distribution, fat tail) where the usual-case split appears, Pareto named at the first use; never "four in five".
 - A named reference (Lakatos, Boyd, Brand) stays one line: it is in the weights.
+- abstraction-ladder is the one inheritance case: a sighting says "read it first" and keeps its specific application. Anywhere else a pointer never replaces an attractor: the name stays where its pattern appears.
+- What arrives at the engineer is the Observe; the kairos is the moment it opens; metis seizes it. Never "what reaches the human is the kairos".
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
