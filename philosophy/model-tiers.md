@@ -48,7 +48,7 @@ One loop, four stages. Tier in brackets.
 
 2  orchestrator [Top: must not drift]
    │ loop
-   ├─▶ refactorer [Top: decides the change] ─▶ one tiny change | NOTHING_TO_REFACTOR
+   ├─▶ refactorer [Top: decides the change] ─▶ one tiny change | sentinel
    ├─▶ committer  [Small: mechanical, bad commit is cheap, hook is the net]
    └─  stop?  ◀── judgment, each turn
 
@@ -67,7 +67,7 @@ One loop, four stages. Tier in brackets.
 ```
 
 1→2 splits by nature: each node gets the tier its decision content asks for.
-2→3 removes a node that carried no decision once drift was ruled out.
+2→3 swaps the orchestrator for a deterministic node: once drift is ruled out, the loop carries no decision, so a script holds it.
 3→4 steps the same node down: its failure is now cheap because a Top pass catches it.
 
 The four stages are Wardley's evolution axis seen through tiers: genesis at 1, commodity at 4. A node that reaches commodity also drops a tier; the refined prompt and the net are what make the smaller model enough.
