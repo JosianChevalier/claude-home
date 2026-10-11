@@ -17,7 +17,8 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
-      - Next: `shape-and-substance`, then `model-expressions`, then the rest. Finding on shape-and-substance: collaborative-production's backlink promises shape questions under the intrinsic/extraneous test; the old Consequences asks a shape question unconditionally.
+      - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
+      - Next: `model-expressions`, then the rest.
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
@@ -166,6 +167,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
 | `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
 | `rationale/type-and-concept.md` | `philosophy/type-and-concept.md` | supplies-never-adjudicates paragraph born here (promised by kairos-gates); the well defined (shallow basins, unaware transition); "coding language" → "vocabulary" |
+| `rationale/shape-and-substance.md` | `philosophy/shape-and-substance.md` | lifecycle → pointer to `session-state-in-documents`; shape question put under the belt test; "reviewer of guessed commitments" named silent choice |
 | `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
 | — | `philosophy/kaizen.md`, `conversation-continuity.md`, `session-design.md`, `harness-direction.md`, `metis-kairos.md`, `abstraction-ladder.md`, `change-inertia.md` | new, no old counterpart |
