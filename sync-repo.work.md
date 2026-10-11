@@ -19,7 +19,8 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
       - [ ] `model-expressions` moved 2026-10-11, iterating. Done: the appendix cut to the spork, tension pointed at `model-phenomenology` (first use, in the caveat). The example kept whole (the loss per medium needs showing). The caveat says compensation locally, a trade-off; the general line is in the root-cause item below. The spork: own section after Pathologies, qualitatively different (a model trying to be a type: union of state, intersection of behaviour; misfit remedy on a rivalry; not the god object; the detector), from the session "philosophy files in context" of 2026-10-10. Substance committed; shape pass pending.
-      - Next: the rest.
+      - DDD cluster, `ddd` tag on each: `model-phenomenology` (what a model is), `model-expressions` (where it exists), `aggregates` (its consistency boundary); `rules/design-first` hangs off them in 3.3. A later file on what a model is, if any, points at `model-phenomenology`.
+      - Next: `model-expressions` shape pass, then `aggregates`, then the rest.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
