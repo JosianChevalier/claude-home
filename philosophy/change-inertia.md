@@ -8,6 +8,11 @@ tags: [architecture, domain-modeling, conceptual-integrity, harness-design]
 
 Inertia is a system's resistance to being set in motion; the effort to move it grows with it. A system that stops moving is dead: the market, the organisation, the technology, and above all the team's understanding keep moving, and the code has to follow.
 
+```
+heavy ══╡ seam ╞── light      play: the light part moves alone
+heavy ══╪══════════ light      frozen: lift one, the whole follows
+```
+
 ## Inertia compounds
 
 Two bags of 20 kg go up the stairs one at a time. The 40 kg bag stays on the floor. Effort does not grow with size, it saturates: past a weight one cannot lift, the move is not slower, it does not happen.
@@ -29,7 +34,7 @@ The resolution is tiny bounded contexts, each with light inertia, each free to k
 
 Two reasons not to demand it between contexts, nor even within one while experimenting:
 
-- The broken-window theory, often cited for entropy in software, is refuted in sociology and at best a sophism here.
+- The broken-window theory, often cited for entropy in software, is contested in sociology and at best a sophism here.
 - The cost of transferring ownership of a codebase, the other usual reason for uniformity, is high in any case: code is hard to separate from the people who build it, and forcing the separation pays in documentation and inertia, justified only in cases like open source.
 
 ## Seams
