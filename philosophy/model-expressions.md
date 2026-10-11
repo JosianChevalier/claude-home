@@ -2,7 +2,9 @@
 tags: [ddd, domain-modeling, bounded-contexts, vocabulary, conceptual-integrity, architecture]
 ---
 
-# Rationale: Model Expressions
+# Model expressions
+
+**Thesis.** The model exists only as expressed, and each expression keeps what its grammar can say. Layers are expression boundaries; one model or two is settled by test, not by layer.
 
 The domain model is intangible. It never exists anywhere directly; it exists only as it is *expressed* through the media of the socio-technical system — plain oral discussion, domain code, SQL schema, REST contract, UI, user stories, dashboards, even the org chart (Topçu).
 
@@ -29,7 +31,9 @@ A front-end price check ("selected price must match the real fare"): the front-e
 
 Note the fit: the static rules and the dynamic tests check the same thing at different times. Rules 1–2 (meaning, representation) are what test 2 perturbs; rules 3–4 (business rules, invariants) are what test 3 probes.
 
-**Caveat: a grammar limit isn't divergence.** SQL forcing an id on a value object doesn't make the DB a different model — normal: the root cause is the grammar, not ours to treat, so compensate locally (ACL), a trade-off accepted, and don't let it spread. Divergence is saying something the model doesn't, *beyond* what the grammar forces — a **model tension** ([[philosophy/model-phenomenology]]): either the expression is wrong or there is a second model asking for its own context.
+**Caveat: a grammar limit isn't divergence.** SQL forcing an id on a value object doesn't make the DB a different model — normal: the root cause is the grammar, not ours to treat, so compensate locally (ACL), a trade-off accepted, and don't let it spread.
+
+Divergence is saying something the model doesn't, *beyond* what the grammar forces — a **model tension** ([[philosophy/model-phenomenology]]): either the expression is wrong or there is a second model asking for its own context.
 
 ## Pathologies
 
@@ -76,3 +80,9 @@ PATCH /orders/42/fulfillment  →  422  (payment started)
 Other media — user story, diagram, dashboard, org chart — project the same way: each keeps what its grammar can say, drops the rest.
 
 **Perturbation, transposed.** Add delivery to a pickup locker (address = locker ID): all expressions must absorb it as the same concept — a third radio, a `Locker(lockerId)` case, a discriminated address shape. If a neighboring system maps it onto `DELIVERY` with a fake street address — different concept, same word — that's not a lagging expression, that's a second bounded context wearing a false cognate.
+
+## Related
+
+- What a model is, the tension felt before the tests, the spork: [[philosophy/model-phenomenology]].
+- The model's consistency boundary: [[philosophy/aggregates]].
+- Translation located, not diffused: [[philosophy/transmission-belt]].
