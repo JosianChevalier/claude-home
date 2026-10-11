@@ -21,6 +21,8 @@ A belt differs from a gear in one property: **compliance**. It transmits torque 
 
 Read as a design principle, the belt is the part of the mesh where load becomes perceptible to the engineer instead of shearing something silently. In variety-absorption terms ([[philosophy/metis-kairos]]): the levels below absorb what they can; what they cannot reaches the engineer through the belt, and that arrival is the kairos.
 
+What arrives is a tool becoming visible. A tool in use disappears into the action, and reappears as an object only when it gets in the way: Heidegger's shift from ready-to-hand to present-at-hand. The domain model is the tool here. Its friction is the signal that it is no longer the right one, and the belt exists so that the signal reaches the hand holding it.
+
 Two failure directions, the belt's:
 
 - **Too tight.** No slip. Every small issue the code meets is transmitted to the engineer: full noise, cognition overloads.
