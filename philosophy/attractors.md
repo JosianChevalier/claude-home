@@ -35,7 +35,7 @@ An artifact is a pink elephant the same way: a finished work file, a handover's 
 
 ## Copies
 
-A copy is a nearer attractor than the canonical it duplicates. Restating a rule or a file in the prompt adds weight to what the receiver already holds, and the copy, not the canonical, is now what pulls. A pointer keeps one version in the landscape ([[philosophy/conversation-continuity]]).
+A copy is a nearer attractor than the canonical it duplicates. Restating a rule or a file in the prompt adds weight to what the receiver already holds, and the copy, not the canonical, is now what pulls. A pointer keeps one version in the landscape.
 
 ## Reorient before compensating
 
@@ -54,6 +54,5 @@ A description is pure attractor engineering: it is matched against the session's
 
 - Doctrine as a few attractors, rationalization lists as pink elephants: [[philosophy/harness-shape]].
 - Everything shown is shown for metis; attractors govern how: [[philosophy/transmission-belt]].
-- Pointer over copy in a handover: [[philosophy/conversation-continuity]].
 - A finished work file as a pink elephant: [[philosophy/session-state-in-documents]].
 - Skill descriptions and philosophy in the field's terms: [[philosophy/harness-elements]].
