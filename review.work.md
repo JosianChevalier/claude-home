@@ -33,7 +33,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - Cluster pass done: the ladder is the single home for absorption, escalation, Simon/Beer, Brand; children read it first and keep their specific application. Path down: harness-direction. Persistence stores: session-state-in-documents, ordered by inertia, not a ladder sighting.
-- conversation-as-interface: its four-row store table becomes a pointer to session-state-in-documents, the home of the four stores; the notebook paragraph stays.
 
 ## To check later
 
