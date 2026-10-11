@@ -21,8 +21,8 @@ Triage climbs the ladder ([[philosophy/abstraction-ladder]]): the lowest layer t
  failed run
     │
     ▼
- doctrine violated? ──yes──▶ compliance: the saying's pull as an attractor, or its placement
-    │ no
+ doctrine violated? ──yes──▶ compliance: the saying's pull, its placement,
+    │ no                      or a know-how step pulling against it
     ▼
  know-how wrong? ─────yes──▶ the know-how
     │ no
@@ -32,7 +32,7 @@ Triage climbs the ladder ([[philosophy/abstraction-ladder]]): the lowest layer t
 
 | Finding | Meaning | Fix |
 |---|---|---|
-| Doctrine violated | compliance | the saying's pull as an attractor, or its placement; its content and its rationale stay |
+| Doctrine violated | compliance | the saying's pull as an attractor, its placement, or a know-how step pulling against it; its content and its rationale stay |
 | Doctrine obeyed, outcome bad | know-how wrong | the know-how; failing that, the doctrine goes on trial in its rationale |
 
 Most failures are the first kind.
