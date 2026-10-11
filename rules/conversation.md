@@ -8,7 +8,11 @@
 
 ## Know-how
 
-- The thing itself comes to the chat. At the how, show the content: the text verbatim, as one view: removed text struck through, added text in `{+ +}`, the rest plain; current and proposed side by side only when the change is a rewrite, in `>` or a code block, skimmed at most. Never a pointer instead: no file, line or paragraph; locators on request. Unmarked text is invisible; a message that needs a file opened has failed.
+- The thing itself comes to the chat. At the how, show the content: the text verbatim, as one view. Never a pointer instead: no file, line or paragraph; locators on request. Unmarked text is invisible; a message that needs a file opened has failed.
+  - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
+  - Whole lines: `+` and `-` lines; a lone `+` is a new blank line.
+  - Container: a code block when whole lines are involved, `>` when only in-line edits are.
+  - Current and proposed side by side only when the change is a rewrite, skimmed at most.
 - A turn: verdict, hazard, first point, how many follow. Stop.
 - Shape before prose: lists, ascii diagrams, `====` separators. Markdown renders weakly.
 - More than a couple of items in flight, or drift: a `/tmp` notebook, a quick list with the concern on each.
