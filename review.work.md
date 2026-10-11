@@ -23,7 +23,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- three-layer-harness (another session is on it; skip)
 - harness-shape
 - harness-elements
 - harness-direction
@@ -33,6 +32,8 @@ Harness cluster
 - conversation-as-interface
 
 ## To check later
+
+- harness-shape: "The 80/20 split" says "four out of five"; swap for the Pareto attractors (head, fat tail) as in three-layer-harness.
 
 - harness-elements: candidate home for "a harness element has a rationale, usually a philosophy file", now in kaizen's Doctrine.
 
