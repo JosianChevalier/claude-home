@@ -35,4 +35,4 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 - **Done:** delete the work file. No renumbering.
 - **Reorder:** renumber, then show the sweep.
 
-Rationale: [[philosophy/process-units]], [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/context-economics]]
+Rationale: [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/context-economics]]

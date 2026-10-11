@@ -28,7 +28,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] Root cause versus compensation needs a philosophy file: CLAUDE.md asks "root cause, or compensation?" and `attractors` (Reorient before compensating) states it, neither has a home to point at. Compensation is legitimate when the root cause is out of reach, no ownership (a grammar, a neighbouring system) or not yet treated: local, a trade-off said as such, never spreading; medication for the symptom. First said locally in `model-expressions`' caveat.
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
-    - [ ] Home for the session-anchoring know-how (philosophy in `session-design`): `CLAUDE.md` Context section, or a rule, or the `ongoing-work` skill.
+    - [x] Home for the session-anchoring know-how (philosophy in `session-state-in-documents`): the `ongoing-work` skill, Doctrine section.
   - [ ] 3.4 Skills.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
     - [ ] `harness-improvement`: re-enter the ref-form contract and "load the rationale before diagnosing"; it still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
@@ -175,4 +175,4 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/shape-and-substance.md` | `philosophy/shape-and-substance.md` | lifecycle → pointer to `session-state-in-documents`; shape question put under the belt test; "reviewer of guessed commitments" named silent choice |
 | `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
-| — | `philosophy/kaizen.md`, `conversation-continuity.md`, `session-design.md`, `harness-direction.md`, `metis-kairos.md`, `abstraction-ladder.md`, `change-inertia.md` | new, no old counterpart |
+| — | `philosophy/kaizen.md`, `conversation-continuity.md`, `harness-direction.md`, `metis-kairos.md`, `abstraction-ladder.md`, `change-inertia.md` | new, no old counterpart |
