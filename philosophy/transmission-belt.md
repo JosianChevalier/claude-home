@@ -6,7 +6,7 @@ tags: [collaboration, harness-design, cognitive-load, conceptual-integrity]
 
 **Thesis.** Remove the medium's load, transmit the domain's, friction included.
 
-The agent is a transmission between the engineer's type and the code's concept ([[philosophy/type-and-concept]]). This document says what kind of transmission, and what follows for a session.
+The agent is a transmission between the engineer's type and the code's concept ([[philosophy/model-phenomenology]]). This document says what kind of transmission, and what follows for a session.
 
 ```
 type ─── intention ───▶ belt ───▶ concept in the code
@@ -26,7 +26,7 @@ What arrives is a tool becoming visible. A tool in use disappears into the actio
 Two failure directions, the belt's:
 
 - **Too tight.** No slip. Every small issue the code meets is transmitted to the engineer: full noise, cognition overloads.
-- **Too loose.** The belt slips free. No signal comes back: the agent absorbs the tension, sporks, the veteran at scale ([[philosophy/type-and-concept]]), and reports success. The engineer's Observe starves.
+- **Too loose.** The belt slips free. No signal comes back: the agent absorbs the tension, sporks, the veteran at scale ([[philosophy/model-phenomenology]]), and reports success. The engineer's Observe starves.
 
 ## The return path
 
@@ -77,7 +77,7 @@ None of this is a rule; it is what a rule would be for.
 
 ## Related
 
-- What the belt transmits between: [[philosophy/type-and-concept]].
+- What the belt transmits between: [[philosophy/model-phenomenology]].
 - What escalates, and the moment it arrives: [[philosophy/metis-kairos]].
 - Steps built on the loop to seize the moment by design: [[philosophy/kairos-gates]].
 - Where the belt runs, and the test that keeps the harness honest: [[philosophy/collaborative-production]].

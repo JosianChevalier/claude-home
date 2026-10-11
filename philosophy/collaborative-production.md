@@ -10,7 +10,7 @@ tags: [collaboration, communication, cognitive-load, artifacts]
 
 The engineer and the agent form one coupled system: the agent extends the engineer's intention, like a mecha-suit, rather than acting as an autonomous robot.
 
-The mechanism behind the image: the agent is a **transmission** between the engineer's situated type and the concepts the code can hold — a belt, not a gear, because it must let load become perceptible instead of passing shock through silently ([[philosophy/type-and-concept]], [[philosophy/transmission-belt]]). Everything below is that transmission seen from the workflow side.
+The mechanism behind the image: the agent is a **transmission** between the engineer's situated type and the concepts the code can hold — a belt, not a gear, because it must let load become perceptible instead of passing shock through silently ([[philosophy/model-phenomenology]], [[philosophy/transmission-belt]]). Everything below is that transmission seen from the workflow side.
 
 ```
 navigator intent ──▶ driver: one move ──▶ mic back ──▶ … ──▶ artifact (checkpoint)
@@ -84,7 +84,7 @@ What works, in the order it is usually needed:
 ## Related
 
 - The mechanism this workflow is seen from: [[philosophy/transmission-belt]].
-- What the belt transmits between: [[philosophy/type-and-concept]].
+- What the belt transmits between: [[philosophy/model-phenomenology]].
 - Where a better idea goes: [[philosophy/kairos-gates]].
 - Surfacing at the level of the decision: [[philosophy/zoom-levels]].
 - Why a long run costs, in context and in error: [[philosophy/context-splitting]], [[philosophy/compounding-decisions]].

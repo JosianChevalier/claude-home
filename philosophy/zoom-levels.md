@@ -8,7 +8,7 @@ Communication is a map, not the territory. Zoom level and concision both manage 
 
 ## Why anything is shown at all
 
-Showing is not reporting for its own sake. It is the harness's base layer — transparency — and the channel through which the engineer's metis perceives model tension, which is perceptual, not procedural ([[philosophy/transmission-belt]], [[philosophy/type-and-concept]]). The belt governs *why* it must be shown; the rest of this document governs *how*.
+Showing is not reporting for its own sake. It is the harness's base layer — transparency — and the channel through which the engineer's metis perceives model tension, which is perceptual, not procedural ([[philosophy/transmission-belt]], [[philosophy/model-phenomenology]]). The belt governs *why* it must be shown; the rest of this document governs *how*.
 
 ## Cognitive load
 

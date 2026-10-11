@@ -99,7 +99,7 @@ The same core must serve both Claude Code and OpenCode.
 - A file born here has no old counterpart: say where in old-claude its material came from.
 - Em-dashes stay: the old punctuation is kept. The no-em-dash rule is for artifacts sent outside (posts, PDFs), not harness files.
 - A wikilink to a file still in the backlog is not a hazard.
-- The well (local reading, shallow basin for the veteran) is Juarrero's landscape seen from the engineer's side; defined in type-and-concept.
+- The well (local reading, shallow basin for the veteran) is Juarrero's landscape seen from the engineer's side; defined in model-phenomenology.
 
 **Order:**
 
@@ -167,7 +167,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | contract and kaizen sections → `kaizen` or dropped; edge of chaos dropped, returns elsewhere (3.2) |
 | `rationale/kairos-gates.md` | `philosophy/kairos-gates.md` | belt kairos and strain signal → `metis-kairos` |
 | `rationale/session-state-in-documents.md` | `philosophy/session-state-in-documents.md` | `planning-is-everything` ref inlined |
-| `rationale/type-and-concept.md` | `philosophy/type-and-concept.md` | supplies-never-adjudicates paragraph born here (promised by kairos-gates); the well defined (shallow basins, unaware transition); "coding language" → "vocabulary" |
+| `rationale/type-and-concept.md` | `philosophy/model-phenomenology.md` | renamed 2026-10-11 (the phenomenology of the model, DDD cluster), `ddd` tag; supplies-never-adjudicates paragraph born here (promised by kairos-gates); the well defined (shallow basins, unaware transition); "coding language" → "vocabulary" |
 | `rationale/shape-and-substance.md` | `philosophy/shape-and-substance.md` | lifecycle → pointer to `session-state-in-documents`; shape question put under the belt test; "reviewer of guessed commitments" named silent choice |
 | `rationale/attractors.md` | `philosophy/attractors.md` | widened from words to context; pink-elephant exception (observed basin, pejorative name) and Reorient before compensating added; aphorism aligned in harness-shape, kaizen |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |

@@ -1,8 +1,8 @@
 ---
-tags: [collaboration, domain-modeling, conceptual-integrity, cognitive-load, phenomenology]
+tags: [ddd, collaboration, domain-modeling, conceptual-integrity, cognitive-load, phenomenology]
 ---
 
-# Type and concept
+# Model phenomenology
 
 **Thesis.** The engineer holds a type, the code holds concepts, and every write forces the one through the other; the agent holds neither, and transmits.
 

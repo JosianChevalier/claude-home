@@ -34,7 +34,7 @@ Any practice fits the pattern: name its moment, build the step. This is how a ne
 
 ### Where it is legitimate
 
-The agent holds sedimented culture, not a situated type ([[philosophy/type-and-concept]]). That familiarity is illegitimate as adjudication and legitimate as *supply*. Gopnik's finding on ambiguous figures: reversal is impossible until someone hands you the alternative representation; informed versus uninformed is the variable, not intelligence. A gate that asks whether an Order in this codebase is also a revenue event elsewhere is the library making a flip available. The resolution is the engineer's.
+The agent holds sedimented culture, not a situated type ([[philosophy/model-phenomenology]]). That familiarity is illegitimate as adjudication and legitimate as *supply*. Gopnik's finding on ambiguous figures: reversal is impossible until someone hands you the alternative representation; informed versus uninformed is the variable, not intelligence. A gate that asks whether an Order in this codebase is also a revenue event elsewhere is the library making a flip available. The resolution is the engineer's.
 
 ### The first gate
 
@@ -54,4 +54,4 @@ Neither replaces the other.
 - Kairos seized unplanned, through the belt: [[philosophy/metis-kairos]].
 - The base layer a gate sits on: [[philosophy/transmission-belt]].
 - The reminder gate: [[philosophy/kaizen]].
-- Why the agent supplies and never adjudicates: [[philosophy/type-and-concept]].
+- Why the agent supplies and never adjudicates: [[philosophy/model-phenomenology]].
