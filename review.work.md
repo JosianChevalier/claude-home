@@ -12,6 +12,8 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 ## How
 
 - Per file, one turn: what changed vs old-claude-reference/rationale/<file>.md first (never the rationale→philosophy move nor the link format), verdict, hazards each with its snippet verbatim, the text verbatim, then wait. Next file only when told.
+- A file born here has no old counterpart: say where in old-claude-reference its material came from instead.
+- Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
 
