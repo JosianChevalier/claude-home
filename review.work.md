@@ -25,8 +25,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- harness-elements (claimed)
-- session-design
+- session-design (claimed)
 - session-state-in-documents
 - conversation-continuity
 - conversation-as-interface
@@ -34,8 +33,6 @@ Harness cluster
 ## To check later
 
 - kaizen's Doctrine section (rules tied to rationales, drift guard): doctrine does not live in philosophy; needs a layer-2 home, likely the harness-improvement skill.
-
-- harness-elements: candidate home for "a harness element has a rationale, usually a philosophy file", now in kaizen's Doctrine.
 
 - Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt): re-point to context-splitting at the end.
 

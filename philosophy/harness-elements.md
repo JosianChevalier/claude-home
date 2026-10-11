@@ -2,9 +2,9 @@
 tags: [harness-design, vocabulary]
 ---
 
-# Rationale: Harness Elements
+# Harness elements
 
-What each element of a harness is for.
+**Thesis.** A harness is a few kinds of element, each with one job: what it holds, when it loads, and the test that tells it is in the right place. Every element but the philosophy file points to its rationale, usually a philosophy file. Choosing one is a loading decision first ([[philosophy/context-economics]]), a reliability decision second ([[philosophy/compounding-decisions]]).
 
 ## The elements
 
@@ -12,17 +12,25 @@ What each element of a harness is for.
 |---|---|---|---|
 | **Rule** | a short instruction that is always on | every session, or whenever its scope matches | it can be applied with no further context |
 | **Skill** | reusable, composable knowledge | at runtime, when the task calls for it | several agents or tasks could use it |
-| **Session agent** | a posture, sometimes oriented toward an activity | for the whole session, human in the loop | it serves whatever the human brings; no goal of its own |
-| **Headless agent** | an intention on its way to a goal, and the knowledge to reach it | for one workflow step, called by a script, human on the loop at most | a clear objective, standardized to be integrated in a script orchestration, composable |
-| **Sub-agent** | an intention on its way to a goal, and the knowledge to reach it | for one delegated task, called live from a session, fresh context | goal in the definition, knowledge in composed skills |
+| **Session agent** | a posture (verbosity, style), or an interlocutor for one task | for the whole session, human in the loop | it serves whatever the human brings; no goal of its own |
+| **Sub-agent** | an intention: a task to handle, or a probe; generic at genesis, specialized around the product over time | for one dispatch, called live from a session, fresh context | intention in the definition, knowledge in composed skills |
+| **Headless agent** | a goal, and the knowledge to reach it: a non-deterministic brick in a workflow, nothing more | for one workflow step, node or leaf, called by a script, human on the loop at most | a standardized answer the script can act on |
 | **Philosophy file** | theory: why the prescriptions hold | only when the work is on the harness itself: improving it, reviewing an artifact | written in the field's own terms ([[philosophy/attractors]]) |
 | **Script, hook, tool** | a guarantee | when called, outside the model | the same result every time |
 
-Headless agent and sub-agent intersect: one agent definition serves both, and the call tells them apart. The headless agent is designed for process first; a human is not forbidden, but sits on the loop, not in it. The session agent is the one with the human in the loop.
+One definition can serve as sub-agent, then headless: the call tells them apart, and the move from the first to the second is the agent's path ([[philosophy/harness-direction]]).
 
-These elements are not the process units ([[philosophy/session-design]]). A session is no element: it is where the human is, and the session agent works in it. A sub-agent materializes a dispatch, the probe. A headless agent or a script materializes a leaf. A workflow is a skill run by an orchestrator until it becomes a script. Orchestrator is a role, held by an agent or a script. The intention hardens into a goal as the agent moves down this path ([[philosophy/harness-direction]]).
+These elements are not the process units ([[philosophy/session-design]]): an element materializes a unit.
 
-Each choice is first a loading decision ([[philosophy/context-economics]]) and second a reliability decision ([[philosophy/compounding-decisions]]).
+```
+ element                   materializes                                        cynefin
+ session agent             works in the session, where the human is            complex
+ sub-agent, called live    a dispatch: the probe                               liminal
+ skill + orchestrator      a workflow; orchestrator: an agent, then a script   ordered
+ headless agent, script    a leaf                                              ordered
+```
+
+Orchestrator is a role, held by an agent or a script. An agent moving down this list is the harness's direction: its intention hardens into a goal ([[philosophy/harness-direction]]).
 
 ## Deterministic what can and should be
 

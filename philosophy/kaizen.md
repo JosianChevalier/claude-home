@@ -10,7 +10,7 @@ Most changes land in the know-how; some in the doctrine, when a failure goes bey
 
 ## Doctrine
 
-- **Rules and skills are tied to their rationales.** A harness element has a rationale, usually a philosophy file. Every rule and skill points to its rationale, so that changing a rule starts from what it was trying to accomplish: context economics and auditability. How the pointer is written is the harness-improvement skill's business, not this file's.
+- **Rules and skills are tied to their rationales.** Every rule and skill points to its rationale, so that changing a rule starts from what it was trying to accomplish: context economics and auditability. How the pointer is written is the harness-improvement skill's business, not this file's.
 - **Drift guard.** If a proposed fix contradicts the rationale behind the rule, either the fix is wrong or the rationale is outdated. One of the two changes, explicitly. This is the only mechanism keeping the rationales honest; never bypass it. It is the guard against the harness absorbing what should have reached the engineer ([[philosophy/metis-kairos]]).
 
 ## Triage
