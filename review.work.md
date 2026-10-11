@@ -19,7 +19,6 @@ Posture cluster
 
 - context-economics
 - metis-kairos
-- transmission-belt
 - collaborative-production
 
 Harness cluster
@@ -38,8 +37,6 @@ Harness cluster
 
 ## To check later
 
-- transmission-belt, Second axis bullet: mirror the known unknown / unknown unknown split now stated in kairos-gates.
-
-- Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Doctrine line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
+- Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Thesis line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
 
 - conversation-continuity still carries the gathering list the handover skill dropped (intent, next step, decisions not in files, open questions, pointer). Reconcile when reviewing it.

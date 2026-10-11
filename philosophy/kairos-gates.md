@@ -4,7 +4,7 @@ tags: [collaboration, harness-design, workflow, domain-modeling]
 
 # Kairos gates
 
-**Doctrine.** Where kairos recurs, build a step so the moment is seized by design, not by luck.
+**Thesis.** Where kairos recurs, build a step so the moment is seized by design, not by luck.
 
 The core of the agentic loop is how the work that must be done gets done. The kairos that matters most arrives inside it, through the belt, and is seized by metis or missed ([[philosophy/metis-kairos]]). The loop is a built process, codified in sessions and workflows, so steps can be added on top of it. A gate is such a step: the practice or the model is reflected on before the belt moves again.
 

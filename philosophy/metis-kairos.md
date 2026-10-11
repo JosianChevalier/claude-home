@@ -4,11 +4,11 @@ tags: [harness-design, collaboration, variety-absorption, kaizen]
 
 # Rationale: Metis and Kairos
 
-The loop is human. Observe, orient, decide, act (Boyd): improving needs a decision; the decision needs an orientation; orienting is destroying an internal world and rebuilding it; and no world gets destroyed without an observation that disappoints it. The harness does not run this loop. It enables it, at every level of the work: writing the model, running a session, improving the harness itself.
+The engineer's loop, observe, orient, decide, act, runs on the transmission belt ([[philosophy/transmission-belt]]). The harness does not run this loop. It enables it, at every level of the work: writing the model, running a session, improving the harness itself. This document says what reaches the engineer, and what seizes it.
 
 ## What comes up
 
-Observation comes back up the transmission belt ([[philosophy/transmission-belt]]). Not all of it should. Variety is absorbed at the lowest level that can hold it (a subsidiarity reading of Beer's recursion, after Ashby's law): the variation a level can take as business as usual stays there. What escalates is the variation that breaks expectation, so that feedback shows up in the layer that can act on it.
+Observation comes back up the belt. Not all of it should. Variety is absorbed at the lowest level that can hold it (a subsidiarity reading of Beer's recursion, after Ashby's law): the variation a level can take as business as usual stays there. What escalates is the variation that breaks expectation, so that feedback shows up in the layer that can act on it.
 
 Two reasons hold the rule up, and the ladder splits them. Capacity (Beer): the level above has fewer states and a narrower channel, so what it receives must be what it alone can decide. Near-decomposability (Simon, after Ashby): varieties multiply, so a whole made of parts that each absorb their own variety faces only the product of what leaks out. Capacity dominates on the rungs where the engineer sits; decomposability on the rungs below, where it is context economics ([[philosophy/context-economics]]).
 
@@ -18,7 +18,7 @@ That arrival is the *kairos*: the opportune moment, as against *chronos*, mere d
 
 ## The gradient
 
-Between absorbing everything and escalating everything lies a gradient, and the harness sets where each level sits on it. Two failure directions, the belt's: **too tight**, the harness absorbs what should escalate, the agent reports success, the engineer's orient step starves and the philosophy goes stale; **too loose**, everything escalates, the engineer is the bottleneck, nothing is absorbed. Kaizen's drift guard ([[philosophy/kaizen]]) is the last guard against too tight: a fix that contradicts the philosophy is a disappointment that reached the top, and one of the two changes, explicitly.
+Between absorbing everything and escalating everything lies a gradient, and the harness sets where each level sits on it. Power steering is the image: the assistance removes the effort of turning and the whole design problem is to keep the road felt. Its two ends are the belt's two failures ([[philosophy/transmission-belt]]): too tight, everything escalates, noise drowns signal and cognition overloads; too loose, nothing escalates, the engineer's Observe starves and the philosophy goes stale. Kaizen's drift guard ([[philosophy/kaizen]]) is the last guard against too loose: a fix that contradicts the philosophy is a disappointment that reached the top, and one of the two changes, explicitly.
 
 The abstraction ladder ([[philosophy/abstraction-ladder]]) is the discrete form of the gradient: a stack of levels, each absorbing what it can and passing the rest one rung up.
 
