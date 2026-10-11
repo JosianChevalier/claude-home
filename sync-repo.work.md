@@ -100,8 +100,6 @@ The opening turn, in this order and nothing else:
 2. How many issues, each named in plain words on one line.
 3. The first issue: the old sentence quoted whole, the sentence it now contradicts quoted whole with its file named, the proposed change in edit marks.
 
-Before the opening goes out, a cold read: a sub-agent, no tools, the message verbatim, asked what it understood and which terms it has no referent for. Each such term is rewritten or given its meaning. The opening goes out only once the cold reader can say what the file is and what is being decided.
-
 Each following turn is one issue, in the shape of point 3. The decision just taken is restated in one line first. A rival reading goes on the table as a second reading, never written in.
 
 Silent in the conversation, recorded in the commit message: folder, frontmatter, link form, backlog removal, mapping row.
