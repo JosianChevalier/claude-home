@@ -22,6 +22,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - abstraction-ladder is the one inheritance case: a sighting says "read it first" and keeps its specific application. Anywhere else a pointer never replaces an attractor: the name stays where its pattern appears.
 - What arrives at the engineer is the Observe; the kairos is the moment it opens; metis seizes it. Never "what reaches the human is the kairos".
 - Abstraction layering is the pattern; a sighting is a ladder, an instance of it. Never "rung-set", never "the same ladder".
+- Skills and layers 1-2 are self-sufficient projections of philosophy for one case; the executing agent never reads philosophy. They duplicate whatever is relevant: never a hazard.
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
@@ -29,9 +30,8 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - Cluster pass done: the ladder is the single home for absorption, escalation, Simon/Beer, Brand; children read it first and keep their specific application. Path down: harness-direction. Persistence stores: session-state-in-documents, ordered by inertia, not a ladder sighting.
-- session-state-in-documents
 - conversation-continuity
-- conversation-as-interface
+- conversation-as-interface: its four-row store table becomes a pointer to session-state-in-documents, the home of the four stores; the notebook paragraph stays.
 
 ## To check later
 

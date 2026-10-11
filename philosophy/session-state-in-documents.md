@@ -2,9 +2,15 @@
 tags: [session-state, artifacts, planning, context-economics]
 ---
 
-# Rationale: Session State Lives in Documents
+# Session state lives in documents
 
-Why the state of the work is written to the repo, never held in conversation.
+**Thesis.** A session is a process that can die at any moment. The state of the work lives in a work file and the conversation is its echo; the file itself dies with the work, once what outlives it has graduated to its home.
+
+```
+conversation ──▶ notebook ──▶ work file ──▶ commits · harness · documentation
+ a turn           a session     the work      the project
+ thinking         derived       remembering   graduated
+```
 
 ## Agents are ephemeral processes
 
@@ -22,9 +28,9 @@ Plans and studies are not final or permanent by default. They are working artifa
 
 ## The session is anchored in a working document
 
-Unless explicitly not required, a session gets anchored in a working document: an existing study or plan, or something else, committed or not, or in `/tmp`, depending on the nature of the work and above all on its longevity. Some sessions do not need one: a conversation that drifts a bit. When it drifts too much, it is worth asking whether to anchor it.
+Unless explicitly not required, a session gets anchored in a working document in the repository: an existing study or plan, or a work file, committed or not, depending on the nature of the work and above all on its longevity. Some sessions do not need one: three questions, each closed in its round, and the conversation carries them. Past a handful of open threads the conversation starts dropping some; a file the session comes back to as a checklist drops none. That is the moment to ask whether to anchor.
 
-Conversation, working document, repo: three stores ordered by inertia ([[philosophy/change-inertia]]). What survives the conversation reaches the document; what survives the document is committed.
+Conversation, notebook, working document, repo: four stores ordered by inertia ([[philosophy/change-inertia]]). The conversation lasts a turn. The notebook, a `/tmp` file of the agent's own, lasts the session: derived, disposable, never a memory ([[philosophy/conversation-as-interface]]). The working document lasts the work. The repo keeps what graduated. What survives the conversation reaches the document; what survives the document is committed.
 
 ## Save at hand-back, not at stage end
 
@@ -34,13 +40,13 @@ In a mob session the mic returns every turn, and the navigators hold the state t
 
 The cost model is the point: an unpredictable, compounding resume cost is replaced by a tiny, systematic write cost, paid by the agent, not the user.
 
-This write is a distillation step, not an append step. Preserve decisions, findings, open threads, and the real next step; delete or replace stale detail as the model improves. Otherwise the artifact becomes another context debt instead of a session-survival mechanism.
+This write is a distillation step, not an append step. Keep the state, delete or replace stale detail as the model improves. Otherwise the artifact becomes another context debt instead of a session-survival mechanism.
 
-## The plan is the handoff mechanism
+## The work file is the handoff mechanism
 
 The next session has **no memory of this one**; the work file is the only channel through which learning crosses the session boundary. Updating it is therefore not bookkeeping: it *is* the deliverable of a stage, alongside the commits. A session that drives perfectly but leaves the file stale has stranded its learning in a dying process.
 
-## The plan dies with the work
+## The work file dies with the work
 
 The work file is the canonical home for one thing only, the work in progress ([[philosophy/context-economics]], one canonical home per fact), and it is deleted when the work is done. Everything discovered along the way that deserves to outlive it must graduate to its own home first:
 
@@ -50,11 +56,13 @@ The work file is the canonical home for one thing only, the work in progress ([[
 
 Learning left in the file at deletion time is lost; learning kept in the file *instead of* its home is a copy waiting to diverge.
 
-A finished work file left in the repo is a pink elephant. A fresh context takes whatever it reads as a premise ([[philosophy/conversation-continuity]]); it cannot tell a closed thread from an open one, and the stale file becomes an anchor. Deleting is not losing: the history is git's job.
+A finished work file left in the repo is a pink elephant ([[philosophy/attractors]]). A fresh context takes whatever it reads as a premise ([[philosophy/conversation-continuity]]); it cannot tell a closed thread from an open one, and the stale file becomes an anchor. Deleting is not losing: the history is git's job.
 
 ## Related
 
 - [[philosophy/process-units]]: the process units; the session is the one where a human is required.
-- [[philosophy/change-inertia]]: why the three stores are cut where they are.
+- [[philosophy/change-inertia]]: why the four stores are cut where they are.
+- [[philosophy/conversation-as-interface]]: the notebook, the store below the work file.
 - [[philosophy/conversation-continuity]]: what crosses a session boundary and what must not.
 - [[philosophy/context-economics]]: one canonical home per fact.
+- [[philosophy/attractors]]: the finished work file as a pink elephant.

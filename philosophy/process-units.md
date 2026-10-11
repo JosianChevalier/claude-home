@@ -48,4 +48,4 @@ Where the boundary between human and codified sits is not fixed: it sits at the 
 - The pattern this is a sighting of: [[philosophy/abstraction-ladder]].
 - What materializes a unit: [[philosophy/harness-elements]].
 - The communication layer between sessions: [[philosophy/conversation-continuity]].
-- Where a session's state lives, three stores ordered by inertia: [[philosophy/session-state-in-documents]].
+- Where a session's state lives, four stores ordered by inertia: [[philosophy/session-state-in-documents]].
