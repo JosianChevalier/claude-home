@@ -2,14 +2,27 @@
 tags: [harness-design, session-design, variety-absorption]
 ---
 
-# Rationale: The Abstraction Ladder
+# The abstraction ladder
 
-An approach: ways of working compliant with [[philosophy/metis-kairos]] take the shape of a ladder. Levels ordered by abstraction, each rung delegating cognitive load and context to the rung below, and taking back only what that rung could not absorb. Down is closer to where variation arrives first.
+**Thesis.** Ways of working that let kairos reach the engineer ([[philosophy/metis-kairos]]) take the shape of a ladder: levels ordered by abstraction, each absorbing the variation it can and passing the rest one rung up.
+
+Each rung delegates cognitive load and context to the rung below, and takes back only what that rung could not absorb. Down is closer to where variation arrives first.
+
+```
+          top: slowest; decides on what climbed; sees nothing else
+           ▲                                           │
+  escalate │ one rung, wrapped, cause kept     trickle │ a change lands on every rung below
+  absorb   │ each rung takes what it can       bricks  ▼ what became routine, codified one rung down
+           │
+          bottom: where variation arrives first
+```
 
 - **Absorb down.** Variation is absorbed at the lowest rung that can take it as business as usual.
-- **Escalate up, one rung.** What breaks a rung's expectation goes to the rung above, which has the orientation to decide on it. The rung catches what it declared business as usual; the rest it wraps and passes on, its context added, the cause preserved, as an exception does. Swallowing is the failure, not passing. In a harness ladder the engineer sits on the top rung, and an uncaught arrival there is the kairos.
+- **Escalate up, one rung.** What breaks a rung's expectation goes to the rung above, which has the orientation to decide on it. Like an exception: the rung catches what it declared business as usual; the rest it wraps and passes on, its context added, the cause preserved. Swallowing is the failure, not passing.
 - **Trickle down.** A change made on a rung is a consequence for every rung below.
-- **Reliable bricks move down.** Once a rung absorbs a variation as business as usual, that absorption can be codified into the rung below ([[philosophy/harness-direction]]).
+- **Reliable bricks move down.** Once a rung absorbs a variation as business as usual, that absorption can be codified into the rung below: commodification, one rung at a time ([[philosophy/harness-direction]]).
+
+In a harness ladder the engineer sits on the top rung, and an uncaught arrival there is the kairos. What a rung absorbs is invisible above it: the top sees only what climbed. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
 
 In every sighting the top rung is also the slowest, and pace layering (Brand) applies: fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive. Why the rungs are cut where they are is change inertia ([[philosophy/change-inertia]]).
 
@@ -24,4 +37,11 @@ In every sighting the top rung is also the slowest, and pace layering (Brand) ap
 | Harness direction | steered in session | headless | [[philosophy/harness-direction]] |
 | The belt, two rungs | the engineer's type | the code's concept | [[philosophy/transmission-belt]] |
 
-The Cynefin labels in the process table (session complex, leaf ordered) name the domain the orchestrator works in, not where variation arrives: complexity arrives at the leaf and is decided on at the session.
+The Cynefin labels in the process table of [[philosophy/session-design]] (session complex, leaf ordered) name the domain the orchestrator works in, not where variation arrives: complexity arrives at the leaf and is decided on at the session.
+
+## Related
+
+- The gradient this is the discrete form of: [[philosophy/metis-kairos]].
+- Where the rungs are cut: [[philosophy/change-inertia]].
+- The brick's way down the rungs: [[philosophy/harness-direction]].
+- Why the engineer still goes down: [[philosophy/conversation-as-interface]].

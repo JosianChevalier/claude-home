@@ -24,7 +24,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - three-layer-harness (another session is on it; skip)
-- abstraction-ladder
 - harness-shape
 - harness-elements
 - harness-direction
