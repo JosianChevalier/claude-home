@@ -12,8 +12,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 ## How
 
 - Per file, one turn: what changed vs old-claude-reference/rationale/<file>.md first (never the rationale→philosophy move nor the link format), verdict, hazards each with its snippet verbatim, the text verbatim, then wait. Next file only when told.
-- abstraction-ladder, context-economics, metis-kairos, model-tiers: modified on disk by another session. Do not touch, do not commit.
-- Links to type-and-concept, model-expressions, attractors dangle: not moved yet. One mention, no action.
 
 ## To review
 
