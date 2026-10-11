@@ -30,9 +30,18 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 
 ## Asks
 
-- **What's next:** run the sweep, quote rank one's sentence verbatim with its path. Nothing else.
+- **What's next:** the coming item, said as below.
+- **Next, move on, and the like:** the coming item, said as below, then start.
 - **Anchor this / new work file:** `new-work.sh`, next to the work it concerns; rank last unless told. Steps as checkboxes, a current-step marker, so a zero-context session resumes without the conversation.
 - **Done:** delete the work file. No renumbering.
 - **Reorder:** renumber, then show the sweep.
+
+## Saying the coming item
+
+From the current-step marker in the work file. A breadcrumb, one level per line, from the first level the reader lacks (the project if we are out of context) down to the item. The item is session-sized: a vague or large one is broken down and its first piece is the item. Clear at a glance where we are; never prose.
+
+    Migration of the prototype into this repo
+    └ 3.2 philosophy backlog
+      └ next: `aggregates`, old rationale → philosophy/
 
 Rationale: [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/context-economics]]
