@@ -16,13 +16,14 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - Wardley terms as attractors where the path down appears: genesis, custom-built, commodity, commodification. Reference: context-splitting, Where to stop.
 - Another session may hold uncommitted edits in philosophy/; stage only the files you changed.
 - A file born here has no old counterpart: say where in old-claude-reference its material came from instead.
+- Pointer targets are rationales, usually philosophy files: say rationale, not philosophy, where the pointer is meant.
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
 
 Harness cluster
 
-- three-layer-harness
+- three-layer-harness (another session is on it; skip)
 - abstraction-ladder
 - harness-shape
 - harness-elements
@@ -33,6 +34,8 @@ Harness cluster
 - conversation-as-interface
 
 ## To check later
+
+- harness-elements: candidate home for "a harness element has a rationale, usually a philosophy file", now in kaizen's Doctrine.
 
 - Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt): re-point to context-splitting at the end.
 
