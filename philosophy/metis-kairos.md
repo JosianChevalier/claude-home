@@ -15,12 +15,12 @@ session    detects, then absorbs or bubbles up; adds context, keeps the cause
    ▲
 workflow   same
    ▲
-leaf       variation arrives here first
+leaf       variety arrives here first
 ```
 
 ## What comes up
 
-Observation comes back up the belt. Not all of it should. Variety is absorbed at the lowest level that can hold it (a subsidiarity reading of Beer's recursion, after Ashby's law): the variation a level can take as business as usual stays there. What escalates is the variation that breaks expectation, so that feedback shows up in the layer that can act on it.
+Observation comes back up the belt. Not all of it should. Variety is absorbed at the lowest level that can hold it (a subsidiarity reading of Beer's recursion, after Ashby's law): the variety a level can take as business as usual stays there. What escalates is the variety that breaks expectation, so that feedback shows up in the layer that can act on it.
 
 Two reasons hold the rule up, and the ladder splits them.
 

@@ -12,7 +12,7 @@ Start with tiny bricks: the agent micromanaged in session, one small thing at a 
 
 Reliability makes the step down possible; reuse makes it worth taking. The path is Wardley's evolution axis: a brick starts at genesis, steered in session, and each rung down is a step of its commodification. Each rung trades judgment for a handover and a coordination step, and only a brick that runs often pays that back. So the low-level, heavily reused workflows commodify first, and one-off work stays at genesis ([[philosophy/context-splitting]], where to stop).
 
-Each step down is a change of absorber, not of domain. The work is as variable as before; the node now absorbs the variation that used to escalate to the human.
+Each step down is a change of absorber, not of domain. The work is as variable as before; the node now absorbs the variety that used to escalate to the human.
 
 ## Agents on this path
 
