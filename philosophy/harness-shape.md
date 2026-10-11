@@ -4,7 +4,7 @@ tags: [harness-design, kaizen]
 
 # Harness shape
 
-**Thesis.** A rule or skill is a doctrine, then know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: [[philosophy/three-layer-harness]].
+**Thesis.** A rule or skill is a doctrine, then know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the Pareto distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: [[philosophy/three-layer-harness]].
 
 ```
  ## Doctrine          what must always be true   a few attractors; holds in the fat tail

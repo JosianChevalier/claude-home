@@ -17,7 +17,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - Another session may hold uncommitted edits in philosophy/; stage only the files you changed.
 - A file born here has no old counterpart: say where in old-claude-reference its material came from instead.
 - Pointer targets are rationales, usually philosophy files: say rationale, not philosophy, where the pointer is meant.
-- Pareto attractors (head of the distribution, fat tail) where the usual-case split appears; never "four in five".
+- Pareto attractors (head of the distribution, fat tail) where the usual-case split appears, Pareto named at the first use; never "four in five".
 - A named reference (Lakatos, Boyd, Brand) stays one line: it is in the weights.
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
@@ -26,7 +26,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - harness-elements
-- harness-direction
+- harness-direction (claimed)
 - session-design
 - session-state-in-documents
 - conversation-continuity
