@@ -31,7 +31,6 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - Cluster pass done: the ladder is the single home for absorption, escalation, Simon/Beer, Brand; children read it first and keep their specific application. Path down: harness-direction. Persistence stores: session-state-in-documents, ordered by inertia, not a ladder sighting.
-- conversation-continuity
 - conversation-as-interface: its four-row store table becomes a pointer to session-state-in-documents, the home of the four stores; the notebook paragraph stays.
 
 ## To check later
@@ -43,5 +42,3 @@ Harness cluster
 - Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt): re-point to context-splitting at the end.
 
 - Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Thesis line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
-
-- conversation-continuity still carries the gathering list the handover skill dropped (intent, next step, decisions not in files, open questions, pointer). Reconcile when reviewing it.

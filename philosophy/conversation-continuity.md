@@ -1,45 +1,44 @@
 ---
-tags: [handover, conversation-continuity, context-economics, attractors]
+tags: [session-design, conversation-continuity, attractors]
 ---
 
-# Rationale: Conversation Continuity
+# Conversation continuity
 
-Why a conversation can be left, resumed or branched at any point, and why the handover that does it carries intent and pointers, and nothing that would shape the receiving agent's judgment before it has looked.
+**Thesis.** A work outlives any session. It runs as a lineage of sessions that replace, branch and delegate one another, stitched by the human through the working document ([[philosophy/session-state-in-documents]]). Between two sessions passes only what the document cannot hold, and nothing that would shape the next one's judgment before it has looked.
 
-A handover is the communication layer between sessions ([[philosophy/process-units]]). It points at the session's working document instead of carrying the state.
+```
+  replace    S1 ──▶ S2             S1 ends; S2 holds the work
+  branch     S1 ──┬▶ S2 ─┐         S1 holds the work; the branches explore
+                  └▶ S3 ─┘         and their results come back to it
+  delegate   S1 ──▶ S2 ──▶ S1      S1 holds the work and waits for an answer
+```
 
-## The cases
+## The work is a lineage
 
-The rules differ slightly by what the receiving agent is for. There may be more cases than these.
+A session is the process unit where a human is required ([[philosophy/process-units]]). It ends when its context is spent, when the human leaves, or when the work wants another shape; the work does not end with it.
 
-- **Continuity.** The next part of the work runs in another session; the author's context ends. The receiver takes over: intent, next step, decisions not yet in files, open questions, pointer to the anchor.
-- **Branching.** The conversation should go in several directions at once; the author continues. The handover scopes one direction: the question, its boundary, and where the result is expected so the author can pick it up. The author's leaning on that direction is the bias to leave out.
-- **Async.** The current session is waiting for the input of another one. The handover is a request: what is needed back, in which form, where. The receiver does not take over the work.
+Since the state lives in the document, ending a session is free, and the human cuts the lineage wherever the work asks for it.
 
-## The author has a stake in the story
+## Replace, branch, delegate
 
-Whatever the case, the author writes about its own work. After a failure it does not write "cause unknown"; it invents a cause, in the same register as its facts. Mid-work it leans toward its own direction. The author's model of the situation is the most suspect content a handover can carry, and the one the receiver can least check.
+The three relations differ in who holds the work while the other session runs.
 
-## The receiver cannot weigh what it is told
+- **Replace.** The author's context ends and the successor holds the work. The thread is the same; only the context is fresh.
+- **Branch.** The question has several directions and the author keeps the trunk. Each branch explores one, in its own context, and brings its result back; the trunk integrates. The author's leaning on a direction is the bias a branch must not inherit.
+- **Delegate.** The author needs an answer it should not spend its own context on. The delegate takes a question, not the work, and the author waits.
 
-A fresh context takes its prompt as given. It cannot tell a validated conclusion from a hunch: both become premises. An unvalidated conclusion is not information, it is an anchor; the receiver reasons from it instead of toward it. Decisions the user made go in, with their rationale when it is not obvious. What was tried and what was observed go in. Why it failed stays out unless the user established it. Let the receiver look.
+## The human stitches it
 
-## The session log is not information
+Sessions share one channel, the working document. The handover is not a second one: it is the prompt the human carries from one session to the next, their instrument for steering the lineage. Its form is the skill's.
 
-The author's most available material is its own session, so the default handover narrates it: every decision, every step done. Nearly none of it changes what the receiver does next; what was done is in the commits and the anchor, and a decision the receiver would make the same way or never faces is noise. Information is what changes the next action or prevents a likely mistake. Everything else spends the receiver's budget and crowds the landscape.
+## What crosses
 
-## Everything in the prompt is in the landscape
+What the filesystem does not carry and the next session cannot infer: where to look, what to do next when the document does not show it, how to stand.
 
-What is in context pulls ([[philosophy/attractors]]). Restating the project, the rules, or a copied file adds weight to things the receiver already holds in canonical form, and the copy, not the canonical, is now the nearest. A pointer keeps one version in the landscape ([[philosophy/context-economics]], one canonical home per fact).
+Not the author's account of its own work. The author is biased about it, and the next session cannot weigh what it is told: a hunch and a validated conclusion both become premises ([[philosophy/attractors]]). Let it look.
 
-## The receiver is a peer on the same harness
+## Related
 
-Same CLAUDE.md, rules, skills, repo. The handover is the delta: what the filesystem does not carry.
-
-## The handover passes through a human, unread
-
-It goes from one terminal to the next through the user's clipboard. The user should not need to read it: they must see where it starts and ends, and be able to write below it, since what they add is the steering of the moment and overrides what is above ([[philosophy/zoom-levels]], attention is the scarce budget). One visually delimited block follows.
-
-## Words are triggers
-
-The harness loads skills on words. A text that calls itself a handover makes the receiver load the handover skill and write one instead of acting. An artifact's name is a side effect in the receiver's harness; the handover says what to do, not what it is.
+- The session as a process unit: [[philosophy/process-units]].
+- Where the work's state lives, the one channel: [[philosophy/session-state-in-documents]].
+- Why the author's account pulls the next session: [[philosophy/attractors]].
