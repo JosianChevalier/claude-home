@@ -77,18 +77,24 @@ The same core must serve both Claude Code and OpenCode.
   - Know-how — the rest of the file, after the doctrine, sectioned when useful. Procedures, heuristics, checklists, knowledge: no fixed header, not always a procedure.
 - Doctrine is what must always be true, the intent; know-how is what works in 80% of cases. The limit of applicability must be understandable from the file. Doctrine is the fallback that guides the agent when the mechanical approach does not fit. This principle must be written down somewhere in the repo (philosophy).
 
-**Philosophy file, shape and vocabulary (moved from the review):**
+**Philosophy file, migration flow (2026-10-11):**
 
-- Per file, one turn: what changed vs the old file first (never the rationale→philosophy move nor the link format), verdict, hazards each with its snippet verbatim, the text verbatim, then wait. Next file only when told.
-- Shape: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file; the file holds what they promise.
+- Before any artifact: read the harness-improvement rationales, in full: `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`. The inspection is against them.
+- Walk at the conceptual level, no text. Open: what the old file is about, what the backlinks promise of it, the issues where the layer drifted since. Then one issue per turn, decided in conversation.
+- Mechanical changes silent: folder, frontmatter, link form, backlog removal, mapping row.
+- Two commits per file. First substance: mechanical plus the decisions. Second shape: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). The diffs separate substance from shape.
+- The file holds what its backlinks promise.
+- Another session may hold uncommitted edits; stage only the files you changed.
+- Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
+
+**Vocabulary, migration and review alike:**
+
 - No skill named or quoted from a philosophy file; an example stays anonymous.
 - A named reference (Lakatos, Boyd, Brand, Juarrero) stays one line: it is in the weights.
 - Pointer targets are rationales: say rationale, not philosophy, where the pointer is meant.
 - Wardley terms as attractors where the path down appears: genesis, custom-built, commodity, commodification.
 - Pareto attractors where the usual-case split appears, Pareto named at the first use; never "four in five".
 - A file born here has no old counterpart: say where in old-claude its material came from.
-- Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.
-- Another session may hold uncommitted edits; stage only the files you changed.
 - Em-dashes stay: the old punctuation is kept. The no-em-dash rule is for artifacts sent outside (posts, PDFs), not harness files.
 - A wikilink to a file still in the backlog is not a hazard.
 - The well (local reading, shallow basin for the veteran) is Juarrero's landscape seen from the engineer's side; defined in type-and-concept.
