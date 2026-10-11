@@ -84,7 +84,7 @@ The same core must serve both Claude Code and OpenCode.
 - Before any artifact: read the harness-improvement rationales, in full: `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`. The inspection is against them.
 - Walk at the conceptual level, no text. Open: what the old file is about, what the backlinks promise of it, the issues where the layer drifted since. Then one issue per turn, decided in conversation.
 - Mechanical changes silent: folder, frontmatter, link form, backlog removal, mapping row.
-- Two commits per file. First substance: mechanical plus the decisions. Second shape: title without "Rationale:", Thesis line, Related, paragraphs that breathe, a figure only where something benefits from being illustrated (rules/writing.md). The diffs separate substance from shape.
+- Two commits per file. First substance: mechanical plus the decisions. Second shape, chosen for the least extraneous load on the reader (rules/writing.md); usually title without "Rationale:", Thesis line, Related, paragraphs that breathe. The diffs separate substance from shape.
 - The file holds what its backlinks promise.
 - Another session may hold uncommitted edits; stage only the files you changed.
 - Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cluster at a time.

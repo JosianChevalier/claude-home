@@ -26,7 +26,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - Skills and layers 1-2 are self-sufficient projections of philosophy for one case; the executing agent never reads philosophy. They duplicate whatever is relevant: never a hazard.
 - Philosophy carries the concept and the essence of a rule; mechanics, forms and exhaustive lists of what not to do are the skill's.
 - A file that looks inflated for its topic: list every idea one line each, group by the claim each serves, rewrite from the groups. Deliver the tight text, never a wall with an offer to tighten.
-- Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
+- Reshape in the same turn as the review, and the shape is chosen for the least extraneous load on the reader: every element earns its place by what it saves the reader, each piece in the medium that carries it cheapest (rules/writing.md). The usual outcome: title without "Rationale:", Thesis line, Related, paragraphs that breathe. Backlinks checked for what they promise of the file.
 
 ## To review
 
@@ -44,4 +44,4 @@ Harness cluster
 
 - Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt): re-point to context-splitting at the end.
 
-- Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Thesis line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
+- Readability kaizen on the philosophy files, for the least extraneous load on the reader; model-tiers/kairos-gates as examples (Thesis line, bullets, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
