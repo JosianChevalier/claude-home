@@ -39,8 +39,6 @@ Harness cluster
 
 - Backlinks to context-economics that mean splitting (CLAUDE.md Context, transmission-belt, collaborative-production temporal axis): re-point to context-splitting at the end.
 
-- Wardley reading (genesis / custom / commodity → how far the cuts go, who holds control flow), now in context-splitting Where to stop: apply where it fits, harness-direction first.
-
 - Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Thesis line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
 
 - conversation-continuity still carries the gathering list the handover skill dropped (intent, next step, decisions not in files, open questions, pointer). Reconcile when reviewing it.
