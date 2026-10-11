@@ -21,6 +21,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 - A named reference (Lakatos, Boyd, Brand) stays one line: it is in the weights.
 - abstraction-ladder is the one inheritance case: a sighting says "read it first" and keeps its specific application. Anywhere else a pointer never replaces an attractor: the name stays where its pattern appears.
 - What arrives at the engineer is the Observe; the kairos is the moment it opens; metis seizes it. Never "what reaches the human is the kairos".
+- Abstraction layering is the pattern; a sighting is a ladder, an instance of it. Never "rung-set", never "the same ladder".
 - Reshape in the same turn as the review: title without "Rationale:", Thesis line, figure, Related, paragraphs that breathe (rules/writing.md). Backlinks checked for what they promise of the file.
 
 ## To review
@@ -28,12 +29,13 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 Harness cluster
 
 - Cluster pass done: the ladder is the single home for absorption, escalation, Simon/Beer, Brand; children read it first and keep their specific application. Path down: harness-direction. Persistence stores: session-state-in-documents, ordered by inertia, not a ladder sighting.
-- session-design (claimed; its mapping sentence stays as is: the full element→unit mapping lives in harness-elements). Its one job is the process-unit vocabulary; the rest is pointers now. Open: whether the name follows the content; title, Thesis line.
 - session-state-in-documents
 - conversation-continuity
 - conversation-as-interface
 
 ## To check later
+
+- `skills/ongoing-work` points to process-units for anchoring, which now lives in session-state-in-documents; `sync-repo.work.md` line 26 says the same stale thing (and still says session-design).
 
 - kaizen's Doctrine section (rules tied to rationales, drift guard): doctrine does not live in philosophy; needs a layer-2 home, likely the harness-improvement skill.
 

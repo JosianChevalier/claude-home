@@ -12,7 +12,7 @@ tags: [harness-design, kaizen, variety-absorption]
 | **2. Doctrine** | what must always be true: the intent | `## Doctrine` in rules and skills; `CLAUDE.md` | execution | at kaizen only |
 | **1. Know-how** | what worked: the head of the distribution | the body of rules and skills, after the doctrine | execution | during execution |
 
-The three are one rung-set of the abstraction ladder; read it first ([[philosophy/abstraction-ladder]]). What follows is what is specific to these rungs.
+The three are a ladder, an instance of abstraction layering; read it first ([[philosophy/abstraction-ladder]]). What follows is what is specific to these rungs.
 
 Doctrine is fixed during execution, and it is the test for leaving the know-how: the agent departs from a step because the doctrine still holds. Snowden says the same of rules: they do not create order, they codify what worked, and what worked is Pareto-distributed: a head of usual cases, a fat tail of exceptions where one improvises within principles. Lakatos's research programmes have the same structure: a hard core never targeted from inside, and a protective belt that absorbs the anomalies.
 

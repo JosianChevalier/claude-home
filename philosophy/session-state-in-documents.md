@@ -54,7 +54,7 @@ A finished work file left in the repo is a pink elephant. A fresh context takes 
 
 ## Related
 
-- [[philosophy/session-design]]: the process units; the session is the one where a human is required.
+- [[philosophy/process-units]]: the process units; the session is the one where a human is required.
 - [[philosophy/change-inertia]]: why the three stores are cut where they are.
 - [[philosophy/conversation-continuity]]: what crosses a session boundary and what must not.
 - [[philosophy/context-economics]]: one canonical home per fact.

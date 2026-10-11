@@ -16,7 +16,7 @@ Between people that encoding fails (Scott). Here it holds because the harness is
 
 ## The process
 
-Start with tiny bricks: the agent micromanaged in session, one small thing at a time. Kaizen ([[philosophy/kaizen]]) makes a brick reliable. A reliable brick is composable, and a composable brick moves down one rung of the process tree ([[philosophy/session-design]], [[philosophy/abstraction-ladder]]), toward the leaf: what was steered by the human in session becomes a dispatch; a dispatch that recurs becomes a workflow; a workflow that no longer needs judgment becomes a leaf. Mechanization is the end of the path: scripts and headless agents.
+Start with tiny bricks: the agent micromanaged in session, one small thing at a time. Kaizen ([[philosophy/kaizen]]) makes a brick reliable. A reliable brick is composable, and a composable brick moves down one rung of the process tree ([[philosophy/process-units]], [[philosophy/abstraction-ladder]]), toward the leaf: what was steered by the human in session becomes a dispatch; a dispatch that recurs becomes a workflow; a workflow that no longer needs judgment becomes a leaf. Mechanization is the end of the path: scripts and headless agents.
 
 Reliability makes the step down possible; reuse makes it worth taking. The path is Wardley's evolution axis: a brick starts at genesis, steered in session, and each rung down is a step of its commodification. Each rung trades judgment for a handover and a coordination step, and only a brick that runs often pays that back. So the head of the distribution, the low-level workflows run many times a day, commodifies first; the fat tail of one-off work stays at genesis ([[philosophy/context-splitting]], where to stop).
 
@@ -39,7 +39,7 @@ before: loop run by the session agent         after: script, run by nobody
 ## Related
 
 - The layers and their inertia: [[philosophy/three-layer-harness]].
-- The units of process: [[philosophy/session-design]].
+- The units of process: [[philosophy/process-units]].
 - The ladder the brick descends: [[philosophy/abstraction-ladder]].
 - What each harness element is for: [[philosophy/harness-elements]].
 - What a brick lower on the path can be run by: [[philosophy/model-tiers]].

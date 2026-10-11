@@ -20,7 +20,7 @@ tags: [harness-design, vocabulary]
 
 One definition can serve as sub-agent, then headless: the call tells them apart, and the move from the first to the second is the agent's path ([[philosophy/harness-direction]]).
 
-These elements are not the process units ([[philosophy/session-design]]): an element materializes a unit.
+These elements are not the process units ([[philosophy/process-units]]): an element materializes a unit.
 
 ```
  element                   materializes                                        cynefin
@@ -46,6 +46,6 @@ Prose asks; code guarantees. An instruction the agent "must always" follow, on s
 
 ## Related
 
-- The process units the elements materialize: [[philosophy/session-design]].
+- The process units the elements materialize: [[philosophy/process-units]].
 - The path an agent travels, from posture to headless: [[philosophy/harness-direction]].
 - The layers each element is written in: [[philosophy/three-layer-harness]].

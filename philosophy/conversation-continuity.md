@@ -6,7 +6,7 @@ tags: [handover, conversation-continuity, context-economics, attractors]
 
 Why a conversation can be left, resumed or branched at any point, and why the handover that does it carries intent and pointers, and nothing that would shape the receiving agent's judgment before it has looked.
 
-A handover is the communication layer between sessions ([[philosophy/session-design]]). It points at the session's working document instead of carrying the state.
+A handover is the communication layer between sessions ([[philosophy/process-units]]). It points at the session's working document instead of carrying the state.
 
 ## The cases
 

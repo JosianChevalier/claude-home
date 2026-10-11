@@ -4,7 +4,7 @@ tags: [harness-design, session-design, variety-absorption]
 
 # The abstraction ladder
 
-**Thesis.** Ways of working that let kairos reach the engineer ([[philosophy/metis-kairos]]) take the shape of a ladder: levels ordered by abstraction, each absorbing the variety it can and passing the rest one rung up. This file is the general pattern; each sighting reads it first and keeps only what is specific to its own rungs.
+**Thesis.** Ways of working that let kairos reach the engineer ([[philosophy/metis-kairos]]) take the shape of a ladder: levels ordered by abstraction, each absorbing the variety it can and passing the rest one rung up. This file is abstraction layering, the pattern; each sighting is a ladder, an instance of it. A sighting reads this file first and keeps only what is specific to its own rungs.
 
 Each rung delegates cognitive load and context to the rung below, and takes back only what that rung could not absorb. Down is closer to where variety arrives first.
 
@@ -38,7 +38,7 @@ In every sighting the top rung is also the slowest, and pace layering (Brand) ap
 | Ladder | Top | Bottom | Where |
 |---|---|---|---|
 | Knowledge | philosophy | know-how | [[philosophy/three-layer-harness]] |
-| Process | session, the human | leaf | [[philosophy/session-design]] |
+| Process | session, the human | leaf | [[philosophy/process-units]] |
 | Feedback | philosophy on trial, last | know-how, first | [[philosophy/kaizen]] |
 | Harness direction | steered in session | headless | [[philosophy/harness-direction]] |
 | The belt, two rungs | the engineer's type | the code's concept | [[philosophy/transmission-belt]] |

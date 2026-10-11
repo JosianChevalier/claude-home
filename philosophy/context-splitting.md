@@ -54,4 +54,4 @@ The gap between the two is Wardley's evolution axis, the path down from genesis 
 
 - Why context is scarce: [[philosophy/context-economics]].
 - The handover file between temporal steps: [[philosophy/session-state-in-documents]].
-- The process units a cut produces, dispatch and leaf: [[philosophy/session-design]].
+- The process units a cut produces, dispatch and leaf: [[philosophy/process-units]].
