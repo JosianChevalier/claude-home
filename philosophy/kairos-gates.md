@@ -2,24 +2,56 @@
 tags: [collaboration, harness-design, workflow, domain-modeling]
 ---
 
-# Rationale: Kairos Gates
+# Kairos gates
 
-The core of the agentic loop is how the work that must be done gets done, and the kairos that matters most arrives inside it, through the belt ([[philosophy/metis-kairos]]). Gates are something else: because the loop is a built process, codified in sessions and workflows, steps can be added on top of it. A gate is such a step, a plugin at a chosen moment, where the practice or the model is reflected on before the belt moves again.
+**Doctrine.** Where kairos recurs, build a step so the moment is seized by design, not by luck.
 
-## What a gate can do
+The core of the agentic loop is how the work that must be done gets done. The kairos that matters most arrives inside it, through the belt, and is seized by metis or missed ([[philosophy/metis-kairos]]). The loop is a built process, codified in sessions and workflows, so steps can be added on top of it. A gate is such a step: the practice or the model is reflected on before the belt moves again.
 
-- **Force the improvement.** Make a team think about continuous improvement by making kaizen a step, not an intention.
-- **Run the chores.** The extra checks the work would skip, or automate them: updating documentation, running the audit.
-- **Add expertise at a step.** Opportunities for learning, by baking in agents that gather insight from a specific practice, DDD among them, or reflect on the work just done.
+```
+request ──▶ plan ──▶ change ──▶ change ──▶ ship ──▶ end of session
+   │                    │                    │            │
+ gate                 gate                 gate         gate
+ rival reading        model tensions       security     kaizen
+```
 
-## Where the library becomes legitimate
+## What a gate injects, by example
 
-The agent holds sedimented culture, not a situated type ([[philosophy/type-and-concept]]). That familiarity is illegitimate as adjudication and legitimate as *supply*. Gopnik's finding on ambiguous figures: reversal is impossible until someone hands you the alternative representation; informed versus uninformed is the variable, not intelligence. A gate that asks whether the DDD conception holds, whether the right question was asked, whether an Order in this codebase is also a revenue event elsewhere, is the library making a flip available.
+- **A reminder.** Kaizen as a step at the end of a session, not an intention ([[philosophy/kaizen]]).
+- **A chore.** The checks the work would skip: updating documentation, running the audit.
+- **Expertise.** A practice, at the moment it applies. Below.
 
-The first gate is the request itself. Calibration, the first response before anything is built, is where a rival reading of what was asked goes on the table: the cheapest moment for a flip, since nothing has been predicated yet. Later gates are adjustments along the way; the first-turn stop in the planning and study skills is this gate, named.
+## Expertise
 
-Only the situated type has the horizon to decide whether the flip applies. So: the agent puts a rival figure on the table because it has met it elsewhere; the resolution is the engineer's, because origination requires a horizon the agent does not have. This is sparring in the maieutic sense, and it lives on this axis only. It never crosses into the base layer, where the belt simply runs ([[philosophy/transmission-belt]]).
+A practice enters the team's loop as a step, at the moment it applies. Examples, not a list:
 
-## Dimension, not value
+- after each domain-model change, an agent carrying DDD inspects the model for tensions and raises an alert
+- before a change ships, a security review
+- before a feature is planned, a product challenge, or a grill of the plan
+- before the work starts, the metrics it will move and the hypothesis it tests, written down
 
-Transparency and gates are a distinction of dimension, not of value. Transparency is the belt running, and the kairos it carries is the engineer's to seize. Gates are the opportunities seized on top of it, to go one step further than the work required.
+Any practice fits the pattern: name its moment, build the step. This is how a new practice or a new habit takes hold: not taught once, met every time its moment comes. The same step shows when the question exceeds what the loop can answer, and expertise must be escalated.
+
+### Where it is legitimate
+
+The agent holds sedimented culture, not a situated type ([[philosophy/type-and-concept]]). That familiarity is illegitimate as adjudication and legitimate as *supply*. Gopnik's finding on ambiguous figures: reversal is impossible until someone hands you the alternative representation; informed versus uninformed is the variable, not intelligence. A gate that asks whether an Order in this codebase is also a revenue event elsewhere is the library making a flip available. The resolution is the engineer's.
+
+### The first gate
+
+The request itself. Calibration, the first response before anything is built, is where a rival reading of what was asked goes on the table: the cheapest moment for a flip, since nothing has been predicated yet. The first-turn stop in the planning and study skills is this gate, named.
+
+## Gates and transparency
+
+Kairos is seized two ways:
+
+- through a gate, for the known unknowns: the moment is known to recur, so a step is built at its place
+- through transparency, for the unknown unknowns: the belt shows the work and the engineer catches, by metis, the moment nobody planned for ([[philosophy/transmission-belt]])
+
+Neither replaces the other.
+
+## Related
+
+- Kairos seized unplanned, through the belt: [[philosophy/metis-kairos]].
+- The base layer a gate sits on: [[philosophy/transmission-belt]].
+- The reminder gate: [[philosophy/kaizen]].
+- Why the agent supplies and never adjudicates: [[philosophy/type-and-concept]].

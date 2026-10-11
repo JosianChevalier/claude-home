@@ -36,7 +36,7 @@ The return path exists to keep this dynamic on the engineer's side. What comes b
 The harness is not the agent's intelligence. It is the entire development process, and friction-feel is a property of that process — an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. Two axes of design follow:
 
 - **Base layer: transparency.** The engineer stays situated in the code through direct feedback on change — highlighted diffs, diagrams, the implications of a change shown as it is made. This is the channel through which metis perceives; remove the showing and you have the recruit's condition at the speed of an agent. How to show is cartography ([[philosophy/zoom-levels]]); *why* it must be shown is this document.
-- **Second axis: kairos.** Gates where the agent's sedimented culture supplies a second reading before the belt moves again: [[philosophy/kairos-gates]].
+- **Second axis: kairos.** Gates: steps built into the loop where expertise, a reminder, or a chore is injected so the moment can be seized before the belt moves again: [[philosophy/kairos-gates]].
 
 ## What follows for a session
 

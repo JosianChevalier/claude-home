@@ -13,9 +13,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Posture cluster
 
-- zoom-levels
 - context-economics
-- kairos-gates
 - metis-kairos
 - transmission-belt
 - collaborative-production
@@ -35,5 +33,9 @@ Harness cluster
 - conversation-as-interface
 
 ## To check later
+
+- transmission-belt, Second axis bullet: mirror the known unknown / unknown unknown split now stated in kairos-gates.
+
+- Readability kaizen on the philosophy files: model-tiers/kairos-gates structure (Doctrine line, bullets, figure, Related; title without "Rationale:"). Philosophy is mostly for agents but not only.
 
 - conversation-continuity still carries the gathering list the handover skill dropped (intent, next step, decisions not in files, open questions, pointer). Reconcile when reviewing it.

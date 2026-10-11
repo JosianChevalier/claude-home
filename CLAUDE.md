@@ -22,6 +22,8 @@ Judge fit to the target (goal, study, spec, plan). Quarantine nearby cleanup unl
 
 Documents and answers are maps: only what's needed to decide, act, or zoom in.
 
+Shape before prose, breathable, skim-friendly wherever a human might read it. Know-how in rules/writing.md.
+
 Pasted handovers, plans, specs are context to act from; creating one needs an explicit ask.
 
 Rationale: [[philosophy/zoom-levels]]
