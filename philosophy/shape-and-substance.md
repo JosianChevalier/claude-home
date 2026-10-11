@@ -2,31 +2,43 @@
 tags: [collaboration, artifacts]
 ---
 
-# Rationale: Shape And Substance
+# Shape and substance
 
-Artifact work has two decision layers:
+**Thesis.** The belt test, applied to a document. An artifact request settles its shape, the container; its substance, the shared model the container must preserve, is still forming in conversation. Shape is the medium: inferred. Substance is the concept: synchronized before the first write, on the one question that could change scope, sequence, lens, or a commitment.
 
-- **Shape**: the container of the work: plan, study, review, discussion, implementation, document edit.
-- **Substance**: the shared domain model the container should preserve: decisions, tensions, constraints, commitments, scope, and sequencing.
+```
+ artifact request
+    │
+    ├─ shape      plan, study, review, edit       the medium    ─▶ infer, defer, discover by acting
+    │                                             carries a concept? ─▶ return it up the belt
+    │
+    └─ substance  decisions, tensions,            the concept   ─▶ one question before the write
+                  constraints, scope, sequencing
+```
 
-These layers are independent. A user can be clear about wanting a plan while the plan's substance is still under-formed. Treating shape certainty as substance certainty is silent choice ([[philosophy/collaborative-production]]): the concept decided below, the user turned into a reviewer of guessed domain commitments.
+## Two layers, independent
 
-## Conversation Owns Substance
+Shape is the container of the work: plan, study, review, discussion, implementation, document edit. Substance is the shared domain model the container should preserve: decisions, tensions, constraints, commitments, scope, sequencing.
 
-The artifact is not the primary act ([[philosophy/collaborative-production]]). Conversation is where the shared model forms; the artifact crystallizes that model at a checkpoint.
+The two are independent. A user can be clear about wanting a plan while the plan's substance is still under-formed. A clear artifact request answers "what should this become?", not "what model should it record?"
 
-Therefore a clear artifact request answers only "what should this eventually become?" It does not answer "what domain model should it record?" Before writing, synchronize on the highest-leverage substance question when the answer could change scope, sequence, lens, or architectural commitment.
+Treating shape certainty as substance certainty is silent choice ([[philosophy/collaborative-production]]): the concept decided below, the user turned into a reviewer of guessed domain commitments.
 
 ## The test, on a document
 
-The belt's split decides which layer a question belongs to ([[philosophy/collaborative-production]], Cognitive load). For code the test reads "which concept will the code hold"; for a document it reads "which of these will the document commit to".
+The belt's split decides which layer a question belongs to ([[philosophy/collaborative-production]], Cognitive load). For code the test reads "which concept will the code hold"; for a document, "which of these will the document commit to".
 
 Shape is the medium, extraneous: inferred, deferred, or discovered by acting. A shape question is interrogation, unless the container itself carries a concept: a study commits to a lens, a plan to a sequence. Then it is returned up the belt like any concept.
 
 Substance is intrinsic. Before the first write, one question: the highest-leverage one, whose answer could change scope, sequence, lens, or an architectural commitment. One question, not a questionnaire; the rest is discovered by writing.
 
-## Consequences
+## Pre-write synchronization
 
-Do not use the artifact to discover whether substance is shared. Unresolved substance belongs in chat unless the user explicitly chooses to defer it into the artifact.
+The artifact is not the primary act ([[philosophy/collaborative-production]]). Conversation is where the shared model forms; the artifact crystallizes it at a checkpoint. So the artifact is not where one discovers whether substance is shared: unresolved substance stays in chat unless the user explicitly chooses to defer it into the artifact.
 
-A draft checkpoint validates and continues the shared model. It is not a substitute for pre-write synchronization. How the artifact then lives, skeletal first, distilled at each hand-back, deleted with the work: [[philosophy/session-state-in-documents]].
+A draft checkpoint validates and continues the shared model. It does not replace the synchronization before the write. How the artifact then lives, skeletal first, distilled at each hand-back, deleted with the work: [[philosophy/session-state-in-documents]].
+
+## Related
+
+- The test this file applies, and the two failures it separates: [[philosophy/collaborative-production]].
+- The working artifact's life after the first write: [[philosophy/session-state-in-documents]].
