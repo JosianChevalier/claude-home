@@ -25,8 +25,7 @@ Order: fewest outgoing links first, mutual pairs adjacent, one cluster at a time
 
 Harness cluster
 
-- harness-elements
-- harness-direction (claimed)
+- harness-elements (claimed)
 - session-design
 - session-state-in-documents
 - conversation-continuity
