@@ -2,9 +2,9 @@
 tags: [harness-design, reliability, determinism]
 ---
 
-# Rationale: Compounding Decisions
+# Compounding decisions
 
-Every decision an agent takes has a small chance of going wrong, and the chances multiply.
+**Thesis.** Every decision an agent takes has a small chance of going wrong, and the chances multiply. The number of decisions an artifact asks of the agent is a design quantity, like the size of its context.
 
 ## The arithmetic
 
@@ -16,7 +16,7 @@ Reliability engineering calls it a **series system**: a chain that works only if
 | 50 | 61% | 8% |
 | 100 | 37% | under 1% |
 
-A model that is right 99 times out of 100 is impressive on one decision and unreliable over a long run. The number of decisions an artifact asks of the agent is therefore a design quantity, like the size of its context.
+A model that is right 99 times out of 100 is impressive on one decision and unreliable over a long run.
 
 ## What counts as a decision
 
@@ -32,14 +32,30 @@ A harness element has two measures. **Waste** is what it costs when it works: to
 
 This is why the same remedies usually serve both measures.
 
-## Three ways to shorten the chain
+## Four levers
+
+Three shorten the chain; the fourth works on each link.
 
 1. **Remove the decision.** What can and should be deterministic becomes a script, a hook or a tool; what has one good answer becomes a default written in the artifact ([[philosophy/harness-elements]]).
-2. **Check between steps.** A check does not reset the chain, it shortens it to what the check misses: an error caught there does not compound into the next step, an error missed continues at the original rate. Tests, a script that validates an output, a reviewing sub-agent with fresh context. Several validators in a row multiply their miss rates only if they fail independently; validators of the same model family share their biases, so the gain is smaller than the product (`nn-validation` in agentic-patterns for the distinct-agent form).
+
+2. **Check between steps.** A check does not reset the chain, it shortens it to what the check misses: an error caught there does not compound into the next step, an error missed continues at the original rate. Tests, a script that validates an output, a reviewing sub-agent with fresh context.
+
+   Several validators in a row multiply their miss rates only if they fail independently. Validators of the same model family share their biases, so the gain is smaller than the product (`nn-validation` in agentic-patterns for the distinct-agent form).
+
 3. **Put the human on the decisions that matter.** A decision that changes which concept the work will hold is returned to the person, who is the most reliable link for it ([[philosophy/collaborative-production]]). The rest stays with the agent.
 
-The other lever is on the base, not the exponent: each decision more often right. That is kaizen's work, a failed decision traced to the know-how it used and the know-how fixed ([[philosophy/kaizen]]). It moves the table one column, never flattens the curve, and it is how a decision earns its removal: made trivial, it moves down the path to commodity and ends as a script ([[philosophy/harness-direction]]).
+4. **Raise `p`.** The lever on the base, not the exponent: each decision more often right. That is kaizen's work, a failed decision traced to the know-how it used and the know-how fixed ([[philosophy/kaizen]]). It moves the table one column, never flattens the curve.
+
+   It is also how a decision earns its removal: made trivial, it moves down the path to commodity and ends as a script ([[philosophy/harness-direction]]).
 
 ## Limits
 
 The model is a simplification. Decisions are not independent, not all errors are fatal, and some are self-correcting (a failing test). It is used to compare two designs of the same artifact, never to compute a success rate.
+
+## Related
+
+- Waste, its three currencies, and posture as the upstream cause: [[philosophy/collaborative-production]].
+- Why `p` falls as the context grows: [[philosophy/context-economics]].
+- Deterministic what can and should be: [[philosophy/harness-elements]].
+- The deterministic net between two cuts, where the checks go: [[philosophy/context-splitting]].
+- Raising `p`, and the path from a reliable decision to a script: [[philosophy/kaizen]], [[philosophy/harness-direction]].
