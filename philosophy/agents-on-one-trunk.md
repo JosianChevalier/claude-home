@@ -4,6 +4,12 @@ tags: [trunk-based-development, agents, worktrees, concurrency]
 
 # Agents on one trunk
 
+## One thing, three storages
+
+A branch, a clone, a worktree are the same object: a **delta from trunk, with a lifetime**. They differ in where the delta is stored — a ref, another directory, another machine — and in nothing that matters. What a delta does to a team is decided by how long it lives, not by where it sits.
+
+A developer's local clone is a branch: the unpushed commits are the delta, `pull --rebase` rebases it on trunk, `push` fast-forwards trunk to it. Nobody calls it branching, and it is.
+
 ## A worktree is a trunk-based committer
 
 Trunk-based development is commit on trunk: the lifetime of a delta is one commit, and that bound is the only thing that ever defined a trunk-based committer ([[philosophy/trunk-based-development]]). A worktree that rebases on trunk and fast-forwards it at each commit meets the bound. It **is** a trunk-based committer — not similar, identical.
