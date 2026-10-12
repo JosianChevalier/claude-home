@@ -44,7 +44,7 @@ Overlap that **persists** across commits is a different fact. Two actors are wor
 
 ## The granularity is a skill
 
-Integrating at this pace is what a change split into atomic commits produces, not a discipline held at the keyboard. This file depends on the splitting skill and does not own it ([[philosophy/atomic-commit]]).
+Integrating at this pace requires atomic commits, and the skill of splitting a change into them ([[philosophy/atomic-commit]]).
 
 ## Related
 
