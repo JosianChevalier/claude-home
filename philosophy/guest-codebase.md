@@ -1,10 +1,11 @@
 ---
 tags: [guest-codebase, conventions, conceptual-integrity]
+context: guest codebase
 ---
 
 # Guest codebase
 
-**Thesis.** In a codebase another team owns, the owners hold the mandate over practices and architecture and we hold none. Conform to their intended style, keep the footprint small, and improve by sliding the norm one contribution at a time, never by asking for a redesign.
+**Thesis.** This posture applies in one case only: a codebase another team owns, where the owners hold the mandate over practices and architecture and we hold none. Conform to their intended style, keep the footprint small, and improve by sliding the norm one contribution at a time, never by asking for a redesign. Everywhere else — our own code, a context the owners hand us — none of it holds.
 
 ## Conformance is the default
 
