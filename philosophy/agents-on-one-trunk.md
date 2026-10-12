@@ -30,9 +30,9 @@ A rebase conflict is not a decision the agent takes alone. It is a check between
 
 ## What stays above the agents
 
-The granularity is the same as for humans: atomic commits, seconds apart ([[philosophy/atomic-commit]]). An agent is not at that granularity by nature; it gets there with the splitting skill, which the harness must carry.
+An agent is not at the atomic-commit granularity by nature; it gets there with the splitting skill, which the harness must carry ([[philosophy/atomic-commit]]).
 
-And the overlap signal is read above the agents, not by them: the same spatial overlap returning commit after commit means two actors hold the same thing, and it is time to synchronize — redraw who holds what, or merge the two into one. Agents or humans, the signal reads the same.
+And the overlap signal is read above the agents, not by them: persistent overlap means two actors hold the same thing, and redrawing who holds what is the navigator's decision, not a retry.
 
 ## Related
 
