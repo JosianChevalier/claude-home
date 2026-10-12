@@ -14,7 +14,7 @@ A developer's local clone is a branch: the unpushed commits are the delta, `pull
 
 Trunk-based development is commit on trunk: the lifetime of a delta is one commit, and that bound is the only thing that ever defined a trunk-based committer ([[philosophy/trunk-based-development]]). A worktree that rebases on trunk and fast-forwards it at each commit meets the bound. It **is** a trunk-based committer — not similar, identical.
 
-The storage was never the point. One worktree per agent is a convenience of the filesystem: separate working directories, one object store, one trunk.
+One worktree per agent is a convenience of the filesystem: separate working directories, one object store, one trunk.
 
 ## No orchestration between agents
 
