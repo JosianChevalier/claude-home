@@ -18,9 +18,8 @@ Small is not the test; same concern is. A one-line fix bundled with a one-line r
 
 ## Why the unit matters
 
-- **Revert.** One concern reverts alone. A bundled commit cannot be undone without undoing the other thing.
+- **Loss.** A step that fails costs the step. The smaller it is, the less is redone, whether the failure is a red build or a rebase conflict.
 - **Proof.** For a semantics-preserving move the commit is the proof unit: one move, one commit, safe before the diff existed ([[philosophy/mechanical-refactoring]]).
-- **Reading.** A history of one-concern commits reads as the reasoning it was. Bisect finds the concern, not the file.
 - **Integration.** Trunk-based development is integration at this granularity and no other: the atomic commit is what keeps the overlap window seconds wide and every state of trunk whole ([[philosophy/trunk-based-development]]).
 
 ## The skill is splitting
