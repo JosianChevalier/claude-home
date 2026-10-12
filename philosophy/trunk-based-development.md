@@ -32,9 +32,9 @@ Several actors committing to one trunk coordinate the way optimistic locking doe
 | commit | the fast-forward |
 | check fails | a rebase conflict: retry on the new base |
 
-The premise of optimistic locking is that conflicts are rare compared to the cost of synchronizing. The one-commit bound makes the premise true by construction: the window for two deltas to overlap is seconds wide, and when the check fails the retry is a few lines, paid by the one who conflicted. Nobody else waits, nobody agrees on anything beforehand. Collaboration costs almost no communication bandwidth because it fails fast instead of synchronizing.
+The one-commit bound makes optimistic locking's premise true by construction: the window for two deltas to overlap is seconds wide, and when the check fails the retry is a few lines, paid by the one who conflicted. Nobody else waits, nobody agrees on anything beforehand. Collaboration costs almost no communication bandwidth because it fails fast instead of synchronizing.
 
-The pessimistic alternative — partition the work up front, each actor owning a region — pays the cost of synchronization on every unit of work to avoid a conflict that mostly would not have happened.
+Partitioning the work up front is the pessimistic scheme: the cost of synchronization paid on every unit of work, against a conflict that mostly would not have happened.
 
 ## The overlap signal
 
