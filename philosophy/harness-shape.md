@@ -22,7 +22,7 @@ Doctrine is what must always be true: the intent, the result wanted, the posture
 
 How it is written:
 
-- **Quoted or coined.** Both are doctrine.
+- **Quoted or coined.** Both are doctrine. A quoted saying keeps its author's meaning; a name that fits only loosely is dropped and the line coined.
 - **One name, `Doctrine`.** Whatever a file called it before, it becomes this one. It heads the file, or a section, when a section has doctrine of its own.
 - **Every rule and skill carries it.** The `Doctrine` header is the one fixed element of the shape; its place is not.
 - **Agents differ.** In an agent, and in `CLAUDE.md`, the doctrine is the posture and the objective, under their own names (`Postures`). A skill or rule is know-how with a little doctrine; an agent is doctrine with little know-how, the steps living in the skills it composes.
