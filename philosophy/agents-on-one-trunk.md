@@ -20,6 +20,8 @@ One worktree per agent is a convenience of the filesystem: separate working dire
 
 Several agents can therefore work on the same local repository with nothing coordinating them: each commits, fast-forwards trunk, rebases on it, at every commit. The coordination is the one trunk-based development already has, optimistic locking, and nothing is added for agents ([[philosophy/trunk-based-development]]).
 
+The agents are often from different sessions, with no channel between them but the repository. The scheme fits them better than it fits humans: a retry costs an agent less, and the collision window is shorter still, since the commits come faster.
+
 An orchestrator partitioning the work up front is the pessimistic scheme. For agents it costs more than for humans: a decision at every dispatch, a chain of its own ([[philosophy/compounding-decisions]]), to avoid conflicts that mostly would not have happened.
 
 ## The trunk is the communication channel
