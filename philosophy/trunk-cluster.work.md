@@ -5,7 +5,7 @@ rank: 2
 
 # Trunk cluster
 
-Five philosophy files and one study on one idea: code integrated on trunk at the smallest granularity there is, the atomic commit, by humans and agents alike. Three drafted 2026-10-12 (commit 2f31178), two to write. Review in conversation, one issue per turn; the file is written and committed right after each decision, one commit per decision (MO in `sync-repo.work.md`). Review notebook of the 2026-10-13 session: `/tmp/trunk-cluster-review.md`, may be gone.
+Five philosophy files and one study on one idea: code integrated on trunk at the smallest granularity there is, the atomic commit, by humans and agents alike. Three drafted 2026-10-12 (commit 2f31178), two to write. Review in conversation, one issue per turn; the file is written and committed right after each decision, one commit per decision (MO in `sync-repo.work.md`).
 
 ## Steps
 
