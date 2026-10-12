@@ -35,4 +35,4 @@ The splitting is learnable, and most of it is mechanical: a refactoring decompos
 - Every commit releasable: [[philosophy/continuous-delivery]].
 - One move, one commit, the commit as proof unit: [[philosophy/mechanical-refactoring]].
 - Make the change easy, then make the easy change: [[philosophy/make-the-change-easy]].
-- Where the floor pays: [[philosophy/trunk-based-development]], [[philosophy/agents-on-one-trunk]].
+- Where the floor pays: [[philosophy/trunk-based-development]], [[philosophy/agentic-trunk-based-development]].

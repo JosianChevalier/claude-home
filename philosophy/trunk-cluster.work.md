@@ -1,5 +1,5 @@
 ---
-ongoing_work_file: "Iterate the trunk cluster to landed: trunk-based-development, atomic-commit, agents-on-one-trunk, then mechanical-refactoring and make-the-change-easy. Empty when each has a thesis, a shape pass, a mapping row in sync-repo.work.md, and this file is deleted."
+ongoing_work_file: "Iterate the trunk cluster to landed: trunk-based-development, atomic-commit, agentic-trunk-based-development, then mechanical-refactoring and make-the-change-easy. Empty when each has a thesis, a shape pass, a mapping row in sync-repo.work.md, and this file is deleted."
 rank: 2
 ---
 
@@ -12,7 +12,7 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
 - [ ] Review the three drafts, in reading order. **← current**
   - [ ] `trunk-based-development`: the concept. Read first.
   - [ ] `atomic-commit`: the granularity, and the splitting skill.
-  - [ ] `agents-on-one-trunk`: the consequence for worktrees and agents.
+  - [ ] `agentic-trunk-based-development`: the consequence for worktrees and agents.
 - [ ] Thesis line per file, after the sections stand. Short: the file is not compressed into it.
 - [ ] Write `mechanical-refactoring` (backlog: `old-claude/rationale/mechanical-refactoring.md`, tags `refactoring, atomic-commit, verification`): the mechanical split of a refactoring into moves safe by construction.
 - [ ] Write `make-the-change-easy`: make the change easy, then make the easy change, pushed to the extreme. No old counterpart known; check `old-claude/` first.
@@ -33,7 +33,7 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
 
 ## Open
 
-- Name `agents-on-one-trunk`: coined, to confirm.
-- Sentence in `agents-on-one-trunk`: "the overlap signal is read above the agents, not by them". An agent conflicting twice on the same lines could read it itself; placed above because synchronizing is the navigator's decision.
+- Name `agentic-trunk-based-development`: coined, to confirm.
+- Sentence in `agentic-trunk-based-development`: "the overlap signal is read above the agents, not by them". An agent conflicting twice on the same lines could read it itself; placed above because synchronizing is the navigator's decision.
 - Where the git mechanics live (trunk may not be a checked-out working tree; fast-forward refused otherwise): a rule, not philosophy. Successor of `old-claude/rules/branch-hygiene.md`, phase 3.3.
 - `atomic-commit` cites "tested" as half of whole; whether that is the skill's test or the file's claim.

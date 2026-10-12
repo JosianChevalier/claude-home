@@ -1,8 +1,8 @@
 ---
-tags: [trunk-based-development, agents, worktrees, concurrency]
+tags: [trunk-based-development, agentic-extreme-programming, agents, worktrees, concurrency]
 ---
 
-# Agents on one trunk
+# Agentic trunk-based development
 
 ## One thing, three storages
 

@@ -49,6 +49,6 @@ Integrating at this pace requires atomic commits, and the skill of splitting a c
 ## Related
 
 - What makes a commit atomic, and the splitting skill: [[philosophy/atomic-commit]].
-- The same practice for agents sharing one repository: [[philosophy/agents-on-one-trunk]].
+- The same practice for agents sharing one repository: [[philosophy/agentic-trunk-based-development]].
 - Every commit releasable: [[philosophy/continuous-delivery]].
 - Batch size as the dominant variable, the atomic commit as its floor: [[philosophy/small-batches]].
