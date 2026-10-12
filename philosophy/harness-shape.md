@@ -14,7 +14,7 @@ tags: [harness-design, kaizen]
 
 ## Doctrine
 
-Doctrine is what must always be true: the intent, the result wanted, the posture, in a few attractors ([[philosophy/attractors]]). A heuristic belongs here when it holds in every case; an aphorism is the compact form.
+Doctrine is what must always be true: the intent, the result wanted, the posture, in a few attractors ([[philosophy/attractors]]). A heuristic belongs here when it holds in every case, and it is written as a maxim or an aphorism: a known saying when one fits, a coined one otherwise. A line that carries a condition or a step ("only what would…", "before X, do Y") is know-how, whatever header it sits under.
 
 - "Make the change easy, then make the easy change."
 - "Mecha suit, not robot."
