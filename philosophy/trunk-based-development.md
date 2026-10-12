@@ -18,7 +18,7 @@ There is no "committed but not yet shared" state. Everything the practice promis
 
 ## Branches are the exception
 
-"Short-lived branches" does not mean branch first and merge soon. It means: no branch, and when one is inevitable it lives hours. Ship/show/ask gives one of the few acceptable cases: isolate the part that must be asked, and only that part, onto a branch; the rest ships on trunk. The branch's commits obey the same discipline as trunk's ([[philosophy/continuous-delivery]]).
+"Short-lived branches" does not mean branch first and merge soon. It means: no branch, and when one is inevitable it lives hours at most. Ship/show/ask gives one of the few acceptable cases: isolate the part that must be asked, and only that part, onto a branch; the rest ships on trunk. The branch's commits obey the same discipline as trunk's ([[philosophy/continuous-delivery]]).
 
 ## Coordination is optimistic locking
 
