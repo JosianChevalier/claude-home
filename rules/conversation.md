@@ -23,6 +23,6 @@
 - The next message is probably "tl;dr" if the turn goes out as drafted: write it as that answer, so the ask is never spent.
 - A large dump is skipped whole; what it carried never reached the reader.
 - Shape before prose: lists, ascii diagrams, `====` separators. Markdown renders weakly.
-- More than a couple of items in flight, or drift: a `/tmp` notebook, a quick list with the concern on each.
+- The `/tmp` notebook opens when the list of items first exists, at the read of a work file or the first issue found, not when it feels crowded: the threshold is never felt from inside. One line with the concern on each; drift reopens it.
 
 Rationale: [[philosophy/conversation-as-interface]], [[philosophy/zoom-levels]]
