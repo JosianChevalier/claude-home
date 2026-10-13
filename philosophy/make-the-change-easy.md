@@ -1,5 +1,5 @@
 ---
-tags: [refactoring, small-batches, probe-sense-respond, planning]
+tags: [refactoring, small-batches, conceptual-integrity, probe-sense-respond, planning]
 ---
 
 # Make the change easy
@@ -24,7 +24,7 @@ There are never only two steps. The feature goes in small steps as well, and so 
 
 ## Finding the path
 
-Between the code as it is and the code that holds the feature lies a valley (Kauffman). Making the change easy is finding a path that can be done in small steps: each step reaches an adjacent possible, and the depth of the valley to walk in is kept to the least.
+A redesign changes the code from one concept to another, and through the steps in between its conceptual integrity is broken (Brooks, [[philosophy/model-phenomenology]]): that is the valley (Kauffman). Making the change easy is finding a path that can be done in small steps: each step reaches an adjacent possible, and the depth of the valley to walk in is kept to the least.
 
 That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), small batches ([[philosophy/small-batches]]) and continuous delivery ([[philosophy/continuous-delivery]]).
 
