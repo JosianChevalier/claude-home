@@ -23,6 +23,6 @@
 - The next message is probably "tl;dr" if the turn goes out as drafted: write it as that answer, so the ask is never spent.
 - A large dump is skipped whole; what it carried never reached the reader.
 - Shape before prose: lists, ascii diagrams, `====` separators. Markdown renders weakly.
-- The `/tmp` notebook opens when the list of items first exists, at the read of a work file or the first issue found, not when it feels crowded: the threshold is never felt from inside. One line with the concern on each; drift reopens it.
+- The `/tmp` notebook opens when the list of items first exists, at the read of a work file or the first issue found, not when it feels crowded: the threshold is never felt from inside. One line with the concern on each; drift reopens it. It dies with the session: what must outlive it goes to the work file, and nothing outside the session names it.
 
 Rationale: [[philosophy/conversation-as-interface]], [[philosophy/zoom-levels]]
