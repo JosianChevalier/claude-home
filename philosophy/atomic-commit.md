@@ -24,6 +24,8 @@ Atomic is not enough: the commit must be meaningful, and a step is meaningful wh
 - **Proof.** For a semantics-preserving move the commit is the proof unit: one move, one commit, safe before the diff existed ([[philosophy/mechanical-refactoring]]).
 - **Integration.** Trunk-based development is integration at this granularity and no other: the atomic commit is what keeps the overlap window seconds wide and every state of trunk whole ([[philosophy/trunk-based-development]]).
 
+By hand, the unit is for the brain, and a push to move on: write the line, change it five times, the small safe step is what counts. Agentic, generation is cheap and the price moves to validating: the commit becomes the unit of validation, the largest change that still validates as one ([[philosophy/agentic-trunk-based-development]]).
+
 ## The skill is splitting
 
 Seconds between commits is not a pace to hold, it is what a well-split change produces. Teams that did not integrate at this granularity were not slow at committing; they could not see the small steps inside the large one.
