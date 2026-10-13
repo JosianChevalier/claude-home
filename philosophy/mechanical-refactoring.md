@@ -6,6 +6,8 @@ tags: [refactoring, atomic-commit, verification]
 
 ## Safe before the diff exists
 
+Any refactor, however large, decomposes into moves that are safe a priori. Use them to change the shape of the code without risking errors.
+
 A refactoring move, rename, extract a function, inline a variable, move a side-effect-free line, make immutable what nothing mutates, delete dead code, is **semantics-preserving by construction**. It is valid whatever the code means, the way substituting equals for equals is valid whatever the expression denotes (Leibniz). A tool could apply it or verify it. Tests confirm the move; they are not what makes it safe. The safety was known before the diff existed, and it lives in the process, not in the reader.
 
 This is what makes chaining possible. A chain of moves each safe is safe as a whole: proof composes. A single large step must be proven from scratch, and the only proof available is understanding the code, which is exactly what the small step was meant to spare.
@@ -22,7 +24,7 @@ Agentic, this is where the gain is. Generation is cheap and validation is the pr
 
 A refactor does not change the underlying model, so tests and observable behavior are preserved. A redesign changes the model, and can break the tests. Behavior may still be preserved, but knowing it takes understanding the old and the new: it cannot always be mechanical.
 
-That is the boundary. Every refactor, however large, decomposes into moves that cost no understanding, as long as the model holds. Where the model changes, the mechanical part ends and the work is a redesign, taken in steps of its own and alternated with the refactors that prepare it ([[philosophy/make-the-change-easy]]).
+That is the boundary of the claim: moves cost no understanding as long as the model holds. Where the model changes, the mechanical part ends and the work is a redesign, taken in steps of its own and alternated with the refactors that prepare it ([[philosophy/make-the-change-easy]]).
 
 ## Understanding is the output of the chain
 
