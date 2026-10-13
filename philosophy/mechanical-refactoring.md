@@ -26,7 +26,7 @@ If a diff is not glanceable, it is not a move. Split it into moves that are, or 
 
 Substitution holds where the code is **referentially transparent**. Functional-style code holds it everywhere: every move applies, no check.
 
-Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check. Local moves, rename, extract, inline, hold anywhere, spaghetti included. Global moves, reorder, loop to map, hold on side-effect-free code only, and the check surfaces every use of what the move touches; its reach grows with coupling. Local moves do the groundwork until the code is side-effect-free and the check vanishes.
+Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check. Local moves, rename, extract, inline, hold anywhere, spaghetti included. Global moves, reorder, loop to map, hold on side-effect-free code only, and the check surfaces every use of what the move touches; its reach grows with coupling. Local moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other ([[philosophy/agentic-extreme-programming]]).
 
 ## The boundary: redesign
 
@@ -55,3 +55,4 @@ A cleaning pass always pays for the agents that follow. The code is context: tan
 - One move, one commit, the commit as proof unit: [[philosophy/atomic-commit]].
 - Refactor and redesign alternated: [[philosophy/make-the-change-easy]].
 - Validation as the price: [[philosophy/agentic-trunk-based-development]].
+- Practices that reinforce each other: [[philosophy/agentic-extreme-programming]].
