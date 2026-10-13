@@ -14,7 +14,9 @@ It is the floor of batch size ([[philosophy/small-batches]]): below the plan, th
 
 The enemy of the atomic commit is proximity. A cleanup noticed nearby, a comment removed while passing, a refactoring that touches the file the feature touches: each is a second concern riding on the first. It gets a commit of its own, or a line in the plan, never a seat in this one.
 
-Small is not the test; same concern is. A one-line fix bundled with a one-line rename is two commits.
+Small is not the test. Atomic is the floor: an operation that cannot be split without breaking trunk. A rename across 12 files is one; counting lines or files measures the wrong thing.
+
+Atomic is not the commit. Several atomic operations fold into one commit as long as the reviewer validates the folded diff at once, by shape for a move, by the tests for a behavior. Rename a to b, b to a, a to c: three operations, one rename. If lines must first be sorted into concerns, it is two commits: a fix and a rename sort; an addition and its polish do not; tests on one unit of behavior do not either, they ask one functional change.
 
 ## Why the unit matters
 
