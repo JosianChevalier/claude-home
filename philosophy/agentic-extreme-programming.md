@@ -4,7 +4,7 @@ tags: [agentic-extreme-programming, practices, batch-size]
 
 # Agentic extreme programming
 
-**Thesis.** A coherent set of practices asks for no trade-off: its practices reinforce each other, and pushing one further pays on all the others.
+**Thesis.** A coherent set of practices asks for no trade-off, agentic programming included: its practices reinforce each other, and pushing one further pays on all the others.
 
 ## Synthesis, not middle ground
 
@@ -12,7 +12,7 @@ The dominant intuition is that software development is trade-offs: quality again
 
 XP says the reverse: turn all the knobs to 10 (Beck), turn up the good (Zuill). Good practices are complements (Milgrom & Roberts): each raises the return of the others. Testable code is better cut; better-cut code ships faster. The capability map that closes Accelerate draws it: everything enables everything.
 
-It held for XP and it holds agentic, with the same practices. That is the point of this file: agentic work needs no new balance, it turns the same knobs further.
+It held for XP and it holds agentic. The practices are not exactly the same set: they have been rethought for agentic programming.
 
 Feeling pulled between two sides is the test: the set is not coherent. The question is never which side to pull.
 
