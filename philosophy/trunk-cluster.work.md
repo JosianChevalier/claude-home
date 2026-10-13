@@ -15,7 +15,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
   - [x] `agentic-trunk-based-development`: substance done 2026-10-13; renamed from `agents-on-one-trunk`, tag `agentic-extreme-programming`.
   - [x] `atomic-commit`: substance done 2026-10-13; glanceable added as the test for a move. Shape pass: the heading "Same file is not same change" no longer names what the section holds (atomic and meaningful).
 - [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Three left: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`.
-- [ ] `agentic-extreme-programming`: first draft written 2026-10-13, thesis in. **← current.** Left: review in conversation, section by section. The five bullets of its "Agentic" section are one-line readings of the files they point to, not checked against them.
+- [ ] `agentic-extreme-programming`: first draft written 2026-10-13, thesis in. **← current.** Left: review in conversation, section by section; in section 1 of 4 ("Synthesis, not middle ground"), one point open: its two illustrations show one-way enabling, the claim is mutual. The five bullets of its "Agentic" section are one-line readings of the files they point to, not checked against them.
 - [ ] `make-the-change-easy`: the existing file, renamed from `workflow-rhythm` 2026-10-14, thesis in. Left: check it against the post below, fourth paragraph (refactors and redesigns alternated, features slipped in between).
 - [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands: `small-batches` at its migration, or its own file. Decide after the review.
 - [ ] Shape pass per file, second commit (`rules/writing.md`).
@@ -46,6 +46,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 - **Glanceable diff.** A diff whose validity is seen, not read: the test for a move, in both `mechanical-refactoring` (defined, section "The diff is its own proof") and `atomic-commit` (atomic for the trunk, glanceable for the reviewer; the agentic unit of validation is the largest change still glanceable). Property of the diff as presented, not of its size. Settled 2026-10-13.
 - **Agentic, a cleaning pass always pays.** The code is context: cleaned, it realigns the semantic valleys for the agents that follow. Its own step, a temporal cut: clean, then change. Settled 2026-10-13.
 - **`agentic-extreme-programming` is the frame of the cluster**, not a file on functional style: a coherent set of practices asks for no trade-off. The design discipline the moves presuppose is one instance in it. Settled 2026-10-13.
+- **The agentic practices are not XP's set unchanged**: they have been rethought for agentic programming. The thesis of `agentic-extreme-programming` stays the frame and says agentic in passing; the file has no second point. Settled 2026-10-14.
 
 ## Open
 
