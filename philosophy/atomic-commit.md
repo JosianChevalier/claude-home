@@ -20,6 +20,8 @@ Small is not the test. The commit must be atomic: an operation that cannot be sp
 
 Atomic is not enough: the commit must be meaningful, and a step is meaningful when the next step does not override it. Rename a to b, b to a, a to c is three atomic operations and one change, a to c. A step overridden right after was never a change; it folds into the step that overrides it, until the fold stands. An addition and its polish fold; a green step and the refactor that follows it fold; tests on one unit of behavior fold, they ask one functional change. A fix and a rename do not fold: neither overrides the other, two commits. What stands is validated at once, by shape for a move, by the tests for a behavior.
 
+The formal name is the **irreducible morphism** (category theory, in the spirit of Auslander–Reiten): an arrow that factors into two only trivially. A to c factors through b, trivially: a stop is trivial when the path could have been taken at once and the stop lightens no cognitive load.
+
 ## Why the unit matters
 
 - **Loss.** A step that fails costs the step. The smaller it is, the less is redone, whether the failure is a red build or a rebase conflict.
