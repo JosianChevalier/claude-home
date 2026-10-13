@@ -1,39 +1,57 @@
 ---
-tags: [refactoring, probe-sense-respond, planning]
+tags: [refactoring, small-batches, probe-sense-respond, planning]
 ---
 
 # Make the change easy
 
-**Thesis.** Every functional change is two moves — make the change easy, then make the easy change (Kent Beck) — and the rhythm repeats at every scale, because nothing in the argument mentions size.
+**Thesis.** Make the change easy, then make the easy change (Kent Beck) answers one question: how do I make small steps? Each of the two opens into the pair again, until every step is small.
 
-## Structure and behavior, one per diff
+## Never two steps
 
-A change mixes two concerns: **where the code should be shaped** (structure) and **what it should do** (behavior). Done together, each obscures the other — a diff that moves code *and* changes behavior cannot be verified for either.
+A new feature has to go in. Making the change easy is redesigning, so that the design holds the feature nicely. Making the easy change is implementing the feature in the new design.
 
-Splitting them restores verifiability: a refactoring diff proves behavior is preserved; a behavior diff, landing on prepared ground, is small enough to prove correct.
+But the redesign is not that simple. It takes the pair in turn: making the change easy is refactoring, and the easy change is the redesign.
+
+```
+a feature
+├ make the change easy: redesign, so the design holds the feature
+│  ├ make the change easy: refactor
+│  └ make the easy change: the redesign
+└ make the easy change: the feature, in the new design
+```
+
+There are never only two steps. The feature goes in small steps as well, and so does the refactoring ([[philosophy/mechanical-refactoring]]). The pair is fractal: it holds for a plan as for a commit, because nothing in the argument mentions size.
+
+## Finding the path
+
+Between the code as it is and the code that holds the feature lies a valley (Kauffman). Making the change easy is finding a path that can be done in small steps: each step reaches an adjacent possible, and the depth of the valley to walk in is kept to the least.
+
+That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), small batches ([[philosophy/small-batches]]) and continuous delivery ([[philosophy/continuous-delivery]]).
+
+## One kind of step at a time
+
+A step is one of three kinds. A refactor keeps the model: tests and observable behavior are preserved, and the diff is validated by its shape. A redesign changes the model and can break the tests: validating it takes understanding ([[philosophy/mechanical-refactoring]]). A feature changes what the code does.
+
+Done together, each obscures the other — a diff that moves code *and* changes behavior cannot be verified for either. Taken apart, each is verified its own way, and what lands on prepared ground is small enough to prove correct.
 
 This is separation of concerns applied to *time* rather than space: not "which module owns what" but "which commit carries what".
 
-## Preparation lowers the cost of the change
+## Preparing first costs less
 
-Reshaping first is not aesthetics — it changes the economics. Implementing against a misfit structure means paying the structural cost *inside* the feature: workarounds, conversions, edge cases born from the mismatch. Paying it upfront, as a separate refactoring, makes the implementation trivial — and the total cost lower, because workarounds compound while preparations don't.
+Reshaping first is not aesthetics — it changes the economics. Implementing against a misfit structure means paying the structural cost *inside* the feature: workarounds, conversions, edge cases born from the mismatch. Paying it upfront, as a separate step, makes the implementation trivial — and the total cost lower, because workarounds compound while preparations don't.
 
-The epistemic bonus: reshaping is the cheapest probe, probe in the planning rationale's sense: what a change will reveal cannot be known before acting ([[philosophy/planning-is-everything]]). It surfaces model tension ([[philosophy/model-phenomenology]]) before the feature is half-built, while backing out is still cheap.
+The epistemic bonus: reshaping is the cheapest probe, since what a change will reveal cannot be known before acting ([[philosophy/planning-is-everything]]). It surfaces model tension ([[philosophy/model-phenomenology]]) before the feature is half-built, while backing out is still cheap.
 
-## Fractal, because the argument is scale-free
+## The change shows what to clean next
 
-The two-move rhythm holds at plan scale (reshaping stages before feature stages), execution scale (atomic refactoring before TDD), and commit scale (refactoring commits before behavior commits) — because nothing in the argument mentions size. Verifiability, cost, and probing apply identically to a rename and to a plan stage; only granularity changes.
+Implementation reveals structure that preparation couldn't foresee — the new code, once in place, shows its own misfits. Cleaning up right after harvests that revelation while it is fresh and cheap, instead of leaving it as debt.
 
-A "make it easy" plan stage may itself contain refactoring → TDD cycles internally.
-
-## Cleanup closes the loop
-
-Implementation reveals structure that preparation couldn't foresee — the new code, once in place, shows its own misfits. Cleanup after (at every scale) harvests that revelation while it is fresh and cheap, instead of leaving it as debt for the next change's preparation phase.
-
-The rhythm is really three beats — prepare, implement, polish — with the third feeding the next cycle's first.
+So the pair alternates and has no last step: the cleanup after one change is the making easy of the next.
 
 ## Related
 
-- Why acting is the only way to know, and the rhythm at plan scale: [[philosophy/planning-is-everything]].
+- Refactor and redesign, and the line between them: [[philosophy/mechanical-refactoring]].
+- The small step itself: [[philosophy/atomic-commit]], [[philosophy/small-batches]], [[philosophy/continuous-delivery]].
+- Why acting is the only way to know: [[philosophy/planning-is-everything]].
 - Model tension, the felt misfit that reshaping surfaces: [[philosophy/model-phenomenology]].
 - The aphorism as doctrine, this file as its pointer: [[philosophy/harness-shape]].
