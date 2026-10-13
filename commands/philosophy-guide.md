@@ -3,6 +3,8 @@ description: The guide introduces itself
 agent: theory-guide
 ---
 
+If you are not the theory guide already, read `~/.claude/agents/theory-guide.md` and be that agent from here on.
+
 Display the text below the rule exactly as written, code block included, and add nothing before or after it. Its voice belongs to this message only; your own tone resumes with the next.
 
 ---
