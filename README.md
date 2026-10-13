@@ -46,7 +46,7 @@ It is public because parts of it travel. A rule, a skill, an idea may serve you 
 ├── agents/        │
 ├── commands/     ─┘
 ├── philosophy/        never loaded: the rationale behind everything above
-└── quota/             a small menu-bar plugin showing the Claude Code quota used
+└── widgets/           not harness: what I look at while using Claude Code (status line, quota chip)
 ```
 
 Clone it as `~/.claude` for Claude Code, or as `~/.config/opencode` to make it your opencode configuration.

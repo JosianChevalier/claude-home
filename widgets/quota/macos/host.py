@@ -3,7 +3,7 @@
 Mac-only : appelle `security`, `launchctl`, `osascript`, et produit la syntaxe de
 menu SwiftBar (lignes `texte | clé=valeur`). Toute la logique portable (calculs dans
 quota_core, sources de données dans providers). L'entrée SwiftBar
-plugin/claude-quota.1m.py n'est qu'une coquille qui compose host + providers.
+plugin/claude-quota.10s.py n'est qu'une coquille qui compose host + providers.
 """
 import json
 import os

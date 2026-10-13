@@ -4,7 +4,7 @@ Port : `get() -> Snapshot | None` (données au format /usage + horodatage). Le c
 (quota_core) ne sait pas d'où vient la donnée ; le plugin compose les sources.
 
 Adaptateurs :
-  StatusLine  lit l'instantané que ~/.claude/statusline.py dépose à CHAQUE requête
+  StatusLine  lit l'instantané que ~/.claude/widgets/statusline.py dépose à CHAQUE requête
               Claude Code (rate_limits). Gratuit, toujours à jour tant qu'on travaille.
   Http        endpoint OAuth non documenté (= /usage) + cache disque. Coûteux, rate-limité.
   Fallback    la source la plus fraîche gagne ; on ne tape le réseau que si tout est
@@ -22,8 +22,8 @@ import quota_core as core
 
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 CRED_FILE = os.path.expanduser("~/.claude/.credentials.json")
-CACHE_FILE = os.path.expanduser("~/.claude/quota/.usage-cache.json")
-STATUSLINE_FILE = os.path.expanduser("~/.claude/quota/.statusline-snapshot.json")
+CACHE_FILE = os.path.expanduser("~/.claude/widgets/quota/.usage-cache.json")
+STATUSLINE_FILE = os.path.expanduser("~/.claude/widgets/quota/.statusline-snapshot.json")
 
 # Au-delà de cet âge, un instantané ne vaut plus rien : on rappelle l'API.
 # Sert aussi de throttle anti-429 : après un fetch OK, pas d'appel avant STALE_AFTER.

@@ -24,21 +24,23 @@
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
 !/old-claude/**
-!/statusline.py
 !/settings.template.json
 !/opencode.json
 
-!/quota/
-!/quota/*.py
-!/quota/*.md
-!/quota/macos/
-!/quota/macos/*.py
-!/quota/macos/plugin/
-!/quota/macos/plugin/*.py
-!/quota/windows/
-!/quota/windows/*.py
-!/quota/tests/
-!/quota/tests/*.py
+!/widgets/
+!/widgets/*.py
+!/widgets/*.md
+!/widgets/quota/
+!/widgets/quota/*.py
+!/widgets/quota/*.md
+!/widgets/quota/macos/
+!/widgets/quota/macos/*.py
+!/widgets/quota/macos/plugin/
+!/widgets/quota/macos/plugin/*.py
+!/widgets/quota/windows/
+!/widgets/quota/windows/*.py
+!/widgets/quota/tests/
+!/widgets/quota/tests/*.py
 
 !/skills/
 !/skills/*/

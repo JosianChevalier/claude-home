@@ -8,7 +8,7 @@ Affiche dans la barre de menu macOS l'état de la session Claude Code :
  0% · 🐌              ← aucune fenêtre en cours (rien ne tourne, rien à décompter)
 ```
 
-## Arborescence (`~/.claude/quota/`)
+## Arborescence (`~/.claude/widgets/quota/`)
 
 ```
 quota_core.py          cœur PORTABLE — calculs et formatage. Zéro I/O, zéro OS.
@@ -21,7 +21,7 @@ windows/
   host.py              host Windows (stub) — même surface, à brancher sur un tray
 tests/test_quota.py    39 tests stdlib. python3 tests/test_quota.py
 README.md
-.statusline-snapshot.json  rate_limits déposé par ~/.claude/statusline.py. Jetable, gitignored.
+.statusline-snapshot.json  rate_limits déposé par ~/.claude/widgets/statusline.py. Jetable, gitignored.
 .usage-cache.json          dernière réponse HTTP OK. Jetable, gitignored.
 ```
 
@@ -41,7 +41,7 @@ via `sys.path`. Réglé une fois dans les `defaults` SwiftBar (`PluginDirectory`
 ## Sources de la donnée (`providers.py`)
 
 1. **Status line** (gratuit, primaire). Claude Code passe `rate_limits` (`five_hour` /
-   `seven_day` : `used_percentage`, `resets_at` epoch) à `~/.claude/statusline.py` à chaque
+   `seven_day` : `used_percentage`, `resets_at` epoch) à `~/.claude/widgets/statusline.py` à chaque
    requête ; celle-ci le dépose brut dans `.statusline-snapshot.json`. L'adaptateur
    `StatusLine` le normalise au format `/usage`. Claude Code retire une fenêtre dès son reset.
 2. **HTTP** (repli). Endpoint OAuth **non documenté** (= ce que fait `/usage`) :
