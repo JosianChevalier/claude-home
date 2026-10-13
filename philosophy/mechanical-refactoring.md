@@ -12,6 +12,15 @@ A refactoring move, rename, extract a function, inline a variable, move a side-e
 
 This is what makes chaining possible. A chain of moves each safe is safe as a whole: proof composes. A single large step must be proven from scratch, and the only proof available is understanding the code, which is exactly what the small step was meant to spare.
 
+## Safe a priori, applicable after a check
+
+A move carries preconditions (Opdyke): once they hold, behavior is preserved. The safety is a priori; the applicability is checked.
+
+- **Tier 1, local preconditions:** rename, extract, inline, unpack (surface what sat at a lower level). Safe anywhere, spaghetti included.
+- **Tier 2, global preconditions:** reorder, loop to map. Safe only on side-effect-free code.
+
+On spaghetti, tier 1 does the groundwork: it reorganizes the abstraction levels until the code is side-effect-free, and tier 2 opens. The price is the check. Confirming a tier 2 precondition means diving through the abstractions and surfacing every use of the affected functions; its reach grows with coupling.
+
 ## Validated by shape, not by meaning
 
 A move is validated at a glance. The reviewer checks the shape of the diff: this is a rename, every occurrence changed, nothing else moved. The cost is constant, whatever the code does. A rewrite has the opposite property: reconstruct the old behavior, reconstruct the new, compare; the cost grows with the code's complexity, and the error rate with it.
