@@ -9,48 +9,11 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 
 ## Steps
 
-- [ ] For every practice in the cluster: when agentic, analyse what changes. Standing, per file.
-- [ ] Review the three drafts, in reading order.
-  - [x] `trunk-based-development`: substance done 2026-10-13 (commits d6e58e3..aa4b34f).
-  - [x] `agentic-trunk-based-development`: substance done 2026-10-13; renamed from `agents-on-one-trunk`, tag `agentic-extreme-programming`.
-  - [x] `atomic-commit`: substance done 2026-10-13; glanceable added as the test for a move. Shape pass: the heading "Same file is not same change" no longer names what the section holds (atomic and meaningful).
-- [x] `agentic-extreme-programming`: substance done 2026-10-14, the four sections reviewed in conversation.
-- [ ] `make-the-change-easy`: the existing file, renamed from `workflow-rhythm` 2026-10-14, reworked whole 2026-10-14 around its one question, how to make small steps (reading in Decided). Left: what changes when agentic, in conversation, nothing written yet.
-- [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands: `small-batches` at its migration, or its own file. Decide after the review. Holding cost is named there only: `agentic-extreme-programming` dropped it 2026-10-14, the batch-economics file carries it.
-- [ ] Shape pass per file, second commit (`rules/writing.md`).
-- [ ] Rows in `sync-repo.work.md`, Mapping old → new. Note `continuous-delivery` and `small-batches` are pointed at from the backlog.
+- [ ] `make-the-change-easy`: what changes when agentic, in conversation; nothing written yet.
+- [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands is not decided: `small-batches` at its migration, or its own file. Holding cost is named there only, not in `agentic-extreme-programming`.
+- [ ] Shape pass per file, second commit (`rules/writing.md`). In `atomic-commit`, the heading "Same file is not same change" no longer names what its section holds (atomic and meaningful).
+- [ ] Rows in `sync-repo.work.md`, Mapping old → new, for the five files that have none: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`, `mechanical-refactoring`, `agentic-extreme-programming`. Note `continuous-delivery` and `small-batches` are pointed at from the backlog.
 - [ ] Delete this file.
-
-## Decided
-
-- **TBD is commit on main directly.** Seconds to minutes to sync, tens to hundreds of integrations a day for a small team. The canon's "under a day" is not what the file holds.
-- **TBD is continuous integration, and continuous integration is TBD.** Not a way of doing it: it is it. The entire point of `trunk-based-development`, and its thesis. The body carries it in one sentence, no more: what continuous integration is not is left unargued, the term pulls it from the model. Settled 2026-10-14.
-- **Branches are the exception.** "Short-lived" means when inevitable, hours at most; not branch-first. Ship/show/ask: isolate what must be asked onto the branch, the rest ships on trunk.
-- **Three files, not four.** Optimistic locking and the overlap signal are human TBD: they stay in `trunk-based-development`. Branch = clone = worktree (the storages) is the agentic step: it opens `agentic-trunk-based-development`. No separate synchronization file.
-- **What we optimize for is communication bandwidth and the cost of synchronization**; those phrases stay. Definitions the weights carry go.
-- **Locking fits agents better than humans**: often different sessions, cheaper retry, shorter window. In the agentic file.
-- **Branch, clone, worktree are one object**, a delta from trunk with a lifetime. Only the lifetime matters.
-- **Coordination is optimistic locking.** Rebase is the version check, fast-forward the commit, conflict a retry on the new base. No synchronization beforehand, almost no communication bandwidth, fail fast.
-- **Partition is not the default and not cancelled.** Ephemeral overlap is retried. Overlap that persists across commits means two actors hold the same thing: time to synchronize (talk, pair, redraw). Humans and agents alike.
-- **The granularity rests on a splitting skill**, not on committing pace. Teams failed there. The skill is carried by `atomic-commit`, `mechanical-refactoring`, `make-the-change-easy`.
-- **A worktree under the bound is a trunk-based committer**, identical not similar. Several agents on one repo need no orchestrator; the trunk is their channel, the diff not the conversations.
-- **A rebase conflict is a check between steps** (`compounding-decisions`), not a decision taken alone.
-- **The overlap signal is read above the agents**: redrawing who holds what is the navigator's decision, not a retry. Settled 2026-10-13.
-- **Atomic and meaningful.** Atomic: an operation that cannot be split without breaking trunk (a rename across 12 files is one). Meaningful: the next step does not override it. A step overridden right after folds into the step that overrides it, until the fold stands: addition and polish, green and its refactor, tests on one unit of behavior. A fix and a rename do not fold. What stands is validated at once, by shape for a move, by the tests for a behavior.
-- **"Whole" is continuous delivery's claim**, pointed at: production and its tests in the same commit, trunk releasable after it. Not re-argued in `atomic-commit`.
-- **History is spent.** Intention lives in the present code and repository; a commit is validated, then forgotten. Fire and forget; a cluttered history costs nothing. Arguments from history (reading, bisect) go. What survives of revert: the smaller the step, the less is redone after a failure.
-- **Manual and agentic differ on where the price is.** By hand, the atomic commit is the smallest change one can think of, taken for the epistemic action (Kirsh & Maglio). Agentic, generation is cheap and the price shifts to validating: the smallest possible change still, to minimize cognitive waste at review, or context waste for an LLM as judge. Anything that folds is waste. Settled 2026-10-14.
-- **Mechanical refactoring's thesis:** refactoring costs no understanding; understanding is spent on the model, and only there. Stated as a line under the title; the boundary (redesign) comes later, as the limit of the claim. Settled 2026-10-13.
-- **Acting to understand is the human epistemic action** (Kirsh & Maglio), pre-agentic first and foremost. Agentic, it moves to the agent: the human says "clean up in place" and reasons over the cleaned shape. Settled 2026-10-13.
-- **Where the moves hold: referential transparency, Leibniz as its name.** Functional-style code holds it everywhere, no check. Side effects make code opaque and a move acquires preconditions (Opdyke): local ones (rename, extract, inline) hold anywhere, global ones (reorder, loop to map) hold on side-effect-free code after a check whose reach grows with coupling. One paragraph, not a taxonomy. Settled 2026-10-13.
-- **Glanceable diff.** A diff whose validity is seen, not read: the test for a move, in both `mechanical-refactoring` (defined, section "The diff is its own proof") and `atomic-commit` (atomic for the trunk, glanceable for the reviewer). Property of the diff as presented, not of its size. Settled 2026-10-13.
-- **Agentic, a cleaning pass always pays.** The code is context: cleaned, it realigns the semantic valleys for the agents that follow. Its own step, a temporal cut: clean, then change. Settled 2026-10-13.
-- **`agentic-extreme-programming` is the frame of the cluster**, not a file on functional style: a coherent set of practices asks for no trade-off. The design discipline the moves presuppose is one instance in it. Settled 2026-10-13.
-- **The agentic practices are not XP's set unchanged**: they have been rethought for agentic programming. The thesis of `agentic-extreme-programming` stays the frame and says agentic in passing; the file has no second point. Settled 2026-10-14.
-- **The optimum is a floor, not a trade-off.** The knob is pushed to 10: the optimum is the smallest possible change that still works. What is left to decide is not between practices (nothing to choose, nothing to adjust so one does not go too far): it is how far to go into them, how much is invested against how much comes back. Settled 2026-10-14.
-- **Make the change easy is never two steps: it nests.** For a feature, making the change easy is redesigning so the design holds it nicely, and the easy change is the feature in the new design. The redesign is not simple either: there, making the change easy is refactoring, and the easy change is the redesign. Features and refactors are taken in small steps too. What it is all about: finding a path that can be done in small steps, each reaching an adjacent possible, the depth of the valley to walk in minimized (Kauffman). Atomic commits, continuous delivery, small batches. Settled 2026-10-14.
-- **"Valley" with Kauffman named is fine in both files**: it reads as what one does not want to cross, on the path of one change as on the practices of a team. On the path of a change, the valley is the steps where conceptual integrity is broken: a redesign goes from one concept to another. Not the gap to the code that holds the feature. Settled 2026-10-14.
-- **Make the change easy is a rhythm, not two phases.** The pair repeats as well as nests: refactor and redesign alternated, and keep going. The path goes through models that are not the target, which keep some level of conceptual integrity and let the code morph progressively: that is how the depth of the valley is minimized. A refactor keeps the concept, so it never goes down into the valley. Settled 2026-10-14.
 
 ## Open
 
