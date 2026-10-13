@@ -4,7 +4,7 @@ tags: [trunk-based-development, agentic-extreme-programming, agents, worktrees, 
 
 # Agentic trunk-based development
 
-**Thesis.** Multiple agents can work locally, each in its own worktree, doing trunk-based development.
+**Thesis.** With worktrees and a custom workflow, agents do trunk-based development between themselves.
 
 ## One thing, three storages
 
