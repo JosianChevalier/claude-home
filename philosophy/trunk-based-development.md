@@ -8,7 +8,7 @@ tags: [trunk-based-development, continuous-integration, git, concurrency]
 
 ## Commit on main
 
-Trunk-based development, in the modern sense, is committing on main directly. A sync, rebase then fast-forward, takes seconds to minutes; a small team integrates tens to hundreds of times a day.
+Trunk-based development, in the modern sense, is committing on main directly. Continuous integration is to integrate continuously, and continuously is more often than you think. A sync, rebase then fast-forward, takes seconds to minutes; a small team integrates tens to hundreds of times a day.
 
 Unintegrated work lives one commit. Under that bound three verbs collapse into one:
 
