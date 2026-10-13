@@ -4,6 +4,8 @@ tags: [trunk-based-development, continuous-integration, git, concurrency]
 
 # Trunk-based development
 
+**Thesis.** Trunk-based development is continuous integration, not a way of doing it; and continuous integration is trunk-based development.
+
 ## Commit on main
 
 Trunk-based development, in the modern sense, is committing on main directly. A sync, rebase then fast-forward, takes seconds to minutes; a small team integrates tens to hundreds of times a day.
