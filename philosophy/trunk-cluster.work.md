@@ -14,7 +14,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
   - [x] `trunk-based-development`: substance done 2026-10-13 (commits d6e58e3..aa4b34f).
   - [x] `agentic-trunk-based-development`: substance done 2026-10-13; renamed from `agents-on-one-trunk`, tag `agentic-extreme-programming`.
   - [x] `atomic-commit`: substance done 2026-10-13; glanceable added as the test for a move. Shape pass: the heading "Same file is not same change" no longer names what the section holds (atomic and meaningful).
-- [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Three left: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`.
+- [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Two left: `agentic-trunk-based-development`, then `atomic-commit` once its fix has landed. `trunk-based-development` has its line, and the sections do not carry it yet: the body never names continuous integration. What the body says of it is the author's to say, in conversation.
 - [x] `agentic-extreme-programming`: substance done 2026-10-14, the four sections reviewed in conversation.
 - [ ] `atomic-commit`, one fix. **← current.** The file is wrong where it reads the agentic commit as "the largest change that is still glanceable" (section "Why the unit matters", last paragraph), the author's verdict 2026-10-14. What stands against it: the optimum is the smallest change that still works, a floor, the knob at 10 (`agentic-extreme-programming`, section "The optimum is tiny"). What the paragraph says instead is the author's to say, in conversation. The same reading sits in two lines of Decided below, "Manual and agentic differ on where the price is" and "Glanceable diff": rewritten with the fix.
 - [ ] `make-the-change-easy`: the existing file, renamed from `workflow-rhythm` 2026-10-14, reworked whole 2026-10-14 around its one question, how to make small steps (reading in Decided). Left: what changes when agentic, in conversation, nothing written yet.
@@ -26,6 +26,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 ## Decided
 
 - **TBD is commit on main directly.** Seconds to minutes to sync, tens to hundreds of integrations a day for a small team. The canon's "under a day" is not what the file holds.
+- **TBD is continuous integration, and continuous integration is TBD.** Not a way of doing it: it is it. The entire point of `trunk-based-development`, and its thesis. Settled 2026-10-14.
 - **Branches are the exception.** "Short-lived" means when inevitable, hours at most; not branch-first. Ship/show/ask: isolate what must be asked onto the branch, the rest ships on trunk.
 - **Three files, not four.** Optimistic locking and the overlap signal are human TBD: they stay in `trunk-based-development`. Branch = clone = worktree (the storages) is the agentic step: it opens `agentic-trunk-based-development`. No separate synchronization file.
 - **What we optimize for is communication bandwidth and the cost of synchronization**; those phrases stay. Definitions the weights carry go.
