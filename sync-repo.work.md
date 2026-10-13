@@ -14,6 +14,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
 - [ ] Migration 3: integrate bit by bit, MO below. **← current**
   - [x] 3.1 `CLAUDE.md` replaced; OpenCode section parked in `old-claude/AGENTS.md`.
   - [ ] 3.2 Philosophy. **← current**
+    - [ ] Tag every philosophy file that is a practice, in its frontmatter `tags:`. Asked 2026-10-14 during the review of `agentic-extreme-programming`, which carries `practices` and is the only file to; the tag's name is not settled.
     - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
