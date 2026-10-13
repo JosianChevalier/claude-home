@@ -17,6 +17,8 @@
 !/rules/*.md
 !/agents/
 !/agents/*.md
+!/commands/
+!/commands/*.md
 
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
