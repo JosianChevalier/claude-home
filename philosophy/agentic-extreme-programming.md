@@ -36,7 +36,7 @@ Tokens, context, cognitive load, feedback time, precision and quality move toget
 - A precise term pulls harder per token than its explanation ([[philosophy/attractors]]).
 - A message written for a reader with nothing open spares the human and stays short ([[philosophy/conversation-as-interface]]).
 - Fewer decisions asked of the agent means fewer errors and less to validate ([[philosophy/compounding-decisions]]).
-- A glanceable diff is validated without understanding ([[philosophy/mechanical-refactoring]]), on a commit small enough to be one ([[philosophy/atomic-commit]]).
+- A glanceable diff is validated without understanding ([[philosophy/mechanical-refactoring]]), one move to a commit ([[philosophy/atomic-commit]]).
 
 None of them is bought with another.
 
