@@ -14,9 +14,8 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
   - [x] `trunk-based-development`: substance done 2026-10-13 (commits d6e58e3..aa4b34f).
   - [x] `agentic-trunk-based-development`: substance done 2026-10-13; renamed from `agents-on-one-trunk`, tag `agentic-extreme-programming`.
   - [x] `atomic-commit`: substance done 2026-10-13; glanceable added as the test for a move. Shape pass: the heading "Same file is not same change" no longer names what the section holds (atomic and meaningful).
-- [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Done in `mechanical-refactoring`; four left.
-- [ ] `mechanical-refactoring`: reworked 2026-10-13 around its thesis, six sections, each idea once. **← current.** The post's last paragraph (slow is smooth, lead time) is left for the Reinertsen study. Left: the pointer to the practices file below once it has a name.
-- [ ] Write the practices file, name to find: the moves presuppose the design discipline (side-effect-free bodies, immutability, the functional practices) and chaining moves produces it; the loop-to-map move is safe only on such code. "A coherent body of practices synergized, always." Own file, decided 2026-10-13; `mechanical-refactoring` points at it once named. Check `old-claude/` for a counterpart (none found by grep on "make the change easy"; the practices one not searched).
+- [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Three left: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`.
+- [ ] `agentic-extreme-programming`: first draft written 2026-10-13, thesis in. **← current.** Left: review in conversation, section by section. The five bullets of its "Agentic" section are one-line readings of the files they point to, not checked against them.
 - [ ] Write `make-the-change-easy`: alternate model-preserving refactors and model-changing redesigns, features slipped in between; make the change easy, make the easy change, pushed to the extreme. Source: the post below, fourth paragraph. No old counterpart known; check `old-claude/` first.
 - [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands: `small-batches` at its migration, or its own file. Decide after the review.
 - [ ] Shape pass per file, second commit (`rules/writing.md`).
@@ -46,12 +45,16 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
 - **Where the moves hold: referential transparency, Leibniz as its name.** Functional-style code holds it everywhere, no check. Side effects make code opaque and a move acquires preconditions (Opdyke): local ones (rename, extract, inline) hold anywhere, global ones (reorder, loop to map) hold on side-effect-free code after a check whose reach grows with coupling. One paragraph, not a taxonomy. Settled 2026-10-13.
 - **Glanceable diff.** A diff whose validity is seen, not read: the test for a move, in both `mechanical-refactoring` (defined, section "The diff is its own proof") and `atomic-commit` (atomic for the trunk, glanceable for the reviewer; the agentic unit of validation is the largest change still glanceable). Property of the diff as presented, not of its size. Settled 2026-10-13.
 - **Agentic, a cleaning pass always pays.** The code is context: cleaned, it realigns the semantic valleys for the agents that follow. Its own step, a temporal cut: clean, then change. Settled 2026-10-13.
+- **`agentic-extreme-programming` is the frame of the cluster**, not a file on functional style: a coherent set of practices asks for no trade-off. The design discipline the moves presuppose is one instance in it. Settled 2026-10-13.
 
 ## Open
 
+- "Turn up the good" is attributed to Zuill from talks and interviews; the wording in *Software Teaming* is not checked.
+- The Reinertsen study now feeds `agentic-extreme-programming`, section "The optimum is tiny": its own file, or folded there.
+- `philosophy/workflow-rhythm.md` exists and its thesis is "make the change easy, then make the easy change": the `make-the-change-easy` step may already be written there, and `mechanical-refactoring` links to a file of that name.
+
 - Hazard for the `continuous-delivery` migration: its old line "the branch shrinks to a conflict-avoidance queue and can shrink further to nothing" is softer than "branches are the exception"; align it then.
 - Where the git mechanics live (trunk may not be a checked-out working tree; fast-forward refused otherwise): a rule, not philosophy. Successor of `old-claude/rules/branch-hygiene.md`, phase 3.3.
-- `workflow-rhythm`, pointed at by the old rule and the moves skill, is not under `old-claude/rationale`. Where it lives, or gone.
 
 ## Source: post on mechanical refactoring (Josian, 2026-10-13)
 
