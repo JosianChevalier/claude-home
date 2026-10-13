@@ -21,6 +21,7 @@
 !/old-claude/**
 !/statusline.py
 !/settings.template.json
+!/opencode.json
 
 !/quota/
 !/quota/*.py
