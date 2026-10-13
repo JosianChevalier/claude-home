@@ -41,7 +41,10 @@ Because moves are safe without understanding, refactoring is how understanding i
 
 Rewriting is the anti-move. The tempting moment is mid-chain: "I see what this does now, let me write it properly." The clarity was produced by the chain; a rewrite discards the proof the chain accumulated and replaces it with a bet on the reader's model. Keep chaining. The clean version is reachable by moves, and arriving by moves means arriving proven.
 
-Agentic, the epistemic action mostly fades. Dictating each move costs more than it gives; the human's act shrinks to one coarse instruction, clean up in place, and the cleaned shape is what the human reasons over. The gain in understanding survives; the hands-on part does not.
+Agentic, the epistemic action mostly fades:
+
+- **The human's part shrinks.** Dictating each move costs more than it gives. The act is one coarse instruction, clean up in place, and the human reasons over the cleaned shape.
+- **A cleaning pass always pays for the agents that follow.** The code is context: tangled, it carves the wrong semantic valleys ([[philosophy/attractors]]); cleaned, it realigns them for every later step. Run it as its own step, a temporal cut ([[philosophy/context-splitting]]): clean, then change.
 
 ## Related
 

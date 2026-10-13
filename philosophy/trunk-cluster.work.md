@@ -44,6 +44,7 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
 - **Mechanical refactoring opens on its thesis, not on the boundary.** Any refactor decomposes into moves safe a priori; use them to change the shape of the code without risking errors. The boundary is held by the word "refactor" and comes later, as the limit of the claim. Settled 2026-10-13.
 - **Acting to understand is the human epistemic action** (Kirsh & Maglio), pre-agentic first and foremost. Agentic, it mostly fades: the human says "clean up in place" and reasons over the cleaned shape. Settled 2026-10-13.
 - **Moves come in two tiers, by the reach of their preconditions** (Opdyke). Tier 1 (rename, extract, inline, unpack) is safe anywhere and brings spaghetti to side-effect-free code; tier 2 (reorder, loop to map) needs it. Safe a priori, applicable after a check whose reach grows with coupling. In `mechanical-refactoring`. Settled 2026-10-13.
+- **Agentic, a cleaning pass always pays.** The code is context: cleaned, it realigns the semantic valleys for the agents that follow. Its own step, a temporal cut: clean, then change. Settled 2026-10-13.
 
 ## Open
 
