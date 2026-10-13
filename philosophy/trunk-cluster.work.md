@@ -47,6 +47,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 - **Agentic, a cleaning pass always pays.** The code is context: cleaned, it realigns the semantic valleys for the agents that follow. Its own step, a temporal cut: clean, then change. Settled 2026-10-13.
 - **`agentic-extreme-programming` is the frame of the cluster**, not a file on functional style: a coherent set of practices asks for no trade-off. The design discipline the moves presuppose is one instance in it. Settled 2026-10-13.
 - **The agentic practices are not XP's set unchanged**: they have been rethought for agentic programming. The thesis of `agentic-extreme-programming` stays the frame and says agentic in passing; the file has no second point. Settled 2026-10-14.
+- **The optimum is a floor, not a trade-off.** The knob is pushed to 10: the optimum is the smallest possible change that still works. What is left to decide is not between practices (nothing to choose, nothing to adjust so one does not go too far): it is how far to go into them, how much is invested against how much comes back. Settled 2026-10-14; the two paragraphs of "The optimum is tiny" in `agentic-extreme-programming` are drafted in conversation, not yet written.
 
 ## Open
 
