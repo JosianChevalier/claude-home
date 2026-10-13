@@ -4,6 +4,8 @@ tags: [atomic-commit, small-batches, git]
 
 # Atomic commit
 
+**Thesis.** The atomic commit is the smallest change that still works.
+
 ## One logical change, whole
 
 An atomic commit is **one logical change, and all of it**. One: a single concern, which a reader can name in a line. All of it: production and its tests together, trunk releasable after it as before ([[philosophy/continuous-delivery]]). Both halves hold at once, or the commit is not atomic.
