@@ -30,13 +30,12 @@ Selection on feedback alone only climbs, and stops at the nearest peak. Crossing
 
 ## Agentic
 
-Tokens, context, cognitive load, feedback time, precision and quality move together. Each practice of the harness pays on several at once:
+Tokens, context, cognitive load, feedback time, precision and quality move together. The practices of the harness hold each other up:
 
-- A small context costs less and is more precise ([[philosophy/context-economics]]).
-- A precise term pulls harder per token than its explanation ([[philosophy/attractors]]).
-- A message written for a reader with nothing open spares the human and stays short ([[philosophy/conversation-as-interface]]).
-- Fewer decisions asked of the agent means fewer errors and less to validate ([[philosophy/compounding-decisions]]).
-- A glanceable diff is validated without understanding ([[philosophy/mechanical-refactoring]]), one move to a commit ([[philosophy/atomic-commit]]).
+- A lean context keeps the most capable model affordable as the default; a capable model errs and struggles less, which keeps the context lean ([[philosophy/model-tiers]]).
+- A small context makes each decision more reliable, and a decision that holds is not paid for twice in tokens ([[philosophy/compounding-decisions]]).
+- A cut in time opens a cut in space, and the reverse ([[philosophy/context-splitting]]).
+- Mechanical moves presuppose side-effect-free design and produce it ([[philosophy/mechanical-refactoring]]); each is one glanceable diff, one move to a commit ([[philosophy/atomic-commit]]).
 
 None of them is bought with another.
 
