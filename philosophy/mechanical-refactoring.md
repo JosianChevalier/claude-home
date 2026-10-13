@@ -8,7 +8,7 @@ tags: [refactoring, atomic-commit, verification]
 
 Any refactor, however large, decomposes into moves that are safe a priori. Use them to change the shape of the code without risking errors.
 
-A refactoring move, rename, extract a function, inline a variable, move a side-effect-free line, make immutable what nothing mutates, delete dead code, is **semantics-preserving by construction**. It is valid whatever the code means, the way substituting equals for equals is valid whatever the expression denotes (Leibniz). A tool could apply it or verify it. Tests confirm the move; they are not what makes it safe. The safety was known before the diff existed, and it lives in the process, not in the reader.
+A refactoring move, rename, extract a function, inline a variable, move a side-effect-free line, make immutable what nothing mutates, delete dead code, is **semantics-preserving by construction**. It is valid whatever the code means, wherever the code is **referentially transparent**: equals substitute for equals, whatever they denote (Leibniz). Side effects make the code opaque, and the substitution stops holding: the limit of Leibniz's law, and the line between the two tiers below. A tool could apply it or verify it. Tests confirm the move; they are not what makes it safe. The safety was known before the diff existed, and it lives in the process, not in the reader.
 
 This is what makes chaining possible. A chain of moves each safe is safe as a whole: proof composes. A single large step must be proven from scratch, and the only proof available is understanding the code, which is exactly what the small step was meant to spare.
 
