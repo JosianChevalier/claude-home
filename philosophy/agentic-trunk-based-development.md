@@ -4,6 +4,8 @@ tags: [trunk-based-development, agentic-extreme-programming, agents, worktrees, 
 
 # Agentic trunk-based development
 
+**Thesis.** Multiple agents can work locally, each in its own worktree, doing trunk-based development.
+
 ## One thing, three storages
 
 A branch, a clone, a worktree are the same object: a **delta from trunk, with a lifetime**. They differ in where the delta is stored — a ref, another directory, another machine — and in nothing that matters. What a delta does to a team is decided by how long it lives, not by where it sits.
