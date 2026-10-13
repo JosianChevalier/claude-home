@@ -8,7 +8,7 @@ tags: [atomic-commit, small-batches, git]
 
 An atomic commit is **one logical change, and all of it**. One: a single concern, which a reader can name in a line. All of it: tested, releasable, leaving trunk in a state as good as the one before ([[philosophy/continuous-delivery]]). Both halves hold at once, or the commit is not atomic.
 
-It is the floor of batch size ([[philosophy/small-batches]]): below the plan, the implementer's cadence. One rename. One extracted function. One moved variable. Seconds apart, a few lines each.
+It is the floor of batch size ([[philosophy/small-batches]]): below the plan, the implementer's cadence. One rename. One extracted function. One moved variable. Seconds apart.
 
 ## Same file is not same change
 
