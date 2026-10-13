@@ -2,7 +2,7 @@
 tags: [refactoring, probe-sense-respond, planning]
 ---
 
-# Workflow rhythm
+# Make the change easy
 
 **Thesis.** Every functional change is two moves — make the change easy, then make the easy change (Kent Beck) — and the rhythm repeats at every scale, because nothing in the argument mentions size.
 

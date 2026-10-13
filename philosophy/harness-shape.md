@@ -63,7 +63,7 @@ The split is also a proportion rule. A short file is a `Doctrine` header and a f
 
 1. …
 
-Rationale: [[philosophy/workflow-rhythm]]
+Rationale: [[philosophy/make-the-change-easy]]
 ```
 
 ## Related
