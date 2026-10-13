@@ -37,24 +37,21 @@ It is public because parts of it travel. A rule, a skill, an idea may serve you 
 
 ## Structure
 
-Claude Code loads it from `~/.claude`; opencode from a clone at `~/.config/opencode`.
-
 ```
-CLAUDE.md         always loaded: the postures (how the agent stands toward me)
-AGENTS.md         symlink to CLAUDE.md, for opencode
-rules/            always loaded: conversation, writing, subtraction
-skills/           loaded on trigger: one way of working each
-agents/           theory-guide
-commands/         philosophy-guide: the opening of the theory guide
-philosophy/       never loaded: the rationale behind everything above
-quota/            menu-bar quota indicator, with its own README
-old-claude/       the previous harness, emptied as its content migrates
-*.work.md         state of a work in progress, deleted when the work ends
+.
+├── CLAUDE.md     ─┐
+├── AGENTS.md      │
+├── rules/         │   a normal agent harness, each piece in its usual place
+├── skills/        │
+├── agents/        │
+├── commands/     ─┘
+├── philosophy/        never loaded: the rationale behind everything above
+└── quota/             a small menu-bar plugin showing the Claude Code quota used
 ```
 
-The repo sits in a directory full of state and secrets, so `.gitignore` is a whitelist: nothing is tracked unless listed there.
+Clone it as `~/.claude` for Claude Code, or as `~/.config/opencode` to make it your opencode configuration.
 
-`settings.template.json` is the versioned copy of the settings; `settings.json` itself stays local.
+`settings.template.json` is a starting point for your own `settings.json`. Anything named `*.work.md` is work in progress.
 
 ## Ideas
 

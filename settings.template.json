@@ -4,7 +4,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "python3 /Users/josian/.claude/statusline.py"
+    "command": "python3 ~/.claude/statusline.py"
   },
   "autoMemoryEnabled": false,
   "syncClaudeAiSkills": false,
