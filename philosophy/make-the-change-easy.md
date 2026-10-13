@@ -30,7 +30,7 @@ A redesign changes the code from one concept to another, and through the steps i
 
 A refactor keeps the concept, so it never goes down into the valley. Refactoring first leaves the redesign fewer broken steps to walk.
 
-So the path goes through models that are not the target. Each keeps some level of integrity, and the code morphs progressively from one to the next:
+So the path goes through models that are not the target. Each keeps some level of conceptual integrity, and the code morphs progressively from one to the next:
 
 ```
 model ─ refactor, redesign ─▶ model ─ refactor, redesign ─▶ model ─ … ─▶ target
