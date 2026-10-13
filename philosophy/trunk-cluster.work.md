@@ -1,11 +1,11 @@
 ---
-ongoing_work_file: "Iterate the trunk cluster to landed: trunk-based-development, atomic-commit, agentic-trunk-based-development, then mechanical-refactoring and make-the-change-easy. Empty when each has a thesis, a shape pass, a mapping row in sync-repo.work.md, and this file is deleted."
+ongoing_work_file: "Iterate the trunk cluster to landed: trunk-based-development, atomic-commit, agentic-trunk-based-development, then mechanical-refactoring, make-the-change-easy and agentic-extreme-programming. Empty when each has a thesis, a shape pass, a mapping row in sync-repo.work.md, and this file is deleted."
 rank: 1
 ---
 
 # Trunk cluster
 
-Five philosophy files and one study on one idea: code integrated on trunk at the smallest granularity there is, the atomic commit, by humans and agents alike. Three drafted 2026-10-12 (commit 2f31178), two to write. Review in conversation, one issue per turn; the file is written and committed right after each decision, one commit per decision (MO in `sync-repo.work.md`).
+Six philosophy files and one study on one idea: code integrated on trunk at the smallest granularity there is, the atomic commit, by humans and agents alike. Review in conversation, one issue per turn; the file is written and committed right after each decision, one commit per decision (MO in `sync-repo.work.md`).
 
 ## Steps
 
@@ -16,7 +16,7 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
   - [x] `atomic-commit`: substance done 2026-10-13; glanceable added as the test for a move. Shape pass: the heading "Same file is not same change" no longer names what the section holds (atomic and meaningful).
 - [ ] Thesis line per file, after the sections stand: `**Thesis.** …` under the title, grepable. Short: the file is not compressed into it. Three left: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`.
 - [ ] `agentic-extreme-programming`: first draft written 2026-10-13, thesis in. **← current.** Left: review in conversation, section by section. The five bullets of its "Agentic" section are one-line readings of the files they point to, not checked against them.
-- [ ] Write `make-the-change-easy`: alternate model-preserving refactors and model-changing redesigns, features slipped in between; make the change easy, make the easy change, pushed to the extreme. Source: the post below, fourth paragraph. No old counterpart known; check `old-claude/` first.
+- [ ] `make-the-change-easy`: the existing file, renamed from `workflow-rhythm` 2026-10-14, thesis in. Left: check it against the post below, fourth paragraph (refactors and redesigns alternated, features slipped in between).
 - [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands: `small-batches` at its migration, or its own file. Decide after the review.
 - [ ] Shape pass per file, second commit (`rules/writing.md`).
 - [ ] Rows in `sync-repo.work.md`, Mapping old → new. Note `continuous-delivery` and `small-batches` are pointed at from the backlog.
@@ -49,9 +49,7 @@ Five philosophy files and one study on one idea: code integrated on trunk at the
 
 ## Open
 
-- "Turn up the good" is attributed to Zuill from talks and interviews; the wording in *Software Teaming* is not checked.
 - The Reinertsen study now feeds `agentic-extreme-programming`, section "The optimum is tiny": its own file, or folded there.
-- `philosophy/workflow-rhythm.md` exists and its thesis is "make the change easy, then make the easy change": the `make-the-change-easy` step may already be written there, and `mechanical-refactoring` links to a file of that name.
 
 - Hazard for the `continuous-delivery` migration: its old line "the branch shrinks to a conflict-avoidance queue and can shrink further to nothing" is softer than "branches are the exception"; align it then.
 - Where the git mechanics live (trunk may not be a checked-out working tree; fast-forward refused otherwise): a rule, not philosophy. Successor of `old-claude/rules/branch-hygiene.md`, phase 3.3.
