@@ -41,8 +41,6 @@ Making the change easy is finding that path, one that can be done in small steps
 
 That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), small batches ([[philosophy/small-batches]]) and continuous delivery ([[philosophy/continuous-delivery]]).
 
-Nothing changes with agents: every reason for small batches keeps applying.
-
 ## One kind of step at a time
 
 A step is one of three kinds. A refactor keeps the model: tests and observable behavior are preserved, and the diff is validated by its shape. A redesign changes the model and can break the tests: validating it takes understanding ([[philosophy/mechanical-refactoring]]). A feature changes what the code does.
