@@ -26,11 +26,13 @@ A refactor does not change the underlying model, so tests and observable behavio
 
 That is the boundary of the claim: moves cost no understanding as long as the model holds. Where the model changes, the mechanical part ends and the work is a redesign, taken in steps of its own and alternated with the refactors that prepare it ([[philosophy/make-the-change-easy]]).
 
-## Understanding is the output of the chain
+## Act first, understand after
 
-Because moves are safe without understanding, refactoring is how understanding is acquired, not what follows it. Faced with opaque code: rename what is legible, extract what repeats, inline what obscures, and the structure surfaces. The reverse order, read until it is understood then rewrite, carries the risk in the wrong place. Understanding is the fallible step; a rewrite founded on a partial understanding silently drops the cases the reader missed. Moves drop nothing, because they never depended on the reader's model.
+Because moves are safe without understanding, refactoring is how understanding is acquired, not what follows it. It is an **epistemic action** (Kirsh & Maglio): an action taken to make the problem easier to think about, not to move toward the goal, the way Tetris players rotate a piece on screen rather than in their heads. Faced with opaque code: rename what is legible, extract what repeats, inline what obscures, and the model surfaces. When understanding stalls, act first. The reverse order, read until it is understood then rewrite, carries the risk in the wrong place. Understanding is the fallible step; a rewrite founded on a partial understanding silently drops the cases the reader missed. Moves drop nothing, because they never depended on the reader's model.
 
 Rewriting is the anti-move. The tempting moment is mid-chain: "I see what this does now, let me write it properly." The clarity was produced by the chain; a rewrite discards the proof the chain accumulated and replaces it with a bet on the reader's model. Keep chaining. The clean version is reachable by moves, and arriving by moves means arriving proven.
+
+Agentic, the epistemic action mostly fades. Dictating each move costs more than it gives; the human's act shrinks to one coarse instruction, clean up in place, and the cleaned shape is what the human reasons over. The gain in understanding survives; the hands-on part does not.
 
 ## Related
 
