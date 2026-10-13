@@ -14,17 +14,17 @@ It is the floor of batch size ([[philosophy/small-batches]]): below the plan, th
 
 The enemy of the atomic commit is proximity. A cleanup noticed nearby, a comment removed while passing, a refactoring that touches the file the feature touches: each is a second concern riding on the first. It gets a commit of its own, or a line in the plan, never a seat in this one.
 
-Small is not the test. The commit must be atomic: an operation that cannot be split without breaking trunk. A rename across 12 files is one; counting lines or files measures the wrong thing.
+Small is not the test. The commit must be atomic: an operation that cannot be split without breaking trunk. A rename across 12 files is one; counting lines or files measures the wrong thing. For a move the test is the diff: **glanceable**, its validity seen without reading the code ([[philosophy/mechanical-refactoring]]). Atomic for the trunk, glanceable for the reviewer.
 
 Atomic is not enough: the commit must be meaningful, and a step is meaningful when the next step does not override it. Rename a to b, b to a, a to c is three atomic operations and one change, a to c. A step overridden right after was never a change; it folds into the step that overrides it, until the fold stands. An addition and its polish fold; a green step and the refactor that follows it fold; tests on one unit of behavior fold, they ask one functional change. A fix and a rename do not fold: neither overrides the other, two commits. What stands is validated at once, by shape for a move, by the tests for a behavior.
 
 ## Why the unit matters
 
 - **Loss.** A step that fails costs the step. The smaller it is, the less is redone, whether the failure is a red build or a rebase conflict.
-- **Proof.** For a semantics-preserving move the commit is the proof unit: one move, one commit, safe before the diff existed ([[philosophy/mechanical-refactoring]]).
+- **Proof.** For a semantics-preserving move the commit is the proof unit: one move, one commit, one glanceable diff ([[philosophy/mechanical-refactoring]]).
 - **Integration.** Trunk-based development is integration at this granularity and no other: the atomic commit is what keeps the overlap window seconds wide and every state of trunk whole ([[philosophy/trunk-based-development]]).
 
-By hand, the unit is for the brain, and a push to move on: write the line, change it five times, the small safe step is what counts. Agentic, generation is cheap and the price moves to validating: the commit becomes the unit of validation, the largest change that still validates as one ([[philosophy/agentic-trunk-based-development]]).
+By hand, the unit is for the brain, and a push to move on: write the line, change it five times, the small safe step is what counts. Agentic, generation is cheap and the price moves to validating: the commit becomes the unit of validation, the largest change that is still glanceable ([[philosophy/agentic-trunk-based-development]]).
 
 ## The skill is splitting
 
