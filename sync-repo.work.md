@@ -39,7 +39,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
   - [ ] 3.3 Rules, one by one. Many are old: some already live in skills, others change form. Keep the rationale on *how to say* things.
     - [x] `rules/conversation` landed 2026-10-10, first rule of the new repo; `.gitignore` whitelists `rules/`.
     - [x] Home for the session-anchoring know-how (philosophy in `session-state-in-documents`): the `ongoing-work` skill, Doctrine section.
-    - [ ] Generalize the chat-medium know-how found on the `study-making` examples (2026-10-13), into `rules/writing.md` or `rules/conversation.md`: a table in chat carries a header rule, or it reads as a list; a sequence with a loop is drawn, the loop being the point; a list with arrows is a list. The general line is the broken symmetry of cost (3.2): the medium is free for the agent, so each element takes the shape the reader recognises at a glance.
+    - [x] Chat-medium know-how from the `study-making` examples landed 2026-10-13 in `rules/writing.md` and `rules/conversation.md`.
   - [ ] 3.4 Skills.
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
