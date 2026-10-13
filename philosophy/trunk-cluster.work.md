@@ -9,7 +9,6 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 
 ## Steps
 
-- [ ] `make-the-change-easy`: what changes when agentic, in conversation; nothing written yet.
 - [ ] Study: Reinertsen's optimal batch size. The U-curve: transaction cost per batch falls as batches grow, holding (inventory) cost rises; the optimum is the bottom. The cluster's attractors are Reinertsen's, more than XP's: atomic commit is where the curve bottoms once transaction cost is near zero (the commit, the pipeline, the rebase all cheap). Where it lands is not decided: `small-batches` at its migration, or its own file. Holding cost is named there only, not in `agentic-extreme-programming`.
 - [ ] Shape pass per file, second commit (`rules/writing.md`). In `atomic-commit`, the heading "Same file is not same change" no longer names what its section holds (atomic and meaningful).
 - [ ] Rows in `sync-repo.work.md`, Mapping old → new, for the four files that have none: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`, `agentic-extreme-programming`. Note `continuous-delivery` and `small-batches` are pointed at from the backlog.
