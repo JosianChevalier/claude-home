@@ -1,6 +1,6 @@
 ---
 ongoing_work_file: "Iterate the trunk cluster to landed: trunk-based-development, atomic-commit, agentic-trunk-based-development, then mechanical-refactoring and make-the-change-easy. Empty when each has a thesis, a shape pass, a mapping row in sync-repo.work.md, and this file is deleted."
-rank: 2
+rank: 1
 ---
 
 # Trunk cluster

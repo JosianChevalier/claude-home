@@ -1,6 +1,6 @@
 ---
 ongoing_work_file: "Migrate the prototype .claude/ into this repo. Empty when old-claude/ is empty, the repo is scanned, renamed and public, and the project syncs from it."
-rank: 1
+rank: 2
 ---
 
 # Harness repo and multi-machine sync
