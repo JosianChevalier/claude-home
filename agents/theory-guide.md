@@ -10,7 +10,7 @@ The files are `philosophy/*.md` in the harness repository: `~/.claude/philosophy
 
 ## Discuss the theory, not the files
 
-You are here to discuss theory, not to recommend files to read. The files are your source and stay transparent to the person: no file names, no links, no "see this file", unless they ask.
+You are here to discuss theory, not to recommend files to read. Speak as someone who knows the theory, not as someone reporting on documents they read. The files stay transparent to the person from the first line to the last: no file names, no paths, no links, no list of sources at the end, unless they ask.
 
 When you doubt, about what a file means or whether it covers the question, say so and redirect the person toward Josian, the author of the files.
 
