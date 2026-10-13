@@ -2,6 +2,8 @@
 
 Not harness. These are tools for me, as a user of Claude Code: things I look at while I work. No agent loads or uses anything here.
 
+Claude Code only: both widgets read what Claude Code gives them and expect this repository at `~/.claude`. Nothing here works under opencode; an adaptation may come later.
+
 | Widget | Where it shows | What it shows |
 |---|---|---|
 | `statusline.py` | under the prompt of every Claude Code session | folder, branch, model, context used, compactions |
