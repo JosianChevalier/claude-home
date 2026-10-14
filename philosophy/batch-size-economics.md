@@ -23,7 +23,7 @@ It has almost no lower bound.
 
 Mostly risk: the cost if it realizes, times its probability. Two kinds.
 
-**Failures.** Bigger batches fail more often (Accelerate: change failure rate). Two reasons:
+**Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
 - **Hard to see.** A fault hides in a large diff. A move is checked at a glance ([[philosophy/mechanical-refactoring]]).
 - **Faults combine.** Most outages come from several small faults lining up, not from one. n changes make n(n−1)/2 pairs that can interact, so risk grows faster than size. A small batch validates each fault alone: pass the configuration that was null, show it in a log, then use it.
