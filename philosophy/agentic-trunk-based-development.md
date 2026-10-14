@@ -32,6 +32,8 @@ Each rebase is an agent reading what the others did since its last commit, in th
 
 A rebase conflict is not a decision the agent takes alone. It is a check between steps ([[philosophy/compounding-decisions]]): self-correcting like a failing test, caught before it compounds.
 
+A review step may be added to cut bugs, another check between steps ([[philosophy/compounding-decisions]]). It is not asynchronous: it runs before the push, inline with the work, as a developer rereads a commit before sending it.
+
 ## What stays above the agents
 
 - **The splitting skill.** An agent is not at the atomic-commit granularity by nature; it gets there with the splitting skill, which the harness must carry ([[philosophy/atomic-commit]]).

@@ -15,7 +15,7 @@ Reinertsen, *The Principles of Product Development Flow*: batch size has an econ
 What each batch pays to ship: manual tests, manual deployment, opening and reviewing a pull request.
 
 - TDD and an automated pipeline cut it a lot.
-- Trunk-based development cuts the pull request and its review ([[philosophy/trunk-based-development]]).
+- Trunk-based development cuts the pull request and the wait on a teammate ([[philosophy/trunk-based-development]]).
 
 It has almost no lower bound.
 
@@ -26,7 +26,7 @@ Mostly risk: the cost if it realizes, times its probability. Plus the load of ho
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
 - **Hard to see.** A fault hides in a large diff. A move is checked at a glance ([[philosophy/mechanical-refactoring]]).
-- **Faults combine.** Most outages come from several small faults lining up, not from one. n changes make n(n−1)/2 pairs that can interact, so risk grows faster than size. A small batch validates each fault alone: pass the configuration that was null, show it in a log, then use it.
+- **Faults combine.** Most outages come from several small faults lining up, not from one. n changes make n(n−1)/2 pairs that can interact, so risk grows faster than size. A small batch exposes each change alone. Wiring a configuration value that used to be null takes two commits: pass it and validate it, then use it. A wrong value shows before anything depends on it.
 
 **Collision.** Two people on the same thing without knowing it: integration hazards, waste. Handled optimistically on trunk ([[philosophy/trunk-based-development]], optimistic locking).
 
@@ -36,7 +36,7 @@ Mostly risk: the cost if it realizes, times its probability. Plus the load of ho
 
 The usual reflex attacks inventory cost: synchronize ahead so that nobody works on the same thing.
 
-- It adds a synchronization cost.
+- It is the pessimistic scheme: synchronization paid on every unit of work ([[philosophy/trunk-based-development]]).
 - It stops small cleanups along the way, since they may touch someone else's work. "Open another pull request for it" does not hold: a pull request is a transaction cost, so nobody opens it.
 
 Inventory cost moved a little, and new costs came with it.
