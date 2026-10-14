@@ -43,7 +43,7 @@ Inventory cost moved a little, and new costs came with it.
 
 ## The asymmetry
 
-Transaction cost can go to near zero: atomic commits, continuous deployment. Inventory cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10 ([[philosophy/agentic-extreme-programming]]).
+Transaction cost can go to near zero: TDD, continuous deployment, trunk. Inventory cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10 ([[philosophy/agentic-extreme-programming]]).
 
 ## Related
 
