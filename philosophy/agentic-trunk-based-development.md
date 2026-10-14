@@ -8,7 +8,7 @@ tags: [trunk-based-development, agentic-extreme-programming, agents, worktrees, 
 
 ## One thing, three storages
 
-A branch, a clone, a worktree are the same object: a **delta from trunk, with a lifetime**. They differ in where the delta is stored — a ref, another directory, another machine — and in nothing that matters. What a delta does to a team is decided by how long it lives, not by where it sits.
+A branch, a worktree, a clone are the same object: a **delta from trunk, with a lifetime**. They differ in where the delta is stored — a ref, another directory, another machine — and in nothing that matters. What a delta does to a team is decided by how long it lives, not by where it sits.
 
 A developer's local clone is a branch: the unpushed commits are the delta, `pull --rebase` rebases it on trunk, `push` fast-forwards trunk to it. Nobody calls it branching, and it is.
 
