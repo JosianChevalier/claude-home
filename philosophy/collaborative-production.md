@@ -89,3 +89,4 @@ What works, in the order it is usually needed:
 - Surfacing at the level of the decision: [[philosophy/zoom-levels]].
 - Why a long run costs, in context and in error: [[philosophy/context-splitting]], [[philosophy/compounding-decisions]].
 - Shape questions under the same test: [[philosophy/shape-and-substance]].
+- The embodied face of the loop: [[philosophy/embodied-navigation]].
