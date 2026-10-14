@@ -18,7 +18,12 @@ It is the floor of batch size ([[philosophy/small-batches]]): below the plan, th
 
 Small is not the test. The commit must be atomic: an operation that cannot be split without breaking trunk. A rename across 12 files is one; counting lines or files measures the wrong thing. For a move the test is the diff: **glanceable**, its validity seen without reading the code ([[philosophy/mechanical-refactoring]]). Atomic for the trunk, glanceable for the reviewer.
 
-Atomic is not enough: the commit must be meaningful, and a step is meaningful when the next step does not override it. Rename a to b, b to a, a to c is three atomic operations and one change, a to c. A step overridden right after was never a change; it folds into the step that overrides it, until the fold stands. An addition and its polish fold; a green step and the refactor that follows it fold; tests on one unit of behavior fold, they ask one functional change. A fix and a rename do not fold: neither overrides the other, two commits. What stands is validated at once, by shape for a move, by the tests for a behavior.
+Atomic is not enough: the commit must be meaningful, and a step is meaningful when the next step does not override it. Rename a to b, b to a, a to c is three atomic operations and one change, a to c. A step overridden right after was never a change; it folds into the step that overrides it, until the fold stands.
+
+- Fold: an addition and its polish; a green step and the refactor that follows it; tests on one unit of behavior, which ask one functional change.
+- Don't fold: a fix and a rename. Neither overrides the other, so two commits.
+
+What stands is validated at once, by shape for a move, by the tests for a behavior.
 
 The formal name is the **irreducible morphism** (category theory, in the spirit of Auslander–Reiten): an arrow that factors into two only trivially. A to c factors through b, trivially: a stop is trivial when the path could have been taken at once and the stop lightens no cognitive load.
 
