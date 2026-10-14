@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Minimalist icon-driven statusline for Claude Code.
-Segments, separated by " | ", no labels:  📁 folder  🔀 branch  🤖 model  🧠 NN%  🤪 compactions(>0)
+Segments, separated by " | ", no labels:  📁 folder  🔀 branch  🤖 model (effort)  🧠 NN%  🤪 compactions(>0)
 🧠 % is computed against BUDGET, NOT the model context window.
 """
 import sys, json, os, re, subprocess, time
@@ -129,6 +129,10 @@ def main():
     # 🤖 model version only — strip trailing parenthetical like "(1M context)"
     model = (data.get("model") or {}).get("display_name") or "?"
     model = re.sub(r"\s*\(.*\)\s*$", "", model).strip()
+    # effort level, only sent when the model supports effort
+    effort = (data.get("effort") or {}).get("level")
+    if effort:
+        model += f" ({effort})"
 
     # 🧠 context tokens against BUDGET (override the model window)
     tokens = (data.get("context_window") or {}).get("total_input_tokens")
