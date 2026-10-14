@@ -4,7 +4,7 @@ tags: [batch-size, small-batches, flow]
 
 # Batch size economics
 
-**Thesis.** Inventory cost barely moves; transaction cost can fall to near zero. So the optimal batch falls to the floor, the atomic commit.
+**Thesis.** Inventory cost grows fast with batch size; transaction cost can fall to near zero. So the optimal batch falls to the floor, the atomic commit.
 
 ## The U-curve
 
