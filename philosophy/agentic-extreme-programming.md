@@ -14,7 +14,7 @@ XP says the reverse: turn all the knobs to 10 (Beck), turn up the good (Zuill). 
 
 What most readers of Accelerate missed: flow metrics and quality metrics are correlated. Teams that ship faster also fail less. Flow practices do not trade speed for quality, they give both. The usual search for a middle ground, enough speed and enough quality, looks for a trade-off the data does not show.
 
-Feeling pulled between two sides is the test: the set is not coherent. The question is never which side to pull.
+**Feeling pulled between two sides is the test: the set is not coherent.** The question is never which side to pull.
 
 ## The optimum is tiny
 
