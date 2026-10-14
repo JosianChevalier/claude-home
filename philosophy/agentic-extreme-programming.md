@@ -14,8 +14,6 @@ XP says the reverse: turn all the knobs to 10 (Beck), turn up the good (Zuill). 
 
 What most readers of Accelerate missed: flow metrics and quality metrics are correlated. Teams that ship faster also fail less. Flow practices do not trade speed for quality, they give both. The usual search for a middle ground, enough speed and enough quality, looks for a trade-off the data does not show.
 
-It held for XP and it holds agentic. The practices are not exactly the same set: they have been rethought for agentic programming.
-
 Feeling pulled between two sides is the test: the set is not coherent. The question is never which side to pull.
 
 ## The optimum is tiny
@@ -31,6 +29,8 @@ Practices that depend on each other make a rugged fitness landscape (Wright, Kau
 Selection on feedback alone only climbs, and stops at the nearest peak. Crossing takes a theory: knowing why the practices work together is what holds the course while things get worse.
 
 ## Agentic
+
+It held for XP and it holds agentic. The practices are not exactly the same set: they have been rethought for agentic programming.
 
 Tokens, context, cognitive load, feedback time, precision and quality move together. The practices of the harness hold each other up:
 
