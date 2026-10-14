@@ -19,9 +19,9 @@ What each batch pays to ship: manual tests, manual deployment, opening and revie
 
 It has almost no lower bound.
 
-## Inventory cost is risk
+## Inventory cost
 
-Mostly risk: the cost if it realizes, times its probability. Two kinds.
+Mostly risk: the cost if it realizes, times its probability. Plus the load of holding it.
 
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
@@ -29,6 +29,8 @@ Mostly risk: the cost if it realizes, times its probability. Two kinds.
 - **Faults combine.** Most outages come from several small faults lining up, not from one. n changes make n(n−1)/2 pairs that can interact, so risk grows faster than size. A small batch validates each fault alone: pass the configuration that was null, show it in a log, then use it.
 
 **Collision.** Two people on the same thing without knowing it: integration hazards, waste. Handled optimistically on trunk ([[philosophy/trunk-based-development]], optimistic locking).
+
+**Cognitive load.** A batch soon exceeds working memory, then the load grows with the interactions between its changes. A small batch is fire and forget: review a tiny bit, ship it, clear it from your head.
 
 ## The reflex
 
