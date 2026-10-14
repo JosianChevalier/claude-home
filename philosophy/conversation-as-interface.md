@@ -55,3 +55,4 @@ The posture is the architect elevator (Hohpe): ride between the penthouse and th
 - [[philosophy/transmission-belt]]: why showing is the channel metis perceives through.
 - [[philosophy/abstraction-ladder]]: what climbs on its own, and why the telescope bypasses it.
 - [[philosophy/session-state-in-documents]]: the four stores; the work file, above the notebook.
+- [[philosophy/embodied-navigation]]: going down as moving through a stable space.
