@@ -18,7 +18,7 @@ Should you wish to understand it anyway, it comes with a Guide: an agent that ha
 From a terminal, with Claude Code:
 
 ```sh
-claude --agent theory-guide
+claude --agent philosophy-guide
 ```
 
 From a session already open, Claude Code or opencode:
