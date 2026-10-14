@@ -9,7 +9,7 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 
 ## Steps
 
-- [ ] `batch-size-economics` landed 2026-10-14 (Reinertsen's U-curve, transaction vs inventory cost in software), to review. `small-batches` stays separate (batch size applied to plans) and points at it at its migration. Open: whether `agentic-extreme-programming`, "The optimum is tiny", links it.
+- [ ] `batch-size-economics` landed 2026-10-14 (Reinertsen's U-curve, transaction vs inventory cost in software), to review. `small-batches` stays separate (batch size applied to plans) and points at it at its migration.
 - [ ] Shape pass per file, second commit (`rules/writing.md`). In `atomic-commit`, the heading "Same file is not same change" no longer names what its section holds (atomic and meaningful).
 - [ ] Rows in `sync-repo.work.md`, Mapping old → new, for the four files that have none: `trunk-based-development`, `atomic-commit`, `agentic-trunk-based-development`, `agentic-extreme-programming`. Note `continuous-delivery` and `small-batches` are pointed at from the backlog.
 - [ ] Delete this file.

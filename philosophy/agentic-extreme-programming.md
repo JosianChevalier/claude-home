@@ -20,7 +20,7 @@ Feeling pulled between two sides is the test: the set is not coherent. The quest
 
 ## The optimum is tiny
 
-Batch size has an optimum (Reinertsen), and it is not fixed: lower the transaction cost and the optimum follows it down. A pipeline does not pick a better truck size, it removes the truck. The optimum stops at a floor: the smallest change that still works, in software the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10.
+Batch size has an optimum (Reinertsen, [[philosophy/batch-size-economics]]), and it is not fixed: lower the transaction cost and the optimum follows it down. A pipeline does not pick a better truck size, it removes the truck. The optimum stops at a floor: the smallest change that still works, in software the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10.
 
 The cost is made near zero, not found there: infrastructure, structure and practices are built. What is left to decide is not a trade-off between practices: nothing to choose between them, nothing to adjust so that one does not go too far. It is how far to go into them: how much is invested against how much comes back. Going deeper does not always pay enough. But what is invested in one practice pays in the others.
 
@@ -43,6 +43,6 @@ None of them is bought with another.
 
 ## Related
 
-- The smallest batch: [[philosophy/atomic-commit]].
+- The smallest batch: [[philosophy/atomic-commit]]; why it is the optimum: [[philosophy/batch-size-economics]].
 - The practices on trunk: [[philosophy/trunk-based-development]], [[philosophy/agentic-trunk-based-development]].
 - One instance, the design the moves presuppose and produce: [[philosophy/mechanical-refactoring]].
