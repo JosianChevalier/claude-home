@@ -24,7 +24,7 @@ If a diff is not glanceable, it is not a move. Split it into moves that are, or 
 
 ## Limit of applicability
 
-Substitution holds where the code is **referentially transparent**. Functional-style code holds it everywhere: every move applies, no check.
+Substitution holds where the code is **referentially transparent**.
 
 Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check.
 
