@@ -29,6 +29,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
         - [x] Skill `study-making`, salvaged 2026-10-13 on chat examples. Left: the `aggregate-identification` dispatch, 3.4.
         - [ ] The bottleneck sentence (code and prose now come faster than an engineer can read them; waste is accidental cognitive load, not queue time) goes to `zoom-levels`, Cognitive load, at its reshape.
       - [ ] Then the rest of the backlog, fewest outgoing links first: `small-batches` (1 out, 5 in), `change-in-place`, `continuous-delivery` (3), `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
+        - [ ] `small-batches`: check later, against `old-claude-reference/`, what moved to `batch-size-economics` and `atomic-commit`; it points at `batch-size-economics`.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
