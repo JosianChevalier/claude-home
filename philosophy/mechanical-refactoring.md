@@ -22,11 +22,18 @@ Call such a diff **glanceable**: its validity is seen, not read, the way a word 
 
 If a diff is not glanceable, it is not a move. Split it into moves that are, or admit it is something else and treat it as such.
 
-## Where it holds
+## Limit of applicability
 
 Substitution holds where the code is **referentially transparent**. Functional-style code holds it everywhere: every move applies, no check.
 
-Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check. Local moves, rename, extract, inline, hold anywhere, spaghetti included. Global moves, reorder, loop to map, hold on side-effect-free code only, and the check surfaces every use of what the move touches; its reach grows with coupling. Local moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other ([[philosophy/agentic-extreme-programming]]).
+Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check.
+
+| Tier | Moves | Holds on |
+|---|---|---|
+| 1 | rename, extract, inline | any code, spaghetti included |
+| 2 | reorder, loop to map | side-effect-free, functional-style code only |
+
+For a tier 2 move, the check verifies the precondition: it surfaces every use of what the move touches, and its reach grows with coupling. Tier 1 moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other ([[philosophy/agentic-extreme-programming]]).
 
 ## The boundary: redesign
 
