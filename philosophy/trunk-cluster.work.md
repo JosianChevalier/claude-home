@@ -16,8 +16,6 @@ Six philosophy files and one study on one idea: code integrated on trunk at the 
 
 ## Open
 
-- The Reinertsen study now feeds `agentic-extreme-programming`, section "The optimum is tiny": its own file, or folded there.
-
 - Hazard for the `continuous-delivery` migration: its old line "the branch shrinks to a conflict-avoidance queue and can shrink further to nothing" is softer than "branches are the exception"; align it then.
 - Where the git mechanics live (trunk may not be a checked-out working tree; fast-forward refused otherwise): a rule, not philosophy. Successor of `old-claude/rules/branch-hygiene.md`, phase 3.3.
 
