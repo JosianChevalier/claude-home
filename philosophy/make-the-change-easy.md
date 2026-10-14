@@ -43,7 +43,13 @@ That is all the aphorism is about. It is the same small step as the atomic commi
 
 ## One kind of step at a time
 
-A step is one of three kinds. A refactor keeps the model: tests and observable behavior are preserved, and the diff is validated by its shape. A redesign changes the model and can break the tests: validating it takes understanding ([[philosophy/mechanical-refactoring]]). A feature changes what the code does.
+A step is one of three kinds ([[philosophy/mechanical-refactoring]]):
+
+| Step | Changes | Tests | Validated by |
+|---|---|---|---|
+| Refactor | nothing: the model holds | preserved | the shape of the diff |
+| Redesign | the model | can break | understanding |
+| Feature | what the code does | change with it | the tests |
 
 Done together, each obscures the other — a diff that moves code *and* changes behavior cannot be verified for either. Taken apart, each is verified its own way, and what lands on prepared ground is small enough to prove correct.
 
