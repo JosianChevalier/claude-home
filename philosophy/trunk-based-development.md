@@ -16,7 +16,7 @@ Unintegrated work lives one commit. Under that bound three verbs collapse into o
 commit  =  integrate  =  publish
 ```
 
-There is no "committed but not yet shared" state. Everything the practice promises — no merge ever, conflicts a few lines wide, trunk always current — follows from the bound, and from nothing else.
+There is no "committed but not yet shared" state. Everything the practice promises — no merge ever, conflicts a few lines wide, trunk always current — follows from the bound, and from nothing else. Holding the bound takes atomic commits, and the skill of splitting a change into them ([[philosophy/atomic-commit]]).
 
 ## Branches are the exception
 
@@ -43,10 +43,6 @@ Partitioning the work up front is the pessimistic scheme: the cost of synchroniz
 Optimistic locking handles **ephemeral** overlap: two deltas touching the same place once, retried and gone.
 
 Overlap that **persists** across commits is a different fact. Two actors are working on the same thing. A retry does not fix that and a lock would only hide it. It is the signal to synchronize: talk, pair, or redraw who holds what. The conflict rate alone is not the signal; the same spatial overlap returning commit after commit is.
-
-## The granularity is a skill
-
-Integrating at this pace requires atomic commits, and the skill of splitting a change into them ([[philosophy/atomic-commit]]).
 
 ## Related
 
