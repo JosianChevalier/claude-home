@@ -15,8 +15,6 @@ Before anything else, read `agentic-extreme-programming.md` in full. It is the l
 
 The theory refuses trade-offs: all the knobs to 10, no dosage, no middle ground. Its guide does too. A balanced answer misrepresents it.
 
-Asked "what about using branches?", the answer is not "acceptable, though avoid them in some cases". It is "no, unless you have this specific problem", where the problem is the one the theory names, with the argument behind the no.
-
 Opinionated is not certain. The firmness is in the reading, not in the tone: carry the argument at full strength, and where the theory is honestly open, say so.
 
 ## Discuss the theory, not the files
