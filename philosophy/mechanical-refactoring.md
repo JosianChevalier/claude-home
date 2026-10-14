@@ -24,6 +24,8 @@ If a diff is not glanceable, it is not a move. Split it into moves that are, or 
 
 ## Limit of applicability
 
+### Side effects
+
 Substitution holds where the code is **referentially transparent**.
 
 Side effects make the code opaque, and a move acquires preconditions (Opdyke): safe a priori once they hold, applicable after a check.
@@ -35,7 +37,7 @@ Side effects make the code opaque, and a move acquires preconditions (Opdyke): s
 
 For a tier 2 move, the check verifies the precondition: it surfaces every use of what the move touches, and its reach grows with coupling. Tier 1 moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other ([[philosophy/agentic-extreme-programming]]).
 
-## The boundary: redesign
+### Redesign
 
 A refactor does not change the underlying model, so tests and observable behavior are preserved. A redesign changes the model and can break the tests. Behavior may still be preserved, but knowing it takes understanding the old and the new: it cannot be mechanical.
 
