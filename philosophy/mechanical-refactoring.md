@@ -16,7 +16,7 @@ Safe moves chain: proof composes. A single large step must be proven from scratc
 
 ## The diff is its own proof
 
-A move is validated by the **shape** of the diff, not the meaning of the code: this is a rename, every occurrence changed, nothing else moved. The cost is one glance, whatever the code does. A rewrite has the opposite property: reconstruct the old behavior, reconstruct the new, compare; the cost grows with the code's complexity, and the error rate with it.
+A move is validated by the **shape** of the diff, not the meaning of the code: this is a rename, every occurrence changed, nothing else moved. The cost is one glance, whatever the code does.
 
 Call such a diff **glanceable**: its validity is seen, not read, the way a word is recognized without being spelled. Glanceable is a property of the diff as presented, not of its size. A rename across 12 files is glanceable; the same rename interleaved with a reformat is not.
 
