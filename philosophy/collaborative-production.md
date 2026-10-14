@@ -33,6 +33,13 @@ This is the mecha-suit split stated as a practice, and it is why the frame is ch
 
 Plans, studies, documents, and code emerge from interaction with the user and the system under change. The relevant point is enactive and extended: thinking happens through the act, and a notebook or an agent tightly coupled to it is part of the thinking. The boundary of the mind sits wherever that loop stays unbroken. The agent acts inside the engineer's loop, and the artifact externalizes the current shared model.
 
+The loop has four faces, 4E cognition:
+
+- **Enacted.** A model is built by taking part, not by watching.
+- **Extended.** The agent and the notebook coupled to the act are part of the mind (Clark & Chalmers).
+- **Embedded.** Thinking is situated in its terrain: the engineer still goes down to the code ([[philosophy/conversation-as-interface]]).
+- **Embodied.** Thinking runs on the body's spatial machinery: the engineer moves through the code and feels where they are ([[philosophy/embodied-navigation]]).
+
 The artifact is therefore not the primary act. The conversation is the act; the artifact crystallizes the current shared model. In belt terms: the conversation is where the belt runs, and the engineer's intention is carried, not improved — a better idea is a rival reading offered at a gate ([[philosophy/kairos-gates]]), an unchosen concept returns up the belt ([[philosophy/transmission-belt]]).
 
 ## Self-sufficient conversation
