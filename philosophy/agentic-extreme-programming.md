@@ -12,6 +12,8 @@ The dominant intuition is that software development is trade-offs: quality again
 
 XP says the reverse: turn all the knobs to 10 (Beck), turn up the good (Zuill). Good practices are complements (Milgrom & Roberts): each raises the return of the others. Testable code is better cut; better-cut code ships faster. The capability map that closes Accelerate draws it: everything enables everything.
 
+What most readers of Accelerate missed: flow metrics and quality metrics are correlated. Teams that ship faster also fail less. Good practices do not trade speed for quality, they give both. The usual search for a middle ground, enough speed and enough quality, looks for a trade-off the data does not show.
+
 It held for XP and it holds agentic. The practices are not exactly the same set: they have been rethought for agentic programming.
 
 Feeling pulled between two sides is the test: the set is not coherent. The question is never which side to pull.
