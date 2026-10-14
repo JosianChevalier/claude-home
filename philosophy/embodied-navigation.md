@@ -6,18 +6,7 @@ tags: [cognition, code-review, harness-design, collaboration]
 
 **Thesis.** The engineer thinks with the code by moving through it. Seeing it is not enough. For the best result, the code needs a stable spatial representation, and the engineer needs to navigate it actively.
 
-## The four Es
-
-Cognition is 4E. The harness already leans on two of them; this file adds the other two.
-
-| E | Meaning | In the harness |
-|---|---|---|
-| Enacted | a model is built by taking part | the conversation ([[philosophy/collaborative-production]]) |
-| Extended | the loop's tools are part of the mind | the agent inside the loop (Clark & Chalmers) |
-| Embedded | thinking is situated in its terrain | gemba, the architect elevator ([[philosophy/conversation-as-interface]]) |
-| Embodied | thinking runs on the body's machinery | spatial navigation, this file |
-
-They are faces of one loop. In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it. Embodiment is in the definition.
+This is the embodied face of the enacted loop ([[philosophy/collaborative-production]]). In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it.
 
 ## The body thinks in space
 
