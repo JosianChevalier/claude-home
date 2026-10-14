@@ -8,7 +8,7 @@ tags: [batch-size, small-batches, flow]
 
 ## The U-curve
 
-Reinertsen, *The Principles of Product Development Flow*: batch size has an economic optimum. **Transaction cost** per item falls as batches grow, **holding cost** (inventory) rises; the optimum is the bottom of their sum. Lower either curve and the optimum moves.
+Reinertsen, *The Principles of Product Development Flow*: batch size has an economic optimum. **Transaction cost** per item falls as batches grow, **inventory cost** rises; the optimum is the bottom of their sum. Lower either curve and the optimum moves.
 
 ## Transaction cost
 
