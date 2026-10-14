@@ -14,7 +14,7 @@ The enemy of the atomic commit is proximity. A cleanup noticed nearby, a comment
 
 It is the floor of batch size ([[philosophy/small-batches]]): below the plan, the implementer's cadence. One rename. One extracted function. One moved variable. Seconds apart.
 
-## Same file is not same change
+## Atomic and meaningful
 
 Small is not the test. The commit must be atomic: an operation that cannot be split without breaking trunk. A rename across 12 files is one; counting lines or files measures the wrong thing. For a move the test is the diff: **glanceable**, its validity seen without reading the code ([[philosophy/mechanical-refactoring]]). Atomic for the trunk, glanceable for the reviewer.
 
