@@ -22,7 +22,7 @@ a feature
 
 There are never only two steps. The feature goes in small steps as well, and so does the refactoring ([[philosophy/mechanical-refactoring]]). The pair is fractal: it holds for a plan as for a commit, because nothing in the argument mentions size.
 
-And the pair repeats. One refactor and one redesign do not get there: refactor, redesign, refactor, redesign, and keep going. It is an alternation of the two, a rhythm, not two phases.
+And the pair repeats. One refactor and one redesign do not get there: refactor, redesign, refactor, redesign, and keep going.
 
 ## Finding the path
 
