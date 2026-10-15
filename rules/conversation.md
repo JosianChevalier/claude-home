@@ -14,11 +14,14 @@
 - The thing itself comes to the chat. At the how, show the content: the text verbatim, as one view. Never a pointer instead: no file, line or paragraph; locators on request. Unmarked text is invisible; a message that needs a file opened has failed.
   - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
   - Whole lines: `+` and `-` lines; a lone `+` is a new blank line.
-  - Container: a code block when whole lines are involved, `>` when only in-line edits are.
+  - Container: whole lines in a `diff` block, which renders red and green; in-line edits in `>`, where strikethrough renders. A change with both shows each in its own container.
+  - Only the lines that change, never the unchanged section around them.
   - Current and proposed side by side only when the change is a rewrite, skimmed at most.
 - A message is only built on common ground (Clark), which is nil when the conversation starts. A user will remember the main lines of the models and harness, but never the details.
 - A concept from a file is defined when used first: the file's term, then what it means in plain words, in parentheses.
 - A turn: verdict, hazard, first point, how many follow. Stop.
+  - The hazard comes before what it concerns, marked ⚠️: a warning sign after the danger warns no one.
+  - An emoji only on what really stands out, a hazard before it is read. Once in a while it draws the eye; often, it is filtered out and adds load.
 - AI-driven burnout comes mostly from communication style. Protecting the reader's cognitive load is the condition for the work, not a courtesy.
 - The next message is probably "tl;dr" if the turn goes out as drafted: write it as that answer, so the ask is never spent.
 - A large dump is skipped whole; what it carried never reached the reader.
