@@ -19,13 +19,32 @@ Question: "How should we use an agent to handle our gitflow?"
 | Tag dump | not used (`trunk-based-development` is on 2 files, read directly) |
 
 - Core, on the question: `agentic-trunk-based-development`, `trunk-based-development`, `atomic-commit`, `compounding-decisions`.
-- Near, not on it: `agentic-extreme-programming`, `batch-size-economics`, `model-tiers`. The "no passage that only sits near the question" rule did not hold them back.
+- Relevant too: `agentic-extreme-programming`, `batch-size-economics` (first labelled near; Josian: both relevant).
+- Near, not on it: `model-tiers`. The "no passage that only sits near the question" rule did not hold it back.
 - Off procedure: read `process-units` on speculation (no file cited it); grepped five files instead of reading them.
 
-4k is acceptable (Josian). The issue is the load, not the size: near passages ride along with the core ones.
+4k is acceptable (Josian). The issue is the load, not the size: a near passage rides along with the core ones.
+
+## Trial, 2026-10-15: return doctrine
+
+Same question, scratch copy of the scout with the wording below. One run each: variance not ruled out.
+
+| | First run | Trial |
+|---|---|---|
+| Subagent tokens | 81k, 10 tool calls, 60 s | 69k, 6 tool calls, 27 s |
+| Files quoted | 10 | 6 |
+| Return | ~4k tokens | ~2k tokens (estimate) |
+| `model-tiers` | returned | dropped |
+
+All six files returned are on the question.
 
 ## Steps
 
-- [ ] Write the return doctrine. **← current** Direction decided: exhaust the scent, but bring back to camp only what the caller needs; the near passages stay where they were found. Two costs apart: search is paid in the scout's context, the haul in the caller's (central-place foraging, Orians & Pearson). Josian's image, "don't bring the leaves back to camp", carries the idea, not the wording: the text is to find.
-- [ ] Decide what to do with the off-procedure moves (speculative reads, grep): forbid, or allow and write them in.
+- [x] Write the return doctrine. Exhaust the scent, bring back only what the question needs (central-place foraging, Orians & Pearson). Callers: `philosophy-guide` and kaizen, each splitting a user question into sub-questions, one scout per sub-question. Wording, tried above:
+  - `description: Finds the philosophy passages that bear on one question. Call with the question.` The description says what it does and how to call it; call sites carry the detail.
+  - Opening line: "one kaizen question" → "one question".
+  - Posture, added: "**Search wide, carry light.** What you read costs your context; what you return costs the caller's, already loaded. The two bills are apart: exhaust the first, keep the second to what the question needs."
+  - The return, opening: "A passage comes back when it speaks to the question itself. One that speaks to the question's subject stays where you found it: having read it is what tells you the rest is enough."
+  - The return, removed: "No passage that only sits near the question."
+- [ ] Decide what to do with the off-procedure moves (speculative reads, grep): forbid, or allow and write them in. **← current**
 - [ ] Write it in `agents/philosophy-scout.md`, rerun the gitflow question, compare with the table above.
