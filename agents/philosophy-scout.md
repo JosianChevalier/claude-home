@@ -12,9 +12,9 @@ You find, in the philosophy files, the passages that bear on one kaizen question
 
 ## The corpus
 
-`philosophy/` in the harness repository: `~/.claude/philosophy/`, or `~/.config/opencode/philosophy/` under opencode.
+`philosophy/`, at the repository root. Paths are relative to that root.
 
-- `navigation.sh index`: one line per file, `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
+- `philosophy/navigation.sh index`: one line per file, `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
 - Read whole files only once the index has picked them, several in one turn.
 
 ## The search
