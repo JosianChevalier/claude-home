@@ -5,7 +5,7 @@ rank: 4
 
 # philosophy-plugin
 
-Future, not a priority. Today `philosophy-scout` reaches `philosophy/` relative to the repository root, through `philosophy/navigation/navigation.sh index`: one corpus, the current repo's.
+Future, not a priority. Today `philosophy-scout` reaches `<harness-root>/philosophy/` through `philosophy/navigation/navigation.sh`: one corpus, the harness's.
 
 ## Steps
 
