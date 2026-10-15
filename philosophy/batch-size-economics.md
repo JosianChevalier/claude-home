@@ -4,11 +4,11 @@ tags: [batch-size, small-batches, flow]
 
 # Batch size economics
 
-**Thesis.** Inventory cost grows fast with batch size; transaction cost can fall to near zero. So the optimal batch falls to the floor, the atomic commit.
+**Thesis.** Holding cost grows fast with batch size; transaction cost can fall to near zero. So the optimal batch falls to the floor, the atomic commit.
 
 ## The U-curve
 
-Reinertsen, *The Principles of Product Development Flow*: batch size has an economic optimum. **Transaction cost** per item falls as batches grow, **inventory cost** rises; the optimum is the bottom of their sum. Lower either curve and the optimum moves.
+Reinertsen, *The Principles of Product Development Flow*: batch size has an economic optimum. **Transaction cost** per item falls as batches grow, **holding cost** rises; the optimum is the bottom of their sum. Lower either curve and the optimum moves.
 
 ## Transaction cost
 
@@ -19,9 +19,9 @@ What each batch pays to ship: manual tests, manual deployment, opening and revie
 
 It has almost no lower bound.
 
-## Inventory cost
+## Holding cost
 
-Mostly risk: the cost if it realizes, times its probability. Plus the load of holding it.
+Mostly cost of delay: the value the batch would have brought while it waits. Then late feedback: work built on an untested hypothesis, written off if it fails. Then risk: the cost if it realizes, times its probability. Plus the load of holding it.
 
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
@@ -34,16 +34,16 @@ Mostly risk: the cost if it realizes, times its probability. Plus the load of ho
 
 ## The reflex
 
-The usual reflex attacks inventory cost: synchronize ahead so that nobody works on the same thing.
+The usual reflex attacks holding cost: synchronize ahead so that nobody works on the same thing.
 
 - It is the pessimistic scheme: synchronization paid on every unit of work ([[philosophy/trunk-based-development]]).
 - It stops small cleanups along the way, since they may touch someone else's work. "Open another pull request for it" does not hold: a pull request is a transaction cost, so nobody opens it.
 
-Inventory cost moved a little, and new costs came with it.
+Holding cost moved a little, and new costs came with it.
 
 ## The asymmetry
 
-Transaction cost can go to near zero: TDD, continuous deployment, trunk. Inventory cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10 ([[philosophy/agentic-extreme-programming]]).
+Transaction cost can go to near zero: TDD, continuous deployment, trunk. Holding cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10 ([[philosophy/agentic-extreme-programming]]).
 
 ## Related
 
