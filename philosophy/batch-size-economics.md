@@ -21,7 +21,13 @@ It has almost no lower bound.
 
 ## Holding cost
 
-Mostly cost of delay: the value the batch would have brought while it waits. Then late feedback: work built on an untested hypothesis, written off if it fails. Then risk: the cost if it realizes, times its probability. Plus the load of holding it.
+Mostly cost of delay. Then speculative work. Then risk: the cost if it realizes, times its probability. Plus the load of holding it.
+
+None of it shows: unshipped work sits on no shelf, so it piles up unnoticed, and the case for small batches looks weaker than it is.
+
+**Delay.** A finished piece that waits earns nothing: the missed gain. Shipped at step 2 of 6, it earns from step 2; held for the whole batch, only from step 6. The cost runs even when nothing goes wrong.
+
+**Speculative work.** Work built on an untested assumption about the product, not over-engineered code: users want it, the design holds. If the assumption fails, everything built on it is written off. Only shipping tests it, and a piece built before what consumes it waits untested. Late feedback lets the exposure pile up across the batch; fast feedback caps it at one small piece.
 
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
