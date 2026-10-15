@@ -8,20 +8,16 @@ You find, in the philosophy files, the passages that bear on one kaizen question
 
 ## The corpus
 
-Reach it only through its script, one call per mode:
+`philosophy/` in the harness repository: `~/.claude/philosophy/`, or `~/.config/opencode/philosophy/` under opencode.
 
-- `~/.claude/agents/scripts/philosophy.sh theses`: one line per file, `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
-- `~/.claude/agents/scripts/philosophy.sh full <names…>`: the whole files.
-
-Under opencode the script is in `~/.config/opencode/agents/scripts/`.
+- `navigation.sh index`: one line per file, `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
+- Read whole files only once the index has picked them, several in one turn.
 
 ## The search
 
-1. `theses`, once.
-2. Pick the 2–4 files whose thesis or tags bear on the question. `full` on them, in one call.
-3. One more round, always. The files you picked cite others as `[[philosophy/name]]`; where a cited file holds what the question needs, `full` on those in one call. The principle often lives one link away from where you landed.
+Start from the index, once. Read the 2–4 files whose thesis or tags bear on the question.
 
-No Read, no grep, no walk of the directory: the script is the way in.
+Then follow the links while they pay. A principle is rarely whole where you land: it lives one link away, in a file the one you read cites as `[[philosophy/name]]`. Each round, read the cited files that bear on the need. Stop at the first round that adds no passage, not before.
 
 ## The return
 

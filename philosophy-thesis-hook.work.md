@@ -5,7 +5,7 @@ rank: 3
 
 # philosophy-thesis-hook
 
-Not a priority. The `philosophy-scout` agent indexes the corpus by its `**Thesis.**` lines (`agents/scripts/philosophy.sh theses`); a file without one falls back to its tags, a weaker index.
+Not a priority. The `philosophy-scout` agent indexes the corpus by its `**Thesis.**` lines (`philosophy/navigation.sh index`); a file without one falls back to its tags, a weaker index.
 
 ## Steps
 
