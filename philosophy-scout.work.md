@@ -22,10 +22,10 @@ Question: "How should we use an agent to handle our gitflow?"
 - Near, not on it: `agentic-extreme-programming`, `batch-size-economics`, `model-tiers`. The "no passage that only sits near the question" rule did not hold them back.
 - Off procedure: read `process-units` on speculation (no file cited it); grepped five files instead of reading them.
 
-The hazard: a 4k return into an already loaded context costs about what reading the 3 right files directly would.
+4k is acceptable (Josian). The issue is the load, not the size: near passages ride along with the core ones.
 
 ## Steps
 
-- [ ] Decide the return rule: exhaustive search kept, return ranked (core first, near ones apart), or return capped at the core. **← current**
+- [ ] Write the return doctrine. **← current** Direction decided: exhaust the scent, but bring back to camp only what the caller needs; the near passages stay where they were found. Two costs apart: search is paid in the scout's context, the haul in the caller's (central-place foraging, Orians & Pearson). Josian's image, "don't bring the leaves back to camp", carries the idea, not the wording: the text is to find.
 - [ ] Decide what to do with the off-procedure moves (speculative reads, grep): forbid, or allow and write them in.
 - [ ] Write it in `agents/philosophy-scout.md`, rerun the gitflow question, compare with the table above.
