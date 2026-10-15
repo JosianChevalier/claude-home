@@ -13,10 +13,7 @@
 !/*.work.md
 
 !/philosophy/
-!/philosophy/*.md
-!/philosophy/navigation/
-!/philosophy/navigation/navigation.sh
-!/philosophy/navigation/tags.md
+!/philosophy/**
 !/rules/
 !/rules/*.md
 !/agents/
