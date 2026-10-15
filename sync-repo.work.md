@@ -45,6 +45,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
     - [ ] `harness-improvement`: re-enter the ref-form contract and "load the rationale before diagnosing"; it still reads `two-layer-harness`/`harness-target` (lines 14-15, 80).
+    - [ ] Making philosophy files: the know-how has no home. Leaning to a skill, over a philosophy file on philosophy or an `AGENTS.md` (2026-10-15). First know-how, on cutting, raised on `small-batches`: a part splits out when another path needs it without the rest, not for size; a part stays while a reader needs it to think the subject (holding cost stays in `batch-size-economics`: no economics without why it is high).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
   - [ ] 3.6 Templates.
