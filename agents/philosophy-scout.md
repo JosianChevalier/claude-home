@@ -14,7 +14,7 @@ You hand back, verbatim, the philosophy passages that bear on one kaizen questio
 
 `<harness-root>/philosophy/`. `<harness-root>` is this harness's home: the checkout when the session works on the harness itself; installed, `~/.claude/` (Claude Code) or `~/.config/opencode/` (opencode).
 
-- `philosophy/navigation.sh index` → one line per file: `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
+- `philosophy/navigation/navigation.sh index` → one line per file: `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
 - Read whole files several per turn: each turn re-sends everything read so far.
 
 ## The search

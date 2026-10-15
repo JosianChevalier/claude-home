@@ -14,7 +14,9 @@
 
 !/philosophy/
 !/philosophy/*.md
-!/philosophy/navigation.sh
+!/philosophy/navigation/
+!/philosophy/navigation/navigation.sh
+!/philosophy/navigation/tags.md
 !/rules/
 !/rules/*.md
 !/agents/
