@@ -21,6 +21,14 @@
 !/commands/
 !/commands/*.md
 
+# Cloud sessions clone this repo as a project, not as ~/.claude: Claude Code then
+# only discovers config under .claude/. Symlinks point it back at the real folders.
+!/.claude/
+!/.claude/skills
+!/.claude/agents
+!/.claude/commands
+!/.claude/rules
+
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
 !/old-claude/**
