@@ -1,5 +1,5 @@
 ---
-ongoing_work_file: "Relocate the ideas of the old notes small-batches and change-in-place one by one, then recenter both. Empty when both are gone from old-claude/rationale/, their two recentered files stand in philosophy/, and every link to them is re-pointed."
+ongoing_work_file: "Write batch-slicing, pulling from the old notes small-batches and change-in-place what it needs, then recenter change-in-place. Empty when both are gone from old-claude/rationale/, batch-slicing and the recentered change-in-place stand in philosophy/, and every link to them is re-pointed."
 rank: 1
 ---
 
@@ -9,9 +9,13 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## State
 
-- Both notes at once: relocate their ideas one by one to the homes below, then recenter what is left.
+- Pull, not push: start with `batch-slicing` and pull from the two old notes what it needs. The rows below with other homes wait for those homes.
 - `change-in-place`, recentered on its purpose: counterbalance the AI bias toward rewriting from scratch and plugging the flow in at the end, which nullifies small steps and atomic commits. `make-the-change-easy` uses it as its MO.
-- `small-batches`, recentered on how to split work: elephant carpaccio (Cockburn). Open: technical stages as the exception, when no thinner functional cut exists, or as a normal level of the plan, as the old note has it. The name follows.
+- `small-batches` becomes `philosophy/batch-slicing`; elephant carpaccio (Cockburn) names its top level only. Core idea (2026-10-15): finding the next hypothesis to validate, and cutting the smallest slice that can test it. First the hypotheses of value, about the domain and the user: functional increments only production verifies. Under them, technical hypotheses. Just in time is a line in passing (written).
+- Crossing the valley (`make-the-change-easy`): one line, as how to slice deeper. Not the main idea. Intermediate models are more or less coherent; the point is going from one hill to another.
+- A reshape is a slice at the technical level, not a value hypothesis.
+- Technical slices are a normal level under each functional increment, not an exception (user, 2026-10-15). Hence the rename from `elephant-carpaccio`.
+- What defines a step: a north star that guides tiny sub-agents. It is the human's unit of thought.
 - Little's law: dropped.
 - Holding cost (Reinertsen's term, now in `batch-size-economics`) stays one file: a reader needs why holding cost is high to get the economics. Split a part out only when another path needs it without the rest; likeliest first: speculative work, for planning.
 
@@ -22,8 +26,10 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Fast feedback | small-batches | `batch-size-economics`, Holding cost, entry Speculative work |
 | Inventory piling up unseen | small-batches | `batch-size-economics`, one line on holding cost as a whole |
 | Just in time, the why: a piece built early waits unvalidated | change-in-place | the same, Speculative work |
-| Just in time, the rule: each piece built with what consumes it | change-in-place | `small-batches`, recentered |
+| Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | `planning-is-everything`, at its migration |
+| Last responsible moment (Poppendieck): when to commit to a decision; optionality, so architecture | change-in-place | a line, later; home open |
+| Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | later, one layer up; home open |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
 | Dark code: new behavior dark then keystone, existing behavior in place | change-in-place | `continuous-delivery`, at its migration |
 | Refactor and redesign alternated, recursively | small-batches | `make-the-change-easy`, already there |
@@ -32,8 +38,6 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. Relocate, one idea per turn, down the table. **← current: Just in time, the rule**, into `small-batches`.
-2. Recenter `change-in-place`.
-3. Recenter `small-batches`, and name it.
-4. Re-point the links to `small-batches`: `make-the-change-easy`, `trunk-based-development`, `atomic-commit`, `guest-codebase`, `batch-size-economics`; the skills `write-plan`, `refactoring-moves` at 3.4.
-5. Mapping rows in `sync-repo.work.md`; delete this file.
+1. Recenter `change-in-place`. One section per turn, written on the user's go. Style asked: terse; a named reference stays one line, never explained. **← current**
+2. Re-point the links to `small-batches` at `batch-slicing`: `make-the-change-easy`, `trunk-based-development`, `atomic-commit`, `guest-codebase`, `batch-size-economics`; the skills `write-plan`, `refactoring-moves` at 3.4.
+3. Mapping rows in `sync-repo.work.md`; delete this file.
