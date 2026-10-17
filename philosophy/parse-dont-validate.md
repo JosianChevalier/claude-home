@@ -6,13 +6,13 @@ tags: [types, invariants, context-economics, domain-modeling, reliability]
 
 **Thesis.** A spatial cut made inside the code. Parse once, where the data enters, into a type with no invalid inhabitant; the value then carries its proof, and a call site's whole context is its signature.
 
-## The cut without a sub-agent
+## Less to read
 
-The spatial axis of a context is its blast radius: how much must be read to act ([[philosophy/context-splitting]]). The usual cut is a sub-agent: it reads the slice and returns only the conclusion. A parsed type is the same cut, made in the code: the parse reads the raw input once and returns a conclusion the checker enforces. Every later reader gets the conclusion and never opens the slice.
+A parsed type reduces what must be read to act. The signature says what the value is; the callers that built it, and theirs, stay closed. That is the spatial axis of a context, the blast radius, and a parsed type shrinks it ([[philosophy/context-splitting]]).
 
-Separation logic calls this **local reasoning** (O'Hearn, Reynolds), the frame rule: a specification mentions only its footprint, what the function touches, and everything outside the footprint need not be read to understand it. A signature of parsed types is a footprint. To act on `ship(order: PaidOrder)` nothing above the call needs opening: not the controller that built the order, not the repository that loaded it.
+Separation logic calls it **local reasoning** (O'Hearn, Reynolds), the frame rule: a specification mentions only its footprint, and everything outside the footprint need not be read to understand it. A signature of parsed types is a footprint.
 
-The feedback is the fastest there is: the checker, in the editor, before any test runs. Shift-left at its leftmost.
+The feedback is the fastest there is: the checker, in the editor, before any test runs.
 
 ## Validate versus parse
 
