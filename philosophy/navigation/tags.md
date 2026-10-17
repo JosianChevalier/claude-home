@@ -12,7 +12,9 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | atomic-commit | The smallest change that still works, as the floor of batch size. |
 | attractors | What sits in context pulls the next output, including across sessions. |
 | batch-size | Holding versus transaction cost, pushing the optimal batch down to the tiny. |
+| batch-slicing | Cutting work into slices that each test one hypothesis: increments of value, then steps as missions. |
 | bounded-contexts | One model or two, settled by test rather than by layer. |
+| change-in-place | Changing a live path where it stands, never building beside it and switching at the end. |
 | code-review | Reviewing by actively navigating code that keeps a stable spatial layout. |
 | cognition | Thinking with code as embodied, enacted, spatial navigation. |
 | cognitive-load | The engineer's attention as scarce budget; the agent removes extraneous load. |
@@ -24,6 +26,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | concurrency | Parallel committers integrating continuously on one trunk. |
 | consistency | Full consistency inside an aggregate, eventual consistency between aggregates. |
 | context-economics | Context as the scarce resource every harness structure must budget. |
+| continuous-delivery | Every step live in production: the trunk always releasable, nothing waiting dark for a switch. |
 | continuous-integration | Continuous integration as identical to trunk-based development. |
 | conventions | Conforming to another team's style in a codebase we do not own. |
 | conversation-continuity | Work as a lineage of sessions: what passes between them, and what must not. |
@@ -31,6 +34,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | ddd | Domain-driven design: models, their expressions, aggregates, the engineer's grasp of them. |
 | determinism | Removing agent decisions by turning them into scripts, hooks, tools or defaults. |
 | domain-modeling | Shaping and expressing the domain model, and where its boundaries fall. |
+| elephant-carpaccio | The thinnest increment of value that reaches production to test its hypothesis. |
 | flow | Reinertsen's product-development flow economics, applied to batch size. |
 | git | Commits and trunk as the mechanics of small, continuously integrated changes. |
 | guest-codebase | Posture for code another team owns: conform, small footprint, slide the norm. |
