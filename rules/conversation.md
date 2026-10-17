@@ -1,4 +1,4 @@
-# Conversation
+# Chat conversation
 
 ## Doctrine
 
@@ -15,6 +15,7 @@
   - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
   - Whole lines: `+` and `-` lines; a lone `+` is a new blank line.
   - Container: whole lines in a `diff` block, which renders red and green; in-line edits in `>`, where strikethrough renders. A change with both shows each in its own container.
+  - Text quoted from a file: in `>`, where its markdown renders; a code block only for code.
   - Only the lines that change, never the unchanged section around them.
   - Current and proposed side by side only when the change is a rewrite, skimmed at most.
 - A message is only built on common ground (Clark), which is nil when the conversation starts. A user will remember the main lines of the models and harness, but never the details.
