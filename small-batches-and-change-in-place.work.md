@@ -9,14 +9,10 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## State
 
-- Pull, not push: start with `batch-slicing` and pull from the two old notes what it needs. The rows below with other homes wait for those homes.
-- `small-batches` becomes `philosophy/batch-slicing`; elephant carpaccio (Cockburn) names its top level only. Core idea (2026-10-15): finding the next hypothesis to validate, and cutting the smallest slice that can test it. First the hypotheses of value, about the domain and the user: functional increments only production verifies. Under them, technical hypotheses. Just in time is a line in passing (written).
-- Crossing the valley (`make-the-change-easy`): one line, as how to slice deeper. Not the main idea. Intermediate models are more or less coherent; the point is going from one hill to another.
-- A reshape is a slice at the technical level, not a value hypothesis.
-- Technical slices are a normal level under each functional increment, not an exception (user, 2026-10-15). Hence the rename from `elephant-carpaccio`.
-- What defines a step: a north star that guides tiny sub-agents. It is the human's unit of thought.
+- `batch-slicing` and `change-in-place` stand in `philosophy/` as whole drafts: the user reads a finished file and adjusts, never idea by idea. The old notes stay in `old-claude/rationale/` until the user validates both drafts.
+- The words of a specific solution stay out of `batch-slicing` (north star, sub-agents, ripple): the step is told in mission command's terms.
 - Little's law: dropped.
-- Holding cost (Reinertsen's term, now in `batch-size-economics`) stays one file: a reader needs why holding cost is high to get the economics. Split a part out only when another path needs it without the rest; likeliest first: speculative work, for planning.
+- The rows below with homes not yet written wait for those homes.
 
 | Idea | From | Home |
 |---|---|---|
