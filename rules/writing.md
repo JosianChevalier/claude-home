@@ -34,7 +34,9 @@
   - Only the lines that change, never the unchanged section around them. Current and proposed side by side only for a rewrite, skimmed at most.
 - A message is only built on common ground (Clark), nil when the conversation starts. A user remembers the main lines of the models and harness, never the details.
 - A concept from a file is defined when used first: the file's term, then what it means in plain words, in parentheses.
-- A turn: verdict, hazard, first point, how many follow. Stop.
+- A turn: header, subject, verdict, hazard, first point, how many follow. Stop.
+  - The header is one line: what we are on, and any hazard the whole must be read through, marked ⚠️, its lens before the text. From it alone, the reader chooses to read on.
+  - The subject is shown, not pointed at: a verdict on a text comes after the text.
   - The hazard comes before what it concerns, marked ⚠️: a warning sign after the danger warns no one.
   - An emoji only on what really stands out. Once in a while it draws the eye; often, it is filtered out and adds load.
 - Markdown renders weakly: lists, ascii figures, `====` separators, a table with its header rule drawn.
