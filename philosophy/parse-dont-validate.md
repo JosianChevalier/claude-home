@@ -61,7 +61,7 @@ A grammar that cannot express the type (SQL without sum types, JSON without bran
 
 ## Vocabulary
 
-What pulls away from it has the field's own names: primitive obsession, shotgun parsing, defensive programming. Named when observed, not before ([[philosophy/attractors]]).
+What pulls away from it has the field's own names: primitive obsession, shotgun parsing, defensive programming. All three are basins already in the weights, so naming them pushes away rather than carving them ([[philosophy/attractors]]).
 
 ## Related
 
