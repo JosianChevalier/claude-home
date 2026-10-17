@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+# model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this and its line in rules/tools.md.
+#
+# Why it exists: agents edit text through inline Python (`python3 - <<'EOF'`, open, replace,
+# write) far more than through the Edit tool: 292 such calls against 102 in 2026-10-08..17.
+# They batch several edits and files per call and check each match is unique. This is that
+# script, pre-made, so a call costs a line instead of rewriting the scaffolding each time.
+"""Exact-text edits in one call. Each old text or start anchor must match exactly once; on any failure nothing is written.
+
+  replace-text FILE 'old' 'new'                      one replacement ('' deletes)
+  replace-text FILE --between 'START' 'END' < new    replace from START up to END (END kept, first match after START; '' = end of file)
+  replace-text [FILE] < blocks                       batch, several pairs and files:
+
+    @@@ path/a.md      (omitted when FILE is given)
+    old text
+    @@@
+    new text
+    @@@
+    another old
+    @@@
+    another new
+    @@@ path/b.md
+    ...
+
+  A segment ending with an empty line includes its final newline.
+"""
+import sys
+
+
+def die(msg):
+    sys.exit(f"replace-text: {msg}, nothing written")
+
+
+def replace_once(path, s, old, new):
+    n = s.count(old)
+    if n != 1:
+        die(f"{path}: {n} matches for {old[:60]!r}")
+    return s.replace(old, new)
+
+
+def between(path, s, start, end, new):
+    if s.count(start) != 1:
+        die(f"{path}: {s.count(start)} matches for start {start[:60]!r}")
+    a = s.index(start)
+    b = s.find(end, a + len(start)) if end else len(s)
+    if b < 0:
+        die(f"{path}: end {end[:60]!r} not found after start")
+    return s[:a] + new + s[b:]
+
+
+def parse_blocks(text, path):
+    """Pairs (path, old, new) from @@@-separated segments."""
+    pairs, seg, segs = [], [], []
+
+    def flush():
+        if path is None and (seg or segs):
+            die("a block must start with '@@@ path'")
+        segs.append("\n".join(seg))
+        if len(segs) % 2 and segs[-1] == "":
+            segs.pop()  # a closing @@@ after the last new text
+        if len(segs) % 2:
+            die(f"{path}: old text without new text")
+        pairs.extend((path, segs[i], segs[i + 1]) for i in range(0, len(segs), 2))
+
+    lines = text.split("\n")
+    if lines and lines[-1] == "":
+        lines.pop()
+    started = False
+    for line in lines:
+        if line.startswith("@@@ "):
+            if started:
+                flush()
+            path, seg, segs, started = line[4:].strip(), [], [], True
+        elif line == "@@@":
+            segs.append("\n".join(seg))
+            seg = []
+        else:
+            seg.append(line)
+            started = True
+    if started:
+        flush()
+    return pairs
+
+
+def main(argv):
+    if not argv and sys.stdin.isatty() or argv[:1] in (["-h"], ["--help"]):
+        sys.exit(__doc__)
+    files = {}
+
+    def content(path):
+        if path not in files:
+            try:
+                files[path] = open(path).read()
+            except OSError as e:
+                die(str(e))
+        return files[path]
+
+    if len(argv) == 3:
+        files[argv[0]] = replace_once(argv[0], content(argv[0]), argv[1], argv[2])
+    elif len(argv) == 4 and argv[1] == "--between":
+        files[argv[0]] = between(argv[0], content(argv[0]), argv[2], argv[3], sys.stdin.read())
+    elif len(argv) <= 1:
+        for path, old, new in parse_blocks(sys.stdin.read(), argv[0] if argv else None):
+            files[path] = replace_once(path, content(path), old, new)
+    else:
+        sys.exit(__doc__)
+    for path, s in files.items():
+        with open(path, "w") as f:
+            f.write(s)
+    print("replace-text: " + ", ".join(files))
+
+
+main(sys.argv[1:])
