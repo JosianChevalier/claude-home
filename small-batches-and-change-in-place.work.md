@@ -9,10 +9,11 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## State
 
-- `batch-slicing` and `change-in-place` stand in `philosophy/` as whole drafts: the user reads a finished file and adjusts, never idea by idea. The old notes stay in `old-claude/rationale/` until the user validates both drafts.
+- `batch-slicing` and `change-in-place` validated by the user (2026-10-18).
+- The old notes stay in `old-claude/rationale/` until every idea of theirs stands written in a file. A backlog line or a row "home open" is not a home.
 - The words of a specific solution stay out of `batch-slicing` (north star, sub-agents, ripple): the step is told in mission command's terms.
 - Little's law: dropped.
-- The rows below with homes not yet written wait for those homes.
+- Ideas already written in an old note still to migrate count as housed: the old `continuous-delivery` holds "every stage deployed" and dark code.
 
 | Idea | From | Home |
 |---|---|---|
@@ -22,7 +23,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Inventory piling up unseen | small-batches | `batch-size-economics`, one line on holding cost as a whole |
 | Just in time, the why: a piece built early waits unvalidated | change-in-place | the same, Speculative work |
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
-| Option value: forecast disposable, state precious | small-batches | `planning-is-everything`, at its migration |
+| Option value: forecast disposable, state precious | small-batches | the old `planning-is-everything` holds the second half; the first, remaining stages are options, has no home |
 | Last responsible moment (Poppendieck): when to commit to a decision; optionality, so architecture | change-in-place | a philosophy of designing architecture, later |
 | Nested feedback loops: any change a hypothesis, one loop per level | new | its own philosophy, later; home open |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | later, one layer up; home open |
@@ -34,4 +35,5 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. The user reads both drafts; on validation, delete the old notes in `old-claude/rationale/` and this file. The skills `write-plan`, `refactoring-moves` re-point at 3.4.
+1. Relocate, one idea per round with the user, each into the closest existing file (grow, then cut): last responsible moment; option value, the options half; nested feedback loops; pull.
+2. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
