@@ -48,6 +48,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | small-batches | Working in the smallest steps that still work, from commits to plans. |
 | sub-agents | Delegating to sub-agents to split context and contain process nodes. |
 | tactical-ddd | DDD building blocks in code; here, the aggregate. |
+| types | Invariants carried by the type: parsed once at the entry, the invalid state unrepresentable. |
 | trunk-based-development | Commit on trunk as the definition of continuous integration, for humans and agents. |
 | variety-absorption | Levels absorb the variety they can hold and pass the rest up to the engineer. |
 | verification | Checks confirming a refactoring move's precondition; safety lives in the process. |

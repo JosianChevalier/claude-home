@@ -109,4 +109,4 @@ order.getLines().add(line);
 order.addLine(product, quantity);
 ```
 
-Rationale: @rationale/aggregates.md
+Rationale: [[philosophy/always-valid-domain]]

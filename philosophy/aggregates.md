@@ -25,19 +25,18 @@ Vernon's rule, full consistency inside the aggregate and eventual consistency be
 
 ## Always valid
 
-The observer of an aggregate is any code in the domain that holds it. Its invariants hold at every moment such code can see it: after each of its operations, in memory, before any save. Only the inside of one operation is unobserved.
-
-The aggregate holds its invariants itself: by structure, the bad state unrepresentable, the root the sole handle to the interior (Wlaschin: make illegal states unrepresentable); at minimum by its code, the methods refusing it. Nothing below the aggregate enforces anything.
+The aggregate is domain model, so it is always valid: its invariants hold at every moment domain code can see it, by structure first ([[philosophy/always-valid-domain]]). Nothing below the aggregate enforces anything.
 
 It is saved whole, in one call to a repository. The repository is one more consumer: what it saves is valid because what it was handed was. How the save is made atomic is a modality of saving, the repository's business, and the model has no need to know it. Writes split across several saves leak the transaction into the domain code: the boundary was drawn wrong, back to the invariants.
 
 ## Example: one invariant each way
 
 - *"An order's total equals the sum of its lines."* Safety; forces order and lines into one aggregate; held by structure, the total computed, never stored.
-- *"A shipped order has a shipping date; an unshipped one has none."* Safety, and the usual way to break it is a nullable `shippedAt` beside a `status`, with a constructor check that the two agree. The check is the symptom: the state is one of several, each with its own fields, and the type says so: `Placed`, `Shipped(shippedAt)`, `Cancelled(cancelledAt, reason)`. Every "if I am in this state I must also have this field" is a case waiting to be a variant. The same holds for any field coherent only given another: a deletion date, a validator's id while validation may not have happened.
+- *"A shipped order has a shipping date; an unshipped one has none."* Safety; held by structure, one type per state, the nullable `shippedAt` beside a status being the symptom ([[philosophy/always-valid-domain]]).
 - *"Every placed order is eventually invoiced."* Liveness; order and invoice are separate aggregates, linked eventually. Pulling invoice into the order aggregate to make it immediate is the backwards guard firing: liveness mistaken for safety.
 
 ## Related
 
 - Where the model exists, and the contamination a borrowed boundary is: [[philosophy/model-expressions]].
 - What a model is: [[philosophy/model-phenomenology]].
+- The property the aggregate holds, and how: [[philosophy/always-valid-domain]].
