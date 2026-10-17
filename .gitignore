@@ -27,6 +27,10 @@
 !/settings.template.json
 !/opencode.json
 
+!/refactor-loop/
+!/refactor-loop/**
+/refactor-loop/**/__pycache__/
+
 !/widgets/
 !/widgets/*.py
 !/widgets/*.md
