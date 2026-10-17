@@ -12,7 +12,7 @@ An atomic commit is **one logical change, and all of it**. One: a single concern
 
 The enemy of the atomic commit is proximity. A cleanup noticed nearby, a comment removed while passing, a refactoring that touches the file the feature touches: each is a second concern riding on the first. It gets a commit of its own, or a line in the plan, never a seat in this one.
 
-It is the floor of batch size ([[philosophy/small-batches]]): below the plan, the implementer's cadence. One rename. One extracted function. One moved variable. Seconds apart.
+It is the floor of batch size ([[philosophy/batch-slicing]]): below the plan, the implementer's cadence. One rename. One extracted function. One moved variable. Seconds apart.
 
 ## Atomic and meaningful
 
@@ -43,7 +43,7 @@ The splitting is learnable, and most of it is mechanical: a refactoring decompos
 
 ## Related
 
-- The floor of batch size, below the plan: [[philosophy/small-batches]].
+- The floor of batch size, below the plan: [[philosophy/batch-slicing]].
 - Every commit releasable: [[philosophy/continuous-delivery]].
 - One move, one commit, the commit as proof unit: [[philosophy/mechanical-refactoring]].
 - Make the change easy, then make the easy change: [[philosophy/make-the-change-easy]].

@@ -34,5 +34,4 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. Re-point the links to `small-batches` at `batch-slicing`: `make-the-change-easy`, `trunk-based-development`, `atomic-commit`, `guest-codebase`, `batch-size-economics`; the skills `write-plan`, `refactoring-moves` at 3.4.
-2. Mapping rows in `sync-repo.work.md`; delete this file.
+1. The user reads both drafts; on validation, delete the old notes in `old-claude/rationale/` and this file. The skills `write-plan`, `refactoring-moves` re-point at 3.4.

@@ -56,4 +56,4 @@ Each resolved case is a probe: what stabilizes lands as know-how in the rule tha
 
 - Integrity is owed within a context, not between contexts: [[philosophy/change-inertia]].
 - Where a resolved case lands: [[philosophy/kaizen]].
-- The smallest diff that does the job, as batch size: [[philosophy/small-batches]].
+- The smallest diff that does the job, as batch size: [[philosophy/batch-size-economics]].

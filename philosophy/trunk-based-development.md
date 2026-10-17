@@ -49,4 +49,4 @@ Overlap that **persists** across commits is a different fact. Two actors are wor
 - What makes a commit atomic, and the splitting skill: [[philosophy/atomic-commit]].
 - The same practice for agents sharing one repository: [[philosophy/agentic-trunk-based-development]].
 - Every commit releasable: [[philosophy/continuous-delivery]].
-- Batch size as the dominant variable, the atomic commit as its floor: [[philosophy/small-batches]].
+- Batch size as the dominant variable, the atomic commit as its floor: [[philosophy/batch-size-economics]].

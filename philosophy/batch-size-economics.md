@@ -56,4 +56,4 @@ Transaction cost can go to near zero: TDD, continuous deployment, trunk. Holding
 - The floor: [[philosophy/atomic-commit]].
 - Collision, handled optimistically: [[philosophy/trunk-based-development]].
 - Faults seen at a glance: [[philosophy/mechanical-refactoring]].
-- Batch size applied to plans: [[philosophy/small-batches]].
+- Batch size applied to plans: [[philosophy/batch-slicing]].

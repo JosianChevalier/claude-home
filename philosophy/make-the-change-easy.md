@@ -39,7 +39,7 @@ model ─ refactor, redesign ─▶ model ─ refactor, redesign ─▶ model �
 
 Making the change easy is finding that path, one that can be done in small steps: each step reaches an adjacent possible, and the depth of the valley to walk in is kept to the least.
 
-That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), small batches ([[philosophy/small-batches]]) and continuous delivery ([[philosophy/continuous-delivery]]).
+That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), batch slicing ([[philosophy/batch-slicing]]) and continuous delivery ([[philosophy/continuous-delivery]]).
 
 ## One kind of step at a time
 
@@ -70,7 +70,8 @@ So the pair alternates and has no last step: the cleanup after one change is the
 ## Related
 
 - Refactor and redesign, and the line between them: [[philosophy/mechanical-refactoring]].
-- The small step itself: [[philosophy/atomic-commit]], [[philosophy/small-batches]], [[philosophy/continuous-delivery]].
+- The small step itself: [[philosophy/atomic-commit]], [[philosophy/batch-slicing]], [[philosophy/continuous-delivery]].
+- Changing a live path where it stands: [[philosophy/change-in-place]].
 - Why acting is the only way to know: [[philosophy/planning-is-everything]].
 - Model tension, the felt misfit that reshaping surfaces: [[philosophy/model-phenomenology]].
 - The aphorism as doctrine, this file as its pointer: [[philosophy/harness-shape]].
