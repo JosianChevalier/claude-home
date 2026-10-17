@@ -1,6 +1,6 @@
 ---
 ongoing_work_file: "A skill for writing a philosophy file, built from the session that wrote parse-dont-validate and always-valid-domain. Empty when the skill exists and every line below is folded into it or dropped."
-rank: 5
+rank: 6
 ---
 
 # philosophy-writing-skill
