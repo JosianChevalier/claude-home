@@ -28,6 +28,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | `planning-is-everything`, at its migration |
 | Last responsible moment (Poppendieck): when to commit to a decision; optionality, so architecture | change-in-place | a philosophy of designing architecture, later |
+| Nested feedback loops: any change a hypothesis, one loop per level | new | its own philosophy, later; home open |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | later, one layer up; home open |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
 | Dark code: new behavior dark then keystone, existing behavior in place | change-in-place | `continuous-delivery`, at its migration |
