@@ -16,6 +16,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | code-review | Reviewing by actively navigating code that keeps a stable spatial layout. |
 | cognition | Thinking with code as embodied, enacted, spatial navigation. |
 | cognitive-load | The engineer's attention as scarce budget; the agent removes extraneous load. |
+| clean-code | Code that reads as plain sentences of the domain: one level of abstraction per function. |
 | cohesion | One concept per harness file, so a fix touches exactly one file. |
 | collaboration | Engineer and agent in one enacted loop: the engineer steers, the agent transmits. |
 | communication | Messages and reports as maps for a cold reader with nothing else open. |
