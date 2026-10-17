@@ -16,14 +16,7 @@ The feedback is the fastest there is: the checker, in the editor, before any tes
 
 ## Validate versus parse
 
-The distinction is King's. A validation checks and returns nothing: a boolean, a void, an exception. What it learned is discarded, and the value goes on as it came. A parse checks and returns a narrower type; what it learned travels with the value.
-
-```
-validate :: Input -> Bool             learns, then forgets
-parse    :: Input -> Maybe NonEmpty   learns, and keeps it in the type
-```
-
-Validation spreads. Since the value carries no evidence, every reader who needs the property checks again, or trusts and hopes. LangSec names the result **shotgun parsing** (Bratus, Sassaman): recognition scattered through processing, every function half-parsing its input. That is the blast radius growing: to know whether a check is needed here, one reads the callers; to know what they pass, one reads theirs.
+King's distinction: a validation learns and forgets, a parse learns and keeps it in the type. Validation left to spread is **shotgun parsing** (LangSec): every reader checks again, so every reader must be read.
 
 ## Shape is spec
 
