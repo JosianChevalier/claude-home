@@ -4,11 +4,11 @@ tags: [feedback-loops, cynefin, small-batches, continuous-delivery]
 
 # Feedback loops
 
-**Thesis.** Every change is a hypothesis, and the loops that test it nest: each one confronts the change with something more real than the loop inside it. Continuous practices fit the loops one onto the next; agility pulls the outermost toward them.
+**Thesis.** XP's nested feedback loops (Beck; the diagram, Wells), redrawn for how we work now: every change is a hypothesis, and the loops that test it nest, from the code up to the domain. Continuous practices fit the loops one onto the next; agility pulls the outermost toward them.
 
 ## The loops
 
-From the outermost in:
+Several of XP's loops no longer hold for us. Pair programming and the stand-up give way to mob programming. The iteration plan gives way to continuous delivery, and to product engineering teams with full control, free to probe, sense, respond. What we see instead, from the outermost in:
 
 1. **Domain.** The change holds in the domain we are embedded in. Feedback comes mostly from functional increments confronted with the domain: delivered to the humans who work with them, or to anything else that answers. Observability gives it, because we are not always sure what we are looking for: we are in the complex (Cynefin, Snowden), and all we know is that there will be unexpected side effects. Unknown unknowns.
 2. **Activation in production.** New code, a new technical aspect, live in production. It may not change how the software behaves for its users, but it already answers on performance, problems, bugs. Technical monitoring gives it. Known unknowns.
