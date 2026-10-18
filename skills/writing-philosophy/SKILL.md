@@ -48,11 +48,20 @@ name (author)              the default; the author stands for the field
 
 Pins triangulate the region of the field meant. A pejorative the weights hold (primitive obsession, shotgun parsing) is named outright: observed constantly, naming it pushes away ([[philosophy/attractors]]).
 
-A concept the weights hold best gets no file of its own, however often it is used: single level of abstraction is named, never filed.
-
 ## Where a concept lives
 
-DRY (Hunt & Thomas): one source of truth per concept, its full definition and reading in one file. Another file mentions it from its own aspect, referenced and linked; restating the definition and reading is the duplication. A link is proposed after reading the target file, never from a keyword match.
+One source of truth per concept, DRY (Hunt & Thomas).
+
+Using a concept is taking a dependency:
+
+- named from the weights, it pulls a package
+- linked to a philosophy file, it pulls our own module
+
+A concept the user adds nothing to already lives in the weights: no file.
+
+A file exists for what the user brings on top. Other files depend on it, never restate it.
+
+A link is proposed after reading the target file, never from a keyword match.
 
 ## Grow, then cut
 
