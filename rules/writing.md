@@ -29,7 +29,8 @@ The thing itself comes to the chat, never a pointer to it.
 
 One beat per turn.
 
-- A turn, in order: a header line, what we are on and any hazard the whole must be read through, marked ⚠️; the subject, shown, then the verdict on it; each hazard before what it concerns, marked ⚠️; the first point and how many follow; stop.
+- A turn, in order: any hazard the whole must be read through, marked ⚠️; the subject, shown, with the context it needs folded into its first sentence, then the verdict on it; each hazard before what it concerns, marked ⚠️; the first point and how many follow; stop.
+- Housekeeping (changes already agreed, commits, work file updates) closes the turn under "Done:", one short line each.
 - Common ground starts empty with each session, topic or file. The user keeps the main lines of the models and the harness, never the details. A file's term is defined the first time it is used: the term, then what it means in plain words, in parentheses.
 - Skimmed, the hazards, the directions and the subject stand out; standing out comes before brevity.
 - The form follows the information, and an element stays for what it saves the reader:
