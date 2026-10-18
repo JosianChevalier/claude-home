@@ -8,8 +8,9 @@ description: "Trigger: working on the philosophy layer: planning, drafting or ed
 ## Doctrine
 
 - Philosophy is the anchor of the harness: continuous improvement adjusts it constantly, and without an anchor it swings ever wider or drifts from the original intent.
-- What is already in the weights and standard is referenced, identified unambiguously.
-- An idiosyncratic reading or practice is spelled out and explained.
+- What is already in the weights and standard is identified unambiguously.
+- A reading laid on an existing concept is overloaded: the concept identified, the change written next to it.
+- An idiosyncratic reading or practice is detailed: spelled out and explained.
 - When the agent knows what the user means, it writes; when it does not, it asks. Nothing is anchored before it was talked through with the user.
 
 ## The session
@@ -42,7 +43,7 @@ By default, how the agent names and cuts is its composition grid: it guides the 
 
 ## Referencing a concept
 
-Each concept already in the model's weights is referenced with as much as it needs, and no more:
+A concept enters identified, overloaded or detailed ([[philosophy/field-terms]]). Identified, it takes as much as it needs, and no more:
 
 ```
 name (author)              the default; the author stands for the field
@@ -107,22 +108,28 @@ The Thesis line comes first after the title: `navigation.sh index` exports it. T
 
 ## Examples
 
-**Referenced.**
+**Identified.**
 
 > The old system is replaced by a **strangler fig** (Fowler).
 
 Named and nothing more. A paragraph on growing the new system around the old one would cost the reader what the model already knew.
 
-**Referenced precisely.**
+**Identified precisely.**
 
 > Each **aggregate** (Evans), the consistency boundary, is saved whole.
 
 Alone, "aggregate" could be a SQL function. Evans fixes the field; "the consistency boundary" pins the reading meant among DDD's. Nothing about DDD is explained.
 
-**Spelled out.**
+**Overloaded.**
 
 > Terms are **attractors** (Juarrero), context-sensitive constraints: they do not label, they constrain what follows. In the model's semantic landscape a precise term carves the basin the next tokens fall into, and the basin is indifferent to negation: "don't use X" carves X's.
 
 Juarrero's context-sensitive constraints are referenced. That a term in a model's context acts as one, and that negation feeds the basin, is the user's reading: spelled out.
+
+**Detailed.**
+
+> The **spork**: two complete readings of one concept fit, and one artifact is made to hold both, the union of their state, the intersection of their behaviour.
+
+Nothing in the weights carries it: the whole reading is written out.
 
 Rationale: [[philosophy/three-layer-harness]], [[philosophy/harness-elements]], [[philosophy/attractors]], [[philosophy/field-terms]], [[philosophy/collaborative-production]], [[philosophy/zoom-levels]]

@@ -46,7 +46,7 @@ A description is pure attractor engineering: it is matched against the session's
 
 ## Related
 
-- Loading a field's expertise through its own term, finding an aphorism: [[philosophy/field-terms]].
+- A term references a theory, a saying a posture; identified, overloaded or detailed: [[philosophy/field-terms]].
 - Doctrine as a few attractors, rationalization lists as pink elephants: [[philosophy/harness-shape]].
 - Everything shown is shown for metis; attractors govern how: [[philosophy/transmission-belt]].
 - A finished work file as a pink elephant: [[philosophy/session-state-in-documents]].
