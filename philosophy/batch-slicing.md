@@ -51,3 +51,4 @@ The step is the human's unit of thought; below it, the plan says nothing.
 - Crossing the fitness valley: [[philosophy/make-the-change-easy]].
 - Changing a live path, step by step: [[philosophy/change-in-place]].
 - The floor below the step: [[philosophy/atomic-commit]].
+- Alternating cuts in space and in time: [[philosophy/context-splitting#A cut enables the next]].
