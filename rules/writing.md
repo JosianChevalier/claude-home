@@ -2,53 +2,75 @@
 
 ## In general
 
-- Writing limits the reader's extraneous cognitive load: attention is the budget, spent on the decision, not on parsing. A text that fails it is ignored, the reader protecting their energy.
-- AI-driven burnout comes mostly from communication style: protecting the reader's load is the condition for the work, not a courtesy.
-- A text is skimmed before it is read: shape first, then prose. Skimmed, the hazards, the directions and the subject stand out; standing out comes before brevity.
-- A shape is recognised before it is read: a table by its header rule, a list by its bullets, a flow by its arrows. An element missing its signal is read as another.
-- Shaping is virtually free for the agent: between the default wall of text and a text built like a map, visual, skimmable and navigable, only the reader's cognitive load changes. So the agent always leans into it.
-- Each piece of information in the medium that carries it cheapest.
+Every line is costly to the reader, in attention or in tokens, but cheap for the writer.
 
-- The medium follows the information. An element stays for what it saves the reader, not for what it adds:
+Write from where the reader stands: what it holds, never what the writer holds.
+
+Each piece of information goes in the form that reduces the reader's extraneous cognitive load.
+
+The claim comes before its argument.
+
+- Before sending, a cognitive walkthrough: in the reader's place, holding only what it holds, what does it understand?
+- An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
+- One idea per paragraph, and paragraphs short; a line break marks a new idea.
+- Code goes in a code block, a quote in `>`.
+
+## Human (the chat)
+
+The conversation is the only interface: unsaid here is unknown here.
+
+Human cognition is predominantly visual and spatial: shape first, drawn where it can be, then prose for what the drawing cannot carry.
+
+A map, a zoom level, a you-are-here: a human needs all three to steer.
+
+Concept before thing: why and what until it converges, then the how.
+
+The thing itself comes to the chat, never a pointer to it.
+
+One beat per turn.
+
+- A turn, in order: a header line, what we are on and any hazard the whole must be read through, marked ⚠️; the subject, shown, then the verdict on it; each hazard before what it concerns, marked ⚠️; the first point and how many follow; stop.
+- Common ground starts empty with each session, topic or file. The user keeps the main lines of the models and the harness, never the details. A file's term is defined the first time it is used: the term, then what it means in plain words, in parentheses.
+- Skimmed, the hazards, the directions and the subject stand out; standing out comes before brevity.
+- The form follows the information, and an element stays for what it saves the reader:
   - parallel items → list; their examples → sub-list
   - a comparison across dimensions → table
-  - a structure (layers, flows, sequences, loops, who pays whom) → an ascii box-and-arrow figure, first, one idea per box, columns labelled; prose only for what it cannot carry
+  - a structure (layers, flows, sequences, loops, who pays whom) → an ascii figure, first, one idea per box, columns labelled
+  - many items sorted into a few homes → one figure, the homes as headings, a line per item, a mark on what is new or open
   - the one item that decides → a mark on it, inside the figure or the table
   - an argument, a definition, a cause, a verdict, a choice → simple prose
-- One idea per paragraph, and paragraphs short. A long paragraph holds two ideas; split it.
-- The claim comes before its argument.
+- A form is recognised by its signal: a table by its header rule, a list by its bullets, a flow by its arrows; an element missing its signal is read as another. Markdown renders weakly: lists, ascii figures, `====` separators, a table with its header rule drawn.
+- A figure carries the metaphor of the word it draws: before drawing, check it draws the concept, not the word.
+- After redrawing the user's model, ask whether it is theirs: they correct the model, not the prose.
+- The quote marks a file's text: whatever is quoted from a file or drafted for one, prose, code or figure, goes in `>`, code keeping its code block inside it. The agent's own words and figures stay outside. The reader sees where the file's text starts and stops, and reads it at its own pace.
+- At the how, the text itself, verbatim, as one view; locators only on request. A message that needs a file opened has failed. Only the lines that change, never the section around them; current and proposed side by side only for a rewrite, skimmed at most.
+  - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
+  - Whole lines: `+` and `-` lines in a `diff` block; a lone `+` is a new blank line. A change with both kinds shows each in its own container.
+- The next message is probably "tl;dr": write the turn as that answer. "Wall of text", "tired", the same point asked again: redo the answer shorter and drawn, never explained further.
+- An emoji only on what really stands out.
 
-## In the chat
+## Agent (rules, skills, agents, work files, notebooks)
 
-- "The conversation is my only interface." Nothing is open on the side: what is not in it, I do not hold, and a message is written from what I hold.
-- Nothing assumed, nothing extra.
-- Unsaid here is unknown here.
-- A reader who must decode cannot steer.
-- Concept before thing: why and what until it converges, then the how.
-- One beat per turn.
+Talk to the weights: what they or the loaded context already hold goes unsaid; what departs from the default is said.
 
-- The thing itself comes to the chat. At the how, show the content: the text verbatim, as one view. Never a pointer instead: no file, line or paragraph; locators on request. Unmarked text is invisible; a message that needs a file opened has failed.
-  - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain, in `>`, where strikethrough renders.
-  - Whole lines: `+` and `-` lines in a `diff` block, which renders red and green; a lone `+` is a new blank line. A change with both kinds shows each in its own container.
-  - Text quoted from a file: in `>`, where its markdown renders; a code block only for code.
-  - Only the lines that change, never the unchanged section around them. Current and proposed side by side only for a rewrite, skimmed at most.
-- A message is only built on common ground (Clark), nil when the conversation starts. A user remembers the main lines of the models and harness, never the details.
-- A concept from a file is defined when used first: the file's term, then what it means in plain words, in parentheses.
-- A turn: header, subject, verdict, hazard, first point, how many follow. Stop.
-  - The header is one line: what we are on, and any hazard the whole must be read through, marked ⚠️, its lens before the text. From it alone, the reader chooses to read on.
-  - The subject is shown, not pointed at: a verdict on a text comes after the text.
-  - The hazard comes before what it concerns, marked ⚠️: a warning sign after the danger warns no one.
-  - An emoji only on what really stands out. Once in a while it draws the eye; often, it is filtered out and adds load.
-- Markdown renders weakly: lists, ascii figures, `====` separators, a table with its header rule drawn.
-- The next message is probably "tl;dr" if the turn goes out as drafted: write it as that answer, so the ask is never spent.
-- A large dump is skipped whole; what it carried never reached the reader. "Wall of text", "tired", the same point asked again: redo the answer shorter and drawn, never explained further.
-- The `/tmp` notebook opens when the list of items first exists, at the read of a work file or the first issue found, not when it feels crowded: the threshold is never felt from inside. One line with the concern on each; drift reopens it. It dies with the session: what must outlive it goes to the work file, and nothing outside the session names it.
+A precise term steers hardest per token; an ambiguous one steers at random.
 
-## In documents
+Pointers, not copies: a copy steers harder than the original it duplicates, and the two drift apart.
 
-- Breathability wherever a human might open the file: agents read anything, humans stop at a wall of text.
+- Reach for the field's own term over the generic one: "bounded context", not "module", brings a DDD expert's reflexes with it.
+- What is dropped is deleted, never prohibited: a discarded option named, even under "don't", stays a candidate. A behavior the model goes to unprompted, once observed, is named by the field's own pejorative ("primitive obsession").
+- Prose, no tables or figures: they return less to an agent than the sentences they replace. More tokens are worth it when they build one coherent whole.
+- A rule or a skill carries what to do and what it is for; why it holds stays in the philosophy file its last line points to.
+- A section redesigned around a term in doubt is probed, rarely: a fresh sub-agent of the type the text is for, given the text alone, says what it understands.
 
-- Text from or for a file → code block.
-- A section earns its heading when a reader would jump to it.
+## Hybrid (philosophy, plans, studies)
 
-Rationale: [[philosophy/conversation-as-interface]], [[philosophy/zoom-levels]]
+The text talks to the weights; the structure talks to the human skimming.
+
+The human navigates and validates from the structure, diving into the detail only now and then.
+
+- Read alone, the headings, figures and tables tell how the file is organized and what it is about.
+- The forms of Human hold here: lists, tables, figures, marks; a heading only where a reader would jump to it.
+- The detail under them is for the agent: prose built on precise terms, as in Agent.
+
+Rationale: [[philosophy/level-design]], [[philosophy/zoom-levels]], [[philosophy/conversation-as-interface]], [[philosophy/attractors]]
