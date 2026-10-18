@@ -21,7 +21,7 @@ The usual bad cuts:
 
 ## Steps
 
-Under each increment, the plan cuts steps. A step is a mission, in the sense of mission command (Auftragstaktik): it gives the intent, never the way. The intent holds a purpose, why the step serves the increment, and an end state: what matters, as it should stand once the step is done. In code, that is the code that matters, as it should read; elsewhere, a sketch or a sentence. What else has to change for it is left to those who carry it out.
+Under each increment, the plan cuts steps: shipped whole, an increment that spans many layers is the big batch again, one level down. A step is a mission, in the sense of mission command (Auftragstaktik): it gives the intent, never the way. The intent holds a purpose, why the step serves the increment, and an end state: what matters, as it should stand once the step is done. In code, that is the code that matters, as it should read; elsewhere, a sketch or a sentence. What else has to change for it is left to those who carry it out.
 
 The end state is the next shape of the same work, not a piece to build. Step after step, the work changes shape.
 

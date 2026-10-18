@@ -33,12 +33,11 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Flag versus dark: behind a flag is reachable, exercised, invisible | change-in-place | `change-in-place`, The exception; `continuous-delivery` may mention it at its migration |
 | Dark code: new behavior dark then keystone, existing behavior in place | change-in-place | `continuous-delivery`, at its migration |
 | Refactor and redesign alternated, recursively | small-batches | `make-the-change-easy`, already there |
+| Why an increment is cut into steps: shipped whole, the big batch again one level down | small-batches | `batch-slicing`, Steps |
 | Atomic commit below the plan | small-batches | `atomic-commit`, already there |
 | In place as the MO | change-in-place | `make-the-change-easy` points at `change-in-place` |
 
 ## Next
 
-1. Close the four findings of the last pass over the old notes, one per round with the user:
-   - Partial, why an increment is cut into steps (old `small-batches`): shipped whole, it is the big batch again one level down ("17 layers"). `batch-slicing` cuts steps without saying why.
-2. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
-3. On the user's go only: delete the old notes and this file, and tick the `small-batches` and `change-in-place` backlog line in `sync-repo.work.md`; the mapping rows are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
+1. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
+2. On the user's go only: delete the old notes and this file, and tick the `small-batches` and `change-in-place` backlog line in `sync-repo.work.md`; the mapping rows are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
