@@ -1,6 +1,6 @@
 # tools
 
-Scripts agents call instead of rewriting the same code each session. `rules/tools.md` tells agents they exist.
+Scripts agents call instead of rewriting the same code each session. The rule where each is needed tells agents it exists.
 
 | Tool | Does |
 |---|---|

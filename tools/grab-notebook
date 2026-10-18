@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Print this session's notebook path; create the file on first call.
+set -euo pipefail
+f="/tmp/notebook-${CLAUDE_CODE_SESSION_ID:?no session id}.md"
+[ -e "$f" ] || : > "$f"
+echo "$f"

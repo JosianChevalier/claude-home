@@ -23,6 +23,7 @@
 !/tools/
 !/tools/README.md
 !/tools/replace-text
+!/tools/grab-notebook
 
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
