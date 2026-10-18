@@ -12,7 +12,7 @@ A user story bets that users want it. A step bets that the app still works. A co
 
 ## Increments of value
 
-The top level: a functional increment that brings value to someone. Users, stakeholders, or engineers: monitoring is value too. Its bet is that they want it, and only production settles it. So the cut looks for the next hypothesis, and for the thinnest increment that reaches production to test it. Each piece is used as soon as it lands, just in time (Ohno). Elephant carpaccio (Cockburn) names this level.
+The top level: a functional increment that brings value to someone. Users, stakeholders, or engineers: monitoring is value too. Its bet is that they want it, and only production settles it. So the cut looks for the next hypothesis, and for the thinnest increment that reaches production to test it. Each piece is pulled: built because its user asks for it, and used as soon as it lands, just in time (Ohno). Elephant carpaccio (Cockburn) names this level.
 
 The usual bad cuts:
 
