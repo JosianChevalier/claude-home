@@ -22,9 +22,9 @@ Batch size has an optimum (Reinertsen, [[philosophy/batch-size-economics]]), and
 
 The cost is made near zero, not found there: infrastructure, structure and practices are built. What is left to decide is not a trade-off between practices: nothing to choose between them, nothing to adjust so that one does not go too far. It is how far to go into them: how much is invested against how much comes back. Going deeper does not always pay enough. But what is invested in one practice pays in the others.
 
-## Crossing the valley
+## Crossing the fitness valley
 
-Practices that depend on each other make a rugged fitness landscape (Wright, Kauffman). One adopted alone lands in a valley: trunk commits without fast tests and small steps are worse than branches. Teams try one, watch it fail, and conclude it was a trade-off.
+Practices that depend on each other make a rugged fitness landscape (Wright, Kauffman). One adopted alone lands in a fitness valley: trunk commits without fast tests and small steps are worse than branches. Teams try one, watch it fail, and conclude it was a trade-off.
 
 Selection on feedback alone only climbs, and stops at the nearest peak. Crossing takes a theory: knowing why the practices work together is what holds the course while things get worse.
 

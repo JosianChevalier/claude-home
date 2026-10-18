@@ -6,7 +6,7 @@ tags: [harness-design, vocabulary]
 
 **Thesis.** What is in context pulls what comes next; the sharpest pull per token is a precise term.
 
-Terms are context-sensitive constraints (Juarrero): they do not label, they constrain what follows. In the model's semantic landscape a precise term carves the valley the trajectory falls into, cheaper and more reliable than any amount of glossing. The same holds for everything else in context: a copied file, a named option, a stale note. Each is a basin.
+Terms are context-sensitive constraints (Juarrero): they do not label, they constrain what follows. In the model's semantic landscape a precise term carves the semantic valley the trajectory falls into, cheaper and more reliable than any amount of glossing. The same holds for everything else in context: a copied file, a named option, a stale note. Each is a basin.
 
 ```
 in context          basin carved

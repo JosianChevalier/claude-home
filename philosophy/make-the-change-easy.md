@@ -26,9 +26,9 @@ And the pair repeats. One refactor and one redesign do not get there: refactor, 
 
 ## Finding the path
 
-A redesign changes the code from one concept to another, and through the steps in between its conceptual integrity is broken (Brooks, [[philosophy/model-phenomenology]]): that is the valley (Kauffman).
+A redesign changes the code from one concept to another, and through the steps in between its conceptual integrity is broken (Brooks, [[philosophy/model-phenomenology]]): that is the fitness valley (Kauffman).
 
-A refactor keeps the concept, so it never goes down into the valley. Refactoring first leaves the redesign fewer broken steps to walk.
+A refactor keeps the concept, so it never goes down into the fitness valley. Refactoring first leaves the redesign fewer broken steps to walk.
 
 So the path goes through models that are not the target. Each keeps some level of conceptual integrity, and the code morphs progressively from one to the next:
 
@@ -37,7 +37,7 @@ model ─ refactor, redesign ─▶ model ─ refactor, redesign ─▶ model �
                               not the target                not the target
 ```
 
-Making the change easy is finding that path, one that can be done in small steps: each step reaches an adjacent possible, and the depth of the valley to walk in is kept to the least.
+Making the change easy is finding that path, one that can be done in small steps: each step reaches an adjacent possible, and the depth of the fitness valley to walk in is kept to the least.
 
 That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), batch slicing ([[philosophy/batch-slicing]]) and continuous delivery ([[philosophy/continuous-delivery]]).
 

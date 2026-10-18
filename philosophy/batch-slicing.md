@@ -35,7 +35,7 @@ Understanding sets the size, not time: with agents, almost anything fits in one 
 
 - **Between two steps, we know where we are.** Each boundary is a state a human can name and understand, a point on the map.
 - **One step, one effect.** It has the unity and atomicity of an effect: done or not done. Two effects, two steps. Half an effect leaves a state nobody can name.
-- **Never halfway across the ford.** The target is reached through lesser hills, each coherent on its own. A valley is crossed within a step, never stopped in (Kauffman). Making the change easy finds the path ([[philosophy/make-the-change-easy#Finding the path]]).
+- **Never halfway across the ford.** The target is reached through lesser hills, each coherent on its own. A fitness valley is crossed within a step, never stopped in (Kauffman). Making the change easy finds the path ([[philosophy/make-the-change-easy#Finding the path]]).
 - **Too big**, nobody can say where we are until it ends. A step that resists a smaller cut often hides a redesign.
 - **Too small**, the plan gives the way: the units' job, done from above.
 
@@ -48,6 +48,6 @@ The step is the human's unit of thought; below it, the plan says nothing.
 ## Related
 
 - Why small: [[philosophy/batch-size-economics]].
-- Crossing the valley: [[philosophy/make-the-change-easy]].
+- Crossing the fitness valley: [[philosophy/make-the-change-easy]].
 - Changing a live path, step by step: [[philosophy/change-in-place]].
 - The floor below the step: [[philosophy/atomic-commit]].
