@@ -22,7 +22,7 @@ Hence the plan structure: high-level stages, no file lists, no step-by-step inst
 
 The plan file carries two contents with opposite natures:
 
-- **The forecast** (remaining stages) — a best guess, rewritten freely, expected to be wrong in detail. *The map is not the territory* (Korzybski): when the territory contradicts the map, the territory wins and the map is redrawn — never the reverse.
+- **The forecast** (remaining stages) — a best guess, rewritten freely, expected to be wrong in detail, and optional: when priorities change, the stages left are simply not built, and nothing half-done is thrown away. *The map is not the territory* (Korzybski): when the territory contradicts the map, the territory wins and the map is redrawn — never the reverse.
 - **The state** (work done, decisions made, blockers, the real next step) — facts, not guesses. Map things *as they really are, not as we wish they were*: wishes belong in the forecast; smuggling them into the state corrupts the only facts the next agent has.
 
 Eisenhower's aphorism captures the asymmetry: the *activity* of planning builds the shared model; the *artifact* is a disposable snapshot. "The plan is nothing" disposes of the forecast, never the state. As execution proceeds, content migrates from forecast to state — each stage consumed converts a guess into a fact. When the last stage is consumed, the forecast is empty, the state is fully realized in commits, and the file is deleted.
