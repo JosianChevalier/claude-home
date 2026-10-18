@@ -1,6 +1,6 @@
 ---
 name: writing-philosophy
-description: Trigger: touching a philosophy file.
+description: "Trigger: working on the philosophy layer: planning, drafting or editing a philosophy/ file."
 ---
 
 # Writing philosophy
