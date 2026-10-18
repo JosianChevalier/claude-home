@@ -25,7 +25,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Just in time, the why: a piece built early waits unvalidated | change-in-place | the same, Speculative work |
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | the old `planning-is-everything`, Forecast and state |
-| Last responsible moment (Poppendieck): decisions and optionality only, not inventory | change-in-place | `planning-is-everything` at its migration (what a plan is, how it is organized); a philosophy of designing architecture, later |
+| Last responsible moment (Poppendieck): decisions and optionality only, not inventory | change-in-place | in the weights; named as an attractor in the old `planning-is-everything`, Forecast and state; architecture and optionality, a philosophy to write (`sync-repo.work.md`, 3.2) |
 | Nested feedback loops: any change a hypothesis, one loop per level | new | `batch-slicing`, Everything is a hypothesis, one sentence; the general principle in a feedback-loops philosophy, later |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | `batch-slicing`, with just in time |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
@@ -37,7 +37,6 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 ## Next
 
 1. Close the four findings of the last pass over the old notes, one per round with the user:
-   - Gap, last responsible moment: no file holds it, only a backlog line in `sync-repo.work.md`. Proposed, not validated: in the old `planning-is-everything`, Forecast and state, after the optional-stages clause, "What stays open is decided at the last responsible moment (Poppendieck): when the cost of waiting exceeds the cost of deciding, not earlier."
    - Partial, seams built early (old `change-in-place`): later work bends to fit seams guessed early. A cost beside the write-off; `batch-size-economics` holds only the write-off.
    - Partial, flag versus dark (old `change-in-place`, Escape hatch): behind a flag is reachable, exercised, invisible; dark is unreachable. Lost.
    - Partial, why an increment is cut into steps (old `small-batches`): shipped whole, it is the big batch again one level down ("17 layers"). `batch-slicing` cuts steps without saying why.
