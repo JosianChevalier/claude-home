@@ -4,7 +4,7 @@ tags: [harness-design, session-design, variety-absorption]
 
 # The abstraction ladder
 
-**Thesis.** Ways of working that let kairos reach the engineer ([[philosophy/metis-kairos]]) take the shape of a ladder: levels ordered by abstraction, each absorbing the variety it can and passing the rest one rung up. This file is abstraction layering, the pattern; each sighting is a ladder, an instance of it. A sighting reads this file first and keeps only what is specific to its own rungs.
+**Thesis.** Abstraction layering takes the shape of a ladder: levels ordered by abstraction, each absorbing the variety it can and passing the rest one rung up. This file is the pattern; each sighting is a ladder, an instance of it, and declares what its rungs absorb and what climbs. A sighting reads this file first and keeps only what is specific to its own rungs.
 
 Each rung delegates cognitive load and context to the rung below, and takes back only what that rung could not absorb. Down is closer to where variety arrives first.
 
@@ -22,7 +22,7 @@ Each rung delegates cognitive load and context to the rung below, and takes back
 - **Trickle down.** A change made on a rung is a consequence for every rung below.
 - **Reliable bricks move down.** Once a rung absorbs variety as business as usual, that absorption can be codified into the rung below: commodification, one rung at a time ([[philosophy/harness-direction]]). Each step down is a change of absorber, not of the variety: the work is as variable as before; the lower rung now absorbs what used to climb.
 
-In a harness ladder the engineer sits on the top rung, and an uncaught arrival there, with the chain of rungs it crossed, is what the engineer observes and orients on; the moment it opens is the kairos ([[philosophy/metis-kairos]]). What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
+What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
 
 ## Why absorb low
 
@@ -45,7 +45,7 @@ In every sighting the top rung is also the slowest, and pace layering (Brand) ap
 
 ## Related
 
-- The gradient this is the discrete form of: [[philosophy/metis-kairos]].
+- The top rung, where what climbed reaches the engineer: [[philosophy/metis-kairos]].
 - Where the rungs are cut: [[philosophy/change-inertia]].
 - The brick's way down the rungs: [[philosophy/harness-direction]].
 - Why the engineer still goes down: [[philosophy/conversation-as-interface]].

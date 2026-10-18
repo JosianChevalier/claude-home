@@ -25,9 +25,9 @@ Two properties matter. Simplicity is relative to a vocabulary — a figure is pr
 
 In software the good gestalt has a name: **conceptual integrity** (Brooks). A model with conceptual integrity is one whose bounded context fixes the vocabulary against which it is simple, and which stays simple under use.
 
-**Model tension** is its felt negation — not a defect you can point at, but the effort of maintaining a coherence the model does not provide on its own. The image is muscle tension: a body braces to hold together what does not hold itself, often against a load that originates elsewhere. Merleau-Ponty's *maximal grip* names it from the inside: the body constantly adjusts toward optimal hold on a situation, and deviation is felt before it is thought.
+**Model tension** is its felt negation: not a defect you can point at, but the effort of maintaining a coherence the model does not provide on its own. The image is muscle tension: a body braces to hold together what does not hold itself, often against a load that originates elsewhere. Merleau-Ponty's *maximal grip*, in Dreyfus's reading, names it from the inside: the body constantly adjusts toward optimal hold on a situation, and deviation is felt before it is thought.
 
-Model tension is perceptual, not procedural — the entries of any field guide name gestalts ("adjectives clinging to a noun", "a recurring preamble"), and expert perception is made of exactly that. The tests that diagnose it come after the feeling ([[philosophy/model-expressions]]).
+Model tension is seen before it is diagnosed: an expert recognises a shape at a glance, and the [model tension heuristics](https://gitlab.com/beyondxscratch/model-tension-heuristics/-/blob/main/english_version.md) name those shapes ("Implicit Lifecycle": adjectives clinging to a noun; "Recurring Tasks": a repeated preamble). The tests that diagnose it come after the feeling ([[philosophy/model-expressions]]).
 
 ## What the engineer holds: type, horizon, metis
 

@@ -48,7 +48,7 @@ The corollary is uncomfortable: the harness decides what counts as trivial, so i
 
 The loop is human. Observe, orient, decide, act (Boyd): improving needs a decision; the decision needs an orientation; orienting is destroying an internal world and rebuilding it; and no world gets destroyed without an observation that disappoints it. The harness does not run this loop; it enables it, at every level of the work. Disappointment is the Observe. Orient is the active half, Boyd's *Destruction and Creation*: a closed conceptual system's mismatch with reality grows on its own (Gödel, Heisenberg, the second law), so destruction must be continuous and deliberate. Destructive deduction shatters the existing domain; creative induction reassembles the parts into a new concept. Orient is the capacity to destroy a mental world.
 
-Merleau-Ponty's deviation from maximal grip is passive, the world disappoints you. Boyd makes it a skill: the expert destroys their own gestalt before entropy forces the issue. In Husserl's terms, the epoché turned on oneself.
+Merleau-Ponty's deviation from maximal grip is pre-reflective: felt before it is thought. Boyd makes it deliberate, a skill: the expert destroys their own gestalt before entropy forces the issue. In Husserl's terms, the epoché turned on oneself.
 
 The full dynamic, the return path of the figure above:
 

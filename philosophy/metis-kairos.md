@@ -28,20 +28,26 @@ That arrival is the engineer's Observe, and what it opens is the *kairos*: the o
 
 The belt feeling its own strain belongs here too: "I am doing many things at once" is a signal to send up, so the engineer can decide whether the strain is the task's or the model's.
 
-## The gradient
+## Designing for uncertainty
 
-Between absorbing everything and escalating everything lies a gradient, and the harness sets where each level sits on it. Power steering is the image: the assistance removes the effort of turning and the whole design problem is to keep the road felt.
+Designing for uncertainty (after Snowden): no level predicts what will go wrong; it guarantees that whatever goes beyond what was expected of it surfaces. Each flow declares its business as usual ([[philosophy/abstraction-ladder]]). Anything else, whatever it is, lands in an error status: detected fast, flagged, set aside for the engineer. The agent's part is to recognise that something went beyond what was expected of it, instead of improvising past it. In code, that recognition is felt as model tension ([[philosophy/model-phenomenology]]).
 
-Its two ends are the belt's two failures ([[philosophy/transmission-belt]]): too tight, everything escalates, noise drowns signal and cognition overloads; too loose, nothing escalates, the engineer's Observe starves and the philosophy goes stale.
+An agent runs a plan step: "extract the discount rule into its own function". It finds the rule computed two ways, one for display and one for billing. Business as usual covers the extraction, not a choice between two readings of "discount". The agent stops, flags what it found, and the step lands in the error status; the engineer, later, reads a model tension and decides.
+
+The error status pulls up every disappointment, unranked. Which one to redesign first is the engineer's choice, made later, and not the belt's concern. A disappointment is redesigned once it is understood; one too small to understand yet waits for a better idea.
+
+Power steering is the image of the belt: the assistance removes the effort of turning and the whole design problem is to keep the road felt. Its two failures ([[philosophy/transmission-belt]]) are misclassifications, not settings:
+
+- **Too tight.** What the level could handle as business as usual climbs anyway: noise drowns signal and cognition overloads.
+- **Too loose.** What went beyond expected is absorbed silently, improvised past: the engineer's Observe starves and the philosophy goes stale.
 
 Kaizen's drift guard ([[philosophy/kaizen]]) is the last guard against too loose: a fix that contradicts the philosophy is a disappointment that reached the top, and one of the two changes, explicitly.
 
-The abstraction ladder ([[philosophy/abstraction-ladder]]) is the discrete form of the gradient: a stack of levels, each absorbing what it can and passing the rest one rung up.
 
 ## Related
 
 - Where the loop runs and why it must return: [[philosophy/transmission-belt]].
 - Steps added on top of the loop to make the moment systematic: [[philosophy/kairos-gates]].
-- The discrete form of the gradient: [[philosophy/abstraction-ladder]].
+- The pattern this file is the top rung of: [[philosophy/abstraction-ladder]].
 - The last guard against too loose: [[philosophy/kaizen]].
 - The abstraction ladder's lower rungs, where decomposability rules: [[philosophy/context-economics]].
