@@ -90,7 +90,7 @@ tags: [ddd, vocabulary]
 - What it holds, in a few words: [[philosophy/other-file]].
 ```
 
-The Thesis line comes first after the title: `navigation.sh index` exports it, and a check on it is planned. Tags grow with the corpus, they are how a file is found.
+The Thesis line comes first after the title: `navigation.sh index` exports it. Tags grow with the corpus, they are how a file is found.
 
 ## Landing chores
 
@@ -98,7 +98,6 @@ The Thesis line comes first after the title: `navigation.sh index` exports it, a
 - `philosophy/navigation/navigation.sh index` shows the file with its Thesis
 - Every `[[philosophy/...]]` resolves; no em-dashes
 - A neighbour shrunk by the new file has its Related updated; old rules repointed
-- A file migrated from `old-claude/`: its row in the migration table of `sync-repo.work.md`
 
 ## Examples
 
