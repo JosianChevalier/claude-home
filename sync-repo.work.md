@@ -31,7 +31,6 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
         - [ ] `small-batches`: check later, against `old-claude-reference/`, what moved to `batch-size-economics` and `atomic-commit`; it points at `batch-size-economics`.
         - [ ] `planning-is-everything`, at its migration: bring in the optionality of the last responsible moment (Poppendieck). It says what a plan is and how it is organized; `batch-slicing` says how it is cut.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
-    - [ ] A philosophy of feedback loops: the general principle. `batch-slicing` holds the nesting, one sentence, until then.
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
