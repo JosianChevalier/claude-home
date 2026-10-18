@@ -4,12 +4,12 @@ tags: [cognition, collaboration, harness-design]
 
 # Embedded and reflexive
 
-**Thesis.** Any actant, human or agent, works embedded, acting from within its environment, or reflexive, stepping out to act on it. A breakdown moves it from one mode to the other; how deep the correction then goes is a second axis.
+**Thesis.** Any actant, human or agent, works embedded, acting within its conditions, or reflexive, designing them. A breakdown moves it from one mode to the other; how deep the correction then goes is a second axis.
 
 ## Two modes
 
 - **Embedded.** Acting from within the environment, absorbed in it: the embedded face of 4E cognition, Schön's reflection-in-action.
-- **Reflexive.** Stepping out to look at the environment and redesign it: Schön's reflection-on-action. Writing a harness element is the reflexive mode ([[philosophy/level-design]]).
+- **Reflexive.** Designing one's own conditions, why we act the way we do: Schön's reflection-on-action. Writing a harness element is the reflexive mode ([[philosophy/level-design]]).
 
 The two stay connected: what the embedded side meets feeds the reflexive side as it goes ([[philosophy/transmission-belt]]).
 
@@ -25,6 +25,8 @@ Once out, a correction has one of two depths (Argyris & Schön): the single loop
 |---|---|---|
 | **Embedded** | fixing a red test in stride | reframing on the spot, the situation talking back (Schön) |
 | **Reflexive** | stepping back to find a better route, same goal | kaizen on a rule: is the system pointed right? |
+
+For an agent, the reframe met in stride always escalates: carried up the belt, not absorbed, it is how the engineer improves ([[philosophy/transmission-belt]]). For now the engineer does the reflexive work with the agent, for the agent; a self-improvement loop, later, would still run in another agent.
 
 ## How each is embedded
 
