@@ -35,6 +35,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | determinism | Removing agent decisions by turning them into scripts, hooks, tools or defaults. |
 | domain-modeling | Shaping and expressing the domain model, and where its boundaries fall. |
 | elephant-carpaccio | The thinnest increment of value that reaches production to test its hypothesis. |
+| feedback-loops | Nested loops, each testing a change against something more real, from the compiler to the domain. |
 | flow | Reinertsen's product-development flow economics, applied to batch size. |
 | git | Commits and trunk as the mechanics of small, continuously integrated changes. |
 | guest-codebase | Posture for code another team owns: conform, small footprint, slide the norm. |

@@ -1,0 +1,27 @@
+---
+tags: [feedback-loops, cynefin, small-batches, continuous-delivery]
+---
+
+# Feedback loops
+
+**Thesis.** Every change is a hypothesis, and the loops that test it nest: each one confronts the change with something more real than the loop inside it. Continuous practices fit the loops one onto the next; agility pulls the outermost toward them.
+
+## The loops
+
+From the outermost in:
+
+1. **Domain.** The change holds in the domain we are embedded in. Feedback comes mostly from functional increments confronted with the domain: delivered to the humans who work with them, or to anything else that answers. Observability gives it, because we are not always sure what we are looking for: we are in the complex (Cynefin, Snowden), and all we know is that there will be unexpected side effects. Unknown unknowns.
+2. **Activation in production.** New code, a new technical aspect, live in production. It may not change how the software behaves for its users, but it already answers on performance, problems, bugs. Technical monitoring gives it. Known unknowns.
+3. **Deployed in production**, possibly behind a feature flag. The same, a little shorter. Whether it earns a loop of its own is open.
+4. **Release.** Not every release is deployed. It answers whether we can package something that should work.
+5. **Change on main**, a pull request merged: a hypothesis of integration.
+6. **Commit**, one that should work. It answers whether we can cut slices of the product that should work: the release, at the level of a programmer instead of a team.
+7. **Change.** Something we believe we can do; the compiler and the tests answer.
+
+## Fitting the loops
+
+Continuous deployment fits every loop from the second or third down exactly onto the one below: tiny changes, deployed continuously. Continuous delivery does it from the fourth. Agility and story slicing push the first loop closer to the ones below.
+
+## Related
+
+- Every change a hypothesis, and the slice that tests it: [[philosophy/batch-slicing]].

@@ -35,5 +35,5 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. With the user: explore the nested loops of XP (Beck), what it says and whether there is something to add.
+1. `feedback-loops` drafted from the user's seven loops, XP's dropped; to validate with the user.
 2. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
