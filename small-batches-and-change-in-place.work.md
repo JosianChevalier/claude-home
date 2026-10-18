@@ -13,6 +13,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 - The old notes stay in `old-claude/rationale/` until every idea of theirs stands written in a file. A backlog line or a row "home open" is not a home.
 - The words of a specific solution stay out of `batch-slicing` (north star, sub-agents, ripple): the step is told in mission command's terms.
 - Little's law: dropped.
+- The plan stops at the step: technical sub-stages no longer split inside the plan (the old `1.2.1`), on purpose.
 - Ideas already written in an old note still to migrate count as housed: the old `continuous-delivery` holds "every stage deployed" and dark code.
 
 | Idea | From | Home |
@@ -35,5 +36,10 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. `feedback-loops` drafted from the user's seven loops, XP's dropped; to validate with the user.
-2. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
+1. Close the four findings of the last pass over the old notes, one per round with the user:
+   - Gap, last responsible moment: no file holds it, only a backlog line in `sync-repo.work.md`. Proposed, not validated: in the old `planning-is-everything`, Forecast and state, after the optional-stages clause, "What stays open is decided at the last responsible moment (Poppendieck): when the cost of waiting exceeds the cost of deciding, not earlier."
+   - Partial, seams built early (old `change-in-place`): later work bends to fit seams guessed early. A cost beside the write-off; `batch-size-economics` holds only the write-off.
+   - Partial, flag versus dark (old `change-in-place`, Escape hatch): behind a flag is reachable, exercised, invisible; dark is unreachable. Lost.
+   - Partial, why an increment is cut into steps (old `small-batches`): shipped whole, it is the big batch again one level down ("17 layers"). `batch-slicing` cuts steps without saying why.
+2. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
+3. On the user's go only: delete the old notes and this file, and tick the `small-batches` and `change-in-place` backlog line in `sync-repo.work.md`; the mapping rows are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
