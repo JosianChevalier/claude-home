@@ -100,14 +100,24 @@ The Thesis line comes first after the title: `navigation.sh index` exports it, a
 - A neighbour shrunk by the new file has its Related updated; old rules repointed
 - A file migrated from `old-claude/`: its row in the migration table of `sync-repo.work.md`
 
-## Example
+## Examples
 
-Referenced, from `parse-dont-validate`:
+**Referenced.**
 
-> Separation logic calls it **local reasoning** (O'Hearn, Reynolds), the frame rule: a specification mentions only its footprint, and everything outside the footprint need not be read to understand it.
+> The old system is replaced by a **strangler fig** (Fowler).
 
-Name and authors; "the frame rule" pins the separation-logic sense among the many uses of "local reasoning". Nothing about separation logic is explained. Then the user's reading: "A signature of parsed types is a footprint."
+Named and nothing more. A paragraph on growing the new system around the old one would cost the reader what the model already knew.
 
-Explained instead: three paragraphs on what separation logic is and why the frame rule holds. The model knew it; the reader paid for it, and the user's reading drowned in it.
+**Referenced precisely.**
+
+> Each **aggregate** (Evans), the consistency boundary, is saved whole.
+
+Alone, "aggregate" could be a SQL function. Evans fixes the field; "the consistency boundary" pins the reading meant among DDD's. Nothing about DDD is explained.
+
+**Spelled out.**
+
+> Terms are **attractors** (Juarrero), context-sensitive constraints: they do not label, they constrain what follows. In the model's semantic landscape a precise term carves the basin the next tokens fall into, and the basin is indifferent to negation: "don't use X" carves X's.
+
+Juarrero's context-sensitive constraints are referenced. That a term in a model's context acts as one, and that negation feeds the basin, is the user's reading: spelled out.
 
 Rationale: [[philosophy/three-layer-harness]], [[philosophy/harness-elements]], [[philosophy/attractors]], [[philosophy/collaborative-production]], [[philosophy/zoom-levels]]
