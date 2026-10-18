@@ -23,6 +23,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Fast feedback | small-batches | `batch-size-economics`, Holding cost, entry Speculative work |
 | Inventory piling up unseen | small-batches | `batch-size-economics`, one line on holding cost as a whole |
 | Just in time, the why: a piece built early waits unvalidated | change-in-place | the same, Speculative work |
+| Seams built early anchor later work (Tversky & Kahneman), which bends to fit them | change-in-place | `batch-size-economics`, Speculative work |
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | the old `planning-is-everything`, Forecast and state |
 | Last responsible moment (Poppendieck): decisions and optionality only, not inventory | change-in-place | in the weights; named as an attractor in the old `planning-is-everything`, Forecast and state; architecture and optionality, a philosophy to write (`sync-repo.work.md`, 3.2) |
@@ -37,7 +38,6 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 ## Next
 
 1. Close the four findings of the last pass over the old notes, one per round with the user:
-   - Partial, seams built early (old `change-in-place`): later work bends to fit seams guessed early. A cost beside the write-off; `batch-size-economics` holds only the write-off.
    - Partial, flag versus dark (old `change-in-place`, Escape hatch): behind a flag is reachable, exercised, invisible; dark is unreachable. Lost.
    - Partial, why an increment is cut into steps (old `small-batches`): shipped whole, it is the big batch again one level down ("17 layers"). `batch-slicing` cuts steps without saying why.
 2. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
