@@ -15,7 +15,7 @@ tags: [harness-design, vocabulary]
 | **Session agent** | a posture (verbosity, style), or an interlocutor for one task | for the whole session, human in the loop | it serves whatever the human brings; no goal of its own |
 | **Sub-agent** | an intention: a task to handle, or a probe; generic at genesis, specialized around the product over time | for one dispatch, called live from a session, fresh context | intention in the definition, knowledge in composed skills |
 | **Headless agent** | a goal, and the knowledge to reach it: a non-deterministic brick in a workflow, nothing more | for one workflow step, node or leaf, called by a script, human on the loop at most | a standardized answer the script can act on |
-| **Philosophy file** | theory: why the prescriptions hold | only when the work is on the harness itself: improving it, reviewing an artifact | written in the field's own terms ([[philosophy/attractors]]) |
+| **Philosophy file** | theory: why the prescriptions hold | only when the work is on the harness itself: improving it, reviewing an artifact | written in the field's own terms ([[philosophy/field-terms]]) |
 | **Script, hook, tool** | a guarantee | when called, outside the model | the same result every time |
 
 One definition can serve as sub-agent, then headless: the call tells them apart, and the move from the first to the second is the agent's path ([[philosophy/harness-direction]]).

@@ -22,7 +22,7 @@ Doctrine is what must always be true: the intent, the result wanted, the posture
 
 How it is written:
 
-- **Quoted or coined.** Both are doctrine. How one is found: [[philosophy/attractors]].
+- **Quoted or coined.** Both are doctrine. How one is found: [[philosophy/field-terms]].
 - **Spread out.** The doctrine heads the file, or sits with the part of the know-how it governs, and moves with that part.
 - **Identifiable.** Wherever it sits, a reader tells at once which lines hold always. Every rule and skill carries a doctrine marked so; the mark is the file's choice: a blank line before the know-how, a section of its own, "Doctrine:" before a list, whatever fits.
 - **Agents differ.** In an agent, and in `CLAUDE.md`, the doctrine is the posture and the objective, under their own names (`Postures`). A skill or rule is know-how with a little doctrine; an agent is doctrine with little know-how, the steps living in the skills it composes.
@@ -71,4 +71,4 @@ Rationale: [[philosophy/make-the-change-easy]]
 - The three layers and why they stay apart: [[philosophy/three-layer-harness]].
 - What each harness element is for: [[philosophy/harness-elements]].
 - What happens after a failed run: [[philosophy/kaizen]].
-- Why a precise term does the work of a paragraph: [[philosophy/attractors]].
+- Why a precise term does the work of a paragraph: [[philosophy/field-terms]].

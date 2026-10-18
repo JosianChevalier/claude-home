@@ -125,4 +125,4 @@ Alone, "aggregate" could be a SQL function. Evans fixes the field; "the consiste
 
 Juarrero's context-sensitive constraints are referenced. That a term in a model's context acts as one, and that negation feeds the basin, is the user's reading: spelled out.
 
-Rationale: [[philosophy/three-layer-harness]], [[philosophy/harness-elements]], [[philosophy/attractors]], [[philosophy/collaborative-production]], [[philosophy/zoom-levels]]
+Rationale: [[philosophy/three-layer-harness]], [[philosophy/harness-elements]], [[philosophy/attractors]], [[philosophy/field-terms]], [[philosophy/collaborative-production]], [[philosophy/zoom-levels]]

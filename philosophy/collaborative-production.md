@@ -97,3 +97,4 @@ What works, in the order it is usually needed:
 - Why a long run costs, in context and in error: [[philosophy/context-splitting]], [[philosophy/compounding-decisions]].
 - Shape questions under the same test: [[philosophy/shape-and-substance]].
 - The embodied face of the loop: [[philosophy/embodied-navigation]].
+- The embedded face, and the reflexive mode that designs its conditions: [[philosophy/embedded-reflexive]].
