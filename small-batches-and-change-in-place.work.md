@@ -25,7 +25,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | the old `planning-is-everything`, Forecast and state |
 | Last responsible moment (Poppendieck): decisions and optionality only, not inventory | change-in-place | `planning-is-everything` at its migration (what a plan is, how it is organized); a philosophy of designing architecture, later |
-| Nested feedback loops: any change a hypothesis, one loop per level | new | its own philosophy, later; home open |
+| Nested feedback loops: any change a hypothesis, one loop per level | new | `batch-slicing`, Everything is a hypothesis, one sentence; the general principle in a feedback-loops philosophy, later |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | later, one layer up; home open |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
 | Dark code: new behavior dark then keystone, existing behavior in place | change-in-place | `continuous-delivery`, at its migration |
@@ -35,5 +35,6 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. Relocate, one idea per round with the user, each into the closest existing file (grow, then cut): nested feedback loops; pull.
-2. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
+1. Relocate, one idea per round with the user, each into the closest existing file (grow, then cut): pull.
+2. With the user: explore the nested loops of XP (Beck), what it says and whether there is something to add.
+3. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
