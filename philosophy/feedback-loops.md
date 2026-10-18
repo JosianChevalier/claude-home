@@ -18,6 +18,8 @@ Several of XP's loops no longer hold for us. Pair programming and the stand-up g
 6. **Commit**, one that should work. It answers whether we can cut slices of the product that should work: the release, at the level of a programmer instead of a team.
 7. **Change.** Something we believe we can do; the compiler and the tests answer.
 
+Tests are not placed in these loops: we mostly use ATDD, and anchor some kind of testing at nearly every level.
+
 ## Fitting the loops
 
 Continuous deployment fits every loop from the second or third down exactly onto the one below: tiny changes, deployed continuously. Continuous delivery does it from the fourth. Agility and story slicing push the first loop closer to the ones below.
