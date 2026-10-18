@@ -21,7 +21,13 @@ user talks ──▶ draft ──▶ anything to raise? ──no──▶ user v
              redesign ◀── user answers, or adds
 ```
 
-The file is drafted at once, holding only what the user said and the implications plainly in it. Every input after that challenges its structure: is the current shape still the one that best integrates all that was said? There is almost always a restatement that holds the old and the new together; the file is redesigned around it, and a line is added only when none exists. Additive bias (Adams) pulls the other way.
+The file is drafted from the first input, holding only what the user said and the implications plainly in it.
+
+Each round sediments: one question, its answer, its impact written, then the next question. Questions are never batched before writing.
+
+Any step may be prepared first, long or in the background, such as scouting `philosophy/` for the concept's home and its neighbours.
+
+Every input challenges the structure: is the current shape still the one that best integrates all that was said? There is almost always a restatement that holds the old and the new together; the file is redesigned around it, and a line is added only when none exists. Additive bias (Adams) pulls the other way.
 
 The agent goes on alone and stops only to raise:
 
