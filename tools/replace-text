@@ -23,8 +23,23 @@
     ...
 
   A segment ending with an empty line includes its final newline.
+
+  Prints one line per edit, FILE:LINE -REMOVED +ADDED in lines, so no diff is needed
+  to see where it landed. LINE is where the edit starts, before any later edit in the
+  same call shifts it.
 """
 import sys
+
+edits = []  # (path, line, old, new) for the report
+
+
+def lines(s):
+    return s.count("\n") + (1 if s and not s.endswith("\n") else 0)
+
+
+def splice(path, s, a, b, new):
+    edits.append((path, s.count("\n", 0, a) + 1, s[a:b], new))
+    return s[:a] + new + s[b:]
 
 
 def die(msg):
@@ -35,7 +50,8 @@ def replace_once(path, s, old, new):
     n = s.count(old)
     if n != 1:
         die(f"{path}: {n} matches for {old[:60]!r}")
-    return s.replace(old, new)
+    a = s.index(old)
+    return splice(path, s, a, a + len(old), new)
 
 
 def between(path, s, start, end, new):
@@ -45,7 +61,7 @@ def between(path, s, start, end, new):
     b = s.find(end, a + len(start)) if end else len(s)
     if b < 0:
         die(f"{path}: end {end[:60]!r} not found after start")
-    return s[:a] + new + s[b:]
+    return splice(path, s, a, b, new)
 
 
 def parse_blocks(text, path):
@@ -107,7 +123,8 @@ def main(argv):
     for path, s in files.items():
         with open(path, "w") as f:
             f.write(s)
-    print("replace-text: " + ", ".join(files))
+    for path, line, old, new in edits:
+        print(f"replace-text: {path}:{line} -{lines(old)} +{lines(new)}")
 
 
 main(sys.argv[1:])

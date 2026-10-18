@@ -27,4 +27,4 @@ A small token optimization, not a fix: agents edit text well with inline Python 
 
 ## Steps
 
-- [ ] From 2026-10-20, recount inline-Python edits in the transcripts (Bash calls with `python` and `write(`) against the baseline above, split per model. Feed what `replace-text` misses back into it. **← current**
+- [ ] From 2026-10-20, recount inline-Python edits in the transcripts (Bash calls with `python` and `write(`) against the baseline above, split per model. Since the rule rewrite of 2026-10-18, also check: batches used instead of single calls chained with `&&`, `--between` used, `git diff` no longer run after an edit. Feed what `replace-text` misses back into it. **← current**
