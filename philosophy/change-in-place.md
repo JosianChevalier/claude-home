@@ -29,7 +29,7 @@ It is how making the change easy walks the path ([[philosophy/make-the-change-ea
 Sometimes one step cannot be made in place without regression: the new behavior needs another shape at a boundary the callers depend on. Then, and only then, an alternative flow: expand/contract, an adapter, a branch behind a flag.
 
 - **The smallest atom.** It covers the one piece that cannot change in place, not the function around it.
-- **Adopted in the same step.** Once parity is proven, it goes live in the step that brings it. It never waits dark for a later switch.
+- **Adopted in the same step.** Once parity is proven, it goes live in the step that brings it. It never waits dark for a later switch. Behind a flag is not dark: reachable and exercised, only invisible.
 
 ## New behavior is another case
 

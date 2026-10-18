@@ -30,6 +30,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Nested feedback loops: any change a hypothesis, one loop per level | new | `batch-slicing`, Everything is a hypothesis, one sentence; the general principle in a feedback-loops philosophy, later |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | `batch-slicing`, with just in time |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
+| Flag versus dark: behind a flag is reachable, exercised, invisible | change-in-place | `change-in-place`, The exception; `continuous-delivery` may mention it at its migration |
 | Dark code: new behavior dark then keystone, existing behavior in place | change-in-place | `continuous-delivery`, at its migration |
 | Refactor and redesign alternated, recursively | small-batches | `make-the-change-easy`, already there |
 | Atomic commit below the plan | small-batches | `atomic-commit`, already there |
@@ -38,7 +39,6 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 ## Next
 
 1. Close the four findings of the last pass over the old notes, one per round with the user:
-   - Partial, flag versus dark (old `change-in-place`, Escape hatch): behind a flag is reachable, exercised, invisible; dark is unreachable. Lost.
    - Partial, why an increment is cut into steps (old `small-batches`): shipped whole, it is the big batch again one level down ("17 layers"). `batch-slicing` cuts steps without saying why.
 2. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
 3. On the user's go only: delete the old notes and this file, and tick the `small-batches` and `change-in-place` backlog line in `sync-repo.work.md`; the mapping rows are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
