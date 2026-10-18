@@ -48,7 +48,7 @@ For the same reason snippets are verbatim. A tidied snippet makes the code pass 
 
 A narrator optimises for coherence; hunks that don't fit get dropped or forced in — and those are the most review-worthy. So every hunk belongs to exactly one beat, and what fits none surfaces in the opening turn.
 
-Two causes, indistinguishable from inside: the change was not one batch (@rationale/small-batches.md), or the agent's story is incomplete. Explainable as separate work → split or redo in small batches. Not explainable → the change is not understood; roll back. Either way the agent interprets and recommends; the reviewer decides.
+Two causes, indistinguishable from inside: the change was not one batch ([[philosophy/batch-slicing]]), or the agent's story is incomplete. Explainable as separate work → split or redo in small batches. Not explainable → the change is not understood; roll back. Either way the agent interprets and recommends; the reviewer decides.
 
 ## The map lives in a file
 

@@ -31,15 +31,15 @@ The keystone inverts where risk sits. All the hard work ships early, in small sa
 
 ## Dark is operationally free, not economically free
 
-Dark code cannot break production. It is still design-in-process inventory (@rationale/small-batches.md): unvalidated, depreciating, and paying its integration risk in one lump at the keystone. The keystone order is therefore for **new** behavior with no existing live path, and even there the dark phase is kept as short as the thinnest keystone allows.
+Dark code cannot break production. It is still design-in-process inventory ([[philosophy/batch-size-economics]]): unvalidated, depreciating, and paying its integration risk in one lump at the keystone. The keystone order is therefore for **new** behavior with no existing live path, and even there the dark phase is kept as short as the thinnest keystone allows.
 
-Modifying an *existing* live path is a different regime. The code is already exposed, so the change is done **in place** — a chain of mechanical, behavior-preserving moves on the live path, each live as it lands (@rationale/change-in-place.md, @rationale/mechanical-refactoring.md). Alternative flows (no-op adapters, safe defaults, flags, expand-contract — the safe-rollout strategies) cover only the smallest atom that cannot be transformed in place, and that atom is adopted in the same stage. Building a dark replacement of a live workflow and switching at the end is not the keystone pattern: it is the big batch, with the switch as its big-bang integration.
+Modifying an *existing* live path is a different regime. The code is already exposed, so the change is done **in place** — a chain of mechanical, behavior-preserving moves on the live path, each live as it lands ([[philosophy/change-in-place]], @rationale/mechanical-refactoring.md). Alternative flows (no-op adapters, safe defaults, flags, expand-contract — the safe-rollout strategies) cover only the smallest atom that cannot be transformed in place, and that atom is adopted in the same stage. Building a dark replacement of a live workflow and switching at the end is not the keystone pattern: it is the big batch, with the switch as its big-bang integration.
 
 Same invariant, two regimes: new behavior goes dark-then-keystone, existing behavior is transformed in place.
 
 ## Why every commit, not just the last
 
-Releasability per commit is small batches applied to integration (@rationale/small-batches.md). A commit that cannot ship is design-in-process inventory: it blocks trunk, defers feedback, and couples its risk to whatever ships next. Keeping each commit releasable keeps batch size at its floor — each one an independently revertible bet, integration risk paid continuously in cents instead of at release time in full.
+Releasability per commit is small batches applied to integration ([[philosophy/batch-size-economics]]). A commit that cannot ship is design-in-process inventory: it blocks trunk, defers feedback, and couples its risk to whatever ships next. Keeping each commit releasable keeps batch size at its floor — each one an independently revertible bet, integration risk paid continuously in cents instead of at release time in full.
 
 ## Consequences
 
