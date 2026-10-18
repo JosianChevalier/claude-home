@@ -12,7 +12,7 @@ Writing a harness element is the reflexive mode, for a reader embedded ([[philos
 
 ## Designed whole
 
-Every term in context is an asset placed in the landscape: a precise term brings a semantic valley, a boundary a cliff or a fence ([[philosophy/attractors]]). The landscape is shaped as a whole. A fence does not block only the spot it stands on, and a term named to be avoided keeps its basin.
+Every term in context is an asset placed in the landscape: a precise term brings a semantic valley, a boundary a cliff or a fence ([[philosophy/attractors]]). The landscape is shaped as a whole. A fence does not block only the spot it stands on.
 
 An attractor brought without ambiguity is an asset placed on purpose. Brought ambiguously, it is a random asset dropped in the middle of the terrain.
 
