@@ -27,7 +27,7 @@ None of it shows: unshipped work sits on no shelf, so it piles up unnoticed, and
 
 **Delay.** A finished piece that waits earns nothing: the missed gain. Shipped at step 2 of 6, it earns from step 2; held for the whole batch, only from step 6. The cost runs even when nothing goes wrong.
 
-**Speculative work.** Work built on an untested assumption about the product, not over-engineered code: users want it, the design holds. If the assumption fails, everything built on it is written off. Only shipping tests it, and a piece built before what consumes it waits untested. Late feedback lets the exposure pile up across the batch; fast feedback caps it at one small piece.
+**Speculative work.** Work built on an untested assumption about the product, not over-engineered code: users want it, the design holds. If the assumption fails, everything built on it is written off. Only shipping tests it, and a piece built before what consumes it waits untested: hidden inventory, which just in time (Ohno) removes. Late feedback lets the exposure pile up across the batch; fast feedback caps it at one small piece.
 
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 

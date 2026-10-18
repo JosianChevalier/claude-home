@@ -24,7 +24,7 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 | Just in time, the why: a piece built early waits unvalidated | change-in-place | the same, Speculative work |
 | Just in time, the rule: each piece used as soon as it lands | change-in-place | `batch-slicing`, a line in passing |
 | Option value: forecast disposable, state precious | small-batches | the old `planning-is-everything` holds the second half; the first, remaining stages are options, has no home |
-| Last responsible moment (Poppendieck): when to commit to a decision; optionality, so architecture | change-in-place | a philosophy of designing architecture, later |
+| Last responsible moment (Poppendieck): decisions and optionality only, not inventory | change-in-place | a philosophy of designing architecture, later |
 | Nested feedback loops: any change a hypothesis, one loop per level | new | its own philosophy, later; home open |
 | Pull (Lean, Ohno): a piece built because its user asks for it; push the failure mode | new | later, one layer up; home open |
 | Every stage ends working and deployed | small-batches | `continuous-delivery`, at its migration |
@@ -35,5 +35,5 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. Relocate, one idea per round with the user, each into the closest existing file (grow, then cut): last responsible moment; option value, the options half; nested feedback loops; pull.
+1. Relocate, one idea per round with the user, each into the closest existing file (grow, then cut): option value, the options half; nested feedback loops; pull.
 2. Delete the old notes and this file; the mapping rows in `sync-repo.work.md` are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.
