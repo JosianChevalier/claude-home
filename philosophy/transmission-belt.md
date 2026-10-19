@@ -48,7 +48,7 @@ The corollary is uncomfortable: the harness decides what counts as trivial, so i
 
 The loop is human. Observe, orient, decide, act (Boyd): improving needs a decision; the decision needs an orientation; orienting is destroying an internal world and rebuilding it; and no world gets destroyed without an observation that disappoints it. The harness does not run this loop; it enables it, at every level of the work. Disappointment is the Observe. Orient is the active half, Boyd's *Destruction and Creation*: a closed conceptual system's mismatch with reality grows on its own (Gödel, Heisenberg, the second law), so destruction must be continuous and deliberate. Destructive deduction shatters the existing domain; creative induction reassembles the parts into a new concept. Orient is the capacity to destroy a mental world.
 
-Merleau-Ponty's deviation from maximal grip is pre-reflective: felt before it is thought. Boyd makes it deliberate, a skill: the expert destroys their own gestalt before entropy forces the issue. In Husserl's terms, the epoché turned on oneself.
+Merleau-Ponty's deviation from maximal grip is pre-reflective: felt before it is thought. Boyd makes it deliberate, a skill: the expert destroys their own gestalt before entropy forces the issue. In Husserl's terms, the epoché turned on oneself: suspending belief not in the world but in one's own grip on it, as a prelude to Boyd's rebuilding.
 
 The full dynamic, the return path of the figure above:
 
@@ -65,9 +65,9 @@ The harness is not the agent's intelligence. It is the entire development proces
 - **Base layer: transparency.** For the unknown unknowns, the moment nobody planned for. The engineer stays situated in the domain code through direct feedback on change: highlighted diffs, the implications of a change shown as it is made. The engineer moves in abstraction, never out of the code: code written well, at the right levels of abstraction, is the best representation of behavior. A schema carries structure and makes behavior harder to read, so it supplements the code and never replaces it. This is the channel through which metis perceives; remove the showing and you have the recruit's condition at the speed of an agent. How to show is cartography ([[philosophy/zoom-levels]]); why it must be shown is this document.
 - **Second axis: kairos gates.** For the known unknowns, the moment known to recur. Steps built into the loop where expertise, a reminder, or a chore is injected so the moment is seized before the belt moves again ([[philosophy/kairos-gates]]).
 
-## What follows for a session
+## What the lower layers aim for
 
-None of this is a rule; it is what a rule would be for.
+The properties the lower layers of the harness, rules and skills, should aim for:
 
 - **The conversation is where the belt runs.** The type is predicated into a concept in the exchange; the artifact records the current state of that predication ([[philosophy/collaborative-production]]). The engineer's intention is carried, not improved: a better idea from the library is a rival reading offered at a gate, never a substitution made in the code.
 - **Translation is located, not diffused.** Diffusion, the spork ([[philosophy/model-phenomenology]]), is the one failure the belt image predicts most directly: the agent's fluency makes it cheap to produce and invisible to the producer.
