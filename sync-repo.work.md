@@ -14,7 +14,6 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
 - [ ] Migration 3: integrate bit by bit, MO below. **← current**
   - [x] 3.1 `CLAUDE.md` replaced; OpenCode section parked in `old-claude/AGENTS.md`.
   - [ ] 3.2 Philosophy. **← current**
-    - [ ] `context-economics`: cut the OpenCode section ("Rule → context (AOP)", `globs:`/opencode-rules in loading policy), or defer to 3.3. Decide first.
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
@@ -27,8 +26,8 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
       - [x] `study-making` note deleted 2026-10-12, no `philosophy/` counterpart: every sentence was housed elsewhere (mapping row). The skill moved first, out of phase order: a skill moves once its rationales have landed, backlog pointers excepted (`prototypes-are-probes`).
         - [x] Skill `study-making`, salvaged 2026-10-13 on chat examples. Left: the `aggregate-identification` dispatch, 3.4.
         - [ ] The bottleneck sentence (code and prose now come faster than an engineer can read them; waste is accidental cognitive load, not queue time) goes to `zoom-levels`, Cognitive load, at its reshape.
-      - [ ] Then the rest of the backlog, fewest outgoing links first: `small-batches` (1 out, 5 in), `change-in-place`, `continuous-delivery` (3), `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
-        - [ ] `small-batches`: check later, against `old-claude-reference/`, what moved to `batch-size-economics` and `atomic-commit`; it points at `batch-size-economics`.
+      - [ ] Then the rest of the backlog, fewest outgoing links first: `small-batches` and `change-in-place` (own work file), `continuous-delivery` (3), `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
+        - [ ] `small-batches` and `change-in-place` **← current**: in `small-batches-and-change-in-place.work.md`.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [ ] `kaizen`: `metis-kairos` points at it for the drift guard, a fix that contradicts the philosophy makes one of the two change explicitly, and it does not hold it; `harness-improvement` has the line as doctrine.
@@ -49,7 +48,6 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
     - [x] `harness-improvement` landed 2026-10-19, reworked on chat mocks: opening by area of the harness, the user picks the numbers; one area per round, the attractors and their pull, four verdicts as the agent's grid; a decision written as it is taken. Dispatches `transcript-attractor-analyzer`, 3.5.
-    - [ ] Making philosophy files: the know-how has no home. Leaning to a skill, over a philosophy file on philosophy or an `AGENTS.md` (2026-10-15). First know-how, on cutting, raised on `small-batches`: a part splits out when another path needs it without the rest, not for size; a part stays while a reader needs it to think the subject (holding cost stays in `batch-size-economics`: no economics without why it is high).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
     - [ ] `transcript-attractor-analyzer`, new, dispatched by `harness-improvement` only when something went wrong, never for a gap. Reads the session transcript, `projects/<cwd-encoded>/<session-id>.jsonl`, the id in `CLAUDE_CODE_SESSION_ID`, reasoning blocks included. Unlike `philosophy-scout` it returns a reading: the moment quoted as evidence, what the reasoning held, each attractor in context by its words, where it sits, how it pulled. The skill's Round says what the message then shows.
@@ -201,7 +199,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | |
 | `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | |
 | `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | |
-| `rationale/context-economics.md` | `philosophy/context-economics.md` | OpenCode section still in, pending (3.2) |
+| `rationale/context-economics.md` | `philosophy/context-economics.md` | OpenCode AOP section cut; split with `context-splitting` |
 | `rationale/harness-target.md` | `philosophy/harness-shape.md` | layer table → `three-layer-harness`; kaizen triage → `kaizen` |
 | `rationale/harness-elements.md` | `philosophy/harness-elements.md` | OpenCode preload mention dropped |
 | `rationale/two-layer-harness.md` | `philosophy/three-layer-harness.md` | contract and kaizen sections → `kaizen` or dropped; edge of chaos dropped, returns elsewhere (3.2) |
