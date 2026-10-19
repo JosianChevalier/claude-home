@@ -30,6 +30,7 @@
 !/.claude/agents
 !/.claude/commands
 !/.claude/rules
+!/.claude/README.md
 
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
