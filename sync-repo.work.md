@@ -31,6 +31,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
         - [ ] `small-batches`: check later, against `old-claude-reference/`, what moved to `batch-size-economics` and `atomic-commit`; it points at `batch-size-economics`.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
+    - [ ] `kaizen`: `metis-kairos` points at it for the drift guard, a fix that contradicts the philosophy makes one of the two change explicitly, and it does not hold it; `harness-improvement` has the line as doctrine.
     - [x] Reading session on Ashby, Beer, Snowden: answered 2026-10-11, landed in `metis-kairos` (recursion restated as subsidiarity; Snowden a neighbour, not a restatement).
     - [ ] Edge of chaos: dropped from `three-layer-harness` layer 1, returns elsewhere, differently.
     - [ ] `attractors`, definition: an attractor is a term in the weights, shared knowledge, pulling the same for every reader. What is written in a file or said earlier in a session is not one: it pulls the agent that read it and nobody else, and the file names that as the hazard. One paragraph, under Load the expertise; decided 2026-10-11, text not yet agreed.
@@ -51,7 +52,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] Making philosophy files: the know-how has no home. Leaning to a skill, over a philosophy file on philosophy or an `AGENTS.md` (2026-10-15). First know-how, on cutting, raised on `small-batches`: a part splits out when another path needs it without the rest, not for size; a part stays while a reader needs it to think the subject (holding cost stays in `batch-size-economics`: no economics without why it is high).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
-    - [ ] `transcript-attractor-analyzer`, new: reads the session transcript (`projects/<cwd>/<session-id>.jsonl`, reasoning blocks included) at the moment something went wrong, returns the story and the attractors in context. Only when there was a violation; a gap needs none.
+    - [ ] `transcript-attractor-analyzer`, new, dispatched by `harness-improvement` only when something went wrong, never for a gap. Reads the session transcript, `projects/<cwd-encoded>/<session-id>.jsonl`, the id in `CLAUDE_CODE_SESSION_ID`, reasoning blocks included. Unlike `philosophy-scout` it returns a reading: the moment quoted as evidence, what the reasoning held, each attractor in context by its words, where it sits, how it pulled. The skill's Round says what the message then shows.
   - [ ] 3.6 Templates.
 - [ ] Migration 4: scan for client specifics, rename, make public.
 - [ ] Migration 5: the project syncs from the repo only; delete the uploaded docs. Then delete this file.
