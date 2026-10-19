@@ -26,13 +26,7 @@ A property to be aware of is cognitive load spent holding it ([[philosophy/zoom-
 
 ## Unrepresentable, therefore unchecked
 
-The parse holds because its target type has no invalid inhabitant. Make illegal states unrepresentable (Minsky, Wlaschin): then holding a value of the type is holding the proof. Propositions as types reads the same way: a value of `NonEmpty<T>` is a proof that the list has a head.
-
-Three consequences, each a check deleted:
-
-- **Totality.** A function over a parsed type is total over it: no branch for the case the type excludes, no caller-dependent behaviour.
-- **Non-redundancy** (Meyer, design by contract). A precondition is checked on one side only. Once the type is the precondition the callee checks nothing; checking anyway is defensive programming, client and supplier both paying.
-- **No re-validation on the way.** The value cannot have lost the property: immutable, it is what it was parsed as.
+The parse holds because its target type has no invalid inhabitant: make illegal states unrepresentable (Minsky, Wlaschin), and holding the value is holding the proof. Three checks it deletes: the excluded branch (totality), the callee's precondition (Meyer's non-redundancy), the re-check on the way (immutability).
 
 ## Two levels
 
@@ -40,18 +34,9 @@ Low, the check is a type the language has, or narrows by decoration: `[T, ...T[]
 
 High, the parse is not a decoration. It is the model: which states exist, which fields each state has, which transitions each state allows. Finding that is domain modeling, and its home is [[philosophy/always-valid-domain]].
 
-## Sightings
+## Instances
 
-| Where data enters | Enters as | Parsed into | Check deleted downstream |
-|---|---|---|---|
-| Domain model | primitives, flags | value object, one type per state | the null check, the status switch |
-| Aggregate | several objects | one root as sole handle | the cross-object consistency check |
-| Left adapter | request, arguments, message | command | re-reading the request shape in the domain |
-| Configuration | strings from the environment | typed settings, once at startup | the missing-key check at use |
-| SPI failure | an exception | `Result`, the error in the signature | the blind `catch` |
-| Sub-agent | an exploration | a conclusion | reading the exploration |
-
-The domain and aggregate rows: [[philosophy/always-valid-domain]], [[philosophy/aggregates]]. The last row is the same cut one level up: [[philosophy/context-splitting]].
+In the domain: [[philosophy/always-valid-domain]] for the model, [[philosophy/aggregates]] for the consistency boundary.
 
 ## Where the parse lives
 
@@ -61,7 +46,7 @@ A grammar that cannot express the type (SQL without sum types, JSON without bran
 
 ## Vocabulary
 
-What pulls away from it has the field's own names: primitive obsession, shotgun parsing, defensive programming. All three are basins already in the weights, so naming them pushes away rather than carving them ([[philosophy/attractors]]).
+What pulls away from it has the field's own names: primitive obsession, shotgun parsing. Both are basins already in the weights, so naming them pushes away rather than carving them ([[philosophy/attractors]]).
 
 ## Related
 
