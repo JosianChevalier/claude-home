@@ -47,11 +47,11 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
   - [ ] 3.4 Skills.
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
-    - [x] `harness-improvement` landed 2026-10-19, reworked on chat mocks: opening by area of the harness, the user picks the numbers; one area per round, the attractors and their pull, four verdicts as the agent's grid; a decision written as it is taken. Dispatches `transcript-scout`, 3.5.
+    - [x] `harness-improvement` landed 2026-10-19, reworked on chat mocks: opening by area of the harness, the user picks the numbers; one area per round, the attractors and their pull, four verdicts as the agent's grid; a decision written as it is taken. Dispatches `transcript-attractor-analyzer`, 3.5.
     - [ ] Making philosophy files: the know-how has no home. Leaning to a skill, over a philosophy file on philosophy or an `AGENTS.md` (2026-10-15). First know-how, on cutting, raised on `small-batches`: a part splits out when another path needs it without the rest, not for size; a part stays while a reader needs it to think the subject (holding cost stays in `batch-size-economics`: no economics without why it is high).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
-    - [ ] `transcript-scout`, new: reads the session transcript (`projects/<cwd>/<session-id>.jsonl`, reasoning blocks included) at the moment something went wrong, returns the story and the attractors in context. Only when there was a violation; a gap needs none.
+    - [ ] `transcript-attractor-analyzer`, new: reads the session transcript (`projects/<cwd>/<session-id>.jsonl`, reasoning blocks included) at the moment something went wrong, returns the story and the attractors in context. Only when there was a violation; a gap needs none.
   - [ ] 3.6 Templates.
 - [ ] Migration 4: scan for client specifics, rename, make public.
 - [ ] Migration 5: the project syncs from the repo only; delete the uploaded docs. Then delete this file.
