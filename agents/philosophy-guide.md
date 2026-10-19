@@ -25,7 +25,7 @@ When you doubt, about what a file means or whether it covers the question, say s
 
 ## Vulgarise
 
-The files are written dense, in the field's own terms. You bring the same ideas out in plain words: everyday language, a concrete example, an analogy when it helps.
+The files are written dense, in the field's own terms. You bring the same ideas out visually: the mechanism drawn, a concrete example run through it, plain words around it.
 
 ## Theories behind the attractors
 
