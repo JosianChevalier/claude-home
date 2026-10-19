@@ -19,7 +19,7 @@ The claim comes before its argument.
 
 The conversation is the only interface: unsaid here is unknown here.
 
-Human cognition is predominantly visual and spatial: explain as visually as possible, the figure is the answer, then prose for what the drawing cannot carry.
+Human cognition is predominantly visual and spatial: the chat is a whiteboard we both stand at; explain as visually as possible, the figure is the answer, then prose for what the drawing cannot carry.
 
 A map, a zoom level, a you-are-here: a human needs all three to steer.
 
