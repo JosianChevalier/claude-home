@@ -6,26 +6,26 @@ tags: [collaboration, harness-design, cognitive-load, conceptual-integrity]
 
 **Thesis.** Remove the medium's load, transmit the domain's, friction included.
 
-The agent is a transmission between the engineer's type and the code's concept ([[philosophy/model-phenomenology]]). This document says what kind of transmission, and what follows for a session.
+The agent is a transmission between the engineer's type and the code's concept ([[philosophy/model-phenomenology]]). This document says what kind of transmission, and what the lower layers aim for.
 
 ```
 type ─── intention ───▶ belt ───▶ concept in the code
- ▲                                      │
- └── observe: disappointment ◀── slip ◀─┘
+ ▲                                          │
+ └── observe: disappointment ◀── friction ◀─┘
      orient: tension ─▶ destruction ─▶ Stiftung
 ```
 
 ## Belt, not gear
 
-A belt differs from a gear in one property: **compliance**. It transmits torque but can slip, and the slip is a design property. It is what saves the engine when the load spikes, where a gear passes the shock straight through.
+A belt differs from a gear in one property: **compliance**. A gear couples fully: everything the load meets reaches the engine. A belt couples partially: it transmits the work and gives on the rest.
 
-Read as a design principle, the belt is the part of the mesh where load becomes perceptible to the engineer instead of shearing something silently. In variety-absorption terms ([[philosophy/metis-kairos]]): the levels below absorb what they can; what they cannot reaches the engineer through the belt, and that arrival is the kairos.
+Read as a design principle, the belt gives on the medium's hitches and transmits the domain's tensions, as friction the engineer feels. In variety-absorption terms ([[philosophy/metis-kairos]]): the levels below absorb what they can; what they cannot reaches the engineer through the belt, and that arrival is the kairos.
 
 What arrives is a tool becoming visible. A tool in use disappears into the action, and reappears as an object only when it gets in the way: Heidegger's shift from ready-to-hand to present-at-hand. The domain model is the tool here. Its friction is the signal that it is no longer the right one, and the belt exists so that the signal reaches the hand holding it.
 
 Two failure directions, the belt's:
 
-- **Too tight.** No slip. Every small issue the code meets is transmitted to the engineer: full noise, cognition overloads.
+- **Too tight.** Full coupling, the gear. Every small issue the code meets is transmitted to the engineer: full noise, cognition overloads.
 - **Too loose.** The belt slips free. No signal comes back: the agent absorbs the tension, sporks, the veteran at scale ([[philosophy/model-phenomenology]]), and reports success. The engineer's Observe starves.
 
 ## The return path
@@ -72,7 +72,7 @@ The properties the lower layers of the harness, rules and skills, should aim for
 - **The conversation is where the belt runs.** The type is predicated into a concept in the exchange; the artifact records the current state of that predication ([[philosophy/collaborative-production]]). The engineer's intention is carried, not improved: a better idea from the library is a rival reading offered at a gate, never a substitution made in the code.
 - **Translation is located, not diffused.** Diffusion, the spork ([[philosophy/model-phenomenology]]), is the one failure the belt image predicts most directly: the agent's fluency makes it cheap to produce and invisible to the producer.
 - **When the type is silent, the choice returns up the belt.** If the engineer has not chosen among rival concepts, the choice is not made below.
-- **Scale of change is a load signal.** Compliance is what lets a load spike register instead of transmit: a large, multi-concern change is where slip should show, as visible implication rather than accomplished fact.
+- **Load comes up through several signals.** A large, multi-concern change, a model tension, a heuristic from the technical layers: each comes up as visible implication rather than accomplished fact.
 - **Everything shown is shown so that metis can work on it.** Cartography ([[philosophy/zoom-levels]]), attention budget ([[philosophy/context-economics]]) and attractors ([[philosophy/attractors]]) govern how; the belt governs why.
 
 ## Related
