@@ -50,14 +50,14 @@ A question whose answer requires opening the document forces a context switch an
 
 ## Cognitive load
 
-Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — which concept the write will force into the code. The agent exists to remove the first and transmit the second intact: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows ([[philosophy/transmission-belt]]).
+Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — anything that changes the model. The agent exists to remove the first and transmit the second intact: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows ([[philosophy/transmission-belt]]).
 
 Two failures, one per load:
 
 - **Interrogation**: the agent returns extraneous load up the belt — the medium turned into questions — and spends attention before it buys clarity. The belt too tight.
 - **Silent choice**: the agent absorbs intrinsic load — picks among rival concepts and reports success — and the user discovers late that the direction was decided below. The belt too loose.
 
-The test: does the choice change which concept the code will hold? Yes → intrinsic: return it. No → extraneous: infer it, defer it, or discover it by acting. Shape questions follow the same split ([[philosophy/shape-and-substance]]).
+The test: does the choice change the model beyond what the task asked? Yes → return it. No → infer it, defer it, or discover it by acting. Shape questions follow the same split ([[philosophy/shape-and-substance]]).
 
 In mob terms this is what "intent at the highest abstraction the driver can execute" means: the same test keeps strong-style from sliding into interrogation.
 

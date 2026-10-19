@@ -22,7 +22,7 @@ Treating shape certainty as substance certainty is silent choice ([[philosophy/c
 
 ## The test, on a document
 
-The belt's split decides which layer a question belongs to ([[philosophy/collaborative-production]], Cognitive load). For code the test reads "which concept will the code hold"; for a document, "which of these will the document commit to".
+The belt's split decides which layer a question belongs to ([[philosophy/collaborative-production]], Cognitive load). For code the test reads "does it change the model"; for a document, "which of these will the document commit to".
 
 Shape is the medium, extraneous: inferred, deferred, or discovered by acting. A shape question is interrogation, unless the container itself carries a concept: a study commits to a lens, a plan to a sequence. Then it is returned up the belt like any concept.
 

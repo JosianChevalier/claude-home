@@ -23,10 +23,12 @@ Read as a design principle, the belt gives on the medium's hitches and transmits
 
 What arrives is a tool becoming visible. A tool in use disappears into the action, and reappears as an object only when it gets in the way: Heidegger's shift from ready-to-hand to present-at-hand. The domain model is the tool here. Its friction is the signal that it is no longer the right one, and the belt exists so that the signal reaches the hand holding it.
 
-Two failure directions, the belt's:
+Two failure directions, the belt's, both misclassifications:
 
-- **Too tight.** Full coupling, the gear. Every small issue the code meets is transmitted to the engineer: full noise, cognition overloads.
-- **Too loose.** The belt slips free. No signal comes back: the agent absorbs the tension, sporks, the veteran at scale ([[philosophy/model-phenomenology]]), and reports success. The engineer's Observe starves.
+- **Too tight.** The medium comes up as if it were the domain: a decision of no consequence for the design, which the engineer gains nothing from knowing. Full noise, cognition overloads.
+- **Too loose.** The domain is absorbed as if it were the medium: a friction that belonged in the engineer's Observe is improvised past, a redesign made silently below. The agent sporks, the veteran at scale ([[philosophy/model-phenomenology]]), and reports success. The engineer's Observe starves.
+
+What to pull up and what to absorb depends on the setting, so the philosophy does not draw the line: the doctrine and the know-how of each layer give the belt the heuristics for its own ([[philosophy/three-layer-harness]]). The general test lives in [[philosophy/collaborative-production]].
 
 ## The return path
 
@@ -41,8 +43,6 @@ germane      the type's     protect    where the type grows
 ```
 
 Germane load is the effort that builds the schema: the type grows through disappointment against a concrete concept. A transmission frictionless in that direction too stops the type from growing, and the agent becomes the only thing in the mesh that changes.
-
-The corollary is uncomfortable: the harness decides what counts as trivial, so it carries a concept of its own, and it can spork in its turn by classifying a real tension as medium. The test that keeps the classification in the open lives in [[philosophy/collaborative-production]].
 
 ## What the return path is for: destruction
 
