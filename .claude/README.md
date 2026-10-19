@@ -1,8 +1,10 @@
 # Why `.claude/` inside `~/.claude`
 
-Opened as a project (a cloud session, a clone in another folder), Claude Code
-discovers rules, skills, agents and commands only under `.claude/`. The four
-symlinks point it back at the real folders one level up.
+This repo is also a knowledge base: a cloud session or a clone in another folder
+opens it as a project, to read and work on its philosophy, rules and skills with
+the harness they describe active. As a project, Claude Code discovers rules,
+skills, agents and commands only under `.claude/`. The four symlinks point it
+back at the real folders one level up.
 
 Opened as home (`~/.claude` itself), the links resolve to the user-level files
 and load once. Checked: no duplicate in context.
