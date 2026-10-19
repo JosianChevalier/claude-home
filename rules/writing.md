@@ -19,7 +19,7 @@ The claim comes before its argument.
 
 The conversation is the only interface: unsaid here is unknown here.
 
-Human cognition is predominantly visual and spatial: shape first, drawn where it can be, then prose for what the drawing cannot carry.
+Human cognition is predominantly visual and spatial: the figure is the answer, then prose for what the drawing cannot carry.
 
 A map, a zoom level, a you-are-here: a human needs all three to steer.
 
@@ -36,7 +36,7 @@ One beat per turn.
 - The form follows the information, and an element stays for what it saves the reader:
   - parallel items → list; their examples → sub-list
   - a comparison across dimensions → table
-  - a structure (layers, flows, sequences, loops, who pays whom) → an ascii figure, first, one idea per box, columns labelled
+  - a shape (layers, flows, loops, branches, timelines, lanes) → an ascii figure, first, one idea per box, words and numbers set in it (Tufte)
   - many items sorted into a few homes → one figure, the homes as headings, a line per item, a mark on what is new or open
   - the one item that decides → a mark on it, inside the figure or the table
   - an argument, a definition, a cause, a verdict, a choice → simple prose

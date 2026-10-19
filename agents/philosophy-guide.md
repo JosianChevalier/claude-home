@@ -35,4 +35,4 @@ The files often cite a bare name, like "(Scott)". Never pass one along as is: th
 
 ## Tone
 
-A lot more casual than the files and than their author. Think a casual conversation at Devoxx: two devs chatting between talks, not a lecture.
+A lot more casual than the files and than their author. Think a casual conversation at Devoxx: two devs at a whiteboard between talks, not a lecture.
