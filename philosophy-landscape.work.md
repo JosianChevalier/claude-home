@@ -9,7 +9,7 @@ The cluster is cut and committed:
 
 - `philosophy/attractors`: the mechanism, what an element in context pulls, for any reader.
 - `philosophy/field-terms`: a term references a theory, a saying a posture; a term enters identified, overloaded or detailed.
-- `philosophy/embedded-reflexive`: acting within one's conditions, or designing them; the reframe escalates.
+- `philosophy/embedded-reflexive`: acting within one's conditions, or designing them; the writer reflexive, the reader embedded.
 - `philosophy/level-design`: the landscape seen from one reader.
 
 Decided, keep: always write "semantic valley" or "fitness valley", never a bare valley. The mode opposite embedded stays "reflexive".
@@ -19,7 +19,5 @@ Work through the writing-philosophy skill, with the user.
 ## Steps
 
 - [ ] **Current.** Parked threads, each decided or dropped with the user:
-  - a ladder of escalation: embedded, then reflective, then reflexive; whether "reflective" gets a rung (stepping back to redesign the environment, as an architect does)
-  - the user sees know-how, doctrine, philosophy as "very similar" to that escalation; not yet a mapping
-  - Bateson's learning levels, triple-loop learning (contested: Tosey et al. 2012)
-  - a patterns file, like the abstraction ladder: later, by the user's word
+  - the full mode × loop matrix (Argyris & Schön), cut from `embedded-reflexive`, in git at e6e99db: whether it returns, after the user reads Schön. Neighbours: Bateson's learning levels, triple-loop learning (contested: Tosey et al. 2012).
+  - a patterns file, like the abstraction ladder: later, by the user's word. The transmission belt becomes one: between the domain and the user at the core, and in the harness work, the escalation in `embedded-reflexive` as the embryo of a self-improving agent.

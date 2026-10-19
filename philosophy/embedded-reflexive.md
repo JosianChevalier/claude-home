@@ -4,7 +4,7 @@ tags: [cognition, collaboration, harness-design]
 
 # Embedded and reflexive
 
-**Thesis.** Any actant, human or agent, works embedded, acting within its conditions, or reflexive, designing them. A breakdown moves it from one mode to the other; how deep the correction then goes is a second axis.
+**Thesis.** Any actant, human or agent, works embedded, acting within its conditions, or reflexive, designing them. An agent writing a harness element is reflexive; the agent that will read it is embedded.
 
 ## Two modes
 
@@ -13,20 +13,21 @@ tags: [cognition, collaboration, harness-design]
 
 The two stay connected: what the embedded side meets feeds the reflexive side as it goes ([[philosophy/transmission-belt]]).
 
-## The breakdown
+## Which mode
 
-A tool in use disappears into the action, and reappears as an object only when it gets in the way: Heidegger's shift from ready-to-hand to present-at-hand. That breakdown, Schön's surprise, is what moves an actant out of the embedded loop into the reflexive one.
+Where the tool is tells the mode. Embedded, the tool disappears into the action; reflexive, it is the object worked on. A breakdown, the tool getting in the way, moves an actant from one to the other: Heidegger's ready-to-hand turning present-at-hand, Schön's surprise ([[philosophy/transmission-belt]]).
 
-## Depth
+## Escalation
 
-Once out, a correction has one of two depths (Argyris & Schön): the single loop fixes the action and keeps the frame; the double loop fixes the frame that chose the action. Depth is independent of mode, and crossing the two is our reading, not one from the literature:
+The belt between the domain and the user runs here too, in the work on the harness: an agent embedded that meets what is wrong in its own conditions always escalates it, never absorbs it. The engineer takes it in kaizen ([[philosophy/kaizen]]), as deep as it goes ([[philosophy/three-layer-harness]]):
 
-| | Single loop: fix the action | Double loop: fix the frame |
+| Depth | What is rewritten | Who |
 |---|---|---|
-| **Embedded** | fixing a red test in stride | reframing on the spot, the situation talking back (Schön) |
-| **Reflexive** | stepping back to find a better route, same goal | kaizen on a rule: is the system pointed right? |
+| Single loop (Argyris & Schön): the action strategy | the know-how | the engineer with the agent; later, a self-improving agent |
+| Double loop: the governing values | the doctrine | the same |
+| Orient (Boyd): destroying a world, building another | the philosophy | the engineer alone |
 
-For an agent, the reframe met in stride always escalates: carried up the belt, not absorbed, it is how the engineer improves ([[philosophy/transmission-belt]]). For now the engineer does the reflexive work with the agent, for the agent; a self-improvement loop, later, would still run in another agent.
+For now the engineer does the reflexive work with the agent, for the agent; a self-improvement loop, later, would still run in another agent. The philosophy is beyond it: rewriting it means the engineer's understanding of software development, or how it is presented, was wrong, and it changes their own perception.
 
 ## How each is embedded
 
@@ -38,5 +39,6 @@ An agent is embedded in semantics, read as a stream, not as a visual gestalt.
 
 - Designing the landscape another actant is embedded in: [[philosophy/level-design]].
 - The belt carrying the breakdown up to the engineer: [[philosophy/transmission-belt]].
+- Escalations turned into harness changes: [[philosophy/kaizen]].
 - The four faces of the enacted loop, embedded among them: [[philosophy/collaborative-production]].
 - The human reader's map: [[philosophy/zoom-levels]].

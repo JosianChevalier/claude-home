@@ -82,4 +82,4 @@ None of this is a rule; it is what a rule would be for.
 - Steps built on the loop to seize the moment by design: [[philosophy/kairos-gates]].
 - Where the belt runs, and the test that keeps the harness honest: [[philosophy/collaborative-production]].
 - How to show what comes up: [[philosophy/zoom-levels]], [[philosophy/context-economics]].
-- The breakdown that moves an actant from embedded to reflexive, the reframe the belt carries up: [[philosophy/embedded-reflexive]].
+- The two modes, embedded and reflexive, and the breakdown between them: [[philosophy/embedded-reflexive]].
