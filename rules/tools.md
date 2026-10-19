@@ -2,7 +2,7 @@
 
 ## `~/.claude/tools/replace-text`
 
-Edits text by exact match, in place of an inline Python script. Every old text must match exactly once; if any edit fails, no file is written.
+Edits text by exact match, in place of an inline Python script. A whole file is rewritten with the Write tool. Every old text must match exactly once; if any edit fails, no file is written.
 
 - One edit: `replace-text FILE 'old' 'new'`. `''` as new deletes.
 - Several edits, in one or more files: one call, pairs on stdin in a heredoc, so they land all together or not at all, with no shell quoting:
