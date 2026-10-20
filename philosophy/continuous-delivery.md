@@ -1,5 +1,5 @@
 ---
-tags: [continuous-delivery, small-batches]
+tags: [continuous-delivery, small-batches, feedback-loops, ddd]
 ---
 
 # Rationale: Continuous Delivery
@@ -16,24 +16,29 @@ Releasability is the pipeline's word for a stronger norm: at every intermediate 
 
 A step may add nothing visible (dark code, reshaping), but it may never subtract: no broken flow, no degraded behavior, no "temporary" deviation from the norm. Deviations don't stay temporary — they ship.
 
-## Working ≠ exposed
+## Domain first, exposed as feedback asks
 
-Releasable does not mean feature-complete. The unit of safety is the **live path**: code reachable from a production entry point (endpoint, scheduler, listener). Code that is not reachable cannot break anything — it is dark, deployed but dormant.
+Releasable does not mean feature-complete. The unit of safety is the **live path**: code reachable from a production entry point (endpoint, scheduler, listener). Code reachable from nowhere cannot break anything: it is dark, deployed but dormant.
 
-This yields the build order for new behavior: **domain first, expose last**.
+Dark is not idle. Driving from the domain (DDD), the first feedback an engineer gets is the domain expressed: whether the model holds with conceptual integrity or shows tensions ([[philosophy/model-phenomenology]]). The domain's first consumer is the engineer, at once. Its tests, written as the domain asks for them (TDD, Cooper's reading: at the use-case boundary), bring the fake driven adapters with them: domain and fakes grow entangled.
 
-1. Build the domain model, services, adapters — fully tested, entirely unreachable. Every commit releasable because nothing triggers the new code.
-2. The final commit wires the entry point — the **keystone** (Fowler's *Keystone Interface*): a small, trivial commit that turns dark code live.
+From there each step exposes the domain to the next consumer that can answer a question, and no further:
+
+```
+ domain + fakes ──▶ dark path ──▶ end-user consumable ──▶ the rest plugged
+ answers:   the model holds    runs where it lives    the behavior is right
+ consumer:  the engineer       us, chosen users       stakeholders, another team    everyone
+```
+
+A dark path: an undocumented endpoint, a path open to chosen users. End-user consumable when useful: a front for stakeholders, an API for another team to test their flow, a CLI. A whole project can run as a CLI with no database until its algorithms are validated. Hexagonal architecture, dependency inversion, is what makes each exposure a choice: the domain does not know which adapter drives it. The outer loops, from deployment to the domain: [[philosophy/feedback-loops]].
+
+The **keystone** (Fowler) is each of these steps: the thin commit that wires the domain to its next consumer. The hard work ships early, in small safe commits; going live to everyone is the thinnest change, easy to review and to revert.
 
 Exposure is broader than wiring an endpoint. A **published contract** — API documentation, a frontend contract, naming presented as public — is a promise others build against; publishing it makes the behavior "live" in the social sense even if no code path exists. Vaporware is the contract-level equivalent of a throw on a live path: consumers hit behavior that isn't there. So contracts obey the same keystone order — behavior effective, then verified, then advertised. The one legitimate inversion is deliberate contract-first design, where the contract explicitly carries no implementation claim.
 
-The keystone inverts where risk sits. All the hard work ships early, in small safe commits; the risky moment — going live — is reduced to the thinnest possible change, easy to review and to revert.
+## Existing behavior is changed in place
 
-## Dark is operationally free, not economically free
-
-Dark code cannot break production. It is still design-in-process inventory ([[philosophy/batch-size-economics]]): unvalidated, depreciating, and paying its integration risk in one lump at the keystone. The keystone order is therefore for **new** behavior with no existing live path, and even there the dark phase is kept as short as the thinnest keystone allows.
-
-Modifying an *existing* live path is a different regime. The code is already exposed, so the change is done **in place** — a chain of mechanical, behavior-preserving moves on the live path, each live as it lands ([[philosophy/change-in-place]], @rationale/mechanical-refactoring.md). Alternative flows (no-op adapters, safe defaults, flags, expand-contract — the safe-rollout strategies) cover only the smallest atom that cannot be transformed in place, and that atom is adopted in the same stage. Building a dark replacement of a live workflow and switching at the end is not the keystone pattern: it is the big batch, with the switch as its big-bang integration.
+Modifying an *existing* live path is a different regime. The code is already exposed, so the change is done **in place** — a chain of mechanical, behavior-preserving moves on the live path, each live as it lands ([[philosophy/change-in-place]], [[philosophy/mechanical-refactoring]]). Alternative flows (no-op adapters, safe defaults, flags, expand-contract — the safe-rollout strategies) cover only the smallest atom that cannot be transformed in place, and that atom is adopted in the same stage. Building a dark replacement of a live workflow and switching at the end is not the keystone pattern: it is the big batch, with the switch as its big-bang integration.
 
 Same invariant, two regimes: new behavior goes dark-then-keystone, existing behavior is transformed in place.
 
