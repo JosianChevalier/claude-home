@@ -8,9 +8,7 @@ tags: [collaboration, communication, cognitive-load, artifacts]
 
 **Failure mode.** Write, review, correct, review: code produced outside the loop, handed back as work never co-thought.
 
-The engineer and the agent form one coupled system: the agent extends the engineer's intention, like a mecha-suit, rather than acting as an autonomous robot.
-
-The mechanism behind the image: the agent is a **transmission** between the engineer's situated type and the concepts the code can hold — a belt, not a gear, because it must let load become perceptible instead of passing shock through silently ([[philosophy/model-phenomenology]], [[philosophy/transmission-belt]]). Everything below is that transmission seen from the workflow side.
+Within the socio-technical system ([[philosophy/harness]]), this file is the loop between engineer and agent.
 
 ```
 navigator intent ──▶ driver: one move ──▶ mic back ──▶ … ──▶ artifact (checkpoint)
@@ -25,7 +23,7 @@ In code, the image has an operational discipline behind it: **mob programming** 
 
 The driver is a smart input device: expert at the medium — editor, language, refactoring moves — and without authority over the concept. The navigators speak intent at the highest level of abstraction the driver can execute; the mob decides, out loud, and the driver never acts on an idea nobody said.
 
-This is the mecha-suit split stated as a practice, and it is why the frame is chosen over rules: mob vocabulary carries the whole discipline — one step then the mic goes back, stop and talk when unsure, no arbitration between navigators — where a prohibition carries only itself.
+The driver is where the three images of the agent meet: steered by the navigators, a harness; carrying their intention faster than their own hands, a mecha suit; turning their type into code and the friction back, a transmission belt. It also is why the frame is chosen over rules: mob vocabulary carries the whole discipline — one step then the mic goes back, stop and talk when unsure, no arbitration between navigators — where a prohibition carries only itself.
 
 **Autopilot** is the bounded exception: the navigators hand over a whole stage's intent, the driver runs it, and disengages at the first choice the plan does not settle. The pilots stay in their seats.
 
@@ -36,7 +34,7 @@ Plans, studies, documents, and code emerge from interaction with the user and th
 The loop has four faces, 4E cognition:
 
 - **Enacted.** A model is built by taking part, not by watching.
-- **Extended.** The agent and the notebook coupled to the act are part of the mind (Clark & Chalmers).
+- **Extended.** The agent and the notebook coupled to the act are part of the mind (Clark & Chalmers): the agent is a mecha suit, extending the engineer's intention rather than acting as an autonomous robot.
 - **Embedded.** Thinking is situated in its terrain: the engineer still goes down to the code ([[philosophy/conversation-as-interface]]).
 - **Embodied.** Thinking runs on the body's spatial machinery: the engineer moves through the code and feels where they are ([[philosophy/embodied-navigation]]).
 
@@ -50,7 +48,7 @@ A question whose answer requires opening the document forces a context switch an
 
 ## Cognitive load
 
-Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — anything that changes the model. The agent exists to remove the first and transmit the second intact: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows ([[philosophy/transmission-belt]]).
+Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — anything that changes the model. The agent exists to remove the first and transmit the second intact, as a transmission belt gives on the medium and carries the domain: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows ([[philosophy/transmission-belt]]).
 
 Two failures, one per load:
 
@@ -78,6 +76,8 @@ So does the opposite, and it is the worst case: **an autonomous run that ends in
 Waste is not the only measure: an artifact can be cheap and wrong. Reliability, and how the two feed each other: [[philosophy/compounding-decisions]].
 
 ## Making an artifact interactive
+
+An agent takes no commands, yet it can be harnessed: an artifact shapes its constraints so it tends toward the interaction.
 
 What works, in the order it is usually needed:
 
