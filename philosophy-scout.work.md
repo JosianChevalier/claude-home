@@ -34,3 +34,4 @@ Size is acceptable (Josian); a near passage riding along is the defect.
 
 - [ ] Decide what to do with the off-procedure moves (speculative reads, grep): forbid, or allow and write them in. **← current**
 - [ ] Write the doctrine and that decision in `agents/philosophy-scout.md`, rerun the gitflow question, compare with the baseline.
+- Parked: `harness-design` is 21 files, 13k words, never a dump unit; a sub-tag cut only if a scout is seen dumping it whole.
