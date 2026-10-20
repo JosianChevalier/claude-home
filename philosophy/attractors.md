@@ -1,5 +1,5 @@
 ---
-tags: [harness-design, vocabulary]
+tags: [harness-design, vocabulary, kaizen]
 ---
 
 # Attractors

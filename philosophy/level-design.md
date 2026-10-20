@@ -1,5 +1,5 @@
 ---
-tags: [communication, cognitive-load, attractors, harness-design]
+tags: [communication, cognitive-load, attractors, harness-design, kaizen]
 ---
 
 # Level design
