@@ -6,7 +6,7 @@ tags: [collaboration, harness-design, cognitive-load, conceptual-integrity]
 
 **Thesis.** Remove the medium's load, transmit the domain's, friction included.
 
-The agent is a transmission between the engineer's type and the code's concept ([[philosophy/model-phenomenology]]). This document says what kind of transmission, and what the lower layers aim for.
+Seen as a transmission, the harness carries the engineer's type into the code's concept ([[philosophy/model-phenomenology]]). This document says what kind of transmission, and what the lower layers aim for.
 
 ```
 type ─── intention ───▶ belt ───▶ concept in the code
@@ -65,7 +65,6 @@ The harness is not the agent's intelligence. It is the entire development proces
 - **Base layer: transparency, for the unknown unknowns.** That tensions will arise is known; their kind, their place, their source are not. The work stays observable to the engineer through feedback on every change, so the unexpected shows and the tension is felt: the channel through which metis perceives. Remove the showing and you have the recruit's condition at the speed of an agent. The form of the feedback changes with the medium; the need does not. How to show: [[philosophy/zoom-levels]]; going to see: [[philosophy/conversation-as-interface]].
 
   For now, the feedback is built around the code: highlighted diffs, the implications of a change shown as it is made. The engineer moves in abstraction, never out of the code: code written well, at the right levels of abstraction, is the best representation of behavior. A schema carries structure and makes behavior harder to read, so it supplements the code and never replaces it.
-- **Second axis: kairos gates.** For the known unknowns, the moment known to recur. Steps built into the loop where expertise, a reminder, or a chore is injected so the moment is seized before the belt moves again ([[philosophy/kairos-gates]]).
 
 ## What the lower layers aim for
 
