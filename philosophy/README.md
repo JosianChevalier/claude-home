@@ -104,4 +104,23 @@ Forks: at 5, [zoom-levels](zoom-levels.md); at 8, [mechanical-refactoring](mecha
 
 Held at the end: one extended mind, type in the engineer, concept in the code, transmission in the agent; one rule and one shape run across all; the system learns as one.
 
-Crossroads: collaborative-production is on all four paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
+## The harness design
+
+*How is the harness itself layered, written and improved, and where does a failed run change it?*
+
+1. [harness-elements](harness-elements.md): a few kinds of element, each with one job: what it holds, when it loads, the test it is in the right place.
+2. [process-units](process-units.md): process is a containment tree; an element materializes a unit, and the call tells which.
+3. [abstraction-ladder](abstraction-ladder.md): the process tree and the three layers are two sightings of one pattern: absorb low, escalate one rung, trickle down.
+4. [three-layer-harness](three-layer-harness.md): know-how, doctrine, philosophy, cut by lifecycle; the doctrine is the test for leaving the know-how.
+5. [harness-shape](harness-shape.md): a rule or skill is a doctrine, a know-how, a pointer; the know-how covers the head, the doctrine the fat tail.
+6. [attractors](attractors.md): what is in context pulls what comes next; a precise term carves the valley, a negation keeps the basin alive.
+7. [field-terms](field-terms.md): a doctrine line is looked for before it is written: the rationale's own terms, then a saying, then coined.
+8. [level-design](level-design.md): an element is a landscape designed from where the reader stands; a section in doubt is probed on a fresh sub-agent.
+9. [kaizen](kaizen.md): feedback from runs becomes changes at the lowest layer that can absorb the failure; most failures are compliance.
+10. [harness-direction](harness-direction.md): a brick made reliable becomes composable and moves down one rung, toward script and headless.
+
+Forks: at 4, [change-inertia](change-inertia.md), where the rungs are cut, the doctrine and the rationale pointer as the seam; at 8, [embedded-reflexive](embedded-reflexive.md), the writer reflexive, the reader embedded; at 9, [metis-kairos](metis-kairos.md), what no level holds reaches the engineer; at 10, [model-tiers](model-tiers.md), a node that reaches commodity drops a tier.
+
+Held at the end: the harness is a few elements, each materializing a unit of one process tree; elements and knowledge are both ladders, cut where the lifecycle changes; a file is a doctrine that holds everywhere, a know-how for the usual case and a pointer to its reasons, written as the reader's landscape; a failed run lands at the lowest layer that absorbs it, and a brick made reliable steps down toward the script.
+
+Crossroads: collaborative-production is on four of the five paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
