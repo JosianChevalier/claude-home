@@ -24,4 +24,15 @@ Known starting points, from a blind review:
   - [ ] "The harness, not the agent" leaves for a better home: its two axes are already in `kairos-gates`, "Gates and transparency"; its Juarrero claim (the belt is the whole process) contradicts the opening (the belt is the agent).
   - [ ] The destruction section moves to `model-phenomenology`, which holds Prägnanz, model tension and maximal grip ("felt before it is thought" is in both). Boyd's grounding "Gödel, Heisenberg, the second law" is copied without question; the figure and glossary stack Gestalt, Husserl and Boyd to say little.
   - [ ] Sweller table: `collaborative-production`, "Cognitive load", holds the same split; a pointer instead?
+  - [ ] The Juarrero paragraph ("The harness, not the agent") moves to the central file on one socio-technical system once it lands, leaving a pointer; its "Two axes of design follow:" and the bullet's "Base layer:" are stale since the gates bullet left. Prototype of the central section, open: power steering as its own bullet or the mecha suit's image; the mob's strong-style driver as a fourth metaphor.
+
+    > ## One socio-technical system
+    >
+    > The engineer and the harness are one system. Friction-feel, the engineer's sense of where the model resists, is a property of that system: an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. No part is made responsible for the signal; the whole is designed so that it arrives.
+    >
+    > Each metaphor shows one aspect of that system:
+    >
+    > - **The harness**, as on a horse (Axelrod and Cohen, *Harnessing Complexity*): where the engineer embeds with the agent. A complex system takes no commands, yet it can be harnessed: its constraints are shaped so it tends toward the purpose.
+    > - **The mecha suit**, power steering as its image: it obeys the intention and amplifies it, and the road stays felt in the hands.
+    > - **The transmission belt**: what passes and what is given on. The medium's load is absorbed, the domain's is transmitted, friction included ([[philosophy/transmission-belt]]).
 - [ ] `model-phenomenology`: full pass with the user.
