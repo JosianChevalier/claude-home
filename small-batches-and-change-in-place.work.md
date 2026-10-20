@@ -39,5 +39,5 @@ Split out of `sync-repo.work.md`, step 3.2; its migration flow (MO) applies. Old
 
 ## Next
 
-1. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 (deployed, behind a flag) open: whether it earns a loop of its own.
+1. `feedback-loops` drafted from the user's seven loops, XP's redrawn; to validate with the user. Loop 3 settled 2026-10-20: a loop of its own, deployed on no active path.
 2. On the user's go only: delete the old notes and this file, and tick the `small-batches` and `change-in-place` backlog line in `sync-repo.work.md`; the mapping rows are written. The skills `write-plan`, `refactoring-moves`, `mob-from-plan` re-point at 3.4.

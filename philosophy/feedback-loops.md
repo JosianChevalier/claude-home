@@ -12,7 +12,7 @@ Several of XP's loops no longer hold for us. Pair programming and the stand-up g
 
 1. **Domain.** The change holds in the domain we are embedded in. Feedback comes mostly from functional increments confronted with the domain: delivered to the humans who work with them, or to anything else that answers. Observability gives it, because we are not always sure what we are looking for: we are in the complex (Cynefin, Snowden), and all we know is that there will be unexpected side effects. Unknown unknowns.
 2. **Activation in production.** New code, a new technical aspect, live in production. It may not change how the software behaves for its users, but it already answers on performance, problems, bugs. Technical monitoring gives it. Known unknowns.
-3. **Deployed in production**, possibly behind a feature flag. The same, a little shorter. Whether it earns a loop of its own is open.
+3. **Deployed in production**, on no active path: a dark launch, a partially done feature, a flag still off. It answers whether the thing ships and runs where it will live, before anyone reaches it.
 4. **Release.** Not every release is deployed. It answers whether we can package something that should work.
 5. **Change on main**, a pull request merged: a hypothesis of integration.
 6. **Commit**, one that should work. It answers whether we can cut slices of the product that should work: the release, at the level of a programmer instead of a team.
