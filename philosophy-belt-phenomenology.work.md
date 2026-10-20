@@ -27,7 +27,7 @@ Known starting points, from a blind review:
 
     > ## One socio-technical system
     >
-    > The model we build the harness for. A socio-technical system with the human at the centre, augmented by agents. Two pillars, each optimized on its own: human cognition (4E: embodied, embedded, enacted, extended; the human's work made most effective) and context engineering (the agent's context as the scarce resource). Their interaction is optimized jointly: collaborative production, the transmission belt. The system is addressed holistically, one system taken in integrity, never as three separate aspects.
+    > The harness serves one socio-technical system: the human at the centre, augmented by agents. Two pillars are optimized each on its own terms: human cognition, read as 4E (embodied, embedded, enacted, extended), and context engineering, the agent's context as the scarce resource. Their interaction is optimized jointly: collaborative production, the transmission belt. The three are never designed apart.
     >
     > ```
     >                  THE SOCIO-TECHNICAL SYSTEM, taken whole
@@ -51,9 +51,9 @@ Known starting points, from a blind review:
     >                                                       holds                  whom
     > ```
     >
-    > How the corpus reads through it. The three are lenses felt in every file, never bins: a general practice (small batches, trunk-based development, DDD, zoom levels) is applied to both sides, and each file says what worked for the human and what works for the context. Most of the software-development philosophy is about human cognition; that is the entire point, and it sits at the periphery of the system, not outside it. Sorting the files into the three fails by design; every file is one practice, three readings, one system.
+    > The three are lenses, not bins. A general practice, small batches, trunk-based development, DDD, zoom levels, applies to both sides, and a file reads it through all three. Most of the software-development philosophy concerns human cognition: it sits at the periphery of the system, not outside it. A file sorted into one lens loses the other two readings.
     >
-    > The engineer and the harness are one system. Friction-feel, the engineer's sense of where the model resists, is a property of that system: an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. No part is made responsible for the signal; the whole is designed so that it arrives.
+    > Friction-feel, the engineer's sense of where the model resists, is a property of the whole system: an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. No part is made responsible for the signal; the whole is designed so that it arrives.
     >
     > Each metaphor shows one aspect of that system:
     >
