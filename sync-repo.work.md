@@ -102,7 +102,7 @@ The same core must serve both Claude Code and OpenCode.
 
 The reader came from `/clear` and has opened nothing. A message is written from what they hold: this conversation, and nothing read through a tool. A word met in a file this session does not go into a message unless the message quotes it or gives its meaning in the same sentence. Fifteen sessions failed on this point alone; the rest of the flow below exists to make it hold.
 
-Before the first message, silent: read in full `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`; then the old file and every file pointing at it. The file must hold what the files pointing at it say it holds; a gap there is an issue like any other.
+Before the first message, silent: load the `writing-philosophy` skill, which holds how a philosophy file is written and validated; then read in full `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`; then the old file and every file pointing at it. The file must hold what the files pointing at it say it holds; a gap there is an issue like any other.
 
 The opening turn, in this order and nothing else:
 
