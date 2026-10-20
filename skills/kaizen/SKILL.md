@@ -15,6 +15,7 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 ## The session
 
 ```
+ load      silent: the core, `philosophy/navigation/navigation.sh tag kaizen`
  opening   what went wrong, grouped by shared pull ──▶ the user picks the groups
  round     one group: what happened ──▶ attractors and their pull ──▶ verdict ──▶ the user decides ──▶ edit, commit
 ```
@@ -40,7 +41,7 @@ Everything noted during the session goes on the table, even minor, grouped by th
 
 ## Round
 
-One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, needs no scout. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next group. The rationales of the touched files are read before the edit and are at most a footer. Beside this file, the know-how of one element, read before its lines change: `rules.md`, `skills.md`, `descriptions.md` for a skill's or an agent's description.
+One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, has no moment to read. `philosophy-scout` brings the passages that bear on the group, beyond the core loaded at the start. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next group. The rationales of the touched files are read before the edit and are at most a footer. Beside this file, the know-how of one element, read before its lines change: `rules.md`, `skills.md`.
 
 ```
  know-how followed, went wrong      ──▶ rewrite the know-how
