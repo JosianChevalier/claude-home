@@ -23,7 +23,7 @@ Known starting points, from a blind review:
   - [ ] `collaborative-production` line 13 still reads slip as the signal ("let load become perceptible instead of passing shock through silently").
   - [ ] The destruction section moves to `model-phenomenology`, which holds Prägnanz, model tension and maximal grip ("felt before it is thought" is in both). Boyd's grounding "Gödel, Heisenberg, the second law" is copied without question; the figure and glossary stack Gestalt, Husserl and Boyd to say little.
   - [ ] Sweller table: `collaborative-production`, "Cognitive load", holds the same split; a pointer instead?
-  - [ ] The Juarrero paragraph ("The harness, not the agent") moves to the central file on one socio-technical system once it lands, leaving a pointer; its "Two axes of design follow:" and the bullet's "Base layer:" are stale since the gates bullet left. Prototype of the central section, open: power steering as its own bullet or the mecha suit's image; the mob's strong-style driver as a fourth metaphor.
+  - [ ] The Juarrero paragraph ("The harness, not the agent") moves to the central file on one socio-technical system once it lands, leaving a pointer; its "Two axes of design follow:" and the bullet's "Base layer:" are stale since the gates bullet left. Prototype of the central section below. Decided: the strong-style driver is not a fourth metaphor but the practice where the three meet (steered: harness; carries the intention faster: mecha suit; turns type into concept with feedback: belt); `collaborative-production` l.28 ("the mecha-suit split stated as a practice") is too narrow. Open: power steering as its own bullet or the mecha suit's image.
 
     > ## One socio-technical system
     >
