@@ -25,12 +25,9 @@
 
 # Cloud sessions clone this repo as a project, not as ~/.claude: Claude Code then
 # only discovers config under .claude/. Symlinks point it back at the real folders.
+# A folder meant to be edited is whitelisted whole, never file by file.
 !/.claude/
-!/.claude/skills
-!/.claude/agents
-!/.claude/commands
-!/.claude/rules
-!/.claude/README.md
+!/.claude/**
 !/.claude/CLAUDE.md
 
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
