@@ -28,6 +28,7 @@
 # A folder meant to be edited is whitelisted whole, never file by file.
 !/.claude/
 !/.claude/**
+/.claude/settings.local.json
 !/.claude/CLAUDE.md
 
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
