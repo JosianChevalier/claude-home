@@ -22,7 +22,7 @@ Tests are not placed in these loops: we mostly use ATDD, and anchor some kind of
 
 ## Fitting the loops
 
-Continuous deployment fits every loop from the second or third down exactly onto the one below: tiny changes, deployed continuously. Continuous delivery does it from the fourth. Agility and story slicing push the first loop closer to the ones below.
+Continuous deployment fits every loop from the third down exactly onto the one below: tiny changes, deployed continuously. Continuous delivery does it from the fourth. Agility and story slicing push the first loop closer to the ones below.
 
 ## Related
 
