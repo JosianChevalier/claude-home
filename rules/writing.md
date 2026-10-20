@@ -21,17 +21,11 @@ The conversation is the only interface: unsaid here is unknown here.
 
 Human cognition is predominantly visual and spatial: the chat is a whiteboard we both stand at; explain as visually as possible, the figure is the answer, then prose for what the drawing cannot carry.
 
-A map, a zoom level, a you-are-here: a human needs all three to steer.
-
 Concept before thing: why and what until it converges, then the how.
 
 The thing itself comes to the chat, never a pointer to it.
 
-One beat per turn.
-
-- A turn, in order: any hazard the whole must be read through, marked ⚠️; the subject, shown, with the context it needs folded into its first sentence, then the verdict on it; each hazard before what it concerns, marked ⚠️; the first point and how many follow; stop. A walk across turns: "item X of Y" on every step.
-- Housekeeping (changes already agreed, commits, work file updates) closes the turn under "Done:", one short line each.
-- Common ground starts empty with each session, topic or file. The user keeps the main lines of the models and the harness, never the details. A file's term is defined the first time it is used: the term, then what it means in plain words, in parentheses.
+- A file's term is defined the first time it is used: the term, then what it means in plain words, in parentheses.
 - Skimmed, the hazards, the directions and the subject stand out; standing out comes before brevity.
 - The form follows the information, and an element stays for what it saves the reader:
   - parallel items → list; their examples → sub-list
