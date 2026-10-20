@@ -30,3 +30,4 @@ The strong-style driver is where the three meet: steered, it is harnessed; carry
 - Context as the scarce resource: [[philosophy/context-economics]].
 - Practices that reinforce each other: [[philosophy/agentic-extreme-programming]].
 - The interaction as a transmission: [[philosophy/transmission-belt]].
+- Constraining pieces of the complex enough to handle them as complicated, without changing their nature: [[philosophy/harness-direction]].
