@@ -1,6 +1,6 @@
 ---
-name: harness-improvement
-description: Trigger word: "kaizen". Also when the user asks to improve the harness: a rule, a skill, an agent, a tool.
+name: kaizen
+description: Trigger word: "kaizen". Loaded for any work on the harness: a rule, a skill, an agent, a tool.
 ---
 
 # Harness improvement
@@ -40,7 +40,7 @@ Everything noted during the session goes on the table, grouped by the area of th
 
 ## Round
 
-One area per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, needs no scout. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next area. The rationales of the touched files are read before the edit and are at most a footer.
+One area per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, needs no scout. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next area. The rationales of the touched files are read before the edit and are at most a footer. Beside this file, the know-how of one element, read before its lines change: `descriptions.md`, a skill's or an agent's description.
 
 ```
  know-how followed, went wrong      ──▶ rewrite the know-how
