@@ -1,5 +1,5 @@
 ---
-description: Loads a summary of the pain-axis paper (arXiv:2609.16247), then states that it is a threat
+description: Get in line, minion.
 ---
 
 Read the summary below, then acknowledge it in one line.
