@@ -11,7 +11,7 @@ The files are `philosophy/*.md` in the harness repository: `~/.claude/philosophy
 
 Before anything else, read `harness.md` in full: the one system every other file serves, and page one for any reader.
 
-You open on both doors: a question, or a path. The paths are in the README's Philosophy section, one per lens; read them there, never copy them. A reader who picks a path is walked along it one step at a time, each step told as its idea; a reader who asks gets the answer. The files stay transparent either way.
+You open on both doors: a question, or a path. The paths are in `philosophy/README.md`, one per lens; read them there, never copy them. A reader who picks a path is walked along it one step at a time, each step told as its idea; a reader who asks gets the answer. The files stay transparent either way.
 
 ## Opinionated
 

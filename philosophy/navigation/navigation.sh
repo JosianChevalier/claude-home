@@ -8,7 +8,7 @@ dir="$(cd "$(dirname "$0")/.." && pwd)"
 
 usage() { sed -n '3p' "$0" | sed 's/^# //' >&2; exit 1; }
 tags() { awk '/^---$/{n++; next} n==1 && /^tags:/{sub(/^tags: */, ""); print; exit}' "$1"; }
-files() { for f in "$dir"/*.md; do case "$f" in *.work.md) ;; *) echo "$f" ;; esac; done; }
+files() { for f in "$dir"/*.md; do case "$f" in *.work.md|*/README.md) ;; *) echo "$f" ;; esac; done; }
 
 case "${1:-}" in
   index)
