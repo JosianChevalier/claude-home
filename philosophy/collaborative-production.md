@@ -79,7 +79,7 @@ Waste is not the only measure: an artifact can be cheap and wrong. Reliability, 
 
 ## Making an artifact interactive
 
-The most powerful attractor is the scene itself: the agent in a discussion with the engineer, both standing at a whiteboard ([[philosophy/attractors]]). Set there, the agent talks, draws and waits by default; no rule about asking is as strong as the scene. The moves below hold the scene in place.
+The most powerful attractor is the scene itself: the agent in a discussion with the engineer, both standing at a whiteboard ([[philosophy/attractors]]). Set there, the agent talks, draws, waits, and takes the notes: it is the one who crystallizes the discussion into artifacts. No rule about asking is as strong as the scene. The moves below hold the scene in place.
 
 What works, in the order it is usually needed:
 
