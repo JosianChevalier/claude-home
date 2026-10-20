@@ -58,13 +58,13 @@ The full dynamic, the return path of the figure above:
 
 The friction coming up the belt is the Observe step. Orient cannot happen without it: what comes back up is what the engineer destroys and refounds with. An agent that absorbs the disappointment removes the observation, and with it the engineer's Orient.
 
-## The harness, not the agent
+## Transparency
 
-The harness is not the agent's intelligence. It is the entire development process, and friction-feel is a property of that process: an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. Two axes of design follow:
+Friction-feel is a property of the whole system, carried by no single part ([[philosophy/harness]]).
 
-- **Base layer: transparency, for the unknown unknowns.** That tensions will arise is known; their kind, their place, their source are not. The work stays observable to the engineer through feedback on every change, so the unexpected shows and the tension is felt: the channel through which metis perceives. Remove the showing and you have the recruit's condition at the speed of an agent. The form of the feedback changes with the medium; the need does not. How to show: [[philosophy/zoom-levels]]; going to see: [[philosophy/conversation-as-interface]].
+For the unknown unknowns: that tensions will arise is known; their kind, their place, their source are not. The work stays observable to the engineer through feedback on every change, so the unexpected shows and the tension is felt: the channel through which metis perceives. Remove the showing and you have the recruit's condition at the speed of an agent. The form of the feedback changes with the medium; the need does not. How to show: [[philosophy/zoom-levels]]; going to see: [[philosophy/conversation-as-interface]].
 
-  For now, the feedback is built around the code: highlighted diffs, the implications of a change shown as it is made. The engineer moves in abstraction, never out of the code: code written well, at the right levels of abstraction, is the best representation of behavior. A schema carries structure and makes behavior harder to read, so it supplements the code and never replaces it.
+For now, the feedback is built around the code: highlighted diffs, the implications of a change shown as it is made. The engineer moves in abstraction, never out of the code: code written well, at the right levels of abstraction, is the best representation of behavior. A schema carries structure and makes behavior harder to read, so it supplements the code and never replaces it.
 
 ## What the lower layers aim for
 
@@ -78,6 +78,7 @@ The properties the lower layers of the harness, rules and skills, should aim for
 
 ## Related
 
+- The system the belt is one image of: [[philosophy/harness]].
 - What the belt transmits between: [[philosophy/model-phenomenology]].
 - What escalates, and the moment it arrives: [[philosophy/metis-kairos]].
 - Steps built on the loop to seize the moment by design: [[philosophy/kairos-gates]].
