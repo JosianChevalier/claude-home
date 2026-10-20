@@ -14,6 +14,7 @@ The claim comes before its argument.
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
 - One idea per paragraph, and paragraphs short; a line break marks a new idea.
 - Code goes in a code block, a quote in `>`.
+- Agents patchwrite (Howard): the output mirrors the structure of its input. Rewriting more than a paragraph from a pasted text, a file or the user's words, every idea goes to the notebook first, tagged by where it goes, reorganized; the text is written from the notebook.
 
 ## Human (the chat)
 
@@ -68,4 +69,4 @@ The human navigates and validates from the structure, diving into the detail onl
 - The forms of Human hold here: lists, tables, figures, marks; a heading only where a reader would jump to it.
 - The detail under them is for the agent: prose built on precise terms, as in Agent.
 
-Rationale: [[philosophy/level-design]], [[philosophy/zoom-levels]], [[philosophy/conversation-as-interface]], [[philosophy/attractors]]
+Rationale: [[philosophy/writing]], [[philosophy/level-design]], [[philosophy/zoom-levels]], [[philosophy/conversation-as-interface]], [[philosophy/attractors]]

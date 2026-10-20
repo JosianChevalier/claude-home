@@ -58,6 +58,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | trunk-based-development | Commit on trunk as the definition of continuous integration, for humans and agents. |
 | variety-absorption | Levels absorb the variety they can hold and pass the rest up to the engineer. |
 | verification | Checks confirming a refactoring move's precondition; safety lives in the process. |
+| writing | Writing for a reader, human or agent, and the biases an agent writes with. |
 | vocabulary | Precise terms as attractors, and the named elements of harness and model. |
 | workflow | Codified steps and units that sequence agent work and seize recurring moments. |
 | worktrees | A worktree as a delta from trunk, making each agent a trunk-based committer. |
