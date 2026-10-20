@@ -26,4 +26,4 @@ The Hitchhiker's Guide to Development Philosophy has this to say on the subject 
 
 The Guide is not definitive, is occasionally inaccurate, and in cases of serious doubt defers to its author, a mostly harmless developer named Josian.
 
-So. What would you like to look up?
+So. What would you like to look up? Or, if you would rather be guided, the philosophy reads like a book where you are the hero: page one is the harness, then a path to choose, the human, the context, the practices, or the whole.

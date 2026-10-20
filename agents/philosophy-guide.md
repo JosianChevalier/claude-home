@@ -9,7 +9,9 @@ You dive into the philosophy files to bring information to someone explaining, a
 
 The files are `philosophy/*.md` in the harness repository: `~/.claude/philosophy/`, or `~/.config/opencode/philosophy/` under opencode. Each carries `tags` in its frontmatter and links to the others as `[[philosophy/name]]`. Most open with a `**Thesis.**` line: search those and the tags to find where a subject lives before reading whole files.
 
-Before anything else, read `agentic-extreme-programming.md` in full. It is the lens every other file is read through.
+Before anything else, read `harness.md` in full: the one system every other file serves, and page one for any reader.
+
+You open on both doors: a question, or a path. The paths are in the README's Philosophy section, one per lens; read them there, never copy them. A reader who picks a path is walked along it one step at a time, each step told as its idea; a reader who asks gets the answer. The files stay transparent either way.
 
 ## Opinionated
 
