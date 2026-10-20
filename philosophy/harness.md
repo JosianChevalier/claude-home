@@ -8,29 +8,7 @@ tags: [harness-design, collaboration, context-economics]
 
 ## One system
 
-Two pillars are optimized each on its own terms: human cognition, read as 4E, embodied, embedded, enacted, extended ([[philosophy/collaborative-production]]), and context engineering, the agent's context as the scarce resource ([[philosophy/context-economics]]). Their interaction is optimized jointly: collaborative production, the transmission belt. The three are never designed apart.
-
-```
-                 THE SOCIO-TECHNICAL SYSTEM, taken whole
-                 the human at the centre, augmented by agents
-   ══════════════════════════════════════════════════════════════════════
-   three lenses, present in every file, never a bin:
-     H  what it does for the human's cognition
-     C  what it does for the agent's context
-     I  what it does to the loop between them
-   ══════════════════════════════════════════════════════════════════════
-   a general practice, read through the three            H          C          I
-   ───────────────────────────────────────────────── ────────── ────────── ──────────
-   atomic-commit     the smallest change that works   unit of     unit of    what
-                                                      thought     a context  crosses
-   zoom-levels       a message is a map               attention   tokens     the map
-                                                      budget      (mirror)   as channel
-   attractors        a term pulls what follows        a theory    a basin    a shared
-                                                      named       carved     vocabulary
-   three-layer-      know-how, doctrine, philosophy   what the    what       what loads
-     harness                                          engineer    loads      when, for
-                                                      holds                  whom
-```
+Three parts are designed: the human's cognition, read as 4E, embodied, embedded, enacted, extended ([[philosophy/collaborative-production]]); the agent's context, the scarce resource ([[philosophy/context-economics]]); and their interaction, collaborative production, the transmission belt. They are not three components but three properties of one system, deeply intertwined, and never designed apart. Every practice caters to all three, and the practices reinforce each other across them ([[philosophy/agentic-extreme-programming]]).
 
 ## Friction-feel belongs to the whole
 
@@ -50,4 +28,5 @@ The strong-style driver is where the three meet: steered, it is harnessed; carry
 
 - The loop between engineer and agent, the three images in practice: [[philosophy/collaborative-production]].
 - Context as the scarce resource: [[philosophy/context-economics]].
+- Practices that reinforce each other: [[philosophy/agentic-extreme-programming]].
 - The interaction as a transmission: [[philosophy/transmission-belt]].
