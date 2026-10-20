@@ -21,7 +21,6 @@ Known starting points, from a blind review:
 
   - [ ] `metis-kairos`, "Designing for uncertainty": power steering becomes the image of the mecha suit (home: the opening of `collaborative-production`), not of the belt; its two failure bullets become a pointer to the belt's.
   - [ ] `collaborative-production` line 13 still reads slip as the signal ("let load become perceptible instead of passing shock through silently").
-  - [ ] "The harness, not the agent" leaves for a better home: its two axes are already in `kairos-gates`, "Gates and transparency"; its Juarrero claim (the belt is the whole process) contradicts the opening (the belt is the agent).
   - [ ] The destruction section moves to `model-phenomenology`, which holds Prägnanz, model tension and maximal grip ("felt before it is thought" is in both). Boyd's grounding "Gödel, Heisenberg, the second law" is copied without question; the figure and glossary stack Gestalt, Husserl and Boyd to say little.
   - [ ] Sweller table: `collaborative-production`, "Cognitive load", holds the same split; a pointer instead?
   - [ ] The Juarrero paragraph ("The harness, not the agent") moves to the central file on one socio-technical system once it lands, leaving a pointer; its "Two axes of design follow:" and the bullet's "Base layer:" are stale since the gates bullet left. Prototype of the central section, open: power steering as its own bullet or the mecha suit's image; the mob's strong-style driver as a fourth metaphor.
