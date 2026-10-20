@@ -27,6 +27,32 @@ Known starting points, from a blind review:
 
     > ## One socio-technical system
     >
+    > The model we build the harness for. A socio-technical system with the human at the centre, augmented by agents. Two pillars, each optimized on its own: human cognition (4E: embodied, embedded, enacted, extended; the human's work made most effective) and context engineering (the agent's context as the scarce resource). Their interaction is optimized jointly: collaborative production, the transmission belt. The system is addressed holistically, one system taken in integrity, never as three separate aspects.
+    >
+    > ```
+    >                  THE SOCIO-TECHNICAL SYSTEM, taken whole
+    >                  the human at the centre, augmented by agents
+    >    ══════════════════════════════════════════════════════════════════════
+    >    three lenses, present in every file, never a bin:
+    >      H  what it does for the human's cognition
+    >      C  what it does for the agent's context
+    >      I  what it does to the loop between them
+    >    ══════════════════════════════════════════════════════════════════════
+    >    a general practice, read through the three            H          C          I
+    >    ───────────────────────────────────────────────── ────────── ────────── ──────────
+    >    atomic-commit     the smallest change that works   unit of     unit of    what
+    >                                                       thought     a context  crosses
+    >    zoom-levels       a message is a map               attention   tokens     the map
+    >                                                       budget      (mirror)   as channel
+    >    attractors        a term pulls what follows        a theory    a basin    a shared
+    >                                                       named       carved     vocabulary
+    >    three-layer-      know-how, doctrine, philosophy   what the    what       what loads
+    >      harness                                          engineer    loads      when, for
+    >                                                       holds                  whom
+    > ```
+    >
+    > How the corpus reads through it. The three are lenses felt in every file, never bins: a general practice (small batches, trunk-based development, DDD, zoom levels) is applied to both sides, and each file says what worked for the human and what works for the context. Most of the software-development philosophy is about human cognition; that is the entire point, and it sits at the periphery of the system, not outside it. Sorting the files into the three fails by design; every file is one practice, three readings, one system.
+    >
     > The engineer and the harness are one system. Friction-feel, the engineer's sense of where the model resists, is a property of that system: an emergent constraint in Juarrero's sense, set by the mesh, carried by no single part. No part is made responsible for the signal; the whole is designed so that it arrives.
     >
     > Each metaphor shows one aspect of that system:
