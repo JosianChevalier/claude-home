@@ -24,5 +24,4 @@ Known starting points, from a blind review:
   - [ ] "The harness, not the agent" leaves for a better home: its two axes are already in `kairos-gates`, "Gates and transparency"; its Juarrero claim (the belt is the whole process) contradicts the opening (the belt is the agent).
   - [ ] The destruction section moves to `model-phenomenology`, which holds Prägnanz, model tension and maximal grip ("felt before it is thought" is in both). Boyd's grounding "Gödel, Heisenberg, the second law" is copied without question; the figure and glossary stack Gestalt, Husserl and Boyd to say little.
   - [ ] Sweller table: `collaborative-production`, "Cognitive load", holds the same split; a pointer instead?
-  - [ ] Transparency bullet: the code-vs-schema claim may be off target.
 - [ ] `model-phenomenology`: full pass with the user.
