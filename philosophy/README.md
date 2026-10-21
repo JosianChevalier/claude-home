@@ -30,6 +30,24 @@ The three are lenses, felt in every file, never bins. A practice that existed be
 
 Read it like a book where you are the hero. Page one is [harness](harness.md). Then choose a path. Each carries one question into every file it visits, forks where another file answers it better, and says what you hold at the end.
 
+## The whole
+
+*How do the human, the context and the loop hold together as one system?*
+
+1. [collaborative-production](collaborative-production.md): the loop is the boundary of one extended mind.
+2. [model-phenomenology](model-phenomenology.md): the engineer holds the type, the code the concept, the agent neither, and transmits; no part stands in for another.
+3. [transmission-belt](transmission-belt.md): one rule, remove the medium's load and transmit the domain's; friction-feel is carried by no single part.
+4. [abstraction-ladder](abstraction-ladder.md): one shape; every ladder in the corpus is a sighting.
+5. [context-economics](context-economics.md): every token loaded is budget spent and precision lost; the human side of the same economy is the fork.
+6. [agentic-extreme-programming](agentic-extreme-programming.md): a coherent set asks for no trade-off; feeling pulled between two sides is the test the set is not coherent.
+7. [compounding-decisions](compounding-decisions.md): waste, what an element costs when it works, and reliability, the chance it does what was meant, are tied.
+8. [parse-dont-validate](parse-dont-validate.md): one practice, three faces in the code itself: less to read, nothing to hold, no decision to take.
+9. [embedded-reflexive](embedded-reflexive.md): embedded acts within its conditions, reflexive designs them; a breakdown is taken as deep as it goes, at the deepest into the engineer's own perception.
+
+Forks: at 5, [zoom-levels](zoom-levels.md); at 8, [mechanical-refactoring](mechanical-refactoring.md) or [agentic-trunk-based-development](agentic-trunk-based-development.md).
+
+Held at the end: one extended mind, type in the engineer, concept in the code, transmission in the agent; one rule and one shape run across all; the engineer does the reflexive work, as deep as the breakdown goes.
+
 ## The human
 
 *What does this do for my cognition, and why does it make my work with agents effective?*
@@ -67,43 +85,6 @@ Forks: at 2, [three-layer-harness](three-layer-harness.md), the layers by what e
 
 Held at the end: context is scarce and degrades, so the harness is shaped by what loads and when; the work is cut in space and time; between steps a file crosses, between sub-agents a conclusion returns, never the conversation; the whole moves together.
 
-## The practices
-
-*Which practice is this, what did it do for a team, what does it become applied to both sides?*
-
-1. [agentic-extreme-programming](agentic-extreme-programming.md): practices are complements; tokens, context, cognitive load, feedback move together.
-2. [batch-size-economics](batch-size-economics.md): holding cost includes cognitive load; transaction cost can fall to near zero, so the optimum falls to the floor.
-3. [atomic-commit](atomic-commit.md): the floor; validation, not generation, is the price.
-4. [mechanical-refactoring](mechanical-refactoring.md): the epistemic action moves to the agent; a cleaning pass is context hygiene.
-5. [trunk-based-development](trunk-based-development.md): commit = integrate = publish, the human-team form in full.
-6. [agentic-trunk-based-development](agentic-trunk-based-development.md): the same bound, a worktree as a committer; nothing is added for agents.
-7. [collaborative-production](collaborative-production.md): mob programming and strong-style driving; the agent is the driver.
-8. [context-splitting](context-splitting.md): Beck's two hats and map-reduce applied to the context.
-9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
-10. [harness-direction](harness-direction.md): a brick's path from steered in session to script, once reliable and reused.
-
-Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then [always-valid-domain](always-valid-domain.md) and [aggregates](aggregates.md), the DDD entry.
-
-Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment; a brick made reliable and reused travels down to a script.
-
-## The whole
-
-*How do the human, the context and the loop hold together as one system?*
-
-1. [collaborative-production](collaborative-production.md): the loop is the boundary of one extended mind.
-2. [model-phenomenology](model-phenomenology.md): the engineer holds the type, the code the concept, the agent neither, and transmits; no part stands in for another.
-3. [transmission-belt](transmission-belt.md): one rule, remove the medium's load and transmit the domain's; friction-feel is carried by no single part.
-4. [abstraction-ladder](abstraction-ladder.md): one shape; every ladder in the corpus is a sighting.
-5. [context-economics](context-economics.md): every token loaded is budget spent and precision lost; the human side of the same economy is the fork.
-6. [agentic-extreme-programming](agentic-extreme-programming.md): a coherent set asks for no trade-off; feeling pulled between two sides is the test the set is not coherent.
-7. [compounding-decisions](compounding-decisions.md): waste, what an element costs when it works, and reliability, the chance it does what was meant, are tied.
-8. [parse-dont-validate](parse-dont-validate.md): one practice, three faces in the code itself: less to read, nothing to hold, no decision to take.
-9. [embedded-reflexive](embedded-reflexive.md): embedded acts within its conditions, reflexive designs them; a breakdown is taken as deep as it goes, at the deepest into the engineer's own perception.
-
-Forks: at 5, [zoom-levels](zoom-levels.md); at 8, [mechanical-refactoring](mechanical-refactoring.md) or [agentic-trunk-based-development](agentic-trunk-based-development.md).
-
-Held at the end: one extended mind, type in the engineer, concept in the code, transmission in the agent; one rule and one shape run across all; the engineer does the reflexive work, as deep as the breakdown goes.
-
 ## The harness design
 
 *How is the harness itself layered, written and improved, and where does a failed run change it?*
@@ -122,5 +103,24 @@ Held at the end: one extended mind, type in the engineer, concept in the code, t
 Forks: at 4, [change-inertia](change-inertia.md), cut where the inertia changes, the doctrine and the rationale pointer as the harness's seam; at 8, [embedded-reflexive](embedded-reflexive.md), the writer reflexive, the reader embedded; at 9, [metis-kairos](metis-kairos.md), what no level holds reaches the engineer; at 10, [model-tiers](model-tiers.md), a node that reaches commodity drops a tier.
 
 Held at the end: the harness is a few elements, the agents among them materializing units of one process tree; process and knowledge are both ladders; a rule or skill is a doctrine that holds everywhere, a know-how for the usual case and a pointer to its reasons, written as the reader's landscape; a failed run lands at the lowest layer that absorbs it, and a brick made reliable and reused steps down toward the script.
+
+## The practices
+
+*Which practice is this, what did it do for a team, what does it become applied to both sides?*
+
+1. [agentic-extreme-programming](agentic-extreme-programming.md): practices are complements; tokens, context, cognitive load, feedback move together.
+2. [batch-size-economics](batch-size-economics.md): holding cost includes cognitive load; transaction cost can fall to near zero, so the optimum falls to the floor.
+3. [atomic-commit](atomic-commit.md): the floor; validation, not generation, is the price.
+4. [mechanical-refactoring](mechanical-refactoring.md): the epistemic action moves to the agent; a cleaning pass is context hygiene.
+5. [trunk-based-development](trunk-based-development.md): commit = integrate = publish, the human-team form in full.
+6. [agentic-trunk-based-development](agentic-trunk-based-development.md): the same bound, a worktree as a committer; nothing is added for agents.
+7. [collaborative-production](collaborative-production.md): mob programming and strong-style driving; the agent is the driver.
+8. [context-splitting](context-splitting.md): Beck's two hats and map-reduce applied to the context.
+9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
+10. [harness-direction](harness-direction.md): a brick's path from steered in session to script, once reliable and reused.
+
+Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then [always-valid-domain](always-valid-domain.md) and [aggregates](aggregates.md), the DDD entry.
+
+Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment; a brick made reliable and reused travels down to a script.
 
 Crossroads: collaborative-production is on four of the five paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
