@@ -35,6 +35,7 @@ The agent goes on alone and stops only to raise:
 - a clarification needed
 - an adjacent field, concept, theory or attractor: what it says, what it would pull in
 - an incoherence or a contradiction
+- a cut: the input brings a concept the file reads without, or one another file would build on
 - a rule or skill this file underpins: a practice at odds with it, or one it should crystallize
 
 Nothing raised enters the file before the user takes it.

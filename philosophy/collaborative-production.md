@@ -79,6 +79,8 @@ Waste is not the only measure: an artifact can be cheap and wrong. Reliability, 
 
 An agent takes no commands, yet it can be harnessed: an artifact shapes its constraints so it tends toward the interaction.
 
+The most powerful attractor is the scene itself: the agent in a discussion with the engineer, both standing at a whiteboard ([[philosophy/attractors]]). Set there, the agent talks, draws, waits, and takes the notes: it is the one who crystallizes the discussion into artifacts. No rule about asking is as strong as the scene. The moves below hold the scene in place.
+
 What works, in the order it is usually needed:
 
 - **End the turn after one move.** One decision-sized step, then the mic goes back. An unconditional stop holds; "ask if unsure" does not.
@@ -95,6 +97,7 @@ What works, in the order it is usually needed:
 - Where a better idea goes: [[philosophy/kairos-gates]].
 - Surfacing at the level of the decision: [[philosophy/zoom-levels]].
 - Why a long run costs, in context and in error: [[philosophy/context-splitting]], [[philosophy/compounding-decisions]].
+- Why the whiteboard scene pulls harder than a rule: [[philosophy/attractors]].
 - Shape questions under the same test: [[philosophy/shape-and-substance]].
 - The embodied face of the loop: [[philosophy/embodied-navigation]].
 - The embedded face, and the reflexive mode that designs its conditions: [[philosophy/embedded-reflexive]].

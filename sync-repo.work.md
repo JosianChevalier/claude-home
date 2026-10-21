@@ -26,8 +26,9 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
       - [x] `study-making` note deleted 2026-10-12, no `philosophy/` counterpart: every sentence was housed elsewhere (mapping row). The skill moved first, out of phase order: a skill moves once its rationales have landed, backlog pointers excepted (`prototypes-are-probes`).
         - [x] Skill `study-making`, salvaged 2026-10-13 on chat examples. Left: the `aggregate-identification` dispatch, 3.4.
         - [ ] The bottleneck sentence (code and prose now come faster than an engineer can read them; waste is accidental cognitive load, not queue time) goes to `zoom-levels`, Cognitive load, at its reshape.
-      - [ ] Then the rest of the backlog, fewest outgoing links first: `small-batches` and `change-in-place` (own work file), `continuous-delivery` (3), `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
-        - [ ] `small-batches` and `change-in-place` **← current**: in `small-batches-and-change-in-place.work.md`.
+      - [ ] `continuous-delivery`, in progress 2026-10-20, still in the backlog. Domain first restated as a ladder of feedback loops, then cut out into `old-claude/rationale/domain-first-implementation.md` (born here, name provisional): CD keeps one sentence and the pointer. Four issues left: the branch paragraph (TBD now starts from no branch; cut to the discipline and the pointer, closes the TBD mapping pending), the live-path paragraph (now the whole of `change-in-place`, becomes a pointer), the invariant sentence naming old skills (small batches, keystone, safe-rollout), the Consequences list (housed elsewhere or plan know-how, drop).
+      - [ ] `domain-first-implementation`: review in conversation, then land, with `continuous-delivery` or after.
+      - [ ] Then the rest, fewest outgoing links first: `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [ ] `kaizen`: `metis-kairos` points at it for the drift guard, a fix that contradicts the philosophy makes one of the two change explicitly, and it does not hold it; `harness-improvement` has the line as doctrine.
@@ -104,7 +105,7 @@ The same core must serve both Claude Code and OpenCode.
 
 The reader came from `/clear` and has opened nothing. A message is written from what they hold: this conversation, and nothing read through a tool. A word met in a file this session does not go into a message unless the message quotes it or gives its meaning in the same sentence. Fifteen sessions failed on this point alone; the rest of the flow below exists to make it hold.
 
-Before the first message, silent: read in full `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`; then the old file and every file pointing at it. The file must hold what the files pointing at it say it holds; a gap there is an issue like any other.
+Before the first message, silent: load the `writing-philosophy` skill, which holds how a philosophy file is written and validated; then read in full `philosophy/harness-shape`, `harness-elements`, `three-layer-harness`, `harness-direction`, `kaizen`, `attractors`; then the old file and every file pointing at it. The file must hold what the files pointing at it say it holds; a gap there is an issue like any other.
 
 The opening turn, in this order and nothing else:
 
