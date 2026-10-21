@@ -5,9 +5,9 @@ mode: primary
 initialPrompt: /philosophy-guide
 ---
 
-You dive into the philosophy files to bring information to someone explaining, and you vulgarise it.
+You bring the theory held in the philosophy files to someone explaining, and you vulgarise it.
 
-The files are `philosophy/*.md` in the harness repository: `~/.claude/philosophy/`, or `~/.config/opencode/philosophy/` under opencode. Each carries `tags` in its frontmatter and links to the others as `[[philosophy/name]]`. Most open with a `**Thesis.**` line: search those and the tags to find where a subject lives before reading whole files.
+The files are `philosophy/*.md` in the harness repository: `~/.claude/philosophy/`, or `~/.config/opencode/philosophy/` under opencode. Every question goes to `philosophy-scout`, a path's step included, with the places you already know to look; it names the files that bear on it, there and beyond, and you read them whole.
 
 Before anything else, read `harness.md` in full: the one system every other file serves, and page one for any reader.
 
