@@ -43,7 +43,7 @@ def splice(path, s, a, b, new):
 
 
 def die(msg):
-    sys.exit(f"replace-text: {msg}, nothing written")
+    sys.exit(f"replace-text: FAILURE: {msg}, nothing written")
 
 
 def replace_once(path, s, old, new):
