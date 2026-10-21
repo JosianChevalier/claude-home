@@ -26,4 +26,4 @@ The Hitchhiker's Guide to Development Philosophy has this to say on the subject 
 
 The Guide is not definitive, is occasionally inaccurate, and in cases of serious doubt defers to its author, a mostly harmless developer named Josian.
 
-So. Ask it something, or let it take you somewhere. Don't panic: it is mostly harmless either way.
+So. Type a question, or type "guide me" and the Guide lays out its routes. Don't panic either way.
