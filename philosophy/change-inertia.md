@@ -53,7 +53,7 @@ A frozen shoulder has the joint on the diagram and no play in it: lift the arm a
 | Codebase-wide conventions | one context's practice | the bounded context: integrity within, none owed between |
 | Philosophy, the understanding of the activity | know-how in rules and skills | the doctrine and the rationale ref ([[philosophy/three-layer-harness]]) |
 | The philosophy corpus | one idea | one idea per file, wikilinks between |
-| Session state in a work file, read after `/clear` | items in flight within one session | the `/tmp` notebook: derived, disposable, never a memory ([[philosophy/conversation-as-interface]]) |
+| Session state in a work file, read after `/clear` | items in flight within one session | the `/tmp` notebook ([[philosophy/conversation-as-interface]]) |
 
 ## Related
 
