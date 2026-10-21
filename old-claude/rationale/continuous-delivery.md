@@ -8,7 +8,7 @@ Governing frame: Farley & Humble's *Continuous Delivery* — the trunk is **alwa
 
 This is the invariant behind continuous *deployment* (where every commit additionally *does* deploy): deployment automates the last step, but delivery is the discipline that makes the step safe. Operationally, treat *can* as *will*: write every commit as if it deploys the instant it lands. A broken commit is a broken production, discovered later.
 
-Releasability is a property of the **commit, not its location**. A branch commit obeys the exact same discipline as a trunk commit — a branch is only a short queue of release candidates awaiting fast-forward, never a hygiene exemption. "It's just a branch, I'll clean up before merging" recreates the big batch: it defers integration risk to the merge and makes the merge a laundering step. When every branch commit is independently releasable, branches carry no risk trunk doesn't — which is precisely what makes trunk-based development possible: the branch shrinks to a conflict-avoidance queue and can shrink further to nothing. Branch discipline *is* the demonstration that TBD is safe.
+Releasability is a property of the commit, not its location. The rare branch is a short queue of release candidates awaiting fast-forward ([[philosophy/trunk-based-development]]), and each of them obeys the discipline above: "I'll clean up before merging" defers integration to the merge and recreates the big batch.
 
 ## The invariant: always working, zero regression
 
