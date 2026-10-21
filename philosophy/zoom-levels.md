@@ -31,4 +31,4 @@ A conversation is dynamic. The report is the small-scale map; a follow-up questi
 
 Word count optimizes the wrong variable. Too much detail makes the user triage noise; too much compression makes them zoom in on *everything*. Both are extraneous load.
 
-Effective concision is transfer per unit of attention: enough context to decide, act, or ask the next precise question; no detail whose only value is proving the agent did work. The right answer is simple, salient, and unfoldable at the chosen zoom level.
+Effective concision is transfer per unit of attention, Tufte's data-ink ratio carried over to attention: enough context to decide, act, or ask the next precise question; no detail whose only value is proving the agent did work. The right answer is simple, salient, and unfoldable at the chosen zoom level.

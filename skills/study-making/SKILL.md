@@ -71,7 +71,7 @@ When a probe surfaces consistency questions, what must be saved together, how an
 
 ## Figures
 
-The medium costs you nothing and the reader everything, so each piece takes the form they read at a glance: a flow or a loop is drawn, a comparison across dimensions is a table with its header marked, parallel items are a list. A diagram earns its place when it compresses understanding; one that repeats the prose, hides a surprise or breaks the parser adds load instead. Before drawing, find the real dispatch points and branch gates in the code; do not route every branch through setup that only one branch runs. Mermaid labels parser-safe: quote anything with technical syntax; plain nouns and verbs over inline code.
+The medium costs you nothing and the reader everything, so each piece takes the form they read at a glance: a flow or a loop is drawn, a comparison across dimensions is a table with its header marked, parallel items are a list. A diagram earns its place when it compresses understanding (Tufte's data-ink ratio); one that repeats the prose, hides a surprise or breaks the parser adds load instead. Before drawing, find the real dispatch points and branch gates in the code; do not route every branch through setup that only one branch runs. Mermaid labels parser-safe: quote anything with technical syntax; plain nouns and verbs over inline code.
 
 ## Examples
 

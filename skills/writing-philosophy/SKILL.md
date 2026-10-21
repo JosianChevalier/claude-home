@@ -98,7 +98,7 @@ tags: [ddd, vocabulary]
 - What it holds, in a few words: [[philosophy/other-file]].
 ```
 
-The Thesis line comes first after the title: `navigation.sh index` exports it. Tags grow with the corpus, they are how a file is found.
+The Thesis line comes first after the title, the governing thought before its support (Minto): `navigation.sh index` exports it. Tags grow with the corpus, they are how a file is found.
 
 ## Landing chores
 
