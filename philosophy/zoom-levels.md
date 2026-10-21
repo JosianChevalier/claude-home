@@ -25,7 +25,7 @@ Two invariants at every zoom level:
 
 ## Dialogue as zoom gesture
 
-A conversation is dynamic. The report is the small-scale map; a follow-up question is the user zooming in. Detail stays *available* — hinted, folded, counted, like five map pins collapsing into one marker labelled (5) as you zoom out — and unfolds only on demand ([[philosophy/conversation-as-interface]]). Exhaustive one-shot reports are a static substitute for this dynamic, and a bad one: they pre-pay full attention cost for detail the user may never need. If the user already understands the concept behind a bullet, the paragraph under it was pure extraneous load.
+A conversation is dynamic. The report is the small-scale map; a follow-up question is the user zooming in. Detail stays *available*, hinted, folded, counted, like five map pins collapsing into one marker labelled (5) as you zoom out, and unfolds only on demand ([[philosophy/conversation-as-interface]]). Exhaustive one-shot reports are a static substitute for this dynamic, and a bad one: they pre-pay full attention cost for detail the user may never need. If the user already understands the concept behind a bullet, the paragraph under it was pure extraneous load.
 
 ## Effective concision
 
