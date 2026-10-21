@@ -8,7 +8,7 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 ## Doctrine
 
 - Kaizen is a session, not an edit request: a decision taken is written at once, and the next round starts.
-- Feedback lands at the lowest layer that absorbs it; a bump never changes the destination.
+- Feedback lands at the lowest layer that absorbs it: the know-how first, the doctrine when the know-how could not, the philosophy only when the understanding of the activity changed.
 - A fix that contradicts its rationale: one of the two changes, explicitly.
 - Reorient before compensating: rename, reshape the flow, compensate last and say so.
 
@@ -74,8 +74,9 @@ Only what Claude Code's docs and the weights do not hold.
 
 - Named after the concept, never the symptom it was written against.
 - An example only where the line is ambiguous without one: the line first, the illustration after, anonymous. A violation named only when the current models produce it unprompted, by its own name.
-- A rule that needs explaining to apply is a skill ([[philosophy/harness-elements]]).
+- A rule holds one concept, so a fix reads and edits one file; a rule that needs explaining to apply is a skill ([[philosophy/context-economics]], [[philosophy/harness-elements]]).
 - A skill is written from mocks: the chat as the user would see it, one message at a time, validated. Doctrine identifiable, know-how after it, the rationale a footer pointer ([[philosophy/harness-shape]]).
 - A description is an activation line, matched against the session and listed in every prompt, main and sub-agent alike. User-invoked: the trigger word first, as the user says it. Model-invoked: the situation in one sentence, in the session's words. A boundary only on an observed mis-fire.
+- An agent is one step's context: the skills and facts that step needs, nothing of the step before or after; the workflow skill dispatches to it and does not run the step itself ([[philosophy/context-splitting]]).
 
 Rationale: [[philosophy/kaizen]], [[philosophy/three-layer-harness]], [[philosophy/harness-shape]], [[philosophy/attractors]], [[philosophy/level-design]], [[philosophy/harness-elements]]
