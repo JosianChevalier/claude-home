@@ -2,7 +2,31 @@
 
 You may never run an agent and still share the concern this repository starts from: attention is the scarce thing, and most tooling spends it. The philosophy is that concern worked out, and it reads by hand. Nothing in it needs an agent to open.
 
-The harness serves one socio-technical system: the human at the centre, augmented by agents. Three properties of it are designed, never apart: the human's cognition, the agent's context, and their interaction.
+What the harness serves is one socio-technical system: the human at the centre, augmented by agents. Three properties of it are designed, and never apart: the human's cognition, the agent's context, and the loop between them.
+
+```
+                 THE SOCIO-TECHNICAL SYSTEM, taken whole
+                 the human at the centre, augmented by agents
+   ══════════════════════════════════════════════════════════════════════
+   three lenses, present in every file, never a bin:
+     H  what it does for the human's cognition
+     C  what it does for the agent's context
+     I  what it does to the loop between them
+   ══════════════════════════════════════════════════════════════════════
+   a general practice, read through the three            H          C          I
+   ───────────────────────────────────────────────── ────────── ────────── ──────────
+   atomic-commit     the smallest change that works   unit of     unit of    what
+                                                      thought     a context  crosses
+   zoom-levels       a message is a map               attention   tokens     the map
+                                                      budget      (mirror)   as channel
+   attractors        a term pulls what follows        a theory    a basin    a shared
+                                                      named       carved     vocabulary
+   three-layer-      know-how, doctrine, philosophy   what the    what       what loads
+     harness                                          engineer    loads      when, for
+                                                      holds                  whom
+```
+
+The three are lenses, felt in every file, never bins. A practice that existed before agents, small batches, trunk-based development, domain-driven design, is applied to both sides, and each file says what it did for a team and what it does for a context. Most of the software-development philosophy is about human cognition; that is the point. Sorting the files into three fails by design: every file is one practice, three readings, one system.
 
 Read it like a book where you are the hero. Page one is [harness](harness.md). Then choose a path. Each carries one question into every file it visits, forks where another file answers it better, and says what you hold at the end.
 
