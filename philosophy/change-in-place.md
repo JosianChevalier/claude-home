@@ -31,9 +31,12 @@ Sometimes one step cannot be made in place without regression: the new behavior 
 - **The smallest atom.** It covers the one piece that cannot change in place, not the function around it.
 - **Adopted in the same step.** Once parity is proven, it goes live in the step that brings it. It never waits dark for a later switch. Behind a flag is not dark: reachable and exercised, only invisible.
 
-## New behavior is another case
+## When steps cannot be validated in place
 
-Dark first, exposed last (the keystone) is for new behavior, with no live path to change. Replacing existing behavior is not new behavior: it goes in place.
+Some changes can only be validated whole: an activation waiting on stakeholders, or parts that only work swapped together. They are built dark and swapped by a keystone at the lowest safe level, around the smallest piece that can only be validated whole. What sits behind it is a batch.
+
+- **Look lower first.** Before settling on a swap point, look for an approach that moves it lower.
+- **It is lower than it looks.** The lowest point is hard to see and hard to design for.
 
 ## Related
 
