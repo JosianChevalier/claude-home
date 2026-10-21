@@ -41,7 +41,7 @@ Everything noted during the session goes on the table, even minor, grouped by th
 
 ## Round
 
-One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, has no moment to read. `philosophy-scout` brings the passages that bear on the group, beyond the core loaded at the start. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next group. The rationales of the touched files are read before the edit and are at most a footer. Beside this file, the know-how of one element, read before its lines change: `rules.md`, `skills.md`.
+One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, has no moment to read. `philosophy-scout` brings the passages that bear on the group, beyond the core loaded at the start. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next group. The rationales of the touched files are read before the edit and are at most a footer. The lines of the element being written: Writing an element, below.
 
 ```
  know-how followed, went wrong      ──▶ rewrite the know-how
@@ -68,5 +68,14 @@ A gate lost to the pull of the task, a stop or a hand-back skipped: the gated ac
 >
 > Same pull in `handover` and `ongoing-work`: fix there too, or one doctrine line above all three?
 
+## Writing an element
+
+Only what Claude Code's docs and the weights do not hold.
+
+- Named after the concept, never the symptom it was written against.
+- An example only where the line is ambiguous without one: the line first, the illustration after, anonymous. A violation named only when the current models produce it unprompted, by its own name.
+- A rule that needs explaining to apply is a skill ([[philosophy/harness-elements]]).
+- A skill is written from mocks: the chat as the user would see it, one message at a time, validated. Doctrine identifiable, know-how after it, the rationale a footer pointer ([[philosophy/harness-shape]]).
+- A description is an activation line, matched against the session and listed in every prompt, main and sub-agent alike. User-invoked: the trigger word first, as the user says it. Model-invoked: the situation in one sentence, in the session's words. A boundary only on an observed mis-fire.
 
 Rationale: [[philosophy/kaizen]], [[philosophy/three-layer-harness]], [[philosophy/harness-shape]], [[philosophy/attractors]], [[philosophy/level-design]], [[philosophy/harness-elements]]

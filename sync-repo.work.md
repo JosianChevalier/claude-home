@@ -47,12 +47,10 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
   - [ ] 3.4 Skills.
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
-    - [ ] `kaizen`: prototype, iterating from use. Dispatches `transcript-attractor-analyzer`, 3.5.
-      - [ ] Split: `SKILL.md` keeps the principles, everything transversal, and the dispatch to one file per element beside it. `rules.md`, `skills.md` written 2026-10-20 with the old Writing Rules/Skills residue (name after the concept, example only where ambiguous, written from mocks); `agents.md` and `descriptions.md` not yet written, the Round names `descriptions.md`. An element file holds only what we specify or overload; what Claude Code's own docs or the weights hold stays out. Philosophy files stay with `writing-philosophy`. **← current**
-      - [ ] `descriptions.md`: a description is an activation line, matched against the session and listed in every prompt, main and sub-agent alike (confirmed for agents: the Agent tool's list). User-invoked: the trigger word first, as the user says it; model-invoked: the situation in one sentence, in the session's words; a boundary only on an observed mis-fire.
-      - [ ] `agents/*.md` carry `mode:`, a field Claude Code ignores; `philosophy-guide` keeps `initialPrompt`.
+    - [ ] `kaizen`: prototype, iterating from use. Dispatches `transcript-attractor-analyzer`, 3.5. **← current**
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
+    - [ ] `agents/*.md` carry `mode:`, a field Claude Code ignores; `philosophy-guide` keeps `initialPrompt`.
     - [ ] `transcript-attractor-analyzer`, new, dispatched by `kaizen` only when something went wrong, never for a gap. Reads the session transcript, `projects/<cwd-encoded>/<session-id>.jsonl`, the id in `CLAUDE_CODE_SESSION_ID`, reasoning blocks included. Unlike `philosophy-scout` it returns a reading: the moment quoted as evidence, what the reasoning held, each attractor in context by its words, where it sits, how it pulled. The skill's Round says what the message then shows. Probed 2026-10-20: `<cwd-encoded>` turns `/` and `.` into `-`; one JSON object per line, the conversation is the lines of `type` `user` and `assistant`, the rest harness bookkeeping; assistant blocks `thinking`, `text`, `tool_use`; hundreds of KB, extracted by script.
   - [ ] 3.6 Templates.
 - [ ] Migration 4: scan for client specifics, rename, make public.
