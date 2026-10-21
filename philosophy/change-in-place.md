@@ -14,7 +14,7 @@ Small steps and atomic commits are worth something only if each one runs in prod
 
 ## In place
 
-The path goes from old shape to new by a chain of moves, each live the moment it lands ([[philosophy/mechanical-refactoring]]). The code never leaves production; it changes shape under it.
+The code never leaves production: it changes shape under it, one move at a time, each live the moment it lands. A move is the lowest possible safe change: usually an atomic commit, like a mechanical refactoring ([[philosophy/mechanical-refactoring]]), but not always.
 
 ```
 beside:    old ───────────────────────── switch   ← all the risk lands here
