@@ -8,7 +8,7 @@ The paths live in README.md, Philosophy section; the guide reads them from there
 
 ## Review
 
-The session's commits, `647254f..HEAD`: philosophy/README.md (page one, five paths, crossroads), the root README's pointer, the guide (agent and command), navigation.sh skipping the README, then four kaizen edits below that were not asked for.
+This session's commits, other sessions interleaved on main: `2ef9cbb` README section, `6367bb5` guide, `82ad92a` section moved to philosophy/README.md, `f0c8c03` fifth path; then kaizen edits not asked for, `df49d3a` `0b97329` `7ee126e`; `cc853f1` `eccc410` this file.
 
 ## Kaizen candidates
 
