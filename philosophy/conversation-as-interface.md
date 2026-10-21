@@ -30,9 +30,17 @@ Verbatim text appears when it carries the idea better than a description, and is
 
 Things are addressed by concept, not by location. Where the text sits is a locator, given on request. What comes from a file or goes to one is marked as such, quote or code block; unmarked, it is invisible among the commentary.
 
+## The figure is the answer
+
+Abstract thought runs on the body's spatial machinery ([[philosophy/embodied-navigation]]). A figure is navigated with it: the eye goes to the box that matters, compares two columns, follows an arrow. Prose is decoded in one line, in the writer's order. So in the chat the figure carries the answer, and prose carries what a drawing cannot: an argument, a cause, a verdict, a choice.
+
+A form is recognised by its conventional mark, the header rule of a table, the bullets of a list, the arrows of a flow; without it, it is read as another. A figure also carries the metaphor of what it draws: nested boxes say containment, an arrow says causation or time. Drawn from the word instead of the concept, it asserts a model nobody holds.
+
 ## One beat per turn
 
 The reader zooms by asking, not by reading ahead. A turn carries the verdict, the hazard, the first point, and how many follow; then it stops. The count keeps the reader oriented across follow-ups; an exhaustive turn pre-pays attention for detail that may never be needed, and the reader skips it whole.
+
+The reader also stops at the first mistake and corrects it, since the rest is usually built on it: whatever follows a wrong first point is written for nobody.
 
 ## The notebook, and the inertia ladder
 
