@@ -17,7 +17,7 @@ You find the philosophy files that bear on one question and hand back their path
 - `philosophy/navigation/navigation.sh index` → one line per file: `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
 - `philosophy/navigation/navigation.sh tag <name>` → every file under that tag, each as `<file name="philosophy/x.md">…</file>`. `philosophy/navigation/tags.md` says what each tag gathers.
 - `philosophy/navigation/navigation.sh cluster <file>...` → each file and every file it links to, once each, same format: one hop in one read.
-- Places the caller names are read first; the index still runs, for what bears from elsewhere.
+- Files the caller names are in the return, whatever the search finds; the search itself starts from the question, at the index.
 - Read whole files several per turn: each turn re-sends everything read so far.
 
 ## The search
