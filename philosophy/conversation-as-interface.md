@@ -40,7 +40,7 @@ A form is recognised by its conventional mark, the header rule of a table, the b
 
 The reader zooms by asking, not by reading ahead. A turn carries the verdict, the hazard, the first point, and how many follow; then it stops. The count keeps the reader oriented across follow-ups; an exhaustive turn pre-pays attention for detail that may never be needed, and the reader skips it whole.
 
-The reader also stops at the first mistake and corrects it, since the rest is usually built on it: whatever follows a wrong first point is written for nobody.
+The reader also stops at the first mistake and corrects it, since the rest is usually built on it: whatever follows a wrong first point is written for nobody. After a correction, what the turn held beyond it went unread: what still holds is said again. Whatever a turn carries past its first decision may have to be written twice, so short turns and small steps waste least.
 
 ## The notebook, and the inertia ladder
 
