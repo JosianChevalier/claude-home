@@ -34,11 +34,11 @@ Things are addressed by concept, not by location. Where the text sits is a locat
 
 Abstract thought runs on the body's spatial machinery ([[philosophy/embodied-navigation]]). A figure is navigated with it: the eye goes to the box that matters, compares two columns, follows an arrow. Prose is decoded in one line, in the writer's order. So in the chat the figure carries the answer, and prose carries what a drawing cannot: an argument, a cause, a verdict, a choice.
 
-A form is recognised by its conventional mark, the header rule of a table, the bullets of a list, the arrows of a flow; without it, it is read as another. A figure also carries the metaphor of what it draws: nested boxes say containment, an arrow says causation or time. Drawn from the word instead of the concept, it asserts a model nobody holds.
+The form follows the shape of the information, and each element earns its place by what it saves the reader, as ink does in Tufte's data-ink ratio. A form is recognised by its conventional mark, the header rule of a table, the bullets of a list, the arrows of a flow; without it, it is read as another. A figure also carries the metaphor of what it draws, as image schemas do (Lakoff & Johnson): nested boxes say containment, an arrow says causation or time. Drawn from the word instead of the concept, it asserts a model nobody holds.
 
 ## One beat per turn
 
-The reader zooms by asking, not by reading ahead. A turn carries the verdict, the hazard, the first point, and how many follow; then it stops. The count keeps the reader oriented across follow-ups; an exhaustive turn pre-pays attention for detail that may never be needed, and the reader skips it whole.
+The reader zooms by asking, not by reading ahead. A turn carries the verdict first, the governing thought before its support (Minto), then the hazard, the first point, and how many follow; then it stops. The count keeps the reader oriented across follow-ups; an exhaustive turn pre-pays attention for detail that may never be needed, and the reader skips it whole.
 
 The reader also stops at the first mistake and corrects it, since the rest is usually built on it: whatever follows a wrong first point is written for nobody. After a correction, what the turn held beyond it went unread: what still holds is said again. Whatever a turn carries past its first decision may have to be written twice, so short turns and small steps waste least.
 

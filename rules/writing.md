@@ -8,7 +8,7 @@ Write from where the reader stands: what it holds, never what the writer holds.
 
 Each piece of information goes in the form that reduces the reader's extraneous cognitive load.
 
-The claim comes before its argument.
+The claim comes before its argument (Minto).
 
 - Before sending, a cognitive walkthrough: in the reader's place, holding only what it holds, what does it understand?
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
@@ -28,15 +28,15 @@ The thing itself comes to the chat, never a pointer to it.
 
 - A file's term is defined the first time it is used: the term, then what it means in plain words, in parentheses.
 - Skimmed, the hazards, the directions and the subject stand out; standing out comes before brevity.
-- The form follows the information, and an element stays for what it saves the reader:
+- The form follows the information, and an element stays for what it saves the reader (Tufte):
   - parallel items → list; their examples → sub-list
   - a comparison across dimensions → table
-  - a shape (layers, flows, loops, branches, timelines, lanes) → an ascii figure, first, one idea per box, words and numbers set in it (Tufte)
+  - a shape (layers, flows, loops, branches, timelines, lanes) → an ascii figure, first, one idea per box, words and numbers set in it
   - many items sorted into a few homes → one figure, the homes as headings, a line per item, a mark on what is new or open
   - the one item that decides → a mark on it, inside the figure or the table
   - an argument, a definition, a cause, a verdict, a choice → simple prose
 - A form is recognised by its signal: a table by its header rule, a list by its bullets, a flow by its arrows; an element missing its signal is read as another. Markdown renders weakly: lists, ascii figures, `====` separators, a table with its header rule drawn.
-- A figure carries the metaphor of the word it draws: before drawing, check it draws the concept, not the word.
+- A figure carries the metaphor of the word it draws (Lakoff & Johnson): before drawing, check it draws the concept, not the word.
 - After redrawing the user's model, ask whether it is theirs: they correct the model, not the prose.
 - The quote marks a file's text: whatever is quoted from a file or drafted for one, prose, code or figure, goes in `>`, code keeping its code block inside it. The agent's own words and figures stay outside. The reader sees where the file's text starts and stops, and reads it at its own pace.
 - At the how, the text itself, verbatim, as one view; locators only on request. A message that needs a file opened has failed. Only the lines that change, never the section around them; current and proposed side by side only for a rewrite, skimmed at most.
