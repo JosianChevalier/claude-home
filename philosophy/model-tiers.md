@@ -4,7 +4,7 @@ tags: [harness-design, model-tiers, context-economics]
 
 # Model tiers
 
-**Doctrine.** Default to the most intelligent model.
+**Thesis.** Default to the most intelligent model. A tier is set by the decision a task carries and what its failure costs; only the harness lowers them, by recomposing the work.
 
 A tier is set by two variables:
 
