@@ -17,8 +17,6 @@ Known starting points, from a blind review:
 
 - [ ] `transmission-belt`: full pass with the user. **← current**
 
-  Decided: the belt stays, it carries the type into a concept; the mecha suit, or power steering, is a second, compatible image: it obeys the intention and the feedback stays felt. The belt is partial coupling; its two failures are misclassifications, the line drawn per layer by doctrine and know-how. Heidegger's tool is the domain model, not the agent: the agent as a tool disappearing into the action is out of scope.
-
   - [ ] `metis-kairos`, "Designing for uncertainty": power steering becomes the image of the mecha suit (homes: `harness`, "Three images", and `collaborative-production`, "Enactive work"), not of the belt; its two failure bullets become a pointer to the belt's.
 
   - [ ] The destruction section moves to `model-phenomenology`, which holds Prägnanz, model tension and maximal grip ("felt before it is thought" is in both). Boyd's grounding "Gödel, Heisenberg, the second law" is copied without question; the figure and glossary stack Gestalt, Husserl and Boyd to say little.
