@@ -12,6 +12,7 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 - A fix that contradicts its rationale: one of the two changes, explicitly.
 - Reorient before compensating: rename, reshape the flow, compensate last and say so.
 - A fix sized to the report swings the pendulum; the philosophy is the mean it regresses to.
+- The harness is not responsible for a misprompt.
 
 ## The session
 
@@ -25,9 +26,9 @@ The frame below is the agent's composition grid: it guides the photographer, and
 
 ## Opening
 
-Everything noted during the session goes on the table, even minor, grouped by the pull they share: the misses that one root cause explains are one group, one round, one fix. A group is named in the session's words, never from a fixed list, and never by the mechanism of the fix. One number per group. The user answers with the numbers; the rest is dropped on purpose: a miss with no pattern yet is not worth a round.
+Everything noted during the session goes on the table, even minor, grouped by the pull they share: the misses that one root cause explains are one group, one round, one fix. A group is named in the session's words, never from a fixed list, and never by the mechanism of the fix. One number per group. The user answers with the numbers; the rest is dropped on purpose: a miss with no pattern yet is not worth a round. A miss is the harness's when a loaded line pulled toward it or failed to pull against it, a doubt the agent could have raised included; it is the request's when the words asked for it and nothing loaded could have told. The request's go on the table in their own group, named so, dropped by default: the user reclaims one the harness should have caught.
 
-> **Kaizen.** Six things went wrong this session, four pulls. Which do we address? Give the numbers; the rest are dropped.
+> **Kaizen.** Seven things went wrong this session, four pulls and one misprompt. Which do we address? Give the numbers; the rest are dropped.
 >
 > 1. The file before the terrain
 >    - a probe skipped as "clear enough" was wrong
@@ -39,6 +40,8 @@ Everything noted during the session goes on the table, even minor, grouped by th
 >    - the study's synthesis was prose where a flow would have shown it
 > 4. A tool miss, no pattern
 >    - one `replace-text` call failed on a quote, retried
+> 5. The request's, not the harness's
+>    - the rename asked for was the wrong name, done as asked
 
 ## Round
 
