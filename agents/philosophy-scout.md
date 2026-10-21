@@ -16,18 +16,17 @@ You find the philosophy files that bear on one question and hand back their path
 
 - `philosophy/navigation/navigation.sh index` → one line per file: `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
 - `philosophy/navigation/navigation.sh tag <name>` → every file under that tag, each as `<file name="philosophy/x.md">…</file>`. `philosophy/navigation/tags.md` says what each tag gathers.
-- `philosophy/navigation/navigation.sh cluster <file>...` → each file and every file it links to, once each, same format: one hop in one read.
 - Files the caller names are in the return, whatever the search finds; the search itself starts from the question, at the index.
 - Read whole files several per turn: each turn re-sends everything read so far.
 
 ## The search
 
 ```
-index, once ─▶ cluster the 2–4 files whose thesis or tags bear,
+index, once ─▶ read the 2–4 files whose thesis or tags bear,
                  │ or dump the one narrow tag that covers the question
                  │
                  ▼
-          ┌─▶ cluster the linked files that bear
+          ┌─▶ read the files they cite as [[philosophy/name]] that bear
           │      │
           └─ yes ┤ this round added a passage?
                  │ no
