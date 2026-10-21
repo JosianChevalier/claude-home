@@ -27,6 +27,8 @@ Then it is named by its own pejorative name, as the field names it: "primitive o
 
 An artifact is a pink elephant the same way: a finished work file, a handover's list of what was not done, is read as a premise by a fresh context ([[philosophy/session-state-in-documents]]).
 
+The backlog turned changelog is the same pull, observed constantly: a thing is moved, and a provenance tail is left at both ends, "moved from 01", "to be moved to 07", "told here, then moved". It is the writer's session written into a file the reader loads cold; each tail is a pink elephant for the next reader. The move is deleted at its source and written at its destination, as if it had always been there; history is git's job.
+
 ## Copies
 
 A copy is a nearer attractor than the canonical it duplicates. Restating a rule or a file in the prompt adds weight to what the receiver already holds, and the copy, not the canonical, is now what pulls. A pointer keeps one version in the landscape.
