@@ -58,10 +58,10 @@ A prototype under study is evidence: inspect, never edit; sense-making breaks if
 ## Shape
 
 1. Purpose and zoom level
-2. One compact overview diagram
-3. Key behavior bullets
-4. Coupling and change-pressure notes
-5. Opinionated synthesis: tensions, risks, mismatches, decisions
+2. Opinionated synthesis, the governing thought before its support (Minto): tensions, risks, mismatches, decisions
+3. One compact overview diagram
+4. Key behavior bullets
+5. Coupling and change-pressure notes
 
 Implementation references are anchors, not the spine: cite files and symbols, do not traverse file by file. Surprising behavior stays as plain bullets even when a diagram shows it. High-value surprises: async follow-up effects, ordering assumptions, dormant config fields, nil-sensitive inputs, similar paths on different technology patterns.
 
