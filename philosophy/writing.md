@@ -4,17 +4,11 @@ tags: [writing, communication, cognitive-load, attractors]
 
 # Writing
 
-**Thesis.** A text is shaped for its reader's cognition, never in the shape of its input: drawn for a human, written in attractors for an agent, both at once in a hybrid.
+**Thesis.** A text is shaped for its reader, never in the shape of its input. A human reader is served drawn, the claim first, one decision at a time.
 
-| Mode | Where | Designed for |
-|---|---|---|
-| Human | the chat | the human at capacity: clarity above all |
-| Agent | rules, skills, agents, work files, notebooks | the agent embedded |
-| Hybrid | philosophy, plans, studies | the agent embedded, the human reflexive |
+The three writing modes, human, agent and hybrid, and the agent's side: [[philosophy/level-design]].
 
 ## In general
-
-The writer pays a line once; every reader pays it again, in attention or in tokens. The text is designed from where the reader stands, with what it holds ([[philosophy/level-design]]).
 
 The governing thought comes before its support (Minto, the pyramid principle): the reader decides at the top and dives only if the top is in doubt.
 
@@ -28,7 +22,7 @@ The counter is the one composition teaches: notes first, then the text written w
 
 ## Human
 
-Communication costs are asymmetric. The agent writes for free; the human reads at capacity, through the conversation alone, and every wall of text is paid from what they have left ([[philosophy/conversation-as-interface]]). Clarity comes above everything else.
+The human reads at capacity, through the conversation alone ([[philosophy/conversation-as-interface]]).
 
 **The figure is the answer.** Abstract thought runs on the body's spatial machinery ([[philosophy/embodied-navigation]]). A figure is navigated with it: the eye goes to the box that matters, compares two columns, follows an arrow. Prose is decoded in one line, in the writer's order. So the figure carries the answer, and prose carries what a drawing cannot: an argument, a cause, a verdict, a choice.
 
@@ -38,22 +32,10 @@ The form follows the shape of the information, and each element earns its place 
 
 **The reread.** "tl;dr", "wall of text", the same point asked again: the message overflowed. The load was extraneous (Sweller), the form's, not the domain's ([[philosophy/zoom-levels]]). Explaining further adds to it; the answer is redone shorter and drawn.
 
-## Agent
-
-Agent text talks to the weights. What the weights or the loaded context hold costs tokens to restate and steers nothing; what departs from the default is the whole content ([[philosophy/field-terms]]). A precise term steers hardest per token ([[philosophy/attractors]]).
-
-The measure is return per token, and a table or a figure returns less to an agent than the sentences it replaces ([[philosophy/level-design]]).
-
-## Hybrid
-
-Hybrid text is consumed by the agent embedded, and skimmed, navigated and validated by the human reflexive, who dives into the detail only now and then ([[philosophy/embedded-reflexive]]). The text talks to the weights; the structure talks to the human.
-
 ## Related
 
-- Designing from where the reader stands, return per token, probes: [[philosophy/level-design]].
+- The writing modes, the reader's landscape, the agent reader: [[philosophy/level-design]].
 - The chat as the only channel, and the quote that marks a file's text: [[philosophy/conversation-as-interface]].
 - The spatial machinery a figure is read with: [[philosophy/embodied-navigation]].
 - Extraneous load, and surfacing at the level of the decision: [[philosophy/zoom-levels]].
-- What the weights already hold, and how a term enters: [[philosophy/field-terms]].
 - Why context pulls, the input included: [[philosophy/attractors]].
-- The two modes, embedded and reflexive: [[philosophy/embedded-reflexive]].

@@ -29,6 +29,18 @@ For an agent, the analogues of extraneous load (Sweller) and accidental complexi
 
 The measure is return per token. A schema lowers a human's extraneous load and raises an agent's: it returns little to an agent compared to text, but not less than nothing; an obstacle returns less than nothing. For an agent, format counts where it carries meaning inline: a line break marks a new idea. Sometimes more tokens are needed to build one coherent body of meaning.
 
+## Three writing modes
+
+| Mode | Where | Designed for |
+|---|---|---|
+| Human | the chat | clarity above all: communication costs are asymmetric ([[philosophy/conversation-as-interface]]) |
+| Agent | rules, skills, agents, work files, notebooks | the agent embedded |
+| Hybrid | philosophy, plans, studies | the agent embedded, the human reflexive |
+
+Agent text is written in attractors: it talks to the weights. What the weights or the preloaded context hold is not spelled out; what departs from the default is.
+
+Hybrid text is consumed by the agent embedded, and skimmed, navigated, validated by the human reflexive, who dives into the detail only now and then. The text talks to the weights; the structure talks to the human.
+
 ## Probes
 
 In the reflexive mode a human and an agent design together, in chat. Testing on that human is cheap: show and ask. Testing on another human is expensive. The agent struggles to take the place of a reader without its context, but probes are cheap to send, like playtests: a cognitive walkthrough (Wharton, Polson, Lewis) handed to a sub-agent of the type designed for, with nothing shared, asked what it understands.
@@ -39,7 +51,6 @@ No probe is forced when the answer is obvious. One is run when a section is rede
 
 ## Related
 
-- The three writing modes, human, agent and hybrid: [[philosophy/writing]].
 - What a term pulls, negation included: [[philosophy/attractors]].
 - The human reader's map, how much at which scale: [[philosophy/zoom-levels]].
 - The chat, where the human reads: [[philosophy/conversation-as-interface]].
