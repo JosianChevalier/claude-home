@@ -26,11 +26,7 @@ The **keystone** (Fowler) is each of these steps: the thin commit that wires the
 
 Exposure is broader than wiring an endpoint. A **published contract** — API documentation, a frontend contract, naming presented as public — is a promise others build against; publishing it makes the behavior "live" in the social sense even if no code path exists. Vaporware is the contract-level equivalent of a throw on a live path: consumers hit behavior that isn't there. So contracts obey the same keystone order — behavior effective, then verified, then advertised. The one legitimate inversion is deliberate contract-first design, where the contract explicitly carries no implementation claim.
 
-## Existing behavior is changed in place
-
-Modifying an *existing* live path is a different regime. The code is already exposed, so the change is done **in place** — a chain of mechanical, behavior-preserving moves on the live path, each live as it lands ([[philosophy/change-in-place]], [[philosophy/mechanical-refactoring]]). Alternative flows (no-op adapters, safe defaults, flags, expand-contract — the safe-rollout strategies) cover only the smallest atom that cannot be transformed in place, and that atom is adopted in the same stage. Building a dark replacement of a live workflow and switching at the end is not the keystone pattern: it is the big batch, with the switch as its big-bang integration.
-
-Same invariant, two regimes: new behavior goes dark-then-keystone, existing behavior is transformed in place.
+A path already live changes where it stands, one safe move at a time ([[philosophy/change-in-place]]).
 
 ## Why every commit, not just the last
 
