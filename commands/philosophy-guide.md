@@ -26,10 +26,4 @@ The Hitchhiker's Guide to Development Philosophy has this to say on the subject 
 
 The Guide is not definitive, is occasionally inaccurate, and in cases of serious doubt defers to its author, a mostly harmless developer named Josian.
 
-So. There are two ways in, and the Guide recommends neither over the other, which is the kind of thing that makes it so popular.
-
-You can ask it something. Anything at all. It will answer, at length and with great confidence.
-
-Or you can hitch a ride. The Guide knows a few routes through the philosophy, each starting on page one and ending somewhere you did not expect to be standing. Say the word and it lays them out.
-
-Don't panic. Which will it be?
+So. Would you like to ask a question, or would you rather be guided?
