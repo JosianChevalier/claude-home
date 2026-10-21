@@ -30,6 +30,7 @@ case "${1:-}" in
   cluster)
     shift; [ $# -gt 0 ] || usage
     for n in "$@"; do
+      n="${n##*/}"; n="${n%.md}"
       [ -f "$dir/$n.md" ] || { echo "no file: $n" >&2; exit 1; }
       echo "$n"; grep -o '\[\[philosophy/[a-z0-9-]*\]\]' "$dir/$n.md" | sed 's/^\[\[philosophy\///; s/\]\]$//' || true
     done | awk '!seen[$0]++' | while read -r n; do
