@@ -71,6 +71,7 @@ The same core must serve both Claude Code and OpenCode.
 - **The repo is `JosianChevalier/claude-home`.** Exists since 2026-06, private for now; it already is `~/.claude` with an allowlist `.gitignore`. Rename to `harness` (or similar) later. Made public only once merged and clean.
 - **OpenCode v2 is the target, v1 must keep working.** Design for v2's loading paths; keep the v1 fallbacks (`CLAUDE.md` read, `OPENCODE_CONFIG_DIR`) intact rather than relying on them.
 - **Plain git, three writers.** Pull with rebase at session start, small commits; a long divergence between machines is merged once, not replayed.
+- **Pull hook, to write** in each laptop's Claude Code `settings.json`: pulls once, at the first commit or push of the session, only when a while has passed since the last push; not on every commit. Base: `git -C ~/.claude pull --rebase --autostash --quiet || true`.
 - **No plugin marketplace.** Others take inspiration; they do not install. A plugin install is also a cached copy, awkward to edit and push back.
 - **No Packmind.** It is one-way (server to repos), covers only standards, commands and skills, and needs a self-hosted server.
 - **Agnostic core, thin per-tool adapters.** No abstraction or generator layer for two consumers.
@@ -83,7 +84,6 @@ The same core must serve both Claude Code and OpenCode.
 ## Proposed, not confirmed
  
 - **Agents as thin wrappers.** Agent substance lives in a skill (shared by both tools). Each tool gets its own small agent file holding only frontmatter plus "load skill X": `~/.claude/agents/x.md` and `~/.claude/opencode/agents/x.md`.
-- **Pull hook, to write** in each laptop's Claude Code `settings.json`: pulls once, at the first commit or push of the session, only when a while has passed since the last push; not on every commit. Base: `git -C ~/.claude pull --rebase --autostash --quiet || true`.
 - **After the move**, this project syncs from the new repo and the uploaded docs are deleted, so there is one canonical copy. `claude-home` is already attached as a second sync source.
 ## MO for step 3 (2026-10-08)
 
