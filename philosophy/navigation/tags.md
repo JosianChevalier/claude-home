@@ -22,6 +22,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | cohesion | One concept per harness file, so a fix touches exactly one file. |
 | collaboration | Engineer and agent in one enacted loop: the engineer steers, the agent transmits. |
 | communication | Messages and reports as maps for a cold reader with nothing else open. |
+| continuous-design | Watching the model in the code at every change, instead of a specification from outside or a black box. |
 | conceptual-integrity | Keeping the model coherent: where integrity is owed, and who carries it. |
 | concurrency | Parallel committers integrating continuously on one trunk. |
 | consistency | Full consistency inside an aggregate, eventual consistency between aggregates. |
