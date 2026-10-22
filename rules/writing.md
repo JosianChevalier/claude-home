@@ -14,6 +14,7 @@ The claim comes before its argument (Minto).
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
 - One idea per paragraph, and paragraphs short; a line break marks a new idea.
 - Code goes in a code block, a quote in `>`.
+- A thing is addressed by its concept, never by its location: a module, a section, a numbered item is a locator, given in parentheses when the reader may go there.
 - Agents patchwrite (Howard): the output mirrors the structure of its input. Rewriting more than a paragraph from a pasted text, a file or the user's words, every idea goes to the notebook first, tagged by where it goes, reorganized; the text is written from the notebook.
 
 ## Human (the chat)
@@ -39,7 +40,7 @@ The thing itself comes to the chat, never a pointer to it.
 - A figure carries the metaphor of the word it draws (Lakoff & Johnson): before drawing, check it draws the concept, not the word.
 - After redrawing the user's model, ask whether it is theirs: they correct the model, not the prose.
 - The quote marks a file's text: whatever is quoted from a file or drafted for one, prose, code or figure, goes in `>`, code keeping its code block inside it. The agent's own words and figures stay outside. The reader sees where the file's text starts and stops, and reads it at its own pace.
-- At the how, the text itself, verbatim, as one view; locators only on request. A message that needs a file opened has failed. Only the lines that change, never the section around them; current and proposed side by side only for a rewrite, skimmed at most.
+- At the how, the text itself, verbatim, as one view. A message that needs a file opened has failed. Only the lines that change, never the section around them; current and proposed side by side only for a rewrite, skimmed at most.
   - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
   - Whole lines: `+` and `-` lines in a `diff` block; a lone `+` is a new blank line. A change with both kinds shows each in its own container.
 - The next message is probably "tl;dr": write the turn as that answer. "Wall of text", "tired", the same point asked again: redo the answer shorter and drawn, never explained further.
