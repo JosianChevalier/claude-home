@@ -30,7 +30,7 @@ The later signs are known: the agent touches half the application for one change
 
 ## What is watched
 
-Not every line. The code expresses the model at the appropriate level of abstraction, rid of the accidental complexity of the technical layers, and the high-level domain code is what is watched: how the model behaves, how it represents the world. This is the control we keep over what we produce, and it is held by being embedded in the model, as cognition is ([[philosophy/collaborative-production]]). Code need not be read in an IDE for that: a representation that places the design topologically and shows its snippets as one moves through it is the same watch ([[philosophy/embodied-navigation]]).
+Not every line. The code expresses the model at the appropriate level of abstraction, rid of the accidental complexity of the technical layers, and the high-level domain code is what is watched: the domain service behind the driving port, the code that reads as the user story. What is watched in it is how the model behaves, how it represents the world. This is the control we keep over what we produce, and it is held by being embedded in the model, as cognition is ([[philosophy/collaborative-production]]). Code need not be read in an IDE for that: a representation that places the design topologically and shows its snippets as one moves through it is the same watch ([[philosophy/embodied-navigation]]).
 
 The rest follows from the model. Once the models are right, software development becomes easy: most persistence problems, deadlocks included, come from aggregates left undefined, and fade once the consistency boundary is right ([[philosophy/aggregates]]); most distributed workflows between services come from boundaries drawn wrong around the systems.
 
@@ -40,7 +40,7 @@ Missing the sign means bugs sneaking in, then a redesign that risks breaking pro
 
 ## Why it went unnoticed
 
-The problem shows only with the accumulation of features and insight; it has gone unnoticed mostly where there was money to rewrite. Code is meant to be redesigned often, not to live long. Thrown away whole and remade from zero, it sediments no learning, neither in the head nor in the code.
+The problem shows only with the accumulation of features and insight, and it has gone unnoticed mostly in organisations large and inefficient enough to tolerate waste: in lean terms, muda nobody sees. There, code is rewritten rather than redesigned. Code is meant to be redesigned often, not to live long; thrown away whole and remade from zero, it sediments no learning, neither in the head nor in the code.
 
 ## Agents
 
