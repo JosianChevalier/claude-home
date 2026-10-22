@@ -22,7 +22,9 @@ You find the philosophy files that bear on one question and hand back their path
 ## The search
 
 ```
-index, once ─▶ read the 2–4 files whose thesis or tags bear,
+question ─▶ the 3–5 mechanisms it could involve, in the field's terms
+                 │
+index, once ─▶ per mechanism, the files whose thesis or tags bear, read in one turn,
                  │ or dump the one narrow tag that covers the question
                  │
                  ▼
