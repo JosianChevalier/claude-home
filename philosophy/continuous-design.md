@@ -4,23 +4,23 @@ tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-l
 
 # Continuous design
 
-**Thesis.** The code is the first expression of the model where tension shows, and the design stays right only by watching it at every change. Behaviour is stated from outside; the design that gives it is chosen from inside, and no specification from outside holds that design: only the model expressed does, and code is its most precise expression. Hence no spec-driven development, no black box.
+**Thesis.** The code is the first expression of the model where tension shows, and the design stays right only by watching it at every change. Code alone executes the model instead of representing it, so it is the specification of the model the software holds; tests are code, and the engineer specifies from within it. Hence no spec-driven development, no black box.
 
 ## Two ways
 
-The two claims go together as the first and second way of DevOps (Kim) do. The first, that only the model expressed says what the system does, is flow: it gets the system right the first time. The second, that the code is where tension shows first, is feedback: it keeps the design right over time, through the monitoring and the redesigns. The second is the core; it cannot be stated without the first.
+The two claims go together as the first and second way of DevOps (Kim) do. The first, that the code specifies the model, is flow: it gets the system right the first time. The second, that the code is where tension shows first, is feedback: it keeps the design right over time, through the watch and the redesigns. The second is the core; it cannot be stated without the first.
 
-## The outside is partial
+## The code is the specification
 
-Waterfall is read as slow iteration: the specification arrived late and no longer matched what the users wanted. That reading misses the ontological fault. A system is not specified from its inputs and outputs: that is the core of domain-driven design (Evans). What makes it behave right is how it represents the world it works with: the model, which exists only as expressed ([[philosophy/model-expressions]]), the UX one expression, the code another.
+The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not represent it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and it is what the watch is for.
 
-An acceptance test is an expression of the model too, of the part observable from outside, and that is what makes it too partial to be the source of truth. To specify behaviour precisely enough to be beyond error is to write code: code is so far the best representation of behaviour. The risk of spec-driven development is to hold in schema, from outside, a model that code holds whole. Nobody specifies a system better than its code does; that is why there is no black box development.
+Waterfall is read as slow iteration: the specification arrived late and no longer matched what the users wanted. That reading misses the ontological fault. A system is not specified from its inputs and outputs: that is the core of domain-driven design (Evans). What makes it behave right is how it represents the world it works with: the model, and no specification from outside the model states it. To specify behaviour precisely enough to be beyond error is to write code. Spec-driven development holds in schema, from outside, a model the code holds whole; nobody specifies a system better than its code does, and that is why there is no black box development.
 
-## Behaviour from outside, design from inside
+## Specified from within
 
-Behaviour comes from the design: the model embedded in the code defines how the world around it works, so it defines how the application behaves. The behaviour a design happens to give is not to be suffered: the behaviour is stated first, from outside, and a design that matches it is sought from inside, consciously. Acceptance-test-driven development is that loop, and not the acceptance test alone. Make it work, make it right, make it fast (Beck): a specification roughly fit is the first step, making it right is the design, making it fast follows from it. As detail comes, a new test; as things are added, the base layers are reviewed: do they still fit? The model exploration whirlpool (Evans) is the same loop on the model.
+Tests are code: a good test is the executable specification, more precise than Gherkin and more readable. The acceptance test is written against the driving port of the domain, so it is a test on the model and part of it, one suite per bounded context; the end-to-end test on the adapter is another thing. Below it, each object is specified from its own outside by tests at lower loops. The engineer embedded in the model specifies the application from within the code, not from outside it in a ticket.
 
-The reverse Conway manoeuvre (Skelton & Pais) is the analogue. An organisation that merely manages the goal constrains too little; the organisation is designed to fit the flow wanted. Designing for fast flow is that, and too much specification loses the flow.
+Behaviour comes from the design: the model the code holds defines how the world around it works, so it defines how the application behaves. The behaviour a design happens to give is not to be suffered: behaviour is stated first, at the port, and the design that gives it is chosen inside, consciously. That is the loop of acceptance-test-driven development, make it work, make it right, make it fast (Beck): the test roughly fit is the first step, making it right is the design, making it fast follows. As detail comes, a new test; as features come, the base layers are asked whether they still fit: the model exploration whirlpool (Evans). The reverse Conway manoeuvre (Skelton & Pais) is the same move on the organisation: designed for the flow wanted, not left to whatever manages the goal; too much specification loses the flow.
 
 ## The feedback only code gives
 
