@@ -12,7 +12,7 @@ The two claims go together as the first and second way of DevOps (Kim) do. The f
 
 ## The code is the specification
 
-The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not represent it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and it is what the watch is for.
+The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not just represent it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and it is what the watch is for.
 
 Waterfall is read as slow iteration: the specification arrived late and no longer matched what the users wanted. That reading misses the ontological fault. A system is not specified from its inputs and outputs: that is the core of domain-driven design (Evans). What makes it behave right is how it represents the world it works with: the model, and no specification from outside the model states it. To specify behaviour precisely enough to be beyond error is to write code. Spec-driven development holds in schema, from outside, a model the code holds whole; nobody specifies a system better than its code does, and that is why there is no black box development.
 
@@ -42,7 +42,9 @@ Missing the sign means bugs sneaking in, then a redesign that risks breaking pro
 
 The problem shows only with the accumulation of features and insight; it has gone unnoticed mostly where there was money to rewrite. Code is meant to be redesigned often, not to live long. Thrown away whole and remade from zero, it sediments no learning, neither in the head nor in the code.
 
-None of this is new to agentic development. Agents have eased the pain, which makes it less noticeable; and they accelerate the right path faster than the wrong one.
+## Agents
+
+None of this is new to agentic development. Agents have eased the pain, which makes it less noticeable, and they accelerate the right path faster than the wrong one, for two reasons. A good design prevents waste in context, so an agent works better on it ([[philosophy/context-economics]]). And the fundamentals of flow have not changed, batch size economics and the DORA metrics: an agent's speed accelerates the flow, it is not spent shipping bigger batches ([[philosophy/batch-size-economics]], [[philosophy/agentic-extreme-programming]]). The problem with bad design was never that it is fast to build; it is the consequences. Think good architecture is expensive? Try bad architecture (Foote & Yoder).
 
 ## Related
 
