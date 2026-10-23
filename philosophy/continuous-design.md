@@ -1,5 +1,5 @@
 ---
-tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-loops, small-batches]
+tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-loops, small-batches, spec-driven-development]
 ---
 
 # Continuous design
@@ -26,9 +26,9 @@ code does not only express the model, it executes it
 
 ## Code executes the model
 
-The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not just represent it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and the watch below is for it.
+The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not only express it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and the watch on the domain code is for it.
 
-A system is not specified from its inputs and outputs: that is the core of domain-driven design (Evans). What makes it behave right is how it represents the world it works with, the model, and no specification from outside the model states it; to specify behaviour precisely enough to be beyond error is to write code, the best representation of behaviour there is. Nobody specifies a system better than its code does.
+The model sits at the heart of the software (Evans), so a system is not specified from its inputs and outputs. What makes it behave right is how it represents the world it works with, the model, and no specification from outside the model states it; to specify behaviour precisely enough to be beyond error is to write code, the best representation of behaviour there is.
 
 Waterfall failed on this, and nobody dug deep enough to see it: its failure was read as feedback arriving too late, and the cure as iterating faster. The fault was ontological, the specification from outside, and iterating faster on it leaves it in place. Spec-driven development holds in schema, from outside, a model the code holds whole; black-box development leaves nobody at the code where the model runs. Both repeat the fault.
 

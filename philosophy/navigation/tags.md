@@ -53,6 +53,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | session-design | How sessions are shaped, chained and steered so variety reaches the engineer. |
 | session-state | Work state lives in a work file; the conversation is its echo. |
 | small-batches | Working in the smallest steps that still work, from commits to plans. |
+| spec-driven-development | Specifying a system from outside its code, and why the code is the specification. |
 | sub-agents | Delegating to sub-agents to split context and contain process nodes. |
 | tactical-ddd | DDD building blocks in code; here, the aggregate. |
 | types | Invariants carried by the type: parsed once at the entry, the invalid state unrepresentable. |
