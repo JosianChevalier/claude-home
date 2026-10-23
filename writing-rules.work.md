@@ -20,3 +20,4 @@ An always-loaded rule file, written with the user in conversation. The finished 
 - The receiving session needs nothing from the rule: the handover tells it where to read and what to do.
 - Open for `philosophy/`, the user's to bring when mature: the photographer's grid, never shown to the viewer: the notebook is the agent's local short-term memory, transparent to the user.
 - Open for `rules/writing.md`, the user's to bring when mature: a doctrine line on stable positions (things stay where they were, so a change shows).
+- Open for `rules/writing.md`: a `UserPromptSubmit` hook injecting one short line before each answer, pointing to the Human section, never copying it.
