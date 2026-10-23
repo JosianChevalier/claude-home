@@ -6,6 +6,24 @@ tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-l
 
 **Thesis.** Code does not only express the model, it executes it: it is the model's specification, written from within. It is also where tension shows first, so the design stays right by watching the high-level domain code at every change.
 
+```
+code does not only express the model, it executes it
+   │
+   ├──▶ it is the spec ──▶ specified from within
+   │                       behaviour expressed where the domain
+   │                       logic expresses the use case,
+   │                       constraint shaped inside
+   │                       ✗ waterfall, spec-driven, black-box:
+   │                         specified from outside
+   │
+   └──▶ tension shows there first ──▶ watch the high-level
+                                      domain code at every change
+                                           │
+                                           ▼
+                              small batches: the economics of CD
+                              agents accelerate the right path
+```
+
 ## Code executes the model
 
 The code is the design (Reeves). More: it is the specification of the model the software holds, because unlike every other expression of the model ([[philosophy/model-expressions]]) it does not just represent it, it executes it. The model the software holds is not always the one the stakeholders hold, programmers included; that gap is the issue, and the watch below is for it.
