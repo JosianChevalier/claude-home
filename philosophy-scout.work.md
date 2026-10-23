@@ -24,17 +24,15 @@ Size is acceptable (Josian); a near passage riding along is the defect.
 
 ## Return doctrine, decided
 
-- `description: Finds the philosophy passages that bear on one question. Call with the question.` What it does and how to call it; call sites carry the detail.
-- Opening line: "one kaizen question" → "one question".
+- The return is file paths; the caller reads them whole.
 - Posture, added: "**Search wide, carry light.** What you read costs your context; what you return costs the caller's, already loaded. The two bills are apart: exhaust the first, keep the second to what the question needs."
-- The return, opening: "A passage comes back when it speaks to the question itself. One that speaks to the question's subject stays where you found it: having read it is what tells you the rest is enough."
-- The return, removed: "No passage that only sits near the question."
+- The return, opening: "A file comes back when it speaks to the question itself. One that speaks to the question's subject stays where you found it: having read it is what tells you the rest is enough."
+- The return, removed: "No file that only sits near the question."
 
 ## Steps
 
 - [ ] Decide what to do with the off-procedure moves (speculative reads, grep): forbid, or allow and write them in. **← current**
 - [ ] Write the doctrine and that decision in `agents/philosophy-scout.md`, rerun the gitflow question, compare with the baseline.
-- [ ] Reconcile with the 2026-10-21 session, which changed the scout in place (commits 8c380c3 to the angles step): it returns file paths, not passages, and the caller reads them whole; files the caller names are a floor in the return, not the start of the search; the search starts by restating the question as 3–5 mechanisms, each an entry point. "Return doctrine, decided" above predates this and is partly superseded.
 - [ ] Validate the angles step: scout on the bare question, no hint of angles. Passes if `zoom-levels`, `compounding-decisions` and `model-tiers` come back.
   > My agent keeps forcing itself to find feedback in pull requests. What do I do? (an agent asked to review a PR always produces findings, inventing nitpicks when there is nothing real). Files I already know bear on it: attractors.
 - [ ] The stop rule still counts passages ("this round added a passage?") while the return is files.
