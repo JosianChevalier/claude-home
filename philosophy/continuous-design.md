@@ -24,7 +24,7 @@ Behaviour comes from the design: the model the code holds defines how the world 
 
 That is the loop of acceptance-test-driven development, make it work, make it right, make it fast (Beck): the test roughly fit is the first step, making it right is the design, making it fast follows. As detail comes, a new test; as features come, the base layers are asked whether they still fit: the model exploration whirlpool (Evans).
 
-## The watch
+## Watch the domain code at every change
 
 Modeling does not stop where coding starts. The model flows into the code and keeps constraining it to the last change; each change is steered by what the code answers, and the answer reshapes the model in turn. That answer is a feedback no other expression gives, definitive and precise, on the conceptual integrity of the model. Ubiquitous language and event storming are built for the same feedback, as early as possible ([[philosophy/ubiquitous-language]]); they carry the model part of the way, and they cannot be redone for every feature. Tension comes from two sides, the domain moving and the model as a whole constraining each part added to it, a second-order constraint (Juarrero), and the code is where it shows first ([[philosophy/model-phenomenology]]).
 
@@ -40,7 +40,7 @@ Missing the sign means bugs sneaking in, then a redesign that risks breaking pro
 
 The problem shows only with the accumulation of features and insight, and it has gone unnoticed mostly in organisations large and inefficient enough to tolerate waste: in lean terms, muda nobody sees. There, code is rewritten rather than redesigned. Code is meant to be redesigned often, not to live long; thrown away whole and remade from zero, it sediments no learning, neither in the head nor in the code.
 
-## Agents
+## Agents accelerate the right path
 
 None of this is new to agentic development. Agents have eased the pain, which makes it less noticeable, and they accelerate the right path faster than the wrong one, for two reasons. A good design prevents waste in context, so an agent works better on it ([[philosophy/context-economics]]). And the fundamentals of flow have not changed, batch size economics and the DORA metrics: an agent's speed accelerates the flow, it is not spent shipping bigger batches ([[philosophy/batch-size-economics]], [[philosophy/agentic-extreme-programming]]). The problem with bad design was never that it is fast to build; it is the consequences. Think good architecture is expensive? Try bad architecture (Foote & Yoder).
 
