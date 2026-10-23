@@ -4,7 +4,7 @@ tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-l
 
 # Continuous design
 
-**Thesis.** Code does not only express the model, it executes it: it is the model's specification, written from within. It is also where tension shows first, so the design stays right by watching the high-level domain code at every change.
+**Thesis.** Code does not only express the model, it executes it: it is the most precise specification of the running software, and, while iterating on the design, the best place to watch for the degradation of conceptual integrity.
 
 ```
 code does not only express the model, it executes it
