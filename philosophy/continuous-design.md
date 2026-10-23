@@ -38,9 +38,17 @@ The engineer embedded in the model specifies the application from within the cod
 
 ## Express the behaviour, shape the constraint
 
-Behaviour comes from the design: the model the code holds defines how the world around it works, so it defines how the application behaves. The model is an enabling constraint on behaviour (Snowden): a structure, a core, and what every specification shapes whether or not the writer knows it. Not knowing it is how the results come out wrong. So the behaviour a design happens to give is not to be suffered: the behaviour wanted is expressed first, at the port, and the constraint that allows it is shaped inside, consciously.
+Behaviour comes from the design: the model the code holds defines how the world around it works, so it defines how the application behaves. The tests specify the constraints that should drive the model, and they are not enough: on Snowden's constraint pairs ([[philosophy/constraint-types]]), they sit opposite the design.
 
-That is the loop of acceptance-test-driven development, make it work, make it right, make it fast (Beck): the test roughly fit is the first step, making it right is the design, making it fast follows. As detail comes, a new test; as features come, the base layers are asked whether they still fit: the model exploration whirlpool (Evans).
+| Snowden's pair | tests, the specification | design |
+|---|---|---|
+| governing / enabling | governing: rules the behaviour must keep | enabling: lets the software evolve and adapt to the domain |
+| external / internal | exoskeleton, set from outside | endoskeleton, structuring from inside |
+| containing / connecting | contains: clear boundary conditions | connects the concepts: adaptive, little visibility |
+
+The spec has holes, and the design, executed, fills every one: it drives the behaviour of everything left unspecified, since nothing can be specified whole. Its connections are what the tests do not show: that is why the design is watched in the code. So the behaviour a design happens to give is not to be suffered: the behaviour wanted is expressed first, in the acceptance test, and the constraint that allows it is shaped inside, consciously.
+
+That is the loop of acceptance-test-driven development, make it work, make it right, make it fast (Beck): make it work is passing the test roughly, making it right is the design, making it fast follows. As detail comes, a new test; as features come, the base layers are asked whether they still fit: the model exploration whirlpool (Evans).
 
 ## Watch the domain code at every change
 
