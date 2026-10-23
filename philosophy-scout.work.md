@@ -5,11 +5,11 @@ rank: 5
 
 # philosophy-scout
 
-The scout (`agents/philosophy-scout.md`) is called by `philosophy-guide` and by kaizen sessions, both with a loaded context: each splits a user question into sub-questions, one scout per sub-question. Its posture: explore until a round adds nothing, return passages verbatim. Not yet registered as a subagent type: a test runs it as a general-purpose agent told to read the file and be it, with `<harness-root>` = the checkout.
+The scout (`agents/philosophy-scout.md`) is called by `philosophy-guide` and by kaizen sessions, both with a loaded context: each splits a user question into sub-questions, one scout per sub-question. Its posture: explore until a round adds nothing, return the paths of the files that apply; the caller reads them whole. A test calls it as the `philosophy-scout` subagent type.
 
 ## Baseline
 
-Question: "How should we use an agent to handle our gitflow?" Run on the current `agents/philosophy-scout.md`.
+Question: "How should we use an agent to handle our gitflow?" Run on the scout as it stood before 2026-10-21, when it returned passages.
 
 | | |
 |---|---|
@@ -20,7 +20,7 @@ Question: "How should we use an agent to handle our gitflow?" Run on the current
 - Near, not on the question: `model-tiers`. Every other file returned is on it.
 - Off procedure: read `process-units` on speculation (no file cited it); grepped five files instead of reading them.
 
-Size is acceptable (Josian); a near passage riding along is the defect.
+Size is acceptable (Josian); a near file riding along is the defect.
 
 ## Return doctrine, decided
 
