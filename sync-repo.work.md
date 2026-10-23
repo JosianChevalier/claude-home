@@ -12,7 +12,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
 - [x] Migration 1: decisions, in conversation.
 - [x] Migration 2: prototype `.claude/` zipped onto the laptop, in `old-claude/`.
 - [ ] Migration 3: integrate bit by bit, MO below. **← current**
-  - [x] 3.1 `CLAUDE.md` replaced; OpenCode section parked in `old-claude/AGENTS.md`.
+  - [x] 3.1 `CLAUDE.md` replaced; its OpenCode section dropped.
   - [ ] 3.2 Philosophy. **← current**
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
@@ -146,7 +146,7 @@ Order of the backlog: fewest outgoing links first, mutual pairs adjacent, one cl
 
 **Order:**
 
-1. Replace the content of `CLAUDE.md`. Done 2026-10-08; OpenCode section parked in `old-claude/AGENTS.md`.
+1. Replace the content of `CLAUDE.md`. Done 2026-10-08; its OpenCode section dropped.
 2. Philosophy files.
 3. Rules, one by one. Many are old: some already reimplemented in skills, others to move in a different form. Keep the rationale that explains *how to say* things.
 4. Skills.
@@ -225,6 +225,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `rationale/change-in-place.md` | `philosophy/change-in-place.md` | recentered; just in time named (Ohno) and split, the why → `batch-size-economics` with the anchoring of seams built early, the rule → `batch-slicing`, with pull; last responsible moment in the weights, named in the old `planning-is-everything`, architecture and optionality a philosophy to write (3.2); flag versus dark kept in The exception; dark code pending `continuous-delivery`; the old notes' link → `philosophy/change-in-place` |
 | `skills/handover/SKILL.md` | `skills/handover/SKILL.md` | rewritten |
 | `skills/writing-rules`, `skills/writing-skills` | — | obsolete 2026-10-19: every line now in `harness-elements`, `harness-shape`, `attractors` or `rules/writing` |
+| `AGENTS.md` | — | OpenCode section parked 2026-10-08, dropped 2026-10-23 |
 | `skills/clean-code-go`, `skills/create-script-flyway`, `skills/generate-jooq`, `skills/mutation-test` | — | dropped 2026-10-23 at the user's word, nothing carried |
 | `skills/harness-improvement/SKILL.md` | `skills/kaizen/SKILL.md` | written from mocks; the old file dropped wholesale, every line held elsewhere (the skill, the always-on rules, the philosophy, Claude Code's docs) or obsolete (opencode, devcontainer, `project-domain-documentation`) |
 | `skills/study-making/SKILL.md` | `skills/study-making/SKILL.md` | moved 2026-10-12, out of phase order; `## Doctrine` as maxims; phases → loop figure; Shape, Diagrams, Content Discipline merged; Scale and mode born here (derisk before any plan, the word "autopilot"); calibration ritual line dropped; Examples cut to one observed violation and one good; calibration as restatement, study not waiting, probe round as a colleague's report, Lens as the agent's grid, Figures section (2026-10-13); `aggregate-identification` dispatch kept, 3.4 |
