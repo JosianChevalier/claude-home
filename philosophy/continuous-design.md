@@ -32,9 +32,9 @@ The later signs are known: the agent touches half the application for one change
 
 What is watched is not every line. The code expresses the model at the appropriate level of abstraction, rid of the accidental complexity of the technical layers, and the high-level domain code is what is watched: the domain service behind the driving port, the code that reads as the user story, for how the model behaves and how it represents the world. This is the control we keep over what we produce, held by being embedded in the model, as cognition is ([[philosophy/collaborative-production]]). It need not be an IDE: a representation that places the design topologically and shows its snippets as one moves through it is the same watch ([[philosophy/embodied-navigation]]).
 
-The rest follows from the model. Once the models are right, software development becomes easy: most persistence problems, deadlocks included, come from aggregates left undefined and fade once the consistency boundary is right ([[philosophy/aggregates]]); most distributed workflows between services come from boundaries drawn wrong around the systems.
-
 ## The same economics as continuous delivery
+
+The rest follows from the model. Once the models are right, software development becomes easy: most technical problems are modeling problems surfacing in the technical layers. Two examples: persistence and concurrency trouble comes from consistency boundaries left undefined ([[philosophy/aggregates]]); distributed workflows between services come from boundaries drawn wrong around the systems.
 
 Missing the sign means bugs sneaking in, then a redesign that risks breaking production. An agent makes a redesign cheaper, and continuous design cheaper still, by orders of magnitude; the question is the one continuous delivery asks: accept the bugs and the rework, or reduce them. Small batches are what keeps the risk low ([[philosophy/batch-size-economics]], [[philosophy/change-in-place]]), and too much specification loses the flow. Agents shorten the mean time to recovery; the floor is further down.
 
