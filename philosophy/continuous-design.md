@@ -34,7 +34,7 @@ Waterfall failed on this, and nobody dug deep enough to see it: its failure was 
 
 ## Specified from within
 
-The engineer embedded in the model specifies the application from within the code, not from outside it in a ticket. Tests are code: a good test is the executable specification, more precise than Gherkin and more readable. The acceptance test is written wherever the domain logic expresses the use case, often the driving port, in one bounded context, so it is a test on the model and part of it; the end-to-end test, the whole deployable service from its entry point, is another thing. Below it, each object is specified from its own outside by tests at lower loops.
+The engineer embedded in the model specifies the application from within the code, not from outside it in a ticket. Tests are code: a good test is the executable specification, more precise than any specification written outside the code and, to the engineer, more readable. The acceptance test is written wherever the domain logic expresses the use case, often the driving port, in one bounded context, so it is a test on the model and part of it; the end-to-end test, the whole deployable service from its entry point, is another thing. Below it, outside-in TDD: each object specified from its own outside by tests at the inner loops ([[philosophy/feedback-loops]]).
 
 ## Express the behaviour, shape the constraint
 
