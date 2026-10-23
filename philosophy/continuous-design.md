@@ -68,7 +68,7 @@ The cost of a design left unwatched shows only with the accumulation of features
 
 ## Agents accelerate the right path
 
-None of this is new to agentic development. Agents have eased the pain, which makes it less noticeable, and they accelerate the right path faster than the wrong one, for two reasons. A good design prevents waste in context, so an agent works better on it ([[philosophy/context-economics]]). And the fundamentals of flow have not changed, batch size economics and the DORA metrics: an agent's speed accelerates the flow, it is not spent shipping bigger batches ([[philosophy/batch-size-economics]], [[philosophy/agentic-extreme-programming]]). The problem with bad design was never that it is fast to build; it is the consequences. Think good architecture is expensive? Try bad architecture (Foote & Yoder).
+None of this is specific to agentic development. Agents have eased the pain, which makes it less noticeable, and they accelerate the right path faster than the wrong one, for two reasons. A good design prevents waste in context, so an agent works better on it ([[philosophy/context-economics]]). And the fundamentals of flow have not changed, batch size economics and the DORA metrics: an agent's speed pays when it shortens the flow of small batches, not when it ships bigger ones ([[philosophy/batch-size-economics]], [[philosophy/agentic-extreme-programming]]). Agents make building fast, but the cost of a bad design was never in building it; it is in its consequences. Think good architecture is expensive? Try bad architecture (Foote & Yoder).
 
 ## Related
 
