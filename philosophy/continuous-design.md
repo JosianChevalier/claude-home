@@ -1,5 +1,5 @@
 ---
-tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-loops, small-batches, spec-driven-development]
+tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-loops, small-batches, spec-driven-development, constraints]
 ---
 
 # Continuous design
@@ -78,5 +78,6 @@ None of this is specific to agentic development. Agents have eased the pain, whi
 - Why the spectator builds no model: [[philosophy/collaborative-production]].
 - Thinking with the code by moving through it: [[philosophy/embodied-navigation]].
 - The consistency boundary: [[philosophy/aggregates]].
+- Snowden's types of constraints, tests and design on opposite sides: [[philosophy/constraint-types]].
 - Small batches, and the change made where it stands: [[philosophy/batch-size-economics]], [[philosophy/change-in-place]].
 - Waste in context, and the practices that hold each other up: [[philosophy/context-economics]], [[philosophy/agentic-extreme-programming]].
