@@ -74,33 +74,33 @@ Partial application functions (`associateWithTotalDiscount`, `ensureHigherThan`)
 
 ```ts
 // BAD — comments revealing hidden functions
-function process(siteId: SiteId): void {
+function process(customerId: CustomerId): void {
   // Fetch current state
-  const alerts = alertRepository.findActive(siteId);
-  const devices = deviceRepository.findBySite(siteId);
+  const orders = orderRepository.findPending(customerId);
+  const payments = paymentRepository.findByCustomer(customerId);
 
-  // Detect anomalies
-  const anomalies: Anomaly[] = [];
-  for (const device of devices) {
-    if (device.isUnreachable()) {
-      anomalies.push(Anomaly.unreachable(device));
+  // Detect failed payments
+  const failedPayments: FailedPayment[] = [];
+  for (const payment of payments) {
+    if (payment.isDeclined()) {
+      failedPayments.push(FailedPayment.declined(payment));
     }
   }
 
-  // Reconcile alerts with anomalies
-  for (const alert of alerts) {
-    if (!anomalies.some(a => a.matches(alert))) {
-      alert.close();
+  // Reconcile orders with failed payments
+  for (const order of orders) {
+    if (failedPayments.some(f => f.matches(order))) {
+      order.cancel();
     }
   }
 }
 
 // GOOD — each step is a function, the story is clear
-function process(siteId: SiteId): void {
-  const currentAlerts = fetchActiveAlerts(siteId);
-  const anomalies = detectAnomalies(siteId);
+function process(customerId: CustomerId): void {
+  const pendingOrders = fetchPendingOrders(customerId);
+  const failedPayments = detectFailedPayments(customerId);
 
-  reconcile(currentAlerts, anomalies);
+  reconcile(pendingOrders, failedPayments);
 }
 ```
 
@@ -117,16 +117,16 @@ Names should reveal intent and belong to the domain language.
 ```ts
 // BAD
 function proc(s: string, t: number) { }
-function getDevices(f: boolean): Device[] { }
+function getPayments(f: boolean): Payment[] { }
 const tmp = computeResult();
 
 // GOOD
-function closeResolvedAlerts(siteId: SiteId) { }
-function findUnreachableDevices(): Device[] { }
-const dailyConsumption = disaggregateByDay(monthlyTotal);
+function cancelUnpaidOrders(customerId: CustomerId) { }
+function findDeclinedPayments(): Payment[] { }
+const dailyRevenue = splitByDay(monthlyRevenue);
 ```
 
-**No abbreviations.** `temperature` not `temp`. `repository` not `repo` (in code, fine in conversation).
+**No abbreviations.** `quantity` not `qty`. `repository` not `repo` (in code, fine in conversation).
 
 ## Minimize Indentation
 
@@ -134,23 +134,23 @@ Prefer early returns over nested conditions. Flat code reads easier.
 
 ```ts
 // BAD
-function process(device: Device | undefined): void {
-  if (device !== undefined) {
-    if (device.isActive()) {
-      if (device.hasLowBattery()) {
-        raiseAlert(device);
+function process(product: Product | undefined): void {
+  if (product !== undefined) {
+    if (product.isListed()) {
+      if (product.isLowOnStock()) {
+        reorder(product);
       }
     }
   }
 }
 
 // GOOD
-function process(device: Device | undefined): void {
-  if (device === undefined || !device.isActive()) {
+function process(product: Product | undefined): void {
+  if (product === undefined || !product.isListed()) {
     return;
   }
-  if (device.hasLowBattery()) {
-    raiseAlert(device);
+  if (product.isLowOnStock()) {
+    reorder(product);
   }
 }
 ```
@@ -161,12 +161,12 @@ Ask objects to do things, don't extract their data to decide for them.
 
 ```ts
 // BAD — asking for data, deciding externally
-if (alert.status === Status.Pending && alert.createdAt < cutoff) {
-  alert.status = Status.Expired;
+if (order.status === Status.Pending && order.createdAt < cutoff) {
+  order.status = Status.Expired;
 }
 
 // GOOD — telling the object what to do (returns the new state)
-const expired = alert.expireIfOlderThan(cutoff);
+const expired = order.expireIfOlderThan(cutoff);
 ```
 
 ## First-Class Collections
@@ -174,12 +174,12 @@ const expired = alert.expireIfOlderThan(cutoff);
 When a collection has domain meaning, wrap it. This gives behavior a home.
 
 ```ts
-// Instead of Device[] with external filtering logic
-class Devices {
-  constructor(private readonly values: readonly Device[]) {}
+// Instead of Product[] with external filtering logic
+class Products {
+  constructor(private readonly values: readonly Product[]) {}
 
-  withLowBattery(): Devices {
-    return new Devices(this.values.filter(device => device.hasLowBattery()));
+  lowOnStock(): Products {
+    return new Products(this.values.filter(product => product.isLowOnStock()));
   }
 }
 ```
@@ -191,7 +191,7 @@ A domain service is a **closure**: context captured once, one behavior returned.
 ```ts
 // one behavior + context → closure
 const computeMissing = (period: Period) =>
-  (measures: Measures): MeasuresWithGaps => { ... };
+  (stockLevels: StockLevels): StockLevelsWithGaps => { ... };
 
 // pipeline: .map(computeMissing(period))
 ```
@@ -199,15 +199,15 @@ const computeMissing = (period: Period) =>
 When several closures would capture the **same context** and belong together — sharing a resource, calling each other, evolving together — you have rebuilt a class by hand: promote it. The repository shape (a few cohesive operations over one shared store) is the archetype, applied here to pure domain:
 
 ```ts
-class MaintenanceCalendar {
-  constructor(private readonly windows: readonly MaintenanceWindow[]) {}
+class DeliveryCalendar {
+  constructor(private readonly slots: readonly DeliverySlot[]) {}
 
-  isUnderMaintenance(device: Device, at: Date): boolean { ... }
+  canDeliver(order: Order, at: Date): boolean { ... }
 
-  nextWindowFor(site: SiteId): MaintenanceWindow | undefined { ... }
+  nextSlotFor(customer: CustomerId): DeliverySlot | undefined { ... }
 
-  schedule(window: MaintenanceWindow): MaintenanceCalendar {
-    return new MaintenanceCalendar([...this.windows, window]);
+  schedule(slot: DeliverySlot): DeliveryCalendar {
+    return new DeliveryCalendar([...this.slots, slot]);
   }
 }
 ```
@@ -293,10 +293,10 @@ TypeScript is structurally typed — every `string` is every other `string`. Val
 - Id-like primitives → **branded type + factory**
 
 ```ts
-declare function findBySite(site: SiteId): Device[];
+declare function findByCustomer(customer: CustomerId): Order[];
 
-findBySite('paris');          // ❌ does not compile — a plain string is not a SiteId
-findBySite(siteId('paris'));  // ✅ built through the factory
+findByCustomer('alice');              // ❌ does not compile — a plain string is not a CustomerId
+findByCustomer(customerId('alice'));  // ✅ built through the factory
 ```
 
 The branding mechanism itself heavily depends on each project's needs and standards — follow the project's existing branding utility rather than introducing a new one.
@@ -309,18 +309,18 @@ When a workflow is a sequence of transformations, compose it as a **functional p
 
 ```ts
 // BAD — manual variable wiring
-const translated = valvePositionsToMeasures(measures);
+const translated = stockMovementsToLevels(movements);
 const withGaps = fillGaps(translated, period);
 const extrapolated = extrapolateFrom(withGaps, period);
 if (extrapolated.size === 0) return new Set();
-return distribute(extrapolated, heating);
+return distribute(extrapolated, warehouseStorageCost);
 
 // GOOD — pipeline reads as a story
-translateToMeasures(measures)
+translateToStockLevels(movements)
   .map(computeMissing(period))
   .map(extrapolateMissing(period))
-  .map(distribute(heating))
-  .fold(groupByRoom, () => new Set());
+  .map(distribute(warehouseStorageCost))
+  .fold(groupByProduct, () => new Set());
 ```
 
 Key principles:
@@ -342,21 +342,21 @@ In functional-style array pipelines, extract inline lambdas to named functions r
 // BAD — inline lambdas obscure intent
 return expectedTimestamps
   .filter(ts => !covered.has(ts))
-  .map(ts => new MissingMeasure(ts, dimension));
+  .map(ts => new MissingStockLevel(ts, unit));
 
 // GOOD — named higher-order functions
 return expectedTimestamps
   .filter(notCoveredBy(covered))
-  .map(asMissing(dimension));
+  .map(asMissing(unit));
 
 const notCoveredBy = (covered: Set<Instant>) => (timestamp: Instant): boolean =>
   !covered.has(timestamp);
 
-const asMissing = <Dimension>(dimension: Dimension) => (timestamp: Instant): Measure<Dimension> =>
-  new MissingMeasure(timestamp, dimension);
+const asMissing = <Unit>(unit: Unit) => (timestamp: Instant): StockLevel<Unit> =>
+  new MissingStockLevel(timestamp, unit);
 ```
 
-Each extracted function captures context via its parameters and returns a function that reads as a verb phrase in the pipeline. A trivial delegation like `device => device.hasLowBattery()` may stay inline — extract when the lambda holds logic, not just a call.
+Each extracted function captures context via its parameters and returns a function that reads as a verb phrase in the pipeline. A trivial delegation like `product => product.isLowOnStock()` may stay inline — extract when the lambda holds logic, not just a call.
 
 ## Errors
 
@@ -368,17 +368,17 @@ When a general TypeScript convention conflicts with the domain model's ability t
 
 ```ts
 // Convention says: avoid optional-looking fields in domain types
-// But the domain has partial data — some readings may be missing
+// But the domain has partial data — some prices may be missing
 // ✅ Domain expressiveness wins — absence is modeled explicitly
-type TimestampReading = Readonly<{
-  temperature: Option<CelsiusDegree>;
-  setpoint: Option<CelsiusDegree>;
+type PriceSnapshot = Readonly<{
+  listPrice: Option<Price>;
+  salePrice: Option<Price>;
 }>;
 
 // ❌ Convention wins, domain suffers — no way to represent "missing"
-type TimestampReading = Readonly<{
-  temperature: CelsiusDegree;
-  setpoint: CelsiusDegree;
+type PriceSnapshot = Readonly<{
+  listPrice: Price;
+  salePrice: Price;
 }>;
 ```
 
@@ -392,21 +392,21 @@ Import a factory function directly when its name alone is sufficient to understa
 
 ```ts
 // GOOD — name is self-explanatory, direct import
-import { siteId } from './siteId';
+import { customerId } from './customerId';
 import { success, failure } from './result';
 import { nonBlank } from './nonBlankString';
 
-const site = siteId('paris');
+const customer = customerId('alice');
 return success(result);
 return failure(error);
 
 // BAD — generic name, no idea what it builds without the qualifier
-import { of } from './siteId';
+import { of } from './customerId';
 
-const site = of('paris');  // of what?
+const customer = of('alice');  // of what?
 
 // GOOD — keep a qualifier for generic names
-const site = SiteId.of('paris');
+const customer = CustomerId.of('alice');
 const duration = Duration.of(5, 'minutes');
 ```
 

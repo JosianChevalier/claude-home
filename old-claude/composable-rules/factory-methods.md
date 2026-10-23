@@ -5,35 +5,35 @@ In aggregate roots, use private constructors with distinct factory methods to cl
 ## Rules
 
 - Constructors are `private` - only factory methods create instances
-- **Domain creation**: Static factory methods with domain-meaningful names (e.g., `raiseFrom`, `createFor`)
+- **Domain creation**: Static factory methods with domain-meaningful names (e.g., `placeFrom`, `createFor`)
 - **Hydration**: Static `from()` or `reconstitute()` for loading from storage
-- **State transitions**: Instance methods returning new state objects (e.g., `solve()`, `close()`)
+- **State transitions**: Instance methods returning new state objects (e.g., `ship()`, `cancel()`)
 
 ## Example
 
 ```java
-public final class PendingAlert implements Alert {
-    private final AlertId id;
-    private final Instant raisedDate;
+public final class PendingOrder implements Order {
+    private final OrderId id;
+    private final Instant placedDate;
 
-    private PendingAlert(AlertId id, Instant raisedDate) {
+    private PendingOrder(OrderId id, Instant placedDate) {
         this.id = requireNonNull(id);
-        this.raisedDate = requireNonNull(raisedDate);
+        this.placedDate = requireNonNull(placedDate);
     }
 
     // Domain creation - meaningful name
-    public static PendingAlert raiseFrom(AlertTrigger trigger, Instant at) {
-        return new PendingAlert(AlertId.random(), at);
+    public static PendingOrder placeFrom(Cart cart, Instant at) {
+        return new PendingOrder(OrderId.random(), at);
     }
 
     // Hydration - generic name for reconstruction
-    public static PendingAlert from(AlertId id, Instant raisedDate) {
-        return new PendingAlert(id, raisedDate);
+    public static PendingOrder from(OrderId id, Instant placedDate) {
+        return new PendingOrder(id, placedDate);
     }
 
     // State transition - returns new type
-    public SolvedAlert solve(Instant solvedAt) {
-        return SolvedAlert.from(this, solvedAt);
+    public ShippedOrder ship(Instant shippedAt) {
+        return ShippedOrder.from(this, shippedAt);
     }
 }
 ```

@@ -42,7 +42,7 @@ Immutability is load-bearing. A transition returns a fresh value of the next typ
 
 ## Nominal where the language is structural
 
-In a structurally typed language every `string` is every other `string`, so an `OrderId` passed where a `SiteId` is expected is invisible to the checker: primitive obsession has no symptom. Nominal-ness is manufactured: a class for a value with behaviour, a brand and a factory for an id. The contract is what matters, construction through one door and the plain primitive rejected; the mechanism is each project's.
+In a structurally typed language every `string` is every other `string`, so an `OrderId` passed where a `CustomerId` is expected is invisible to the checker: primitive obsession has no symptom. Nominal-ness is manufactured: a class for a value with behaviour, a brand and a factory for an id. The contract is what matters, construction through one door and the plain primitive rejected; the mechanism is each project's.
 
 ## Related
 

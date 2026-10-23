@@ -13,7 +13,7 @@ Temporary or detailed info useful during development. Typically used when deploy
 
 ### INFO
 
-First level that reaches **Datadog**, which costs money. Only log what provides legitimate operational visibility: key lifecycle events, supervision results, meaningful state transitions.
+First level that reaches **Datadog**, which costs money. Only log what provides legitimate operational visibility: key lifecycle events, order lifecycle results, meaningful state transitions.
 
 ### WARN
 

@@ -19,7 +19,7 @@ Refactor in the smallest possible steps. Each step is a commit. Pre-commit hooks
 
 ### Directed Refactoring
 
-The orchestrator has a **high-level goal** (e.g. "reshape this class to separate aggregation from disaggregation"). Used when preparing code for a feature, following a plan, or aligning structure.
+The orchestrator has a **high-level goal** (e.g. "reshape this class to separate pricing from discounting"). Used when preparing code for a feature, following a plan, or aligning structure.
 
 ```
 1. Pre-load: read AGENTS.md, production code, tests
@@ -76,9 +76,9 @@ Dispatch with `subagent_type: "committer"`. Include in prompt the context of wha
 Each commit message describes the single refactoring move:
 
 ```
-♻️ Rename `getTemperature` to `fetchTemperature`
-♻️ Extract `detectAnomalies` method from `process`
-♻️ Move `BatteryCheck` to supervision.batteries package
+♻️ Rename `getPrice` to `fetchPrice`
+♻️ Extract `detectFailedPayments` method from `process`
+♻️ Move `StockCheck` to inventory.stock package
 ```
 
 ## When Pre-Commit Fails

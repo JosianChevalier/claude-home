@@ -43,9 +43,9 @@ A single atomic step is ONE of:
 
 ```java
 // GOOD — hides conversion details behind a name
-.map(this::toRoomConsumptions)
+.map(this::toProductStorageCosts)
 
-private RoomConsumptions toRoomConsumptions(Entry<RoomId, Map<Instant, Double>> entry) {
+private ProductStorageCosts toProductStorageCosts(Entry<ProductId, Map<Instant, Double>> entry) {
     // conversion logic here
 }
 ```
@@ -53,11 +53,11 @@ private RoomConsumptions toRoomConsumptions(Entry<RoomId, Map<Instant, Double>> 
 **Use partial application** when a pipeline step needs an extra parameter.
 
 ```java
-// GOOD — captures siteHeatingConsumption into the pipeline
-.map(distributeUsing(siteHeatingConsumption))
+// GOOD — captures warehouseStorageCost into the pipeline
+.map(distributeUsing(warehouseStorageCost))
 
-private Function<Weights, Distributed> distributeUsing(WattHour consumption) {
-    return weights -> distribute.distribute(weights, consumption);
+private Function<Weights, Distributed> distributeUsing(Money cost) {
+    return weights -> distribute.distribute(weights, cost);
 }
 ```
 
@@ -65,10 +65,10 @@ private Function<Weights, Distributed> distributeUsing(WattHour consumption) {
 
 ```java
 // BAD — partial application wrapping another Function-returning method
-private Function<Weights, Distributed> distributeUsing(WattHour consumption) {
-    return applyDistribute(consumption);
+private Function<Weights, Distributed> distributeUsing(Money cost) {
+    return applyDistribute(cost);
 }
-private static Function<Weights, Distributed> applyDistribute(WattHour c) {
+private static Function<Weights, Distributed> applyDistribute(Money c) {
     return weights -> distribute.distribute(weights, c);
 }
 ```

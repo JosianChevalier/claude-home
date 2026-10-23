@@ -18,4 +18,4 @@ This keeps the branch close to trunk and avoids divergences to ensure agents are
 
 ## Worktree Path Discipline
 
-When working in a worktree (`Projects/worktrees/*`), **all file operations must use worktree paths**. The IDE may provide paths pointing to the main repo (`Projects/bms-supervision-service/`) via system reminders — never use those paths directly. Translate them to the worktree equivalent before reading, editing, or committing.
+When working in a worktree (`Projects/worktrees/*`), **all file operations must use worktree paths**. The IDE may provide paths pointing to the main repo (`Projects/shop-ordering-service/`) via system reminders — never use those paths directly. Translate them to the worktree equivalent before reading, editing, or committing.

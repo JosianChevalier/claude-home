@@ -6,7 +6,7 @@ Based on [Domain-Oriented Observability](https://martinfowler.com/articles/domai
 
 ## Pattern
 
-1. Domain defines an `*Instrumentation` SPI with methods named after **domain events** (e.g. `discountApplied()`, `deviceBecameUnreachable()`)
+1. Domain defines an `*Instrumentation` SPI with methods named after **domain events** (e.g. `discountApplied()`, `paymentDeclined()`)
 2. Infrastructure provides concrete implementations (logging, metrics, Datadog, etc.) — domain doesn't know or care which
 
 ## Rules

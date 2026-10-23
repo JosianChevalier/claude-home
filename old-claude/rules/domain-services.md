@@ -10,13 +10,13 @@ create them as fields, don't inject them.
 
 ```java
 // GOOD — internal orchestration, hidden implementation
-public class DisaggregatedConsumption {
+public class AllocatedStorageCost {
     private final ComputeMissing computeMissing = new ComputeMissing();
     private final Distribute distribute = new Distribute();
 }
 
 // BAD — leaking internal structure through constructor
-public class DisaggregatedConsumption {
-    public DisaggregatedConsumption(ComputeMissing cm, Distribute d) { }
+public class AllocatedStorageCost {
+    public AllocatedStorageCost(ComputeMissing cm, Distribute d) { }
 }
 ```

@@ -75,9 +75,9 @@ Do **not** let a try-catch interrupt a functional pipeline with imperative logic
 Bugs, broken invariants, unreachable states: throw and let it propagate to the boundary (the left adapter translates to HTTP 500, NACK, etc.). The domain never catches these.
 
 ```ts
-class BatteryLevel {
+class DiscountRate {
   constructor(readonly value: number) {
-    if (value < 0 || value > 100) throw new Error(`Battery level must be 0-100, got ${value}`);
+    if (value < 0 || value > 100) throw new Error(`Discount rate must be 0-100, got ${value}`);
   }
 }
 ```

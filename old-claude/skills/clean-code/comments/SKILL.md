@@ -21,37 +21,37 @@ For every comment, ask: **"Can I change the code so this comment is unnecessary?
 
 ```java
 // BAD
-// Check if the device has not sent data for more than 24 hours
-if (Duration.between(device.lastSeen(), now).toHours() > 24) {
+// Check if the cart has not been updated for more than 24 hours
+if (Duration.between(cart.lastUpdated(), now).toHours() > 24) {
 
 // ITERATION 1 - extract to method, delete comment
-if (device.isUnreachableSince(now, Duration.ofHours(24))) {
+if (cart.isInactiveSince(now, Duration.ofHours(24))) {
 
 // ITERATION 2 - push behavior into the object
-if (device.isUnreachable()) {
+if (cart.isAbandoned()) {
 ```
 
 ### Extract method to replace the comment
 
 ```java
 // BAD - comment separating a section
-void supervise(SiteId siteId) {
-    var devices = deviceRepository.findBySite(siteId);
+void replenish(WarehouseId warehouseId) {
+    var products = productRepository.findByWarehouse(warehouseId);
 
-    // Filter devices with anomalies
-    var anomalies = devices.stream()
-        .filter(d -> d.batteryLevel() < 10 || d.isUnreachable())
+    // Filter products running short
+    var shortages = products.stream()
+        .filter(p -> p.quantityInStock() < 10 || p.hasBackorders())
         .toList();
 
-    anomalies.forEach(this::raiseAlert);
+    shortages.forEach(this::reorder);
 }
 
 // GOOD - the method name IS the comment
-void supervise(SiteId siteId) {
-    var devices = deviceRepository.findBySite(siteId);
-    var anomalies = detectAnomalies(devices);
+void replenish(WarehouseId warehouseId) {
+    var products = productRepository.findByWarehouse(warehouseId);
+    var shortages = detectShortages(products);
 
-    anomalies.forEach(this::raiseAlert);
+    shortages.forEach(this::reorder);
 }
 ```
 
@@ -59,24 +59,24 @@ void supervise(SiteId siteId) {
 
 ```java
 // BAD
-// 10% is considered low battery
-if (device.batteryLevel() < 10) {
+// Fewer than 10 units is considered low stock
+if (product.quantityInStock() < 10) {
 
 // GOOD - the domain concept speaks for itself
-if (device.hasLowBattery()) {
-// Inside Device, the threshold is a named constant or part of BatteryLevel value object
+if (product.isLowOnStock()) {
+// Inside Product, the threshold is a named constant or part of StockQuantity value object
 ```
 
 ### Replace conditional comment with expressive boolean
 
 ```java
 // BAD
-// Only raise alert if device is active and not in maintenance
-if (device.status() == ACTIVE && !maintenanceWindows.contains(device.id())) {
+// Only sell the product if it is listed and not out of stock
+if (product.status() == LISTED && !outOfStockProducts.contains(product.id())) {
 
 // GOOD
-var shouldSupervise = device.isActive() && !device.isUnderMaintenance();
-if (shouldSupervise) {
+var isPurchasable = product.isListed() && !product.isOutOfStock();
+if (isPurchasable) {
 ```
 
 ## The Only Surviving Comments
@@ -87,8 +87,8 @@ Comments that explain **why** — a business rule, a workaround, a non-obvious c
 // DST transitions produce 23h or 25h days, so we use calendar days, not duration
 var dayBoundaries = computeCalendarDayBoundaries(zone);
 
-// Legal requirement: alerts must be retained for 5 years even after resolution
-var retentionCutoff = now.minus(Period.ofYears(5));
+// Legal requirement: invoices must be retained for 10 years even after payment
+var retentionCutoff = now.minus(Period.ofYears(10));
 ```
 
 If you can turn the "why" into a well-named method or constant, do it. The comment only survives when it truly can't be expressed otherwise.

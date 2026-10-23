@@ -21,18 +21,18 @@ An in-memory adapter must behave correctly:
 - Constraints are enforced (uniqueness, not-found cases)
 
 ```java
-public class InMemoryAlertRepository implements AlertRepository {
-    private final List<Alert> alerts = new ArrayList<>();
+public class InMemoryOrderRepository implements OrderRepository {
+    private final List<Order> orders = new ArrayList<>();
 
     @Override
-    public void save(Alert alert) {
-        alerts.add(alert);
+    public void save(Order order) {
+        orders.add(order);
     }
 
     @Override
-    public List<Alert> findBySite(SiteId siteId) {
-        return alerts.stream()
-            .filter(a -> a.siteId().equals(siteId))
+    public List<Order> findByCustomer(CustomerId customerId) {
+        return orders.stream()
+            .filter(o -> o.customerId().equals(customerId))
             .toList();
     }
 }

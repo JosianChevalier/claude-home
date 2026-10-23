@@ -21,8 +21,8 @@ Mockito encourages testing mock behavior rather than real component behavior. Th
 ### Use In-Memory Implementations
 
 ```java
-// ✅ GOOD: InMemorySiteInventory behaves like real storage
-private InMemorySiteInventory siteInventory = new InMemorySiteInventory();
+// ✅ GOOD: InMemoryCustomerDirectory behaves like real storage
+private InMemoryCustomerDirectory customerDirectory = new InMemoryCustomerDirectory();
 ```
 
 ### Use Test Stubs with Real State
@@ -30,18 +30,18 @@ private InMemorySiteInventory siteInventory = new InMemorySiteInventory();
 ```java
 // ✅ GOOD: Stub with real behavior
 @Stub
-class StubAlertRepository implements AlertRepository {
-    private final List<Alert> alerts = new ArrayList<>();
+class StubOrderRepository implements OrderRepository {
+    private final List<Order> orders = new ArrayList<>();
     
     @Override
-    public void save(Alert alert) {
-        alerts.add(alert);
+    public void save(Order order) {
+        orders.add(order);
     }
     
     @Override
-    public List<Alert> findBySite(SiteId siteId) {
-        return alerts.stream()
-            .filter(a -> a.siteId().equals(siteId))
+    public List<Order> findByCustomer(CustomerId customerId) {
+        return orders.stream()
+            .filter(o -> o.customerId().equals(customerId))
             .toList();
     }
 }

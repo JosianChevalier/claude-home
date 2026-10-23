@@ -11,9 +11,9 @@ Domain objects are **immutable**: `final` fields, no setters, private constructo
 ## Example
 
 ```java
-public record Temperature(double celsius) {
-    public Temperature offset(double delta) {
-        return new Temperature(celsius + delta);  // New instance, never mutate
+public record Money(BigDecimal amount) {
+    public Money add(Money other) {
+        return new Money(amount.add(other.amount));  // New instance, never mutate
     }
 }
 ```

@@ -15,19 +15,19 @@ The codebase uses four types of tests, each serving a specific purpose.
 **Example:**
 
 ```java
-class ThermostatSupervisorTest {
+class PaymentMonitorTest {
 
-    private StubAlertRepository alertRepository;
-    private ThermostatSupervisor supervisor;
+    private StubOrderRepository orderRepository;
+    private PaymentMonitor monitor;
 
     @BeforeEach
     void setUp() {
-        alertRepository = new StubAlertRepository();
-        supervisor = new ThermostatSupervisor(alertRepository);
+        orderRepository = new StubOrderRepository();
+        monitor = new PaymentMonitor(orderRepository);
     }
 
     @Test
-    void it_creates_alert_when_thermostat_unreachable() {
+    void it_cancels_order_when_payment_declined() {
         // Pure domain logic test with stub
     }
 }
@@ -47,18 +47,18 @@ class ThermostatSupervisorTest {
 **Example:**
 
 ```java
-@WebMvcTest(AlertController.class)
-class AlertControllerTest {
+@WebMvcTest(OrderController.class)
+class OrderControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private AlertService alertService;
+    private OrderService orderService;
 
     @Test
-    void it_returns_alerts_for_site() throws Exception {
-        mockMvc.perform(get("/api/sites/{siteId}/alerts", "site-1"))
+    void it_returns_orders_for_customer() throws Exception {
+        mockMvc.perform(get("/api/customers/{customerId}/orders", "customer-1"))
             .andExpect(status().isOk());
     }
 }
@@ -79,16 +79,16 @@ class AlertControllerTest {
 
 ```java
 @AppTest
-class TemperatureSupervisionE2ETest {
+class OrderFulfillmentE2ETest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private AlertRepository alertRepository;
+    private OrderRepository orderRepository;
 
     @Test
-    void it_creates_and_closes_temperature_alert() {
+    void it_places_and_ships_an_order() {
         // Test complete flow from API call to database
     }
 }
@@ -107,7 +107,7 @@ class TemperatureSupervisionE2ETest {
 **Example:**
 
 ```java
-@AnalyzeClasses(packages = "com.datanumia.bms.supervision")
+@AnalyzeClasses(packages = "com.example.shop.ordering")
 class ArchitectureTest {
 
     @ArchTest

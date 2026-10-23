@@ -57,58 +57,58 @@ return new Report(prioritized);
 
 ```java
 // BAD — pipeline mixes domain steps with plumbing
-return toResult(measures)
-    .map(m -> computeMissing.fillGaps(m, dimensions, period))
+return toResult(stockLevels)
+    .map(l -> computeMissing.fillGaps(l, units, period))
     .map(e -> extrapolate.extrapolate(e))
-    .map(w -> distribute.distribute(w, siteConsumption))
+    .map(w -> distribute.distribute(w, warehouseStorageCost))
     .fold(
         result -> result.stream()
             .collect(groupingBy(Entry::getKey, mapping(Entry::getValue, toSet())))
             .entrySet().stream()
-            .map(e -> new RoomResult(e.getKey(), e.getValue()))
+            .map(e -> new ProductResult(e.getKey(), e.getValue()))
             .collect(toSet()),
         _ -> emptySet()
     );
 
 // GOOD — each .map reads as a verb phrase, fold delegates to a named concept
-return toResult(measures)
-    .map(fillGapsUsing(dimensions, period))
+return toResult(stockLevels)
+    .map(fillGapsUsing(units, period))
     .map(extrapolate::extrapolate)
-    .map(distributeUsing(siteConsumption))
-    .fold(groupByRoom::group, noData());
+    .map(distributeUsing(warehouseStorageCost))
+    .fold(groupByProduct::group, noData());
 ```
 
-`noData()` returns a `Function` that ignores the error and returns an empty set — even error handling reads like a domain concept. Partial application methods (`fillGapsUsing`, `distributeUsing`) capture context and return a `Function` — the pipeline reads like a plan: fill gaps, extrapolate, distribute, group by room.
+`noData()` returns a `Function` that ignores the error and returns an empty set — even error handling reads like a domain concept. Partial application methods (`fillGapsUsing`, `distributeUsing`) capture context and return a `Function` — the pipeline reads like a plan: fill gaps, extrapolate, distribute, group by product.
 
 ```java
 // BAD - comments revealing hidden methods
-void process(SiteId siteId) {
+void process(CustomerId customerId) {
     // Fetch current state
-    var alerts = alertRepository.findActive(siteId);
-    var devices = deviceRepository.findBySite(siteId);
+    var orders = orderRepository.findPending(customerId);
+    var payments = paymentRepository.findByCustomer(customerId);
 
-    // Detect anomalies
-    var anomalies = new ArrayList<Anomaly>();
-    for (var device : devices) {
-        if (device.isUnreachable()) {
-            anomalies.add(Anomaly.unreachable(device));
+    // Detect failed payments
+    var failedPayments = new ArrayList<FailedPayment>();
+    for (var payment : payments) {
+        if (payment.isDeclined()) {
+            failedPayments.add(FailedPayment.declined(payment));
         }
     }
 
-    // Reconcile alerts with anomalies
-    for (var alert : alerts) {
-        if (anomalies.stream().noneMatch(a -> a.matches(alert))) {
-            alert.close();
+    // Reconcile orders with failed payments
+    for (var order : orders) {
+        if (failedPayments.stream().anyMatch(f -> f.matches(order))) {
+            order.cancel();
         }
     }
 }
 
 // GOOD - each step is a method, the story is clear
-void process(SiteId siteId) {
-    var currentAlerts = fetchActiveAlerts(siteId);
-    var anomalies = detectAnomalies(siteId);
+void process(CustomerId customerId) {
+    var pendingOrders = fetchPendingOrders(customerId);
+    var failedPayments = detectFailedPayments(customerId);
 
-    reconcile(currentAlerts, anomalies);
+    reconcile(pendingOrders, failedPayments);
 }
 ```
 
@@ -125,16 +125,16 @@ Names should reveal intent and belong to the domain language.
 ```java
 // BAD
 void proc(String s, int t) { }
-List<Device> getDevices(boolean f) { }
+List<Payment> getPayments(boolean f) { }
 var tmp = computeResult();
 
 // GOOD
-void closeResolvedAlerts(SiteId siteId) { }
-List<Device> findUnreachableDevices() { }
-var dailyConsumption = disaggregateByDay(monthlyTotal);
+void cancelUnpaidOrders(CustomerId customerId) { }
+List<Payment> findDeclinedPayments() { }
+var dailyRevenue = splitByDay(monthlyRevenue);
 ```
 
-**No abbreviations.** `temperature` not `temp`. `repository` not `repo` (in code, fine in conversation).
+**No abbreviations.** `quantity` not `qty`. `repository` not `repo` (in code, fine in conversation).
 
 ## Minimize Indentation
 
@@ -142,23 +142,23 @@ Prefer early returns over nested conditions. Flat code reads easier.
 
 ```java
 // BAD
-void process(Device device) {
-    if (device != null) {
-        if (device.isActive()) {
-            if (device.hasLowBattery()) {
-                raiseAlert(device);
+void process(Product product) {
+    if (product != null) {
+        if (product.isListed()) {
+            if (product.isLowOnStock()) {
+                reorder(product);
             }
         }
     }
 }
 
 // GOOD
-void process(Device device) {
-    if (device == null || !device.isActive()) {
+void process(Product product) {
+    if (product == null || !product.isListed()) {
         return;
     }
-    if (device.hasLowBattery()) {
-        raiseAlert(device);
+    if (product.isLowOnStock()) {
+        reorder(product);
     }
 }
 ```
@@ -169,12 +169,12 @@ Ask objects to do things, don't extract their data to decide for them.
 
 ```java
 // BAD - asking for data, deciding externally
-if (alert.getStatus() == Status.PENDING && alert.getCreatedAt().isBefore(cutoff)) {
-    alert.setStatus(Status.EXPIRED);
+if (order.getStatus() == Status.PENDING && order.getCreatedAt().isBefore(cutoff)) {
+    order.setStatus(Status.EXPIRED);
 }
 
 // GOOD - telling the object what to do
-alert.expireIfOlderThan(cutoff);
+order.expireIfOlderThan(cutoff);
 ```
 
 ## First-Class Collections
@@ -182,11 +182,11 @@ alert.expireIfOlderThan(cutoff);
 When a collection has domain meaning, wrap it. This gives behavior a home.
 
 ```java
-// Instead of List<Device> with external filtering logic
-public record Devices(List<Device> values) {
-    public Devices withLowBattery() {
-        return new Devices(values.stream()
-            .filter(Device::hasLowBattery)
+// Instead of List<Product> with external filtering logic
+public record Products(List<Product> values) {
+    public Products lowOnStock() {
+        return new Products(values.stream()
+            .filter(Product::isLowOnStock)
             .toList());
     }
 }
@@ -201,19 +201,19 @@ A service captures its context (dependencies, configuration) in the constructor 
 ```java
 // BAD - static utility class
 public class ComputeMissing {
-    public static MeasuresWithGaps<D> fillGaps(Set<MeasuredMeasure<D>> measures, Period period) { ... }
+    public static StockLevelsWithGaps<U> fillGaps(Set<RecordedStockLevel<U>> stockLevels, Period period) { ... }
 }
-// caller: var withGaps = ComputeMissing.fillGaps(measures, period);
+// caller: var withGaps = ComputeMissing.fillGaps(stockLevels, period);
 
 // GOOD - instantiated service
 @DomainService
-public class ComputeMissing<D> implements Function<Set<MeasuredMeasure<D>>, MeasuresWithGaps<D>> {
+public class ComputeMissing<U> implements Function<Set<RecordedStockLevel<U>>, StockLevelsWithGaps<U>> {
     private final Period period;
 
     public ComputeMissing(Period period) { this.period = period; }
 
     @Override
-    public MeasuresWithGaps<D> apply(Set<MeasuredMeasure<D>> measures) { ... }
+    public StockLevelsWithGaps<U> apply(Set<RecordedStockLevel<U>> stockLevels) { ... }
 }
 ```
 
@@ -225,19 +225,19 @@ When a workflow is a sequence of transformations, compose it as a **functional p
 
 ```java
 // BAD - manual variable wiring with static calls
-var translated = ValvePositionsToMeasures.from(measures);
+var translated = StockMovementsToLevels.from(movements);
 var withGaps = ComputeMissing.fillGaps(translated, period);
 var extrapolated = ExtrapolateMissing.from(withGaps, period);
 if (extrapolated.isEmpty()) return Set.of();
-return distribute(extrapolated, heating);
+return distribute(extrapolated, warehouseStorageCost);
 
 // GOOD - pipeline reads as a story
-translateToMeasures(measures)
+translateToStockLevels(movements)
     .map(computeMissing)
     .map(extrapolateMissing)
     .map(computeWeights)
     .map(distribute)
-    .fold(groupByRoom, noData -> Set.of());
+    .fold(groupByProduct, noData -> Set.of());
 ```
 
 Key principles:
@@ -259,19 +259,19 @@ In functional-style stream pipelines, extract inline lambdas to named methods re
 // BAD - inline lambdas obscure intent
 return expectedTimestamps.stream()
     .filter(ts -> !covered.contains(ts))
-    .map(ts -> new MissingMeasure<>(ts, dimension));
+    .map(ts -> new MissingStockLevel<>(ts, unit));
 
 // GOOD - named higher-order functions
 return expectedTimestamps.stream()
     .filter(notCoveredBy(covered))
-    .map(asMissing(dimension));
+    .map(asMissing(unit));
 
 private static Predicate<Instant> notCoveredBy(Set<Instant> covered) {
     return timestamp -> !covered.contains(timestamp);
 }
 
-private static <Dimension> Function<Instant, Measure<Dimension>> asMissing(Dimension dimension) {
-    return timestamp -> new MissingMeasure<>(timestamp, dimension);
+private static <Unit> Function<Instant, StockLevel<Unit>> asMissing(Unit unit) {
+    return timestamp -> new MissingStockLevel<>(timestamp, unit);
 }
 ```
 
@@ -283,12 +283,12 @@ When a general Java convention conflicts with the domain model's ability to repr
 
 ```java
 // Convention says: don't use Optional in records
-// But the domain has partial data — some readings may be missing
+// But the domain has partial data — some prices may be missing
 // ✅ Domain expressiveness wins
-record TimestampReading(Optional<CelsiusDegree> temperature, Optional<CelsiusDegree> setpoint) { }
+record PriceSnapshot(Optional<Price> listPrice, Optional<Price> salePrice) { }
 
 // ❌ Convention wins, domain suffers — no way to represent "missing"
-record TimestampReading(CelsiusDegree temperature, CelsiusDegree setpoint) { }
+record PriceSnapshot(Price listPrice, Price salePrice) { }
 ```
 
 **The test:** does following the convention force you to lose information, add edge cases, or filter upstream? If yes, the convention is wrong *here*.
@@ -301,28 +301,28 @@ Use static imports when the method name alone is sufficient to understand what i
 
 ```java
 // GOOD - name is self-explanatory, static import
-import static SiteId.siteId;
+import static CustomerId.customerId;
 import static Result.success;
 import static Result.failure;
 import static NonBlankString.nonBlank;
 import static java.util.stream.Stream.concat;
 
-var site = siteId("paris");
+var customer = customerId("alice");
 return success(result);
 return failure(error);
 return concat(streamA, streamB);
 
 // BAD - generic name, no idea what it builds without the class
-import static SiteId.of;
+import static CustomerId.of;
 import static Duration.of;
 import static Stream.of;
 import static Optional.of;
 
-var site = of("paris");  // of what?
-var duration = of(5);    // of what?
+var customer = of("alice");  // of what?
+var duration = of(5);        // of what?
 
 // GOOD - keep the class qualifier for generic names
-var site = SiteId.of("paris");
+var customer = CustomerId.of("alice");
 var duration = Duration.of(5, ChronoUnit.MINUTES);
 var stream = Stream.of(a, b);
 var opt = Optional.of(value);

@@ -12,13 +12,13 @@ description: Use when running tests, writing new tests, or reviewing test struct
 mvn test
 
 # Run single test class
-mvn test -Dtest="RoomTemperaturesRecordTest"
+mvn test -Dtest="CustomerOrderHistoryTest"
 
 # Run single test method
-mvn test -Dtest="RoomTemperaturesRecordTest#testMethodName"
+mvn test -Dtest="CustomerOrderHistoryTest#testMethodName"
 
 # Run nested test class
-mvn test -Dtest="RoomTemperaturesRecordTest$NestedClassName"
+mvn test -Dtest="CustomerOrderHistoryTest$NestedClassName"
 ```
 
 ## Test Structure
@@ -29,12 +29,12 @@ mvn test -Dtest="RoomTemperaturesRecordTest$NestedClassName"
 
 ```kotlin
 // Good
-class RoomTemperaturesRecordTest { }
-class ThermostatSupervisorTest { }
+class CustomerOrderHistoryTest { }
+class PaymentMonitorTest { }
 
 // Bad
-class TestRoomTemperaturesRecord { }
-class RoomTemperaturesRecordTests { }  // plural
+class TestCustomerOrderHistory { }
+class CustomerOrderHistoryTests { }  // plural
 ```
 
 ### Nested Test Classes
@@ -42,24 +42,24 @@ class RoomTemperaturesRecordTests { }  // plural
 Use **nested test classes** to organize related tests by feature or scenario.
 
 ```kotlin
-class ThermostatSupervisorTest {
+class PaymentMonitorTest {
 
     @Nested
-    inner class WhenCheckingThermostats {
+    inner class WhenCheckingPayments {
 
         @Test
-        fun it_creates_alert_when_thermostat_is_unreachable() {
-            val supervisor = ThermostatSupervisor(stubRepository)
-            val siteId = SiteId("site-1")
+        fun it_cancels_order_when_payment_is_declined() {
+            val monitor = PaymentMonitor(stubRepository)
+            val customerId = CustomerId("customer-1")
 
-            val result = supervisor.checkThermostats(siteId)
+            val result = monitor.checkPayments(customerId)
 
-            assertThat(result.hasAlert()).isTrue()
+            assertThat(result.hasCancelledOrder()).isTrue()
         }
     }
 
     @Nested
-    inner class WhenClosingAlerts {
+    inner class WhenShippingOrders {
         // More tests...
     }
 }
@@ -71,13 +71,13 @@ Use **snake_case** descriptive phrases focusing on behavior:
 
 ```kotlin
 @Test
-fun returns_true_when_room_has_invalid_datapoints() { }
+fun returns_true_when_cart_has_invalid_items() { }
 
 @Test
-fun throws_exception_when_thermostat_not_found() { }
+fun throws_exception_when_payment_method_not_found() { }
 
 @Test
-fun closes_alert_when_condition_is_resolved() { }
+fun ships_order_when_payment_is_confirmed() { }
 ```
 
 ### Test Quality
@@ -96,14 +96,14 @@ One empty line when sections are small:
 
 ```kotlin
 @Test
-fun it_creates_alert_when_temperature_too_high() {
+fun it_offers_free_shipping_when_total_above_threshold() {
     val threshold = 30.0
-    val supervisor = TemperatureSupervisor(threshold)
+    val policy = ShippingPolicy(threshold)
 
-    val result = supervisor.checkTemperature(35.0)
+    val result = policy.evaluate(35.0)
 
-    assertThat(result.shouldCreateAlert()).isTrue()
-    assertThat(result.alertType()).isEqualTo(AlertType.HIGH_TEMPERATURE)
+    assertThat(result.isShippingFree()).isTrue()
+    assertThat(result.shippingMethod()).isEqualTo(ShippingMethod.EXPRESS)
 }
 ```
 
@@ -111,21 +111,21 @@ Two empty lines when sections contain internal empty lines:
 
 ```kotlin
 @Test
-fun it_creates_alert_when_temperature_too_high() {
-    val supervisor = aTemperatureSupervisor()
+fun it_offers_free_shipping_when_total_above_threshold() {
+    val policy = aShippingPolicy()
             .withThreshold(30.0)
             .build()
-    // ... more lines of temperature supervisor logic
+    // ... more lines of shipping policy logic
 
-    alertStore().hasExistingAlertsCount(3)
-    //... other lines of alert store logic
-
-
-    val result = supervisor.checkTemperature(temperature)
+    orderStore().hasExistingOrdersCount(3)
+    //... other lines of order store logic
 
 
-    assertThat(result.shouldCreateAlert()).isTrue()
-    assertThat(result.alertType()).isEqualTo(AlertType.HIGH_TEMPERATURE)
+    val result = policy.evaluate(total)
+
+
+    assertThat(result.isShippingFree()).isTrue()
+    assertThat(result.shippingMethod()).isEqualTo(ShippingMethod.EXPRESS)
 }
 ```
 
@@ -139,16 +139,16 @@ import org.assertj.core.api.Assertions.assertThatThrownBy
 
 // Good - AssertJ
 assertThat(result).isNotNull()
-assertThat(alerts).hasSize(3)
-assertThat(alert.status()).isEqualTo(AlertStatus.ACTIVE)
+assertThat(orders).hasSize(3)
+assertThat(order.status()).isEqualTo(OrderStatus.PENDING)
 
 // Good - exception assertions
 assertThatThrownBy { service.process(null) }
     .isInstanceOf(IllegalArgumentException::class.java)
-    .hasMessage("SiteId cannot be null")
+    .hasMessage("CustomerId cannot be null")
 
 // Bad - JUnit assertions
-assertEquals(3, alerts.size)
+assertEquals(3, orders.size)
 assertTrue(result != null)
 ```
 
@@ -160,7 +160,7 @@ Place stub implementations in the `domain/spi/` package with the `@Stub` annotat
 
 ```kotlin
 @Stub
-class StubAlertRepository : AlertRepository {
+class StubOrderRepository : OrderRepository {
     // In-memory implementation for testing
 }
 ```
@@ -170,10 +170,10 @@ class StubAlertRepository : AlertRepository {
 Use builders from `utils/Builders.kt` for creating test data.
 
 ```kotlin
-val alert = anAlert()
-    .withSiteId(siteId)
-    .withType(AlertType.TEMPERATURE)
-    .withStatus(AlertStatus.ACTIVE)
+val order = anOrder()
+    .withCustomerId(customerId)
+    .withShippingMethod(ShippingMethod.EXPRESS)
+    .withStatus(OrderStatus.PENDING)
     .build()
 ```
 
@@ -197,9 +197,9 @@ For time-based tests, inject a `Clock` and control time:
 
 ```kotlin
 @Test
-fun it_closes_alert_after_resolution_delay() {
+fun it_cancels_order_after_payment_delay() {
     val clock = Clock.fixed(Instant.parse("2025-01-01T10:00:00Z"), ZoneOffset.UTC)
-    val service = AlertService(repository, clock)
+    val service = OrderService(repository, clock)
 
     // Act & Assert with controlled time
 }
@@ -216,27 +216,27 @@ Name periods like calendar entries: `januaryFirst`, `marchThird`.
 
 ### Domain IDs
 
-Use realistic domain names: `valve_1`, `room_A`, `site_paris`.
-Not: `v1`, `r1`, `s1`, `id1`, `testId`.
+Use realistic domain names: `product_1`, `warehouse_A`, `customer_alice`.
+Not: `p1`, `w1`, `c1`, `id1`, `testId`.
 
 ### Static Imports
 
-Statically import factory methods and constants used in test data: `parse`, `degrees`, `wh`, enum values, etc. Test lines should read like domain sentences, not qualified Java.
+Statically import factory methods and constants used in test data: `parse`, `eur`, enum values, etc. Test lines should read like domain sentences, not qualified Java.
 
 ```java
 // BAD
 Instant.parse("2025-01-01T10:00:00Z")
-SystemMode.HEAT
-WattHour.wh(100)
+ShippingMethod.EXPRESS
+Money.eur(100)
 
 // GOOD
 import static java.time.Instant.parse;
-import static com.example.SystemMode.HEAT;
-import static com.example.WattHour.wh;
+import static com.example.ShippingMethod.EXPRESS;
+import static com.example.Money.eur;
 
 parse("2025-01-01T10:00:00Z")
-HEAT
-wh(100)
+EXPRESS
+eur(100)
 ```
 
 ## Readability
@@ -249,23 +249,23 @@ Builders and helpers must accept domain types directly. If you need `.toString()
 
 ```java
 // BAD — leaks implementation, breaks the sentence
-aSite().identified(hotelf1.siteId().toString())
+aCustomer().identified(alice.customerId().toString())
 
 // GOOD — reads as a specification
-aSite().identified(hotelf1)
+aCustomer().identified(alice)
 ```
 
 When adding a builder method, provide both overloads — primitive delegates to domain type:
 
 ```java
-public SiteBuilder identified(SiteId id) { ... }
-public SiteBuilder identified(String id) { return identified(new SiteId(id)); }
+public CustomerBuilder identified(CustomerId id) { ... }
+public CustomerBuilder identified(String id) { return identified(new CustomerId(id)); }
 ```
 
 ### 2. Factory Methods Use Indefinite Articles
 
 ```java
-aSiteId(), aRoomId(), aRoom(), aDevice(), aSite()
+aCustomerId(), aProductId(), aProduct(), anOrder(), aCustomer()
 ```
 
 ### 3. Variables Carry Scenario Intent
@@ -274,36 +274,36 @@ Name after the **role in the scenario**, not the type.
 
 ```java
 // BAD
-var s1 = aSiteId();
-var r1 = aRoomId();
+var c1 = aCustomerId();
+var p1 = aProductId();
 
 // GOOD
-var hotelf1 = aSiteId();
-var roomWithHeater = aRoomId();
+var alice = aCustomerId();
+var productInStock = aProductId();
 ```
 
 ### 4. Mock Setup Reads Like Given Clauses
 
 ```java
-referentialService.havingSites(site);
-iotService.havingUnitsInRoom(roomWithHeater, new RoomUnit(HEATER));
-bborService.willReturnNothing();
+catalogService.havingProducts(product);
+inventoryService.havingStockFor(productInStock, new StockEntry(AVAILABLE));
+paymentService.willReturnNothing();
 ```
 
 Fluent chaining for multiple conditions:
 
 ```java
-having.forSite(DATANUMIA)
-    .controller("aa:aa:aa:aa:aa:aa").unreachable()
-    .controller("bb:bb:bb:bb:bb:bb").reachable();
+having.forCustomer(ACME)
+    .card("4111-1111-1111-1111").declined()
+    .card("5555-5555-5555-4444").accepted();
 ```
 
 ### 5. Builders Read Like Descriptions
 
 ```java
-aSite().identified(hotelf1)
-    .with(aRoom().identified(roomWithAirConditioner))
-    .with(aRoom().identified(roomWithHeater))
+anOrder().placedBy(alice)
+    .with(aProduct().identified(productOutOfStock))
+    .with(aProduct().identified(productInStock))
 ```
 
 ### 6. Reuse Variables Across Related Setup Calls
@@ -312,27 +312,27 @@ When the same value appears in multiple test setup calls, extract it to a named 
 
 ```java
 // BAD — same instant duplicated, relationship hidden
-createIndex("2025-01-01T10:30:00Z", 200)
-createConsumption("2025-01-01T10:30:00Z", wh(100))
+createStockCount("2025-01-01T10:30:00Z", 200)
+createSale("2025-01-01T10:30:00Z", eur(100))
 
 // GOOD — shared variable, overloads accept Instant
 var _10h30 = parse("2025-01-01T10:30:00Z");
-createIndex(_10h30, 200)
-createConsumption(_10h30, wh(100))
+createStockCount(_10h30, 200)
+createSale(_10h30, eur(100))
 ```
 
 If a helper only accepts `String`, add an `Instant` overload rather than calling `.toString()`.
 
 ### 7. Fluent Builders for Composite Test Data
 
-When test data combines multiple domain dimensions (temperature + setpoint + mode), prefer a fluent builder that names each dimension over a flat factory with positional args.
+When test data combines multiple domain dimensions (price + discount + shipping method), prefer a fluent builder that names each dimension over a flat factory with positional args.
 
 ```java
 // BAD — positional args, meaning unclear
-reading(18.0, 21.0, SystemMode.HEAT)
+item(18.0, 15.0, ShippingMethod.EXPRESS)
 
 // GOOD — each dimension named
-roomAt(18).heatingAt(21)
+itemPricedAt(18).discountedTo(15)
 ```
 
 ### Readability Litmus Test
@@ -373,9 +373,9 @@ Tests must verify real behavior, not mock behavior. Mocks are a means to isolate
 ```java
 // ❌ BAD: Testing that the mock was called, not that behavior happened
 @Test
-void it_supervises_batteries() {
-    supervisor.checkBatteries(siteId);
-    verify(alertRepository).save(any(Alert.class)); // testing mock interaction
+void it_monitors_stock() {
+    stockMonitor.checkStock(warehouseId);
+    verify(restockOrderRepository).save(any(RestockOrder.class)); // testing mock interaction
 }
 ```
 
@@ -390,9 +390,9 @@ void it_supervises_batteries() {
 ```java
 // ✅ GOOD: Use a stub, assert on observable outcome
 @Test
-void it_raises_alert_when_battery_is_low() {
-    supervisor.checkBatteries(siteId);
-    assertThat(alertRepository.findAll()).hasSize(1);
+void it_reorders_when_product_is_low_on_stock() {
+    stockMonitor.checkStock(warehouseId);
+    assertThat(restockOrderRepository.findAll()).hasSize(1);
 }
 ```
 
@@ -413,9 +413,9 @@ BEFORE asserting on any mock interaction (verify):
 **The violation:**
 ```java
 // ❌ BAD: reset() only used in tests
-public class AlertLifecycleService {
+public class OrderLifecycleService {
     public void reset() { // Looks like production API!
-        this.alerts.clear();
+        this.orders.clear();
     }
 }
 
@@ -433,9 +433,9 @@ public class AlertLifecycleService {
 ```java
 // ✅ GOOD: Use a stub with test-specific access
 @Stub
-public class StubAlertRepository implements AlertRepository {
-    private final List<Alert> alerts = new ArrayList<>();
-    public void clear() { alerts.clear(); } // stub method, not production
+public class StubOrderRepository implements OrderRepository {
+    private final List<Order> orders = new ArrayList<>();
+    public void clear() { orders.clear(); } // stub method, not production
 }
 ```
 
@@ -461,15 +461,15 @@ BEFORE adding any method to production class:
 ```java
 // ❌ BAD: Mocking the SPI breaks the behavior under test
 @Test
-void it_closes_alert_when_device_recovers() {
-    // Mock prevents alert lookup that test depends on!
-    when(alertRepository.findActive(siteId)).thenReturn(Optional.empty());
-    supervisor.onDeviceRecovered(deviceId); // Nothing to close — test passes vacuously
+void it_ships_order_when_payment_is_accepted() {
+    // Mock prevents order lookup that test depends on!
+    when(orderRepository.findPending(customerId)).thenReturn(Optional.empty());
+    paymentMonitor.onPaymentAccepted(paymentId); // Nothing to ship — test passes vacuously
 }
 ```
 
 **Why this is wrong:**
-- Mocked method had side effect test depended on (finding the alert)
+- Mocked method had side effect test depended on (finding the order)
 - Over-mocking to "be safe" breaks actual behavior
 - Test passes for wrong reason or fails mysteriously
 
@@ -477,10 +477,10 @@ void it_closes_alert_when_device_recovers() {
 ```java
 // ✅ GOOD: Use a stub with real state
 @Test
-void it_closes_alert_when_device_recovers() {
-    alertRepository.save(anActiveAlert(siteId, deviceId));
-    supervisor.onDeviceRecovered(deviceId);
-    assertThat(alertRepository.findActive(siteId)).isEmpty();
+void it_ships_order_when_payment_is_accepted() {
+    orderRepository.save(aPendingOrder(customerId, paymentId));
+    paymentMonitor.onPaymentAccepted(paymentId);
+    assertThat(orderRepository.findPending(customerId)).isEmpty();
 }
 ```
 
@@ -514,8 +514,8 @@ BEFORE mocking any dependency:
 **The violation:**
 ```java
 // ❌ BAD: Partial stub — only fields you think you need
-var device = new IotDevice(deviceId, "thermostat");
-// Missing: batteryLevel, firmware, roomId that downstream code uses
+var product = new Product(productId, "keyboard");
+// Missing: price, stockLevel, warehouseId that downstream code uses
 ```
 
 **Why this is wrong:**
@@ -529,10 +529,10 @@ var device = new IotDevice(deviceId, "thermostat");
 **The fix:**
 ```java
 // ✅ GOOD: Use builders/factory methods that mirror real data
-var device = anIotDevice(deviceId)
-    .withType("thermostat")
-    .withBatteryLevel(85)
-    .withRoom(roomId)
+var product = aProduct(productId)
+    .withCategory("keyboard")
+    .withStockLevel(85)
+    .withWarehouse(warehouseId)
     .build();
 ```
 
@@ -582,8 +582,8 @@ TDD cycle:
 **The violation:**
 ```java
 // ❌ BAD: Error handling already returns empty set
-iotService.havingDevicesInRoom(roomId, new IotDevice[]{});
-builder.withoutDevice();
+inventoryService.havingProductsInWarehouse(warehouseId, new Product[]{});
+builder.withoutProduct();
 ```
 
 **Why this is wrong:**
@@ -597,7 +597,7 @@ builder.withoutDevice();
 // ✅ GOOD: Only stub what the test scenario requires
 // Unstubbed endpoints return errors, which the
 // production code handles by returning empty sets
-iotService.havingNoRoomInIot(roomId);
+inventoryService.havingNoWarehouseInInventory(warehouseId);
 ```
 
 #### Gate Function
@@ -621,16 +621,16 @@ BEFORE adding a stub that returns empty/default:
 // ❌ BAD: Record accessors are compiler-generated
 @Test
 void it_exposes_timestamp_and_id() {
-    var measure = new MeasuredMeasure<>(TIMESTAMP, ID, 42.5);
-    assertThat(measure.timestamp()).isEqualTo(TIMESTAMP);
-    assertThat(measure.id()).isEqualTo(ID);
+    var stockLevel = new RecordedStockLevel<>(TIMESTAMP, ID, 42.5);
+    assertThat(stockLevel.timestamp()).isEqualTo(TIMESTAMP);
+    assertThat(stockLevel.id()).isEqualTo(ID);
 }
 
 // ❌ BAD: implements clause is compiler-enforced
 @Test
-void it_is_a_measured_data_point() {
-    assertThat(new MeasuredMeasure<>(...))
-        .isInstanceOf(MeasuredDataPoint.class);
+void it_is_a_recorded_data_point() {
+    assertThat(new RecordedStockLevel<>(...))
+        .isInstanceOf(RecordedDataPoint.class);
 }
 
 // ❌ BAD: Sealed hierarchy exhaustiveness is compiler-checked

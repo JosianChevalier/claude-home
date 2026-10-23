@@ -21,7 +21,7 @@ Every commit is a production deploy. When modifying code on a live path, pick a 
 
 ```java
 @Override
-public void newMethod(SiteId siteId) {
+public void newMethod(CustomerId customerId) {
     // Intentionally empty — will be implemented in a follow-up commit
 }
 ```
@@ -34,7 +34,7 @@ Ship the no-op, then replace with real implementation in the next commit.
 
 ```java
 @Override
-public Optional<Config> fetchConfig(SiteId siteId) {
+public Optional<Config> fetchConfig(CustomerId customerId) {
     return Optional.empty(); // Safe default until real adapter is ready
 }
 ```

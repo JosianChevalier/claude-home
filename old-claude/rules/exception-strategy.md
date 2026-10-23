@@ -15,12 +15,12 @@ SPIs that can fail (network, database, external services) **must declare their f
 
 ```java
 // GOOD — SPI declares what can go wrong
-public interface DeviceInventory {
-    List<Device> fetchAll() throws DeviceInventoryUnavailable;
+public interface ProductCatalog {
+    List<Product> fetchAll() throws ProductCatalogUnavailable;
 }
 
 // BAD — domain catches everything, doesn't know what failed
-try { inventory.fetchAll(); }
+try { catalog.fetchAll(); }
 catch (Exception e) { /* what is this? */ }
 ```
 

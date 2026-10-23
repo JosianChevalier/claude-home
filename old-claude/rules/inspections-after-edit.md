@@ -20,11 +20,11 @@ Always break to a new line after `.stream()`:
 
 ```java
 // GOOD
-return measures.stream()
-    .mapToDouble(MeasuredMeasure::value)
+return stockLevels.stream()
+    .mapToDouble(RecordedStockLevel::value)
     .average();
 
 // BAD
-return measures.stream().mapToDouble(MeasuredMeasure::value).average();
+return stockLevels.stream().mapToDouble(RecordedStockLevel::value).average();
 ```
 

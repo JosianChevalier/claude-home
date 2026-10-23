@@ -4,7 +4,7 @@ tags: [typescript, type-safety, domain-modeling, always-valid-domain]
 
 # Rationale: Nominal Types for Value Objects
 
-TypeScript is **structurally** typed: two types are interchangeable whenever their shapes match, so every `string` is every other `string`. Domain languages are **nominal**: an `OrderId` is not a `SiteId` even when both are strings underneath. Primitive obsession is therefore *invisible* to the structural checker — nominal-ness has to be manufactured deliberately. (Java people get this for free from nominal typing; that's why the Java skill never needed the section.)
+TypeScript is **structurally** typed: two types are interchangeable whenever their shapes match, so every `string` is every other `string`. Domain languages are **nominal**: an `OrderId` is not a `CustomerId` even when both are strings underneath. Primitive obsession is therefore *invisible* to the structural checker — nominal-ness has to be manufactured deliberately. (Java people get this for free from nominal typing; that's why the Java skill never needed the section.)
 
 Two levels of investment, priced by behavior:
 

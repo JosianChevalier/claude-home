@@ -21,35 +21,35 @@ For every comment, ask: **"Can I change the code so this comment is unnecessary?
 
 ```ts
 // BAD
-// Check if the device has not sent data for more than 24 hours
-if (hoursBetween(device.lastSeen, now) > 24) {
+// Check if the cart has not been updated for more than 24 hours
+if (hoursBetween(cart.lastUpdated, now) > 24) {
 
 // ITERATION 1 — extract to function, delete comment
-if (isUnreachableSince(device, now, hours(24))) {
+if (isInactiveSince(cart, now, hours(24))) {
 
 // ITERATION 2 — push behavior into the object
-if (device.isUnreachable()) {
+if (cart.isAbandoned()) {
 ```
 
 ### Extract function to replace the comment
 
 ```ts
 // BAD — comment separating a section
-function supervise(siteId: SiteId): void {
-  const devices = deviceRepository.findBySite(siteId);
+function replenish(warehouseId: WarehouseId): void {
+  const products = productRepository.findByWarehouse(warehouseId);
 
-  // Filter devices with anomalies
-  const anomalies = devices.filter(d => d.batteryLevel < 10 || d.isUnreachable());
+  // Filter products running short
+  const shortages = products.filter(p => p.quantityInStock < 10 || p.hasBackorders());
 
-  anomalies.forEach(raiseAlert);
+  shortages.forEach(reorder);
 }
 
 // GOOD — the function name IS the comment
-function supervise(siteId: SiteId): void {
-  const devices = deviceRepository.findBySite(siteId);
-  const anomalies = detectAnomalies(devices);
+function replenish(warehouseId: WarehouseId): void {
+  const products = productRepository.findByWarehouse(warehouseId);
+  const shortages = detectShortages(products);
 
-  anomalies.forEach(raiseAlert);
+  shortages.forEach(reorder);
 }
 ```
 
@@ -57,24 +57,24 @@ function supervise(siteId: SiteId): void {
 
 ```ts
 // BAD
-// 10% is considered low battery
-if (device.batteryLevel < 10) {
+// Fewer than 10 units is considered low stock
+if (product.quantityInStock < 10) {
 
 // GOOD — the domain concept speaks for itself
-if (device.hasLowBattery()) {
-// Inside Device, the threshold is a named constant or part of a BatteryLevel value object
+if (product.isLowOnStock()) {
+// Inside Product, the threshold is a named constant or part of a StockQuantity value object
 ```
 
 ### Replace conditional comment with expressive boolean
 
 ```ts
 // BAD
-// Only raise alert if device is active and not in maintenance
-if (device.status === Status.Active && !maintenanceWindows.has(device.id)) {
+// Only sell the product if it is listed and not out of stock
+if (product.status === Status.Listed && !outOfStockProducts.has(product.id)) {
 
 // GOOD
-const shouldSupervise = device.isActive() && !device.isUnderMaintenance();
-if (shouldSupervise) {
+const isPurchasable = product.isListed() && !product.isOutOfStock();
+if (isPurchasable) {
 ```
 
 ## The Only Surviving Comments
@@ -85,8 +85,8 @@ Comments that explain **why** — a business rule, a workaround, a non-obvious c
 // DST transitions produce 23h or 25h days, so we use calendar days, not duration
 const dayBoundaries = computeCalendarDayBoundaries(zone);
 
-// Legal requirement: alerts must be retained for 5 years even after resolution
-const retentionCutoff = now.minusYears(5);
+// Legal requirement: invoices must be retained for 10 years even after payment
+const retentionCutoff = now.minusYears(10);
 ```
 
 If you can turn the "why" into a well-named function or constant, do it. The comment only survives when it truly can't be expressed otherwise.

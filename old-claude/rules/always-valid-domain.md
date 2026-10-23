@@ -15,22 +15,22 @@ should prevent invalid state, not runtime checks.
 Use sealed classes/interfaces to constrain valid states.
 
 ```java
-// Alert with two valid states only
-public sealed interface Alert permits PendingAlert, SolvedAlert { }
+// Order with two valid states only
+public sealed interface Order permits PendingOrder, ShippedOrder { }
 
-public final class PendingAlert implements Alert {
-    private final Instant raisedDate;
-    // No solvedDate field - doesn't exist in this state
+public final class PendingOrder implements Order {
+    private final Instant placedDate;
+    // No shippedDate field - doesn't exist in this state
 
-    public SolvedAlert solve(Instant solvedAt) {
-        return SolvedAlert.from(this, solvedAt);
+    public ShippedOrder ship(Instant shippedAt) {
+        return ShippedOrder.from(this, shippedAt);
     }
 }
 
-public final class SolvedAlert implements Alert {
-    private final Instant raisedDate;
-    private final Instant solvedDate;  // Always present, never null
-    // No solve() method - already solved
+public final class ShippedOrder implements Order {
+    private final Instant placedDate;
+    private final Instant shippedDate;  // Always present, never null
+    // No ship() method - already shipped
 }
 ```
 
@@ -39,13 +39,13 @@ public final class SolvedAlert implements Alert {
 Wrap primitives to prevent invalid values.
 
 ```java
-public record BatteryLevel(double value) {
-    public BatteryLevel {
-        if (value < 0 || value > 100) {
-            throw new IllegalArgumentException("Battery level must be 0-100");
+public record StockQuantity(int units) {
+    public StockQuantity {
+        if (units < 0) {
+            throw new IllegalArgumentException("Stock quantity must not be negative");
         }
     }
-    public boolean isLow() { return value <= 10; }
+    public boolean isLow() { return units <= 10; }
 }
 ```
 
@@ -53,17 +53,17 @@ public record BatteryLevel(double value) {
 
 ```java
 // ❌ Status flags - invalid combinations possible
-private boolean pending, solved, closed;
+private boolean pending, shipped, delivered;
 
 // ❌ Nullable fields for state - allows invalid mutations
-private @Nullable Instant solvedDate;
-public void solve(Instant when) { this.solvedDate = when; }
+private @Nullable Instant shippedDate;
+public void ship(Instant when) { this.shippedDate = when; }
 
 // ❌ Public setters - arbitrary state changes
-public void setStatus(IncidentStatus status) { this.status = status; }
+public void setStatus(OrderStatus status) { this.status = status; }
 
 // ✓ Type-based states prevent invalid operations
-public void closeAlert(SolvedAlert alert) { } // Must be solved
+public void deliver(ShippedOrder order) { } // Must be shipped
 ```
 
 ### 3. If It Can Be Represented, Assume It Will Happen
