@@ -27,6 +27,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | concurrency | Parallel committers integrating continuously on one trunk. |
 | consistency | Full consistency inside an aggregate, eventual consistency between aggregates. |
 | context-economics | Context as the scarce resource every harness structure must budget. |
+| constraints | Snowden's typology: governing or enabling, external or internal, containing or connecting, rigid, flexible or permeable, dark. |
 | continuous-delivery | Every step live in production: the trunk always releasable, nothing waiting dark for a switch. |
 | continuous-integration | Continuous integration as identical to trunk-based development. |
 | conventions | Conforming to another team's style in a codebase we do not own. |
