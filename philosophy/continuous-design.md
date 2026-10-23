@@ -4,7 +4,8 @@ tags: [continuous-design, ddd, domain-modeling, conceptual-integrity, feedback-l
 
 # Continuous design
 
-**Thesis.** Code alone executes the model instead of just representing it, so it is the specification of the model the software holds, tests included; the engineer specifies from within it. Being where the model runs, the code is also the first expression where tension shows, and the design stays right only by watching it there at every change: the intention sustained through the feedback, the opposite of fire and forget. Spec-driven development and black-box development repeat waterfall's fault, which was ontological and was read as slow feedback.
+**Thesis.** Code does not only express the model, it executes it: it is the model's specification, written from within. It is also where tension shows first, so the design stays right by watching the high-level domain code at every change.
+
 
 ## Code executes the model
 
