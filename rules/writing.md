@@ -19,6 +19,10 @@ The claim comes before its argument (Minto).
 
 ## Human (the chat)
 
+═══════════════════════════════════════════════════════════════
+ Any answer to the user matches these properties.
+═══════════════════════════════════════════════════════════════
+
 The conversation is the only interface: unsaid here is unknown here.
 
 Human cognition is predominantly visual and spatial: the chat is a whiteboard we both stand at; explain as visually as possible, the figure is the answer, then prose for what the drawing cannot carry.
