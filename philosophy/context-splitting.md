@@ -31,7 +31,7 @@ The two are not alternatives tried in sequence. A cut on one axis can open the w
 ```
 
 - *A scientific paper as a PDF.* An agent cannot easily split it by meaning, so the spatial cut is hard. Cut in time first: (1) convert to markdown, (2) read and process. Between the two there is now room for a step that cuts the text section by section. **The temporal cut enabled the spatial one.** Sections, once they exist, can be scheduled: read every chapter in parallel, summarise, then compare the summaries with the paper's own conclusion. **The spatial cut enabled new temporal ones.**
-- *A feature changed across a codebase.* Too much for one context. Cut in space first: change module by module, keeping backward compatibility. That allows an order: start in the core domain, validate there, then propagate to the adapters and the consuming bounded contexts. **The spatial cut enabled the temporal one.**
+- *A feature changed across a codebase.* Too much for one context. Cut in space first: change module by module, keeping backward compatibility. That allows an order: start in the core domain, validate there ([[philosophy/domain-first-implementation]]), then propagate to the adapters and the consuming bounded contexts. **The spatial cut enabled the temporal one.**
 
 ## Where to stop
 

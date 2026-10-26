@@ -27,7 +27,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
         - [x] Skill `study-making`, salvaged 2026-10-13 on chat examples. Left: the `aggregate-identification` dispatch, 3.4.
         - [ ] The bottleneck sentence (code and prose now come faster than an engineer can read them; waste is accidental cognitive load, not queue time) goes to `zoom-levels`, Cognitive load, at its reshape.
       - [x] `continuous-delivery` landed 2026-10-27, reviewed in conversation the same day: the live path and the published interface stay here, no cut.
-      - [ ] `domain-first-implementation`: review in conversation, then land. `continuous-delivery` already points at it.
+      - [x] `domain-first-implementation` landed 2026-10-27.
       - [ ] Then the rest, fewest outgoing links first: `prototypes-are-probes`, `planning-is-everything` (4), `mikado`, `walkthrough-narrative` (5).
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
