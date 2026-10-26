@@ -10,36 +10,26 @@ Every commit is a release candidate: it *can* go to production, whether or not i
 
 This is the invariant behind continuous *deployment* (where every commit additionally *does* deploy): deployment automates the last step, but delivery is the discipline that makes the step safe. Operationally, treat *can* as *will*: write every commit as if it deploys the instant it lands. A broken commit is a broken production, discovered later.
 
-Releasability is a property of the commit, not its location. The rare branch is a short queue of release candidates awaiting fast-forward ([[philosophy/trunk-based-development]]), and each of them obeys the discipline above: "I'll clean up before merging" defers integration to the merge and recreates the big batch.
+Releasability is a property of the commit, not its location: a branch's commits obey the same discipline as trunk's ([[philosophy/trunk-based-development]]). It is small batches applied to integration: a commit that cannot ship is inventory, its risk coupled to whatever ships next ([[philosophy/batch-size-economics]]).
 
 ## The invariant: always working, zero regression
 
-Releasability is the pipeline's word for a stronger norm: at every intermediate step — every commit, every plan stage — the app **works**, causes **zero regression**, and does not deviate from observed production behavior. Not "will work once the next stage lands"; works *now*. This is the conserved quantity of the whole workflow: small batches shrink the steps, the keystone orders them, safe-rollout guards the live ones — all in service of never leaving the trunk in a state worse than the one before.
+Releasability is the pipeline's word for a stronger norm: at every intermediate step, every commit, every plan stage, the app **works**, causes **zero regression**, and does not deviate from observed production behavior. Not "will work once the next stage lands"; works *now*. This is the conserved quantity of the whole workflow: batch slicing cuts the steps ([[philosophy/batch-slicing]]), change in place keeps each one live ([[philosophy/change-in-place]]), all in service of never leaving the trunk in a state worse than the one before.
 
-A step may add nothing visible (dark code, reshaping), but it may never subtract: no broken flow, no degraded behavior, no "temporary" deviation from the norm. Deviations don't stay temporary — they ship.
+A step may add nothing visible (dark code, reshaping), but it may never subtract: no broken flow, no degraded behavior, no "temporary" deviation from the norm. Deviations don't stay temporary; they ship.
 
-## Domain first, exposed as feedback asks
+## The live path
 
-Releasable does not mean feature-complete. The unit of safety is the **live path**: code reachable from a production entry point (endpoint, scheduler, listener). Code reachable from nowhere cannot break anything: it is dark, deployed but dormant.
+Releasable does not mean feature-complete. The unit of safety is the **live path**: code reachable from a production entry point (endpoint, scheduler, listener). Code reachable from nowhere cannot break anything: it is dark, deployed but dormant. A stub is fine while dark; code that throws on a live path never ships.
 
-Dark is not idle: driving from the domain, its first consumer is the engineer, and each exposure after that is chosen for the feedback it gives ([[philosophy/domain-first-implementation]]).
+Dark is not idle: driving from the domain, its first consumer is the engineer, and each exposure after that is chosen for the feedback it gives ([[philosophy/domain-first-implementation]]). The thin commit that wires a dark batch to its consumer is the keystone ([[philosophy/change-in-place]]).
 
-The **keystone** (Fowler) is each of these steps: the thin commit that wires the domain to its next consumer. The hard work ships early, in small safe commits; going live to everyone is the thinnest change, easy to review and to revert.
+Exposure is broader than wiring an endpoint. A **published contract**, API documentation, a frontend contract, naming presented as public, is a promise others build against; publishing it makes the behavior "live" in the social sense even if no code path exists. Vaporware is the contract-level equivalent of a throw on a live path: consumers hit behavior that isn't there. So contracts obey the same keystone order: behavior effective, then verified, then advertised. The one legitimate inversion is deliberate contract-first design, where the contract explicitly carries no implementation claim.
 
-Exposure is broader than wiring an endpoint. A **published contract** — API documentation, a frontend contract, naming presented as public — is a promise others build against; publishing it makes the behavior "live" in the social sense even if no code path exists. Vaporware is the contract-level equivalent of a throw on a live path: consumers hit behavior that isn't there. So contracts obey the same keystone order — behavior effective, then verified, then advertised. The one legitimate inversion is deliberate contract-first design, where the contract explicitly carries no implementation claim.
+## Related
 
-A path already live changes where it stands, one safe move at a time ([[philosophy/change-in-place]]).
-
-## Why every commit, not just the last
-
-Releasability per commit is small batches applied to integration ([[philosophy/batch-size-economics]]). A commit that cannot ship is design-in-process inventory: it blocks trunk, defers feedback, and couples its risk to whatever ships next. Keeping each commit releasable keeps batch size at its floor — each one an independently revertible bet, integration risk paid continuously in cents instead of at release time in full.
-
-## Consequences
-
-- Never ship code that throws on a live path — no `UnsupportedOperationException`, no `TODO` that blows up at runtime. Stubs are fine only while dark.
-- Branch commits get no exemption: same tests, same releasability, same keystone order as trunk. No "fix before merge" commits.
-- Producers before consumers; remove old code only after new code is proven.
-- Ordering is part of design: a plan whose intermediate states are unreleasable is sliced wrong.
-- Plans end with the keystone: exposure and contract documentation are late stages, after behavior is effective and verified; legacy removal comes last, after the new path is proven.
-- Replacing existing live behavior is refactoring, not a keystone: change in place, alternative flows at the smallest atom only, adopted in the same stage.
-- Nothing is built before its consumer: a stage introduces only what is on the live path by the end of that stage or the next.
+- Branch commits under the same discipline: [[philosophy/trunk-based-development]].
+- Why every commit, not just the last: [[philosophy/batch-size-economics]].
+- The keystone as the exception to live at every move: [[philosophy/change-in-place]].
+- Exposure chosen for feedback: [[philosophy/domain-first-implementation]].
+- Deployed and activated as two loops: [[philosophy/feedback-loops]].
