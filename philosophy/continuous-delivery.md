@@ -2,9 +2,11 @@
 tags: [continuous-delivery, small-batches]
 ---
 
-# Rationale: Continuous Delivery
+# Continuous delivery
 
-Governing frame: Farley & Humble's *Continuous Delivery* — the trunk is **always releasable**. Every commit is a release candidate: it *can* go to production, whether or not it actually does. Releasability is not a judgment call; it is defined mechanically by the deployment pipeline (build, tests, checks) — a commit that passes the pipeline is deployable by definition, one that doesn't never lands on trunk.
+**Thesis.** The trunk is always releasable (Farley & Humble): every commit can go to production, whether or not it does, and is written as if it deploys the instant it lands. Releasability is not a judgment call; the pipeline defines it.
+
+Every commit is a release candidate: it *can* go to production, whether or not it actually does. Releasability is defined mechanically by the deployment pipeline (build, tests, checks): a commit that passes the pipeline is deployable by definition, one that doesn't never lands on trunk.
 
 This is the invariant behind continuous *deployment* (where every commit additionally *does* deploy): deployment automates the last step, but delivery is the discipline that makes the step safe. Operationally, treat *can* as *will*: write every commit as if it deploys the instant it lands. A broken commit is a broken production, discovered later.
 
