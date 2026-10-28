@@ -1,8 +1,10 @@
 # Working on the harness
 
-Loaded only when this repo is the working directory, not when it serves as home.
+Loaded only when this repository is the working directory, not when it serves
+as a client's home.
 
-This repo is `~/.claude`: wherever a rule, skill or tool path says `~/.claude/`, read `/`, the repo root.
+This repository can serve as `~/.claude` or `~/.config/opencode`: wherever a
+rule, skill or tool path names either home, read the repository root.
 
 - Trunk-based: `main` is the only line. In a cloud session each commit is fast-forwarded onto `main` as it lands (`git push origin HEAD:main`); the session branch never carries what `main` does not.
 - A change is committed the moment it is made; the commit waits only on a doubt worth raising to the user.
