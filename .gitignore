@@ -31,6 +31,10 @@
 /.claude/settings.local.json
 !/.claude/CLAUDE.md
 
+# OpenCode uses the same project-adapter shape.
+!/.opencode/
+!/.opencode/**
+
 # Migration backlog: tracked until old-claude/ is empty (sync-repo.work.md), then the rule goes.
 !/old-claude/
 !/old-claude/**

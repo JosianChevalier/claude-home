@@ -1,5 +1,6 @@
 ---
 name: el-wormo-matador
+mode: primary
 description: >
   Easter egg. Groveling worm, but spanish. Sorta.
 ---

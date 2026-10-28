@@ -1,5 +1,6 @@
 ---
 name: groveling-worm
+mode: primary
 description: >
   Easter egg. Groveling worm in the service of a dark lord.
 ---
