@@ -30,6 +30,8 @@ Plans and studies are not final or permanent by default. They are working artifa
 
 Unless explicitly not required, a session gets anchored in a working document in the repository: an existing study or plan, or a work file, committed or not, depending on the nature of the work and above all on its longevity. Some sessions do not need one: three questions, each closed in its round, and the conversation carries them. Past a handful of open threads the conversation starts dropping some; a file the session comes back to as a checklist drops none. That is the moment to ask whether to anchor.
 
+A work file is a backlog, distributed: the tasks of a project sit next to the work they concern, one file per piece of work, in place of a tracker.
+
 Conversation, notebook, working document, repo: four stores ordered by inertia ([[philosophy/change-inertia]]). The conversation lasts a turn. The notebook, a `/tmp` file of the agent's own, lasts the session ([[philosophy/conversation-as-interface]]). The working document lasts the work. The repo keeps what graduated. What survives the conversation reaches the document; what survives the document is committed.
 
 ## Save at hand-back, not at stage end
