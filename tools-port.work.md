@@ -5,7 +5,6 @@ rank: 1
 
 # OpenCode tool portability
 
-Tools are announced per platform, one list each in `tools/docs/` (see `tools/README.md`); `replace-text` is Claude's, the notebook is both platforms'.
 
 ## Current step
 
@@ -13,5 +12,7 @@ Give OpenCode a session notebook. `grab-notebook` needs `CLAUDE_CODE_SESSION_ID`
 
 - Claude side: a SessionStart hook receives the session id on stdin, so the notebook path could be put in context without the env variable; only if the two sides end up sharing a shape.
 - The cloud adapter `.claude/` has no `settings.json`, so the hook does not run there: cloud-skills.work.md territory.
+
+- Parked: the two `docs/` lists duplicate every shared tool by hand. If that grows past a line or two, one source file listing each tool and its platforms, and a script generating both lists on every change.
 
 Keep Claude's existing scripts working. Do not include `wake-and-run`, status widgets, or compaction policy in this work.

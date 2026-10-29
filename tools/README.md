@@ -8,7 +8,7 @@ docs/claude.md     ─▶  Claude Code   settings.json, SessionStart hook `cat`,
 docs/opencode.md   ─▶  OpenCode      opencode.json, `instructions`
 ```
 
-The list is rooted at the home, a tool per item, its forms under it. A project with its own tools writes the same list rooted at the project.
+The list is rooted at the home, a tool per item, its forms under it. A tool both platforms have is written in both lists. A project with its own tools writes the same list rooted at the project.
 
 A tool that compensates a habit of the current models carries a comment at its top:
 
