@@ -2,7 +2,7 @@
 tags: [communication, cognitive-load]
 ---
 
-# The broken symmetry of cost
+# The asymmetry of communication cost
 
 **Thesis.** Between people a conversation costs both sides, so the rhythm trades a sub-optimal medium for fluidity; with an agent writing, the writer's side is virtually free and the whole cost is the reader's, so the agent spends without limit on the form and cuts without limit on the volume.
 

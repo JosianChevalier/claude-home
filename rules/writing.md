@@ -74,4 +74,4 @@ The human navigates and validates from the structure, diving into the detail onl
 - The forms of Human hold here: lists, tables, figures, marks; a heading only where a reader would jump to it.
 - The detail under them is for the agent: prose built on precise terms, as in Agent.
 
-Rationale: [[philosophy/broken-symmetry-of-cost]], [[philosophy/level-design]], [[philosophy/zoom-levels]], [[philosophy/conversation-as-interface]], [[philosophy/attractors]]
+Rationale: [[philosophy/asymmetry-of-communication-cost]], [[philosophy/level-design]], [[philosophy/zoom-levels]], [[philosophy/conversation-as-interface]], [[philosophy/attractors]]
