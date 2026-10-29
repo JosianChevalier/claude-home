@@ -11,5 +11,17 @@
   "syncClaudeAiPlugins": false,
   "enableArtifact": false,
   "disableWorkflows": true,
-  "disableClaudeAiConnectors": true
+  "disableClaudeAiConnectors": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat ~/.claude/tools/docs/shared.md ~/.claude/tools/docs/claude.md"
+          }
+        ]
+      }
+    ]
+  }
 }

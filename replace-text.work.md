@@ -5,7 +5,7 @@ rank: 7
 
 # replace-text
 
-A small token optimization, not a fix: agents edit text well with inline Python (`python3 - <<'EOF' … open(p,'w').write(s)`), but rewrite the same few lines each time. `replace-text` is those lines, pre-made, called in one line; `rules/tools.md` points agents to it; its `model-coupled` comment marks it for recheck at a model change.
+A small token optimization, not a fix: agents edit text well with inline Python (`python3 - <<'EOF' … open(p,'w').write(s)`), but rewrite the same few lines each time. `replace-text` is those lines, pre-made, called in one line; `tools/docs/shared.md` points agents to it; its `model-coupled` comment marks it for recheck at a model change.
 
 ## Evidence (transcripts, 2026-10-08 → 17)
 

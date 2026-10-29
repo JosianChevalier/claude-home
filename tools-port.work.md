@@ -5,11 +5,13 @@ rank: 1
 
 # OpenCode tool portability
 
+Tools are announced per platform through `tools/docs/` (see `tools/README.md`); `replace-text` runs on both.
+
 ## Current step
 
-Decide the smallest platform split, then implement it:
+Give OpenCode a session notebook. `grab-notebook` needs `CLAUDE_CODE_SESSION_ID`; OpenCode has a real `sessionID` in its custom tools (`tool/*.ts`) and plugins. Decide the shape, then document it in `tools/docs/opencode.md`.
 
-- `rules/tools.md` hardcodes `~/.claude/tools/replace-text`; OpenCode already has native `apply_patch`, so decide whether OpenCode should omit this rule or the shared rule should prefer the native editing tool.
-- `rules/session-design.md` hardcodes `~/.claude/tools/grab-notebook`, whose script requires `CLAUDE_CODE_SESSION_ID`; design an OpenCode notebook tool or plugin around OpenCode's real `sessionID`.
+- Claude side: a SessionStart hook receives the session id on stdin, so the notebook path could be put in context without the env variable; only if the two sides end up sharing a shape.
+- The cloud adapter `.claude/` has no `settings.json`, so the hook does not run there: cloud-skills.work.md territory.
 
 Keep Claude's existing scripts working. Do not include `wake-and-run`, status widgets, or compaction policy in this work.

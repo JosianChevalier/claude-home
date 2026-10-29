@@ -11,7 +11,7 @@ An always-loaded rule file, written with the user in conversation. The finished 
 
 - [ ] 2. `rules/session-state.md`: the draft on disk is settled with the user. **← current**
   - [ ] Probe: hand it to a fresh sub-agent with no context, ask what it understands; bring its reading to the user before they validate. A cold read of an earlier draft broke on several triggers that contradicted each other, and on "before the session dies", which cannot be known.
-  - [ ] Validate, commit, with the uncommitted Write-tool line in `rules/tools.md`.
+  - [ ] Validate, commit.
 
 ## Decided
 

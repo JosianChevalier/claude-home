@@ -1,6 +1,8 @@
 # Tools
 
-## `~/.claude/tools/replace-text`
+Scripts under `tools/` in the harness home, named in the platform's own doc.
+
+## `replace-text`
 
 Edits text by exact match, in place of an inline Python script. A whole file is rewritten with the Write tool. Every old text must match exactly once; if any edit fails, no file is written.
 
