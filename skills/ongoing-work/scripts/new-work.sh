@@ -16,5 +16,5 @@ if [ -z "$rank" ]; then
 fi
 
 mkdir -p "$(dirname "$path")"
-printf -- '---\nongoing_work_file: "%s"\nrank: %s\n---\n\n# %s\n\n- [ ] \n' "${what//\"/\\\"}" "$rank" "$(basename "$path" .work.md)" > "$path"
+printf -- '---\nongoing_work_file: "%s"\nrank: %s\n---\n\n# %s\n' "${what//\"/\\\"}" "$rank" "$(basename "$path" .work.md)" > "$path"
 echo "$rank  $path"
