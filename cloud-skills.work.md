@@ -1,48 +1,14 @@
 ---
-ongoing_work_file: "Make the repo's skills, agents, commands and rules load in cloud sessions. Empty when a fresh cloud session lists ongoing-work among its skills."
+ongoing_work_file: "Make the repo's skills, agents, commands, rules and tools load in cloud sessions. Empty when a fresh cloud session lists ongoing-work among its skills and names grab-notebook and replace-text without being told."
 rank: 3
 ---
 
-# Cloud sessions run without the repo's skills
+# Cloud sessions run without the repo's harness
 
-Started as a kaizen: `ongoing-work` did not load when a work file was resumed or edited, so its rules were broken (commit 393e2a9, undone in 5f8d17c).
-
-## Root cause
-
-- Locally, this repo is cloned *as* `~/.claude`, so `skills/`, `agents/`, `commands/`, `rules/` are found as personal config.
-- A cloud session clones it to `/home/user/claude-home`. Claude Code only discovers project config under `.claude/`, and the repo has none. Only the root `CLAUDE.md` loads; everything it points to loads only if opened by hand.
-- Second, smaller cause: the `ongoing-work` description ("Tracking ongoing work…") does not match the words a session uses ("Resume from X.work.md", "record it in the work file").
-
-## Tested (headless `claude -p`, copy of the repo, 2026-10-16)
-
-| Setup | Repo skills listed | Rules loaded |
-|---|---|---|
-| no `.claude/` | none | none |
-| `.claude/skills -> ../skills`, `.claude/rules -> ../rules` | all five | all three |
-
-Symlinks work. Not tested: `agents`, `commands`.
-
-## Proposed fix
-
-```
-.claude/
-├── skills   -> ../skills
-├── agents   -> ../agents
-├── commands -> ../commands
-└── rules    -> ../rules     # only if rules should always load
-```
-
-Not the whole root as `.claude -> .`: it loops, and `CLAUDE.md` would likely load twice.
-
-## Open
-
-- `rules/`: linked, every rule loads in every cloud session. Is that the intent, or do rules stay loaded on pointer?
-- Local clone as `~/.claude`: does the nested `~/.claude/.claude/` load anything twice when working with cwd in the repo? Unverified.
-- The description gap, after the fix.
+A cloud session clones this repo as a project (`/home/user/claude-home`); Claude Code then discovers config only under `.claude/`. The adapter `.claude/` holds symlinks to `agents/`, `commands/`, `rules/`, `skills/` (its README says why) and `CLAUDE.md`, which tells the agent to read any `~/.claude` path as the repo root. Locally the repo is `~/.claude` itself, so the adapter is live there too: a file in it runs in both places.
 
 ## Steps
 
-- [ ] Decide on `rules/`. **← current**
-- [ ] Add the links, commit on the working branch.
-- [ ] Fresh cloud session: check `ongoing-work` is in its skill list.
-- [ ] Description of `ongoing-work`: match the words sessions use.
+- [ ] Tools list in the cloud. Locally `~/.claude/settings.json` has a SessionStart hook printing `tools/docs/claude.md`; no home config exists in the cloud. Add `.claude/settings.json` (already whitelisted in `.gitignore`) with a SessionStart hook running one script under `tools/` that exits silently unless `CLAUDE_CODE_REMOTE` is `true`, and prints the list otherwise. `CLAUDE_CODE_REMOTE` is documented as set to `true` in cloud sessions and unset locally (code.claude.com/docs/en/env-vars, and the hooks page); `CLAUDE_CODE_REMOTE_SESSION_ID` carries the cloud session id. Neither has been seen in a real cloud session yet. **← current**
+- [ ] Fresh cloud session: `ongoing-work` in its skill list, both tools named when asked without running anything.
+- [ ] Description of `ongoing-work`: match the words sessions use ("Resume from X.work.md", "record it in the work file"), which it does not today.
