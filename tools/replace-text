@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this and its lines in tools/docs/shared.md.
+# model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this and its lines in tools/docs/claude.md.
 #
 # Why it exists: agents edit text through inline Python (`python3 - <<'EOF'`, open, replace,
 # write) far more than through the Edit tool: 292 such calls against 102 in 2026-10-08..17.

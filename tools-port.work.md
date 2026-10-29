@@ -5,7 +5,7 @@ rank: 1
 
 # OpenCode tool portability
 
-Tools are announced per platform through `tools/docs/` (see `tools/README.md`); `replace-text` runs on both.
+Tools are announced per platform through `tools/docs/` (see `tools/README.md`); `replace-text` is Claude's, the notebook is shared.
 
 ## Current step
 

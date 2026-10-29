@@ -12,8 +12,8 @@ docs/claude.md     ─┘                 re-run after /clear, resume and compac
 
 | Tool | Platform | Does |
 |---|---|---|
-| `replace-text` | both | exact-text edits: one pair, a section between two anchors, or a batch across files |
-| `grab-notebook` | Claude | this session's notebook path, the file created on the first call |
+| `grab-notebook` | both | this session's notebook path, the file created on the first call |
+| `replace-text` | Claude | exact-text edits: one pair, a section between two anchors, or a batch across files |
 
 A tool that compensates a habit of the current models carries a comment at its top:
 
