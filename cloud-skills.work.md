@@ -9,6 +9,5 @@ A cloud session clones this repo as a project (`/home/user/claude-home`); Claude
 
 ## Steps
 
-- [ ] Tools list in the cloud. Locally `~/.claude/settings.json` has a SessionStart hook printing `tools/docs/claude.md`; no home config exists in the cloud. Add `.claude/settings.json` (already whitelisted in `.gitignore`) with a SessionStart hook running one script under `tools/` that exits silently unless `CLAUDE_CODE_REMOTE` is `true`, and prints the list otherwise. `CLAUDE_CODE_REMOTE` is documented as set to `true` in cloud sessions and unset locally (code.claude.com/docs/en/env-vars, and the hooks page); `CLAUDE_CODE_REMOTE_SESSION_ID` carries the cloud session id. Neither has been seen in a real cloud session yet. **← current**
-- [ ] Fresh cloud session: `ongoing-work` in its skill list, both tools named when asked without running anything.
+- [ ] Fresh cloud session: the tools list printed at start, `ongoing-work` in its skill list, both tools named when asked without running anything. `.claude/settings.json` runs `tools/cloud-docs` through `$CLAUDE_PROJECT_DIR`; the guard rests on `CLAUDE_CODE_REMOTE` being `true` there (code.claude.com/docs/en/env-vars), never seen in a real session yet. If the list is missing: check the variable first, then the project-dir path. **← current**
 - [ ] Description of `ongoing-work`: match the words sessions use ("Resume from X.work.md", "record it in the work file"), which it does not today.
