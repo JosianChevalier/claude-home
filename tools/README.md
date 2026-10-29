@@ -1,19 +1,14 @@
 # tools
 
-Scripts agents call instead of rewriting the same code each session. `docs/` tells agents they exist: one doc for what both platforms have, one per platform for its home and its own tools. Each platform loads its pair through its native instruction channel, so no doc names the other platform and `CLAUDE.md` / `AGENTS.md` stay untouched.
+Scripts agents call instead of rewriting the same code each session. `docs/` is what tells agents they exist: one list per platform, loaded through that platform's own instruction channel, so `CLAUDE.md` / `AGENTS.md` stay untouched.
 
 ```
-docs/shared.md     ─┬─▶  OpenCode     opencode.json, `instructions`
-docs/opencode.md   ─┘
-
-docs/shared.md     ─┬─▶  Claude Code  settings.json, SessionStart hook: `cat` of both,
-docs/claude.md     ─┘                 re-run after /clear, resume and compaction
+docs/claude.md     ─▶  Claude Code   settings.json, SessionStart hook `cat`,
+                                     re-run after /clear, resume and compaction
+docs/opencode.md   ─▶  OpenCode      opencode.json, `instructions`
 ```
 
-| Tool | Platform | Does |
-|---|---|---|
-| `grab-notebook` | both | this session's notebook path, the file created on the first call |
-| `replace-text` | Claude | exact-text edits: one pair, a section between two anchors, or a batch across files |
+The list is rooted at the home, a tool per item, its forms under it. A project with its own tools writes the same list rooted at the project.
 
 A tool that compensates a habit of the current models carries a comment at its top:
 

@@ -1,3 +1,2 @@
-# OpenCode
-
-The harness home is `~/.config/opencode`: `~/.config/opencode/tools/grab-notebook`.
+- `~/.config/opencode/tools/`
+  - `grab-notebook`: prints the session's notebook path, creating the file on the first call
