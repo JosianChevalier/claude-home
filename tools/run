@@ -19,7 +19,7 @@ locate() { for d in $project $home; do [ -x "$d/$1" ] && { echo "$d/$1"; return;
 page() { awk '/^# platforms:/{on=1;next} on&&/^#/{sub(/^# ?/,"");print;next} on{exit}' "$1"; }
 index() {
   case $1 in
-    claude)   pre="~${home#"$HOME"}/run " ;;
+    claude)   case $home in "$HOME"/*) pre="~${home#"$HOME"}/run " ;; *) pre="$home/run " ;; esac ;;
     opencode) pre=; echo "Each tool is called through the run tool: name, then args as on the usage line."; echo ;;
   esac
   first=1
