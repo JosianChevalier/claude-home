@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# The single endpoint for the harness tools.
+#   run <tool> args…     runs the project's tools/<tool> if there is one, else the home's
+#   run doc <platform>   prints the list of tools tagged for that platform, project first
+# A tool is listed from its own header, right under its shebang:
+#   # platforms: claude opencode
+#   # doc: what it does                           the tool's line
+#   # doc:   `tool FORM`: what the form does      a sub-item, two more spaces
+set -euo pipefail
+home=$(cd "$(dirname "$0")" && pwd)
+project=$(git rev-parse --show-toplevel 2>/dev/null || pwd)/tools
+[ "$project" = "$home" ] && project=
+
+doc() {
+  case $1 in
+    claude)   echo "- \`${home/#$HOME/~}/run <tool> …\`: the harness tools; a project's \`tools/<tool>\` comes first" ;;
+    opencode) echo "- \`run\` tool, \`name\` and \`args\`: the harness tools; a project's \`tools/<name>\` comes first" ;;
+    *) echo "run doc: platform claude or opencode" >&2; exit 2 ;;
+  esac
+  for d in $project $home; do
+    for f in "$d"/*; do
+      [ -f "$f" ] && [ -x "$f" ] || continue
+      grep -q "^# platforms: .*\b$1\b" "$f" || continue
+      name=$(basename "$f")
+      grep '^# doc:' "$f" | sed -e "1s|^# doc: |  - \`$name\`: |" -e '2,$s|^# doc:   |    - |'
+    done
+  done
+}
+
+[ $# -gt 0 ] || { sed -n '2,4p' "$0" | sed 's/^# \{0,1\}//' >&2; exit 2; }
+cmd=$1; shift
+[ "$cmd" = doc ] && { doc "${1:-}"; exit; }
+for d in $project $home; do [ -x "$d/$cmd" ] && exec "$d/$cmd" "$@"; done
+echo "run: no tool $cmd" >&2; exit 1

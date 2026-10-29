@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat ~/.claude/tools/docs/claude.md"
+            "command": "~/.claude/tools/run doc claude"
           }
         ]
       }

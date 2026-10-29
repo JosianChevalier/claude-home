@@ -1,8 +1,8 @@
 #!/bin/sh
 # SessionStart hook of .claude/settings.json, the project-level adapter.
 # In a cloud session the repo is a project clone with no home settings.json,
-# so nothing prints docs/claude.md: this does. Locally the adapter is live too
+# so nothing prints the tools list: this does. Locally the adapter is live too
 # (the repo is ~/.claude) and the home hook already prints the list, so the
 # guard keeps it silent. CLAUDE_CODE_REMOTE is documented as true only in the cloud.
 [ "$CLAUDE_CODE_REMOTE" = true ] || exit 0
-cat "$(dirname "$0")/docs/claude.md"
+"$(dirname "$0")/run" doc claude

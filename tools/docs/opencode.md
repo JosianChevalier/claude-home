@@ -1,2 +1,2 @@
-- `~/.config/opencode/tools/`
+- `run` tool, `name` and `args`: the harness tools; a project's `tools/<name>` comes first
   - `grab-notebook`: prints the session's notebook path, creating the file on the first call

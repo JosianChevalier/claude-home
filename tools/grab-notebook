@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Print this session's notebook path; create the file on first call.
+# platforms: claude opencode
+# doc: prints the session's notebook path, creating the file on the first call
 set -euo pipefail
-f="/tmp/notebook-${CLAUDE_CODE_SESSION_ID:?no session id}.md"
+f="/tmp/notebook-${CLAUDE_CODE_SESSION_ID:-${OPENCODE_SESSION_ID:?no session id}}.md"
 [ -e "$f" ] || : > "$f"
 echo "$f"
