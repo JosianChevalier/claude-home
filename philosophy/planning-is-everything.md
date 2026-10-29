@@ -28,7 +28,7 @@ The **forecast**, the stages left: a best guess, rewritten freely, expected to b
 
 The **state**: decisions made, discovered context, blockers, the real next step, which the first unchecked box may not be. Facts, as they really are. A wish belongs in the forecast; smuggled into the state, it corrupts the only facts the next session has.
 
-"The plan is nothing" disposes of the forecast, never the state. As execution proceeds, content migrates from one to the other: each stage consumed turns a guess into a fact. The map keeps the done stages marked, since position is state and position needs the walked route; their detail is already in the commits, one home per fact ([[philosophy/context-economics]]). When the last stage is consumed, the forecast is empty, the state lives in the commits, and the file is deleted.
+"The plan is nothing" disposes of the forecast, never the state. As execution proceeds, content migrates from one to the other: each stage consumed turns a guess into a fact. The map keeps the done stages marked, since position is state and position needs the walked route.
 
 ## A plan is not a backlog
 
@@ -37,6 +37,8 @@ A plan carries one task, long enough to need splitting: a tree of stages and a m
 ## The expedition
 
 A plan is a map handed to a crew dropped in the jungle: surprise is the base rate, not an incident. The map orients, the terrain decides. The agent is the crew's scanner and machete, it perceives and cuts, and a machete that reshapes the terrain to match the map has stopped being a tool: the mismatch it cut through was the information the crew needed. Forcing a stage through a codebase that contradicts it absorbs the disappointment below the belt, and the map stays wrong for the next crew.
+
+A stage is a day's walk: one easy change on prepared ground ([[philosophy/make-the-change-easy]]). A stage that turns out to need far more code than that is the terrain contradicting the map: stop, and say the map no longer holds.
 
 So a stage is direction. The driver checks it against reality; where the territory contradicts the map, the divergence goes to the mob and the map is redrawn there, by the navigators, never settled in the code by the driver ([[philosophy/collaborative-production]]). Diverging from the plan is the mechanism working: the sensing is reported, the responding is the mob's. Silent compliance with a stale stage is one failure; a silent workaround of it is the other.
 
