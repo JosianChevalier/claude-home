@@ -1,2 +1,2 @@
-- `run` tool, `name` and `args`: the harness tools; a project's `tools/<name>` comes first
-  - `grab-notebook`: prints the session's notebook path, creating the file on the first call
+run tool, name + args   runs a harness tool, the project's tools/<name> first; run doc <name> prints its page
+  grab-notebook - print the session's notebook path

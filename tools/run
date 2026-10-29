@@ -1,34 +1,46 @@
 #!/usr/bin/env bash
 # The single endpoint for the harness tools.
 #   run <tool> args…     runs the project's tools/<tool> if there is one, else the home's
-#   run doc <platform>   prints the list of tools tagged for that platform, project first
-# A tool is listed from its own header, right under its shebang:
+#   run doc <platform>   the index: one line per tool tagged for claude or opencode, project first
+#   run doc <tool>       the tool's page
+# A tool documents itself in the comment block right under its shebang, man-shaped;
+# the block ends at the first line that is not a comment:
 #   # platforms: claude opencode
-#   # doc: what it does                           the tool's line
-#   # doc:   `tool FORM`: what the form does      a sub-item, two more spaces
+#   # NAME
+#   #   <tool> - what it does, one line: the index line
+#   # SYNOPSIS
+#   #   <tool> FORM…
+#   # DESCRIPTION
+#   #   …
 set -euo pipefail
 home=$(cd "$(dirname "$0")" && pwd)
 project=$(git rev-parse --show-toplevel 2>/dev/null || pwd)/tools
 [ "$project" = "$home" ] && project=
 
-doc() {
+locate() { for d in $project $home; do [ -x "$d/$1" ] && { echo "$d/$1"; return; }; done; return 1; }
+page() { awk '/^# platforms:/{on=1;next} on&&/^#/{sub(/^# ?/,"");print;next} on{exit}' "$1"; }
+index() {
   case $1 in
-    claude)   echo "- \`${home/#$HOME/~}/run <tool> …\`: the harness tools; a project's \`tools/<tool>\` comes first" ;;
-    opencode) echo "- \`run\` tool, \`name\` and \`args\`: the harness tools; a project's \`tools/<name>\` comes first" ;;
-    *) echo "run doc: platform claude or opencode" >&2; exit 2 ;;
+    claude)   echo "${home/#$HOME/~}/run <tool> …   runs a harness tool, the project's tools/<tool> first; run doc <tool> prints its page" ;;
+    opencode) echo "run tool, name + args   runs a harness tool, the project's tools/<name> first; run doc <name> prints its page" ;;
   esac
   for d in $project $home; do
     for f in "$d"/*; do
-      [ -f "$f" ] && [ -x "$f" ] || continue
-      grep -q "^# platforms: .*\b$1\b" "$f" || continue
-      name=$(basename "$f")
-      grep '^# doc:' "$f" | sed -e "1s|^# doc: |  - \`$name\`: |" -e '2,$s|^# doc:   |    - |'
+      [ -f "$f" ] && [ -x "$f" ] && grep -q "^# platforms: .*\b$1\b" "$f" || continue
+      page "$f" | awk '/^NAME/{getline; sub(/^ +/,"  "); print; exit}'
     done
   done
 }
 
-[ $# -gt 0 ] || { sed -n '2,4p' "$0" | sed 's/^# \{0,1\}//' >&2; exit 2; }
+[ $# -gt 0 ] || { sed -n '2,5p' "$0" | sed 's/^# \{0,1\}//' >&2; exit 2; }
 cmd=$1; shift
-[ "$cmd" = doc ] && { doc "${1:-}"; exit; }
-for d in $project $home; do [ -x "$d/$cmd" ] && exec "$d/$cmd" "$@"; done
-echo "run: no tool $cmd" >&2; exit 1
+if [ "$cmd" = doc ]; then
+  case ${1:-} in
+    claude|opencode) index "$1" ;;
+    "") echo "run doc: a platform, claude or opencode, or a tool" >&2; exit 2 ;;
+    *) f=$(locate "$1") || { echo "run doc: no tool $1" >&2; exit 1; }; page "$f" ;;
+  esac
+  exit
+fi
+f=$(locate "$cmd") || { echo "run: no tool $cmd" >&2; exit 1; }
+exec "$f" "$@"

@@ -1,40 +1,45 @@
 #!/usr/bin/env python3
 # platforms: claude
-# doc: exact-match edits, in place of an inline Python script; each old text matches once, all edits land or none
-# doc:   `replace-text FILE 'old' 'new'`: one edit, `''` deletes
-# doc:   `replace-text FILE --between 'START' 'END' < new`: a section, END kept
-# doc:   `replace-text <<'EOF'` with `@@@ FILE`, old, `@@@`, new, `@@@ FILE`, … `EOF`: a batch, several files, no quoting
-# doc:   prints `FILE:LINE -REMOVED +ADDED`, no `git diff` needed; `-h` for the details
-# model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this; its header is its doc.
+# NAME
+#   replace-text - exact-text edits in one call, in place of an inline Python script
+# SYNOPSIS
+#   replace-text FILE 'old' 'new'
+#   replace-text FILE --between 'START' 'END' < new
+#   replace-text [FILE] < blocks
+# DESCRIPTION
+#   Each old text or start anchor must match exactly once; on any failure nothing is written.
+#   FILE 'old' 'new'                one replacement, '' deletes
+#   FILE --between 'START' 'END'    stdin replaces from START up to END; END kept, first
+#                                   match after START, '' means end of file
+#   [FILE] < blocks                 a batch, several pairs and files, no quoting:
+#                                     @@@ path/a.md      (omitted when FILE is given)
+#                                     old text
+#                                     @@@
+#                                     new text
+#                                     @@@
+#                                     another old
+#                                     @@@
+#                                     another new
+#                                     @@@ path/b.md
+#                                     ...
+#   A segment ending with an empty line includes its final newline.
+# OUTPUT
+#   One line per edit, FILE:LINE -REMOVED +ADDED in lines, so no diff is needed to see
+#   where it landed. LINE is where the edit starts, before any later edit in the same
+#   call shifts it.
+
+# model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this.
 #
 # Why it exists: agents edit text through inline Python (`python3 - <<'EOF'`, open, replace,
 # write) far more than through the Edit tool: 292 such calls against 102 in 2026-10-08..17.
 # They batch several edits and files per call and check each match is unique. This is that
 # script, pre-made, so a call costs a line instead of rewriting the scaffolding each time.
-"""Exact-text edits in one call. Each old text or start anchor must match exactly once; on any failure nothing is written.
-
-  replace-text FILE 'old' 'new'                      one replacement ('' deletes)
-  replace-text FILE --between 'START' 'END' < new    replace from START up to END (END kept, first match after START; '' = end of file)
-  replace-text [FILE] < blocks                       batch, several pairs and files:
-
-    @@@ path/a.md      (omitted when FILE is given)
-    old text
-    @@@
-    new text
-    @@@
-    another old
-    @@@
-    another new
-    @@@ path/b.md
-    ...
-
-  A segment ending with an empty line includes its final newline.
-
-  Prints one line per edit, FILE:LINE -REMOVED +ADDED in lines, so no diff is needed
-  to see where it landed. LINE is where the edit starts, before any later edit in the
-  same call shifts it.
-"""
+import os
 import sys
+
+
+def page():
+    os.execv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "run"), ["run", "doc", "replace-text"])
 
 edits = []  # (path, line, old, new) for the report
 
@@ -106,7 +111,7 @@ def parse_blocks(text, path):
 
 def main(argv):
     if not argv and sys.stdin.isatty() or argv[:1] in (["-h"], ["--help"]):
-        sys.exit(__doc__)
+        page()
     files = {}
 
     def content(path):
@@ -125,7 +130,7 @@ def main(argv):
         for path, old, new in parse_blocks(sys.stdin.read(), argv[0] if argv else None):
             files[path] = replace_once(path, content(path), old, new)
     else:
-        sys.exit(__doc__)
+        page()
     for path, s in files.items():
         with open(path, "w") as f:
             f.write(s)
