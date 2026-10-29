@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 # platforms: claude
-# NAME
-#   replace-text - exact-text edits in one call, in place of an inline Python script
-# SYNOPSIS
-#   replace-text FILE 'old' 'new'
-#   replace-text FILE --between 'START' 'END' < new
-#   replace-text [FILE] < blocks
-# DESCRIPTION
-#   Each old text or START must match exactly once, or nothing is written. '' as new
-#   deletes, as END means end of file; END is kept. Blocks: `@@@ FILE` (omitted when
-#   FILE is given), old, `@@@`, new, then `@@@` or `@@@ FILE` for the next pair. A segment
-#   ending with an empty line keeps its final newline. Prints FILE:LINE -REMOVED +ADDED
-#   per edit.
+# Usage: replace-text FILE OLD NEW
+#        replace-text FILE --between START END < NEW
+#        replace-text [FILE] < BLOCKS
+# Exact-text edits in one call, in place of an inline Python script.
+#   Each OLD or START must match exactly once, or nothing is written.
+#   OLD NEW                '' as NEW deletes
+#   --between START END    stdin replaces START up to END, END kept; '' as END is end of file
+#   BLOCKS                 `@@@ FILE` (omitted when FILE is given), old, `@@@`, new, then `@@@`
+#                          or `@@@ FILE` for the next pair; a segment ending with an empty
+#                          line keeps its final newline
+#   Prints FILE:LINE -REMOVED +ADDED per edit.
 
 # model-coupled: claude-fable-5-1, claude-opus-5-5. At a model change, check agents still write inline Python to edit text; if not, delete this.
 #

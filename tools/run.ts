@@ -2,7 +2,7 @@ import { tool } from "@opencode-ai/plugin"
 
 // OpenCode's side of tools/run: the session id reaches the shell only through a tool's context.
 export default tool({
-  description: "Run a harness tool; `run doc opencode` is the index, `run doc <name>` a tool's page. The project's tools/<name> comes first, then the home's.",
+  description: "Run a harness tool; `run doc opencode` is the index, `run doc <name>` a tool's help. The project's tools/<name> comes first, then the home's.",
   args: {
     name: tool.schema.string().describe("the tool"),
     args: tool.schema.string().optional().describe("its arguments, as written on a shell line"),

@@ -1,6 +1,6 @@
 # tools
 
-Scripts agents call instead of rewriting the same code each session. `run` is the single endpoint, `man`-shaped: `run <tool> args…` runs the project's `tools/<tool>` if there is one, else the home's; `run doc <platform>` prints the index, one line per tool, which is what tells agents the tools exist; `run doc <tool>` prints the tool's page. Both come from the comment block under each script's shebang (`# platforms:`, then NAME, SYNOPSIS, DESCRIPTION; the format at the top of `run`). The index is loaded through each platform's own instruction channel, so `CLAUDE.md` / `AGENTS.md` stay untouched.
+Scripts agents call instead of rewriting the same code each session. `run` is the single endpoint, `--help`-shaped: `run <tool> args…` runs the project's `tools/<tool>` if there is one, else the home's; `run doc <platform>` prints the index, one line per tool, which is what tells agents the tools exist; `run doc <tool>` prints the tool's help. Both come from the comment block under each script's shebang (`# platforms:`, `Usage:` lines, one line on what it does; the format at the top of `run`). The index is loaded through each platform's own instruction channel, so `CLAUDE.md` / `AGENTS.md` stay untouched.
 
 ```
 Claude Code   settings.json, SessionStart hook `run doc claude`,
