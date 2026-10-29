@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # The single endpoint for the harness tools.
 #   run <tool> args…     runs the project's tools/<tool> if there is one, else the home's
-#   run doc <platform>   the index: one line per tool tagged for claude or opencode, project first
+#   run doc <platform>   the help of every tool tagged for claude or opencode, project first, called through run
 #   run doc <tool>       the tool's help
 # A tool documents itself --help style in the comment block right under its shebang;
 # the block ends at the first line that is not a comment:
 #   # platforms: claude opencode
 #   # Usage: TOOL FORM...
 #   #        TOOL OTHER FORM...
-#   # One line on what it does: the index line.
+#   # One line on what it does.
 #   #   details, indented
 set -euo pipefail
 home=$(cd "$(dirname "$0")" && pwd)
@@ -19,13 +19,15 @@ locate() { for d in $project $home; do [ -x "$d/$1" ] && { echo "$d/$1"; return;
 page() { awk '/^# platforms:/{on=1;next} on&&/^#/{sub(/^# ?/,"");print;next} on{exit}' "$1"; }
 index() {
   case $1 in
-    claude)   r="~${home#"$HOME"}/run"; printf 'Usage: %s TOOL [ARG]...   the project'"'"'s tools/TOOL first, else the home'"'"'s\n       %s doc TOOL        the tool'"'"'s help\n' "$r" "$r" ;;
-    opencode) printf 'Usage: run tool, name + args   the project'"'"'s tools/NAME first, else the home'"'"'s\n       run doc NAME            the tool'"'"'s help\n' ;;
+    claude)   pre="~${home#"$HOME"}/run " ;;
+    opencode) pre=; echo "Each tool is called through the run tool: name, then args as on the usage line."; echo ;;
   esac
+  first=1
   for d in $project $home; do
     for f in "$d"/*; do
       [ -f "$f" ] && [ -x "$f" ] && grep -q "^# platforms: .*\b$1\b" "$f" || continue
-      printf '  %-15s %s\n' "$(basename "$f")" "$(page "$f" | awk '!/^Usage:/ && !/^[[:space:]]/ && NF {print; exit}')"
+      [ -n "$first" ] && first= || echo
+      page "$f" | awk -v p="$pre" '/^Usage: /{sub(/^Usage: /,"Usage: " p)} /^       [^ ]/{sub(/^       /,"       " p)} {print}'
     done
   done
 }
