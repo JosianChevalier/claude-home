@@ -33,7 +33,7 @@ The measure is return per token. A schema lowers a human's extraneous load and r
 
 | Mode | Where | Designed for |
 |---|---|---|
-| Human | the chat | clarity above all: communication costs are asymmetric ([[philosophy/conversation-as-interface]]) |
+| Human | the chat | clarity above all: communication costs are asymmetric ([[philosophy/broken-symmetry-of-cost]]) |
 | Agent | rules, skills, agents, work files, notebooks | the agent embedded |
 | Hybrid | philosophy, plans, studies | the agent embedded, the human reflexive |
 

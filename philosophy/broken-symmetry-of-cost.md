@@ -24,6 +24,10 @@ Each piece of information goes in the form that carries it cheapest for its read
 
 The corollary. Between people, the effort of saying is what keeps a speaker short; for the agent that brake is gone, and nothing limits what it writes but the reader's cost. So every line is paid by the reader and cheap for the writer, and the writer does the cutting the reader would otherwise do: a line stays for what it saves the reader, nothing stays for what it cost to write.
 
+## In doubt, the writer pays
+
+The writer's side is not always free. Writing from where the reader stands sometimes takes drafts: a notebook before the text, a rewrite to shake off the structure of the input, patchwriting (Howard). In doubt the cost goes to the writer, always, because the two sides are neither in the same currency nor at the same scale. The writer's cost is tokens, spent once, bounded by the rewrite. A human reader's cost is cognitive energy, the dearer currency by far. An agent reader's cost is a path: a wrong attractor or a wrong level design sends it down work that is waste ([[philosophy/attractors]], [[philosophy/level-design]]), and a wasted path is a different scale from a redraft.
+
 ## Related
 
 - The reader's attention as the scarce resource, the map as the form of an answer: [[philosophy/zoom-levels]].
