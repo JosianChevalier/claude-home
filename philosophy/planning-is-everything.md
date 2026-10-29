@@ -4,15 +4,15 @@ tags: [planning, probe-sense-respond, cynefin, session-state]
 
 # Planning is everything
 
-**Thesis.** Planning is everything, the plan is nothing (Eisenhower): the activity builds the shared model, the artifact is a disposable snapshot. A plan is direction, not prescription: it orients the probes and is redrawn by what they return.
+**Thesis.** Planning is everything, the plan is nothing (Eisenhower): a plan is direction, not prescription, redrawn by what its probes return.
 
 ## Two objects, two reasons to probe
 
-The code is deterministic, inspectable, finite: Cynefin's complicated domain, analyzable in principle. It is still probed rather than studied, because the probe is an **epistemic action** (Kirsh & Maglio): the compiler, the tests and the runtime compute the consequences of a change faster than the engineer can simulate them, and git undoes the change for free. Acting beats computing.
+The code is deterministic, inspectable, finite: Cynefin's complicated domain. It is still probed rather than analyzed, because the probe is an **epistemic action** (Kirsh & Maglio): the compiler, the tests and the runtime compute the consequences of a change faster than the engineer can simulate them, and git undoes the change for free. Acting beats computing.
 
 The activity of software development is complex, because it is modeling: the model emerges from the interaction of the user, the code and now the agent, and sits nowhere before the probe. The probe makes the model's tensions emerge; the belt transmits them as friction ([[philosophy/transmission-belt]]); the engineer's metis reads in them when it is time to change ([[philosophy/metis-kairos]]).
 
-So the work runs as probe-sense-respond (Snowden) because the activity is complex, and the code's nature is what makes the probing cheap. Planning everything ahead is dearer than cutting small steps and going with what each returns: a step-by-step prescription encodes knowledge not yet had, first contact with the code invalidates it, and the stale letter is then followed instead of what was found.
+So the work runs as probe-sense-respond (Snowden) because the activity is complex, and the code's nature is what makes the probing cheap. Planning everything ahead is dearer than cutting small steps and going with what each returns: a step-by-step prescription encodes knowledge not yet had, no plan survives contact with the code (Moltke), and its stale letter is then followed instead of what was found.
 
 ## The plan orients the learning
 
@@ -24,7 +24,7 @@ Reshaping stages come before implementing ones, because reshaping is the cheapes
 
 The plan carries two contents of opposite nature.
 
-The **forecast**, the stages left: a best guess, rewritten freely, expected to be wrong in detail, and optional. Options stay open to the last responsible moment (Poppendieck): the stages left may never be built, when priorities change, when the solution changes halfway, when what stands is good enough, and nothing half-done is thrown away. The map is not the territory (Korzybski): where the territory contradicts the map, the territory wins and the map is redrawn, never the reverse.
+The **forecast**, the stages left: a best guess, rewritten freely, expected to be wrong in detail, and optional. Options stay open to the last responsible moment (Poppendieck): the stages left may never be built, and nothing half-done is thrown away. The map is not the territory (Korzybski): where the territory contradicts the map, the territory wins and the map is redrawn, never the reverse.
 
 The **state**: decisions made, discovered context, blockers, the real next step, which the first unchecked box may not be. Facts, as they really are. A wish belongs in the forecast; smuggled into the state, it corrupts the only facts the next session has.
 
