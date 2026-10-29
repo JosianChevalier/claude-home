@@ -8,7 +8,7 @@ rank: 1
 
 ## Current step
 
-Give OpenCode a session notebook. `grab-notebook` needs `CLAUDE_CODE_SESSION_ID`; OpenCode has a real `sessionID` in its custom tools (`tool/*.ts`) and plugins. Decide the shape, then document it in `tools/docs/opencode.md`.
+Give OpenCode a session notebook. `grab-notebook` needs `CLAUDE_CODE_SESSION_ID`; OpenCode has a real `sessionID` in its custom tools (`tool/*.ts`) and plugins. `tools/docs/opencode.md` already lists `grab-notebook`; decide the shape that makes the line true, same name and output on both platforms.
 
 - Claude side: a SessionStart hook receives the session id on stdin, so the notebook path could be put in context without the env variable; only if the two sides end up sharing a shape.
 - The cloud adapter `.claude/` has no `settings.json`, so the hook does not run there: cloud-skills.work.md territory.
