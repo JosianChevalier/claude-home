@@ -89,7 +89,7 @@ tags: [ddd, vocabulary]
 
 # Title
 
-**Thesis.** One or two sentences.
+**Thesis.** One sentence: the scout loads every thesis, as a skill description is loaded whole.
 
 ## A section per idea
 
