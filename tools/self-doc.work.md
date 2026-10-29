@@ -5,8 +5,6 @@ rank: 99
 
 # self-doc
 
-- [ ] 
-
 Each script carries a header, `# platforms: claude opencode` and a `# doc:` block, the terse list of its forms. `tools/doc <platform>` prints the list for the tools tagged with it, in the shape of today's `docs/<platform>.md`. The signature lives next to the code, like `--help`; adding a tool is adding a header; nothing is written twice.
 
 ## Steps
