@@ -9,5 +9,5 @@ A cloud session clones this repo as a project (`/home/user/claude-home`); Claude
 
 ## Steps
 
-- [ ] Fresh cloud session: the tools list printed at start, `ongoing-work` in its skill list, both tools named when asked without running anything. `.claude/settings.json` runs `tools/cloud-docs` through `$CLAUDE_PROJECT_DIR`; the guard rests on `CLAUDE_CODE_REMOTE` being `true` there (code.claude.com/docs/en/env-vars), never seen in a real session yet. If the list is missing: check the variable first, then the project-dir path. **← current**
+- [ ] Fresh cloud session: the tools list printed at start, `ongoing-work` in its skill list, both tools named when asked without running anything. `.claude/settings.json` runs `tools/document-tools-for-cloud-sessions` through `$CLAUDE_PROJECT_DIR`; the guard rests on `CLAUDE_CODE_REMOTE` being `true` there (code.claude.com/docs/en/env-vars), never seen in a real session yet. If the list is missing: check the variable first, then the project-dir path. **← current**
 - [ ] Description of `ongoing-work`: match the words sessions use ("Resume from X.work.md", "record it in the work file"), which it does not today.

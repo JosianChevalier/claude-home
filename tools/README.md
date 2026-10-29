@@ -5,12 +5,12 @@ Scripts agents call instead of rewriting the same code each session. `docs/` is 
 ```
 docs/claude.md     ─▶  Claude Code   settings.json, SessionStart hook `cat`,
                                      re-run after /clear, resume and compaction
-                                     cloud: .claude/settings.json runs `cloud-docs`,
+                                     cloud: .claude/settings.json runs `document-tools-for-cloud-sessions`,
                                      the same cat behind a CLAUDE_CODE_REMOTE guard
 docs/opencode.md   ─▶  OpenCode      opencode.json, `instructions`
 ```
 
-`cloud-docs` is hook plumbing, not a tool agents call: it stays out of the lists.
+`document-tools-for-cloud-sessions` is hook plumbing, not a tool agents call: it stays out of the lists.
 
 The list is rooted at the home, a tool per item, its forms under it. A tool both platforms have is written in both lists. A project with its own tools writes the same list rooted at the project.
 

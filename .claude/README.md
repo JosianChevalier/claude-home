@@ -10,7 +10,7 @@ Opened as home (`~/.claude` itself), the links resolve to the user-level files
 and load once. Checked: no duplicate in context.
 
 `settings.json` holds the one hook the cloud needs and home already has: the
-tools list at SessionStart. It runs `tools/cloud-docs`, silent unless
+tools list at SessionStart. It runs `tools/document-tools-for-cloud-sessions`, silent unless
 `CLAUDE_CODE_REMOTE` is true, so at home only the user-level hook prints.
 
 A clone on a machine where this repo is also `~/.claude` loads twice, user and
