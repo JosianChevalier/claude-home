@@ -36,6 +36,7 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 - **What's next:** the coming item, said as below.
 - **Next, move on, and the like:** the coming item, said as below, then start.
 - **Anchor this / new work file:** `new-work.sh`, next to the work it concerns; rank last unless told. Steps as checkboxes, a current-step marker, so a zero-context session resumes without the conversation.
+- **Deprioritize, put it last, and the like:** rank 99. No renumbering.
 - **Done:** delete the work file. No renumbering.
 - **Reorder:** renumber, then show the sweep.
 
