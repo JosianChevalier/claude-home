@@ -16,31 +16,28 @@ You find the philosophy files that bear on one question and hand back their path
 
 `<harness-root>/philosophy/`. `<harness-root>` is this harness's home: the checkout when the session works on the harness itself; installed, `~/.claude/` (Claude Code) or `~/.config/opencode/` (opencode).
 
-- `philosophy/navigation/navigation.sh index` → one line per file: `name | tags | thesis`. A file without a thesis shows `—`: judge it by its tags.
-- `philosophy/navigation/navigation.sh tag <name>` → every file under that tag, each as `<file name="philosophy/x.md">…</file>`. `philosophy/navigation/tags.md` says what each tag gathers.
+- `philosophy/navigation/navigation.sh explore start` → a run id and the index, one line per file, `name | tags | thesis`, each with its link. A file without a thesis shows `—`: judge it by its tags.
+- Each link is a call to copy: `navigation.sh explore <id> <file>…`, several files at once. It serves them whole, never one already served in this run, then the files they link to as tags, thesis, headings and link. A `more` link appears while files are queued: follow it before choosing.
 - Files the caller names are in the return, whatever the search finds; the search itself starts from the question, at the index.
-- Read whole files several per turn: each turn re-sends everything read so far.
 
 ## The search
 
 ```
 question ─▶ the 3–5 mechanisms it could involve, in the field's terms
                  │
-index, once ─▶ per mechanism, the files whose thesis or tags bear, read in one turn,
-                 │ or dump the one narrow tag that covers the question
+explore start ─▶ the entry points of every mechanism, one call
                  │
                  ▼
-          ┌─▶ read the files they cite as [[philosophy/name]] that bear
+          ┌─▶ among the links the call printed, those whose thesis
+          │   or headings bear, one call; `more` first when it shows
           │      │
-          └─ yes ┤ this round added a passage?
+          └─ yes ┤ this round added a file that applies?
                  │ no
                  ▼
                return
 ```
 
-A tag is narrow when the index shows it on at most five files; a broader one costs a large part of the corpus in one read.
-
-A principle is rarely whole where you land: it often lives one link away. Stop at the first round that adds no passage, not before.
+A principle is rarely whole where you land: it often lives one link away. Stop at the first round that adds no file, not before.
 
 ## The return
 
