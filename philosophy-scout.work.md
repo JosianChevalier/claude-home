@@ -19,6 +19,8 @@ Question: "How should we use an agent to handle our gitflow?" Corpus: 52 files.
 
 Same instructions, runs 1 and 2: that much spread. One run compares nothing; a change is judged on several.
 
+A run is counted from the task notification (tokens, tool uses, duration) and from the subagent's transcript, the `output_file` the Agent tool names: one JSON object per line, the calls are the `tool_use` blocks of the `assistant` lines, a tool result opening with `<persisted-output>` is a call lost to the cap. Extracted by script, never read whole.
+
 The return size is accepted: the cut from 52 is the point, a near file riding along is not blocking. The time was the turns: one file per turn once a shell cat hit the tool's output cap (~30 KB). Explore holds the whole response, links included, under 24 KB.
 
 ⚠️ Claude Code loads `agents/*.md` at session start: an edited scout is tested in the session that edited it as a general-purpose agent told to read the file and be it, the registered type only in a fresh session.
