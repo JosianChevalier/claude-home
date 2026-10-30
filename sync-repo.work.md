@@ -13,7 +13,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
 - [x] Migration 2: prototype `.claude/` zipped onto the laptop, in `old-claude/`.
 - [ ] Migration 3: integrate bit by bit, MO below. **← current**
   - [x] 3.1 `CLAUDE.md` replaced; its OpenCode section dropped.
-  - [ ] 3.2 Philosophy. **← current**
+  - [ ] 3.2 Philosophy. Each old note is raw input to a rewrite from the ground up, never redrafted to the new shape; the MO for step 3 below is read whole before the first message. **← current**
     - [x] `session-state-in-documents` landed 2026-10-10, to review.
     - [ ] Backlog `old-claude/rationale/`, 15 files, each with an old counterpart to import. Four already have wikilinks pointing at them from `philosophy/`: `compounding-decisions`, `model-expressions`, `shape-and-substance`, `workflow-rhythm`.
       - [x] `shape-and-substance` landed 2026-10-11: the belt test projected onto documents.
@@ -108,6 +108,8 @@ The same core must serve both Claude Code and OpenCode.
 - Doctrine is what must always be true, the intent; know-how is what works in 80% of cases. The limit of applicability must be understandable from the file. Doctrine is the fallback that guides the agent when the mechanical approach does not fit. This principle must be written down somewhere in the repo (philosophy).
 
 **Philosophy file, migration flow (2026-10-12):**
+
+The old note is input, not a draft. It was written for weaker models and from an older understanding; what it says is put on the table, concept by concept, against the files pointing at it and the philosophy as it stands now, and the new file is written after the review from what the user brings on top of the weights (`writing-philosophy`), from the notebook, never by redrafting the old text to the new shape. Redrafting is patchwriting, the mistake every session makes on this step; a file drafted before the review is deleted, not corrected.
 
 The reader came from `/clear` and has opened nothing. A message is written from what they hold: this conversation, and nothing read through a tool. A word met in a file this session does not go into a message unless the message quotes it or gives its meaning in the same sentence. Fifteen sessions failed on this point alone; the rest of the flow below exists to make it hold.
 
