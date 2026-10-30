@@ -34,14 +34,6 @@ The **state**: decisions made, discovered context, blockers, the real next step,
 
 A plan carries one task, long enough to need splitting: a tree of stages and a map of the route. The list of tasks is another document, the work file ([[philosophy/session-state-in-documents]]).
 
-## The expedition
-
-A plan is a map handed to a crew dropped in the jungle: surprise is the base rate, not an incident. The map orients, the terrain decides. The agent is the crew's scanner and machete, it perceives and cuts, and a machete that reshapes the terrain to match the map has stopped being a tool: the mismatch it cut through was the information the crew needed. Forcing a stage through a codebase that contradicts it absorbs the disappointment below the belt, and the map stays wrong for the next crew.
-
-A stage is a day's walk: one easy change on prepared ground ([[philosophy/make-the-change-easy]]). A stage that turns out to need far more code than that is the terrain contradicting the map: stop, and say the map no longer holds.
-
-So a stage is direction. The driver checks it against reality; where the territory contradicts the map, the divergence goes to the mob and the map is redrawn there, by the navigators, never settled in the code by the driver ([[philosophy/collaborative-production]]). Diverging from the plan is the mechanism working: the sensing is reported, the responding is the mob's. Silent compliance with a stale stage is one failure; a silent workaround of it is the other.
-
 ## Related
 
 - Reshaping as the cheapest probe: [[philosophy/make-the-change-easy]].
@@ -49,4 +41,4 @@ So a stage is direction. The driver checks it against reality; where the territo
 - Stages as missions, intent without the way: [[philosophy/batch-slicing]].
 - The work file, the backlog a plan is not: [[philosophy/session-state-in-documents]].
 - The friction a probe sends up: [[philosophy/transmission-belt]]; what reads it: [[philosophy/metis-kairos]].
-- The mob that redraws the map: [[philosophy/collaborative-production]].
+- How a stage is walked, the terrain against the map: [[philosophy/map-isnt-territory]].
