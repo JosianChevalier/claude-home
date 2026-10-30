@@ -62,7 +62,7 @@ Held at the end: one extended mind, type in the engineer, concept in the code, t
 8. [compounding-decisions](compounding-decisions.md): decisions chain and their errors multiply; how many an artifact asks is a design quantity.
 9. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
 
-Forks: after 4, [zoom-levels](zoom-levels.md), attention as the mirror of context economics; after 8, [model-tiers](model-tiers.md), cognitive energy is sparser than tokens.
+Forks: after 4, [zoom-levels](zoom-levels.md), attention as the mirror of context economics, or [shape-and-substance](shape-and-substance.md), an artifact request settles the shape while the substance still forms in conversation; after 7, [feedback-loops](feedback-loops.md), the loops a hypothesis is tested in, nested from the code to the domain; after 8, [model-tiers](model-tiers.md), cognitive energy is sparser than tokens.
 
 Held at the end: I stay central because I hold what the agent cannot; the harness transmits the friction, and that is where I learn; every practice is sized to my attention.
 
@@ -81,7 +81,7 @@ Held at the end: I stay central because I hold what the agent cannot; the harnes
 9. [agentic-trunk-based-development](agentic-trunk-based-development.md): between agents, the diff and never the conversation.
 10. [agentic-extreme-programming](agentic-extreme-programming.md): a lean context keeps the top model affordable, which keeps the context lean.
 
-Forks: at 2, [three-layer-harness](three-layer-harness.md), the layers by what each holds, then [harness-shape](harness-shape.md), how a rule or skill is built from them; at 7, [level-design](level-design.md), a file is a landscape, or [mechanical-refactoring](mechanical-refactoring.md), code is context.
+Forks: at 2, [three-layer-harness](three-layer-harness.md), the layers by what each holds, then [harness-shape](harness-shape.md), how a rule or skill is built from them; at 6, [conversation-continuity](conversation-continuity.md), a work runs as a lineage of sessions stitched through the document; at 7, [level-design](level-design.md), a file is a landscape, or [mechanical-refactoring](mechanical-refactoring.md), code is context.
 
 Held at the end: context is scarce and degrades, so the harness is shaped by what loads and when; the work is cut in space and time; between steps a file crosses, between sub-agents a conclusion returns, never the conversation; the whole moves together.
 
@@ -119,7 +119,7 @@ Held at the end: the harness is a few elements, the agents among them materializ
 9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
 10. [harness-direction](harness-direction.md): a brick's path from steered in session to script, once reliable and reused.
 
-Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then [always-valid-domain](always-valid-domain.md) and [aggregates](aggregates.md), the DDD entry.
+Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then [always-valid-domain](always-valid-domain.md) and [aggregates](aggregates.md), the DDD entry, then [ubiquitous-language](ubiquitous-language.md), the model in its default expression, and [model-expressions](model-expressions.md), each expression keeps what its grammar can say.
 
 Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment; a brick made reliable and reused travels down to a script.
 
