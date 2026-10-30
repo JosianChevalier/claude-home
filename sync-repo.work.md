@@ -30,8 +30,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
       - [x] `domain-first-implementation` landed 2026-10-27.
       - [x] `prototypes-are-probes` landed 2026-10-29.
       - [x] `planning-is-everything` landed 2026-10-30.
-      - [ ] `mikado`: no file of its own, reviewed 2026-10-30. Three passages fold, the rest is the weights: revert is free and blocker versus divergence go to `map-isnt-territory` (split out of `planning-is-everything` for them, 2026-10-30), with Mikado (Ellnestam & Brolund) named; the graph as a subtree of the plan's map goes to `planning-is-everything`, Forecast and state. The Korzybski sentence still in Forecast and state is reconciled with the new file's title in the same pass.
-      - [ ] Then `walkthrough-narrative`, the last.
+      - [ ] `walkthrough-narrative`, the last.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [ ] `kaizen`: `metis-kairos` points at it for the drift guard, a fix that contradicts the philosophy makes one of the two change explicitly, and it does not hold it; `harness-improvement` has the line as doctrine.
@@ -208,6 +207,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | Old | New | Moved, dropped, pending |
 |---|---|---|
 | `rationale/transmission-belt.md` | `philosophy/transmission-belt.md` | |
+| `rationale/mikado.md` | `philosophy/map-isnt-territory.md`, `philosophy/planning-is-everything.md` | no file: the method and inventory are the weights; three passages folded, Mikado named |
 | `rationale/collaborative-production.md` | `philosophy/collaborative-production.md` | |
 | `rationale/zoom-levels.md` | `philosophy/zoom-levels.md` | |
 | `rationale/context-economics.md` | `philosophy/context-economics.md` | OpenCode AOP section cut; split with `context-splitting` |

@@ -24,11 +24,11 @@ Reshaping stages come before implementing ones, because reshaping is the cheapes
 
 The plan carries two contents of opposite nature.
 
-The **forecast**, the stages left: a best guess, rewritten freely, expected to be wrong in detail, and optional. Options stay open to the last responsible moment (Poppendieck): the stages left may never be built, and nothing half-done is thrown away. The map is not the territory (Korzybski): where the territory contradicts the map, the territory wins and the map is redrawn, never the reverse.
+The **forecast**, the stages left: a best guess, rewritten freely, expected to be wrong in detail, and optional. Options stay open to the last responsible moment (Poppendieck): the stages left may never be built, and nothing half-done is thrown away. Where the territory contradicts the map, the territory wins and the map is redrawn, never the reverse ([[philosophy/map-isnt-territory]]).
 
 The **state**: decisions made, discovered context, blockers, the real next step, which the first unchecked box may not be. Facts, as they really are. A wish belongs in the forecast; smuggled into the state, it corrupts the only facts the next session has.
 
-"The plan is nothing" disposes of the forecast, never the state. As execution proceeds, content migrates from one to the other: each stage consumed turns a guess into a fact. The map keeps the done stages marked, since position is state and position needs the walked route.
+"The plan is nothing" disposes of the forecast, never the state. As execution proceeds, content migrates from one to the other: each stage consumed turns a guess into a fact. The map keeps the done stages marked, since position is state and position needs the walked route. A blocker met on a stage nests under it as a prerequisite, Mikado's graph (Ellnestam & Brolund) a subtree of the map, never a separate artifact.
 
 ## A plan is not a backlog
 
