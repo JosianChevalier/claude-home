@@ -1,5 +1,5 @@
 ---
-ongoing_work_file: "philosophy-scout searches through navigation.sh explore, a cluster per call. Empty when a fresh session's registered philosophy-scout runs the gitflow question through explore in about five calls, and the steps below are taken or dropped."
+ongoing_work_file: "philosophy-scout searches through navigation.sh explore, a cluster per call. Empty when the steps below are taken or dropped."
 rank: 5
 ---
 
@@ -16,6 +16,7 @@ Question: "How should we use an agent to handle our gitflow?" Corpus: 52 files.
 | index + Read, run 1 | 16 | 31 | 75 s | 72k |
 | index + Read, run 2 | 10 | 6 | 42 s | 53k |
 | explore | 9 | 6 | 36 s | 53k |
+| explore, registered type, fresh session | 9 | 6 | 27 s | 48k |
 
 Same instructions, runs 1 and 2: that much spread. One run compares nothing; a change is judged on several.
 
@@ -27,8 +28,7 @@ The return size is accepted: the cut from 52 is the point, a near file riding al
 
 ## Steps
 
-- [ ] Fresh session: the registered `philosophy-scout` on the gitflow question goes through explore, about five calls. **← current**
-- [ ] Validate the angles step: scout on the bare question, no hint of angles. Passes if `zoom-levels`, `compounding-decisions` and `model-tiers` come back.
+- [ ] Validate the angles step: **← current** scout on the bare question, no hint of angles. Passes if `zoom-levels`, `compounding-decisions` and `model-tiers` come back.
   > My agent keeps forcing itself to find feedback in pull requests. What do I do? (an agent asked to review a PR always produces findings, inventing nitpicks when there is nothing real). Files I already know bear on it: attractors.
 - [ ] Pin the scout to Opus whatever the session model. The agent file is shared with opencode (`provider/model-id`); Claude Code takes `opus`. Check both docs for a fallback list or a per-tool override.
 - [ ] Kaizen group to take or drop: the guide showed the scout's whole haul, ideas off the reader's case included.
