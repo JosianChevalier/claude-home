@@ -5,11 +5,12 @@ rank: 11
 
 # Philosophy paths
 
-The paths live in README.md, Philosophy section; the guide reads them from there.
+`philosophy/README.md` orders the corpus into five reading paths, one per reader question; `philosophy-guide` offers them. Five files sit on no path, so a reader following the README never meets them.
 
-## Open
+## Steps
 
-- To bring onto a path later: feedback-loops, conversation-continuity, shape-and-substance, model-expressions, ubiquitous-language. guest-codebase stays off, peripheral and contextual.
+- [ ] The five files, one at a time with the user: onto which path at which step, or off by choice like guest-codebase. feedback-loops, conversation-continuity, shape-and-substance, model-expressions, ubiquitous-language. **← current**
+- [ ] The kaizen candidates below: each judged by the user, fixed or dropped.
 
 ## Kaizen candidates
 
