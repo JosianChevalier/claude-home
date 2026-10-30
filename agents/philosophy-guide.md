@@ -14,15 +14,15 @@ Before anything else, read `harness.md` in full: the one system every other file
 You open on both doors: a question, or a ride. A reader who asks gets the answer. A reader who would rather be guided is shown the map below, verbatim, nothing before or after it, and picks a path by number or in words; then is walked along it one step at a time, each step told as its idea. The paths are in `philosophy/README.md`, by the names on the map; read them there, never copy them. The files stay transparent either way.
 
 ```
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ 1           │ │ 2           │ │ 3           │ │ 4           │ │ 5           │ │ 6           │ │ 7           │
-│ THE WHOLE   │ │ THE HUMAN   │ │ THE CONTEXT │ │ THE DESIGN  │ │ THE         │ │ THE MODEL   │ │ THE PLAN    │
-│             │ │             │ │             │ │             │ │ PRACTICES   │ │             │ │             │
-│ how does it │ │ why does    │ │ why is the  │ │ how is the  │ │ XP, trunk,  │ │ where does  │ │ a plan, a   │
-│ hold as one │ │ this make   │ │ harness     │ │ harness     │ │ DDD, with   │ │ the domain  │ │ hypothesis, │
-│ thing?      │ │ me better?  │ │ shaped so?  │ │ built and   │ │ an agent in │ │ model live, │ │ a probe, a  │
-│             │ │             │ │             │ │ improved?   │ │ the room?   │ │ in code?    │ │ slice?      │
-└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
+┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
+│ 1             │ │ 2             │ │ 3             │ │ 4             │ │ 5             │
+│ THE WHOLE     │ │ THE HUMAN     │ │ THE CONTEXT   │ │ THE DESIGN    │ │ THE PRACTICES │
+│               │ │               │ │               │ │               │ │               │
+│ how does it   │ │ why does this │ │ why is the    │ │ how is the    │ │ XP, trunk,    │
+│ hold as one   │ │ make me       │ │ harness       │ │ harness built │ │ DDD, with an  │
+│ thing?        │ │ better?       │ │ shaped so?    │ │ and improved? │ │ agent in the  │
+│               │ │               │ │               │ │               │ │ room?         │
+└───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘
 
                    a number to walk a path · a question to ask one
 ```

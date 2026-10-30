@@ -117,37 +117,8 @@ Held at the end: the harness is a few elements, the agents among them materializ
 8. [context-splitting](context-splitting.md): Beck's two hats and map-reduce applied to the context.
 9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
 
-Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md), the cut made inside the code.
+Forks: at 2, [feedback-loops](feedback-loops.md) then [batch-slicing](batch-slicing.md), every change a hypothesis and the smallest slice that tests it, then [planning-is-everything](planning-is-everything.md) and [prototypes-are-probes](prototypes-are-probes.md), a plan as direction redrawn by its probes; at 3, [continuous-delivery](continuous-delivery.md), every commit deliverable, the live path as the unit of safety; at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then the DDD line, [ubiquitous-language](ubiquitous-language.md), [model-expressions](model-expressions.md), [always-valid-domain](always-valid-domain.md), [aggregates](aggregates.md), [continuous-design](continuous-design.md), [domain-first-implementation](domain-first-implementation.md): the model lives in the language, is kept in code, holds its invariants by structure, and the engineer meets it first.
 
 Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment.
 
-## The model
-
-*Where does the domain model live, how does code carry it, and how do I keep it whole while iterating?*
-
-1. [ubiquitous-language](ubiquitous-language.md): the language is the model in its default expression, and its substance is verbs; code is where those sentences are best kept.
-2. [model-expressions](model-expressions.md): the model exists only as expressed, and each expression keeps what its grammar can say; layers are expression boundaries.
-3. [always-valid-domain](always-valid-domain.md): the model holds its invariants at every moment domain code can see it, by structure first.
-4. [aggregates](aggregates.md): the cluster that must hold together; its boundary is derived from the safety properties, never drawn.
-5. [continuous-design](continuous-design.md): code does not only express the model, it executes it; while iterating, it is where conceptual integrity degrades first.
-6. [domain-first-implementation](domain-first-implementation.md): the engineer is the domain's first consumer; every exposure after that is chosen for the feedback it gives.
-
-Forks: at 3, [parse-dont-validate](parse-dont-validate.md), the same invariant held by a type; at 6, [mechanical-refactoring](mechanical-refactoring.md), moves that cost no understanding, so understanding is spent on the model.
-
-Held at the end: the model lives in the language and is kept in code, read as a domain expert would say it; each expression keeps what its grammar can say; invariants are held by structure, inside a boundary derived not drawn; the code executes the model, and the engineer meets it first.
-
-## The plan
-
-*How is work planned and validated: what is a plan, a hypothesis, a probe, a slice?*
-
-1. [feedback-loops](feedback-loops.md): every change is a hypothesis, and the loops that test it nest, from the code up to the domain.
-2. [batch-slicing](batch-slicing.md): finding the next hypothesis to test and cutting the smallest slice that can test it; first an increment of value, then the steps that build it.
-3. [planning-is-everything](planning-is-everything.md): a plan is direction, not prescription, redrawn by what its probes return.
-4. [prototypes-are-probes](prototypes-are-probes.md): a throwaway prototype is a probe; its yield is the understanding it compressed, never its code.
-5. [continuous-delivery](continuous-delivery.md): every commit, at every stage of a plan, is deliverable; the live path is the unit of safety.
-
-Forks: at 2, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md), how a step is made small and kept live; at 5, [atomic-commit](atomic-commit.md), the floor.
-
-Held at the end: a plan is a direction and every step on it a hypothesis; the slice is the smallest thing that puts one bet in front of its feedback; a probe returns understanding, not code; and every commit along the way works now.
-
-Crossroads: collaborative-production is on four of the seven paths, agentic-extreme-programming, compounding-decisions, parse-dont-validate and mechanical-refactoring on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
+Crossroads: collaborative-production is on four of the five paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
