@@ -51,7 +51,7 @@ It is public because parts of it travel. A rule, a skill, an idea may serve you 
 
 Clone it as `~/.claude` for Claude Code, or as `~/.config/opencode` to make it your opencode configuration.
 
-`settings.template.json` is a starting point for your own `settings.json`. Anything named `*.work.md` is work in progress.
+`settings.template.json` and `opencode.template.json` are starting points for your own `settings.json` and `opencode.json`. The local OpenCode config is ignored so you can set personal permissions there. Anything named `*.work.md` is work in progress.
 
 The philosophy has its own [README](philosophy/README.md): page one, and the paths through it.
 

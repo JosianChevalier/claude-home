@@ -39,7 +39,8 @@
 !/old-claude/
 !/old-claude/**
 !/settings.template.json
-!/opencode.json
+!/opencode.template.json
+/opencode.json
 
 !/widgets/
 !/widgets/*.py
