@@ -21,6 +21,8 @@ Question: "How should we use an agent to handle our gitflow?" Corpus: 52 files. 
 | explore, fog-of-war bullet, B | Fable | 10 | 4 | 9 | 50 s | 61k |
 | explore, fog-of-war bullet | Opus | 6 | 3 | 12 | 21 s | 47k |
 | explore, fog-of-war bullet | Sonnet | 5 | 4 | 8 | 12 s | 35k |
+| explore, neighbourhood whole, 4 files a move | Fable | 10 | 6 | 12 | 104 s | 85k |
+| explore, neighbourhood whole, 1 file a move | Fable | 13 | 6 | 10 | 85 s | 71k |
 
 Where the time goes, run A: tool 7 s, model 50 s. Turns 1–4 take 2 s each; turns 5–10 take 5–11 s, each preceded by 450–750 output tokens of deliberation on which links bear. The pages are not the cost; the turns are, and what the scout writes before each call. Opus and Sonnet ran every command twice (relative path, then with a cd): their real calls are half the column.
 
@@ -34,8 +36,9 @@ A run is counted from the task notification (tokens, tool uses, duration) and fr
 
 ## Steps
 
-- [ ] Explore serves the linked files whole, not as tags, thesis and headings. Hypothesis: the previews make the scout choose at every round, and the choosing is the time; whole files would mean fewer rounds. Against it: a neighbourhood whole is several pages under the cap, a turn each. Test: the gitflow question, same model as the row compared against, time and calls into the table. **← current**
-- [ ] Pin the scout's model in the agent file. The step said Opus; the table says Sonnet, on one run. The frontmatter is shared with opencode (`provider/model-id`); Claude Code takes `sonnet`. Check both docs for a per-tool override.
+- A move is a teleport to one file, served whole with the files it links to: 6 of 6 ON in both runs against 4–5 with previews. Four files a move queued 32 files and 7 pages with no exit; one file a move, 6 moves, 28 files read, one of them (process-units, 10 neighbours, the harness cluster) worth 3 pages and 7 of the 13 returned. The scout picks process-units from the index every run: its thesis draws the gitflow question.
+- Parked: `more` as "keep exploring on this one" against moving on.
+- [ ] Pin the scout's model in the agent file. **← current** The step said Opus; the table says Sonnet, on one run. The frontmatter is shared with opencode (`provider/model-id`); Claude Code takes `sonnet`. Check both docs for a per-tool override.
 - [ ] The corpus bullet's first command as `<harness-root>/philosophy/navigation/navigation.sh explore start`: the relative form cost Opus and Sonnet a retry per command.
 - [ ] Angles step, the pull-request question: three runs today returned `zoom-levels` and `compounding-decisions` every time and `model-tiers` never, which a judge rated off the question. Drop the step, or its criterion becomes the two.
   > My agent keeps forcing itself to find feedback in pull requests. What do I do? (an agent asked to review a PR always produces findings, inventing nitpicks when there is nothing real). Files I already know bear on it: attractors.

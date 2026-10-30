@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""explore: the philosophy corpus served one cluster per call, paginated, a file never twice.
-Called by navigation.sh; argv: <self-path> <corpus-dir> start | <id> <file>… | <id> --more"""
+"""explore: the philosophy corpus served one neighbourhood per call, a file and what it links to, paginated, a file never twice.
+Called by navigation.sh; argv: <self-path> <corpus-dir> start | <id> <file> | <id> --more"""
 import json, os, re, secrets, sys
 
 CAP = 24_000
@@ -12,7 +12,6 @@ def names(): return sorted(f[:-3] for f in os.listdir(corpus) if f.endswith(".md
 def read(n): return open(os.path.join(corpus, n + ".md"), encoding="utf-8").read()
 def tags(t): m = re.search(r"^tags: *(.*)$", t, re.M); return m.group(1).strip() if m else "[]"
 def thesis(t): m = re.search(r"^\*\*Thesis\.\*\* *(.*)$", t, re.M); return m.group(1).strip() if m else "—"
-def headings(t): return [h.strip() for h in re.findall(r"^## +(.*)$", t, re.M) if h.strip() != "Related"]
 def links(t): return sorted({m for m in re.findall(r"\[\[philosophy/([^\]|#]+)", t)})
 def link(run, n): return f"→ {self_path} explore {run} {n}"
 def state_path(run): return f"/tmp/philosophy-explore-{session}-{run}.json"
@@ -21,7 +20,7 @@ def load(run):
     except FileNotFoundError: die(f"no run {run}: start one with `{self_path} explore start`")
 def save(run, st): json.dump(st, open(state_path(run), "w"))
 
-if not args: die("explore start | explore <id> <file>… | explore <id> --more")
+if not args: die("explore start | explore <id> <file> | explore <id> --more")
 
 if args[0] == "start":
     run = secrets.token_hex(2)
@@ -33,28 +32,23 @@ if args[0] == "start":
     sys.exit()
 
 run, *files = args
+if len(files) > 1: die("one file per move: it is served with its neighbourhood; move to the next after reading")
 st = load(run)
 known = set(names())
 if files == ["--more"]: files = []
 unknown = [f for f in files if f not in known]
 if unknown: die("no such file: " + ", ".join(unknown) + "\n(names as in the index, without .md)")
+def enqueue(n):
+    if n not in st["served"] and n not in st["queue"]: st["queue"].append(n)
 for f in files:
-    if f not in st["served"] and f not in st["queue"]: st["queue"].append(f)
+    enqueue(f)
+    for l in links(read(f)):
+        if l in known: enqueue(l)
 if not st["queue"]:
     print("nothing to serve: every file asked for was already served in this run" if files else "nothing queued"); sys.exit()
 
 def render(served_now, queue):
     out = [f'<file name="philosophy/{n}.md">\n{read(n).rstrip()}\n</file>' for n in served_now]
-    done = set(st["served"]) | set(served_now) | set(queue)
-    frontier = []
-    for n in served_now:
-        for l in links(read(n)):
-            if l in known and l not in done and l not in frontier: frontier.append(l)
-    if frontier:
-        out.append("Links not yet served:")
-        for n in frontier:
-            t = read(n)
-            out.append(f"  {n} {tags(t)}\n    {thesis(t)}\n    · " + "  · ".join(headings(t)) + f"\n    {link(run, n)}")
     if queue: out.append(f"more ({len(queue)} queued): {self_path} explore {run} --more")
     return "\n".join(out)
 
