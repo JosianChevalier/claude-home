@@ -1,3 +1,8 @@
+---
+ongoing_work_file: "The philosophy reading paths in README.md cover the corpus. Empty when the five files listed below sit on a path and each kaizen candidate is judged, fixed or dropped."
+rank: 11
+---
+
 # Philosophy paths
 
 The paths live in README.md, Philosophy section; the guide reads them from there.
