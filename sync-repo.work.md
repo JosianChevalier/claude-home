@@ -109,7 +109,7 @@ The same core must serve both Claude Code and OpenCode.
 
 **Philosophy file, migration flow (2026-10-12):**
 
-The old note was written for weaker models: it explains what the weights already hold, the method, the field's concepts, their standard consequences. Each concept in it is sorted first: in the weights, it is named with its author and nothing more (`writing-philosophy`, Referencing a concept); what the user brings on top of the weights is the only thing the new file holds, and the file is written from that, after the review. Keeping the old explanations is the mistake every session makes on this step; a file drafted before the sorting is deleted, not corrected.
+The old note was written before `writing-philosophy` existed, without its approach: it explains what the weights already hold, the method, the field's concepts, their standard consequences. Each concept in it is sorted first: in the weights, it is named with its author and nothing more (`writing-philosophy`, Referencing a concept); what the user brings on top of the weights is the only thing the new file holds, and the file is written from that, after the review. Keeping the old explanations is the mistake every session makes on this step; a file drafted before the sorting is deleted, not corrected.
 
 The reader came from `/clear` and has opened nothing. A message is written from what they hold: this conversation, and nothing read through a tool. A word met in a file this session does not go into a message unless the message quotes it or gives its meaning in the same sentence. Fifteen sessions failed on this point alone; the rest of the flow below exists to make it hold.
 
