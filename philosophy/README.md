@@ -58,11 +58,10 @@ Held at the end: one extended mind, type in the engineer, concept in the code, t
 4. [conversation-as-interface](conversation-as-interface.md): the chat is my only medium, and I still go down to the files.
 5. [embodied-navigation](embodied-navigation.md): thinking runs on spatial machinery; moving through code is how I think with it.
 6. [mechanical-refactoring](mechanical-refactoring.md): moves cost no understanding, so understanding is spent only on the model.
-7. [batch-slicing](batch-slicing.md): everything is a hypothesis; first an increment of value, then the steps that build it.
-8. [compounding-decisions](compounding-decisions.md): decisions chain and their errors multiply; how many an artifact asks is a design quantity.
-9. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
+7. [compounding-decisions](compounding-decisions.md): decisions chain and their errors multiply; how many an artifact asks is a design quantity.
+8. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
 
-Forks: after 4, [zoom-levels](zoom-levels.md), attention as the mirror of context economics; after 8, [model-tiers](model-tiers.md), cognitive energy is sparser than tokens.
+Forks: after 4, [zoom-levels](zoom-levels.md), attention as the mirror of context economics; after 7, [model-tiers](model-tiers.md), cognitive energy is sparser than tokens.
 
 Held at the end: I stay central because I hold what the agent cannot; the harness transmits the friction, and that is where I learn; every practice is sized to my attention.
 
@@ -117,10 +116,38 @@ Held at the end: the harness is a few elements, the agents among them materializ
 7. [collaborative-production](collaborative-production.md): mob programming and strong-style driving; the agent is the driver.
 8. [context-splitting](context-splitting.md): Beck's two hats and map-reduce applied to the context.
 9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
-10. [harness-direction](harness-direction.md): a brick's path from steered in session to script, once reliable and reused.
 
-Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then [always-valid-domain](always-valid-domain.md) and [aggregates](aggregates.md), the DDD entry.
+Forks: at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md), the cut made inside the code.
 
-Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment; a brick made reliable and reused travels down to a script.
+Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment.
 
-Crossroads: collaborative-production is on four of the five paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
+## The model
+
+*Where does the domain model live, how does code carry it, and how do I keep it whole while iterating?*
+
+1. [ubiquitous-language](ubiquitous-language.md): the language is the model in its default expression, and its substance is verbs; code is where those sentences are best kept.
+2. [model-expressions](model-expressions.md): the model exists only as expressed, and each expression keeps what its grammar can say; layers are expression boundaries.
+3. [always-valid-domain](always-valid-domain.md): the model holds its invariants at every moment domain code can see it, by structure first.
+4. [aggregates](aggregates.md): the cluster that must hold together; its boundary is derived from the safety properties, never drawn.
+5. [continuous-design](continuous-design.md): code does not only express the model, it executes it; while iterating, it is where conceptual integrity degrades first.
+6. [domain-first-implementation](domain-first-implementation.md): the engineer is the domain's first consumer; every exposure after that is chosen for the feedback it gives.
+
+Forks: at 3, [parse-dont-validate](parse-dont-validate.md), the same invariant held by a type; at 6, [mechanical-refactoring](mechanical-refactoring.md), moves that cost no understanding, so understanding is spent on the model.
+
+Held at the end: the model lives in the language and is kept in code, read as a domain expert would say it; each expression keeps what its grammar can say; invariants are held by structure, inside a boundary derived not drawn; the code executes the model, and the engineer meets it first.
+
+## The plan
+
+*How is work planned and validated: what is a plan, a hypothesis, a probe, a slice?*
+
+1. [feedback-loops](feedback-loops.md): every change is a hypothesis, and the loops that test it nest, from the code up to the domain.
+2. [batch-slicing](batch-slicing.md): finding the next hypothesis to test and cutting the smallest slice that can test it; first an increment of value, then the steps that build it.
+3. [planning-is-everything](planning-is-everything.md): a plan is direction, not prescription, redrawn by what its probes return.
+4. [prototypes-are-probes](prototypes-are-probes.md): a throwaway prototype is a probe; its yield is the understanding it compressed, never its code.
+5. [continuous-delivery](continuous-delivery.md): every commit, at every stage of a plan, is deliverable; the live path is the unit of safety.
+
+Forks: at 2, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md), how a step is made small and kept live; at 5, [atomic-commit](atomic-commit.md), the floor.
+
+Held at the end: a plan is a direction and every step on it a hypothesis; the slice is the smallest thing that puts one bet in front of its feedback; a probe returns understanding, not code; and every commit along the way works now.
+
+Crossroads: collaborative-production is on four of the seven paths, agentic-extreme-programming, compounding-decisions, parse-dont-validate and mechanical-refactoring on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
