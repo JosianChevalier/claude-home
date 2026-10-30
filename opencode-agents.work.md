@@ -21,7 +21,7 @@ opencode.json
 
 - An agent prompt replaces the shipped base prompt wholesale; a truthy check, so an empty prompt brings it back.
 - Several `{file:…}` chain in one string inside `opencode.json` (each file read, trimmed, JSON-escaped). No include inside an agent `.md`, no per-agent `instructions` key, so the agents are declared in `opencode.json`, not as markdown files.
-- AGENTS.md and the `instructions` list in `opencode.json` reach every subagent the same as the primary. Both go; `rules/*.md` content lives in the modules. `tools/docs/opencode.md` stays in `instructions`: the subagents need the tools too.
+- AGENTS.md goes. `tools/docs/opencode.md` stays in `instructions`: the subagents need the tools too. How the rules reach the agents is open, the first step below.
 - Mecha suit and autopilot share the doctrine; the autopilot module adds the handover of a whole stage and the disengagement at the first choice the plan does not settle (philosophy/collaborative-production, kairos-gates).
 - Astra and Sol share the doctrine; the Sol module spells out what Astra does unprompted.
 - The modules are plain text and carry over to OpenCode 2 unchanged; only `prompts/system.md` is redone there from the 2.x base, which the override also drops (see Facts).
@@ -35,7 +35,8 @@ opencode.json
 
 ## Steps
 
-- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and the rules, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified. ← next
+- [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. ← next
+- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and session-design, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified.
 - [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice.
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
