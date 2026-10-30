@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # platforms: claude
 # Usage: replace-text FILE 'old' 'new'                      one edit, '' deletes
-#        replace-text FILE --between 'START' 'END' < new    a section, END kept
+#        replace-text FILE --between 'START' 'END' <<'EOF'   a section, END kept, '' END runs to end of file
+#          new text
+#          EOF
 #        replace-text <<'EOF'                               a batch, several files, no quoting
 #          @@@ FILE
 #          old text
