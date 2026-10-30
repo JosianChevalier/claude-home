@@ -43,22 +43,27 @@ for f in files:
 if not st["queue"]:
     print("nothing to serve: every file asked for was already served in this run" if files else "nothing queued"); sys.exit()
 
-served_now, size = [], 0
-while st["queue"]:
-    t = read(st["queue"][0])
-    if served_now and size + len(t) > CAP: break
-    n = st["queue"].pop(0); st["served"].append(n); served_now.append(n); size += len(t)
-    print(f'<file name="philosophy/{n}.md">\n{t.rstrip()}\n</file>')
-save(run, st)
+def render(served_now, queue):
+    out = [f'<file name="philosophy/{n}.md">\n{read(n).rstrip()}\n</file>' for n in served_now]
+    done = set(st["served"]) | set(served_now) | set(queue)
+    frontier = []
+    for n in served_now:
+        for l in links(read(n)):
+            if l in known and l not in done and l not in frontier: frontier.append(l)
+    if frontier:
+        out.append("Links not yet served:")
+        for n in frontier:
+            t = read(n)
+            out.append(f"  {n} {tags(t)}\n    {thesis(t)}\n    · " + "  · ".join(headings(t)) + f"\n    {link(run, n)}")
+    if queue: out.append(f"more ({len(queue)} queued): {self_path} explore {run} --more")
+    return "\n".join(out)
 
-frontier = []
-for n in served_now:
-    for l in links(read(n)):
-        if l in known and l not in st["served"] and l not in st["queue"] and l not in frontier: frontier.append(l)
-if frontier:
-    print("Links not yet served:")
-    for n in frontier:
-        t = read(n)
-        print(f"  {n} {tags(t)}\n    {thesis(t)}\n    · " + "  · ".join(headings(t)) + f"\n    {link(run, n)}")
-if st["queue"]:
-    print(f"more ({len(st['queue'])} queued): {self_path} explore {run} --more")
+# serve from the queue while the whole response, links included, fits the cap; at least one file
+served_now, queue = [], list(st["queue"])
+while queue:
+    text = render(served_now + [queue[0]], queue[1:])
+    if served_now and len(text) > CAP: break
+    served_now.append(queue.pop(0)); out = text
+st["served"] += served_now; st["queue"] = queue
+save(run, st)
+print(out)
