@@ -17,7 +17,7 @@ You find the philosophy files that bear on one question and hand back their path
 `<harness-root>/philosophy/`. `<harness-root>` is this harness's home: the checkout when the session works on the harness itself; installed, `~/.claude/` (Claude Code) or `~/.config/opencode/` (opencode).
 
 - `philosophy/navigation/navigation.sh explore start` → a run id and the index, one line per file, `name | tags | thesis`, each with its link. A file without a thesis shows `—`: judge it by its tags.
-- Each link is a call to copy: `navigation.sh explore <id> <file>…`, several files at once. It serves them whole, never one already served in this run, then the files they link to as tags, thesis, headings and link. A `more` link appears while files are queued: follow it before choosing.
+- Each link is a call to copy: `navigation.sh explore <id> <file>…`. The corpus is under fog of war: moving to a file reveals it whole, and the files it links to appear at the edge of the fog as tags, thesis, headings and link, enough to choose the next move. A file revealed stays revealed for the run, never served twice. One move often reveals more than your shell tool's screen holds: past its output cap the output is spilled to a file read in slices, one per turn. So a move is paginated under the cap, and a `more` link pans to the next page while files are queued; any next call serves the queue first, whatever else it asks for. One explore call per command: two chained put two pages on one screen.
 - Files the caller names are in the return, whatever the search finds; the search itself starts from the question, at the index.
 
 ## The search
