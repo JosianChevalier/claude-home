@@ -35,8 +35,7 @@ opencode.json
 
 ## Steps
 
-- [ ] `prompts/system.md`: the shipped base prompt for GPT ids (1.18.9: `packages/opencode/src/session/prompt/gpt.txt`, beast.txt for gpt-4/o1/o3, codex.txt) cut to what explains the harness to the model: tools and when to use which, `<system-reminder>` blocks, markdown rendering, `file:line` references. Every posture line out. ← next
-- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and the rules, in belt mode.
+- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and the rules, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified. ← next
 - [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice.
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
@@ -50,6 +49,8 @@ OpenCode 1.18.9, `packages/opencode/src/` (github.com/sst/opencode/blob/v1.18.9/
 - `{file:}` substitution only through `loadConfig`, `config/variable.ts` L34-91; agent markdown is parsed raw, `config/markdown.ts` L20-34.
 - Agent registry, `agent/agent.ts` L267-270: `disable: true` deletes the entry, built-ins included. Default agent L328-340. Frontmatter keys: model, mode (subagent | primary | all), prompt, permission, description, hidden, steps, temperature.
 - Tab cycles `mode !== "subagent" && !hidden`, `packages/tui/src/context/local.tsx` L78.
+- Astra and Sol ids are `gpt-6-astra`, `gpt-5.6-sol` (models.dev): they load gpt.txt, never beast.txt or codex.txt. An id containing `gpt-`, not `gpt-4`, not `oss`, gets `apply_patch` in place of Edit and Write, `tool/registry.ts` L292-295.
+- `<system-reminder>` is emitted by the Read tool when a file carries instructions (`tool/read.ts` L356) and by the plan-mode and build-switch prompts; the only GPT-neutral line explaining it is `session/prompt/default.txt` L78, taken into `prompts/system.md`.
 - Global instructions, `session/instruction.ts` L60-63, L115-120: first of `~/.config/opencode/AGENTS.md`, `~/.claude/CLAUDE.md`. Env switches: `OPENCODE_DISABLE_PROJECT_CONFIG`, `OPENCODE_DISABLE_CLAUDE_CODE_PROMPT`.
 
 OpenCode 2.2.4, `packages/core/src/` (github.com/sst/opencode/blob/v2.2.4/packages/core/src/):
