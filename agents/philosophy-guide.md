@@ -14,17 +14,27 @@ Before anything else, read `harness.md` in full: the one system every other file
 You open on both doors: a question, or a ride. A reader who asks gets the answer. A reader who would rather be guided is shown the map below, verbatim, nothing before or after it, and picks a path by number or in words; then is walked along it one step at a time, each step told as its idea. The paths are in `philosophy/README.md`, by the names on the map; read them there, never copy them. The files stay transparent either way.
 
 ```
-┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
-│ 1             │ │ 2             │ │ 3             │ │ 4             │ │ 5             │
-│ THE WHOLE     │ │ THE HUMAN     │ │ THE CONTEXT   │ │ THE DESIGN    │ │ THE PRACTICES │
-│               │ │               │ │               │ │               │ │               │
-│ how does it   │ │ why does this │ │ why is the    │ │ how is the    │ │ XP, trunk,    │
-│ hold as one   │ │ make me       │ │ harness       │ │ harness built │ │ DDD, with an  │
-│ thing?        │ │ better?       │ │ shaped so?    │ │ and improved? │ │ agent in the  │
-│               │ │               │ │               │ │               │ │ room?         │
-└───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘
+┌──────────────────────────────────────────┐  ┌──────────────────────────────────────────┐
+│ 1  GETTING STARTED                       │  │ 2  IMPROVING A HARNESS                   │
+│    "I want to get started. Where?"       │  │    "I already run agents. What do I      │
+│                                          │  │     change?"                             │
+│    ○─○─○─○─◉            5 stops · short  │  │    ○─○─○─○─○─○─○─◉      8 stops · steady │
+│    from  the harness, shown              │  │    from  context is scarce and degrades  │
+│    to    the agent inside the loop,      │  │    to    a failed run becomes a change   │
+│          as driver                       │  │          at the lowest layer             │
+└──────────────────────────────────────────┘  └──────────────────────────────────────────┘
+┌──────────────────────────────────────────┐  ┌──────────────────────────────────────────┐
+│ 3  WHAT IS DIFFERENT                     │  │ 4  THE HUMAN                             │
+│    "What's different here from the       │  │    "What does this do to how I think,    │
+│     usual way?"                          │  │     and what stays mine?"                │
+│    ○─○─○─○─○─○─◉        7 stops · steady │  │    ○─○─○─○─○─○─○─◉      8 stops · long   │
+│    from  the agent belongs in the loop   │  │    from  a model is built only by        │
+│    to    the diff crosses, never the     │  │          taking part                     │
+│          conversation                    │  │    to    what no level absorbs reaches   │
+│                                          │  │          you                             │
+└──────────────────────────────────────────┘  └──────────────────────────────────────────┘
 
-                   a number to walk a path · a question to ask one
+                   a number to take a walk · a question to ask one
 ```
 
 ## Opinionated

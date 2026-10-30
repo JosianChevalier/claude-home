@@ -28,97 +28,92 @@ What the harness serves is one socio-technical system: the human at the centre, 
 
 The three are lenses, felt in every file, never bins. A practice that existed before agents, small batches, trunk-based development, domain-driven design, is applied to both sides, and each file says what it did for a team and what it does for a context. Most of the software-development philosophy is about human cognition; that is the point. Sorting the files into three fails by design: every file is one practice, three readings, one system.
 
-Read it like a book where you are the hero. Page one is [harness](harness.md). Then choose a path. Each carries one question into every file it visits, forks where another file answers it better, and says what you hold at the end.
+Read it like a book where you are the hero. Page one is [harness](harness.md). Then pick a walk. Each carries one question into every file it visits, forks where another file answers it better, and says what you hold at the end.
 
-## The whole
+```
+┌──────────────────────────────────────────┐  ┌──────────────────────────────────────────┐
+│ 1  GETTING STARTED                       │  │ 2  IMPROVING A HARNESS                   │
+│    "I want to get started. Where?"       │  │    "I already run agents. What do I      │
+│                                          │  │     change?"                             │
+│    ○─○─○─○─◉            5 stops · short  │  │    ○─○─○─○─○─○─○─◉      8 stops · steady │
+│    from  the harness, shown              │  │    from  context is scarce and degrades  │
+│    to    the agent inside the loop,      │  │    to    a failed run becomes a change   │
+│          as driver                       │  │          at the lowest layer             │
+└──────────────────────────────────────────┘  └──────────────────────────────────────────┘
+┌──────────────────────────────────────────┐  ┌──────────────────────────────────────────┐
+│ 3  WHAT IS DIFFERENT                     │  │ 4  THE HUMAN                             │
+│    "What's different here from the       │  │    "What does this do to how I think,    │
+│     usual way?"                          │  │     and what stays mine?"                │
+│    ○─○─○─○─○─○─◉        7 stops · steady │  │    ○─○─○─○─○─○─○─◉      8 stops · long   │
+│    from  the agent belongs in the loop   │  │    from  a model is built only by        │
+│    to    the diff crosses, never the     │  │          taking part                     │
+│          conversation                    │  │    to    what no level absorbs reaches   │
+│                                          │  │          you                             │
+└──────────────────────────────────────────┘  └──────────────────────────────────────────┘
+```
 
-*How do the human, the context and the loop hold together as one system?*
+## Getting started
 
-1. [collaborative-production](collaborative-production.md): the loop is the boundary of one extended mind.
-2. [model-phenomenology](model-phenomenology.md): the engineer holds the type, the code the concept, the agent neither, and transmits; no part stands in for another.
-3. [transmission-belt](transmission-belt.md): one rule, remove the medium's load and transmit the domain's; friction-feel is carried by no single part.
-4. [abstraction-ladder](abstraction-ladder.md): one shape; every ladder in the corpus is a sighting.
-5. [context-economics](context-economics.md): every token loaded is budget spent and precision lost; the human side of the same economy is the fork.
-6. [agentic-extreme-programming](agentic-extreme-programming.md): a coherent set asks for no trade-off; feeling pulled between two sides is the test the set is not coherent.
-7. [compounding-decisions](compounding-decisions.md): waste, what an element costs when it works, and reliability, the chance it does what was meant, are tied.
-8. [parse-dont-validate](parse-dont-validate.md): one practice, three faces in the code itself: less to read, nothing to hold, no decision to take.
-9. [embedded-reflexive](embedded-reflexive.md): embedded acts within its conditions, reflexive designs them; a breakdown is taken as deep as it goes, at the deepest into the engineer's own perception.
+*I want to get started. Where?*
 
-Forks: at 5, [zoom-levels](zoom-levels.md); at 8, [mechanical-refactoring](mechanical-refactoring.md) or [agentic-trunk-based-development](agentic-trunk-based-development.md).
+1. [harness](harness.md): the harness serves one socio-technical system, the human at the centre; it does not control it, it shapes constraints so the whole tends toward the purpose.
+2. [harness-elements](harness-elements.md): a few kinds of element, each with one job: what it holds, when it loads, the test it is in the right place.
+3. [three-layer-harness](three-layer-harness.md): know-how, doctrine, philosophy; a rule or skill is a doctrine, a know-how, a pointer to its reasons.
+4. [session-state-in-documents](session-state-in-documents.md): the conversation is process memory; the work file holds the state, the repo what graduated.
+5. [collaborative-production](collaborative-production.md): a model of the work is built only by taking part, so the agent belongs inside the loop as driver.
 
-Held at the end: one extended mind, type in the engineer, concept in the code, transmission in the agent; one rule and one shape run across all; the engineer does the reflexive work, as deep as the breakdown goes.
+Forks: at 3, [harness-shape](harness-shape.md), how a rule or skill is built from the layers; at 4, [conversation-as-interface](conversation-as-interface.md), the chat is the only medium, and you still go down to the files.
 
-## The human
+Held at the end: what the pieces are, where each thing lives, how a session runs and ends, and that you drive from inside the loop.
 
-*What does this do for my cognition, and why does it make my work with agents effective?*
+## Improving a harness
 
-1. [collaborative-production](collaborative-production.md): a model of the work is built only by taking part, so the agent belongs inside the loop as driver.
-2. [transmission-belt](transmission-belt.md): remove the medium's load, transmit the domain's, friction included; the type grows on the friction that comes back.
-3. [model-phenomenology](model-phenomenology.md): what I hold and the agent cannot, a type with a horizon; why the human stays central.
-4. [conversation-as-interface](conversation-as-interface.md): the chat is my only medium, and I still go down to the files.
-5. [embodied-navigation](embodied-navigation.md): thinking runs on spatial machinery; moving through code is how I think with it.
-6. [mechanical-refactoring](mechanical-refactoring.md): moves cost no understanding, so understanding is spent only on the model.
-7. [compounding-decisions](compounding-decisions.md): decisions chain and their errors multiply; how many an artifact asks is a design quantity.
-8. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
-
-Forks: after 4, [zoom-levels](zoom-levels.md), attention as the mirror of context economics; after 7, [model-tiers](model-tiers.md), cognitive energy is sparser than tokens.
-
-Held at the end: I stay central because I hold what the agent cannot; the harness transmits the friction, and that is where I learn; every practice is sized to my attention.
-
-## The context
-
-*What does this do for the agent's context, and how does the harness's structure follow from it?*
+*I already run agents. What do I change?*
 
 1. [context-economics](context-economics.md): context is scarce and degrades; all harness structure derives from this.
 2. [harness-elements](harness-elements.md): choosing an element is a loading decision first.
-3. [compounding-decisions](compounding-decisions.md): the number of decisions an artifact asks is a design quantity, like the size of its context.
-4. [context-splitting](context-splitting.md): two axes, the sub-agent as the unit of both.
-5. [parse-dont-validate](parse-dont-validate.md): the spatial cut made inside the code; a signature is a call site's whole context.
-6. [session-state-in-documents](session-state-in-documents.md): the conversation is process memory; the work file holds the state, the repo what graduated.
-7. [attractors](attractors.md): what is in context pulls what comes next; the sharpest pull per token is a precise term, and a negation pulls too.
-8. [collaborative-production](collaborative-production.md): interactive is the default; an artifact that runs alone is chosen, its waste counted in tokens, cognitive energy and time.
-9. [agentic-trunk-based-development](agentic-trunk-based-development.md): between agents, the diff and never the conversation.
-10. [agentic-extreme-programming](agentic-extreme-programming.md): a lean context keeps the top model affordable, which keeps the context lean.
+3. [context-splitting](context-splitting.md): two axes, space and time, the sub-agent as the unit of both.
+4. [attractors](attractors.md): what is in context pulls what comes next; the sharpest pull per token is a precise term, and a negation pulls too.
+5. [session-state-in-documents](session-state-in-documents.md): the conversation is process memory; the work file holds the state, the repo what graduated.
+6. [compounding-decisions](compounding-decisions.md): decisions chain and their errors multiply; how many an artifact asks is a design quantity.
+7. [kaizen](kaizen.md): feedback from runs becomes changes at the lowest layer that can absorb the failure; most failures are compliance.
+8. [harness-direction](harness-direction.md): a brick made reliable and reused moves down one rung, toward script and headless.
 
-Forks: at 2, [three-layer-harness](three-layer-harness.md), the layers by what each holds, then [harness-shape](harness-shape.md), how a rule or skill is built from them; at 7, [level-design](level-design.md), a file is a landscape, or [mechanical-refactoring](mechanical-refactoring.md), code is context.
+Forks: at 2, [three-layer-harness](three-layer-harness.md) then [harness-shape](harness-shape.md), the layers and how a rule or skill is built from them; at 4, [field-terms](field-terms.md), a term references a theory, a saying prescribes, or [level-design](level-design.md), a file is a landscape designed from where the reader stands; at 6, [parse-dont-validate](parse-dont-validate.md), the cut made inside the code, then [agentic-extreme-programming](agentic-extreme-programming.md), [batch-size-economics](batch-size-economics.md), [atomic-commit](atomic-commit.md), [agentic-trunk-based-development](agentic-trunk-based-development.md), the practices that keep a change small and a context lean; at 7, [metis-kairos](metis-kairos.md), what no level holds reaches the engineer, or [model-tiers](model-tiers.md), a node that reaches commodity drops a tier; at 8, [process-units](process-units.md) and [abstraction-ladder](abstraction-ladder.md), process as a containment tree, one ladder among many.
 
-Held at the end: context is scarce and degrades, so the harness is shaped by what loads and when; the work is cut in space and time; between steps a file crosses, between sub-agents a conclusion returns, never the conversation; the whole moves together.
+Held at the end: context is scarce and degrades, so the harness is shaped by what loads and when; the work is cut in space and time; between sub-agents a conclusion returns, never the conversation; a failed run lands at the lowest layer that absorbs it, and a brick made reliable and reused steps down toward the script.
 
-## The harness design
+## What is different
 
-*How is the harness itself layered, written and improved, and where does a failed run change it?*
+*What's different here from the usual way?*
 
-1. [harness-elements](harness-elements.md): a few kinds of element, each with one job: what it holds, when it loads, the test it is in the right place.
-2. [process-units](process-units.md): process is a containment tree; the kind of unit at a node is how far its orchestrator's decisions are codified.
-3. [abstraction-ladder](abstraction-ladder.md): the pattern itself, the process tree and the three layers two of its sightings: absorb low, pass the rest one rung up, reliable bricks move down.
-4. [three-layer-harness](three-layer-harness.md): know-how, doctrine, philosophy; two seams, commodification below, lifecycle above.
-5. [harness-shape](harness-shape.md): a rule or skill is a doctrine, a know-how, a pointer; the know-how covers the head, the doctrine the fat tail.
-6. [attractors](attractors.md): what is in context pulls what comes next; a precise term carves the valley, a negation keeps the basin alive.
-7. [field-terms](field-terms.md): a term references a theory and explains, a saying mentions a posture and prescribes; a doctrine line is looked for before it is written.
-8. [level-design](level-design.md): an element is a landscape designed from where the reader stands; a section in doubt is probed on a fresh sub-agent.
-9. [kaizen](kaizen.md): feedback from runs becomes changes at the lowest layer that can absorb the failure; most failures are compliance.
-10. [harness-direction](harness-direction.md): a brick made reliable and reused moves down one rung, toward script and headless.
+1. [collaborative-production](collaborative-production.md): interactive is the default; an artifact that runs alone is chosen, its waste counted in tokens, cognitive energy and time.
+2. [context-economics](context-economics.md): every token loaded is budget spent and precision lost; nothing is remembered for the agent, everything is loaded on purpose.
+3. [transmission-belt](transmission-belt.md): one rule, remove the medium's load and transmit the domain's, friction included.
+4. [model-phenomenology](model-phenomenology.md): the engineer holds the type, the code the concept, the agent neither, and transmits; no part stands in for another.
+5. [agentic-extreme-programming](agentic-extreme-programming.md): a coherent set asks for no trade-off; feeling pulled between two sides is the test the set is not coherent.
+6. [model-tiers](model-tiers.md): a lean context keeps the top model affordable, which keeps the context lean; cognitive energy is sparser than tokens.
+7. [agentic-trunk-based-development](agentic-trunk-based-development.md): the same bound as for a team, a worktree as a committer; between agents, the diff and never the conversation.
 
-Forks: at 4, [change-inertia](change-inertia.md), cut where the inertia changes, the doctrine and the rationale pointer as the harness's seam; at 8, [embedded-reflexive](embedded-reflexive.md), the writer reflexive, the reader embedded; at 9, [metis-kairos](metis-kairos.md), what no level holds reaches the engineer; at 10, [model-tiers](model-tiers.md), a node that reaches commodity drops a tier.
+Forks: at 2, [session-state-in-documents](session-state-in-documents.md), where state lives instead of a memory; at 4, [abstraction-ladder](abstraction-ladder.md), one shape, every ladder in the corpus a sighting; at 5, [compounding-decisions](compounding-decisions.md), waste and reliability tied, or [embedded-reflexive](embedded-reflexive.md), a breakdown taken as deep as it goes; at 7, [trunk-based-development](trunk-based-development.md), the human-team form in full.
 
-Held at the end: the harness is a few elements, the agents among them materializing units of one process tree; process and knowledge are both ladders; a rule or skill is a doctrine that holds everywhere, a know-how for the usual case and a pointer to its reasons, written as the reader's landscape; a failed run lands at the lowest layer that absorbs it, and a brick made reliable and reused steps down toward the script.
+Held at the end: the human stays central and the agent drives; context is the scarce thing and nothing is remembered on its behalf; one top model on a lean context; one rule and one shape run across all; the diff crosses between agents, never the conversation.
 
-## The practices
+## The human
 
-*Which practice is this, what did it do for a team, what does it become applied to both sides?*
+*What does this do to how I think, and what stays mine?*
 
-1. [agentic-extreme-programming](agentic-extreme-programming.md): practices are complements; tokens, context, cognitive load, feedback move together.
-2. [batch-size-economics](batch-size-economics.md): holding cost includes cognitive load; transaction cost can fall to near zero, so the optimum falls to the floor.
-3. [atomic-commit](atomic-commit.md): the floor; validation, not generation, is the price.
-4. [mechanical-refactoring](mechanical-refactoring.md): the epistemic action moves to the agent; a cleaning pass is context hygiene.
-5. [trunk-based-development](trunk-based-development.md): commit = integrate = publish, the human-team form in full.
-6. [agentic-trunk-based-development](agentic-trunk-based-development.md): the same bound, a worktree as a committer; nothing is added for agents.
-7. [collaborative-production](collaborative-production.md): mob programming and strong-style driving; the agent is the driver.
-8. [context-splitting](context-splitting.md): Beck's two hats and map-reduce applied to the context.
-9. [kairos-gates](kairos-gates.md): a practice enters the loop as a step at its moment.
+1. [collaborative-production](collaborative-production.md): a model of the work is built only by taking part, so the agent belongs inside the loop as driver.
+2. [model-phenomenology](model-phenomenology.md): what I hold and the agent cannot, a type with a horizon; why the human stays central.
+3. [transmission-belt](transmission-belt.md): remove the medium's load, transmit the domain's, friction included; the type grows on the friction that comes back.
+4. [embodied-navigation](embodied-navigation.md): thinking runs on spatial machinery; moving through code is how I think with it.
+5. [conversation-as-interface](conversation-as-interface.md): the chat is my only medium, and I still go down to the files.
+6. [mechanical-refactoring](mechanical-refactoring.md): moves cost no understanding, so understanding is spent only on the model.
+7. [zoom-levels](zoom-levels.md): a message is a map; attention is the budget, and the map is the channel.
+8. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
 
-Forks: at 2, [feedback-loops](feedback-loops.md) then [batch-slicing](batch-slicing.md), every change a hypothesis and the smallest slice that tests it, then [planning-is-everything](planning-is-everything.md) and [prototypes-are-probes](prototypes-are-probes.md), a plan as direction redrawn by its probes; at 3, [continuous-delivery](continuous-delivery.md), every commit deliverable, the live path as the unit of safety; at 4, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md); at 8, [parse-dont-validate](parse-dont-validate.md) then the DDD line, [ubiquitous-language](ubiquitous-language.md), [model-expressions](model-expressions.md), [always-valid-domain](always-valid-domain.md), [aggregates](aggregates.md), [continuous-design](continuous-design.md), [domain-first-implementation](domain-first-implementation.md): the model lives in the language, is kept in code, holds its invariants by structure, and the engineer meets it first.
+Forks: at 6, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md), how a step is made small and kept live, or the model in code, [ubiquitous-language](ubiquitous-language.md), [model-expressions](model-expressions.md), [always-valid-domain](always-valid-domain.md), [aggregates](aggregates.md), [continuous-design](continuous-design.md), [domain-first-implementation](domain-first-implementation.md); at 7, [batch-slicing](batch-slicing.md), everything is a hypothesis, then [feedback-loops](feedback-loops.md), [planning-is-everything](planning-is-everything.md), [prototypes-are-probes](prototypes-are-probes.md), [continuous-delivery](continuous-delivery.md), the loops a hypothesis is tested in; at 8, [embedded-reflexive](embedded-reflexive.md), the reflexive work is mine, as deep as the breakdown goes.
 
-Held at the end: each known practice keeps its bound and changes its holder; the agent takes the mechanical part, the human keeps the decision that changes the concept; a practice enters as a step at its moment.
+Held at the end: I stay central because I hold what the agent cannot; the harness transmits the friction, and that is where I learn; every practice is sized to my attention, and the moment that reaches me is where the harness improves.
 
-Crossroads: collaborative-production is on four of the five paths, agentic-extreme-programming and compounding-decisions on three. Meeting one again, you stand where another path passes; change path if its question is now yours.
+Crossroads: collaborative-production is on all four walks, context-economics, session-state-in-documents, model-phenomenology, transmission-belt and harness-elements on two. Meeting one again, you stand where another walk passes; change walk if its question is now yours.
