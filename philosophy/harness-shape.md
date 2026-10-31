@@ -9,7 +9,7 @@ tags: [harness-design, kaizen]
 ```
  ## Doctrine          what must always be true   a few attractors; holds in the fat tail; at the top, or per section
  ## <know-how>…       what worked                the head, commodified; left on the doctrine's word
- Rationale: [[…]]     why                        lives in the rationale; only the pointer stays
+ Rationale: φ…        why                        lives in the rationale; only the pointer stays
 ```
 
 ## Doctrine

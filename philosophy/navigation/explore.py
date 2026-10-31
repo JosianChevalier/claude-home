@@ -12,7 +12,7 @@ def names(): return sorted(f[:-3] for f in os.listdir(corpus) if f.endswith(".md
 def read(n): return open(os.path.join(corpus, n + ".md"), encoding="utf-8").read()
 def tags(t): m = re.search(r"^tags: *(.*)$", t, re.M); return m.group(1).strip() if m else "[]"
 def thesis(t): m = re.search(r"^\*\*Thesis\.\*\* *(.*)$", t, re.M); return m.group(1).strip() if m else "—"
-def links(t): return sorted({m for m in re.findall(r"\[\[philosophy/([^\]|#]+)", t)})
+def links(t): return sorted({m for m in re.findall(r"φ([a-z0-9-]+)", t)})
 def link(run, n): return f"→ {self_path} explore {run} {n}"
 def state_path(run): return f"/tmp/philosophy-explore-{session}-{run}.json"
 def load(run):
