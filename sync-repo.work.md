@@ -192,7 +192,6 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 - **"OpenCode harness levels" section of `AGENTS.md` is tool-specific.** Through the `@AGENTS.md` import, Claude Code reads it too. It belongs in the OpenCode adapter.
 - **OpenCode sandbox.** The global level is `/mnt/opencode-host` inside a container; a symlink pointing outside the mount is dead there. Mount the checkout directly.
 - **Stale contract text.** `two-layer-harness.md` and the `harness-improvement` skill still describe the old `Rationale: @rationale/...` form.
-- **Wikilink navigation is workspace-bound.** Editors resolve `φx` only inside the open workspace; a ref to a global file does not jump from a client repo unless `~/.claude` is in the workspace. Plugin resolution is unaffected.
 - **The prototype's `.claude/CLAUDE.md` carries an emoji-header rule** already dropped on the laptop. It dies in the merge.
 ## Unverified
  
