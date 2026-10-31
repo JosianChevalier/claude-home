@@ -26,6 +26,7 @@ opencode.json
 - Astra and Sol share the doctrine; the Sol module spells out what Astra does unprompted.
 - The modules are plain text and carry over to OpenCode 2 unchanged; only `prompts/system.md` is redone there from the 2.x base, which the override also drops (see Facts).
 - Each module is written with `kaizen`, after `philosophy-scout` returns the files bearing on it; one module per session.
+- The modules duplicate CLAUDE.md Postures and `rules/session-design.md` for the other harness; the rules-source step decides the canonical copy. A reading for it: Claude Code imports a file with `@prompts/mecha-suit.md`, so the module could be the source and CLAUDE.md the pointer.
 
 ## Hazards
 
@@ -36,8 +37,7 @@ opencode.json
 ## Steps
 
 - [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the modules.
-- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and session-design, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified. ← next
-- [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice.
+- [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice. The mission-command paragraph of `prompts/mecha-suit.md` holds the surprise test and the four default CCIR; autopilot reuses it, the stage being the brief. ← next
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
 
