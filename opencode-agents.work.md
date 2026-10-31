@@ -35,8 +35,8 @@ opencode.json
 
 ## Steps
 
-- [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. ← next
-- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and session-design, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified.
+- [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the modules.
+- [ ] `prompts/mecha-suit.md`: CLAUDE.md Postures and session-design, in belt mode. gpt.txt forbade nested bullets; `rules/writing.md` asks for sub-lists; the TUI's rendering of them is unverified. ← next
 - [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice.
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
