@@ -58,3 +58,9 @@ When a task declares no CCIR, four stand by default, the places a small change h
 - domain: the shape at the level being validated, its conceptual integrity (Brooks); the lower levels are the subordinate's, unless they get awkward
 
 ## Related
+
+- Where the loop runs and why it must return: [[philosophy/transmission-belt]].
+- Steps added on top of the loop to make the moment systematic: [[philosophy/kairos-gates]].
+- The pattern this file is the top rung of: [[philosophy/abstraction-ladder]].
+- The last guard against too loose: [[philosophy/kaizen]].
+- The abstraction ladder's lower rungs, where decomposability rules: [[philosophy/context-economics]].
