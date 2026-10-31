@@ -9,7 +9,7 @@ context: guest codebase
 
 ## Conformance is the default
 
-We work inside the owners' context, and conceptual integrity (Brooks) is owed within a context ([[philosophy/change-inertia]]). Their conventions may be suboptimal or heavier than needed — conforming to them is still what the context asks, because the next reader navigates one idiom, not two. Local optimality is the wrong objective function; coherence of the context is.
+We work inside the owners' context, and conceptual integrity (Brooks) is owed within a context (φchange-inertia). Their conventions may be suboptimal or heavier than needed — conforming to them is still what the context asks, because the next reader navigates one idiom, not two. Local optimality is the wrong objective function; coherence of the context is.
 
 The seam is the bounded context, not the repository: a context the owners hand us is ours to shape, with our own practices inside it.
 
@@ -50,10 +50,10 @@ Matching the intended style and minimizing footprint usually agree — your own 
 
 There is no closed-form rule for this trade-off; it is Cynefin-complex — the right call depends on the owners, the file, the moment. **In doubt, ask.**
 
-Each resolved case is a probe: what stabilizes lands as know-how in the rule that points here, through kaizen ([[philosophy/kaizen]]), so the judgment accumulates instead of being re-derived per session.
+Each resolved case is a probe: what stabilizes lands as know-how in the rule that points here, through kaizen (φkaizen), so the judgment accumulates instead of being re-derived per session.
 
 ## Related
 
-- Integrity is owed within a context, not between contexts: [[philosophy/change-inertia]].
-- Where a resolved case lands: [[philosophy/kaizen]].
-- The smallest diff that does the job, as batch size: [[philosophy/batch-size-economics]].
+- Integrity is owed within a context, not between contexts: φchange-inertia.
+- Where a resolved case lands: φkaizen.
+- The smallest diff that does the job, as batch size: φbatch-size-economics.

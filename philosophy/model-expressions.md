@@ -33,7 +33,7 @@ Note the fit: the static rules and the dynamic tests check the same thing at dif
 
 **Caveat: a grammar limit isn't divergence.** SQL forcing an id on a value object doesn't make the DB a different model — normal: the root cause is the grammar, not ours to treat, so compensate locally (ACL), a trade-off accepted, and don't let it spread.
 
-Divergence is saying something the model doesn't, *beyond* what the grammar forces — a **model tension** ([[philosophy/model-phenomenology]]): either the expression is wrong or there is a second model asking for its own context.
+Divergence is saying something the model doesn't, *beyond* what the grammar forces — a **model tension** (φmodel-phenomenology): either the expression is wrong or there is a second model asking for its own context.
 
 ## Pathologies
 
@@ -83,6 +83,6 @@ Other media — user story, diagram, dashboard, org chart — project the same w
 
 ## Related
 
-- What a model is, the tension felt before the tests, the spork: [[philosophy/model-phenomenology]].
-- The model's consistency boundary: [[philosophy/aggregates]].
-- Translation located, not diffused: [[philosophy/transmission-belt]].
+- What a model is, the tension felt before the tests, the spork: φmodel-phenomenology.
+- The model's consistency boundary: φaggregates.
+- Translation located, not diffused: φtransmission-belt.

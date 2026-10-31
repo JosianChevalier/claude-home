@@ -20,7 +20,7 @@ Nothing outside the model enforces anything: not a validator called before use, 
 | Proof lives in | the type | nowhere; re-established each time |
 | Caller must | nothing | trust, or re-check |
 
-By structure is [[philosophy/parse-dont-validate]] applied to the domain: the model is parsed into, once, and the invalid state has no representation. By code is the operations refusing: a `require` in a method, a guard in a transition. Both keep the property; only the first keeps the proof.
+By structure is φparse-dont-validate applied to the domain: the model is parsed into, once, and the invalid state has no representation. By code is the operations refusing: a `require` in a method, a guard in a transition. Both keep the property; only the first keeps the proof.
 
 Structure first, because the proof is what the rest of the code reads. A property held by code is a property to be aware of at every call site; a property held by structure is in the shape. Code is the floor, for what the grammar cannot state.
 
@@ -46,6 +46,6 @@ In a structurally typed language every `string` is every other `string`, so an `
 
 ## Related
 
-- The pattern this is the domain instance of: [[philosophy/parse-dont-validate]].
-- The boundary the invariants derive, and saving whole: [[philosophy/aggregates]].
-- A grammar that cannot state the invariant: [[philosophy/model-expressions]].
+- The pattern this is the domain instance of: φparse-dont-validate.
+- The boundary the invariants derive, and saving whole: φaggregates.
+- A grammar that cannot state the invariant: φmodel-expressions.

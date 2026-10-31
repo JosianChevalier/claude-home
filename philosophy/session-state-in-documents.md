@@ -32,13 +32,13 @@ Unless explicitly not required, a session gets anchored in a working document in
 
 A work file is a backlog, distributed: the tasks of a project sit next to the work they concern, one file per piece of work, in place of a tracker.
 
-Conversation, notebook, working document, repo: four stores ordered by inertia ([[philosophy/change-inertia]]). The conversation lasts a turn. The notebook, a `/tmp` file of the agent's own, lasts the session ([[philosophy/conversation-as-interface]]). The working document lasts the work. The repo keeps what graduated. What survives the conversation reaches the document; what survives the document is committed.
+Conversation, notebook, working document, repo: four stores ordered by inertia (φchange-inertia). The conversation lasts a turn. The notebook, a `/tmp` file of the agent's own, lasts the session (φconversation-as-interface). The working document lasts the work. The repo keeps what graduated. What survives the conversation reaches the document; what survives the document is committed.
 
 ## Save at hand-back, not at stage end
 
 Checkboxes don't capture everything. The state must be written explicitly **every time control returns to the user**: each such moment is a potential session boundary. What the state contains: decisions, findings, open threads, the real next step.
 
-In a mob session the mic returns every turn, and the navigators hold the state too; a hand-back there is a mob decision about the plan (a split, a lift, a reorder, a stage done, a constraint discovered) or a turn that could end the session, not every move. The artifact is opened at checkpoints, not during the exchange ([[philosophy/collaborative-production]]).
+In a mob session the mic returns every turn, and the navigators hold the state too; a hand-back there is a mob decision about the plan (a split, a lift, a reorder, a stage done, a constraint discovered) or a turn that could end the session, not every move. The artifact is opened at checkpoints, not during the exchange (φcollaborative-production).
 
 The cost model is the point: an unpredictable, compounding resume cost is replaced by a tiny, systematic write cost, paid by the agent, not the user.
 
@@ -50,7 +50,7 @@ The next session has **no memory of this one**; the work file is the only channe
 
 ## The work file dies with the work
 
-The work file is the canonical home for one thing only, the work in progress ([[philosophy/context-economics]], one canonical home per fact), and it is deleted when the work is done. Everything discovered along the way that deserves to outlive it must graduate to its own home first:
+The work file is the canonical home for one thing only, the work in progress (φcontext-economics, one canonical home per fact), and it is deleted when the work is done. Everything discovered along the way that deserves to outlive it must graduate to its own home first:
 
 - code and design → **commits**
 - conventions, workflows, corrected agent behavior → **the harness** (rules, skills, philosophy)
@@ -58,13 +58,13 @@ The work file is the canonical home for one thing only, the work in progress ([[
 
 Learning left in the file at deletion time is lost; learning kept in the file *instead of* its home is a copy waiting to diverge.
 
-A finished work file left in the repo is a pink elephant ([[philosophy/attractors]]). A fresh context takes whatever it reads as a premise ([[philosophy/conversation-continuity]]); it cannot tell a closed thread from an open one, and the stale file becomes an anchor. Deleting is not losing: the history is git's job.
+A finished work file left in the repo is a pink elephant (φattractors). A fresh context takes whatever it reads as a premise (φconversation-continuity); it cannot tell a closed thread from an open one, and the stale file becomes an anchor. Deleting is not losing: the history is git's job.
 
 ## Related
 
-- [[philosophy/process-units]]: the process units; the session is the one where a human is required.
-- [[philosophy/change-inertia]]: why the four stores are cut where they are.
-- [[philosophy/conversation-as-interface]]: the notebook, the store below the work file.
-- [[philosophy/conversation-continuity]]: what crosses a session boundary and what must not.
-- [[philosophy/context-economics]]: one canonical home per fact.
-- [[philosophy/attractors]]: the finished work file as a pink elephant.
+- φprocess-units: the process units; the session is the one where a human is required.
+- φchange-inertia: why the four stores are cut where they are.
+- φconversation-as-interface: the notebook, the store below the work file.
+- φconversation-continuity: what crosses a session boundary and what must not.
+- φcontext-economics: one canonical home per fact.
+- φattractors: the finished work file as a pink elephant.

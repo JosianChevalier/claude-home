@@ -4,7 +4,7 @@ tags: [harness-design, kaizen]
 
 # Harness shape
 
-**Thesis.** A rule or skill is a doctrine and know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the Pareto distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: [[philosophy/three-layer-harness]].
+**Thesis.** A rule or skill is a doctrine and know-how, then a pointer to its rationale. The doctrine is a few attractors that hold everywhere, fat tail included; the know-how is the head of the Pareto distribution, commodified into steps; the pointer keeps the reasons out of the file. The layers themselves: φthree-layer-harness.
 
 ```
  ## Doctrine          what must always be true   a few attractors; holds in the fat tail; at the top, or per section
@@ -14,7 +14,7 @@ tags: [harness-design, kaizen]
 
 ## Doctrine
 
-Doctrine is what must always be true: the intent, the result wanted, the posture, in a few attractors ([[philosophy/attractors]]). A heuristic belongs here when it holds in every case, and it is written as a maxim or an aphorism: a known saying when one fits, a coined one otherwise. A line that carries a condition or a step ("only what would…", "before X, do Y") is know-how, whatever header it sits under.
+Doctrine is what must always be true: the intent, the result wanted, the posture, in a few attractors (φattractors). A heuristic belongs here when it holds in every case, and it is written as a maxim or an aphorism: a known saying when one fits, a coined one otherwise. A line that carries a condition or a step ("only what would…", "before X, do Y") is know-how, whatever header it sits under.
 
 - "Make the change easy, then make the easy change."
 - "Mecha suit, not robot."
@@ -22,7 +22,7 @@ Doctrine is what must always be true: the intent, the result wanted, the posture
 
 How it is written:
 
-- **Quoted or coined.** Both are doctrine. How one is found: [[philosophy/field-terms]].
+- **Quoted or coined.** Both are doctrine. How one is found: φfield-terms.
 - **Spread out.** The doctrine heads the file, or sits with the part of the know-how it governs, and moves with that part.
 - **Identifiable.** Wherever it sits, a reader tells at once which lines hold always. Every rule and skill carries a doctrine marked so; the mark is the file's choice: a blank line before the know-how, a section of its own, "Doctrine:" before a list, whatever fits.
 - **Agents differ.** In an agent, and in `CLAUDE.md`, the doctrine is the posture and the objective, under their own names (`Postures`). A skill or rule is know-how with a little doctrine; an agent is doctrine with little know-how, the steps living in the skills it composes.
@@ -50,7 +50,7 @@ The split is also a proportion rule. A short file is a doctrine and a few lines 
 1. Gather what must always be true, at the top or with the part it governs, identifiable.
 2. The rest is know-how: keep it after the doctrine, sectioned if useful.
 3. Move reasons to the rationale and leave the pointer.
-4. Keep a list of rationalizations only for temptations the current models produce unprompted. Any other temptation named is a pink elephant ([[philosophy/attractors]]).
+4. Keep a list of rationalizations only for temptations the current models produce unprompted. Any other temptation named is a pink elephant (φattractors).
 
 ```markdown
 # <Skill>
@@ -63,12 +63,12 @@ The split is also a proportion rule. A short file is a doctrine and a few lines 
 
 1. …
 
-Rationale: [[philosophy/make-the-change-easy]]
+Rationale: φmake-the-change-easy
 ```
 
 ## Related
 
-- The three layers and why they stay apart: [[philosophy/three-layer-harness]].
-- What each harness element is for: [[philosophy/harness-elements]].
-- What happens after a failed run: [[philosophy/kaizen]].
-- Why a precise term does the work of a paragraph: [[philosophy/field-terms]].
+- The three layers and why they stay apart: φthree-layer-harness.
+- What each harness element is for: φharness-elements.
+- What happens after a failed run: φkaizen.
+- Why a precise term does the work of a paragraph: φfield-terms.

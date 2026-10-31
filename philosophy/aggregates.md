@@ -6,7 +6,7 @@ tags: [ddd, domain-modeling, aggregates, consistency, invariants, tactical-ddd]
 
 **Thesis.** The aggregate is the cluster that must hold together at every moment domain code can see it. Its boundary is derived from the safety properties, never drawn; it holds those properties itself, by structure first, and is saved whole.
 
-The aggregate (Evans) is a **consistency boundary**: the cluster of objects whose invariants must hold together at every save. It is not an object-graph convenience, a table grouping, or a transaction scope. Those are other media's boundaries, and borrowing one is contamination ([[philosophy/model-expressions]]) transposed to the tactical axis: a grammar's own constraint masquerading as a domain decision.
+The aggregate (Evans) is a **consistency boundary**: the cluster of objects whose invariants must hold together at every save. It is not an object-graph convenience, a table grouping, or a transaction scope. Those are other media's boundaries, and borrowing one is contamination (φmodel-expressions) transposed to the tactical axis: a grammar's own constraint masquerading as a domain decision.
 
 ## Invariants first
 
@@ -25,18 +25,18 @@ Vernon's rule, full consistency inside the aggregate and eventual consistency be
 
 ## Always valid
 
-The aggregate is domain model, so it is always valid: its invariants hold at every moment domain code can see it, by structure first ([[philosophy/always-valid-domain]]). Nothing below the aggregate enforces anything.
+The aggregate is domain model, so it is always valid: its invariants hold at every moment domain code can see it, by structure first (φalways-valid-domain). Nothing below the aggregate enforces anything.
 
 It is saved whole, in one call to a repository. The repository is one more consumer: what it saves is valid because what it was handed was. How the save is made atomic is a modality of saving, the repository's business, and the model has no need to know it. Writes split across several saves leak the transaction into the domain code: the boundary was drawn wrong, back to the invariants.
 
 ## Example: one invariant each way
 
 - *"An order's total equals the sum of its lines."* Safety; forces order and lines into one aggregate; held by structure, the total computed, never stored.
-- *"A shipped order has a shipping date; an unshipped one has none."* Safety; held by structure, one type per state, the nullable `shippedAt` beside a status being the symptom ([[philosophy/always-valid-domain]]).
+- *"A shipped order has a shipping date; an unshipped one has none."* Safety; held by structure, one type per state, the nullable `shippedAt` beside a status being the symptom (φalways-valid-domain).
 - *"Every placed order is eventually invoiced."* Liveness; order and invoice are separate aggregates, linked eventually. Pulling invoice into the order aggregate to make it immediate is the backwards guard firing: liveness mistaken for safety.
 
 ## Related
 
-- Where the model exists, and the contamination a borrowed boundary is: [[philosophy/model-expressions]].
-- What a model is: [[philosophy/model-phenomenology]].
-- The property the aggregate holds, and how: [[philosophy/always-valid-domain]].
+- Where the model exists, and the contamination a borrowed boundary is: φmodel-expressions.
+- What a model is: φmodel-phenomenology.
+- The property the aggregate holds, and how: φalways-valid-domain.

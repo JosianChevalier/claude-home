@@ -35,13 +35,13 @@ Side effects make the code opaque, and a move acquires preconditions (Opdyke): s
 | 1 | rename, extract, inline | any code, spaghetti included |
 | 2 | reorder, loop to map | side-effect-free, functional-style code only |
 
-For a tier 2 move, the check verifies the precondition: it surfaces every use of what the move touches, and its reach grows with coupling. Tier 1 moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other ([[philosophy/agentic-extreme-programming]]).
+For a tier 2 move, the check verifies the precondition: it surfaces every use of what the move touches, and its reach grows with coupling. Tier 1 moves do the groundwork until the code is side-effect-free and the check vanishes: the moves presuppose that design and produce it, practices reinforcing each other (φagentic-extreme-programming).
 
 ### Redesign
 
 A refactor does not change the underlying model, so tests and observable behavior are preserved. A redesign changes the model and can break the tests. Behavior may still be preserved, but knowing it takes understanding the old and the new: it cannot be mechanical.
 
-That is the boundary of the claim: moves cost no understanding as long as the model holds. Where the model changes, the work is a redesign, taken in steps of its own and alternated with the refactors that prepare it ([[philosophy/make-the-change-easy]]).
+That is the boundary of the claim: moves cost no understanding as long as the model holds. Where the model changes, the work is a redesign, taken in steps of its own and alternated with the refactors that prepare it (φmake-the-change-easy).
 
 ## Act first, understand after
 
@@ -53,15 +53,15 @@ Rewriting is the anti-move. The tempting moment is mid-chain: "I see what this d
 
 ## Agentic
 
-Generation is cheap and validation is the price ([[philosophy/agentic-trunk-based-development]]). A glanceable diff is validated without spending any cognition on what the code means, and the commit is its proof unit ([[philosophy/atomic-commit]]).
+Generation is cheap and validation is the price (φagentic-trunk-based-development). A glanceable diff is validated without spending any cognition on what the code means, and the commit is its proof unit (φatomic-commit).
 
 The epistemic action moves to the agent. Dictating each move costs more than it gives: one coarse instruction, clean up in place, and the human reasons over the cleaned shape.
 
-A cleaning pass always pays for the agents that follow. The code is context: tangled, it carves the wrong semantic valleys ([[philosophy/attractors]]); cleaned, it realigns them for every later step. Run it as its own step, a temporal cut ([[philosophy/context-splitting]]): clean, then change.
+A cleaning pass always pays for the agents that follow. The code is context: tangled, it carves the wrong semantic valleys (φattractors); cleaned, it realigns them for every later step. Run it as its own step, a temporal cut (φcontext-splitting): clean, then change.
 
 ## Related
 
-- One move, one commit, the commit as proof unit: [[philosophy/atomic-commit]].
-- Refactor and redesign alternated: [[philosophy/make-the-change-easy]].
-- Validation as the price: [[philosophy/agentic-trunk-based-development]].
-- Practices that reinforce each other: [[philosophy/agentic-extreme-programming]].
+- One move, one commit, the commit as proof unit: φatomic-commit.
+- Refactor and redesign alternated: φmake-the-change-easy.
+- Validation as the price: φagentic-trunk-based-development.
+- Practices that reinforce each other: φagentic-extreme-programming.

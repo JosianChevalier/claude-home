@@ -4,7 +4,7 @@ tags: [session-design, conversation-continuity, attractors]
 
 # Conversation continuity
 
-**Thesis.** A work outlives any session. It runs as a lineage of sessions that replace, branch and delegate one another, stitched by the human through the working document ([[philosophy/session-state-in-documents]]). Between two sessions passes only what the document cannot hold, and nothing that would shape the next one's judgment before it has looked.
+**Thesis.** A work outlives any session. It runs as a lineage of sessions that replace, branch and delegate one another, stitched by the human through the working document (φsession-state-in-documents). Between two sessions passes only what the document cannot hold, and nothing that would shape the next one's judgment before it has looked.
 
 ```
   replace    S1 ──▶ S2             S1 ends; S2 holds the work
@@ -15,7 +15,7 @@ tags: [session-design, conversation-continuity, attractors]
 
 ## The work is a lineage
 
-A session is the process unit where a human is required ([[philosophy/process-units]]). It ends when its context is spent, when the human leaves, or when the work wants another shape; the work does not end with it.
+A session is the process unit where a human is required (φprocess-units). It ends when its context is spent, when the human leaves, or when the work wants another shape; the work does not end with it.
 
 Since the state lives in the document, ending a session is free, and the human cuts the lineage wherever the work asks for it.
 
@@ -35,10 +35,10 @@ Sessions share one channel, the working document. The handover is not a second o
 
 What the filesystem does not carry and the next session cannot infer: where to look, what to do next when the document does not show it, how to stand.
 
-Not the author's account of its own work. The author is biased about it, and the next session cannot weigh what it is told: a hunch and a validated conclusion both become premises ([[philosophy/attractors]]). Let it look.
+Not the author's account of its own work. The author is biased about it, and the next session cannot weigh what it is told: a hunch and a validated conclusion both become premises (φattractors). Let it look.
 
 ## Related
 
-- The session as a process unit: [[philosophy/process-units]].
-- Where the work's state lives, the one channel: [[philosophy/session-state-in-documents]].
-- Why the author's account pulls the next session: [[philosophy/attractors]].
+- The session as a process unit: φprocess-units.
+- Where the work's state lives, the one channel: φsession-state-in-documents.
+- Why the author's account pulls the next session: φattractors.

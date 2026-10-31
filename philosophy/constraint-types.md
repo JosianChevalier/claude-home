@@ -36,4 +36,4 @@ Named after dark matter: the effect is seen, the cause is not. A term carrying d
 
 ## Related
 
-- Tests and design as opposite constraints on behaviour, on three of the pairs: [[philosophy/continuous-design]].
+- Tests and design as opposite constraints on behaviour, on three of the pairs: φcontinuous-design.

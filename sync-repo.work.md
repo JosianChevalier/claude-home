@@ -83,7 +83,7 @@ The same core must serve both Claude Code and OpenCode.
 - **Agnostic core, thin per-tool adapters.** No abstraction or generator layer for two consumers.
 - **`CLAUDE.md` is the single rules file; `AGENTS.md` is a symlink to it.** (Reversed on 2026-10-08 from the earlier `@AGENTS.md` import.)
 - **Folder `philosophy/`** replaces `rationale/`. Aligns with agent-tutor; the content is doctrine and framing more than ADR-style argumentation.
-- **Rationale refs are wikilinks.** Form: `Rationale: [[philosophy/context-economics]]`, several comma-separated on one line. No `@` (Claude Code imports `@path` eagerly and recursively, which would pull layer 2 into every session). The `[[` is a collision-proof anchor for a future plugin; `Rationale:` keeps the attractor word and distinguishes these from other wikilinks. No `.md`. Resolution order (repo-local `philosophy/`, then global `~/.claude/philosophy/`) lives in AGENTS.md and the plugin, not in the notation. Regex: `^Rationale: (\[\[philosophy/[\w-]+\]\](, )?)+$`.
+- **Rationale refs are wikilinks.** Form: `Rationale: φcontext-economics`, several comma-separated on one line. No `@` (Claude Code imports `@path` eagerly and recursively, which would pull layer 2 into every session). The `[[` is a collision-proof anchor for a future plugin; `Rationale:` keeps the attractor word and distinguishes these from other wikilinks. No `.md`. Resolution order (repo-local `philosophy/`, then global `~/.claude/philosophy/`) lives in AGENTS.md and the plugin, not in the notation. Regex: `^Rationale: (\[\[philosophy/[\w-]+\]\](, )?)+$`.
 - **Merge direction: everything from this project into `~/.claude`.** The laptop's `~/.claude` is minimal (quota tooling, statusline, two skills) and its `CLAUDE.md` is already fully covered by the prototype's `AGENTS.md` and skills. Nothing to preserve from the laptop side.
 - **Scope: `.claude/` only.** Everything else in the project (`agent-tutor/`, `artifact-review/`, `opencode-preload/`, `opencode-sandbox/`, `kaizen/`, `reference/`, `linkedin-post-ideas.md`) is temporary or work-in-progress, not Josian's harness.
 - **Client-content guard.** Pre-commit checks on each laptop; whether pushing from a client laptop is allowed is judged per client.
@@ -97,7 +97,7 @@ The same core must serve both Claude Code and OpenCode.
 
 **Backlog is the folder.** `old-claude/` is the backlog; a file leaves it when it enters the repo. Nothing enters the repo uncleaned. All ~100 files get inspected, none is skipped.
 
-**Per file:** inspect against the harness-design rationales, then normalize: `rationale/` → `philosophy/`, `@rationale/...` refs → `Rationale: [[philosophy/...]]`, content restructured to the three-layer target. `.gitignore` is extended as each new folder lands (`AGENTS.md`, `agents/`, `rules/`, `philosophy/`, `templates/`).
+**Per file:** inspect against the harness-design rationales, then normalize: `rationale/` → `philosophy/`, `@rationale/...` refs → `Rationale: φ...`, content restructured to the three-layer target. `.gitignore` is extended as each new folder lands (`AGENTS.md`, `agents/`, `rules/`, `philosophy/`, `templates/`).
 
 **Target: three-layer harness.**
 
@@ -192,7 +192,7 @@ On v1, zero symlinks: the `CLAUDE.md` fallback plus `export OPENCODE_CONFIG_DIR=
 - **"OpenCode harness levels" section of `AGENTS.md` is tool-specific.** Through the `@AGENTS.md` import, Claude Code reads it too. It belongs in the OpenCode adapter.
 - **OpenCode sandbox.** The global level is `/mnt/opencode-host` inside a container; a symlink pointing outside the mount is dead there. Mount the checkout directly.
 - **Stale contract text.** `two-layer-harness.md` and the `harness-improvement` skill still describe the old `Rationale: @rationale/...` form.
-- **Wikilink navigation is workspace-bound.** Editors resolve `[[philosophy/x]]` only inside the open workspace; a ref to a global file does not jump from a client repo unless `~/.claude` is in the workspace. Plugin resolution is unaffected.
+- **Wikilink navigation is workspace-bound.** Editors resolve `φx` only inside the open workspace; a ref to a global file does not jump from a client repo unless `~/.claude` is in the workspace. Plugin resolution is unaffected.
 - **The prototype's `.claude/CLAUDE.md` carries an emoji-header rule** already dropped on the laptop. It dies in the merge.
 ## Unverified
  

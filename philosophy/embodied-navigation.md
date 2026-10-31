@@ -6,7 +6,7 @@ tags: [cognition, code-review, harness-design, collaboration]
 
 **Thesis.** The engineer thinks with the code by moving through it. Seeing it is not enough. For the best result, the code needs a stable spatial representation, and the engineer needs to navigate it actively.
 
-This is the embodied face of the enacted loop ([[philosophy/collaborative-production]]). In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it.
+This is the embodied face of the enacted loop (φcollaborative-production). In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it.
 
 ## The body thinks in space
 
@@ -20,7 +20,7 @@ So a codebase laid out in space is navigated with the same machinery as a place.
 
 ## Viewing is not enough
 
-Perception is built from the movements it affords: the *sensorimotor contingencies* (O'Regan & Noë). A representation one only looks at leaves the engineer a spectator, and the spectator builds no model ([[philosophy/collaborative-production]]).
+Perception is built from the movements it affords: the *sensorimotor contingencies* (O'Regan & Noë). A representation one only looks at leaves the engineer a spectator, and the spectator builds no model (φcollaborative-production).
 
 A representation earns its place when the engineer acts on it: Kirsh & Maglio's *epistemic actions*, moves made to think, not to reach a goal. Coupling, not a picture.
 
@@ -35,6 +35,6 @@ One without the other fails: a stable map one is walked through is a guided tour
 
 ## Related
 
-- [[philosophy/collaborative-production]]: enaction, and why the spectator pays.
-- [[philosophy/conversation-as-interface]]: gemba and the elevator, the embedded face.
-- [[philosophy/zoom-levels]]: scale, the other dimension of the map.
+- φcollaborative-production: enaction, and why the spectator pays.
+- φconversation-as-interface: gemba and the elevator, the embedded face.
+- φzoom-levels: scale, the other dimension of the map.

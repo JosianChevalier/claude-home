@@ -11,7 +11,7 @@ A tier is set by two variables:
 - how much decision the task carries
 - what its failure costs
 
-Only the harness lowers them, by recomposing the work ([[philosophy/harness-direction]]). A lower tier is earned that way, never chosen as a saving.
+Only the harness lowers them, by recomposing the work (φharness-direction). A lower tier is earned that way, never chosen as a saving.
 
 ## The tiers
 
@@ -29,7 +29,7 @@ Anything user-facing is Top, with no step down. The session agent is the one nod
 
 ## Why it stays affordable
 
-Context economics ([[philosophy/context-economics]]). A lean window keeps the top tier cheap enough to remain the default even when a session runs long.
+Context economics (φcontext-economics). A lean window keeps the top tier cheap enough to remain the default even when a session runs long.
 
 The alternative costs more on both sides:
 
@@ -74,5 +74,5 @@ The four stages are Wardley's evolution axis seen through tiers: genesis at 1, c
 
 ## Related
 
-- The process that recomposes the work: [[philosophy/harness-direction]].
-- Why the top tier stays affordable: [[philosophy/context-economics]].
+- The process that recomposes the work: φharness-direction.
+- Why the top tier stays affordable: φcontext-economics.

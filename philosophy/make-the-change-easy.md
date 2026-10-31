@@ -20,13 +20,13 @@ a feature
 └ make the easy change: the feature, in the new design
 ```
 
-There are never only two steps. The feature goes in small steps as well, and so does the refactoring ([[philosophy/mechanical-refactoring]]). The pair is fractal: it holds for a plan as for a commit, because nothing in the argument mentions size.
+There are never only two steps. The feature goes in small steps as well, and so does the refactoring (φmechanical-refactoring). The pair is fractal: it holds for a plan as for a commit, because nothing in the argument mentions size.
 
 And the pair repeats. One refactor and one redesign do not get there: refactor, redesign, refactor, redesign, and keep going.
 
 ## Finding the path
 
-A redesign changes the code from one concept to another, and through the steps in between its conceptual integrity is broken (Brooks, [[philosophy/model-phenomenology]]): that is the fitness valley (Kauffman).
+A redesign changes the code from one concept to another, and through the steps in between its conceptual integrity is broken (Brooks, φmodel-phenomenology): that is the fitness valley (Kauffman).
 
 A refactor keeps the concept, so it never goes down into the fitness valley. Refactoring first leaves the redesign fewer broken steps to walk.
 
@@ -39,11 +39,11 @@ model ─ refactor, redesign ─▶ model ─ refactor, redesign ─▶ model �
 
 Making the change easy is finding that path, one that can be done in small steps: each step reaches an adjacent possible, and the depth of the fitness valley to walk in is kept to the least.
 
-That is all the aphorism is about. It is the same small step as the atomic commit ([[philosophy/atomic-commit]]), batch slicing ([[philosophy/batch-slicing]]) and continuous delivery ([[philosophy/continuous-delivery]]).
+That is all the aphorism is about. It is the same small step as the atomic commit (φatomic-commit), batch slicing (φbatch-slicing) and continuous delivery (φcontinuous-delivery).
 
 ## One kind of step at a time
 
-A step is one of three kinds ([[philosophy/mechanical-refactoring]]):
+A step is one of three kinds (φmechanical-refactoring):
 
 | Step | Changes | Tests | Validated by |
 |---|---|---|---|
@@ -59,7 +59,7 @@ This is separation of concerns applied to *time* rather than space: not "which m
 
 Reshaping first is not aesthetics — it changes the economics. Implementing against a misfit structure means paying the structural cost *inside* the feature: workarounds, conversions, edge cases born from the mismatch. Paying it upfront, as a separate step, makes the implementation trivial — and the total cost lower, because workarounds compound while preparations don't.
 
-The epistemic bonus: reshaping is the cheapest probe, since what a change will reveal cannot be known before acting ([[philosophy/planning-is-everything]]). It surfaces model tension ([[philosophy/model-phenomenology]]) before the feature is half-built, while backing out is still cheap.
+The epistemic bonus: reshaping is the cheapest probe, since what a change will reveal cannot be known before acting (φplanning-is-everything). It surfaces model tension (φmodel-phenomenology) before the feature is half-built, while backing out is still cheap.
 
 ## The change shows what to clean next
 
@@ -69,9 +69,9 @@ So the pair alternates and has no last step: the cleanup after one change is the
 
 ## Related
 
-- Refactor and redesign, and the line between them: [[philosophy/mechanical-refactoring]].
-- The small step itself: [[philosophy/atomic-commit]], [[philosophy/batch-slicing]], [[philosophy/continuous-delivery]].
-- Changing a live path where it stands: [[philosophy/change-in-place]].
-- Why acting is the only way to know: [[philosophy/planning-is-everything]].
-- Model tension, the felt misfit that reshaping surfaces: [[philosophy/model-phenomenology]].
-- The aphorism as doctrine, this file as its pointer: [[philosophy/harness-shape]].
+- Refactor and redesign, and the line between them: φmechanical-refactoring.
+- The small step itself: φatomic-commit, φbatch-slicing, φcontinuous-delivery.
+- Changing a live path where it stands: φchange-in-place.
+- Why acting is the only way to know: φplanning-is-everything.
+- Model tension, the felt misfit that reshaping surfaces: φmodel-phenomenology.
+- The aphorism as doctrine, this file as its pointer: φharness-shape.

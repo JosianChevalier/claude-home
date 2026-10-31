@@ -51,12 +51,12 @@ A frozen shoulder has the joint on the diagram and no play in it: lift the arm a
 | Platform, stable for its consumers | stream-aligned team | a golden path that teams may bypass |
 | Supporting and generic subdomains | core domain, the competitive advantage | concerns offloaded out of the core, so it iterates on production feedback |
 | Codebase-wide conventions | one context's practice | the bounded context: integrity within, none owed between |
-| Philosophy, the understanding of the activity | know-how in rules and skills | the doctrine and the rationale ref ([[philosophy/three-layer-harness]]) |
+| Philosophy, the understanding of the activity | know-how in rules and skills | the doctrine and the rationale ref (φthree-layer-harness) |
 | The philosophy corpus | one idea | one idea per file, wikilinks between |
-| Session state in a work file, read after `/clear` | items in flight within one session | the `/tmp` notebook ([[philosophy/conversation-as-interface]]) |
+| Session state in a work file, read after `/clear` | items in flight within one session | the `/tmp` notebook (φconversation-as-interface) |
 
 ## Related
 
-- The layers stay apart because their lifecycles differ: [[philosophy/three-layer-harness]].
-- How variety flows across the abstraction ladder's rungs, where this file says where to cut them: [[philosophy/abstraction-ladder]].
+- The layers stay apart because their lifecycles differ: φthree-layer-harness.
+- How variety flows across the abstraction ladder's rungs, where this file says where to cut them: φabstraction-ladder.
 - Foundation: pace layering (Brand), change shears between layers.

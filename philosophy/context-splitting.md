@@ -17,7 +17,7 @@ The two multiply. A large input read by a context that then plans and acts on it
 
 **Spatial cut.** Modularise, and think map-reduce (Dean & Ghemawat): an orchestrator hands each slice to a sub-agent, each returns only its conclusion, the orchestrator reduces. The slices' tokens die with the sub-agents.
 
-**Temporal cut.** Two hats (Beck), one at a time. One hat per context: each step runs in its own sub-agent, loaded with that step's harness only, and hands over through a file ([[philosophy/session-state-in-documents]]).
+**Temporal cut.** Two hats (Beck), one at a time. One hat per context: each step runs in its own sub-agent, loaded with that step's harness only, and hands over through a file (φsession-state-in-documents).
 
 Sub-agents are the unit of both cuts. On the spatial axis, one sub-agent per slice of the input. On the temporal axis, one sub-agent per workflow step, composed with only that step's skills and context (TDD → test-writer, green implementor, refactorer). Skills are composable because this composition is deterministic: the agent definition declares what loads.
 
@@ -31,7 +31,7 @@ The two are not alternatives tried in sequence. A cut on one axis can open the w
 ```
 
 - *A scientific paper as a PDF.* An agent cannot easily split it by meaning, so the spatial cut is hard. Cut in time first: (1) convert to markdown, (2) read and process. Between the two there is now room for a step that cuts the text section by section. **The temporal cut enabled the spatial one.** Sections, once they exist, can be scheduled: read every chapter in parallel, summarise, then compare the summaries with the paper's own conclusion. **The spatial cut enabled new temporal ones.**
-- *A feature changed across a codebase.* Too much for one context. Cut in space first: change module by module, keeping backward compatibility. That allows an order: start in the core domain, validate there ([[philosophy/domain-first-implementation]]), then propagate to the adapters and the consuming bounded contexts. **The spatial cut enabled the temporal one.**
+- *A feature changed across a codebase.* Too much for one context. Cut in space first: change module by module, keeping backward compatibility. That allows an order: start in the core domain, validate there (φdomain-first-implementation), then propagate to the adapters and the consuming bounded contexts. **The spatial cut enabled the temporal one.**
 
 ## Where to stop
 
@@ -40,7 +40,7 @@ Two limits, of different kinds.
 - *Indivisibility.* A limit of the material: no seam left. If you cannot split, change axis and state what you see on that one. If you still cannot, you have probably reached the bottom. Nothing moves this limit.
 - *Cost.* A limit of the economics: a seam exists but cutting it does not pay. Each cut costs a handover and a coordination step; stop where the gain no longer justifies the overhead. Everything moves this limit: reuse, a cheaper handover, a deterministic net in place of a review step, a larger window.
 
-The gap between the two is Wardley's evolution axis, the path down from genesis to commodity ([[philosophy/harness-direction]]). The head of the Pareto distribution, the low-level workflow that runs often, is where the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; the fat tail of one-off work does not earn it and stays at genesis, one context, the human in the loop.
+The gap between the two is Wardley's evolution axis, the path down from genesis to commodity (φharness-direction). The head of the Pareto distribution, the low-level workflow that runs often, is where the cuts go all the way down: one move per context, a deterministic net checking each step, the orchestrator reading reports and never code. That is agentic extreme programming; the fat tail of one-off work does not earn it and stays at genesis, one context, the human in the loop.
 
 | Stage | Cuts | Stops at | Control flow |
 |---|---|---|---|
@@ -48,10 +48,10 @@ The gap between the two is Wardley's evolution axis, the path down from genesis 
 | Custom-built | some, where cheap | cost | orchestrating agent |
 | Commodity | all the way down | indivisibility | script |
 
-**Escalation.** The commodity end of the path ([[philosophy/harness-direction]]), seen from the cuts: when orchestration itself becomes too complex for an agent to hold, the intermediate steps move to code, a script that calls agents headless and owns the control flow. It is deterministic where an orchestrating agent decides ([[philosophy/compounding-decisions]]).
+**Escalation.** The commodity end of the path (φharness-direction), seen from the cuts: when orchestration itself becomes too complex for an agent to hold, the intermediate steps move to code, a script that calls agents headless and owns the control flow. It is deterministic where an orchestrating agent decides (φcompounding-decisions).
 
 ## Related
 
-- Why context is scarce: [[philosophy/context-economics]].
-- The handover file between temporal steps: [[philosophy/session-state-in-documents]].
-- The process units a cut produces, dispatch and leaf: [[philosophy/process-units]].
+- Why context is scarce: φcontext-economics.
+- The handover file between temporal steps: φsession-state-in-documents.
+- The process units a cut produces, dispatch and leaf: φprocess-units.

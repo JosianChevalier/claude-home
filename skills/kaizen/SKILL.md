@@ -78,9 +78,9 @@ Only what Claude Code's docs and the weights do not hold.
 
 - Named after the concept, never the symptom it was written against.
 - An example only where the line is ambiguous without one: the line first, the illustration after, anonymous. A violation named only when the current models produce it unprompted, by its own name.
-- A rule holds one concept, so a fix reads and edits one file; a rule that needs explaining to apply is a skill ([[philosophy/context-economics]], [[philosophy/harness-elements]]).
-- A skill is written from mocks: the chat as the user would see it, one message at a time, validated. Doctrine identifiable, know-how after it, the rationale a footer pointer ([[philosophy/harness-shape]]).
+- A rule holds one concept, so a fix reads and edits one file; a rule that needs explaining to apply is a skill (φcontext-economics, φharness-elements).
+- A skill is written from mocks: the chat as the user would see it, one message at a time, validated. Doctrine identifiable, know-how after it, the rationale a footer pointer (φharness-shape).
 - A description is an activation line, matched against the session and listed in every prompt, main and sub-agent alike. User-invoked: the trigger word first, as the user says it. Model-invoked: the situation in one sentence, in the session's words. A boundary only on an observed mis-fire.
-- An agent is one step's context: the skills and facts that step needs, nothing of the step before or after; the workflow skill dispatches to it and does not run the step itself ([[philosophy/context-splitting]]).
+- An agent is one step's context: the skills and facts that step needs, nothing of the step before or after; the workflow skill dispatches to it and does not run the step itself (φcontext-splitting).
 
-Rationale: [[philosophy/kaizen]], [[philosophy/three-layer-harness]], [[philosophy/harness-shape]], [[philosophy/attractors]], [[philosophy/level-design]], [[philosophy/harness-elements]]
+Rationale: φkaizen, φthree-layer-harness, φharness-shape, φattractors, φlevel-design, φharness-elements

@@ -23,4 +23,4 @@ Each piece of state lives in the shortest-lived store that outlives it: the conv
 - A correction means the rest of the last turn went unread: what still holds comes back in a following turn.
 - A turn that changed a file closes with its commit, one per coherent change, the message saying what was done; housekeeping is reported under "Done:", one short line each.
 
-Rationale: [[philosophy/conversation-as-interface]], [[philosophy/zoom-levels]], [[philosophy/session-state-in-documents]], [[philosophy/conversation-continuity]], [[philosophy/change-inertia]]
+Rationale: φconversation-as-interface, φzoom-levels, φsession-state-in-documents, φconversation-continuity, φchange-inertia

@@ -16,7 +16,7 @@ Degradation is gradual, with a soft limit that depends on the model class:
 
 About 20k past the soft limit, output is considered really unreliable.
 
-The same economy on the human side, the user's cognitive load, is another subject: [[philosophy/zoom-levels]].
+The same economy on the human side, the user's cognitive load, is another subject: φzoom-levels.
 
 ## Techniques
 
@@ -32,16 +32,16 @@ Each one exists to keep something *out* of some window. Three attack the size of
 
 ### Fewer of them load
 
-**Loading policy.** Loading is a policy, not a taxonomy: personal and unscoped project rules are the only always-on cost; scoped rules inject when a touched file matches their path pattern; skills load on invocation; philosophy loads only during harness work. What each element is for: [[philosophy/harness-elements]].
+**Loading policy.** Loading is a policy, not a taxonomy: personal and unscoped project rules are the only always-on cost; scoped rules inject when a touched file matches their path pattern; skills load on invocation; philosophy loads only during harness work. What each element is for: φharness-elements.
 
 ### What loads is divided across contexts
 
-**Sub-agents.** Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions. This is near-decomposability (Simon): each node absorbs its own variety, and the orchestrator faces only what leaks out ([[philosophy/abstraction-ladder]]).
+**Sub-agents.** Sub-agents are context firewalls: delegate exploratory or high-volume work so its tokens die with the sub-agent, returning only conclusions. This is near-decomposability (Simon): each node absorbs its own variety, and the orchestrator faces only what leaks out (φabstraction-ladder).
 
-**Context splitting.** When one context is too much, it is cut along two axes, space and time, and a cut on one axis opens the way on the other: [[philosophy/context-splitting]].
+**Context splitting.** When one context is too much, it is cut along two axes, space and time, and a cut on one axis opens the way on the other: φcontext-splitting.
 
 ## Related
 
-- The same economy on the human side: [[philosophy/zoom-levels]].
-- How a context is cut: [[philosophy/context-splitting]].
-- What each harness element loads: [[philosophy/harness-elements]].
+- The same economy on the human side: φzoom-levels.
+- How a context is cut: φcontext-splitting.
+- What each harness element loads: φharness-elements.

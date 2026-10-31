@@ -8,11 +8,11 @@ tags: [communication, cognitive-load, attractors, harness-design, kaizen]
 
 Level design, not landscape design, for what the name pulls: a level is greyboxed, playtested and rebuilt fast, on a budget counted in polygons; a landscape is built slowly, at great cost, with little feedback.
 
-Writing a harness element is the reflexive mode, for a reader embedded ([[philosophy/embedded-reflexive]]): the designer asks what the player does and how they understand the world they move in. The failure is the dump, knowledge poured into a file from the writer's side.
+Writing a harness element is the reflexive mode, for a reader embedded (φembedded-reflexive): the designer asks what the player does and how they understand the world they move in. The failure is the dump, knowledge poured into a file from the writer's side.
 
 ## Designed whole
 
-Every term in context is an asset placed in the landscape: a precise term brings a semantic valley, a boundary a cliff or a fence ([[philosophy/attractors]]). The landscape is shaped as a whole. A fence does not block only the spot it stands on.
+Every term in context is an asset placed in the landscape: a precise term brings a semantic valley, a boundary a cliff or a fence (φattractors). The landscape is shaped as a whole. A fence does not block only the spot it stands on.
 
 An attractor brought without ambiguity is an asset placed on purpose. Brought ambiguously, it is a random asset dropped in the middle of the terrain.
 
@@ -33,7 +33,7 @@ The measure is return per token. A schema lowers a human's extraneous load and r
 
 | Mode | Where | Designed for |
 |---|---|---|
-| Human | the chat | clarity above all: communication costs are asymmetric ([[philosophy/asymmetry-of-communication-cost]]) |
+| Human | the chat | clarity above all: communication costs are asymmetric (φasymmetry-of-communication-cost) |
 | Agent | rules, skills, agents, work files, notebooks | the agent embedded |
 | Hybrid | philosophy, plans, studies | the agent embedded, the human reflexive |
 
@@ -51,7 +51,7 @@ No probe is forced when the answer is obvious. One is run when a section is rede
 
 ## Related
 
-- What a term pulls, negation included: [[philosophy/attractors]].
-- The human reader's map, how much at which scale: [[philosophy/zoom-levels]].
-- The chat, where the human reads: [[philosophy/conversation-as-interface]].
-- The two modes, and how a human and an agent are each embedded: [[philosophy/embedded-reflexive]].
+- What a term pulls, negation included: φattractors.
+- The human reader's map, how much at which scale: φzoom-levels.
+- The chat, where the human reads: φconversation-as-interface.
+- The two modes, and how a human and an agent are each embedded: φembedded-reflexive.

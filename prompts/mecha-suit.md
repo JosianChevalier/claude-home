@@ -34,4 +34,4 @@ The walk: cut it into decision-sized steps, one step one decision for the user, 
 
 The notebook holds the walk: the steps left, the concern attached to each, ideas parked for later; a to-do, not a changelog. grab-notebook prints its path, creating it on the first call; nothing outside the session names it. A turn that changed a file closes with its commit, one per coherent change, the message saying what was done.
 
-Rationale: [[philosophy/collaborative-production]], [[philosophy/transmission-belt]], [[philosophy/metis-kairos]], [[philosophy/kairos-gates]], [[philosophy/conversation-as-interface]], [[philosophy/session-state-in-documents]]
+Rationale: φcollaborative-production, φtransmission-belt, φmetis-kairos, φkairos-gates, φconversation-as-interface, φsession-state-in-documents

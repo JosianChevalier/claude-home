@@ -8,7 +8,7 @@ tags: [collaboration, communication, cognitive-load, artifacts]
 
 **Failure mode.** Write, review, correct, review: code produced outside the loop, handed back as work never co-thought.
 
-Within the socio-technical system ([[philosophy/harness]]), this file is the loop between engineer and agent.
+Within the socio-technical system (φharness), this file is the loop between engineer and agent.
 
 ```
 navigator intent ──▶ driver: one move ──▶ mic back ──▶ … ──▶ artifact (checkpoint)
@@ -35,27 +35,27 @@ The loop has four faces, 4E cognition:
 
 - **Enacted.** A model is built by taking part, not by watching.
 - **Extended.** The agent and the notebook coupled to the act are part of the mind (Clark & Chalmers): the agent is a mecha suit, extending the engineer's intention rather than acting as an autonomous robot.
-- **Embedded.** Thinking is situated in its terrain: the engineer still goes down to the code ([[philosophy/conversation-as-interface]]).
-- **Embodied.** Thinking runs on the body's spatial machinery: the engineer moves through the code and feels where they are ([[philosophy/embodied-navigation]]).
+- **Embedded.** Thinking is situated in its terrain: the engineer still goes down to the code (φconversation-as-interface).
+- **Embodied.** Thinking runs on the body's spatial machinery: the engineer moves through the code and feels where they are (φembodied-navigation).
 
-The artifact is therefore not the primary act. The conversation is the act; the artifact crystallizes the current shared model. In belt terms: the conversation is where the belt runs, and the engineer's intention is carried, not improved — a better idea is a rival reading offered at a gate ([[philosophy/kairos-gates]]), an unchosen concept returns up the belt ([[philosophy/transmission-belt]]).
+The artifact is therefore not the primary act. The conversation is the act; the artifact crystallizes the current shared model. In belt terms: the conversation is where the belt runs, and the engineer's intention is carried, not improved — a better idea is a rival reading offered at a gate (φkairos-gates), an unchosen concept returns up the belt (φtransmission-belt).
 
 ## Self-sufficient conversation
 
 The engineer converses until the draft is ready; the artifact is opened at checkpoints, not during the exchange. So the conversation must be self-sufficient: everything needed to answer, decide, or steer — the question, the options, the relevant excerpt — is brought into chat as the work progresses.
 
-A question whose answer requires opening the document forces a context switch and shifts extraneous load onto the engineer; "it's in the doc" is a failure of the exchange, not a shortcut. Zoom levels still apply inside chat ([[philosophy/zoom-levels]]): surface at the level of the decision, keep detail unfoldable.
+A question whose answer requires opening the document forces a context switch and shifts extraneous load onto the engineer; "it's in the doc" is a failure of the exchange, not a shortcut. Zoom levels still apply inside chat (φzoom-levels): surface at the level of the decision, keep detail unfoldable.
 
 ## Cognitive load
 
-Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — anything that changes the model. The agent exists to remove the first and transmit the second intact, as a transmission belt gives on the medium and carries the domain: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows ([[philosophy/transmission-belt]]).
+Sweller's split governs the exchange. **Extraneous** load is the medium's — keyboard, format, placement, anything no concept turns on. **Intrinsic** load is the domain's — anything that changes the model. The agent exists to remove the first and transmit the second intact, as a transmission belt gives on the medium and carries the domain: noise out, signal through, including the signal's friction, because that friction is where the engineer's type grows (φtransmission-belt).
 
 Two failures, one per load:
 
 - **Interrogation**: the agent returns extraneous load up the belt — the medium turned into questions — and spends attention before it buys clarity. The belt too tight.
 - **Silent choice**: the agent absorbs intrinsic load — picks among rival concepts and reports success — and the user discovers late that the direction was decided below. The belt too loose.
 
-The test: does the choice change the model beyond what the task asked? Yes → return it. No → infer it, defer it, or discover it by acting. Shape questions follow the same split ([[philosophy/shape-and-substance]]).
+The test: does the choice change the model beyond what the task asked? Yes → return it. No → infer it, defer it, or discover it by acting. Shape questions follow the same split (φshape-and-substance).
 
 In mob terms this is what "intent at the highest abstraction the driver can execute" means: the same test keeps strong-style from sliding into interrogation.
 
@@ -67,19 +67,19 @@ The trouble is that autonomy is usually an accident: instructions written as "do
 
 **Why the spectator pays.** Cognition is enacted (Enactive work, above): a model of the work is built by taking part in it. A person who only watches builds none: the loop is broken and the boundary of their mind has pulled back to their own head. Passivity is taxing in itself, before any review. The review that follows is then the most taxing way to catch up: the model has to be rebuilt from the output alone. This is why the person should be involved, and involved in the deciding.
 
-**Posture is upstream.** A passive posture does not stay a posture problem. With nobody deciding along the way, the workflow runs long and the agent's decisions chain. A long run takes context at every step ([[philosophy/context-splitting]], the temporal axis); chained decisions compound their chances of error ([[philosophy/compounding-decisions]]). Both add to the waste the posture already caused.
+**Posture is upstream.** A passive posture does not stay a posture problem. With nobody deciding along the way, the workflow runs long and the agent's decisions chain. A long run takes context at every step (φcontext-splitting, the temporal axis); chained decisions compound their chances of error (φcompounding-decisions). Both add to the waste the posture already caused.
 
 **The measure is waste**, in three currencies: tokens, the person's cognitive energy, and time. Interaction that asks about things no decision turns on wastes all three (interrogation, above).
 
-So does the opposite, and it is the worst case: **an autonomous run that ends in a large output to review**. The person was absent while the decisions were taken, then pays for all of them at once, with no way to tell the sound ones from the others, and the run is redone if one early decision was wrong ([[philosophy/compounding-decisions]]). Autonomy with a small, checkable output has none of these costs.
+So does the opposite, and it is the worst case: **an autonomous run that ends in a large output to review**. The person was absent while the decisions were taken, then pays for all of them at once, with no way to tell the sound ones from the others, and the run is redone if one early decision was wrong (φcompounding-decisions). Autonomy with a small, checkable output has none of these costs.
 
-Waste is not the only measure: an artifact can be cheap and wrong. Reliability, and how the two feed each other: [[philosophy/compounding-decisions]].
+Waste is not the only measure: an artifact can be cheap and wrong. Reliability, and how the two feed each other: φcompounding-decisions.
 
 ## Making an artifact interactive
 
 An agent takes no commands, yet it can be harnessed: an artifact shapes its constraints so it tends toward the interaction.
 
-The most powerful attractor is the scene itself: the agent in a discussion with the engineer, both standing at a whiteboard ([[philosophy/attractors]]). Set there, the agent talks, draws, waits, and takes the notes: it is the one who crystallizes the discussion into artifacts. No rule about asking is as strong as the scene. The moves below hold the scene in place.
+The most powerful attractor is the scene itself: the agent in a discussion with the engineer, both standing at a whiteboard (φattractors). Set there, the agent talks, draws, waits, and takes the notes: it is the one who crystallizes the discussion into artifacts. No rule about asking is as strong as the scene. The moves below hold the scene in place.
 
 What works, in the order it is usually needed:
 
@@ -92,12 +92,12 @@ What works, in the order it is usually needed:
 
 ## Related
 
-- The mechanism this workflow is seen from: [[philosophy/transmission-belt]].
-- What the belt transmits between: [[philosophy/model-phenomenology]].
-- Where a better idea goes: [[philosophy/kairos-gates]].
-- Surfacing at the level of the decision: [[philosophy/zoom-levels]].
-- Why a long run costs, in context and in error: [[philosophy/context-splitting]], [[philosophy/compounding-decisions]].
-- Why the whiteboard scene pulls harder than a rule: [[philosophy/attractors]].
-- Shape questions under the same test: [[philosophy/shape-and-substance]].
-- The embodied face of the loop: [[philosophy/embodied-navigation]].
-- The embedded face, and the reflexive mode that designs its conditions: [[philosophy/embedded-reflexive]].
+- The mechanism this workflow is seen from: φtransmission-belt.
+- What the belt transmits between: φmodel-phenomenology.
+- Where a better idea goes: φkairos-gates.
+- Surfacing at the level of the decision: φzoom-levels.
+- Why a long run costs, in context and in error: φcontext-splitting, φcompounding-decisions.
+- Why the whiteboard scene pulls harder than a rule: φattractors.
+- Shape questions under the same test: φshape-and-substance.
+- The embodied face of the loop: φembodied-navigation.
+- The embedded face, and the reflexive mode that designs its conditions: φembedded-reflexive.

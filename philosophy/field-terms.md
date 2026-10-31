@@ -25,9 +25,9 @@ detailed     nothing that fits     the whole reading spelled out    the spork
 
 **Identified.** Already in the weights: named, never explained. The author stands for the field; the field is added when the name means different things in different domains; pins are added when the user is expert there or readings compete, and triangulate the region of the field meant.
 
-**Overloaded.** An existing concept, adjusted to our reading. The original is named, and what we change is written next to it. Left unwritten, the reader gets the original meaning, not ours: a name pulls what it means in the weights, whatever the writer meant by it. Juarrero's context-sensitive constraints are identified; that a term in a model's context acts as one, and that negation feeds its semantic valley, is written next to it ([[philosophy/attractors]]).
+**Overloaded.** An existing concept, adjusted to our reading. The original is named, and what we change is written next to it. Left unwritten, the reader gets the original meaning, not ours: a name pulls what it means in the weights, whatever the writer meant by it. Juarrero's context-sensitive constraints are identified; that a term in a model's context acts as one, and that negation feeds its semantic valley, is written next to it (φattractors).
 
-**Detailed.** Nothing in the weights carries the reading: it is spelled out whole. The spork ([[philosophy/model-phenomenology]]) is ours, and so is most of [[philosophy/model-expressions]].
+**Detailed.** Nothing in the weights carries the reading: it is spelled out whole. The spork (φmodel-phenomenology) is ours, and so is most of φmodel-expressions.
 
 ## Sayings
 
@@ -39,7 +39,7 @@ A saying loads a whole discipline of judgment in one line: it does not explain a
 
 ## Doctrine
 
-Know-how uses terms and sayings too; doctrine suits them best, being written as a few attractors ([[philosophy/harness-shape]]). A vague rule needs paragraphs of clarification; a well-named one needs a sentence. A doctrine line is looked for before it is written, in order:
+Know-how uses terms and sayings too; doctrine suits them best, being written as a few attractors (φharness-shape). A vague rule needs paragraphs of clarification; a well-named one needs a sentence. A doctrine line is looked for before it is written, in order:
 
 1. **The rationale's own terms.** Doctrine names the terms of the philosophy it points to (the horizon, the disappointment, the belt): the file and the skill then pull the same way.
 2. **A saying, known or adjusted.** The idea is stated plainly, then the discipline that already has a line for it is searched. Several candidates side by side; the one wins whose semantic valley is nearest the meaning intended, not the nearest-sounding.
@@ -47,6 +47,6 @@ Know-how uses terms and sayings too; doctrine suits them best, being written as 
 
 ## Related
 
-- What a term pulls, and why: [[philosophy/attractors]].
-- Doctrine as a few attractors: [[philosophy/harness-shape]].
-- The spork, a detailed term: [[philosophy/model-phenomenology]].
+- What a term pulls, and why: φattractors.
+- Doctrine as a few attractors: φharness-shape.
+- The spork, a detailed term: φmodel-phenomenology.

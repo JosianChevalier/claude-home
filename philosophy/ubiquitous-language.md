@@ -8,7 +8,7 @@ tags: [ddd, domain-modeling, vocabulary, bounded-contexts, cognitive-load, clean
 
 ## The language is the model
 
-A **ubiquitous language** (Evans) is the model in words. The model exists only as expressed ([[philosophy/model-expressions]]), and language is the expression used by default: whenever we speak of the domain, we speak it.
+A **ubiquitous language** (Evans) is the model in words. The model exists only as expressed (φmodel-expressions), and language is the expression used by default: whenever we speak of the domain, we speak it.
 
 Every other expression reuses its terms: code, schema, contract, UI. The reuse runs both ways and the line is fluid; what holds is that a term stays the same term across all of them.
 
@@ -39,5 +39,5 @@ The aim: read the code as a sentence refined by a domain expert.
 
 ## Related
 
-- The model as its expressions, the language one of them: [[philosophy/model-expressions]].
-- The type the engineer holds, the concepts the code holds: [[philosophy/model-phenomenology]].
+- The model as its expressions, the language one of them: φmodel-expressions.
+- The type the engineer holds, the concepts the code holds: φmodel-phenomenology.

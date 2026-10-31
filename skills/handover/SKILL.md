@@ -51,4 +51,4 @@ The label names the topic when there are several. The quote is a direct prompt t
 
 Never the word handover inside the quote, nor any label calling itself one: the successor would load this skill and write one instead of acting.
 
-Rationale: [[philosophy/conversation-continuity]], [[philosophy/session-state-in-documents]], [[philosophy/context-economics]]
+Rationale: φconversation-continuity, φsession-state-in-documents, φcontext-economics

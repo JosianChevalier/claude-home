@@ -8,7 +8,7 @@ tags: [batch-slicing, elephant-carpaccio, small-batches, planning]
 
 ## Everything is a hypothesis
 
-A user story bets that users want it. A step bets that the app still works. A commit bets that it merges without trouble. Any change is a bet, and only feedback settles it. A slice is the unit that puts one bet in front of its feedback. Each bet has its feedback loop, and the loops nest, the faster inside the slower ([[philosophy/feedback-loops]]).
+A user story bets that users want it. A step bets that the app still works. A commit bets that it merges without trouble. Any change is a bet, and only feedback settles it. A slice is the unit that puts one bet in front of its feedback. Each bet has its feedback loop, and the loops nest, the faster inside the slower (φfeedback-loops).
 
 ## Increments of value
 
@@ -47,8 +47,8 @@ The step is the human's unit of thought; below it, the plan says nothing.
 
 ## Related
 
-- Why small: [[philosophy/batch-size-economics]].
-- Crossing the fitness valley: [[philosophy/make-the-change-easy]].
-- Changing a live path, step by step: [[philosophy/change-in-place]].
-- The floor below the step: [[philosophy/atomic-commit]].
+- Why small: φbatch-size-economics.
+- Crossing the fitness valley: φmake-the-change-easy.
+- Changing a live path, step by step: φchange-in-place.
+- The floor below the step: φatomic-commit.
 - Alternating cuts in space and in time: [[philosophy/context-splitting#A cut enables the next]].

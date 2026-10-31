@@ -16,11 +16,11 @@ Unintegrated work lives one commit. Under that bound three verbs collapse into o
 commit  =  integrate  =  publish
 ```
 
-There is no "committed but not yet shared" state. Everything the practice promises — no merge ever, conflicts a few lines wide, trunk always current — follows from the bound, and from nothing else. Holding the bound takes atomic commits, and the skill of splitting a change into them ([[philosophy/atomic-commit]]).
+There is no "committed but not yet shared" state. Everything the practice promises — no merge ever, conflicts a few lines wide, trunk always current — follows from the bound, and from nothing else. Holding the bound takes atomic commits, and the skill of splitting a change into them (φatomic-commit).
 
 ## Branches are the exception
 
-"Short-lived branches" does not mean branch first and merge soon. It means: no branch, and when one is inevitable it lives hours at most. Ship/show/ask gives one of the few acceptable cases: isolate the part that must be asked, and only that part, onto a branch; the rest ships on trunk. The branch's commits obey the same discipline as trunk's ([[philosophy/continuous-delivery]]).
+"Short-lived branches" does not mean branch first and merge soon. It means: no branch, and when one is inevitable it lives hours at most. Ship/show/ask gives one of the few acceptable cases: isolate the part that must be asked, and only that part, onto a branch; the rest ships on trunk. The branch's commits obey the same discipline as trunk's (φcontinuous-delivery).
 
 ## Coordination is optimistic locking
 
@@ -46,7 +46,7 @@ Overlap that **persists** across commits is a different fact. Two actors are wor
 
 ## Related
 
-- What makes a commit atomic, and the splitting skill: [[philosophy/atomic-commit]].
-- The same practice for agents sharing one repository: [[philosophy/agentic-trunk-based-development]].
-- Every commit releasable: [[philosophy/continuous-delivery]].
-- Batch size as the dominant variable, the atomic commit as its floor: [[philosophy/batch-size-economics]].
+- What makes a commit atomic, and the splitting skill: φatomic-commit.
+- The same practice for agents sharing one repository: φagentic-trunk-based-development.
+- Every commit releasable: φcontinuous-delivery.
+- Batch size as the dominant variable, the atomic commit as its floor: φbatch-size-economics.

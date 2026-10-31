@@ -14,34 +14,34 @@ A developer's local clone is a branch: the unpushed commits are the delta, `pull
 
 ## A worktree is a trunk-based committer
 
-Trunk-based development is commit on trunk: the lifetime of a delta is one commit, and that bound is the only thing that ever defined a trunk-based committer ([[philosophy/trunk-based-development]]). A worktree that rebases on trunk and fast-forwards it at each commit meets the bound. It **is** a trunk-based committer — not similar, identical.
+Trunk-based development is commit on trunk: the lifetime of a delta is one commit, and that bound is the only thing that ever defined a trunk-based committer (φtrunk-based-development). A worktree that rebases on trunk and fast-forwards it at each commit meets the bound. It **is** a trunk-based committer — not similar, identical.
 
 One worktree per agent is a convenience of the filesystem: separate working directories, one object store, one trunk.
 
 ## No orchestration between agents
 
-Several agents can therefore work on the same local repository with nothing coordinating them: each commits, fast-forwards trunk, rebases on it, at every commit. The coordination is the one trunk-based development already has, optimistic locking, and nothing is added for agents ([[philosophy/trunk-based-development]]).
+Several agents can therefore work on the same local repository with nothing coordinating them: each commits, fast-forwards trunk, rebases on it, at every commit. The coordination is the one trunk-based development already has, optimistic locking, and nothing is added for agents (φtrunk-based-development).
 
 The agents are often from different sessions, with no channel between them but the repository. The scheme fits them better than it fits humans: a retry costs an agent less, and the collision window is shorter still, since the commits come faster.
 
-An orchestrator partitioning the work up front is the pessimistic scheme. For agents it costs more than for humans: a decision at every dispatch, a chain of its own ([[philosophy/compounding-decisions]]), to avoid conflicts that mostly would not have happened.
+An orchestrator partitioning the work up front is the pessimistic scheme. For agents it costs more than for humans: a decision at every dispatch, a chain of its own (φcompounding-decisions), to avoid conflicts that mostly would not have happened.
 
 ## The trunk is the communication channel
 
-Each rebase is an agent reading what the others did since its last commit, in the form that costs least: the diff, never their conversations ([[philosophy/context-economics]]). Nothing of another agent's context enters this one; only the artifact does, and only the part that changed.
+Each rebase is an agent reading what the others did since its last commit, in the form that costs least: the diff, never their conversations (φcontext-economics). Nothing of another agent's context enters this one; only the artifact does, and only the part that changed.
 
-A rebase conflict is not a decision the agent takes alone. It is a check between steps ([[philosophy/compounding-decisions]]): self-correcting like a failing test, caught before it compounds.
+A rebase conflict is not a decision the agent takes alone. It is a check between steps (φcompounding-decisions): self-correcting like a failing test, caught before it compounds.
 
-A review step may be added to cut bugs, another check between steps ([[philosophy/compounding-decisions]]). It is not asynchronous: it runs before the push, inline with the work, as a developer rereads a commit before sending it.
+A review step may be added to cut bugs, another check between steps (φcompounding-decisions). It is not asynchronous: it runs before the push, inline with the work, as a developer rereads a commit before sending it.
 
 ## What stays above the agents
 
-- **The splitting skill.** An agent is not at the atomic-commit granularity by nature; it gets there with the splitting skill, which the harness must carry ([[philosophy/atomic-commit]]).
+- **The splitting skill.** An agent is not at the atomic-commit granularity by nature; it gets there with the splitting skill, which the harness must carry (φatomic-commit).
 - **The overlap signal.** It is read above the agents, not by them: persistent overlap means two actors hold the same thing, and redrawing who holds what is the navigator's decision, not a retry.
 
 ## Related
 
-- The practice and why it coordinates without synchronizing: [[philosophy/trunk-based-development]].
-- The conflict as a check between steps; the orchestrator as a decision chain: [[philosophy/compounding-decisions]].
-- Why the diff, not the conversation: [[philosophy/context-economics]].
-- The granularity, and the skill it rests on: [[philosophy/atomic-commit]].
+- The practice and why it coordinates without synchronizing: φtrunk-based-development.
+- The conflict as a check between steps; the orchestrator as a decision chain: φcompounding-decisions.
+- Why the diff, not the conversation: φcontext-economics.
+- The granularity, and the skill it rests on: φatomic-commit.

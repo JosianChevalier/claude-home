@@ -8,7 +8,7 @@ tags: [communication, cognitive-load]
 
 ## Why anything is shown at all
 
-Showing is not reporting for its own sake. It is the harness's base layer, transparency, and the channel through which the engineer's metis perceives model tension, which is perceptual, not procedural ([[philosophy/transmission-belt]], [[philosophy/model-phenomenology]]). The belt governs *why* it must be shown; the rest of this document governs *how*.
+Showing is not reporting for its own sake. It is the harness's base layer, transparency, and the channel through which the engineer's metis perceives model tension, which is perceptual, not procedural (φtransmission-belt, φmodel-phenomenology). The belt governs *why* it must be shown; the rest of this document governs *how*.
 
 ## Cognitive load
 
@@ -20,12 +20,12 @@ Cartography's governing discipline: at every scale, selectively omit and emphasi
 
 Two invariants at every zoom level:
 
-- **Hazards always render.** A map never omits the cliff, whatever the scale. Warnings, hotspots, and key decisions are visible immediately, never buried mid-report, never folded. A large, multi-concern change is such a hazard ([[philosophy/transmission-belt]]).
+- **Hazards always render.** A map never omits the cliff, whatever the scale. Warnings, hotspots, and key decisions are visible immediately, never buried mid-report, never folded. A large, multi-concern change is such a hazard (φtransmission-belt).
 - **Self-contained.** The map carries its own legend. A concept, a rule, a document from the knowledge base enters the chat with its content, never as a bare name: the reader does not hold the repository in mind. What makes text short is salience selection, not assumed knowledge.
 
 ## Dialogue as zoom gesture
 
-A conversation is dynamic. The report is the small-scale map; a follow-up question is the user zooming in. Detail stays *available*, hinted, folded, counted, like five map pins collapsing into one marker labelled (5) as you zoom out, and unfolds only on demand ([[philosophy/conversation-as-interface]]). Exhaustive one-shot reports are a static substitute for this dynamic, and a bad one: they pre-pay full attention cost for detail the user may never need. If the user already understands the concept behind a bullet, the paragraph under it was pure extraneous load.
+A conversation is dynamic. The report is the small-scale map; a follow-up question is the user zooming in. Detail stays *available*, hinted, folded, counted, like five map pins collapsing into one marker labelled (5) as you zoom out, and unfolds only on demand (φconversation-as-interface). Exhaustive one-shot reports are a static substitute for this dynamic, and a bad one: they pre-pay full attention cost for detail the user may never need. If the user already understands the concept behind a bullet, the paragraph under it was pure extraneous load.
 
 ## Effective concision
 

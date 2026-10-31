@@ -79,4 +79,4 @@ Silent guess: "study the retry mechanism", and the agent assumes the algorithm l
 
 Sharp: "Assuming you need the coupling, you mentioned refactoring this next sprint; if it is the algorithm's correctness you want argued, that is a different document, say so. Starting on coupling."
 
-Rationale: [[philosophy/collaborative-production]], [[philosophy/zoom-levels]], [[philosophy/shape-and-substance]], [[philosophy/session-state-in-documents]], [[philosophy/prototypes-are-probes]], [[philosophy/transmission-belt]], [[philosophy/kairos-gates]]
+Rationale: φcollaborative-production, φzoom-levels, φshape-and-substance, φsession-state-in-documents, φprototypes-are-probes, φtransmission-belt, φkairos-gates

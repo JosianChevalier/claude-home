@@ -15,7 +15,7 @@ Reinertsen, *The Principles of Product Development Flow*: batch size has an econ
 What each batch pays to ship: manual tests, manual deployment, opening and reviewing a pull request.
 
 - TDD and an automated pipeline cut it a lot.
-- Trunk-based development cuts the pull request and the wait on a teammate ([[philosophy/trunk-based-development]]).
+- Trunk-based development cuts the pull request and the wait on a teammate (φtrunk-based-development).
 
 It has almost no lower bound.
 
@@ -31,10 +31,10 @@ None of it shows: unshipped work sits on no shelf, so it piles up unnoticed, and
 
 **Failures.** Bigger batches fail more often (Accelerate: change failure rate. Deploy frequency is the inverse of batch size, and in Accelerate's capability model continuous delivery, which means small batches by definition, drives it.) Two reasons:
 
-- **Hard to see.** A fault hides in a large diff. A move is checked at a glance ([[philosophy/mechanical-refactoring]]).
+- **Hard to see.** A fault hides in a large diff. A move is checked at a glance (φmechanical-refactoring).
 - **Faults combine.** Most outages come from several small faults lining up, not from one. n changes make n(n−1)/2 pairs that can interact, so risk grows faster than size. A small batch exposes each change alone. Wiring a configuration value that used to be null takes two commits: pass it and validate it, then use it. A wrong value shows before anything depends on it.
 
-**Collision.** Two people on the same thing without knowing it: integration hazards, waste. Handled optimistically on trunk ([[philosophy/trunk-based-development]], optimistic locking).
+**Collision.** Two people on the same thing without knowing it: integration hazards, waste. Handled optimistically on trunk (φtrunk-based-development, optimistic locking).
 
 **Cognitive load.** A batch soon exceeds working memory, then the load grows with the interactions between its changes. A small batch is fire and forget: review a tiny bit, ship it, clear it from your head.
 
@@ -42,18 +42,18 @@ None of it shows: unshipped work sits on no shelf, so it piles up unnoticed, and
 
 The usual reflex attacks holding cost: synchronize ahead so that nobody works on the same thing.
 
-- It is the pessimistic scheme: synchronization paid on every unit of work ([[philosophy/trunk-based-development]]).
+- It is the pessimistic scheme: synchronization paid on every unit of work (φtrunk-based-development).
 - It stops small cleanups along the way, since they may touch someone else's work. "Open another pull request for it" does not hold: a pull request is a transaction cost, so nobody opens it.
 
 Holding cost moved a little, and new costs came with it.
 
 ## The asymmetry
 
-Transaction cost can go to near zero: TDD, continuous deployment, trunk. Holding cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10 ([[philosophy/agentic-extreme-programming]]).
+Transaction cost can go to near zero: TDD, continuous deployment, trunk. Holding cost cannot. The optimum follows transaction cost down until it hits the floor: the smallest change that still works, the atomic commit (φatomic-commit). An optimum on a floor is not a dosage: the knob is at 10 (φagentic-extreme-programming).
 
 ## Related
 
-- The floor: [[philosophy/atomic-commit]].
-- Collision, handled optimistically: [[philosophy/trunk-based-development]].
-- Faults seen at a glance: [[philosophy/mechanical-refactoring]].
-- Batch size applied to plans: [[philosophy/batch-slicing]].
+- The floor: φatomic-commit.
+- Collision, handled optimistically: φtrunk-based-development.
+- Faults seen at a glance: φmechanical-refactoring.
+- Batch size applied to plans: φbatch-slicing.

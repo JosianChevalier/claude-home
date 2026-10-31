@@ -44,7 +44,7 @@ By default, how the agent names and cuts is its composition grid: it guides the 
 
 ## Referencing a concept
 
-A concept enters identified, overloaded or detailed ([[philosophy/field-terms]]). Identified, it takes as much as it needs, and no more:
+A concept enters identified, overloaded or detailed (φfield-terms). Identified, it takes as much as it needs, and no more:
 
 ```
 name (author)              the default; the author stands for the field
@@ -54,7 +54,7 @@ name (author)              the default; the author stands for the field
         ──▶ never explained
 ```
 
-Pins triangulate the region of the field meant. A pejorative the weights hold (primitive obsession, shotgun parsing) is named outright: observed constantly, naming it pushes away ([[philosophy/attractors]]).
+Pins triangulate the region of the field meant. A pejorative the weights hold (primitive obsession, shotgun parsing) is named outright: observed constantly, naming it pushes away (φattractors).
 
 ## Where a concept lives
 
@@ -95,7 +95,7 @@ tags: [ddd, vocabulary]
 
 ## Related
 
-- What it holds, in a few words: [[philosophy/other-file]].
+- What it holds, in a few words: φother-file.
 ```
 
 The Thesis line comes first after the title, the governing thought before its support (Minto): `navigation.sh index` exports it. Tags grow with the corpus, they are how a file is found.
@@ -104,7 +104,7 @@ The Thesis line comes first after the title, the governing thought before its su
 
 - Tags in the frontmatter; a new tag gets its line in `philosophy/navigation/tags.md`
 - `philosophy/navigation/navigation.sh index` shows the file with its Thesis
-- Every `[[philosophy/...]]` resolves; no em-dashes
+- Every `φ<name>` resolves to `philosophy/<name>.md`; no em-dashes
 - A neighbour shrunk by the new file has its Related updated; old rules repointed
 
 ## Examples
@@ -133,4 +133,4 @@ Juarrero's context-sensitive constraints are referenced. That a term in a model'
 
 Nothing in the weights carries it: the whole reading is written out.
 
-Rationale: [[philosophy/three-layer-harness]], [[philosophy/harness-elements]], [[philosophy/attractors]], [[philosophy/field-terms]], [[philosophy/collaborative-production]], [[philosophy/zoom-levels]]
+Rationale: φthree-layer-harness, φharness-elements, φattractors, φfield-terms, φcollaborative-production, φzoom-levels

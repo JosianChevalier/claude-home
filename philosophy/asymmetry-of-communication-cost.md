@@ -12,13 +12,13 @@ Saying an idea clearly takes effort and time. The speaker pays in shaping, the l
 
 ## With an agent writing
 
-The symmetry is broken. Shaping and producing are virtually free for the agent: a figure, a table, a side-by-side, or one more paragraph, cost it nothing that would brake it. The whole cost moves to the reader: a human pays in attention ([[philosophy/zoom-levels]]), an agent pays in tokens ([[philosophy/context-economics]]). Nothing is traded any more: the medium is no longer paid for by the writer, so there is no fluidity to protect by keeping it poor, and no effort to spare by keeping it short.
+The symmetry is broken. Shaping and producing are virtually free for the agent: a figure, a table, a side-by-side, or one more paragraph, cost it nothing that would brake it. The whole cost moves to the reader: a human pays in attention (φzoom-levels), an agent pays in tokens (φcontext-economics). Nothing is traded any more: the medium is no longer paid for by the writer, so there is no fluidity to protect by keeping it poor, and no effort to spare by keeping it short.
 
 Two consequences follow, one on the form, one on the volume.
 
 ## Spend on the form
 
-Each piece of information goes in the form that carries it cheapest for its reader, whatever it costs to produce. For a human, the figure where the information has a shape, the table where it compares, prose where it argues ([[philosophy/conversation-as-interface]]). For an agent, prose built on precise terms: a figure or a table returns less than the sentences it replaces. The question is never what the form costs the writer, only what it saves the reader.
+Each piece of information goes in the form that carries it cheapest for its reader, whatever it costs to produce. For a human, the figure where the information has a shape, the table where it compares, prose where it argues (φconversation-as-interface). For an agent, prose built on precise terms: a figure or a table returns less than the sentences it replaces. The question is never what the form costs the writer, only what it saves the reader.
 
 ## Cut the volume
 
@@ -26,10 +26,10 @@ The corollary. Between people, the effort of saying is what keeps a speaker shor
 
 ## In doubt, the writer pays
 
-The writer's side is not always free. Writing from where the reader stands sometimes takes drafts: a notebook before the text, a rewrite to shake off the structure of the input, patchwriting (Howard). In doubt the cost goes to the writer, always, because the two sides are neither in the same currency nor at the same scale. The writer's cost is tokens, spent once, bounded by the rewrite. A human reader's cost is cognitive energy, the dearer currency by far. An agent reader's cost is a path: a wrong attractor or a wrong level design sends it down work that is waste ([[philosophy/attractors]], [[philosophy/level-design]]), and a wasted path is a different scale from a redraft.
+The writer's side is not always free. Writing from where the reader stands sometimes takes drafts: a notebook before the text, a rewrite to shake off the structure of the input, patchwriting (Howard). In doubt the cost goes to the writer, always, because the two sides are neither in the same currency nor at the same scale. The writer's cost is tokens, spent once, bounded by the rewrite. A human reader's cost is cognitive energy, the dearer currency by far. An agent reader's cost is a path: a wrong attractor or a wrong level design sends it down work that is waste (φattractors, φlevel-design), and a wasted path is a different scale from a redraft.
 
 ## Related
 
-- The reader's attention as the scarce resource, the map as the form of an answer: [[philosophy/zoom-levels]].
-- The same economy for an agent reader, tokens: [[philosophy/context-economics]].
-- The figure as the answer, the form following the shape of the information: [[philosophy/conversation-as-interface]].
+- The reader's attention as the scarce resource, the map as the form of an answer: φzoom-levels.
+- The same economy for an agent reader, tokens: φcontext-economics.
+- The figure as the answer, the form following the shape of the information: φconversation-as-interface.

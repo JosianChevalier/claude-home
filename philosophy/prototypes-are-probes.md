@@ -12,13 +12,13 @@ Comparison is cheap, opinion is expensive. A trade-off that resists discussion i
 
 ## Sensing happens in the loop
 
-The prototype sits inside the thinking loop ([[philosophy/collaborative-production]]): evidence the user senses with, not a deliverable they review. While they are sense-making on it, inspect, never edit: an edit shifts the evidence under the study. When they offer a tighter abstraction of the mechanism, it is adopted: conceptual compression is what the probe was for.
+The prototype sits inside the thinking loop (φcollaborative-production): evidence the user senses with, not a deliverable they review. While they are sense-making on it, inspect, never edit: an edit shifts the evidence under the study. When they offer a tighter abstraction of the mechanism, it is adopted: conceptual compression is what the probe was for.
 
-What the loop leaves behind is not the prototype: kept, it becomes a published interface (Fowler). The study holds what it compressed, the mechanism, the ordering constraints, the surprises; the plan holds what was accepted, the decisions and the stages ([[philosophy/planning-is-everything]]).
+What the loop leaves behind is not the prototype: kept, it becomes a published interface (Fowler). The study holds what it compressed, the mechanism, the ordering constraints, the surprises; the plan holds what was accepted, the decisions and the stages (φplanning-is-everything).
 
 ## Related
 
-- Why acting is the only way to know: [[philosophy/planning-is-everything]].
-- Reshaping as the cheapest probe: [[philosophy/make-the-change-easy]].
-- The domain exposed to each next consumer only for the feedback it gives, semantics under review kept apart from decisions: [[philosophy/domain-first-implementation]].
-- The loop the prototype sits in: [[philosophy/collaborative-production]].
+- Why acting is the only way to know: φplanning-is-everything.
+- Reshaping as the cheapest probe: φmake-the-change-easy.
+- The domain exposed to each next consumer only for the feedback it gives, semantics under review kept apart from decisions: φdomain-first-implementation.
+- The loop the prototype sits in: φcollaborative-production.

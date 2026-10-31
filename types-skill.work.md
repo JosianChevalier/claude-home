@@ -6,7 +6,7 @@ rank: 7
 # types-skill
 
 
-Proto-skill. Rationale: [[philosophy/parse-dont-validate]], [[philosophy/always-valid-domain]]. The domain row's forms are in `old-claude/rules/always-valid-domain.md`; the rest has no rule yet.
+Proto-skill. Rationale: φparse-dont-validate, φalways-valid-domain. The domain row's forms are in `old-claude/rules/always-valid-domain.md`; the rest has no rule yet.
 
 | Where data enters | Enters as | Parsed into | Check deleted downstream |
 |---|---|---|---|

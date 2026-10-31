@@ -26,4 +26,4 @@ Continuous deployment fits every loop from the third down exactly onto the one b
 
 ## Related
 
-- Every change a hypothesis, and the slice that tests it: [[philosophy/batch-slicing]].
+- Every change a hypothesis, and the slice that tests it: φbatch-slicing.

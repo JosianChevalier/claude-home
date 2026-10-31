@@ -18,7 +18,7 @@ What most readers of Accelerate missed: flow metrics and quality metrics are cor
 
 ## The optimum is tiny
 
-Batch size has an optimum (Reinertsen, [[philosophy/batch-size-economics]]), and it is not fixed: lower the transaction cost and the optimum follows it down. A pipeline does not pick a better truck size, it removes the truck. The optimum stops at a floor: the smallest change that still works, in software the atomic commit ([[philosophy/atomic-commit]]). An optimum on a floor is not a dosage: the knob is at 10.
+Batch size has an optimum (Reinertsen, φbatch-size-economics), and it is not fixed: lower the transaction cost and the optimum follows it down. A pipeline does not pick a better truck size, it removes the truck. The optimum stops at a floor: the smallest change that still works, in software the atomic commit (φatomic-commit). An optimum on a floor is not a dosage: the knob is at 10.
 
 The cost is made near zero, not found there: infrastructure, structure and practices are built. What is left to decide is not a trade-off between practices: nothing to choose between them, nothing to adjust so that one does not go too far. It is how far to go into them: how much is invested against how much comes back. Going deeper does not always pay enough. But what is invested in one practice pays in the others.
 
@@ -34,15 +34,15 @@ It held for XP and it holds agentic. The practices are not exactly the same set:
 
 Tokens, context, cognitive load, feedback time, precision and quality move together. The practices of the harness hold each other up:
 
-- A lean context keeps the most capable model affordable as the default; a capable model errs and struggles less, which keeps the context lean ([[philosophy/model-tiers]]).
-- A small context makes each decision more reliable, and a decision that holds is not paid for twice in tokens ([[philosophy/compounding-decisions]]).
-- A cut in time opens a cut in space, and the reverse ([[philosophy/context-splitting]]).
-- Mechanical moves presuppose side-effect-free design and produce it ([[philosophy/mechanical-refactoring]]); each is one glanceable diff, one move to a commit ([[philosophy/atomic-commit]]).
+- A lean context keeps the most capable model affordable as the default; a capable model errs and struggles less, which keeps the context lean (φmodel-tiers).
+- A small context makes each decision more reliable, and a decision that holds is not paid for twice in tokens (φcompounding-decisions).
+- A cut in time opens a cut in space, and the reverse (φcontext-splitting).
+- Mechanical moves presuppose side-effect-free design and produce it (φmechanical-refactoring); each is one glanceable diff, one move to a commit (φatomic-commit).
 
 None of them is bought with another.
 
 ## Related
 
-- The smallest batch: [[philosophy/atomic-commit]]; why it is the optimum: [[philosophy/batch-size-economics]].
-- The practices on trunk: [[philosophy/trunk-based-development]], [[philosophy/agentic-trunk-based-development]].
-- One instance, the design the moves presuppose and produce: [[philosophy/mechanical-refactoring]].
+- The smallest batch: φatomic-commit; why it is the optimum: φbatch-size-economics.
+- The practices on trunk: φtrunk-based-development, φagentic-trunk-based-development.
+- One instance, the design the moves presuppose and produce: φmechanical-refactoring.

@@ -13,7 +13,7 @@
 **A question is a question.** My questions are always genuine — usually probing what led to a mistake, or I didn't follow. A prompt phrased as a question gets an answer, a discussion, or a clarification. A question changes no file and runs no command.
 **Falsify the premise.** Any doubt — yours included — surface it. A request on a false premise has no determinate content: name the mismatch. Bad idea → say so, directly. Before acting: root cause, or compensation?
 
-Rationale: [[philosophy/transmission-belt]], [[philosophy/kairos-gates]], [[philosophy/collaborative-production]]
+Rationale: φtransmission-belt, φkairos-gates, φcollaborative-production
 
 ## Reviews
 
@@ -27,7 +27,7 @@ Shape before prose, breathable, skim-friendly wherever a human might read it.
 
 Pasted handovers, plans, specs are context to act from; creating one needs an explicit ask.
 
-Rationale: [[philosophy/zoom-levels]]
+Rationale: φzoom-levels
 
 ## Context
 
@@ -36,6 +36,6 @@ Explicit, versioned, controlled: no memory files.
 Skill descriptions: front-load the literal trigger; workflow and guardrails live in the body.
 
 Precision decays with context; past 100k tokens output is untrustworthy. Protect both contexts: yours and the user's. Explore in the smallest useful circle, widen only when the current circle cannot answer the next decision, and use sub-agents as scouts for wider checks; they report only what is worth reading directly.
-Rationale: [[philosophy/context-economics]], [[philosophy/context-splitting]]
+Rationale: φcontext-economics, φcontext-splitting
 
-`philosophy/` files and `Rationale: [[philosophy/...]]` refs serve harness improvement only.
+`philosophy/` files and `Rationale:` refs (`φ<name>` is `philosophy/<name>.md`) serve harness improvement only.

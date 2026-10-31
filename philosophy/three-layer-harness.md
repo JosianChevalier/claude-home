@@ -12,7 +12,7 @@ tags: [harness-design, kaizen, variety-absorption]
 | **2. Doctrine** | what must always be true: the intent | `## Doctrine` in rules and skills; `CLAUDE.md` | execution | at kaizen only |
 | **1. Know-how** | what worked: the head of the distribution | the body of rules and skills, after the doctrine | execution | during execution |
 
-The three are a ladder, an instance of abstraction layering; read it first ([[philosophy/abstraction-ladder]]). What follows is what is specific to these rungs.
+The three are a ladder, an instance of abstraction layering; read it first (φabstraction-ladder). What follows is what is specific to these rungs.
 
 Doctrine is fixed during execution, and it is the test for leaving the know-how: the agent departs from a step because the doctrine still holds. Snowden says the same of rules: they do not create order, they codify what worked, and what worked is Pareto-distributed: a head of usual cases, a fat tail of exceptions where one improvises within principles. Lakatos's research programmes have the same structure: a hard core never targeted from inside, and a protective belt that absorbs the anomalies.
 
@@ -29,7 +29,7 @@ Doctrine is fixed during execution, and it is the test for leaving the know-how:
 
 ## Why the layers
 
-Two seams. Between the philosophy and the two below, inertia: the lifecycles differ. Between the doctrine and the know-how, commodification: the head of the distribution codified out of the rule that holds in the tail too. Design rationale in the Rittel/Kunz (IBIS) lineage, the insight behind ADRs: a decision and its argumentation have different readers and different lifecycles. The lifecycle difference is inertia ([[philosophy/change-inertia]]).
+Two seams. Between the philosophy and the two below, inertia: the lifecycles differ. Between the doctrine and the know-how, commodification: the head of the distribution codified out of the rule that holds in the tail too. Design rationale in the Rittel/Kunz (IBIS) lineage, the insight behind ADRs: a decision and its argumentation have different readers and different lifecycles. The lifecycle difference is inertia (φchange-inertia).
 
 **Layer 1, know-how: low inertia.** It moves fast: each session that goes wrong feeds it, each model change reshapes it. Tuning it is Cynefin's complex domain: probe, sense, respond; act, watch the agent, adjust, again.
 
@@ -51,7 +51,7 @@ Our own metaphor for the three: the know-how is the shock absorber, the doctrine
 
 ## Related
 
-- How a rule or skill is shaped from layers 1 and 2: [[philosophy/harness-shape]].
-- How feedback moves between the layers: [[philosophy/kaizen]].
-- The shape the layers share with the process tree and the belt: [[philosophy/abstraction-ladder]].
-- What each harness element is for: [[philosophy/harness-elements]].
+- How a rule or skill is shaped from layers 1 and 2: φharness-shape.
+- How feedback moves between the layers: φkaizen.
+- The shape the layers share with the process tree and the belt: φabstraction-ladder.
+- What each harness element is for: φharness-elements.

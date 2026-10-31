@@ -24,11 +24,11 @@ Any place where the agent must choose and the artifact does not settle it: which
 
 ## Reliability and waste
 
-A harness element has two measures. **Waste** is what it costs when it works: tokens, the person's cognitive energy, time ([[philosophy/collaborative-production]]). **Reliability** is the chance that it does what was meant. They are not independent.
+A harness element has two measures. **Waste** is what it costs when it works: tokens, the person's cognitive energy, time (φcollaborative-production). **Reliability** is the chance that it does what was meant. They are not independent.
 
-- **Context ties them.** An overloaded context costs tokens and loses precision in the same move ([[philosophy/context-economics]]). So `p` is not a constant: it falls as the context grows, and a long run is a long chain made of weaker links.
+- **Context ties them.** An overloaded context costs tokens and loses precision in the same move (φcontext-economics). So `p` is not a constant: it falls as the context grows, and a long run is a long chain made of weaker links.
 - **Failure is waste.** A wrong run is paid for twice in tokens and time. It also costs cognitive energy: someone has to find which decision failed, in an output they did not watch being made.
-- **Posture feeds both.** A person kept out of the loop means a longer run and more chained decisions ([[philosophy/collaborative-production]]).
+- **Posture feeds both.** A person kept out of the loop means a longer run and more chained decisions (φcollaborative-production).
 
 This is why the same remedies usually serve both measures.
 
@@ -36,17 +36,17 @@ This is why the same remedies usually serve both measures.
 
 Three shorten the chain; the fourth works on each link.
 
-1. **Remove the decision.** What can and should be deterministic becomes a script, a hook or a tool; what has one good answer becomes a default written in the artifact ([[philosophy/harness-elements]]).
+1. **Remove the decision.** What can and should be deterministic becomes a script, a hook or a tool; what has one good answer becomes a default written in the artifact (φharness-elements).
 
 2. **Check between steps.** A check does not reset the chain, it shortens it to what the check misses: an error caught there does not compound into the next step, an error missed continues at the original rate. Tests, a script that validates an output, a reviewing sub-agent with fresh context.
 
    Several validators in a row multiply their miss rates only if they fail independently. Validators of the same model family share their biases, so the gain is smaller than the product (`nn-validation` in agentic-patterns for the distinct-agent form).
 
-3. **Put the human on the decisions that matter.** A decision that changes which concept the work will hold is returned to the person, who is the most reliable link for it ([[philosophy/collaborative-production]]). The rest stays with the agent.
+3. **Put the human on the decisions that matter.** A decision that changes which concept the work will hold is returned to the person, who is the most reliable link for it (φcollaborative-production). The rest stays with the agent.
 
-4. **Raise `p`.** The lever on the base, not the exponent: each decision more often right. That is kaizen's work, a failed decision traced to the know-how it used and the know-how fixed ([[philosophy/kaizen]]). It moves the table one column, never flattens the curve.
+4. **Raise `p`.** The lever on the base, not the exponent: each decision more often right. That is kaizen's work, a failed decision traced to the know-how it used and the know-how fixed (φkaizen). It moves the table one column, never flattens the curve.
 
-   It is also how a decision earns its removal: made trivial, it moves down the path to commodity and ends as a script ([[philosophy/harness-direction]]).
+   It is also how a decision earns its removal: made trivial, it moves down the path to commodity and ends as a script (φharness-direction).
 
 ## Limits
 
@@ -54,8 +54,8 @@ The model is a simplification. Decisions are not independent, not all errors are
 
 ## Related
 
-- Waste, its three currencies, and posture as the upstream cause: [[philosophy/collaborative-production]].
-- Why `p` falls as the context grows: [[philosophy/context-economics]].
-- Deterministic what can and should be: [[philosophy/harness-elements]].
-- The deterministic net between two cuts, where the checks go: [[philosophy/context-splitting]].
-- Raising `p`, and the path from a reliable decision to a script: [[philosophy/kaizen]], [[philosophy/harness-direction]].
+- Waste, its three currencies, and posture as the upstream cause: φcollaborative-production.
+- Why `p` falls as the context grows: φcontext-economics.
+- Deterministic what can and should be: φharness-elements.
+- The deterministic net between two cuts, where the checks go: φcontext-splitting.
+- Raising `p`, and the path from a reliable decision to a script: φkaizen, φharness-direction.

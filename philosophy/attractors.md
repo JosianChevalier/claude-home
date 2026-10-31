@@ -25,7 +25,7 @@ The exception is a basin already in the weights. When the model goes to a behavi
 
 Then it is named by its own pejorative name, as the field names it: "primitive obsession", not "don't apply KISS to types, it causes issues". Both qualify the same behavior; the connotation is what pushes away from it. Sometimes the violation is shown as it will appear, a counter-example, for the same reason.
 
-An artifact is a pink elephant the same way: a finished work file, a handover's list of what was not done, is read as a premise by a fresh context ([[philosophy/session-state-in-documents]]).
+An artifact is a pink elephant the same way: a finished work file, a handover's list of what was not done, is read as a premise by a fresh context (φsession-state-in-documents).
 
 ## Copies
 
@@ -46,8 +46,8 @@ A description is pure attractor engineering: it is matched against the session's
 
 ## Related
 
-- A term references a theory, a saying a posture; identified, overloaded or detailed: [[philosophy/field-terms]].
-- Doctrine as a few attractors, rationalization lists as pink elephants: [[philosophy/harness-shape]].
-- Everything shown is shown for metis; attractors govern how: [[philosophy/transmission-belt]].
-- A finished work file as a pink elephant: [[philosophy/session-state-in-documents]].
-- Skill descriptions and philosophy in the field's terms: [[philosophy/harness-elements]].
+- A term references a theory, a saying a posture; identified, overloaded or detailed: φfield-terms.
+- Doctrine as a few attractors, rationalization lists as pink elephants: φharness-shape.
+- Everything shown is shown for metis; attractors govern how: φtransmission-belt.
+- A finished work file as a pink elephant: φsession-state-in-documents.
+- Skill descriptions and philosophy in the field's terms: φharness-elements.

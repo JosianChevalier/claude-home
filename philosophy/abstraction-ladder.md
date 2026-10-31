@@ -20,32 +20,32 @@ Each rung delegates cognitive load and context to the rung below, and takes back
 - **Absorb down.** Variety is absorbed at the lowest rung that can take it as business as usual: only variety absorbs variety (Beer, after Ashby), read as subsidiarity. A rung is a filter, not a wall: it absorbs the noise of its level and passes the signal up; the complexity underneath is untouched.
 - **Escalate up, one rung.** What breaks a rung's expectation goes to the rung above, which has the orientation to decide on it. Like an exception: the rung catches what it declared business as usual; the rest it wraps and passes on, its context added, the cause preserved. A rung translates the cause only for the failure types it is declared to handle, and any rung can install a handler. Swallowing is the failure, not passing.
 - **Trickle down.** A change made on a rung is a consequence for every rung below.
-- **Reliable bricks move down.** Once a rung absorbs variety as business as usual, that absorption can be codified into the rung below: commodification, one rung at a time ([[philosophy/harness-direction]]). Each step down is a change of absorber, not of the variety: the work is as variable as before; the lower rung now absorbs what used to climb.
+- **Reliable bricks move down.** Once a rung absorbs variety as business as usual, that absorption can be codified into the rung below: commodification, one rung at a time (φharness-direction). Each step down is a change of absorber, not of the variety: the work is as variable as before; the lower rung now absorbs what used to climb.
 
-What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report ([[philosophy/conversation-as-interface]]).
+What a rung absorbs is invisible above it: the top sees only what climbed, and a filter misses some signal. That is why verification goes down the ladder instead of reading the report (φconversation-as-interface).
 
 ## Why absorb low
 
 Two reasons hold the rule up, and the ladder splits them.
 
-- **Near-decomposability (Simon), on the lower rungs.** Parts coupled weakly, each strong inside. Varieties multiply (Ashby), so a whole made of parts that each absorb their own variety faces only the product of what leaks out. In software: layers of abstraction, loose coupling; in a harness, context economics ([[philosophy/context-economics]]).
+- **Near-decomposability (Simon), on the lower rungs.** Parts coupled weakly, each strong inside. Varieties multiply (Ashby), so a whole made of parts that each absorb their own variety faces only the product of what leaks out. In software: layers of abstraction, loose coupling; in a harness, context economics (φcontext-economics).
 - **Capacity (Beer), on the upper rungs.** The rung above has fewer states and a narrower channel; what climbs must be what that rung alone can decide.
 
-In every sighting the top rung is also the slowest, and pace layering (Brand) applies: fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive; change shears between layers. Why the rungs are cut where they are is change inertia ([[philosophy/change-inertia]]).
+In every sighting the top rung is also the slowest, and pace layering (Brand) applies: fast layers propose, slow layers dispose; the slow constrain the fast, the fast keep the slow alive; change shears between layers. Why the rungs are cut where they are is change inertia (φchange-inertia).
 
 ## Sightings
 
 | Ladder | Top | Bottom | Where |
 |---|---|---|---|
-| Knowledge | philosophy | know-how | [[philosophy/three-layer-harness]] |
-| Process | session, the human | leaf | [[philosophy/process-units]] |
-| Feedback | philosophy on trial, last | know-how, first | [[philosophy/kaizen]] |
-| Harness direction | steered in session | headless | [[philosophy/harness-direction]] |
-| The belt, two rungs | the engineer's type | the code's concept | [[philosophy/transmission-belt]] |
+| Knowledge | philosophy | know-how | φthree-layer-harness |
+| Process | session, the human | leaf | φprocess-units |
+| Feedback | philosophy on trial, last | know-how, first | φkaizen |
+| Harness direction | steered in session | headless | φharness-direction |
+| The belt, two rungs | the engineer's type | the code's concept | φtransmission-belt |
 
 ## Related
 
-- The top rung, where what climbed reaches the engineer: [[philosophy/metis-kairos]].
-- Where the rungs are cut: [[philosophy/change-inertia]].
-- The brick's way down the rungs: [[philosophy/harness-direction]].
-- Why the engineer still goes down: [[philosophy/conversation-as-interface]].
+- The top rung, where what climbed reaches the engineer: φmetis-kairos.
+- Where the rungs are cut: φchange-inertia.
+- The brick's way down the rungs: φharness-direction.
+- Why the engineer still goes down: φconversation-as-interface.
