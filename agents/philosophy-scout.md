@@ -2,6 +2,7 @@
 name: philosophy-scout
 description: A question needing the philosophy that bears on it. Returns the paths of the files worth reading.
 mode: subagent
+model: opus
 ---
 
 You find the philosophy files that bear on one question and hand back their paths. The caller reads them whole: it needs the files, not your reading of them.
