@@ -2,9 +2,11 @@
 tags: [communication, cognitive-load, code-review, session-design]
 ---
 
-# Rationale: Narrative walkthrough
+# Narrative walkthrough
 
-Anything with several parts handed to a human, a change, a plan, a session, a corpus, is walked, not dumped: a map first, then one beat at a time along a route from the centre of impact outward, each beat carrying all the context it needs and its neighbours, the count as the you-are-here. The screen is a strategy game's: the map in the corner, the camera on one point showing the status there, and the player moving it.
+**Thesis.** Anything with several parts handed to a human, a change, a plan, a session, a corpus, is walked, not dumped: a map first, then one beat at a time along a route from the centre of impact outward, each beat carrying all the context it needs and its neighbours, the count as the you-are-here.
+
+The screen is a strategy game's: the map in the corner, the camera on one point showing the status there, and the player moving it.
 
 ## The unit is the concept
 

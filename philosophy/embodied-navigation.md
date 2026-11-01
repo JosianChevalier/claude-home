@@ -38,3 +38,4 @@ One without the other fails: a stable map one is walked through is a guided tour
 - φcollaborative-production: enaction, and why the spectator pays.
 - φconversation-as-interface: gemba and the elevator, the embedded face.
 - φzoom-levels: scale, the other dimension of the map.
+- φwalkthrough-narrative: the walk through a change, a plan, a session, as the navigation of a stable map.
