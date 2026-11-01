@@ -41,6 +41,8 @@ opencode.json
 
 - [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the modules.
 - [ ] `prompts/doctrine.md`, `prompts/mecha-suit.md`, `prompts/autopilot.md`, drafted in one pass, checked and finished: each module read as its reader holds it, `system.md` + `doctrine.md` + the module and nothing else, each line earning its place; a probe on a fresh sub-agent given the three texts alone where a term is in doubt. ← next
+- [ ] Priority, next session: the pyramid of communication, explored first, then its posture in the modules and its philosophy file.
+- [ ] Priority, next session: a line about security in the modules.
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
 
