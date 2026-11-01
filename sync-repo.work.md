@@ -30,7 +30,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
       - [x] `domain-first-implementation` landed 2026-10-27.
       - [x] `prototypes-are-probes` landed 2026-10-29.
       - [x] `planning-is-everything` landed 2026-10-30.
-      - [ ] `walkthrough-narrative`, the last.
+      - [x] `walkthrough-narrative` landed 2026-11-02 as the general walk, the review one instance; patchwriting named inline until the writing-biases file lands; split and the skills' target in `philosophy-ideas.work.md`.
     - [ ] `zoom-levels`: a section on form, the second lever beside scale: each piece of information in the medium that carries it cheapest (the doctrine line landed in `rules/writing.md` 2026-10-11, pointer already there). Reshape in the same pass: title still says "Rationale:".
     - [ ] To confirm: the Lakatos line in `three-layer-harness`.
     - [ ] `kaizen`: `metis-kairos` points at it for the drift guard, a fix that contradicts the philosophy makes one of the two change explicitly, and it does not hold it; `harness-improvement` has the line as doctrine.
@@ -237,6 +237,7 @@ Reference copy: `old-claude-reference/`. Compare with `git diff --no-index old-c
 | `skills/harness-improvement/SKILL.md` | `skills/kaizen/SKILL.md` | written from mocks; the old file dropped wholesale, every line held elsewhere (the skill, the always-on rules, the philosophy, Claude Code's docs) or obsolete (opencode, devcontainer, `project-domain-documentation`) |
 | `skills/study-making/SKILL.md` | `skills/study-making/SKILL.md` | moved 2026-10-12, out of phase order; `## Doctrine` as maxims; phases → loop figure; Shape, Diagrams, Content Discipline merged; Scale and mode born here (derisk before any plan, the word "autopilot"); calibration ritual line dropped; Examples cut to one observed violation and one good; calibration as restatement, study not waiting, probe round as a colleague's report, Lens as the agent's grid, Figures section (2026-10-13); `aggregate-identification` dispatch kept, 3.4 |
 | `rationale/study-making.md` | — | deleted 2026-10-12, no counterpart: every claim housed in `zoom-levels`, `session-state-in-documents`, `shape-and-substance`, `transmission-belt`, `rules/writing.md`, or the skill; bottleneck sentence pending in `zoom-levels` |
+| `rationale/walkthrough-narrative.md` | `philosophy/walkthrough-narrative.md` | redesigned as the general walk (change, plan, session, corpus), tied to `embodied-navigation` (map and camera, route and survey); Ausubel → pointer; heist paragraph cut; glance/read tags → the review skill's know-how, the file keeps "a beat is complete, and fast"; Minto pyramid added; map-file section → pointer |
 | — | `philosophy/trunk-based-development.md` | branch-commit discipline from `rationale/continuous-delivery` |
 | — | `philosophy/atomic-commit.md` | from `skills/atomic-commit` and `rationale/small-batches` |
 | — | `philosophy/agentic-trunk-based-development.md` | from `rules/branch-hygiene`; pending (3.3): the git mechanics stay a rule |
