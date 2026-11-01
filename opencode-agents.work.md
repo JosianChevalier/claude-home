@@ -9,10 +9,11 @@ The shipped base prompt for a GPT model id carries the posture OpenAI tunes for:
 
 ```
 opencode.json
-  suit-astra   model: astra   prompt: {prompts/system.md} {prompts/mecha-suit.md} {prompts/astra.md}
-  suit-sol     model: sol     prompt: {prompts/system.md} {prompts/mecha-suit.md} {prompts/sol.md}
-  auto-astra   model: astra   prompt: {prompts/system.md} {prompts/autopilot.md}  {prompts/astra.md}
-  auto-sol     model: sol     prompt: {prompts/system.md} {prompts/autopilot.md}  {prompts/sol.md}
+  suit-astra   model: astra   prompt: {system.md} {doctrine.md} {mecha-suit.md} {astra.md}
+  suit-sol     model: sol     prompt: {system.md} {doctrine.md} {mecha-suit.md} {sol.md}
+  auto-astra   model: astra   prompt: {system.md} {doctrine.md} {autopilot.md}  {astra.md}
+  auto-sol     model: sol     prompt: {system.md} {doctrine.md} {autopilot.md}  {sol.md}
+  (all under prompts/)
   build, plan: disable        general, explore stay
   default_agent: one of the four
 ```
@@ -22,7 +23,9 @@ opencode.json
 - An agent prompt replaces the shipped base prompt wholesale; a truthy check, so an empty prompt brings it back.
 - Several `{file:…}` chain in one string inside `opencode.json` (each file read, trimmed, JSON-escaped). No include inside an agent `.md`, no per-agent `instructions` key, so the agents are declared in `opencode.json`, not as markdown files.
 - AGENTS.md goes. `tools/docs/opencode.md` stays in `instructions`: the subagents need the tools too. How the rules reach the agents is open, the first step below.
-- Mecha suit and autopilot share the doctrine; the autopilot module adds the handover of a whole stage and the disengagement at the first choice the plan does not settle (philosophy/collaborative-production, kairos-gates).
+- Mecha suit and autopilot share one doctrine, its own file. `doctrine.md`: mission command with the brief setting how far "surprise" reaches; deliver the user's idea, not yours; falsify the premise; cartographer; chief of staff; state in the shortest store. Know-how: the report shape, the back-brief, the map, plain words, the notebook, the commit per coherent change. Worded medium-neutral: "the brief", "the report", never the chat or the table, so it reads the same for a debrief written once as for a chat turn. `mecha-suit.md` keeps the mob, the unbroken loop, maieutic sparring, one beat per turn, the four default CCIR, the walk with the mic back. Open: "a question is a question", shared or the suit's.
+- Autopilot is the robot sent, where the suit is worn (Iron Man): bounded work, exploration, prototypes, vibe coding, done and working over done perfectly. Same way as the suit, the commoditized skills included: map first, small steps, Mikado, notebook. Wider latitude: what the brief leaves open is settled as the surrounding code would and named. One CCIR: the premise falsified, the intent unmeetable as given or a change of another size than asked; "go to the end" in the brief means no call, the wall ends the stage and opens the debrief. Bound: legible and undoable at return, one decision per commit, named, so the log shows the last point still fine; nothing outside the workspace (push, release, deploy) unless the brief says. Debrief once: end state, decisions taken in the user's place, not done, where stopped. The posture carries no why: the user's situations (multitasking, away) stay out of the file. Close in spirit to the posture lines of gpt.txt 1.18.9 that `system.md` dropped, the push turned down.
+- A module is written from a notebook of the ideas, tagged by section, never patchwritten from the user's words; the metaphor is found, not transcribed.
 - Astra and Sol share the doctrine; the Sol module spells out what Astra does unprompted.
 - The modules are plain text and carry over to OpenCode 2 unchanged; only `prompts/system.md` is redone there from the 2.x base, which the override also drops (see Facts).
 - Each module is written with `kaizen`, after `philosophy-scout` returns the files bearing on it; one module per session.
@@ -37,7 +40,7 @@ opencode.json
 ## Steps
 
 - [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the modules.
-- [ ] `prompts/autopilot.md`: the bounded exception, a word hands over a stage, disengage at the first unsettled choice. The mission-command paragraph of `prompts/mecha-suit.md` holds the surprise test and the four default CCIR; autopilot reuses it, the stage being the brief. ← next
+- [ ] `prompts/doctrine.md`, `prompts/mecha-suit.md`, `prompts/autopilot.md` written together, in one session, so what goes where is seen at once; the cut is in Decided. A failed attempt wrote autopilot alone and leaned the shared doctrine on the suit. ← next
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class.
 - [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
 
