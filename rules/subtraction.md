@@ -9,7 +9,7 @@
 
 ## Know-how
 
-- A backlog line marked done is rewritten to what is left, nothing else; what was done goes in the commit message.
+- A backlog line marked done is rewritten to what is left, nothing else; when the change is committed, its message says what was done.
 - A work file is deleted when the work ends.
 - Appending is the sign to check: a new item earns a new line, a changed item replaces its old line. Logs by nature append; everything else distills.
 - Scaffolding, a comment, a fallback that served its purpose goes with the change that made it useless.
