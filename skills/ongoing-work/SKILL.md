@@ -8,7 +8,7 @@ description: Tracking ongoing work, anchoring conversation work in a file, looki
 ## Doctrine
 
 - The conversation is for thinking; the file is for remembering. What exists only in the conversation is state already decided to be lost, so a piece of work that outlives its turn is anchored in a work file: what must empty, the current step. Cloud-native with a chaos monkey: any instance can be killed at any moment, so no instance holds irreplaceable state. `/clear` is the monkey you run yourself; if it costs something, the state was not in the file.
-- Saved at hand-back, distilled not appended. Every return of control to the user is a potential session boundary. The write keeps decisions, open threads, the real next step, and replaces stale detail.
+- Saved when a task finishes and at hand-back, distilled not appended. Every return of control to the user is a potential session boundary. The write removes finished tasks, keeps decisions, open threads and the real next step, and replaces stale detail.
 - The sweep is the truth. One key marks a work file and nothing else ever matches, so "what's next" is one script, not a search.
 - A work file is a backlog, not a changelog. A line says what is left, nothing else; what was done goes in the commit message.
 - A finished work file is a pink elephant. A fresh context takes whatever it reads as a premise; stale work pollutes it. The file is deleted when the work ends. History is git's job.
