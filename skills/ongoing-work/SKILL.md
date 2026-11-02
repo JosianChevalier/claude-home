@@ -31,13 +31,16 @@ Lowest rank first. Gaps are fine; renumber only when reordering.
 - `scripts/list-work.sh [root]` — the sweep, sorted. Two lines per item: rank and path, then the sentence.
 - `scripts/new-work.sh <topic.work.md> "<what must empty>" [rank]` — creates the work file with the keys and a title. Rank defaults to last.
 
+## Completion
+
+When a work file's exit condition is met, delete it before reporting completion. No renumbering.
+
 ## Asks
 
 - **What's next:** the coming item, said as below.
 - **Next, move on, and the like:** the coming item, said as below, then start.
 - **Anchor this / new work file:** `new-work.sh`, next to the work it concerns; rank last unless told. Steps as checkboxes, a current-step marker, so a zero-context session resumes without the conversation.
 - **Deprioritize, put it last, and the like:** rank 99. No renumbering.
-- **Done:** delete the work file. No renumbering.
 - **Reorder:** renumber, then show the sweep.
 
 ## Saying the coming item
