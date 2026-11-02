@@ -42,8 +42,8 @@ opencode.json
 
 - [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the priority follow-ups.
 - [ ] `doctrine.md`: "root cause, or compensation?" reworded for a reader without `rules/subtraction.md`; iterated with the user.
-- [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class. ← next
-- [ ] Wiring: `opencode.json` agents, `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md).
+- [ ] Wiring: `opencode.json` agents chaining `{system.md} {doctrine.md} {mecha-suit.md|autopilot.md}`, the per-class files added the day they exist; `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md). ← next
+- [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class, written from episodes seen on the laptop, one or two per class, not before. Open by asking what each class did or skipped.
 
 ## Facts, verified in source
 
