@@ -1,48 +1,50 @@
 ---
-ongoing_work_file: "Four primary OpenCode agents replace the shipped base prompt for the OpenAI models; empty when suit-astra, suit-sol, auto-astra, auto-sol run from opencode.json on the OpenCode laptop with AGENTS.md and the global rules gone."
+ongoing_work_file: "Ono-Sendai and Minion replace the shipped base prompt; empty when both run on the OpenCode laptop, shared instructions no longer impose a mode, and Ono-Sendai's more exacting posture is settled and applied."
 rank: 100
 ---
 
 # opencode-agents
 
-The shipped base prompt for a GPT model id carries the posture OpenAI tunes for: persist until fully handled, bias to action, do not ask. Four agents of ours replace it wholesale, one per mode and model class, so Tab switches posture and model at once.
+The shipped base prompt for a GPT model id carries the posture OpenAI tunes for: persist until fully handled, bias to action, do not ask. Two primary agents replace it wholesale. Tab switches posture; both use the selected model without an agent-specific model binding.
 
 ```
 opencode.json
-  suit-astra   model: astra   prompt: {system.md} {doctrine.md} {mecha-suit.md} {astra.md}
-  suit-sol     model: sol     prompt: {system.md} {doctrine.md} {mecha-suit.md} {sol.md}
-  auto-astra   model: astra   prompt: {system.md} {doctrine.md} {autopilot.md}  {astra.md}
-  auto-sol     model: sol     prompt: {system.md} {doctrine.md} {autopilot.md}  {sol.md}
-  (all under prompts/)
+  Ono-Sendai  prompt: {system.md} {doctrine.md} {mecha-suit.md}
+  Minion      prompt: {system.md} {doctrine.md} {autopilot.md} + Groveling Worm voice
+  (all modules under prompts/; voice from prompts/groveling-worm.md)
   build, plan: disable        general, explore stay
-  default_agent: one of the four
+  default_agent: Ono-Sendai
 ```
 
 ## Decided
 
+- Both local and template configs name the agents Ono-Sendai and Minion, with Ono-Sendai as default. The names alone add no character or voice instructions.
 - An agent prompt replaces the shipped base prompt wholesale; a truthy check, so an empty prompt brings it back.
 - Several `{file:…}` chain in one string inside `opencode.json` (each file read, trimmed, JSON-escaped). No include inside an agent `.md`, no per-agent `instructions` key, so the agents are declared in `opencode.json`, not as markdown files.
-- AGENTS.md goes. `tools/docs/opencode.md` stays in `instructions`: the subagents need the tools too. How the rules reach the agents is open, the first step below.
+- OpenCode has its own nonempty AGENTS.md, retaining Reviews, Writing and Context but no Postures section. `tools/docs/opencode.md` stays shared: the subagents need the tools too.
 - Each module is one section headed by its name, no doctrine/know-how split: it was blurred in them and the composed prompt repeated the headings. A practice line sits beside the posture it serves.
 - Mecha suit and autopilot share one doctrine, its own file. `doctrine.md`: mission command with the brief setting how far "surprise" reaches; deliver the user's idea, not yours; a question is a question; falsify the premise; cybersecurity seen by the agent, decided by the user, leading the report; cartographer; chief of staff; state in the shortest store. With it: the back-brief, the report by exception, the map, plain words, the notebook, the commit per coherent change. Worded medium-neutral: "the brief", "the report", "the exchange", never the chat or the table, so it reads the same for a debrief written once as for a chat turn. `mecha-suit.md` keeps the mob, the unbroken loop, the small change on one level, maieutic sparring, one beat per turn; with it: the four default CCIR, the walk with the mic back, the turn closing with its commit.
 - Autopilot is the aircraft autopilot: the user sets the stage, course and end state, leaves the controls, and the autopilot disengages for one surprise only: the premise falsified, the end state unreachable as the brief gives it, a change of another size than asked; "go to the end" in the brief means no disengagement, the wall ends the stage and opens the debrief. What the brief leaves open is settled as the surrounding code would and named in the debrief. Bound: legible and undoable at return, one decision per commit, named, each leaving the workspace working; nothing leaves the workspace (push, release, deploy) unless the brief says; a change the autopilot did not make stays. With it: the debrief alone, once, state not forecast. The posture carries no why: the user's situations stay out of the file, as does the suit, which the autopilot never loads. Spirit of the gpt.txt 1.18.9 posture lines `system.md` dropped: persist to the end, blockers yours, smallest correct change.
 - A module is written from a notebook of the ideas, tagged by section, never patchwritten from the user's words; the metaphor is found, not transcribed.
-- Astra and Sol share the doctrine; the Sol module spells out what Astra does unprompted.
+- Both agents inherit the selected model. Model-specific know-how remains parked, not part of the two-agent wiring.
 - The modules are plain text and carry over to OpenCode 2 unchanged; only `prompts/system.md` is redone there from the 2.x base, which the override also drops (see Facts).
 - Each module is written with `kaizen`, after `philosophy-scout` returns the files bearing on it; one module per session.
-- The modules duplicate CLAUDE.md Postures and `rules/session-design.md` for the other harness; the rules-source step decides the canonical copy. A reading for it: Claude Code imports a file with `@prompts/mecha-suit.md`, so the module could be the source and CLAUDE.md the pointer.
+- The modules overlap CLAUDE.md Postures and the shared rules for the other harness; the rules-source step decides the canonical copy. A reading for it: Claude Code imports a file with `@prompts/mecha-suit.md`, so the module could be the source and CLAUDE.md the pointer.
 
 ## Hazards
 
-- `agents/*.md` are read by OpenCode as agents too (`{agent,agents}/**/*.md`), default mode `all`, which Tab cycles. The scouts and worms need `mode: subagent` in their frontmatter.
+- `agents/*.md` are read by OpenCode as agents too (`{agent,agents}/**/*.md`), default mode `all`, which Tab cycles. The remaining scouts need `mode: subagent` in their frontmatter.
 - With build disabled and no `default_agent`, the first visible agent in alphabetical order opens the session.
-- `~/.claude/CLAUDE.md` is read as the global instructions file when `~/.config/opencode/AGENTS.md` is absent. Removing the symlink is not enough if the repo serves as both homes; the Claude-compat env switch or a different layout decides.
+- Keep OpenCode's AGENTS.md present: when it is absent, global instruction discovery can fall back to `~/.claude/CLAUDE.md`.
 
 ## Steps
 
-- [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page); a rule carrying posture, session-design, must not reach a subagent. To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the priority follow-ups.
+- [ ] Verify both configurations on restart and on the OpenCode laptop: Ono-Sendai opens by default alongside Minion. Both prompts resolve and inherit the selected model; Minion has the Groveling Worm voice; build and plan are absent; general and explore remain. Automated validation is pending: policy blocked the attempted `node -e` assertion commands. ← next
+- [ ] Set the remaining scouts to subagent mode.
+- [ ] Check philosophy-scout's model resolution in the container: dispatch failed with `Model not found: opus/`. Resolve the configuration before relying on that scout.
+- [ ] Ono-Sendai posture: make it more exacting, not adversarial, helping the user see errors early. Settle the wording with the user before editing `prompts/mecha-suit.md`.
+- [ ] One source for the rules across Claude Code and OpenCode, and the system prompt cached. Constraints: `instructions` reaches every agent, subagents included, and takes globs; a `{file:}` chain reaches only the primaries it is written in and takes no glob; Claude Code discovers `rules/` recursively (docs, memory page). To check in source before thinking: what varies per turn and per session in the composed system string (the environment block sits between the agent prompt and the instructions, `session/llm/request.ts` L58-78) and what OpenAI's prefix caching needs to hit. Parked: picked up after the priority follow-ups.
 - [ ] `doctrine.md`: "root cause, or compensation?" reworded for a reader without `rules/subtraction.md`; iterated with the user.
-- [ ] Wiring: `opencode.json` agents chaining `{system.md} {doctrine.md} {mecha-suit.md|autopilot.md}`, the per-class files added the day they exist; `default_agent`, `mode: subagent` on `agents/*.md`, AGENTS.md symlink and `rules/*.md` out of `instructions`, verify on the OpenCode laptop (tools-opencode.work.md). ← next
 - [ ] `prompts/astra.md`, `prompts/sol.md`: know-how per class, written from episodes seen on the laptop, one or two per class, not before. Open by asking what each class did or skipped.
 
 ## Facts, verified in source
