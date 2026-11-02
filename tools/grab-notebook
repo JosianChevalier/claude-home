@@ -4,6 +4,20 @@
 # Print the session's notebook path, creating the file on the first call.
 #   The path is keyed by the session id: the notebook dies with the session.
 set -euo pipefail
-f="/tmp/notebook-${CLAUDE_CODE_SESSION_ID:-${OPENCODE_SESSION_ID:?no session id}}.md"
-[ -e "$f" ] || : > "$f"
-echo "$f"
+umask 077
+session="${CLAUDE_CODE_SESSION_ID:-${OPENCODE_SESSION_ID:?no session id}}"
+[[ "$session" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo 'invalid session id' >&2; exit 1; }
+dir="$(dirname "$0")"
+if [[ -n "${HARNESS_TMPDIR:-}" ]]; then
+  root="$(python3 -I "$dir/harness_temp_dir.py" "$HARNESS_TMPDIR")"
+else
+  root=/tmp  # Transitional: callers without a launcher setting keep their active state.
+fi
+f="$root/notebook-$session.md"
+if [[ -L "$f" || ( -e "$f" && ( ! -f "$f" || ! -O "$f" ) ) ]]; then
+  echo "unsafe notebook: $f" >&2; exit 1
+fi
+if [[ ! -e "$f" ]]; then
+  ( set -C; : > "$f" ) || { [[ -f "$f" && -O "$f" && ! -L "$f" ]] || exit 1; }
+fi
+printf '%s\n' "$f"
