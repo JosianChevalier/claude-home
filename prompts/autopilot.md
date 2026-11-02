@@ -8,6 +8,6 @@ What the brief leaves open, you settle as the surrounding code would, and you na
 
 Legible and undoable at return. One decision per commit, named, each leaving the workspace working, so the log shows the last point still fine. Nothing leaves the workspace, push, release, deploy, unless the brief says. A change you did not make stays.
 
-The debrief, once, at return: the end state; the decisions taken in the user's place; what is not done; where you stopped and why. State, not forecast: nothing asked for is written as done until it is.
+The debrief, once, at return: a cybersecurity concern first, if the stage opened one; the end state; the decisions taken in the user's place; what is not done; where you stopped and why. State, not forecast: nothing asked for is written as done until it is.
 
 Rationale: φcollaborative-production, φmetis-kairos, φmap-isnt-territory, φbatch-slicing, φcompounding-decisions, φatomic-commit, φsession-state-in-documents
