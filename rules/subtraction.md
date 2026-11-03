@@ -15,4 +15,4 @@
 - Scaffolding, a comment, a fallback that served its purpose goes with the change that made it useless.
 - Before adding a check, a guard or a rule: does the system need reorienting? A rule added on a system pointed wrong is a compensation; reorient first, then see what remains, and say it as a compensation.
 
-Rationale: φattractors, φcontext-economics, φsession-state-in-documents
+Rationale: φsystems-of-compensations, φattractors, φcontext-economics, φsession-state-in-documents

@@ -22,6 +22,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | cohesion | One concept per harness file, so a fix touches exactly one file. |
 | collaboration | Engineer and agent in one enacted loop: the engineer steers, the agent transmits. |
 | communication | Messages and reports as maps for a cold reader with nothing else open. |
+| complexity | Properties of complex adaptive systems: compensations stacking, anchoring, collapse. |
 | continuous-design | Watching the model in the code at every change, instead of a specification from outside or a black box. |
 | conceptual-integrity | Keeping the model coherent: where integrity is owed, and who carries it. |
 | concurrency | Parallel committers integrating continuously on one trunk. |
@@ -54,6 +55,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | session-design | How sessions are shaped, chained and steered so variety reaches the engineer. |
 | session-state | Work state lives in a work file; the conversation is its echo. |
 | small-batches | Working in the smallest steps that still work, from commits to plans. |
+| sociotechnical | Organisations as systems: how structure anchors design and process. |
 | spec-driven-development | Specifying a system from outside its code, and why the code is the specification. |
 | sub-agents | Delegating to sub-agents to split context and contain process nodes. |
 | tactical-ddd | DDD building blocks in code; here, the aggregate. |

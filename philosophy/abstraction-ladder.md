@@ -49,3 +49,4 @@ In every sighting the top rung is also the slowest, and pace layering (Brand) ap
 - Where the rungs are cut: φchange-inertia.
 - The brick's way down the rungs: φharness-direction.
 - Why the engineer still goes down: φconversation-as-interface.
+- The ladder read upward, variety climbing into process and roles: φcompensations-in-software.

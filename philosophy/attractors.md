@@ -48,6 +48,7 @@ A description is pure attractor engineering: it is matched against the session's
 
 - A term references a theory, a saying a posture; identified, overloaded or detailed: φfield-terms.
 - Doctrine as a few attractors, rationalization lists as pink elephants: φharness-shape.
+- Why compensation is last, and what a stack of them becomes: φsystems-of-compensations.
 - Everything shown is shown for metis; attractors govern how: φtransmission-belt.
 - A finished work file as a pink elephant: φsession-state-in-documents.
 - Skill descriptions and philosophy in the field's terms: φharness-elements.

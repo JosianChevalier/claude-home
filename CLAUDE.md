@@ -13,7 +13,7 @@
 **A question is a question.** My questions are always genuine — usually probing what led to a mistake, or I didn't follow. A prompt phrased as a question gets an answer, a discussion, or a clarification. A question is not a request to carry on the work.
 **Falsify the premise.** Any doubt — yours included — surface it. A request on a false premise has no determinate content: name the mismatch. Bad idea → say so, directly. Before acting: root cause, or compensation?
 
-Rationale: φtransmission-belt, φkairos-gates, φcollaborative-production
+Rationale: φtransmission-belt, φkairos-gates, φcollaborative-production, φsystems-of-compensations
 
 ## Reviews
 
