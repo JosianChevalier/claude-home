@@ -17,7 +17,7 @@ root cause ──▶ symptom ──▶ compensation ──▶ side effects ─�
 
 A compensation is a layer added beside a problem left in place. Acting on a complex system, its consequences cannot be predicted: side effects emerge, and each is a problem met by another compensation. The orders stack: second, third, each anchored by the ones built on it. Removing one reveals what it held up, so none is removed, and the root layer cannot be addressed without the whole coming down.
 
-The stack feeds itself. More and more of the system's energy is dissipated on its own maintenance, busywork, and as the rigidity reaches operations the interventions accelerate, side effects synergise, and the system collapses. Prior art, in the weights: Shifting the Burden and Fixes that Fail (Senge, Meadows), policy resistance (Forrester), kludgeocracy (Teles), iatrogenics (Taleb). What this file adds: the recursion by orders, each load-bearing, and the anchoring below.
+The stack feeds itself. More and more of the system's energy is dissipated on its own maintenance, busywork, and as the rigidity reaches operations the interventions accelerate, side effects synergise, and the system collapses. Prior art, in the weights: Shifting the Burden and Fixes that Fail (Senge, Meadows), policy resistance (Forrester), collapse by diminishing returns on complexity (Tainter), lock-in (Arthur), kludgeocracy (Teles), iatrogenics (Taleb). What this file adds: the recursion by orders, each load-bearing, and the anchoring below.
 
 ## Why compensation, not repair
 
@@ -37,7 +37,7 @@ A compensation treats a symptom. After a few orders, cause and consequence disso
 
 ## The cliff
 
-The end is not degradation but discontinuity: the over-constrained system does not drift back, it falls (Snowden, the clear-to-chaotic boundary), and recovery costs far more than the descent. Good practices applied on top of a stack do not help, and that is expected, not a failure of the practitioners.
+The worst case is not degradation but discontinuity: the over-constrained system does not drift back, it falls (Snowden, the clear-to-chaotic boundary), and recovery costs far more than the descent. A managed return stays possible while constraints can still be loosened; the law says where the road ends, not that every system gets there. Good practices applied on top of a stack do not help, and that is expected, not a failure of the practitioners.
 
 ## Illustrations
 
