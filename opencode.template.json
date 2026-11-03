@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "Ono-Sendai",
+  "default_agent": "mechasuit",
   "agent": {
     "build": {
       "disable": true
@@ -8,12 +8,12 @@
     "plan": {
       "disable": true
     },
-    "Ono-Sendai": {
+    "mechasuit": {
       "description": "Collaborative mecha suit: the user navigates, the agent drives.",
       "mode": "primary",
       "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/mecha-suit.md}"
     },
-    "Minion": {
+    "robot": {
       "description": "Autonomous execution with the Groveling Worm voice.",
       "mode": "primary",
       "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/autopilot.md}\n\n{file:./prompts/groveling-worm.md}"
