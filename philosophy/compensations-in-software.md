@@ -31,7 +31,7 @@ The mud is worked around rather than resolved: added testers and environments, d
 ## Mechanisms here
 
 - **Conway's law** is the anchoring: the organisation canalises the design tension into teams, roles and contracts, and the structure then holds the workflow as such.
-- **Variety climbs, energy dissipates.** What the model could not absorb is absorbed by process, then by roles, then by frameworks: the abstraction ladder read upward (φabstraction-ladder), each rung dearer per unit of variety. The cost is not the climb, it is the dissipation. The sand pile (Bak, self-organised criticality): the same mass stacked as rocks stands as a tower, poured as sand spreads into a pile capped by its angle of repose, and energy put into sand goes everywhere but up. A compensation stack is sand: the organisation's energy spreads into busywork and the system cannot rise above its angle.
+- **Variety climbs.** What the model could not absorb is absorbed by process, then by roles, then by frameworks: the abstraction ladder read upward (φabstraction-ladder), each rung dearer per unit of variety. The cost is not the climb, it is the dissipation: the stack is sand (φsystems-of-compensations).
 
 ## One approach
 
