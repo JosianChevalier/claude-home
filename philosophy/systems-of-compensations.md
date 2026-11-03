@@ -17,7 +17,7 @@ root cause ──▶ symptom ──▶ compensation ──▶ side effects ─�
 
 A compensation is a layer added beside a problem left in place. Acting on a complex system, its consequences cannot be predicted: side effects emerge, and each is a problem met by another compensation. The orders stack: second, third, each anchored by the ones built on it. Removing one reveals what it held up, so none is removed, and the root layer cannot be addressed without the whole coming down.
 
-The stack feeds itself. More and more of the system's energy is dissipated on its own maintenance, busywork, and as the rigidity reaches operations the interventions accelerate, side effects synergise, and the system collapses.
+The stack feeds itself. More and more of the system's energy, its effort, attention and money, is dissipated on its own maintenance, busywork; and once the rigidity reaches the system's day-to-day work, the interventions accelerate, side effects synergise, and the system collapses.
 
 The sand pile (Bak, self-organised criticality): the same mass stacked as rocks stands as a tower, poured as sand spreads into a pile capped by its angle of repose, and energy put into sand goes everywhere but up. A compensation stack is sand: the energy spreads into busywork and the system cannot rise above its angle. Prior art, in the weights: Shifting the Burden and Fixes that Fail (Senge, Meadows), policy resistance (Forrester), collapse by diminishing returns on complexity (Tainter), lock-in (Arthur), kludgeocracy (Teles), iatrogenics (Taleb). What this file adds: the recursion by orders, each load-bearing, and the anchoring below.
 
@@ -27,7 +27,7 @@ Additivity bias (Adams): the pull is to add a layer, never to remove the cause. 
 
 ## Anchoring
 
-A compensation becomes load-bearing by three routes, each a mechanism in the weights read as one step of the law:
+A compensation becomes load-bearing by three routes, each a known mechanism, here the step by which a layer locks:
 
 - **Second-order constraint** (Juarrero). The structure that forms around a compensation, roles, teams, contracts, rituals, constrains from above once formed. It now depends on the workflow as such, decoupled from the tension that produced it; fixing the root late no longer dissolves the lock.
 - **Sedimentation** (Husserl). The layer is sediment on a flaw whose genesis is forgotten: the unknown known, the expert's curse. Removal requires reactivating what nobody present remembers.
