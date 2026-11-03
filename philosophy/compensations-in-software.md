@@ -26,7 +26,7 @@ intrinsic coupling ──▶ extrinsic coupling
 
 Two entrances. Concerns added to one model without splitting it, DRY and refactoring doing the adding: the model serves heterogeneous responsibilities and loses conceptual integrity, the spork (φmodel-phenomenology). A premature split of services or teams: coupled systems collaborating on one responsibility become fragments of one model spread across all of them. Both degrade through constraint relaxation, logic leaks and synchronised evolutions into fragility, then rigidity, change avoided because risky, then the Big Ball of Mud (Foote & Yoder).
 
-The mud is worked around rather than resolved: added testers and environments, dependencies managed instead of fixed, synchronised releases compensated with feature flags, review processes in place of trunk-based development. Each is process on a design problem; each has side effects that call for more process, and the loop fragments the organisation again.
+The mud is worked around rather than resolved: added testers and environments, dependencies managed instead of fixed, synchronised releases compensated with feature flags, review processes in place of trunk-based development. Each is process on a design problem; each has side effects that call for more process, and the loop fragments the organisation again. For software development the ecosystem shock that shakes the foundations is agentic AI.
 
 ## Mechanisms here
 

@@ -39,7 +39,7 @@ A compensation treats a symptom. After a few orders, cause and consequence disso
 
 ## The cliff
 
-The worst case is not degradation but discontinuity: the over-constrained system does not drift back, it falls (Snowden, the clear-to-chaotic boundary), and recovery costs far more than the descent. A managed return stays possible while constraints can still be loosened; the law says where the road ends, not that every system gets there. Good practices applied on top of a stack do not help, and that is expected, not a failure of the practitioners.
+The worst case is not degradation but discontinuity: the over-constrained system does not drift back, it falls (Snowden, the clear-to-chaotic boundary), and recovery costs far more than the descent. A managed return stays possible while constraints can still be loosened; the law says where the road ends, not that every system gets there. The fall needs no internal trigger: nothing underneath was resolved, so a radical change in the ecosystem, one that shakes the foundations, brings the whole stack down at once. Good practices applied on top of a stack do not help, and that is expected, not a failure of the practitioners.
 
 ## Illustrations
 
