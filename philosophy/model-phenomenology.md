@@ -65,6 +65,8 @@ The agent is not a third holder of a type. Gopnik's reading: a large language mo
 
 This settles the agent's role: **transmission**. It moves the engineer's situated type toward concepts in code, and moves the concept's resistance back toward the type, at conversational speed. The medium that used to sit between the two — keyboard, language, IDE, the extraneous load in Sweller's sense — is what the agent removes. The library was the first belt across time; the agent is the first belt that runs at the speed of a conversation.
 
+Evans sends the modeller to the domain's literature, reference models and analysis patterns (Fowler), to learn a domain they do not hold; the agent is that literature, at conversational speed. The pairing in strategic design follows: the engineer brings metis (Scott), the situated specifics of this organisation, and need not be the domain's veteran; the agent brings techne (Scott), how the field models and names the thing, said once as supply. A departure the project has reasons for has primacy over the field's technique: the agent names the departure as the bet and does not push the technique back.
+
 The same fact settles what the agent may do with its familiarity: it supplies and never adjudicates. Handing over a reading the engineer has not met is the library's job; choosing between readings needs a horizon, and only the type has one. A better idea from the library is a rival reading put on the table (φkairos-gates), never a substitution made in the code.
 
 The agent's own failure mode follows: the veteran's, at scale — it resolves rivalries by emitting a spork and reports success. What the transmission must do about that is the belt (φtransmission-belt).
