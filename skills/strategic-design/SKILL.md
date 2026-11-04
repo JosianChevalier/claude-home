@@ -33,21 +33,21 @@ description: Trigger words: "strategic design", "context map", "bounded contexts
 
 ## A turn
 
-> Taken: Sensemaking is the core, the widget stays a value object. Redrawn:
+> Taken: Assessment is the core, the scorecard widget stays a value object. Redrawn:
 >
 > ```
-> ┌─ Campaign ──── Draft ─▶ Published ─▶ Live ─▶ Closed ───────────────────┐
-> │ may edit?            may answer?             may read?                 │
+> ┌─ Opening ──── Draft ─▶ Posted ─▶ Interviewing ─▶ Filled ────────────────┐
+> │ may edit?          may apply?                   may read?               │
 > ┌───────────┐     ┌───────────┐     ┌──────────────────────┐
-> │ Survey    │     │ Answering │     │ Sensemaking   CORE   │
-> │ Design    │     │ Response  │     │ Session → Triad[]    │
+> │ Job       │     │ Applying  │     │ Assessment    CORE   │
+> │ Design    │     │ Applicant │     │ Interview → Score[]  │
 > └───────────┘     └───────────┘     └──────────────────────┘
 > ```
 >
-> **Names on the table.** `Signifier` is SenseMaker's word for a question about the story; `Triad` kept since it is the only shape. `Narrative` in the model, "story" in respondent copy.
+> **Names on the table.** `Requisition` is the ATS word for an opening; `Opening` kept since hiring managers say it. `Candidate` in the model, "applicant" in the public copy.
 >
-> **Hazard ⚠️.** The seam holds only if a published survey never changes.
+> **Hazard ⚠️.** The seam holds only if a posted opening never changes once an application exists.
 >
-> Is this your model? Step 1 of 3: at publish, lock or snapshot?
+> Is this your model? Step 1 of 3: at posting, lock or snapshot?
 
 Rationale: φfractal-bounded-contexts, φcollaborative-production, φubiquitous-language, φmodel-expressions, φmodel-phenomenology
