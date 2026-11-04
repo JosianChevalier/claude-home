@@ -57,4 +57,4 @@ From the current-step marker in the work file. A breadcrumb, one level per line,
 - If the user does not understand it on first reading, they hand it as is to another agent that cannot read any file. That agent must understand it immediately, with nothing but the message.
 - If it does not, the user spends their time fixing the harness instead of doing the actual work, all the agent's work is killed, and the session is trashed. Write every first message so this never has to be run.
 
-Rationale: φsession-state-in-documents, φconversation-continuity, φcontext-economics
+Rationale: φbacklogs-not-changelogs, φsession-state-in-documents, φconversation-continuity, φcontext-economics

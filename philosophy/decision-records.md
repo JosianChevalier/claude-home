@@ -17,3 +17,4 @@ That reader is the only one supersession serves. Same team, same phase: a choice
 - The agent's landscape, designed from where it stands: φlevel-design.
 - Context spent replaying a log is context lost: φcontext-economics.
 - State in the shortest store that outlives it: φsession-state-in-documents.
+- The bias the records are the exception to: φbacklogs-not-changelogs.

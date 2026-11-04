@@ -12,6 +12,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | atomic-commit | The smallest change that still works, as the floor of batch size. |
 | attractors | What sits in context pulls the next output, including across sessions. |
 | batch-size | Holding versus transaction cost, pushing the optimal batch down to the tiny. |
+| biases | What agents do unprompted, from the corpus or the mechanism, and what it costs their context. |
 | batch-slicing | Cutting work into slices that each test one hypothesis: increments of value, then steps as missions. |
 | bounded-contexts | One model or two, settled by test rather than by layer; a context as the shell of what it exposes. |
 | change-in-place | Changing a live path where it stands, never building beside it and switching at the end. |

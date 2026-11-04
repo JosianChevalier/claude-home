@@ -68,3 +68,4 @@ A finished work file left in the repo is a pink elephant (φattractors). A fresh
 - φconversation-continuity: what crosses a session boundary and what must not.
 - φcontext-economics: one canonical home per fact.
 - φattractors: the finished work file as a pink elephant.
+- φbacklogs-not-changelogs: a line says what is left; git holds the history.
