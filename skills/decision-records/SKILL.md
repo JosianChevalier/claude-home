@@ -1,23 +1,20 @@
 ---
 name: decision-records
-description: Trigger words: "ADR", "decision record", "record the decision", "write it up as a decision". Writing or amending an architecture decision record, and the design document that projects them.
+description: Trigger word: "ADR". When a past design choice is questioned, or a choice consequential for the design is being taken.
 ---
 
 # Decision records
 
 ## Doctrine
 
-- The records are the log, hidden from agents; the projection is what an agent reads: the project's design document, rewritten as decisions land (φdecision-records).
-- A record holds one consequential choice, one a later team would need to know was made on purpose. Smaller choices live in the work file and die with it.
-- Written once the decision is agreed in conversation, never to propose one.
-- Amended while the deciders are the same team and the phase has not changed; superseded by a new record only across a long time or another team.
+- Event store: the records (Nygard) are the log, hidden from most agents, read only to look at a decision; the projection, the design document (living documentation, Martraire), is what they read.
+- One consequential choice per record, written once agreed, never to propose; amended while the team is the same, superseded across teams.
 
 ## Know-how
 
-- The folder is `docs/decisions/`, its README tells agents not to read the records; a project without one gets the folder, the README and the template on the first record.
-- A record is written from the folder's template, named `NNNN-short-title.md` with the next number, one decision each: the choice as it stands, its consequences, why it holds, the alternatives turned down or tried.
-- The same commit updates the projection: the project's design document says the current design in plain words, nothing about how it came to be. No projection yet: it is created with the first record, and CLAUDE.md points to it.
-- Amending: the record's choice is rewritten, the previous choice moves under alternatives with what it cost; the date is the amendment's. The projection follows.
-- Rationale is written for the reader who was not there: the constraint that forced the choice, in the domain's words, not the conversation's.
+- `docs/decisions/`: README keeping agents out, template, created on the first record.
+- A record from the template: the choice as it stands, its consequences, the constraint that forced it, in the domain's words, the alternatives turned down or tried.
+- Same commit, the projection: the current design, nothing of how it came to be; created with the first record, pointed from CLAUDE.md.
+- Amending: the choice rewritten, the old one under alternatives with what it cost, the amendment's date.
 
 Rationale: φdecision-records, φlevel-design, φsession-state-in-documents
