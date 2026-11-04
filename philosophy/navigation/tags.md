@@ -13,7 +13,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | attractors | What sits in context pulls the next output, including across sessions. |
 | batch-size | Holding versus transaction cost, pushing the optimal batch down to the tiny. |
 | batch-slicing | Cutting work into slices that each test one hypothesis: increments of value, then steps as missions. |
-| bounded-contexts | One model or two, settled by test rather than by layer. |
+| bounded-contexts | One model or two, settled by test rather than by layer; a context as the shell of what it exposes. |
 | change-in-place | Changing a live path where it stands, never building beside it and switching at the end. |
 | code-review | Reviewing by actively navigating code that keeps a stable spatial layout. |
 | cognition | Thinking with code as embodied, enacted, spatial navigation. |
@@ -34,6 +34,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | conventions | Conforming to another team's style in a codebase we do not own. |
 | conversation-continuity | Work as a lineage of sessions: what passes between them, and what must not. |
 | cynefin | Moving complex work to complicated by mechanizing it; who holds steering per process node. |
+| decision-records | Records as a hidden log; the design document as the projection agents read. |
 | ddd | Domain-driven design: models, their expressions, aggregates, the engineer's grasp of them. |
 | determinism | Removing agent decisions by turning them into scripts, hooks, tools or defaults. |
 | domain-modeling | Shaping and expressing the domain model, and where its boundaries fall. |

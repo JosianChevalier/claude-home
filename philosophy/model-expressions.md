@@ -86,3 +86,4 @@ Other media — user story, diagram, dashboard, org chart — project the same w
 - What a model is, the tension felt before the tests, the spork: φmodel-phenomenology.
 - The model's consistency boundary: φaggregates.
 - Translation located, not diffused: φtransmission-belt.
+- The context as the shell of its exposed model, fractal: φfractal-bounded-contexts.
