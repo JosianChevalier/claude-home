@@ -1,6 +1,7 @@
 {
   "env": {
-    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "180000"
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "180000",
+    "TMPDIR": "/tmp/claude"
   },
   "permissions": {
     "allow": [
@@ -27,6 +28,10 @@
           {
             "type": "command",
             "command": "~/.claude/tools/run doc claude"
+          },
+          {
+            "type": "command",
+            "command": "python3 -I ~/.claude/tools/harness_temp_dir.py \"$TMPDIR\" >/dev/null"
           }
         ]
       }

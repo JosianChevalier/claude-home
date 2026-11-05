@@ -24,10 +24,10 @@ class TempStorageTests(unittest.TestCase):
     def call(self, script, *args, root=None):
         env = os.environ.copy()
         env.pop("CLAUDE_CODE_SESSION_ID", None)
-        env.pop("HARNESS_TMPDIR", None)
+        env.pop("TMPDIR", None)
         env["OPENCODE_SESSION_ID"] = self.session
         if root is not None:
-            env["HARNESS_TMPDIR"] = str(root)
+            env["TMPDIR"] = str(root)
         return subprocess.run([str(script), *args], env=env, text=True, capture_output=True)
 
     def test_roots_and_reuse(self):
@@ -72,6 +72,14 @@ class TempStorageTests(unittest.TestCase):
         state = Path("/tmp") / f"philosophy-explore-{self.session}-{run}.json"
         self.addCleanup(state.unlink, missing_ok=True)
         self.assertEqual(self.call(EXPLORE, "explore", run, "conversation-as-interface").returncode, 0)
+
+    @unittest.skipUnless(Path("/tmp").is_symlink(), "/tmp is a system link only on macOS")
+    def test_accepts_root_owned_link_as_parent(self):
+        root = Path("/tmp") / self.session
+        self.addCleanup(lambda: subprocess.run(["rm", "-rf", str(root)]))
+        result = self.call(NOTEBOOK, root=root)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(Path(result.stdout.strip()).parent, root)
 
     def test_rejects_unsafe_directory_and_identifiers(self):
         link = self.base / "link"

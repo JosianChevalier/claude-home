@@ -8,10 +8,10 @@ umask 077
 session="${CLAUDE_CODE_SESSION_ID:-${OPENCODE_SESSION_ID:?no session id}}"
 [[ "$session" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo 'invalid session id' >&2; exit 1; }
 dir="$(dirname "$0")"
-if [[ -n "${HARNESS_TMPDIR:-}" ]]; then
-  root="$(python3 -I "$dir/harness_temp_dir.py" "$HARNESS_TMPDIR")"
+if [[ -n "${TMPDIR:-}" ]]; then
+  root="$(python3 -I "$dir/harness_temp_dir.py" "$TMPDIR")"
 else
-  root=/tmp  # Transitional: callers without a launcher setting keep their active state.
+  root=/tmp
 fi
 f="$root/notebook-$session.md"
 if [[ -L "$f" || ( -e "$f" && ( ! -f "$f" || ! -O "$f" ) ) ]]; then

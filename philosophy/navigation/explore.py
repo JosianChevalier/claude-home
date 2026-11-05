@@ -13,7 +13,7 @@ session = os.environ.get("CLAUDE_CODE_SESSION_ID") or os.environ.get("OPENCODE_S
 def die(msg): print(msg, file=sys.stderr); sys.exit(1)
 if not re.fullmatch(r"[a-zA-Z0-9_-]+", session): die("invalid session id")
 try:
-    root = private_temp_dir(os.environ["HARNESS_TMPDIR"]) if os.environ.get("HARNESS_TMPDIR") else "/tmp"
+    root = private_temp_dir(os.environ["TMPDIR"]) if os.environ.get("TMPDIR") else "/tmp"
 except (ValueError, OSError) as error:
     die(str(error))
 def names(): return sorted(f[:-3] for f in os.listdir(corpus) if f.endswith(".md") and not f.endswith(".work.md") and f != "README.md")
