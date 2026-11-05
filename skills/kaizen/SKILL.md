@@ -80,6 +80,7 @@ Only what Claude Code's docs and the weights do not hold.
 - An example only where the line is ambiguous without one: the line first, the illustration after, anonymous. A violation named only when the current models produce it unprompted, by its own name.
 - A rule holds one concept, so a fix reads and edits one file; a rule that needs explaining to apply is a skill (φcontext-economics, φharness-elements).
 - A skill is written from mocks: the chat as the user would see it, one message at a time, validated. Doctrine identifiable, know-how after it, the rationale a footer pointer (φharness-shape).
+- A rationale points to philosophy files, `φ<name>`, or to a file packaged beside the skill, for a reason only that skill holds.
 - A description is an activation line, matched against the session and listed in every prompt, main and sub-agent alike. User-invoked: the trigger word first, as the user says it. Model-invoked: the situation in one sentence, in the session's words. A boundary only on an observed mis-fire.
 - An agent is one step's context: the skills and facts that step needs, nothing of the step before or after; the workflow skill dispatches to it and does not run the step itself (φcontext-splitting).
 

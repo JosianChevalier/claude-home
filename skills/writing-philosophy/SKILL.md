@@ -67,8 +67,6 @@ Using a concept is taking a dependency:
 
 A concept the user adds nothing to already lives in the weights: no file.
 
-A rationale only one skill will ever use, bound to its language or tool, is no philosophy file: an ad hoc file beside that skill, which its Rationale line points to.
-
 A file exists for what the user brings on top. Other files depend on it, never restate it.
 
 A link is proposed after reading the target file, never from a keyword match.
