@@ -4,20 +4,12 @@
   },
   "permissions": {
     "allow": [
-      "Bash(~/.claude/tools/run *)",
-      "Bash(cd ~/.claude && git *)",
-      "Bash(git -C ~/.claude *)",
-      "Edit(~/.claude/**)",
-      "Read(~/.claude/**)",
       "Edit(//private/tmp/claude/**)",
       "Read(//private/tmp/claude/**)",
       "Edit(//tmp/claude/**)",
       "Read(//tmp/claude/**)"
-    ],
-    "defaultMode": "auto"
+    ]
   },
-  "model": "opus",
-  "effortLevel": "high",
   "statusLine": {
     "type": "command",
     "command": "python3 ~/.claude/widgets/statusline.py"
@@ -28,13 +20,6 @@
   "enableArtifact": false,
   "disableWorkflows": true,
   "disableClaudeAiConnectors": true,
-  "autoContinueAtUsageLimit": false,
-  "agentPushNotifEnabled": false,
-  "inputNeededNotifEnabled": false,
-  "feedbackDrafts": "quiet",
-  "editorMode": "normal",
-  "theme": "auto",
-  "tui": "fullscreen",
   "hooks": {
     "SessionStart": [
       {
