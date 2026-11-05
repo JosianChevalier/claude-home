@@ -104,4 +104,4 @@ const processOrder = (order: OrderReady): Promise<ProcessOrderOutput> => ...
 - Errors: [clean-code-ts:exceptions](exceptions/SKILL.md), tagged unions for outcomes, `Result` for recoverable flows, local try-catch for local recovery, `throw` for the unrecoverable.
 - Comments: [clean-code-ts:comments](comments/SKILL.md).
 
-Rationale: @rationale/services-closures-first.md, @rationale/members-vs-module-functions.md, @rationale/typestate.md, @rationale/immutability.md, @rationale/nominal-value-objects.md, φubiquitous-language
+Rationale: φservices-closures-first, @rationale/members-vs-module-functions.md, φtypestate, φimmutability, φnominal-value-objects, φubiquitous-language

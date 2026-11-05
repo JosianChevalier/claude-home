@@ -89,4 +89,4 @@ class DiscountRate {
 3. One-line local recovery amid imperative code? → local try-catch
 4. No recovery possible? → throw; never catch it in the domain
 
-Rationale: @rationale/error-ladder.md
+Rationale: φerror-ladder

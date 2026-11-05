@@ -20,10 +20,12 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | cognition | Thinking with code as embodied, enacted, spatial navigation. |
 | cognitive-load | The engineer's attention as scarce budget; the agent removes extraneous load. |
 | clean-code | Code that reads as plain sentences of the domain: one level of abstraction per function. |
+| code-structure | Where behaviour lives: closures, classes, and the cohesion that decides between them. |
 | cohesion | One concept per harness file, so a fix touches exactly one file. |
 | collaboration | Engineer and agent in one enacted loop: the engineer steers, the agent transmits. |
 | communication | Messages and reports as maps for a cold reader with nothing else open. |
 | complexity | Properties of complex adaptive systems: compensations stacking, anchoring, collapse. |
+| craft | A concrete coding technique: what a clean-code practice does in the code, and why it is preferred. |
 | continuous-design | Watching the model in the code at every change, instead of a specification from outside or a black box. |
 | conceptual-integrity | Keeping the model coherent: where integrity is owed, and who carries it. |
 | concurrency | Parallel committers integrating continuously on one trunk. |
@@ -39,8 +41,10 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | ddd | Domain-driven design: models, their expressions, aggregates, the engineer's grasp of them. |
 | determinism | Removing agent decisions by turning them into scripts, hooks, tools or defaults. |
 | domain-modeling | Shaping and expressing the domain model, and where its boundaries fall. |
+| error-handling | Pricing a failure: in the types when someone must react, propagated when no one can. |
 | elephant-carpaccio | The thinnest increment of value that reaches production to test its hypothesis. |
 | feedback-loops | Nested loops, each testing a change against something more real, from the compiler to the domain. |
+| functional-programming | Functional style in the code: immutable values, pure functions, pipelines, closures. |
 | flow | Reinertsen's product-development flow economics, applied to batch size. |
 | git | Commits and trunk as the mechanics of small, continuously integrated changes. |
 | guest-codebase | Posture for code another team owns: conform, small footprint, slide the norm. |

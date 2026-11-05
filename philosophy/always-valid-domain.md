@@ -34,18 +34,15 @@ Each is a parse missing, and names the type that is missing. If a structure can 
 - **Unpacking.** A value object opened to pass its primitive to a collaborator. The collaborator's signature is wrong; it predates the type.
 - **A setter.** Any state reachable from outside. Transitions are methods returning the next state's type; what is not a method is not a transition.
 
-## Transitions as types
+## By structure, two techniques
 
-Typestate (Strom & Yemini): the lifecycle state in the type, so an operation exists only on the states where it is legal. `cancel()` is not guarded on `Shipped`; it is absent, and the illegal transition is a compile error. Consumers demand the only state they can handle, `ship(order: Paid)`, and the defensive checks downstream go.
-
-Immutability is load-bearing. A transition returns a fresh value of the next type; mutating in place would let the runtime state diverge from the static type, and the type would lie.
-
-## Nominal where the language is structural
-
-In a structurally typed language every `string` is every other `string`, so an `OrderId` passed where a `CustomerId` is expected is invisible to the checker: primitive obsession has no symptom. Nominal-ness is manufactured: a class for a value with behaviour, a brand and a factory for an id. The contract is what matters, construction through one door and the plain primitive rejected; the mechanism is each project's.
+- Invalid transitions unrepresentable: φtypestate.
+- Invalid values unrepresentable where the language is structural: φnominal-value-objects.
 
 ## Related
 
 - The pattern this is the domain instance of: φparse-dont-validate.
 - The boundary the invariants derive, and saving whole: φaggregates.
 - A grammar that cannot state the invariant: φmodel-expressions.
+- Transitions as types: φtypestate.
+- Values that cannot be confused: φnominal-value-objects.

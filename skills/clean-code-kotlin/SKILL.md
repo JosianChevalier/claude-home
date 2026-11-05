@@ -109,4 +109,4 @@ fun processOrder(order: OrderReady): ProcessOrderOutput = ...
 - Errors: a sealed hierarchy for outcomes the caller decides on, `Result` for recoverable flows, local try-catch for local recovery, `throw` for the unrecoverable.
 - Comments: [clean-code-kotlin:comments](comments/SKILL.md).
 
-Rationale: @../clean-code-ts/rationale/services-closures-first.md, φubiquitous-language
+Rationale: φservices-closures-first, φtypestate, φimmutability, φnominal-value-objects, φerror-ladder, φubiquitous-language
