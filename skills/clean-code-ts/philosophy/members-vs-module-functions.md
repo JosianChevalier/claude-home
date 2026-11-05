@@ -2,7 +2,7 @@
 tags: [typescript, code-structure]
 ---
 
-# Rationale: Members vs Module Functions
+# Members vs module functions
 
 Two forces decide placement: **encapsulation** and **composition**.
 
