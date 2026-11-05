@@ -3,4 +3,4 @@
 # macOS empties /tmp on reboot; the harness state scripts, Python and Node write under TMPDIR,
 # and GNU mktemp fails when it is missing.
 set -eu
-python3 -I "$(dirname "$0")/harness_temp_dir.py" "${TMPDIR:?TMPDIR is not set}" >/dev/null
+python3 -I "$(dirname "$0")/../tools/harness_temp_dir.py" "${TMPDIR:?TMPDIR is not set}" >/dev/null

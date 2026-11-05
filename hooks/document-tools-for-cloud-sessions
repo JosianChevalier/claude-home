@@ -5,4 +5,4 @@
 # (the repo is ~/.claude) and the home hook already prints the list, so the
 # guard keeps it silent. CLAUDE_CODE_REMOTE is documented as true only in the cloud.
 [ "$CLAUDE_CODE_REMOTE" = true ] || exit 0
-"$(dirname "$0")/run" doc claude
+"$(dirname "$0")/../tools/run" doc claude
