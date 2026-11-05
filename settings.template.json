@@ -31,7 +31,7 @@
           },
           {
             "type": "command",
-            "command": "python3 -I ~/.claude/tools/harness_temp_dir.py \"$TMPDIR\" >/dev/null"
+            "command": "~/.claude/tools/make-tmpdir"
           }
         ]
       }
