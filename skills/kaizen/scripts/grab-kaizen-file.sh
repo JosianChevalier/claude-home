@@ -20,7 +20,7 @@ fi
 
 file="$1"
 name="${file##*/}"
-if [[ ! "$name" =~ ^kaizen-[a-zA-Z0-9_-]+\.md$ || "$file" != "$root/$name" || -L "$file" || ! -f "$file" || ! -O "$file" || "$(stat -c %a -- "$file")" != 600 ]]; then
+if [[ ! "$name" =~ ^kaizen-[a-zA-Z0-9_-]+\.md$ || "$file" != "$root/$name" || -L "$file" || ! -f "$file" || ! -O "$file" || "$(python3 -I -c 'import os, stat, sys; print(oct(stat.S_IMODE(os.lstat(sys.argv[1]).st_mode))[2:])' "$file")" != 600 ]]; then
   printf 'unsafe or missing Kaizen file: %s\n' "$file" >&2
   exit 1
 fi
