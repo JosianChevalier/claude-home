@@ -16,6 +16,8 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 
 ## The session
 
+Kaizen has its own temporary file, not the work file of the activity that exposed the failure. At opening, create a private `kaizen-*.md` file under `TMPDIR` with `mktemp`; record the selected groups, evidence, decisions and next open move there as the session proceeds. If Kaizen crosses `/clear`, point the handover to that file's absolute path so the next session resumes from it. The file stays while Kaizen is unfinished and is deleted when its last round closes. It survives a session change in the same environment, not a container restart.
+
 ```
  load      silent: the core, `philosophy/navigation/navigation.sh tag kaizen`
  opening   what went wrong, grouped by shared pull ──▶ the user picks the groups
