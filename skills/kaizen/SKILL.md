@@ -25,7 +25,6 @@ Kaizen is its own activity. Its temporary file survives `/clear` in the same env
            distill the file with the selection, evidence, verbatim transcript search anchors and next open move
  handover  when crossing `/clear`, point to the file's absolute path, not its contents;
            the successor runs `bash <skill-base>/scripts/grab-kaizen-file.sh <absolute-path>` to reopen it
- close     delete the file when Kaizen ends
 ```
 
 Replace `<skill-base>` with this skill's absolute directory, not the current working directory. The tool prints the path; it requires a private `TMPDIR` and refuses missing, non-private or out-of-directory files. If the user provides a Kaizen file on entry, reopen it rather than creating another.
