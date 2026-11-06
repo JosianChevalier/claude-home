@@ -65,6 +65,7 @@ class TempStorageTests(unittest.TestCase):
         self.assertEqual(first.stdout.strip(), str(notebook))
         notebook.write_text("legacy")
         self.assertEqual(self.call(NOTEBOOK).stdout, first.stdout)
+        self.assertEqual(self.call(NOTEBOOK, root=Path("/tmp")).stdout, first.stdout)
         self.assertEqual(notebook.read_text(), "legacy")
         start = self.call(EXPLORE, "explore", "start")
         self.assertEqual(start.returncode, 0, start.stderr)
@@ -84,7 +85,7 @@ class TempStorageTests(unittest.TestCase):
     def test_rejects_unsafe_directory_and_identifiers(self):
         link = self.base / "link"
         link.symlink_to(self.base, target_is_directory=True)
-        for root in (link, link / "child", Path("/tmp"), Path("relative"), self.base / ".." / "other"):
+        for root in (link, link / "child", Path("relative"), self.base / ".." / "other"):
             for script, args in ((NOTEBOOK, ()), (EXPLORE, ("explore", "start"))):
                 result = self.call(script, *args, root=root)
                 self.assertNotEqual(result.returncode, 0, (root, result.stdout))

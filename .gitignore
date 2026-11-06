@@ -26,6 +26,8 @@
 !/tools/**
 !/hooks/
 !/hooks/**
+!/plugins/
+!/plugins/*.ts
 
 # Cloud sessions clone this repo as a project, not as ~/.claude: Claude Code then
 # only discovers config under .claude/. Symlinks point it back at the real folders.

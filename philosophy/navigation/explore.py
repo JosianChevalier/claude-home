@@ -4,7 +4,7 @@ Called by navigation.sh; argv: <self-path> <corpus-dir> start | <id> <file> | <i
 import json, os, re, secrets, stat, sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../tools"))
-from harness_temp_dir import private_temp_dir
+from private_temp_dir import private_temp_dir
 
 CAP = 24_000
 self_path, corpus, *args = sys.argv[1:]
@@ -13,7 +13,7 @@ session = os.environ.get("CLAUDE_CODE_SESSION_ID") or os.environ.get("OPENCODE_S
 def die(msg): print(msg, file=sys.stderr); sys.exit(1)
 if not re.fullmatch(r"[a-zA-Z0-9_-]+", session): die("invalid session id")
 try:
-    root = private_temp_dir(os.environ["TMPDIR"]) if os.environ.get("TMPDIR") else "/tmp"
+    root = private_temp_dir(os.environ["TMPDIR"]) if os.environ.get("TMPDIR") not in (None, "", "/tmp") else "/tmp"
 except (ValueError, OSError) as error:
     die(str(error))
 def names(): return sorted(f[:-3] for f in os.listdir(corpus) if f.endswith(".md") and not f.endswith(".work.md") and f != "README.md")
