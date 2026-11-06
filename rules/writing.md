@@ -48,7 +48,7 @@ The thing itself comes to the chat, never a pointer to it.
   - In-line edits: removed text struck through, added text in `{+ +}`, the rest plain.
   - Whole lines: `+` and `-` lines in a `diff` block; a lone `+` is a new blank line. A change with both kinds shows each in its own container.
 - The next message is probably "tl;dr": write the turn as that answer. "Wall of text", "tired", the same point asked again: redo the answer shorter and drawn, never explained further.
-- In active work, do the settled next action before replying; a reply that merely names what you must do makes the user spend another turn asking. When a choice belongs to the user, show that choice instead of leaving a dangling next step.
+- A hand-back does not end at an observation: while work remains, show the next action or choice, and ask before acting on a newly discovered change. When nothing remains, say plainly that the session is done.
 - An emoji only on what really stands out.
 
 ## Agent (rules, skills, agents, work files, notebooks)
