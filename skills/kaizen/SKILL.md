@@ -22,7 +22,8 @@ Kaizen is its own activity. Its temporary file survives `/clear` in the same env
  load      silent: the core, `philosophy/navigation/navigation.sh tag kaizen`
  opening   `bash <skill-base>/scripts/grab-kaizen-file.sh` creates the private file; record groups ──▶ the user picks
  round     one group: evidence ──▶ attractors ──▶ verdict ──▶ decision ──▶ edit, commit;
-           distill the file with the selection, evidence, verbatim transcript search anchors and next open move
+           distill the file with the selection, evidence, verbatim transcript search anchors and next open move;
+           in the completion reply, offer the remaining groups for the next round while work remains
  handover  when crossing `/clear`, point to the file's absolute path, not its contents;
            the successor runs `bash <skill-base>/scripts/grab-kaizen-file.sh <absolute-path>` to reopen it
 ```
