@@ -26,7 +26,7 @@ Runs on the same harness and the same repo. CLAUDE.md, rules, skills and source 
 
 Start from nothing; each line has to earn its place.
 
-0. Save first. What the conversation decided about the work, and the file does not hold yet: how it runs, what was decided, what is open. Distilled into the work file, then the quote is written against the file. What is in the file is never in the quote.
+0. Finish the conversation's decisions first. Save only the successor activity's state—how that work runs, its decisions, its open questions—to its work file. Settle session reflection in the exchange; pass on only the resulting posture. Then write the quote against the file, without repeating its contents.
 1. Orient: point to the resources that carry the state of this activity, the work file first, one line each on what the successor finds there.
 2. Next step: state it only if the resources do not already show it.
 3. Survival: what the successor needs and nothing anchors. Where it goes is a matter of nature.
