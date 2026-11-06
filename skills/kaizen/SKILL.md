@@ -26,8 +26,6 @@ The frame below is the agent's composition grid: it guides the photographer, and
 
 ## Opening
 
-Open the session notebook with `grab-notebook` and keep the groups, selections and next move there while the Kaizen is live. The notebook dies with the session; if unfinished Kaizen must survive `/clear`, anchor its remaining work separately from the activity that exposed it before clearing.
-
 Everything noted during the session goes on the table, even minor, grouped by the pull they share: the misses that one root cause explains are one group, one round, one fix. A group is named in the session's words, never from a fixed list, and never by the mechanism of the fix. One number per group. The user answers with the numbers; the rest is dropped on purpose: a miss with no pattern yet is not worth a round. A miss is the harness's when a loaded line pulled toward it or failed to pull against it, a doubt the agent could have raised included; it is the request's when the words asked for it and nothing loaded could have told. The request's go on the table in their own group, named so, dropped by default: the user reclaims one the harness should have caught.
 
 > **Kaizen.** Seven things went wrong this session, four pulls and one misprompt. Which do we address? Give the numbers; the rest are dropped.
