@@ -26,8 +26,6 @@ The frame below is the agent's composition grid: it guides the photographer, and
 
 ## Opening
 
-Open the session notebook with `grab-notebook` and keep the groups, selections and next move there while the Kaizen is live. The notebook dies with the session; if unfinished Kaizen must survive `/clear`, anchor its remaining work separately from the activity that exposed it before clearing.
-
 Everything noted during the session goes on the table, even minor, grouped by the pull they share: the misses that one root cause explains are one group, one round, one fix. A group is named in the session's words, never from a fixed list, and never by the mechanism of the fix. One number per group. The user answers with the numbers; the rest is dropped on purpose: a miss with no pattern yet is not worth a round. A miss is the harness's when a loaded line pulled toward it or failed to pull against it, a doubt the agent could have raised included; it is the request's when the words asked for it and nothing loaded could have told. The request's go on the table in their own group, named so, dropped by default: the user reclaims one the harness should have caught.
 
 > **Kaizen.** Seven things went wrong this session, four pulls and one misprompt. Which do we address? Give the numbers; the rest are dropped.
@@ -47,7 +45,7 @@ Everything noted during the session goes on the table, even minor, grouped by th
 
 ## Round
 
-One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, has no moment to read. `philosophy-scout` names the files that bear on the group, beyond the core loaded at the start; they are read whole. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides; once the move is settled, implement and verify it before returning control, then commit before the next group. The rationales of the touched files are read before the edit and are at most a footer; they also size the fix: a line is tested against the cases it was right about, and one that would now miss them is the pendulum. The lines of the element being written: Writing an element, below.
+One group per turn. When something went wrong in the session, `transcript-attractor-analyzer` reads the transcript at the moment and brings back what happened, what the reasoning held, and the attractors in context; a gap, something the harness lacks, has no moment to read. `philosophy-scout` names the files that bear on the group, beyond the core loaded at the start; they are read whole. The turn holds: the moment in plain words, the user's own words quoted, why it is an issue; the attractors, each by its words, where it sits and how it pulled, the doctrine among them; the verdict; the lines that change; the same pull elsewhere in the harness. The user decides, and the edit lands before the next group. The rationales of the touched files are read before the edit and are at most a footer; they also size the fix: a line is tested against the cases it was right about, and one that would now miss them is the pendulum. The lines of the element being written: Writing an element, below.
 
 ```
  know-how followed, went wrong      ──▶ rewrite the know-how
