@@ -9,7 +9,7 @@ description: Use when the user asks to create/write/generate a handover prompt f
 
 - By default, conversations are trashable.
 - Allow resuming the current activity in a fresh context without rewriting instructions or intent.
-- State of work lives in the work file, to make `/clear` free. The handover carries what is not state: pointers, the next action, the posture.
+- State of the activity lives in its own file, to make `/clear` free. The handover carries what is not state: pointers, the next action, the posture.
 - Keep the semantic landscape of the next agent simple and bias-free.
 
 ## The successor
@@ -26,8 +26,8 @@ Runs on the same harness and the same repo. CLAUDE.md, rules, skills and source 
 
 Start from nothing; each line has to earn its place.
 
-0. Finish the conversation's decisions first. Save only the successor activity's state—how that work runs, its decisions, its open questions—to its work file. Settle session reflection in the exchange; pass on only the resulting posture. Then write the quote against the file, without repeating its contents.
-1. Orient: point to the resources that carry the state of this activity, the work file first, one line each on what the successor finds there.
+0. Finish the conversation's decisions first. Save only the successor activity's state—how that work runs, its decisions, its open questions—to its own file. When Kaizen itself continues, that is its temporary file; settle reflection about other work in the exchange and pass on only the resulting posture. Then write the quote against the file, without repeating its contents.
+1. Orient: point to the resources that carry the state of this activity, its state file first, one line each on what the successor finds there.
 2. Next step: state it only if the resources do not already show it.
 3. Survival: what the successor needs and nothing anchors. Where it goes is a matter of nature.
    - A file: impactful, not consumed by the immediate next action, and sensitive to a restart. Invoking this skill is the request to write it.

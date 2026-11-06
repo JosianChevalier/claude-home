@@ -16,12 +16,15 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 
 ## The session
 
-Kaizen has its own temporary file, not the work file of the activity that exposed the failure. At opening, create a private `kaizen-*.md` file under `TMPDIR` with `mktemp`; record the selected groups, evidence, decisions and next open move there as the session proceeds. If Kaizen crosses `/clear`, point the handover to that file's absolute path so the next session resumes from it. The file stays while Kaizen is unfinished and is deleted when its last round closes. It survives a session change in the same environment, not a container restart.
+Kaizen is its own activity. Its temporary file survives `/clear` in the same environment, not a container restart.
 
 ```
  load      silent: the core, `philosophy/navigation/navigation.sh tag kaizen`
- opening   what went wrong, grouped by shared pull ──▶ the user picks the groups
- round     one group: what happened ──▶ attractors and their pull ──▶ verdict ──▶ the user decides ──▶ edit, commit
+ opening   `mktemp` a private `kaizen-*.md` under `TMPDIR`; record groups ──▶ the user picks
+ round     one group: evidence ──▶ attractors ──▶ verdict ──▶ decision ──▶ edit, commit;
+           keep the file current with the selection, evidence, decisions and next open move
+ handover  when crossing `/clear`, point to the file's absolute path; the successor resumes Kaizen there
+ close     delete the file when Kaizen ends
 ```
 
 The frame below is the agent's composition grid: it guides the photographer, and the user sees only the picture.
