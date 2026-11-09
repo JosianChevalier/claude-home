@@ -20,7 +20,7 @@
     }
   },
   "instructions": [
-    "rules/*.md",
-    "tools/docs/opencode.md"
+    "~/.config/opencode/rules/*.md",
+    "~/.config/opencode/tools/docs/opencode.md"
   ]
 }
