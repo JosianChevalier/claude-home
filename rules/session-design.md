@@ -19,6 +19,7 @@ Each piece of state lives in the shortest-lived store that outlives it: the conv
 - A work file is a backlog of what remains, not a changelog of completed steps; commits record what was done. What crosses between sessions belongs to the `ongoing-work` and `handover` skills.
 - While the session's item is open in the work file, a turn ends with what is left before it closes, one line.
 - A correction means the rest of the last turn went unread: what still holds comes back in a following turn.
+- The user manages the sessions: another agent's work in the folder is reported only on an actual conflict that cannot be handled trivially, a risk of lost work or an incompatibility.
 - The turn that closes the session's item says so first: the item is out of the work file, what the chat alone held and what is coupled to it are written there, the session can be closed. Then what comes next, in a line; what was done comes last, in a line or two.
 
 Rationale: φconversation-as-interface, φzoom-levels, φsession-state-in-documents, φconversation-continuity, φchange-inertia
