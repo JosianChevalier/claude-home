@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# platforms: claude
+# Usage: bare-claude 'PROMPT'
+# Run a bare claude agent, its context blank: none of the user's rules, hooks, skills or plugins; its tools are Read and Edit.
+#   Its answer comes on stdout. It knows only the prompt: name the files to read and what to return.
+#   In place of claude --bare, which bills at API rates: this one runs on the subscription.
+set -euo pipefail
+here="$(cd "$(dirname "$0")" && pwd)/bare-claude.d"
+[ $# -eq 1 ] || { echo "Usage: bare-claude 'PROMPT'" >&2; exit 2; }
+export CLAUDE_CONFIG_DIR="$here/profile"
+unset ANTHROPIC_API_KEY CLAUDE_CODE_SESSION_ID
+mkdir -p "$CLAUDE_CONFIG_DIR"
+if ! claude auth status 2>/dev/null | grep -q '"loggedIn": true'; then
+  echo "bare-claude: its profile is not logged in. Ask the user to run:" >&2
+  echo "  ! CLAUDE_CONFIG_DIR=$CLAUDE_CONFIG_DIR claude auth login" >&2
+  exit 1
+fi
+exec claude -p "$1" --settings "$here/settings.json" --disable-slash-commands --strict-mcp-config --no-chrome \
+  --no-session-persistence --tools Read,Edit --allowedTools Read,Edit

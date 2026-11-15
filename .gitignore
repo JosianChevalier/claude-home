@@ -24,6 +24,7 @@
 !/commands/*.md
 !/tools/
 !/tools/**
+/tools/bare-claude.d/profile/
 !/hooks/
 !/hooks/**
 !/plugins/
