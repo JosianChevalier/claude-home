@@ -8,7 +8,7 @@
   "includeGitInstructions": false,
   "promptSuggestionEnabled": false,
   "awaySummaryEnabled": false,
-  "attribution": { "commit": "", "pr": "" },
+  "attribution": false,
   "disableAllHooks": true,
   "disableBundledSkills": true,
   "env": {
