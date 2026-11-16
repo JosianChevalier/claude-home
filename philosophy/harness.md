@@ -26,6 +26,7 @@ The strong-style driver is where the three meet: steered, it is harnessed; carry
 
 ## Related
 
+- What the harness makes of an LLM, an actant: φdreamt-agent.
 - The loop between engineer and agent, the three images in practice: φcollaborative-production.
 - Context as the scarce resource: φcontext-economics.
 - Practices that reinforce each other: φagentic-extreme-programming.

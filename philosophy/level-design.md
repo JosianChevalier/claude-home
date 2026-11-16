@@ -51,6 +51,7 @@ No probe is forced when the answer is obvious. One is run when a section is rede
 
 ## Related
 
+- Why the level is the lever, the agent being dreamt from it: φdreamt-agent.
 - What a term pulls, negation included: φattractors.
 - The human reader's map, how much at which scale: φzoom-levels.
 - The chat, where the human reads: φconversation-as-interface.

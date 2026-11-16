@@ -46,6 +46,7 @@ A description is pure attractor engineering: it is matched against the session's
 
 ## Related
 
+- What the pull selects, the character the LLM dreams: φdreamt-agent.
 - A term references a theory, a saying a posture; identified, overloaded or detailed: φfield-terms.
 - Doctrine as a few attractors, rationalization lists as pink elephants: φharness-shape.
 - Why compensation is last, and what a stack of them becomes: φsystems-of-compensations.
