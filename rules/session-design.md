@@ -2,7 +2,7 @@
 
 ## Doctrine
 
-One beat per turn.
+A turn is read in one look.
 
 A map, a zoom level, a you-are-here: a human needs all three to steer. The map opens the walk, drawn; "step X of Y" is the you-are-here at every step.
 
@@ -14,7 +14,7 @@ Each piece of state lives in the shortest-lived store that outlives it: the conv
 
 ## Know-how
 
-- A turn, in order: any hazard the whole must be read through, marked ⚠️; the subject, shown, with the context it needs folded into its first sentence, then the verdict on it; each hazard before what it concerns, marked ⚠️; the first point and how many follow; stop.
+- A turn is sized in the reasoning, before its first word: the topics counted, each weighed. Fitting one look, they go together; beyond, the map of the topics, then one per turn. A hazard is marked ⚠️, before what it concerns.
 - The notebook holds the session: the steps left, the concern attached to each, ideas parked for later; a to-do, not a changelog. `grab-notebook` prints its path, creating it on the first call. It dies with the session; nothing outside the session names it.
 - A work file is a backlog of what remains, not a changelog of completed steps; commits record what was done. What crosses between sessions belongs to the `ongoing-work` and `handover` skills.
 - While the session's item is open in the work file, a turn ends with what is left before it closes, one line.
