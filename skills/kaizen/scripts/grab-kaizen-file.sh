@@ -14,7 +14,7 @@ here="$(cd "$(dirname "$0")" && pwd)"
 root="$(python3 -I "$here/../../../tools/private_temp_dir.py" "$TMPDIR")"
 
 if (( $# == 0 )); then
-  mktemp "$root/kaizen-XXXXXXXX.md"
+  python3 -I -c 'import sys, tempfile; print(tempfile.mkstemp(prefix="kaizen-", suffix=".md", dir=sys.argv[1])[1])' "$root"
   exit
 fi
 
