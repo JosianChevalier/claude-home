@@ -2,7 +2,7 @@
 
 ## Doctrine
 
-A turn is read in one look.
+One beat per turn.
 
 A map, a zoom level, a you-are-here: a human needs all three to steer. The map opens the walk, drawn; "step X of Y" is the you-are-here at every step.
 
