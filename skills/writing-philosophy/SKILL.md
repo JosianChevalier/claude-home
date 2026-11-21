@@ -24,7 +24,7 @@ user talks ──▶ draft ──▶ anything to raise? ──no──▶ user v
 
 The file is drafted from the first input, holding only what the user said and the implications plainly in it.
 
-Every draft comes with its prior art, told to the user: the author, article or field that already holds what was said, to reference in place of writing it, and what remains the user's own. None found is said; a reference in doubt is said as in doubt.
+Every draft comes with its prior art, told to the user: the author, article or field that already holds what was said, to reference in place of writing it, and what remains the user's own. None found is said; a reference in doubt is said as in doubt. The user picks the ones to hear more of; each is then explained enough for the user to judge its fit.
 
 Each round sediments: one question, its answer, its impact written, then the next question. Questions are never batched before writing.
 
