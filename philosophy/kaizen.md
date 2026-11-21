@@ -32,6 +32,12 @@ Triage climbs the abstraction ladder (φabstraction-ladder): the lowest layer th
 
 Most failures are the first kind.
 
+## Tampering
+
+A process corrected on its normal noise gets worse: **tampering** (Deming, after Shewhart's chance and assignable causes). Each correction adds its own variation to the next run.
+
+Here the process is the harness and a session is one point. A miss seen in one session, or tied to one project, is noise until a pattern shows across sessions; a fix sized to it overfits that session, and the pull to do so is strong in an agent that holds only that session. A pattern is the system's: the fix changes the harness, at the layer triage gives, and the philosophy is the mean the fixes regress to.
+
 ## Why kaizen is user-invoked
 
 Feedback is noted in-flow but processed on explicit invocation ("kaizen"): agent-side triggers for "session end" are undecidable, and mid-session processing interrupts work and pollutes task context with harness context. The transcript itself carries the notes across compaction.
