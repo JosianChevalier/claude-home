@@ -36,7 +36,9 @@ Most failures are the first kind.
 
 A process corrected on its normal noise gets worse: **tampering** (Deming, after Shewhart's chance and assignable causes). Each correction adds its own variation to the next run.
 
-Here the process is the harness and a session is one point. A miss seen in one session, or tied to one project, is noise until a pattern shows across sessions; a fix sized to it overfits that session, and the pull to do so is strong in an agent that holds only that session. A pattern is the system's: the fix changes the harness, at the layer triage gives, and the philosophy is the mean the fixes regress to.
+Here the process is the harness, and the noise is what belongs to one flow: this task, this module, this project, this wording of the request. A fix written at the first cause has the shape of the incident: a rule for a situation that will not come back. The pull to write it is strong in an agent that holds only that session.
+
+One session is enough; the threshold is depth. Asking why a few times (Ohno's five whys) climbs from the incident to the pull that caused it: a loaded line, a name, a flow. A pull is the harness's, fixed at the layer triage gives. A pull that came from the request leaves the harness unchanged. The philosophy is the mean the fixes regress to.
 
 ## Why kaizen is user-invoked
 

@@ -11,7 +11,7 @@ description: Trigger word: "kaizen". Loaded for any work on the harness: a rule,
 - Feedback lands at the lowest layer that absorbs it: the know-how first, the doctrine when the know-how could not, the philosophy only when the understanding of the activity changed.
 - A fix that contradicts its rationale: one of the two changes, explicitly.
 - Reorient before compensating: rename, reshape the flow, compensate last and say so.
-- A fix sized to one session is tampering (Deming): it swings the pendulum; the philosophy is the mean it regresses to.
+- A fix at the first cause, shaped like the incident, is tampering (Deming): it swings the pendulum. A few whys (Ohno) reach the pull; the philosophy is the mean the fixes regress to.
 - The harness is not responsible for a misprompt.
 
 ## The session
