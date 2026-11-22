@@ -14,7 +14,7 @@ A mandate lists what is in. The exception cannot be listed, the unknown unknowns
 
 A mandate states what the one above expects of the task, not what the one below is allowed. A brief that states none expects the narrowest: what was asked, precisely.
 
-What does not fit proves the expectation wrong, and the expectation is what changes: the exception climbs, the andon is pulled. Four faults keep it below:
+Every mission order is a hypothesis of realizability: what does not fit falsifies it, and the expectation is what changes: the exception climbs, the andon is pulled. Done or falsified, both are results. Four faults keep it below:
 
 - **overreach**: scope creep, doing the rest too
 - **compensation**: a local fix (φsystems-of-compensations), the quick translation a spork grows from
