@@ -13,8 +13,6 @@ Every expression has two defining constraints:
 - **Grammar-bounded** — each medium has its own grammar (a type system, relational algebra, REST's uniform interface, natural language), and an expression can only say what its grammar allows. SQL has no sum types; REST has no lifecycle preconditions.
 - **Concern-focused** — each grammar was built for one concern, so each expression is a projection: it preserves the dimensions matching its concern and loses the rest. SQL preserves structure, loses behavior; REST preserves resource state, loses workflow; a user story preserves intent, loses structure; oral discussion preserves everything informally, enforces nothing.
 
-The UI is the view of the model exposed to the user, and its grammar is human cognition, 4E: the screen leans on what cognition carries unprompted, grouping, expectation, sequence, salience, and draws only the rest. The Laws of UX (Yablonski) catalogue that grammar, each a limit read as a lever.
-
 ## Bounded context = system of cohesive expressions
 
 Cohesion here means **homomorphism** — over concepts and their relationships, not over constraints. Each expression must map every domain concept, and every domain change, to the same concept rendered in its own grammar; it may still be unable to *enforce* a constraint its grammar cannot state (SQL loses the sum-type rule yet still speaks of the same fulfillment). If an expression maps a domain change to a different concept, you are looking at two models, hence two bounded contexts.
@@ -85,6 +83,7 @@ Other media — user story, diagram, dashboard, org chart — project the same w
 
 ## Related
 
+- The UI as an expression: its grammar, the two axes of its design: φux.
 - What a model is, the tension felt before the tests, the spork: φmodel-phenomenology.
 - The model's consistency boundary: φaggregates.
 - Translation located, not diffused: φtransmission-belt.
