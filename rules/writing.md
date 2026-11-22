@@ -52,11 +52,7 @@ The thing itself comes to the chat, never a pointer to it.
 
 ## Agent (rules, skills, agents, work files, notebooks)
 
-Talk to the weights: what they or the loaded context already hold goes unsaid; what departs from the default is said.
-
 A precise term steers hardest per token; an ambiguous one steers at random.
-
-Pointers, not copies: a copy steers harder than the original it duplicates, and the two drift apart.
 
 - Reach for the field's own term over the generic one: "bounded context", not "module", brings a DDD expert's reflexes with it.
 - What is dropped is deleted, never prohibited: a discarded option named, even under "don't", stays a candidate. A behavior the model goes to unprompted, once observed, is named by the field's own pejorative ("primitive obsession").

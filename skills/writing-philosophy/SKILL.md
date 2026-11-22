@@ -60,7 +60,8 @@ Pins triangulate the region of the field meant. A pejorative the weights hold (p
 
 ## Where a concept lives
 
-One source of truth per concept, DRY (Hunt & Thomas).
+- Held goes unsaid: what the weights, Claude Code's docs or the loaded context already hold is not written; what departs from the default is (φfield-terms).
+- Pointers, not copies, DRY (Hunt & Thomas): a fact has one home and everything else points to it; a copy steers harder than its original, and the two drift apart. A projection is the exception: the small part a neighbour needs, restated there to spare loading the whole home (φcontext-economics, φattractors).
 
 Using a concept is taking a dependency:
 
@@ -69,7 +70,7 @@ Using a concept is taking a dependency:
 
 A concept the user adds nothing to already lives in the weights: no file.
 
-A file exists for what the user brings on top. Other files depend on it, never restate it.
+A file exists for what the user brings on top. Other files depend on it.
 
 A link is proposed after reading the target file, never from a keyword match.
 

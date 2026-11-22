@@ -83,8 +83,8 @@ A gate lost to the pull of the task, a stop or a hand-back skipped: the gated ac
 
 ## Writing an element
 
-Only what Claude Code's docs and the weights do not hold.
-
+- Held goes unsaid: what the weights, Claude Code's docs or the loaded context already hold is not written; what departs from the default is (φfield-terms).
+- Pointers, not copies, DRY (Hunt & Thomas): a fact has one home and everything else points to it; a copy steers harder than its original, and the two drift apart. A projection is the exception: the small part a neighbour needs, restated there to spare loading the whole home (φcontext-economics, φattractors).
 - Named after the concept, never the symptom it was written against.
 - An example only where the line is ambiguous without one: the line first, the illustration after, anonymous. A violation named only when the current models produce it unprompted, by its own name.
 - A rule holds one concept, so a fix reads and edits one file; a rule that needs explaining to apply is a skill (φcontext-economics, φharness-elements).
