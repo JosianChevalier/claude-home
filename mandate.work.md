@@ -15,10 +15,16 @@ The user wants the main session to stop spending context on bounded steps: two g
   ```
   The brief is a mission order, and may be an epistemic action: it tests a hypothesis, that the task can be bounded and done well inside its bounds. It declares what the session expects; everything else is the exception. A brief declaring nothing expects the narrowest: what was asked, precisely.
 
-  The nominal is the sub-agent's alone. The task comes back done, or the hypothesis falsified by an exception: both are results. The sign is the blast radius: a task reaching past what its brief supposed is cut there, and the rest it called for climbs in the report: the andon is pulled. Three faults keep it below: overreach, scope creep; compensation, a workaround, specification gaming; sweeping it under the rug, the exception swallowed.
+  The nominal is the sub-agent's alone. The task comes back done, or the hypothesis falsified by an exception: both are results. The sign is the blast radius: a task reaching past what its brief supposed is cut there, and the rest it called for climbs in the report: the andon is pulled.
+
+  Three faults keep it below:
+
+  - overreach: scope creep, the rest done too
+  - compensation: a workaround, specification gaming
+  - sweeping it under the rug: the exception swallowed
   ```
 
-  Settled by the user: "a sub-agent or a sub-session" in the first paragraph; the essence is the hypothesis, not a boundary enforced, and both outcomes are stated as equal; blast radius or impact, not effort; the impact that should have been made is said in the report; the faults are named, by the philosophy's terms; "default-deny", an opening line defining delegation and "the report taken unchecked" stay out. Open: blast radius fits a command, a query's sign is rather a false premise; whether the rule outweighs Claude Code's built-in "when in doubt, don't spawn", a probe would say; whether `rules/` reaches Claude Code's sub-agents, unverified.
+  Settled by the user: "a sub-agent or a sub-session" in the first paragraph; the essence is the hypothesis, not a boundary enforced, and both outcomes are stated as equal; blast radius or impact, not effort; the impact that should have been made is said in the report; the faults are named, by the philosophy's terms; "default-deny", an opening line defining delegation and "the report taken unchecked" stay out; the faults as a list, structure serves the agent too. Open: blast radius fits a command, a query's sign is rather a false premise; whether the rule outweighs Claude Code's built-in "when in doubt, don't spawn", a probe would say; whether `rules/` reaches Claude Code's sub-agents, unverified.
 - [ ] `philosophy/mandate.md` updated to match, with `writing-philosophy`: the brief as a hypothesis, that the task can be bounded and done well while bound, done or falsified; delegating as an epistemic action (Kirsh & Maglio); the sign is the blast radius, and past it the task is cut. The figure the user validated, never in the file:
 
   ```
