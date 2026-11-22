@@ -30,21 +30,58 @@ The test at each move: could this surprise the echelon above? Measured against t
 
 A mandate reaches as far as the brick has proven reliable (φharness-direction). Reliable means the result is taken unchecked. No operator stands over the run; the echelon above reads the report and does not redo the work.
 
-## The reachability dial
+## The limits
 
-Mission command assumes a commander out of reach: when the order no longer fits, the subordinate acts within the intent and reports after. Here the echelon above is often one message away. The image is **NASA mission control**: the crew flies the nominal alone, the off-nominal goes to the ground, and crew autonomy grows with the communication delay.
+A mismatch is never forced through. What it becomes depends on how far it is off, against **control limits** (Shewhart) drawn around the expectation:
 
 ```
- above, on the loop  ◀────────────────────────────▶  above, out of reach
- the user engaged; a session over its sub-agent      the user away, asleep, in a meeting
- off-nominal: reported before acting                 off-nominal: settled within the intent,
-                                                     named in the debrief
+ something does not match ──▶ never forced through
+                               │
+                               ▼
+                     is it past the limits?       ◀── the brief sets the limits
+                      │                    │
+                      no                   yes
+                      ▼                    ▼
+              settled within          cut there:
+              the intent, named       the friction climbs
+              in the report
+
+ limits     tight ◀──────────────────────────────────────────▶ wide
+            in the loop          on the loop            autopilot
+            the design,          a proven workflow      workflows chained,
+            thought together                            no design stop between
 ```
 
-The brief sets the dial. On the loop, steering each move is the work and a turn handed back costs one message. Out of reach, each level has its fault:
+In and on the loop say where the human stands: in the loop on the design, on the loop over a workflow whose friction climbs.
 
-- **The long screwdriver**, the field's own name: the echelon above reaches down into the nominal and steers each move.
-- **Upward delegation** (Oncken & Wass, the monkey): the one below yields its turn with work left in its mandate: roger without wilco, or mother-may-I.
+## Where the limits sit
+
+Attention is the scarce resource (Simon). The limits sit where two sides meet: what the task asks of the user's attention, and what attention the user has to give now.
+
+```
+ WHAT THE TASK ASKS                          WHAT THE USER HAS TO GIVE
+ ──────────────────────────────              ──────────────────────────────
+ theory, to steer later    (always)          present, engaged
+ quality the machine       (for now)         multitasking
+   does not reach yet                        away, asleep
+ nothing
+
+ the task asks, the user is there   ──▶  in the loop, tight limits
+ the task asks, the user is away    ──▶  wide limits, the attention paid later:
+                                         the work reviewed whole
+ the task asks nothing              ──▶  wide limits, wherever the user is
+```
+
+- **Theory.** A program is the theory its makers hold (Naur, programming as theory building), and the theory forms by acting, in the loop (enacted cognition, Varela); the operator taken out of the loop cannot take over (Bainbridge, ironies of automation). Modeling what sits at the core asks for it, and no skill removes that.
+- **Quality.** A brick not yet proven is steered move by move. This is a harness gap, and closing it widens the limits (φharness-direction).
+- **Nothing.** A proven workflow, tooling, a probe. A probe in code is an epistemic action (Kirsh & Maglio) standing on a rollback that is given, not designed in.
+
+Neither side causes the other: the user adjusts whichever is free. Going to bed fixes what there is to give, and the work is picked to fit; a core model fixes what is asked, and the user shows up. The image is **NASA mission control**: crew autonomy grows with the communication delay.
+
+Each end has its fault:
+
+- **The long screwdriver**, the field's own name: tight limits on a task that asks nothing; the echelon above reaches down into the nominal and steers each move.
+- **Upward delegation** (Oncken & Wass, the monkey): an exception climbing from inside the limits, the one below yielding its turn with work left in its mandate: roger without wilco, or mother-may-I. It is **tampering** (Deming) seen from below.
 
 ## Related
 
