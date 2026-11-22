@@ -6,7 +6,7 @@ Every line is costly to the reader, in attention or in tokens, but cheap for the
 
 Write from where the reader stands: what it holds, never what the writer holds.
 
-- Before sending, a cognitive walkthrough: in the reader's place, holding only what it holds, what does it understand?
+- Before writing, a cognitive walkthrough: in the reader's place, holding only what it holds, what does it understand?
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
 - Code goes in a code block, a quote in `>`.
 - Structure shows as structure: parallel items in a list, a comparison in a table. A figure is for a human reader.
