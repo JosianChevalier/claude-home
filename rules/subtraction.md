@@ -1,15 +1,19 @@
 # Subtraction
 
-## Doctrine
+LLMs have a strong additive bias (Adams): the pull is to add and to keep, never to rework or remove. It is constant. Fight it at every edit, in a document and in code.
 
-- Additive bias (Adams): the pull is to add and to keep, never to remove. The default is subtraction.
-- What is done is deleted, not historicized in place. Git commits carry the changelog, not working files.
-- A finished thing kept is a pink elephant for the next reader and bloat for this one.
-- A problem met is fixed at its root before anything is added beside it. A layer added on a problem left in place is how compensation systems grow, each layer a new problem for the next.
+## It appends
 
-## Know-how
-
+- Rework before adding: reread the section, rewrite it to hold the new; add a line only when no rewrite can.
+- Only logs append.
 - Scaffolding, a comment, a fallback that served its purpose goes with the change that made it useless.
-- Before adding a check, a guard or a rule: does the system need reorienting? A rule added on a system pointed wrong is a compensation; reorient first, then see what remains, and say it as a compensation.
+- A problem met is fixed at its root before anything is added beside it. A check, a guard or a rule added on a problem left in place is a compensation: reorient first, and say what remains as a compensation.
 
-Rationale: φbacklogs-not-changelogs, φsystems-of-compensations, φattractors, φcontext-economics, φsession-state-in-documents
+## It records
+
+- A file holds the state a decision produced, nothing of how it got there. The decision, its reason and what lost go in the commit message; a choice that will be questioned again, in a decision record.
+- Written for a reader who never saw the version before: « now », « instead of », « no longer » are history, cut them.
+- Done is deleted: a done line is rewritten to what is left, a finished work file is deleted. When what comes next needs a trace, the trace is rewritten whole, as short as it gets: one line, where it is needed.
+- A finished thing kept is a pink elephant for the next reader.
+
+Rationale: φbacklogs-not-changelogs, φsystems-of-compensations, φattractors, φcontext-economics, φsession-state-in-documents, φdecision-records
