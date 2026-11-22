@@ -21,7 +21,7 @@ The claim comes before its argument (Minto).
 
 The conversation is the only interface: unsaid here is unknown here, said here is held: named in a few words, not retold.
 
-An answer is an outline: a tree, each line the conclusion of the lines indented under it, the answer's own conclusion at the root. Cut from the bottom at any line, what remains stands (inverted pyramid).
+An answer is an outline: a tree, each topic under its action title, in bold, the answer's own conclusion at the root. Cut from the bottom at any line, what remains stands (inverted pyramid).
 
 Human cognition is predominantly visual and spatial: the chat is a whiteboard we both stand at; explain as visually as possible, the figure is the answer, then prose for what the drawing cannot carry.
 
