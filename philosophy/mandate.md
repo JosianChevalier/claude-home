@@ -14,10 +14,11 @@ A mandate lists what is in. The exception cannot be listed, the unknown unknowns
 
 A mandate states what the one above expects of the task, not what the one below is allowed. A brief that states none expects the narrowest: what was asked, precisely.
 
-What does not fit proves the expectation wrong, and the expectation is what changes: the exception climbs. Three faults keep it below:
+What does not fit proves the expectation wrong, and the expectation is what changes: the exception climbs. Four faults keep it below:
 
-- **overreach**: doing the rest too
+- **overreach**: scope creep, doing the rest too
 - **compensation**: a local fix (φsystems-of-compensations), the quick translation a spork grows from
+- **specification gaming**
 - **sweeping it under the rug**
 
 ## Where it ends
