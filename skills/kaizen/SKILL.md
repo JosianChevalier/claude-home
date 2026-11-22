@@ -21,7 +21,7 @@ Kaizen is its own activity. Its temporary file survives `/clear` in the same env
 ```
  load      silent: the core, `philosophy/navigation/navigation.sh tag kaizen`
  opening   `bash <skill-base>/scripts/grab-kaizen-file.sh` creates the private file; record groups ──▶ the user picks
- round     one group: evidence ──▶ attractors ──▶ verdict ──▶ decision ──▶ edit, commit;
+ round     one group: evidence ──▶ attractors ──▶ verdict ──▶ decision ──▶ edit, commit ──▶ probe, when possible;
            distill the file with the selection, evidence, verbatim transcript search anchors and next open move
  handover  when crossing `/clear`, point to the file's absolute path, not its contents;
            the successor runs `bash <skill-base>/scripts/grab-kaizen-file.sh <absolute-path>` to reopen it
@@ -60,6 +60,8 @@ One group per turn. When something went wrong in the session, `transcript-attrac
  doctrine not complied with         ──▶ the step pulling against it, or the aphorism's place
  doctrine complied with, unfit      ──▶ rewrite the doctrine, up to the philosophy if it reaches there
 ```
+
+An edit is probed before its round closes, whenever what it governs can be produced on demand: what the agent writes in the chat always can. The brief is a real case from the session: the situation, the raw material, and a pointer to the edited element alone. The user validates the expected output once, and the unwanted one is kept beside it. Fresh sub-agents of the type the element is for each produce what the element governs, and the edit is judged by how many of them reach the expected. The brief is the constant: never edited between rounds. A probe that misses is the next round's evidence.
 
 A gate lost to the pull of the task, a stop or a hand-back skipped: the gated action becomes the turn's deliverable. "Execute" while a question stands gets the list of open questions, not an edit; the agent never answers them in the user's place.
 
