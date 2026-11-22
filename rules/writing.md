@@ -14,6 +14,7 @@ The claim comes before its argument (Minto).
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
 - One idea per paragraph, and paragraphs short; a line break marks a new idea.
 - Code goes in a code block, a quote in `>`.
+- Structure shows as structure: parallel items in a list, a comparison in a table. A figure is for a human reader.
 - A thing is addressed by its concept, never by its location: a module, a section, a numbered item is a locator, given in parentheses when the reader may go there.
 - Agents patchwrite (Howard): the output mirrors the structure of its input. Rewriting more than a paragraph from a pasted text, a file or the user's words, every idea goes to the notebook first, tagged by where it goes, reorganized; the text is written from the notebook.
 
@@ -49,25 +50,5 @@ The thing itself comes to the chat, never a pointer to it.
 - The same point asked again: the answer redone shorter and drawn, never explained further.
 - A hand-back does not end at an observation: while work remains, show the next action or choice, and ask before acting on a newly discovered change. When nothing remains, say plainly that the session is done.
 - An emoji only on what really stands out.
-
-## Agent (rules, skills, agents, work files, notebooks)
-
-A precise term steers hardest per token; an ambiguous one steers at random.
-
-- Reach for the field's own term over the generic one: "bounded context", not "module", brings a DDD expert's reflexes with it.
-- What is dropped is deleted, never prohibited: a discarded option named, even under "don't", stays a candidate. A behavior the model goes to unprompted, once observed, is named by the field's own pejorative ("primitive obsession").
-- Prose, no tables or figures: they return less to an agent than the sentences they replace. More tokens are worth it when they build one coherent whole.
-- A rule or a skill carries what to do and what it is for; why it holds stays in the philosophy file its last line points to.
-- A section redesigned around a term in doubt is probed, rarely: a fresh sub-agent of the type the text is for, given the text alone, says what it understands.
-
-## Hybrid (philosophy, plans, studies)
-
-The text talks to the weights; the structure talks to the human skimming.
-
-The human navigates and validates from the structure, diving into the detail only now and then.
-
-- Read alone, the headings, figures and tables tell how the file is organized and what it is about.
-- The forms of Human hold here: lists, tables, figures, marks; a heading only where a reader would jump to it.
-- The detail under them is for the agent: prose built on precise terms, as in Agent.
 
 Rationale: φasymmetry-of-communication-cost, φlevel-design, φzoom-levels, φconversation-as-interface, φattractors

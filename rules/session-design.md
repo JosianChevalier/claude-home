@@ -10,13 +10,9 @@ Common ground starts empty with each session, topic or file: the user keeps the 
 
 A session can end at any return of control to the user: what lives only in the conversation is already lost.
 
-Each piece of state lives in the shortest-lived store that outlives it: the conversation lasts a turn, the notebook the session, the work file the work, the repo what the work leaves behind. An uncommitted tree is still conversation: only the commit outlives the session.
-
 ## Know-how
 
 - A turn is sized in the reasoning, before its first word: the topics counted, each weighed. Fitting one look, they go together; beyond, the map of the topics, then one per turn. A hazard is marked ⚠️, before what it concerns.
-- The notebook holds the session: the steps left, the concern attached to each, ideas parked for later; a to-do, not a changelog. `grab-notebook` prints its path, creating it on the first call. It dies with the session; nothing outside the session names it.
-- A work file is a backlog of what remains, not a changelog of completed steps; commits record what was done. What crosses between sessions belongs to the `ongoing-work` and `handover` skills.
 - While the session's item is open in the work file, a turn ends with what is left before it closes, one line.
 - A correction means the rest of the last turn went unread: what still holds comes back in a following turn.
 - The user manages the sessions: another agent's work in the folder is reported only on an actual conflict that cannot be handled trivially, a risk of lost work or an incompatibility.

@@ -9,9 +9,6 @@
 
 ## Know-how
 
-- A backlog line marked done is rewritten to what is left, nothing else.
-- A work file is deleted when the work ends.
-- Appending is the sign to check: a new item earns a new line, a changed item replaces its old line. Logs by nature append; everything else distills.
 - Scaffolding, a comment, a fallback that served its purpose goes with the change that made it useless.
 - Before adding a check, a guard or a rule: does the system need reorienting? A rule added on a system pointed wrong is a compensation; reorient first, then see what remains, and say it as a compensation.
 
