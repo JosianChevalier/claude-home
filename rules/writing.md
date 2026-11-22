@@ -6,16 +6,11 @@ Every line is costly to the reader, in attention or in tokens, but cheap for the
 
 Write from where the reader stands: what it holds, never what the writer holds.
 
-Each piece of information goes in the form that reduces the reader's extraneous cognitive load.
-
-The claim comes before its argument (Minto).
-
 - Before sending, a cognitive walkthrough: in the reader's place, holding only what it holds, what does it understand?
 - An obstacle costs the reader more than it carries: a word from the writer's session, a file the reader never loads, two lines that contradict.
-- One idea per paragraph, and paragraphs short; a line break marks a new idea.
 - Code goes in a code block, a quote in `>`.
 - Structure shows as structure: parallel items in a list, a comparison in a table. A figure is for a human reader.
-- A thing is addressed by its concept, never by its location: a module, a section, a numbered item is a locator, given in parentheses when the reader may go there.
+- A thing is addressed by its concept; its location, if useful, in parentheses.
 - Agents patchwrite (Howard): the output mirrors the structure of its input. Rewriting more than a paragraph from a pasted text, a file or the user's words, every idea goes to the notebook first, tagged by where it goes, reorganized; the text is written from the notebook.
 
 ## Human (the chat)
