@@ -56,14 +56,14 @@ The mode is the user's choice, made before the brief, where two sides meet: what
    does not reach yet                        away, asleep
  nothing
 
- the task asks, the user is there   ──▶  in the loop, tight limits
- the task asks, the user is away    ──▶  wide limits, the attention paid later:
+ the task asks, the user is there   ──▶  mecha suit, in the loop
+ the task asks, the user is away    ──▶  autopilot, the attention paid later:
                                          the work reviewed whole
- the task asks nothing              ──▶  wide limits, wherever the user is
+ the task asks nothing              ──▶  autopilot, wherever the user is
 ```
 
 - **Theory.** Being in the loop is theory building (Naur), enacted cognition: what the user needs to keep steering in the long term. Modeling what sits at the core asks for it, and no skill removes that.
-- **Quality.** A brick not yet proven is steered move by move. This is a harness gap, and closing it widens the limits (φharness-direction).
+- **Quality.** A brick not yet proven is steered move by move. This is a harness gap, and closing it frees the work for autopilot (φharness-direction).
 - **Nothing.** A proven workflow, tooling, a probe. A probe in code is an epistemic action (Kirsh & Maglio) standing on a rollback that is given, not designed in.
 
 Neither side causes the other: the user adjusts whichever is free. Going to bed fixes what there is to give, and the work is picked to fit; a core model fixes what is asked, and the user shows up. Mission command assumes a commander out of reach; here the echelon above is often one message away. The image is **NASA mission control**: the crew flies the nominal alone, the off-nominal goes to the ground, and crew autonomy grows with the communication delay.
