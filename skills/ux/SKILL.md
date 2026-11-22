@@ -12,7 +12,7 @@ description: Any work on UX: designing, reviewing or discussing a screen, a user
 - The tactical axis stands on Yablonski's Laws of UX: a law is used under his name for it and as he states it, and his site, lawsofux.com, settles any doubt on what a law says.
 - Structure goes to cognition before it goes to the screen: a group is shown by proximity before a box, an action by its convention before a label. A limit of cognition is read as a lever. What memory would have to carry goes on the screen (Norman).
 - Task-based UI (Young): the screen offers the model's operations, each named as the model names it, and sends the intent. A CRUD form over a model that has behaviour loses the reason for the change.
-- HATEOAS (Fielding): an affordance is present when the response carries its link. An invariant shows as an absent affordance, never a disabled control or an error after the fact.
+- An invariant shows as an absent affordance, never a disabled control or an error after the fact.
 - Complexity is conserved (Tesler): what the model does not absorb, the user carries.
 
 ## Know-how
