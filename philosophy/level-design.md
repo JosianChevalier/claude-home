@@ -31,11 +31,11 @@ The measure is return per token. A schema lowers a human's extraneous load and r
 
 ## Three writing modes
 
-| Mode | Where | Designed for |
-|---|---|---|
-| Human | the chat | clarity above all: communication costs are asymmetric (φasymmetry-of-communication-cost) |
-| Agent | rules, skills, agents, work files, notebooks | the agent embedded |
-| Hybrid | philosophy, plans, studies | the agent embedded, the human reflexive |
+| Mode | Where | Examples | Designed for |
+|---|---|---|---|
+| Human | the chat | | clarity above all: communication costs are asymmetric (φasymmetry-of-communication-cost) |
+| Agent | a file only an agent reads | rules, skills, agents, work files, notebooks | the agent embedded |
+| Hybrid | a file a human reads too | philosophy, plans, studies | the agent embedded, the human reflexive |
 
 Agent text is written in attractors: it talks to the weights. What the weights or the preloaded context hold is not spelled out; what departs from the default is.
 
