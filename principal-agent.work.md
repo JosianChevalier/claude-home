@@ -5,7 +5,7 @@ rank: 99
 
 # principal-agent
 
-The user's words: principal-agent theory is "the entire problem", the reason he still needs to find a way of staying inside the loop. It is not for `philosophy/mandate.md`; it is to be used somewhere else, not yet chosen.
+The user's words: principal-agent theory is "the entire problem", the reason they still need to find a way of staying inside the loop. It is not for `philosophy/mandate.md`; it is to be used somewhere else, not yet chosen.
 
 ## What was told to the user, the material to place
 
