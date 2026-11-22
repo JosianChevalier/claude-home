@@ -67,6 +67,7 @@ What each tag in `philosophy/*.md` gathers in this corpus, to choose which tag t
 | tactical-ddd | DDD building blocks in code; here, the aggregate. |
 | types | Invariants carried by the type: parsed once at the entry, the invalid state unrepresentable. |
 | trunk-based-development | Commit on trunk as the definition of continuous integration, for humans and agents. |
+| ux | The screen as an expression of the model, human cognition its grammar. |
 | variety-absorption | Levels absorb the variety they can hold and pass the rest up to the engineer. |
 | verification | Checks confirming a refactoring move's precondition; safety lives in the process. |
 | vocabulary | Precise terms as attractors, and the named elements of harness and model. |

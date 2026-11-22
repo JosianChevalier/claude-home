@@ -1,5 +1,5 @@
 ---
-tags: [ddd, domain-modeling, bounded-contexts, vocabulary, conceptual-integrity, architecture]
+tags: [ddd, domain-modeling, bounded-contexts, vocabulary, conceptual-integrity, architecture, ux]
 ---
 
 # Model expressions
@@ -12,6 +12,8 @@ Every expression has two defining constraints:
 
 - **Grammar-bounded** — each medium has its own grammar (a type system, relational algebra, REST's uniform interface, natural language), and an expression can only say what its grammar allows. SQL has no sum types; REST has no lifecycle preconditions.
 - **Concern-focused** — each grammar was built for one concern, so each expression is a projection: it preserves the dimensions matching its concern and loses the rest. SQL preserves structure, loses behavior; REST preserves resource state, loses workflow; a user story preserves intent, loses structure; oral discussion preserves everything informally, enforces nothing.
+
+The UI is the view of the model exposed to the user, and its grammar is human cognition, 4E: the screen leans on what cognition carries unprompted, grouping, expectation, sequence, salience, and draws only the rest. The Laws of UX (Yablonski) catalogue that grammar, each a limit read as a lever.
 
 ## Bounded context = system of cohesive expressions
 
