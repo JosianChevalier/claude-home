@@ -103,16 +103,17 @@ Held at the end: the human stays central and the agent drives; context is the sc
 
 *What does this do to how I think, and what stays mine?*
 
-1. [collaborative-production](collaborative-production.md): a model of the work is built only by taking part, so the agent belongs inside the loop as driver.
-2. [model-phenomenology](model-phenomenology.md): what I hold and the agent cannot, a type with a horizon; why the human stays central.
-3. [transmission-belt](transmission-belt.md): remove the medium's load, transmit the domain's, friction included; the type grows on the friction that comes back.
-4. [embodied-navigation](embodied-navigation.md): thinking runs on spatial machinery; moving through code is how I think with it.
-5. [conversation-as-interface](conversation-as-interface.md): the chat is my only medium, and I still go down to the files.
-6. [mechanical-refactoring](mechanical-refactoring.md): moves cost no understanding, so understanding is spent only on the model.
-7. [zoom-levels](zoom-levels.md): a message is a map; attention is the budget, and the map is the channel.
-8. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
+1. [4e-cognition](4e-cognition.md): my thinking is extended, embedded, enacted, embodied; what each face must keep when an agent does the work.
+2. [collaborative-production](collaborative-production.md): a model of the work is built only by taking part, so the agent belongs inside the loop as driver.
+3. [model-phenomenology](model-phenomenology.md): what I hold and the agent cannot, a type with a horizon; why the human stays central.
+4. [transmission-belt](transmission-belt.md): remove the medium's load, transmit the domain's, friction included; the type grows on the friction that comes back.
+5. [embodied-navigation](embodied-navigation.md): thinking runs on spatial machinery; moving through code is how I think with it.
+6. [conversation-as-interface](conversation-as-interface.md): the chat is my only medium, and I still go down to the files.
+7. [mechanical-refactoring](mechanical-refactoring.md): moves cost no understanding, so understanding is spent only on the model.
+8. [zoom-levels](zoom-levels.md): a message is a map; attention is the budget, and the map is the channel.
+9. [metis-kairos](metis-kairos.md): what no level can absorb reaches me, and that arrival is the moment to improve.
 
-Forks: at 6, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md), how a step is made small and kept live, or the model in code, [ubiquitous-language](ubiquitous-language.md), [model-expressions](model-expressions.md), [always-valid-domain](always-valid-domain.md), [aggregates](aggregates.md), [continuous-design](continuous-design.md), [domain-first-implementation](domain-first-implementation.md); at 7, [batch-slicing](batch-slicing.md), everything is a hypothesis, then [feedback-loops](feedback-loops.md), [planning-is-everything](planning-is-everything.md), [map-isnt-territory](map-isnt-territory.md), [prototypes-are-probes](prototypes-are-probes.md), [continuous-delivery](continuous-delivery.md), the loops a hypothesis is tested in; at 8, [embedded-reflexive](embedded-reflexive.md), the reflexive work is mine, as deep as the breakdown goes.
+Forks: at 7, [make-the-change-easy](make-the-change-easy.md) then [change-in-place](change-in-place.md), how a step is made small and kept live, or the model in code, [ubiquitous-language](ubiquitous-language.md), [model-expressions](model-expressions.md), [always-valid-domain](always-valid-domain.md), [aggregates](aggregates.md), [continuous-design](continuous-design.md), [domain-first-implementation](domain-first-implementation.md); at 8, [batch-slicing](batch-slicing.md), everything is a hypothesis, then [feedback-loops](feedback-loops.md), [planning-is-everything](planning-is-everything.md), [map-isnt-territory](map-isnt-territory.md), [prototypes-are-probes](prototypes-are-probes.md), [continuous-delivery](continuous-delivery.md), the loops a hypothesis is tested in; at 9, [embedded-reflexive](embedded-reflexive.md), the reflexive work is mine, as deep as the breakdown goes.
 
 Held at the end: I stay central because I hold what the agent cannot; the harness transmits the friction, and that is where I learn; every practice is sized to my attention, and the moment that reaches me is where the harness improves.
 
