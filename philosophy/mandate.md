@@ -72,16 +72,16 @@ Attention is the scarce resource (Simon). The limits sit where two sides meet: w
  the task asks nothing              ──▶  wide limits, wherever the user is
 ```
 
-- **Theory.** A program is the theory its makers hold (Naur, programming as theory building), and the theory forms by acting, in the loop (enacted cognition, Varela); the operator taken out of the loop cannot take over (Bainbridge, ironies of automation). Modeling what sits at the core asks for it, and no skill removes that.
+- **Theory.** Being in the loop is theory building (Naur), enacted cognition: what the user needs to keep steering in the long term. Modeling what sits at the core asks for it, and no skill removes that.
 - **Quality.** A brick not yet proven is steered move by move. This is a harness gap, and closing it widens the limits (φharness-direction).
 - **Nothing.** A proven workflow, tooling, a probe. A probe in code is an epistemic action (Kirsh & Maglio) standing on a rollback that is given, not designed in.
 
-Neither side causes the other: the user adjusts whichever is free. Going to bed fixes what there is to give, and the work is picked to fit; a core model fixes what is asked, and the user shows up. The image is **NASA mission control**: crew autonomy grows with the communication delay.
+Neither side causes the other: the user adjusts whichever is free. Going to bed fixes what there is to give, and the work is picked to fit; a core model fixes what is asked, and the user shows up. Mission command assumes a commander out of reach; here the echelon above is often one message away. The image is **NASA mission control**: the crew flies the nominal alone, the off-nominal goes to the ground, and crew autonomy grows with the communication delay.
 
 Each end has its fault:
 
-- **The long screwdriver**, the field's own name: tight limits on a task that asks nothing; the echelon above reaches down into the nominal and steers each move.
-- **Upward delegation** (Oncken & Wass, the monkey): an exception climbing from inside the limits, the one below yielding its turn with work left in its mandate: roger without wilco, or mother-may-I. It is **tampering** (Deming) seen from below.
+- **The long screwdriver**, the field's own name: the echelon above reaches down into the nominal and steers each move.
+- **Upward delegation** (Oncken & Wass, the monkey): the one below yields its turn with work left in its mandate: roger without wilco, or mother-may-I.
 
 ## Related
 
