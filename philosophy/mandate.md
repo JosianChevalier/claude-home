@@ -30,33 +30,23 @@ The test at each move: could this surprise the echelon above? Measured against t
 
 A mandate reaches as far as the brick has proven reliable (φharness-direction). Reliable means the result is taken unchecked. No operator stands over the run; the echelon above reads the report and does not redo the work.
 
-## The limits
+## What climbs
 
-A mismatch is never forced through. What it becomes depends on how far it is off, against **control limits** (Shewhart) drawn around the expectation:
+A mismatch is never forced through. Two questions follow, kept apart:
+
+- **Is it a surprise?** The test above, the same in every mode.
+- **Decide alone, or climb?** Judged on the nature of the change, not its size: a premise or a foundation against a small consequence, the blast radius, whether it can be reviewed afterwards. The bar moves with access:
 
 ```
- something does not match ──▶ never forced through
-                               │
-                               ▼
-                     is it past the limits?       ◀── the brief sets the limits
-                      │                    │
-                      no                   yes
-                      ▼                    ▼
-              settled within          cut there:
-              the intent, named       the friction climbs
-              in the report
-
- limits     tight ◀──────────────────────────────────────────▶ wide
-            in the loop          on the loop            autopilot
-            the design,          a proven workflow      workflows chained,
-            thought together                            no design stop between
+ the user accessible  ◀──────────────────────────▶  the user out of reach
+ mecha suit                                          autopilot
+ low bar: it climbs early                            high bar: decided within the intent,
+                                                     named in the debrief
 ```
 
-In and on the loop say where the human stands: in the loop on the design, on the loop over a workflow whose friction climbs.
+## Upstream
 
-## Where the limits sit
-
-Attention is the scarce resource (Simon). The limits sit where two sides meet: what the task asks of the user's attention, and what attention the user has to give now.
+The mode is the user's choice, made before the brief, where two sides meet: what the work deserves of the user's attention, the scarce resource (Simon), and what the user has to give. The agent sees only its consequence: access.
 
 ```
  WHAT THE TASK ASKS                          WHAT THE USER HAS TO GIVE
