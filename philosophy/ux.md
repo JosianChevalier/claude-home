@@ -8,7 +8,7 @@ tags: [ux, ddd, domain-modeling]
 
 ## The grammar is cognition
 
-The UI is one expression of the model (φmodel-expressions), the view exposed to the user. Its grammar is human cognition, 4E: the screen leans on what cognition carries unprompted, grouping, expectation, sequence, salience, and draws only the rest, Tufte's data-ink. What perception and habit carry is free, what memory would have to carry goes on the screen: knowledge in the head and in the world (Norman). The Laws of UX (Yablonski) catalogue that grammar, each a limit read as a lever.
+The UI is one expression of the model (φmodel-expressions), the view exposed to the user. Its grammar is human cognition, 4E (φ4e-cognition): the screen leans on what cognition carries unprompted, grouping, expectation, sequence, salience, and draws only the rest, Tufte's data-ink. What perception and habit carry is free, what memory would have to carry goes on the screen: knowledge in the head and in the world (Norman). The Laws of UX (Yablonski) catalogue that grammar, each a limit read as a lever.
 
 ## Two axes
 

@@ -6,7 +6,7 @@ tags: [cognition, code-review, harness-design, collaboration]
 
 **Thesis.** The engineer thinks with the code by moving through it. Seeing it is not enough. For the best result, the code needs a stable spatial representation, and the engineer needs to navigate it actively.
 
-This is the embodied face of the enacted loop (φcollaborative-production). In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it.
+This is the embodied face of 4E cognition (φ4e-cognition). In its original sense (Varela, Thompson & Rosch), enaction is sensorimotor: a world is known by acting in it.
 
 ## The body thinks in space
 

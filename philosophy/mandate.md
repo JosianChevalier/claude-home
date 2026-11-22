@@ -63,7 +63,7 @@ The mode is the user's choice, made before the brief, where two sides meet: what
  the task asks nothing              ──▶  autopilot, wherever the user is
 ```
 
-- **Theory.** Being in the loop is theory building (Naur), enacted cognition: what the user needs to keep steering in the long term. Modeling what sits at the core asks for it, and no skill removes that.
+- **Theory.** Being in the loop is theory building (Naur), enacted cognition (φ4e-cognition): what the user needs to keep steering in the long term. Modeling what sits at the core asks for it, and no skill removes that.
 - **Quality.** A brick not yet proven is steered move by move. This is a harness gap, and closing it frees the work for autopilot (φharness-direction).
 - **Nothing.** A proven workflow, tooling, a probe. A probe in code is an epistemic action (Kirsh & Maglio) standing on a rollback that is given, not designed in.
 

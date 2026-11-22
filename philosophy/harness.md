@@ -8,7 +8,7 @@ tags: [harness-design, collaboration, context-economics]
 
 ## One system
 
-Three parts are designed: the human's cognition, read as 4E, embodied, embedded, enacted, extended (φcollaborative-production); the agent's context, the scarce resource (φcontext-economics); and their interaction, collaborative production, the transmission belt. They are not three components but three properties of one system, deeply intertwined, and never designed apart. Every practice caters to all three, and the practices reinforce each other across them (φagentic-extreme-programming).
+Three parts are designed: the human's cognition, read as 4E, embodied, embedded, enacted, extended (φ4e-cognition); the agent's context, the scarce resource (φcontext-economics); and their interaction, collaborative production, the transmission belt. They are not three components but three properties of one system, deeply intertwined, and never designed apart. Every practice caters to all three, and the practices reinforce each other across them (φagentic-extreme-programming).
 
 ## Friction-feel belongs to the whole
 
@@ -26,6 +26,7 @@ The strong-style driver is where the three meet: steered, it is harnessed; carry
 
 ## Related
 
+- The human's cognition, face by face: φ4e-cognition.
 - The LLM made an actant: φdreamt-agent.
 - The loop between engineer and agent, the three images in practice: φcollaborative-production.
 - Context as the scarce resource: φcontext-economics.

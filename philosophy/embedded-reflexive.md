@@ -8,7 +8,7 @@ tags: [cognition, collaboration, harness-design]
 
 ## Two modes
 
-- **Embedded.** Acting from within the environment, absorbed in it: the embedded face of 4E cognition, Schön's reflection-in-action.
+- **Embedded.** Acting from within the environment, absorbed in it: the embedded face of 4E cognition (φ4e-cognition), Schön's reflection-in-action.
 - **Reflexive.** Designing one's own conditions, why we act the way we do: Schön's reflection-on-action. Writing a harness element is the reflexive mode (φlevel-design).
 
 The two stay connected: what the embedded side meets feeds the reflexive side as it goes (φtransmission-belt).
@@ -40,5 +40,5 @@ An agent is embedded in semantics, read as a stream, not as a visual gestalt.
 - Designing the landscape another actant is embedded in: φlevel-design.
 - The belt carrying the breakdown up to the engineer: φtransmission-belt.
 - Escalations turned into harness changes: φkaizen.
-- The four faces of the enacted loop, embedded among them: φcollaborative-production.
+- The four faces of cognition, embedded among them: φ4e-cognition.
 - The human reader's map: φzoom-levels.

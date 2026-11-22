@@ -31,12 +31,7 @@ The driver is where the three images of the agent meet: steered by the navigator
 
 Plans, studies, documents, and code emerge from interaction with the user and the system under change. The relevant point is enactive and extended: thinking happens through the act, and a notebook or an agent tightly coupled to it is part of the thinking. The boundary of the mind sits wherever that loop stays unbroken. The agent acts inside the engineer's loop, and the artifact externalizes the current shared model.
 
-The loop has four faces, 4E cognition:
-
-- **Enacted.** A model is built by taking part, not by watching.
-- **Extended.** The agent and the notebook coupled to the act are part of the mind (Clark & Chalmers): the agent is a mecha suit, extending the engineer's intention rather than acting as an autonomous robot.
-- **Embedded.** Thinking is situated in its terrain: the engineer still goes down to the code (φconversation-as-interface).
-- **Embodied.** Thinking runs on the body's spatial machinery: the engineer moves through the code and feels where they are (φembodied-navigation).
+The loop has four faces, extended, embedded, enacted, embodied: φ4e-cognition.
 
 The artifact is therefore not the primary act. The conversation is the act; the artifact crystallizes the current shared model. In belt terms: the conversation is where the belt runs, and the engineer's intention is carried, not improved — a better idea is a rival reading offered at a gate (φkairos-gates), an unchosen concept returns up the belt (φtransmission-belt).
 
@@ -99,5 +94,5 @@ What works, in the order it is usually needed:
 - Why a long run costs, in context and in error: φcontext-splitting, φcompounding-decisions.
 - Why the whiteboard scene pulls harder than a rule: φattractors.
 - Shape questions under the same test: φshape-and-substance.
-- The embodied face of the loop: φembodied-navigation.
+- The four faces of the loop, and what each asks of the engineer: φ4e-cognition.
 - The embedded face, and the reflexive mode that designs its conditions: φembedded-reflexive.
