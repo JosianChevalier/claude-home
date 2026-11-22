@@ -10,22 +10,10 @@ The user wants the main session to stop spending context on bounded steps: two g
 ## Steps
 
 - [ ] The user may still soften the two fault lines of the dial section in `philosophy/mandate.md`.
-- [ ] `rules/delegation.md`, live with its first two paragraphs, loaded by session and sub-agent alike on both clients, pure doctrine without headers or rationale line; no hook, the user finds them opaque. Its last two paragraphs are a proposal the user has not validated, to take first: ← next
+- [ ] `rules/delegation.md` is live whole, loaded by session and sub-agent alike on both clients, pure doctrine without headers or rationale line; no hook, the user finds them opaque. Open: "the limits" rests on the weights when a brief only says "autopilot"; whether the rule outweighs Claude Code's built-in "when in doubt, don't spawn", a probe would say; whether `rules/` reaches Claude Code's sub-agents, unverified.
+- [ ] `philosophy/mandate.md` updated to match, with `writing-philosophy`: ← next
 
-  ```
-  The brief is a mission order, and may be an epistemic action: it tests a hypothesis, that the task can be bounded and done well inside its bounds. It declares what the session expects; everything else is the exception. A brief declaring nothing expects the narrowest: what was asked, precisely.
-
-  The nominal is the sub-agent's alone. The task comes back done, or the hypothesis falsified by an exception: both are results. The sign is the blast radius: a task reaching past what its brief supposed is cut there, and the rest it called for climbs in the report: the andon is pulled.
-
-  Three faults keep it below:
-
-  - overreach: scope creep, the rest done too
-  - compensation: a workaround, specification gaming
-  - sweeping it under the rug: the exception swallowed
-  ```
-
-  Settled by the user: "a sub-agent or a sub-session" in the first paragraph; the essence is the hypothesis, not a boundary enforced, and both outcomes are stated as equal; blast radius or impact, not effort; the impact that should have been made is said in the report; the faults are named, by the philosophy's terms; "default-deny", an opening line defining delegation and "the report taken unchecked" stay out; the faults as a list, structure serves the agent too. Settled since: "every mission order is a hypothesis of realizability", after "every user story is a hypothesis of value"; a mismatch is never forced through, on any setting; autopilot is not a second branch but the same mechanism with a wider sensitivity, how far a thing must be off before it climbs (Deming's tampering, Shewhart's common and special causes); the user is uneasy with "above, on the loop" in the dial: in his model the human is in the loop on the design and on the loop over a proven workflow, whose friction climbs; the figure of the mechanism may be written somewhere, not decided where. Open: blast radius fits a command, a query's sign is rather a false premise; whether the rule outweighs Claude Code's built-in "when in doubt, don't spawn", a probe would say; whether `rules/` reaches Claude Code's sub-agents, unverified.
-- [ ] `philosophy/mandate.md` updated to match, with `writing-philosophy`: the brief as a hypothesis, that the task can be bounded and done well while bound, done or falsified; delegating as an epistemic action (Kirsh & Maglio); the sign is the blast radius, and past it the task is cut. The figure the user validated, never in the file:
+  The rule holds the fork, what the agent does with the limits it got; the philosophy holds how the user sets them, since an agent reads the brief and not the user's attention. The limits sit where two sides meet (attention as the scarce resource, Simon): what the task asks of the user's attention, and what attention the user has to give now. The task asks for theory, to steer later, always (Naur, programming as theory building; Bainbridge, ironies of automation; enacted cognition under both); or for the quality the machine does not reach yet, for now, a harness gap whose closing widens the limits (φharness-direction); or for nothing: a probe, tooling, a proven workflow. The user is engaged, multitasking or away. The task asks and the user is there: in the loop, tight. The task asks and the user is away: wide, the attention paid later, the work reviewed whole. The task asks nothing: wide wherever the user is. Neither side causes the other; the user adjusts whichever is free. A probe in code is an epistemic action standing on a rollback that is given, not Snowden's safe-to-fail, which is designed in. "Above, on the loop" goes: in and on the loop say where the human stands, in the loop on the design, on the loop over a proven workflow whose friction climbs. Tampering (Deming) names the operator correcting inside the limits. Also from the rule: the brief as a hypothesis, that the task can be bounded and done well while bound, done or falsified; delegating as an epistemic action (Kirsh & Maglio); the sign is the blast radius, and past it the task is cut. The figure the user validated, never in the file:
 
   ```
    something does not fit the brief
