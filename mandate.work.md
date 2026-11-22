@@ -35,6 +35,30 @@ The user wants the main session to stop spending context on bounded steps: two g
           ├─ under the rug      sees it, says nothing                       swallowing the exception
           └─ it climbs  ✓       stops and says so                           pulling the andon (Ohno)
   ```
+  The figure the user validated for the file, to replace the reachability dial's own, with the rule's wording settled first:
+
+  ```
+   something does not match ──▶ never forced through
+                                 │
+                                 ▼
+                       is it past the limits?       ◀── the brief sets the limits
+                        │                    │
+                        no                   yes
+                        ▼                    ▼
+                settled within          cut there, it climbs:
+                the intent, named       the friction climbs
+                in the report
+
+
+   limits     tight ◀──────────────────────────────────────────▶ wide
+              in the loop          on the loop            autopilot
+              the design,          a proven workflow      workflows chained,
+              thought together                            no design stop between
+
+   widened by                      earned: repeatable     chosen: low stakes, or
+                                   results, exceptions    the understanding paid
+                                   caught most times      afterwards
+  ```
 - [ ] Parked by the user, maybe later: the two sub-agents themselves, with `kaizen`. The query agent is new and sits beside the built-in Explore, for the queries Explore does not do, its description pulling nothing away from Explore, on OpenCode as on Claude Code; a description was drafted and not validated: "A bounded question answered by running something or reading at length: the tests, a build, a log, the git history, a long document. Changes nothing; returns the answer." Open: the command agent's few lines; the report, written for the main session, a short recap with context, more detailed than what reaches the user, the main session not rereading the work.
 - [ ] Parked, for when the skill for writing for agents is reintroduced: it shows the basic structure of an agent text. An agent is biased to follow the structure it is given, so the text carries structure, lists and the like; no schemas for agents.
 - [ ] Parked, a philosophy to write sometime: told to probe, to find errors or to falsify the premise, an agent does it whether or not it is relevant, the weaker models most; such an instruction always gives both outcomes.
