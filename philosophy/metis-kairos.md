@@ -46,20 +46,19 @@ Kaizen's drift guard (φkaizen) is the last guard against too loose: a fix that 
 
 ## Mission command
 
-The field that already holds this file is **mission command** (Auftragstaktik; US Army ADP 6-0): commander's intent, disciplined initiative, report by exception. The echelon above hands down the task, the intent behind it, and its **CCIR**, the critical information requirements, what it wants to hear at once. Below, each echelon absorbs what is its job and never asks about the door; what would surprise the echelon above is reported before acting. The test at each move: could this surprise the echelon above? Measured against the brief: what the brief already settled is never a surprise.
+The field that already holds this file is **mission command** (φmandate). Mapped onto this file: the mandate is the business as usual a flow declares; the CCIR name what lands in the error status; the back-brief is the calibration gate (φkairos-gates), where a doubt about the premise goes.
 
-Mapped onto this file: the intent is the business as usual a flow declares; the CCIR name what lands in the error status; the **back-brief**, the task restated in the subordinate's own words before moving, is the calibration gate (φkairos-gates), where a doubt about the premise goes. The echelon above is a human in a session, an agent or a script lower down; the same words serve each rung (φabstraction-ladder).
+When a brief declares no CCIR, four stand by default, the places a small change hides a large reach:
 
-When a task declares no CCIR, four stand by default, the places a small change hides a large reach:
-
-- scope: the step grew past one small change (φmap-isnt-territory)
-- structural: the step changes the rest of the plan or flow
+- scope: the step grew past one small change (φmap-isnt-territory): scope creep, its ripple effect, or yak shaving, what the step stands on has to change first
+- structural: the step changes what the rest of the plan or flow is meant to stand on
 - security: the class of consequence changes, as civilians change the rules of engagement
 - domain: the shape at the level being validated, its conceptual integrity (Brooks); the lower levels are the subordinate's, unless they get awkward
 
 ## Related
 
 - Where the loop runs and why it must return: φtransmission-belt.
+- The mandate, where it ends, and how reachable the echelon above is: φmandate.
 - Steps added on top of the loop to make the moment systematic: φkairos-gates.
 - The pattern this file is the top rung of: φabstraction-ladder.
 - The last guard against too loose: φkaizen.

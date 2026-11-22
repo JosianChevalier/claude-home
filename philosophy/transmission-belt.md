@@ -81,6 +81,7 @@ The properties the lower layers of the harness, rules and skills, should aim for
 - The system the belt is one image of: φharness.
 - What the belt transmits between: φmodel-phenomenology.
 - What escalates, and the moment it arrives: φmetis-kairos.
+- What the brief asks to hear at once, and where a mandate ends: φmandate.
 - Steps built on the loop to seize the moment by design: φkairos-gates.
 - Where the belt runs, and the test that keeps the harness honest: φcollaborative-production.
 - How to show what comes up: φzoom-levels, φcontext-economics.
