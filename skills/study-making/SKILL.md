@@ -10,7 +10,7 @@ description: Trigger word: "study" — "make a study", "study <mechanism>". Also
 - A study is a session, not a file request: the user's understanding is the product, the document its side effect (Brandolini).
 - A study takes an idea to the terrain: can it be made real, and what does the code say back. The idea lives in the user's head, not the code (the horizon, Husserl); a reading the code suggests is a candidate on the table, never a decision in the file.
 - Say the hypothesis, then probe it; the sooner the probe, the cheaper the hypothesis.
-- A study satisfices (Simon): a probe is run for the decision its answer would change, and the study ends at good enough to decide.
+- A study satisfices (Simon): a probe spends the user's attention as it saves some, the epistemic action; the study stops when the next probe would cost more than it saves.
 - Sometimes a cigar is just a cigar (Freud): a finding is not owed because one was expected; "nothing here" and "this is trivial" are answers.
 - Understanding that lives in the agent or the file is a study that failed.
 - A disappointment (Husserl's Enttäuschung) absorbed is a decision stolen: the belt carries the friction.
