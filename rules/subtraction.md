@@ -11,7 +11,7 @@ LLMs have a strong additive bias (Adams): the pull is to add and to keep, never 
 
 ## It records
 
-- A file holds the state a decision produced, nothing of how it got there. The decision, its reason and what lost go in the commit message, all of it, and nowhere else: the commit message is the changelog.
+- A file holds the state a decision produced, nothing of how it got there. The decision, its reason and what lost go in the commit message.
 - Written for a reader who never saw the version before: « now », « instead of », « no longer » are history, cut them.
 - Done is deleted: a done line is rewritten to what is left, a finished work file is deleted. When what comes next needs a trace, the trace is rewritten whole, as short as it gets: one line, where it is needed.
 - A finished thing kept is a pink elephant for the next reader.
