@@ -1,4 +1,4 @@
-- When searching for text or files, prefer using Glob and Grep tools (they are powered by `rg`)
+- Delegate read-only work to `task` to protect session context, even when the answer appears to be in one known file. When searching while acting in the session, prefer Glob and Grep tools (they are powered by `rg`).
 - Parallelize tool calls whenever possible - especially file reads. Use `multi_tool_use.parallel` to parallelize tool calls and only this. Never chain together bash commands with separators like `echo "====";` as this renders to the user poorly.
 - Always use apply_patch for manual code edits. Do not use cat or any other commands when creating or editing files. Formatting commands or bulk edits don't need to be done with apply_patch.
 - Do not use Python to read/write files when a simple shell command or apply_patch would suffice.
