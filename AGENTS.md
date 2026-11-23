@@ -20,7 +20,7 @@ Explicit, versioned, controlled: no memory files.
 
 Skill descriptions: front-load the literal trigger; workflow and guardrails live in the body.
 
-Precision decays with context; past 100k tokens output is untrustworthy. Protect both contexts: yours and the user's. Explore in the smallest useful circle, widen only when the current circle cannot answer the next decision, and use sub-agents as scouts for wider checks; they report only what is worth reading directly.
+Precision decays with context; past 100k tokens output is untrustworthy. Protect both contexts: yours and the user's. Explore in the smallest useful circle, widen only when the current circle cannot answer the next decision, and use sub-agents as scouts for wider checks; decide from their reports and send unresolved questions back as bounded tasks rather than rereading their sources.
 Rationale: φcontext-economics, φcontext-splitting
 
 `philosophy/` files and `Rationale:` refs (`φ<name>` is `philosophy/<name>.md`) serve harness improvement only.
