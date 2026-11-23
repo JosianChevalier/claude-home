@@ -20,11 +20,7 @@
     }
   },
   "instructions": [
-    "~/.config/opencode/rules/claude-questions.md",
-    "~/.config/opencode/rules/delegation.md",
-    "~/.config/opencode/rules/documents.md",
-    "~/.config/opencode/rules/session-design.md",
-    "~/.config/opencode/rules/subtraction.md",
+    "~/.config/opencode/rules/*.md",
     "~/.config/opencode/tools/docs/opencode.md"
   ]
 }
