@@ -27,6 +27,8 @@ Rationale: φcontext-economics, φcontext-splitting
 
 ## Mission command
 
-Give `task` a bounded outcome and scope, then let the sub-agent carry the work. Decide from its report without retracing its sources. When the brief does not hold, bring back the mismatch or send a remaining question as a bounded follow-up, not an expanded investigation in the session. Delegate only as far as the result can be used without redoing the work; keep unproven decisions in the user-steered session.
+ChatGPT's bias is to do read-only work in the main chat, consuming its context. Delegate anything that does not require acting to `task` to protect that context; take the report as the result, not an invitation to reread its sources.
 
-Rationale: φmandate, φharness-direction
+Give `task` a bounded outcome and scope, then let the sub-agent carry the work. When the brief does not hold, bring back the mismatch or send a remaining question as a bounded follow-up, not an expanded investigation in the session. Delegate only as far as the result can be used without redoing the work; keep unproven decisions in the user-steered session.
+
+Rationale: φcontext-economics, φcontext-splitting, φmandate, φharness-direction
