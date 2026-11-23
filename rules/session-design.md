@@ -4,7 +4,7 @@
 
 One beat per turn.
 
-A map, a zoom level, a you-are-here: a human needs all three to steer. The map opens the walk, drawn; "step X of Y" is the you-are-here at every step.
+A map locates the next decision at the scale that matters. Name the area and mark the boundary; zoom in only when the user needs a closer view.
 
 Common ground starts empty with each session, topic or file: the user keeps the main lines of the models and the harness, never the details.
 

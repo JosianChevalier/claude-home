@@ -1,7 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "rules/*.md",
+    "rules/claude-questions.md",
+    "rules/delegation.md",
+    "rules/documents.md",
+    "rules/session-design.md",
+    "rules/subtraction.md",
     "tools/docs/opencode.md",
     ".opencode/AGENTS.md"
   ]
