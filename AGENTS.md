@@ -25,6 +25,8 @@ Rationale: φcontext-economics, φcontext-splitting
 
 `philosophy/` files and `Rationale:` refs (`φ<name>` is `philosophy/<name>.md`) serve harness improvement only.
 
-## Delegation
+## Mission command
 
-Use sub-agents as scouts for wider checks. Decide from a `task` report, not a second reading of its sources; send unresolved questions back as bounded tasks.
+Give `task` a bounded outcome and scope, then let the sub-agent carry the work. Decide from its report without retracing its sources. When the brief does not hold, bring back the mismatch or send a remaining question as a bounded follow-up, not an expanded investigation in the session. Delegate only as far as the result can be used without redoing the work; keep unproven decisions in the user-steered session.
+
+Rationale: φmandate, φharness-direction
