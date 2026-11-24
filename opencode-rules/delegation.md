@@ -1,6 +1,6 @@
 # Delegation
 
-Exploration is bounded by a question; execution by a known end state. Delegate non-trivial bounded work to a subagent when the session needs the result, not the working detail. Keep work local when handing it off is more work than doing it. Each mandate gets a fresh, disposable worker, closed when its result returns: the session keeps the result, not the work.
+Exploration is bounded by a question; execution by a known end state. Delegate non-trivial bounded work to a subagent when the session needs the result, not the working detail. Break large delegated work into bounded batches, each with its own result to inform the remaining briefs. Keep work local when handing it off is more work than doing it. Each mandate gets a fresh, disposable worker, closed when its result returns: the session keeps the result, not the work.
 
 The brief is a mandate: the expected result, the settled choices, the ordinary work included, and the surprises to bring back. Within it, the worker owns ordinary completion, including checking its own implementation when the task calls for it; the session does not steer each operation. The session trusts the returned report, raising concrete doubts as bounded follow-ups rather than routinely rechecking the work or commissioning independent review. Every mandate is a hypothesis of realizability. A brief declaring nothing expects precisely what was asked.
 
