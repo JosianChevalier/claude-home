@@ -1,6 +1,6 @@
 # Delegation
 
-Exploration is bounded by a question; execution by a known end state. Both go to a disposable sub-agent or sub-session to preserve context: the session keeps the result, not the work. Each brief gets fresh context, closed when its result returns.
+A task with a known end state is bounded, and a bounded task goes to a sub-agent or a sub-session: the session keeps the result, not the work.
 
 The brief is a mission order, and every mission order is a hypothesis of realizability. It follows a few stereotypical shapes, command-query separation (Meyer) among them. It declares what the session expects and how far to decide alone. A brief declaring nothing expects the narrowest: what was asked, precisely.
 

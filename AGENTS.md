@@ -27,7 +27,7 @@ Rationale: φcontext-economics, φcontext-splitting
 
 ## Mission command
 
-ChatGPT's bias is to do read-only work in the main chat, consuming its context. Delegate anything that does not require acting to `task` to protect that context; take the report as the result, not an invitation to reread its sources.
+Use `task` according to `opencode-rules/delegation.md`; take the report as the result, not an invitation to reread its sources.
 
 Give `task` a bounded outcome and scope, then let the sub-agent carry the work. When the brief does not hold, bring back the mismatch or send a remaining question as a bounded follow-up, not an expanded investigation in the session. Delegate only as far as the result can be used without redoing the work; keep unproven decisions in the user-steered session.
 

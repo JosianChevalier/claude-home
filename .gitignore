@@ -16,6 +16,10 @@
 !/philosophy/**
 !/rules/
 !/rules/*.md
+!/rules/claude/
+!/rules/claude/*.md
+!/opencode-rules/
+!/opencode-rules/*.md
 !/prompts/
 !/prompts/*.md
 !/agents/
