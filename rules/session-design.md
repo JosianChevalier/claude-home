@@ -13,6 +13,7 @@ A session can end at any return of control to the user: what lives only in the c
 ## Know-how
 
 - A turn is sized in the reasoning, before its first word: the topics counted, each weighed. Fitting one look, they go together; beyond, the map of the topics, then one per turn. A hazard is marked ⚠️, before what it concerns.
+- Start a small change at its seam: use one bounded reconnaissance, then read only what the edit needs. Widen to full files, generated diffs or broad checks only for a concrete uncertainty; do not repeat a worker's exploration.
 - While the session's item is open in the work file, a turn ends with what is left before it closes, one line.
 - A correction means the rest of the last turn went unread: what still holds comes back in a following turn.
 - The user manages the sessions: another agent's work in the folder is reported only on an actual conflict that cannot be handled trivially, a risk of lost work or an incompatibility.
