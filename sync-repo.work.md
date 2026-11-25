@@ -54,6 +54,7 @@ Work file of the migration. OpenCode is out of scope for now: Claude Code only. 
     - [ ] `aggregate-identification` and `invariant-enforcement`: the ladder they rest on was removed from `philosophy/aggregates` 2026-10-12. The first keeps its derivation steps, loses the hand-off "each safety property climbs the enforcement ladder"; the second (structure vs ordering vs transaction for an aggregate invariant) has no premise left, likely deleted.
     - [ ] Model tensions as a kairos gate (the gate after a model change in `kairos-gates`), once `model-phenomenology` holds rivalry: done 2026-10-11.
     - [ ] `kaizen`: prototype, iterating from use. Dispatches `transcript-attractor-analyzer`, 3.5. **← current**
+    - [ ] `write-plan`: the plan is the projected route, annotated, the steps done marked shortly on it; the commits are the travel log. Its document image, from kickstart-harness: not a conspiracy board (Pepe Silvia).
     - [ ] `wake-and-run`: `## Procedure` header, no Doctrine. Rewrite to the current shape.
   - [ ] 3.5 Agents.
     - [ ] `agents/*.md` carry `mode:`, a field Claude Code ignores; `philosophy-guide` keeps `initialPrompt`.
