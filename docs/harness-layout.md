@@ -3,7 +3,7 @@
 ```text
 Harness repository
 |-- Shared      rules/*.md, skills/, agents/, commands/, tools/run
-|-- Claude      CLAUDE.md, rules/claude/, output-styles/, settings.template.json
+|-- Claude      CLAUDE.md, output-styles/, settings.template.json
 |-- OpenCode    AGENTS.md, opencode-rules/, plugins/, opencode.template.json
 |-- Project     .claude/ and .opencode/ adapters -> canonical root files
 `-- On demand   philosophy/ (rationale), docs/ (guides)
@@ -13,8 +13,8 @@ Install this repository at `~/.claude` for Claude Code or `~/.config/opencode` f
 
 ## Rule ownership and loading
 
-- **Shared:** edit `rules/*.md`. Claude loads rules recursively, including `rules/claude/`; OpenCode's explicit `rules/*.md` glob is nonrecursive.
-- **Claude only:** edit `rules/claude/*.md`. OpenCode's configured rule globs exclude this subtree.
+- **Shared:** edit `rules/*.md`.
+- **Claude, main session and subagents:** edit `CLAUDE.md`.
 - **Claude main session only:** edit `output-styles/writing.md`, selected by `outputStyle`. Subagents other than forks do not receive it.
 - **OpenCode only:** edit `opencode-rules/*.md`, outside Claude's rule tree.
 - **Client guidance:** root `CLAUDE.md` and `AGENTS.md` are distinct, not interchangeable.

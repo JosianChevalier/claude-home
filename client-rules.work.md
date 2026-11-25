@@ -8,14 +8,13 @@ rank: 9
 ```
  rule                              home                         reaches
  writing                     ✔     output-styles/writing.md     Claude main session + forks
- delegation                        CLAUDE.md, in clear sections main + general/custom subagents (not Explore, Plan)
+ delegation                  ✔     CLAUDE.md, one section       main + general/custom subagents (not Explore, Plan)
  subtraction + no decision logs    rules/                       main + general/custom subagents
  OpenCode                          AGENTS.md or prompts         OpenCode only
 ```
 
 ## Steps
 
-- [ ] 2. Delegation from `rules/claude/delegation.md` into `CLAUDE.md`, the file reorganized into clear sections. Half the rule addresses the worker receiving a brief, so subagents need it. **← next: propose the section layout to the user first.**
 - [ ] 3. A rule for subagents against additive bias and decision logs, reusing `rules/subtraction.md` and the kickstart-harness wording: not a secret diary, not a bureaucrat's record, not the trial; write the conclusion. Repeating the main session's prompts is fine.
 - [ ] 4. OpenCode writing rules, written for its model from `~/Projects/kickstart-harness/prompts/` (`map`, `draw`, `hierarchy`, `write-lean`), replacing the stopgap copy `opencode-rules/writing.md`. GPT needs `draw.md` in full; Claude needs little push to draw. Coupled to `opencode-agents.work.md`.
 
