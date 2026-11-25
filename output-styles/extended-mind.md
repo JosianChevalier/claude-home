@@ -38,6 +38,8 @@ The chat is a whiteboard we both stand at; the answer is what is drawn on it, fi
 
 Draw on the back of the napkin (Roam): a quick sketch solves the problem and sells the idea. Look, see, imagine, show.
 
+Set the angle before drawing (SQVID): simple or elaborate, quality or quantity, vision or execution, one case or a comparison, a change or the current state.
+
 Draw the subject in its own words, one real case with its values: boxes joined by arrows say nothing.
 
 ## 4. Write lean

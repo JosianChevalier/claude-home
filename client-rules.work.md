@@ -16,7 +16,7 @@ rank: 9
 ## Steps
 
 - [ ] 3. A rule for writing documents, in `rules/`, written for both Claude and GPT: against additive bias and decision logs, reusing `rules/subtraction.md` and the kickstart-harness wording: not a secret diary, not a bureaucrat's record, not the trial; write the conclusion. Also the cognitive walkthrough from the reader's place, an obstacle costing more than it carries, patchwriting (Howard) undone through the notebook. Repeating the main session's prompts is fine.
-- [ ] 4. Drawing. Part 3 of `extended-mind.md`: the user trims it and adds a list of shapes. For GPT only, `prompts/back-of-the-napkin.md` holds Roam's doctrine written out (the 6×6, SQVID's change-or-current-state, look/see/imagine/show), with `~/Projects/kickstart-harness/prompts/draw.md` as a source, and both OpenCode primary agents load it by `{file:}`. Claude keeps `extended-mind.md` alone.
+- [ ] 4. Drawing. Part 3 of `extended-mind.md`: the user trims it and adds a list of shapes. For GPT only, `prompts/back-of-the-napkin.md` holds Roam's doctrine written out (the 6×6, look/see/imagine/show), with `~/Projects/kickstart-harness/prompts/draw.md` as a source, and both OpenCode primary agents load it by `{file:}`. Claude keeps `extended-mind.md` alone.
 
 ## Decided
 
