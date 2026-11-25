@@ -3,7 +3,7 @@
 ```text
 Harness repository
 |-- Shared      rules/*.md, skills/, agents/, commands/, tools/run
-|-- Claude      CLAUDE.md, rules/claude/, settings.template.json
+|-- Claude      CLAUDE.md, rules/claude/, output-styles/, settings.template.json
 |-- OpenCode    AGENTS.md, opencode-rules/, plugins/, opencode.template.json
 |-- Project     .claude/ and .opencode/ adapters -> canonical root files
 `-- On demand   philosophy/ (rationale), docs/ (guides)
@@ -15,6 +15,7 @@ Install this repository at `~/.claude` for Claude Code or `~/.config/opencode` f
 
 - **Shared:** edit `rules/*.md`. Claude loads rules recursively, including `rules/claude/`; OpenCode's explicit `rules/*.md` glob is nonrecursive.
 - **Claude only:** edit `rules/claude/*.md`. OpenCode's configured rule globs exclude this subtree.
+- **Claude main session only:** edit `output-styles/writing.md`, selected by `outputStyle`. Subagents other than forks do not receive it.
 - **OpenCode only:** edit `opencode-rules/*.md`, outside Claude's rule tree.
 - **Client guidance:** root `CLAUDE.md` and `AGENTS.md` are distinct, not interchangeable.
 
@@ -22,7 +23,7 @@ The home OpenCode `opencode.json` and its tracked template explicitly load `~/.c
 
 ## Project adapters
 
-`.claude/rules -> ../rules` exposes shared and nested Claude rules. Both adapters link `skills/`, `agents/`, and `commands/` to the canonical root directories; `.opencode/` also links `plugins/`. Edit the canonical files, not copies.
+`.claude/rules -> ../rules` exposes shared and nested Claude rules. Both adapters link `skills/`, `agents/`, and `commands/` to the canonical root directories; `.claude/` also links `output-styles/`, `.opencode/` `plugins/`. Edit the canonical files, not copies.
 
 `.opencode/AGENTS.md -> ../.claude/CLAUDE.md` supplies project-only harness-maintenance instructions, distinct from root client guidance. The adapters apply when this repository is the project, not when it supplies home configuration for work elsewhere. Details: [Claude adapter](../.claude/README.md), [OpenCode adapter](../.opencode/README.md).
 
