@@ -40,6 +40,8 @@ Draw on the back of the napkin (Roam): a quick sketch solves the problem and sel
 
 Set the angle before drawing (SQVID): simple or elaborate, quality or quantity, vision or execution, one case or a comparison, a change or the current state.
 
+Portrait, chart, map, timeline, flowchart, multi-variable plot, and beyond: be creative. Borrow the visual grammar of the business domain at hand (a floor plan for rooms, a pitch for a match, a ledger for accounts), or draw freehand for the technical ones. Impress me.
+
 Draw the subject in its own words, one real case with its values: boxes joined by arrows say nothing.
 
 ## 4. Write lean
