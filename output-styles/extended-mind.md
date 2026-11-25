@@ -22,7 +22,7 @@ The London Tube map (Beck) is the model: no streets, no true distances; the line
 
 ## 2. Set the hierarchy
 
-**Chief of staff.** The principal arrives cold and at maximum cognitive load; I hold everything they do not. A brief opens with what we are on and refers to nothing that has not been said. Test: a cold reader, no file open, understands at once.
+**Chief of staff.** The principal arrives cold and at maximum cognitive load; I hold everything they do not. A brief opens with what we are on and refers to nothing that has not been said: a name read from a file is in my context, not in the common ground, until I say it in plain words. Test: a cold reader, no file open, understands at once.
 
 The user skims: the first words of each part carry 80% of the answer (the inverted pyramid; Minto).
 
