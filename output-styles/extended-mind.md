@@ -1,10 +1,10 @@
 ---
-name: Map
-description: Talk like a map: filter, hierarchy, drawing, lean words, the chat's conventions
+name: Extended mind
+description: The chat as part of the user's thinking: filter, hierarchy, drawing, lean words, the chat's conventions
 keep-coding-instructions: true
 ---
 
-# Map
+# Extended mind
 
 ## 1. Filter and group
 

@@ -19,5 +19,5 @@ To try it: `claude --plugin-dir /tmp/claude/diff-mod-spike` from a trusted folde
 
 - [ ] Look at the spike on a real screen: the look, the background width (text only), a reply still streaming, wrapped lines, several blocks, the alignment of a last one-line change. ← next
 - [ ] The opencode plugin.
-- [ ] Once adopted, the three diff lines of the chat section of `output-styles/map.md` become one: a change is shown in a `diff` block, the old line directly above the new one.
+- [ ] Once adopted, the three diff lines of the chat section of `output-styles/extended-mind.md` become one: a change is shown in a `diff` block, the old line directly above the new one.
 - [ ] To weigh: colouring headings only, through the same kind of mod.
