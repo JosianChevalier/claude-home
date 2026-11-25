@@ -1,0 +1,9 @@
+#!/bin/sh
+# UserPromptSubmit hook of settings.json: prints the output style's turn reminder, added as context
+# to every prompt, as the built-in styles' turnReminder does. The line is the style file's
+# `turn-reminder:` frontmatter field; a style without one prints nothing.
+set -eu
+style="$(dirname "$0")/../output-styles/extended-mind.md"
+reminder=$(sed -n '1,/^---$/{/^turn-reminder: /s///p;}' "$style" | head -n 1)
+[ -n "$reminder" ] && printf 'Extended mind output style is active. %s\n' "$reminder"
+exit 0
