@@ -16,7 +16,7 @@
     "robot": {
       "description": "Autonomous execution with the Groveling Worm voice.",
       "mode": "primary",
-      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/autopilot.md}\n\n{file:./prompts/groveling-worm.md}\n\n{file:./output-styles/extended-mind.md}"
+      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/autopilot.md}\n\n{file:./output-styles/extended-mind.md}\n\n{file:./prompts/groveling-worm.md}"
     }
   },
   "instructions": [
