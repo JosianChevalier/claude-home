@@ -3,7 +3,7 @@
 ```text
 Harness repository
 |-- Shared      rules/*.md, skills/, agents/, commands/, tools/run
-|-- Claude      CLAUDE.md, output-styles/, settings.template.json
+|-- Claude      CLAUDE.md, output-styles/, hooks/, settings.template.json
 |-- OpenCode    AGENTS.md, opencode-rules/, plugins/, opencode.template.json
 |-- Project     .claude/ and .opencode/ adapters -> canonical root files
 `-- On demand   philosophy/ (rationale), docs/ (guides)
@@ -31,6 +31,6 @@ The home OpenCode `opencode.json` and its tracked template explicitly load `~/.c
 
 `settings.template.json` and `opencode.template.json` are tracked starting points for local `settings.json` and `opencode.json`; the latter is untracked here. Edit templates for distributable defaults, local files for installation-specific configuration.
 
-`tools/run` is the shared dispatcher. OpenCode calls it through `tools/run.ts` and explicitly loads `tools/docs/opencode.md`; the Claude template's SessionStart hook invokes `~/.claude/tools/run doc claude`. See [tool loading](../tools/README.md).
+`tools/` holds what the agent calls, through the shared dispatcher `tools/run`; `hooks/` holds what Claude Code runs on its own events, OpenCode's counterpart being `plugins/`. OpenCode calls it through `tools/run.ts` and explicitly loads `tools/docs/opencode.md`; the Claude template's SessionStart hook invokes `~/.claude/tools/run doc claude`. See [tool loading](../tools/README.md).
 
 `philosophy/` holds on-demand rationale, not automatically loaded instructions. This guide describes the configured layout, not a runtime loading test.
