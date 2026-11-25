@@ -35,16 +35,6 @@
           }
         ]
       }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/remind-output-style"
-          }
-        ]
-      }
     ]
   },
   "outputStyle": "Extended mind"

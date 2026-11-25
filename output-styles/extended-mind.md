@@ -2,7 +2,6 @@
 name: Extended mind
 description: The chat as part of the user's thinking: filter, hierarchy, drawing, lean words, the chat's conventions
 keep-coding-instructions: true
-turn-reminder: Lead with the whole point; keep what the decision needs, fold the rest with a count; draw before writing; nothing left to take away.
 ---
 
 # Extended mind
