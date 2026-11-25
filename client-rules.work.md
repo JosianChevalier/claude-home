@@ -7,7 +7,7 @@ rank: 9
 
 ```
  rule                              home                         reaches
- writing (Extended mind)     ✔     output-styles/extended-mind.md Claude main session + forks
+ writing (Extended mind)     ✔     output-styles/extended-mind.md main sessions: Claude + forks, OpenCode primary agents
  delegation                  ✔     CLAUDE.md, one section       main + general/custom subagents (not Explore, Plan)
  subtraction + no decision logs    rules/                       main + general/custom subagents
  OpenCode                          AGENTS.md or prompts         OpenCode only
@@ -15,8 +15,8 @@ rank: 9
 
 ## Steps
 
-- [ ] 3. A rule for subagents against additive bias and decision logs, reusing `rules/subtraction.md` and the kickstart-harness wording: not a secret diary, not a bureaucrat's record, not the trial; write the conclusion. Repeating the main session's prompts is fine.
-- [ ] 4. `output-styles/extended-mind.gpt.md`, the GPT version of `extended-mind.md`: same five parts, more verbose, part 3 with `~/Projects/kickstart-harness/prompts/draw.md` in full (shapes, Tufte, Lakoff, both example drawings). Loaded by `{file:}` in OpenCode's agent prompts, replacing the stopgap copy `opencode-rules/writing.md`. No plain-language lines (Gowers, Feynman). Coupled to `opencode-agents.work.md`.
+- [ ] 3. A rule for writing documents, in `rules/`, written for both Claude and GPT: against additive bias and decision logs, reusing `rules/subtraction.md` and the kickstart-harness wording: not a secret diary, not a bureaucrat's record, not the trial; write the conclusion. Also the cognitive walkthrough from the reader's place, an obstacle costing more than it carries, patchwriting (Howard) undone through the notebook. Repeating the main session's prompts is fine.
+- [ ] 4. Part 3 of `extended-mind.md`, drawing: the user trims it and adds a list of shapes, from `~/Projects/kickstart-harness/prompts/draw.md` and Roam's doctrine.
 
 ## Decided
 

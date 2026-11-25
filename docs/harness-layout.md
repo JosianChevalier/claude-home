@@ -15,7 +15,7 @@ Install this repository at `~/.claude` for Claude Code or `~/.config/opencode` f
 
 - **Shared:** edit `rules/*.md`.
 - **Claude, main session and subagents:** edit `CLAUDE.md`.
-- **Claude main session only:** edit `output-styles/extended-mind.md`, selected by `outputStyle`. Subagents other than forks do not receive it.
+- **Main session only:** edit `output-styles/extended-mind.md`. Claude selects it by `outputStyle`, and subagents other than forks do not receive it; OpenCode's primary agents load it by `{file:}` in their prompt.
 - **OpenCode only:** edit `opencode-rules/*.md`, outside Claude's rule tree.
 - **Client guidance:** root `CLAUDE.md` and `AGENTS.md` are distinct, not interchangeable.
 
