@@ -7,7 +7,7 @@ rank: 9
 
 ```
  rule                              home                         reaches
- writing (Extended mind)      ✔     output-styles/extended-mind.md Claude main session + forks
+ writing (Extended mind)     ✔     output-styles/extended-mind.md Claude main session + forks
  delegation                  ✔     CLAUDE.md, one section       main + general/custom subagents (not Explore, Plan)
  subtraction + no decision logs    rules/                       main + general/custom subagents
  OpenCode                          AGENTS.md or prompts         OpenCode only
