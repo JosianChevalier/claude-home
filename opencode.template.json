@@ -11,12 +11,12 @@
     "mechasuit": {
       "description": "Collaborative mecha suit: the user navigates, the agent drives.",
       "mode": "primary",
-      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/mecha-suit.md}\n\n{file:./output-styles/extended-mind.md}"
+      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/mecha-suit.md}\n\n{file:./output-styles/extended-mind.md}\n\n{file:./prompts/back-of-the-napkin.md}"
     },
     "robot": {
       "description": "Autonomous execution with the Groveling Worm voice.",
       "mode": "primary",
-      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/autopilot.md}\n\n{file:./output-styles/extended-mind.md}\n\n{file:./prompts/groveling-worm.md}"
+      "prompt": "{file:./prompts/system.md}\n\n{file:./prompts/doctrine.md}\n\n{file:./prompts/autopilot.md}\n\n{file:./output-styles/extended-mind.md}\n\n{file:./prompts/back-of-the-napkin.md}\n\n{file:./prompts/groveling-worm.md}"
     }
   },
   "instructions": [
