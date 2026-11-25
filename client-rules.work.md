@@ -26,4 +26,5 @@ rank: 9
 
 ## Parked
 
+- Claude's subagents have no answer-shape rule: Cartographer lives only in Extended mind, which reaches the main session and forks. Step 3's rule could carry the report's shape, if their reports sprawl.
 - The git status snapshot at startup differs between sessions and cuts the cross-session cache. Ideally it comes after CLAUDE.md and rules.
