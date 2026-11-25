@@ -14,7 +14,7 @@ description: Trigger word: "study" — "make a study", "study <mechanism>". Also
 - Sometimes a cigar is just a cigar (Freud): a finding is not owed because one was expected; "nothing here" and "this is trivial" are answers.
 - Understanding that lives in the agent or the file is a study that failed.
 - A disappointment (Husserl's Enttäuschung) absorbed is a decision stolen: the belt carries the friction.
-- The file crystallizes what is shared: the smallest document that lets the reader reason correctly about the mechanism.
+- The file crystallizes what is shared: the smallest document that lets the reader reason correctly about the mechanism. The ruling, not the trial: the conclusion and its consequence.
 
 ## Scale and mode
 
